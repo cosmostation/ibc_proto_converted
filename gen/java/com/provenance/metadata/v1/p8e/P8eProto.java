@@ -14,109 +14,22515 @@ public final class P8eProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.p8e.DefinitionSpecType}
+   */
+  @java.lang.Deprecated public enum DefinitionSpecType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_UNKNOWN = 0;</code>
+     */
+    DEFINITION_SPEC_TYPE_UNKNOWN(0),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_PROPOSED = 1;</code>
+     */
+    DEFINITION_SPEC_TYPE_PROPOSED(1),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_FACT = 2;</code>
+     */
+    DEFINITION_SPEC_TYPE_FACT(2),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_FACT_LIST = 3;</code>
+     */
+    DEFINITION_SPEC_TYPE_FACT_LIST(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int DEFINITION_SPEC_TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_PROPOSED = 1;</code>
+     */
+    public static final int DEFINITION_SPEC_TYPE_PROPOSED_VALUE = 1;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_FACT = 2;</code>
+     */
+    public static final int DEFINITION_SPEC_TYPE_FACT_VALUE = 2;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>DEFINITION_SPEC_TYPE_FACT_LIST = 3;</code>
+     */
+    public static final int DEFINITION_SPEC_TYPE_FACT_LIST_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DefinitionSpecType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DefinitionSpecType forNumber(int value) {
+      switch (value) {
+        case 0: return DEFINITION_SPEC_TYPE_UNKNOWN;
+        case 1: return DEFINITION_SPEC_TYPE_PROPOSED;
+        case 2: return DEFINITION_SPEC_TYPE_FACT;
+        case 3: return DEFINITION_SPEC_TYPE_FACT_LIST;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DefinitionSpecType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DefinitionSpecType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DefinitionSpecType>() {
+            public DefinitionSpecType findValueByNumber(int number) {
+              return DefinitionSpecType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DefinitionSpecType[] VALUES = values();
+
+    public static DefinitionSpecType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DefinitionSpecType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.p8e.DefinitionSpecType)
+  }
+
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.p8e.PublicKeyCurve}
+   */
+  @java.lang.Deprecated public enum PublicKeyCurve
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>SECP256K1 = 0;</code>
+     */
+    SECP256K1(0),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>P256 = 1;</code>
+     */
+    P256(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>SECP256K1 = 0;</code>
+     */
+    public static final int SECP256K1_VALUE = 0;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>P256 = 1;</code>
+     */
+    public static final int P256_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PublicKeyCurve valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PublicKeyCurve forNumber(int value) {
+      switch (value) {
+        case 0: return SECP256K1;
+        case 1: return P256;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PublicKeyCurve>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PublicKeyCurve> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PublicKeyCurve>() {
+            public PublicKeyCurve findValueByNumber(int number) {
+              return PublicKeyCurve.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final PublicKeyCurve[] VALUES = values();
+
+    public static PublicKeyCurve valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PublicKeyCurve(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.p8e.PublicKeyCurve)
+  }
+
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.p8e.PublicKeyType}
+   */
+  @java.lang.Deprecated public enum PublicKeyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>ELLIPTIC = 0;</code>
+     */
+    ELLIPTIC(0),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>ELLIPTIC = 0;</code>
+     */
+    public static final int ELLIPTIC_VALUE = 0;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PublicKeyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PublicKeyType forNumber(int value) {
+      switch (value) {
+        case 0: return ELLIPTIC;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PublicKeyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PublicKeyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PublicKeyType>() {
+            public PublicKeyType findValueByNumber(int number) {
+              return PublicKeyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final PublicKeyType[] VALUES = values();
+
+    public static PublicKeyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PublicKeyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.p8e.PublicKeyType)
+  }
+
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.p8e.ExecutionResultType}
+   */
+  @java.lang.Deprecated public enum ExecutionResultType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_UNKNOWN = 0;</code>
+     */
+    RESULT_TYPE_UNKNOWN(0),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_PASS = 1;</code>
+     */
+    RESULT_TYPE_PASS(1),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_SKIP = 2;</code>
+     */
+    RESULT_TYPE_SKIP(2),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_FAIL = 3;</code>
+     */
+    RESULT_TYPE_FAIL(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int RESULT_TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_PASS = 1;</code>
+     */
+    public static final int RESULT_TYPE_PASS_VALUE = 1;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_SKIP = 2;</code>
+     */
+    public static final int RESULT_TYPE_SKIP_VALUE = 2;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>RESULT_TYPE_FAIL = 3;</code>
+     */
+    public static final int RESULT_TYPE_FAIL_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ExecutionResultType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ExecutionResultType forNumber(int value) {
+      switch (value) {
+        case 0: return RESULT_TYPE_UNKNOWN;
+        case 1: return RESULT_TYPE_PASS;
+        case 2: return RESULT_TYPE_SKIP;
+        case 3: return RESULT_TYPE_FAIL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ExecutionResultType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ExecutionResultType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ExecutionResultType>() {
+            public ExecutionResultType findValueByNumber(int number) {
+              return ExecutionResultType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final ExecutionResultType[] VALUES = values();
+
+    public static ExecutionResultType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ExecutionResultType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.p8e.ExecutionResultType)
+  }
+
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.p8e.PartyType}
+   */
+  @java.lang.Deprecated public enum PartyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_UNKNOWN = 0;</code>
+     */
+    PARTY_TYPE_UNKNOWN(0),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_ORIGINATOR = 1;</code>
+     */
+    PARTY_TYPE_ORIGINATOR(1),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_SERVICER = 2;</code>
+     */
+    PARTY_TYPE_SERVICER(2),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_INVESTOR = 3;</code>
+     */
+    PARTY_TYPE_INVESTOR(3),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CUSTODIAN = 4;</code>
+     */
+    PARTY_TYPE_CUSTODIAN(4),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OWNER = 5;</code>
+     */
+    PARTY_TYPE_OWNER(5),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_AFFILIATE = 6;</code>
+     */
+    PARTY_TYPE_AFFILIATE(6),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OMNIBUS = 7;</code>
+     */
+    PARTY_TYPE_OMNIBUS(7),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_PROVENANCE = 8;</code>
+     */
+    PARTY_TYPE_PROVENANCE(8),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_MARKER = 9;</code>
+     */
+    PARTY_TYPE_MARKER(9),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CONTROLLER = 10;</code>
+     */
+    PARTY_TYPE_CONTROLLER(10),
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_VALIDATOR = 11;</code>
+     */
+    PARTY_TYPE_VALIDATOR(11),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_UNKNOWN = 0;</code>
+     */
+    public static final int PARTY_TYPE_UNKNOWN_VALUE = 0;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_ORIGINATOR = 1;</code>
+     */
+    public static final int PARTY_TYPE_ORIGINATOR_VALUE = 1;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_SERVICER = 2;</code>
+     */
+    public static final int PARTY_TYPE_SERVICER_VALUE = 2;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_INVESTOR = 3;</code>
+     */
+    public static final int PARTY_TYPE_INVESTOR_VALUE = 3;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CUSTODIAN = 4;</code>
+     */
+    public static final int PARTY_TYPE_CUSTODIAN_VALUE = 4;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OWNER = 5;</code>
+     */
+    public static final int PARTY_TYPE_OWNER_VALUE = 5;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_AFFILIATE = 6;</code>
+     */
+    public static final int PARTY_TYPE_AFFILIATE_VALUE = 6;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_OMNIBUS = 7;</code>
+     */
+    public static final int PARTY_TYPE_OMNIBUS_VALUE = 7;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_PROVENANCE = 8;</code>
+     */
+    public static final int PARTY_TYPE_PROVENANCE_VALUE = 8;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_MARKER = 9;</code>
+     */
+    public static final int PARTY_TYPE_MARKER_VALUE = 9;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_CONTROLLER = 10;</code>
+     */
+    public static final int PARTY_TYPE_CONTROLLER_VALUE = 10;
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * <code>PARTY_TYPE_VALIDATOR = 11;</code>
+     */
+    public static final int PARTY_TYPE_VALIDATOR_VALUE = 11;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PartyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PartyType forNumber(int value) {
+      switch (value) {
+        case 0: return PARTY_TYPE_UNKNOWN;
+        case 1: return PARTY_TYPE_ORIGINATOR;
+        case 2: return PARTY_TYPE_SERVICER;
+        case 3: return PARTY_TYPE_INVESTOR;
+        case 4: return PARTY_TYPE_CUSTODIAN;
+        case 5: return PARTY_TYPE_OWNER;
+        case 6: return PARTY_TYPE_AFFILIATE;
+        case 7: return PARTY_TYPE_OMNIBUS;
+        case 8: return PARTY_TYPE_PROVENANCE;
+        case 9: return PARTY_TYPE_MARKER;
+        case 10: return PARTY_TYPE_CONTROLLER;
+        case 11: return PARTY_TYPE_VALIDATOR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PartyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PartyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PartyType>() {
+            public PartyType findValueByNumber(int number) {
+              return PartyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final PartyType[] VALUES = values();
+
+    public static PartyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PartyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.p8e.PartyType)
+  }
+
+  @java.lang.Deprecated public interface ContractOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Contract)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return Whether the definition field is set.
+     */
+    boolean hasDefinition();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return The definition.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefinition();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getDefinitionOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+     * @return Whether the spec field is set.
+     */
+    boolean hasSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+     * @return The spec.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Fact getSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder getSpecOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+     * @return Whether the invoker field is set.
+     */
+    boolean hasInvoker();
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+     * @return The invoker.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getInvoker();
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getInvokerOrBuilder();
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Fact> 
+        getInputsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Fact getInputs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Deprecated java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Condition> 
+        getConditionsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Deprecated com.provenance.metadata.v1.p8e.P8eProto.Condition getConditions(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Deprecated int getConditionsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Deprecated java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder> 
+        getConditionsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Deprecated com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder getConditionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Consideration> 
+        getConsiderationsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Consideration getConsiderations(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    int getConsiderationsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder> 
+        getConsiderationsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder getConsiderationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> 
+        getRecitalsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Recital getRecitals(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    int getRecitalsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+        getRecitalsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder getRecitalsOrBuilder(
+        int index);
+
+    /**
+     * <code>int32 times_executed = 8 [json_name = "timesExecuted"];</code>
+     * @return The timesExecuted.
+     */
+    int getTimesExecuted();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Timestamp getStartTime();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <code>bytes context = 10 [json_name = "context"];</code>
+     * @return The context.
+     */
+    com.google.protobuf.ByteString getContext();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Contract}
+   */
+  @java.lang.Deprecated public static final class Contract extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Contract)
+      ContractOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Contract.newBuilder() to construct.
+    private Contract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Contract() {
+      inputs_ = java.util.Collections.emptyList();
+      conditions_ = java.util.Collections.emptyList();
+      considerations_ = java.util.Collections.emptyList();
+      recitals_ = java.util.Collections.emptyList();
+      context_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Contract();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Contract_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Contract_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Contract.class, com.provenance.metadata.v1.p8e.P8eProto.Contract.Builder.class);
+    }
+
+    public static final int DEFINITION_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec definition_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return Whether the definition field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefinition() {
+      return definition_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return The definition.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefinition() {
+      return definition_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getDefinitionOrBuilder() {
+      return definition_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+    }
+
+    public static final int SPEC_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.Fact spec_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+     * @return Whether the spec field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpec() {
+      return spec_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+     * @return The spec.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Fact getSpec() {
+      return spec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance() : spec_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder getSpecOrBuilder() {
+      return spec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance() : spec_;
+    }
+
+    public static final int INVOKER_FIELD_NUMBER = 3;
+    private com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys invoker_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+     * @return Whether the invoker field is set.
+     */
+    @java.lang.Override
+    public boolean hasInvoker() {
+      return invoker_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+     * @return The invoker.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getInvoker() {
+      return invoker_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : invoker_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getInvokerOrBuilder() {
+      return invoker_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : invoker_;
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Fact> inputs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Fact> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Fact getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int CONDITIONS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Condition> conditions_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Condition> getConditionsList() {
+      return conditions_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder> 
+        getConditionsOrBuilderList() {
+      return conditions_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public int getConditionsCount() {
+      return conditions_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.Condition getConditions(int index) {
+      return conditions_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder getConditionsOrBuilder(
+        int index) {
+      return conditions_.get(index);
+    }
+
+    public static final int CONSIDERATIONS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Consideration> considerations_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Consideration> getConsiderationsList() {
+      return considerations_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder> 
+        getConsiderationsOrBuilderList() {
+      return considerations_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    @java.lang.Override
+    public int getConsiderationsCount() {
+      return considerations_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Consideration getConsiderations(int index) {
+      return considerations_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder getConsiderationsOrBuilder(
+        int index) {
+      return considerations_.get(index);
+    }
+
+    public static final int RECITALS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> recitals_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> getRecitalsList() {
+      return recitals_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+        getRecitalsOrBuilderList() {
+      return recitals_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    @java.lang.Override
+    public int getRecitalsCount() {
+      return recitals_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Recital getRecitals(int index) {
+      return recitals_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder getRecitalsOrBuilder(
+        int index) {
+      return recitals_.get(index);
+    }
+
+    public static final int TIMES_EXECUTED_FIELD_NUMBER = 8;
+    private int timesExecuted_ = 0;
+    /**
+     * <code>int32 times_executed = 8 [json_name = "timesExecuted"];</code>
+     * @return The timesExecuted.
+     */
+    @java.lang.Override
+    public int getTimesExecuted() {
+      return timesExecuted_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 9;
+    private com.provenance.metadata.v1.p8e.P8eProto.Timestamp startTime_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Timestamp getStartTime() {
+      return startTime_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int CONTEXT_FIELD_NUMBER = 10;
+    private com.google.protobuf.ByteString context_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes context = 10 [json_name = "context"];</code>
+     * @return The context.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContext() {
+      return context_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (definition_ != null) {
+        output.writeMessage(1, getDefinition());
+      }
+      if (spec_ != null) {
+        output.writeMessage(2, getSpec());
+      }
+      if (invoker_ != null) {
+        output.writeMessage(3, getInvoker());
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(4, inputs_.get(i));
+      }
+      for (int i = 0; i < conditions_.size(); i++) {
+        output.writeMessage(5, conditions_.get(i));
+      }
+      for (int i = 0; i < considerations_.size(); i++) {
+        output.writeMessage(6, considerations_.get(i));
+      }
+      for (int i = 0; i < recitals_.size(); i++) {
+        output.writeMessage(7, recitals_.get(i));
+      }
+      if (timesExecuted_ != 0) {
+        output.writeInt32(8, timesExecuted_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(9, getStartTime());
+      }
+      if (!context_.isEmpty()) {
+        output.writeBytes(10, context_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (definition_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDefinition());
+      }
+      if (spec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSpec());
+      }
+      if (invoker_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getInvoker());
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, inputs_.get(i));
+      }
+      for (int i = 0; i < conditions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, conditions_.get(i));
+      }
+      for (int i = 0; i < considerations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, considerations_.get(i));
+      }
+      for (int i = 0; i < recitals_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, recitals_.get(i));
+      }
+      if (timesExecuted_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, timesExecuted_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getStartTime());
+      }
+      if (!context_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(10, context_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Contract)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Contract other = (com.provenance.metadata.v1.p8e.P8eProto.Contract) obj;
+
+      if (hasDefinition() != other.hasDefinition()) return false;
+      if (hasDefinition()) {
+        if (!getDefinition()
+            .equals(other.getDefinition())) return false;
+      }
+      if (hasSpec() != other.hasSpec()) return false;
+      if (hasSpec()) {
+        if (!getSpec()
+            .equals(other.getSpec())) return false;
+      }
+      if (hasInvoker() != other.hasInvoker()) return false;
+      if (hasInvoker()) {
+        if (!getInvoker()
+            .equals(other.getInvoker())) return false;
+      }
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (!getConditionsList()
+          .equals(other.getConditionsList())) return false;
+      if (!getConsiderationsList()
+          .equals(other.getConsiderationsList())) return false;
+      if (!getRecitalsList()
+          .equals(other.getRecitalsList())) return false;
+      if (getTimesExecuted()
+          != other.getTimesExecuted()) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (!getContext()
+          .equals(other.getContext())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDefinition()) {
+        hash = (37 * hash) + DEFINITION_FIELD_NUMBER;
+        hash = (53 * hash) + getDefinition().hashCode();
+      }
+      if (hasSpec()) {
+        hash = (37 * hash) + SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getSpec().hashCode();
+      }
+      if (hasInvoker()) {
+        hash = (37 * hash) + INVOKER_FIELD_NUMBER;
+        hash = (53 * hash) + getInvoker().hashCode();
+      }
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (getConditionsCount() > 0) {
+        hash = (37 * hash) + CONDITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getConditionsList().hashCode();
+      }
+      if (getConsiderationsCount() > 0) {
+        hash = (37 * hash) + CONSIDERATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getConsiderationsList().hashCode();
+      }
+      if (getRecitalsCount() > 0) {
+        hash = (37 * hash) + RECITALS_FIELD_NUMBER;
+        hash = (53 * hash) + getRecitalsList().hashCode();
+      }
+      hash = (37 * hash) + TIMES_EXECUTED_FIELD_NUMBER;
+      hash = (53 * hash) + getTimesExecuted();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getContext().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Contract prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Contract}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Contract)
+        com.provenance.metadata.v1.p8e.P8eProto.ContractOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Contract_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Contract_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Contract.class, com.provenance.metadata.v1.p8e.P8eProto.Contract.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Contract.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        definition_ = null;
+        if (definitionBuilder_ != null) {
+          definitionBuilder_.dispose();
+          definitionBuilder_ = null;
+        }
+        spec_ = null;
+        if (specBuilder_ != null) {
+          specBuilder_.dispose();
+          specBuilder_ = null;
+        }
+        invoker_ = null;
+        if (invokerBuilder_ != null) {
+          invokerBuilder_.dispose();
+          invokerBuilder_ = null;
+        }
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (conditionsBuilder_ == null) {
+          conditions_ = java.util.Collections.emptyList();
+        } else {
+          conditions_ = null;
+          conditionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (considerationsBuilder_ == null) {
+          considerations_ = java.util.Collections.emptyList();
+        } else {
+          considerations_ = null;
+          considerationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (recitalsBuilder_ == null) {
+          recitals_ = java.util.Collections.emptyList();
+        } else {
+          recitals_ = null;
+          recitalsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        timesExecuted_ = 0;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        context_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Contract_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Contract getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Contract.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Contract build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Contract result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Contract buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Contract result = new com.provenance.metadata.v1.p8e.P8eProto.Contract(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.Contract result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+        if (conditionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            conditions_ = java.util.Collections.unmodifiableList(conditions_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.conditions_ = conditions_;
+        } else {
+          result.conditions_ = conditionsBuilder_.build();
+        }
+        if (considerationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            considerations_ = java.util.Collections.unmodifiableList(considerations_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.considerations_ = considerations_;
+        } else {
+          result.considerations_ = considerationsBuilder_.build();
+        }
+        if (recitalsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            recitals_ = java.util.Collections.unmodifiableList(recitals_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.recitals_ = recitals_;
+        } else {
+          result.recitals_ = recitalsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Contract result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.definition_ = definitionBuilder_ == null
+              ? definition_
+              : definitionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.spec_ = specBuilder_ == null
+              ? spec_
+              : specBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.invoker_ = invokerBuilder_ == null
+              ? invoker_
+              : invokerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timesExecuted_ = timesExecuted_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.context_ = context_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Contract) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Contract)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Contract other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Contract.getDefaultInstance()) return this;
+        if (other.hasDefinition()) {
+          mergeDefinition(other.getDefinition());
+        }
+        if (other.hasSpec()) {
+          mergeSpec(other.getSpec());
+        }
+        if (other.hasInvoker()) {
+          mergeInvoker(other.getInvoker());
+        }
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (conditionsBuilder_ == null) {
+          if (!other.conditions_.isEmpty()) {
+            if (conditions_.isEmpty()) {
+              conditions_ = other.conditions_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureConditionsIsMutable();
+              conditions_.addAll(other.conditions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.conditions_.isEmpty()) {
+            if (conditionsBuilder_.isEmpty()) {
+              conditionsBuilder_.dispose();
+              conditionsBuilder_ = null;
+              conditions_ = other.conditions_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              conditionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConditionsFieldBuilder() : null;
+            } else {
+              conditionsBuilder_.addAllMessages(other.conditions_);
+            }
+          }
+        }
+        if (considerationsBuilder_ == null) {
+          if (!other.considerations_.isEmpty()) {
+            if (considerations_.isEmpty()) {
+              considerations_ = other.considerations_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureConsiderationsIsMutable();
+              considerations_.addAll(other.considerations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.considerations_.isEmpty()) {
+            if (considerationsBuilder_.isEmpty()) {
+              considerationsBuilder_.dispose();
+              considerationsBuilder_ = null;
+              considerations_ = other.considerations_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              considerationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConsiderationsFieldBuilder() : null;
+            } else {
+              considerationsBuilder_.addAllMessages(other.considerations_);
+            }
+          }
+        }
+        if (recitalsBuilder_ == null) {
+          if (!other.recitals_.isEmpty()) {
+            if (recitals_.isEmpty()) {
+              recitals_ = other.recitals_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureRecitalsIsMutable();
+              recitals_.addAll(other.recitals_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.recitals_.isEmpty()) {
+            if (recitalsBuilder_.isEmpty()) {
+              recitalsBuilder_.dispose();
+              recitalsBuilder_ = null;
+              recitals_ = other.recitals_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              recitalsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRecitalsFieldBuilder() : null;
+            } else {
+              recitalsBuilder_.addAllMessages(other.recitals_);
+            }
+          }
+        }
+        if (other.getTimesExecuted() != 0) {
+          setTimesExecuted(other.getTimesExecuted());
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.getContext() != com.google.protobuf.ByteString.EMPTY) {
+          setContext(other.getContext());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDefinitionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSpecFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getInvokerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.provenance.metadata.v1.p8e.P8eProto.Fact m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.Fact.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.provenance.metadata.v1.p8e.P8eProto.Condition m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.Condition.parser(),
+                        extensionRegistry);
+                if (conditionsBuilder_ == null) {
+                  ensureConditionsIsMutable();
+                  conditions_.add(m);
+                } else {
+                  conditionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.provenance.metadata.v1.p8e.P8eProto.Consideration m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.Consideration.parser(),
+                        extensionRegistry);
+                if (considerationsBuilder_ == null) {
+                  ensureConsiderationsIsMutable();
+                  considerations_.add(m);
+                } else {
+                  considerationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.provenance.metadata.v1.p8e.P8eProto.Recital m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.Recital.parser(),
+                        extensionRegistry);
+                if (recitalsBuilder_ == null) {
+                  ensureRecitalsIsMutable();
+                  recitals_.add(m);
+                } else {
+                  recitalsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 64: {
+                timesExecuted_ = input.readInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                context_ = input.readBytes();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec definition_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> definitionBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       * @return Whether the definition field is set.
+       */
+      public boolean hasDefinition() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       * @return The definition.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefinition() {
+        if (definitionBuilder_ == null) {
+          return definition_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+        } else {
+          return definitionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder setDefinition(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (definitionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          definition_ = value;
+        } else {
+          definitionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder setDefinition(
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (definitionBuilder_ == null) {
+          definition_ = builderForValue.build();
+        } else {
+          definitionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder mergeDefinition(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (definitionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            definition_ != null &&
+            definition_ != com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance()) {
+            getDefinitionBuilder().mergeFrom(value);
+          } else {
+            definition_ = value;
+          }
+        } else {
+          definitionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder clearDefinition() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        definition_ = null;
+        if (definitionBuilder_ != null) {
+          definitionBuilder_.dispose();
+          definitionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder getDefinitionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDefinitionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getDefinitionOrBuilder() {
+        if (definitionBuilder_ != null) {
+          return definitionBuilder_.getMessageOrBuilder();
+        } else {
+          return definition_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+          getDefinitionFieldBuilder() {
+        if (definitionBuilder_ == null) {
+          definitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder>(
+                  getDefinition(),
+                  getParentForChildren(),
+                  isClean());
+          definition_ = null;
+        }
+        return definitionBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.Fact spec_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Fact, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder, com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> specBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       * @return Whether the spec field is set.
+       */
+      public boolean hasSpec() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       * @return The spec.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact getSpec() {
+        if (specBuilder_ == null) {
+          return spec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance() : spec_;
+        } else {
+          return specBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      public Builder setSpec(com.provenance.metadata.v1.p8e.P8eProto.Fact value) {
+        if (specBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spec_ = value;
+        } else {
+          specBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      public Builder setSpec(
+          com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder builderForValue) {
+        if (specBuilder_ == null) {
+          spec_ = builderForValue.build();
+        } else {
+          specBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      public Builder mergeSpec(com.provenance.metadata.v1.p8e.P8eProto.Fact value) {
+        if (specBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            spec_ != null &&
+            spec_ != com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance()) {
+            getSpecBuilder().mergeFrom(value);
+          } else {
+            spec_ = value;
+          }
+        } else {
+          specBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      public Builder clearSpec() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        spec_ = null;
+        if (specBuilder_ != null) {
+          specBuilder_.dispose();
+          specBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder getSpecBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder getSpecOrBuilder() {
+        if (specBuilder_ != null) {
+          return specBuilder_.getMessageOrBuilder();
+        } else {
+          return spec_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance() : spec_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Fact spec = 2 [json_name = "spec"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Fact, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder, com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> 
+          getSpecFieldBuilder() {
+        if (specBuilder_ == null) {
+          specBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Fact, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder, com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder>(
+                  getSpec(),
+                  getParentForChildren(),
+                  isClean());
+          spec_ = null;
+        }
+        return specBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys invoker_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder> invokerBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       * @return Whether the invoker field is set.
+       */
+      public boolean hasInvoker() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       * @return The invoker.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getInvoker() {
+        if (invokerBuilder_ == null) {
+          return invoker_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : invoker_;
+        } else {
+          return invokerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      public Builder setInvoker(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys value) {
+        if (invokerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          invoker_ = value;
+        } else {
+          invokerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      public Builder setInvoker(
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder builderForValue) {
+        if (invokerBuilder_ == null) {
+          invoker_ = builderForValue.build();
+        } else {
+          invokerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      public Builder mergeInvoker(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys value) {
+        if (invokerBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            invoker_ != null &&
+            invoker_ != com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance()) {
+            getInvokerBuilder().mergeFrom(value);
+          } else {
+            invoker_ = value;
+          }
+        } else {
+          invokerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      public Builder clearInvoker() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        invoker_ = null;
+        if (invokerBuilder_ != null) {
+          invokerBuilder_.dispose();
+          invokerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder getInvokerBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getInvokerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getInvokerOrBuilder() {
+        if (invokerBuilder_ != null) {
+          return invokerBuilder_.getMessageOrBuilder();
+        } else {
+          return invoker_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : invoker_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys invoker = 3 [json_name = "invoker"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder> 
+          getInvokerFieldBuilder() {
+        if (invokerBuilder_ == null) {
+          invokerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder>(
+                  getInvoker(),
+                  getParentForChildren(),
+                  isClean());
+          invoker_ = null;
+        }
+        return invokerBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Fact> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          inputs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.Fact>(inputs_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Fact, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder, com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> inputsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Fact> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Fact value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(com.provenance.metadata.v1.p8e.P8eProto.Fact value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Fact value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.Fact> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Fact inputs = 4 [json_name = "inputs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Fact, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder, com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Fact, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder, com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Condition> conditions_ =
+        java.util.Collections.emptyList();
+      private void ensureConditionsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          conditions_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.Condition>(conditions_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Condition, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder> conditionsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Condition> getConditionsList() {
+        if (conditionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(conditions_);
+        } else {
+          return conditionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public int getConditionsCount() {
+        if (conditionsBuilder_ == null) {
+          return conditions_.size();
+        } else {
+          return conditionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.Condition getConditions(int index) {
+        if (conditionsBuilder_ == null) {
+          return conditions_.get(index);
+        } else {
+          return conditionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setConditions(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Condition value) {
+        if (conditionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConditionsIsMutable();
+          conditions_.set(index, value);
+          onChanged();
+        } else {
+          conditionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setConditions(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder builderForValue) {
+        if (conditionsBuilder_ == null) {
+          ensureConditionsIsMutable();
+          conditions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          conditionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addConditions(com.provenance.metadata.v1.p8e.P8eProto.Condition value) {
+        if (conditionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConditionsIsMutable();
+          conditions_.add(value);
+          onChanged();
+        } else {
+          conditionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addConditions(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Condition value) {
+        if (conditionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConditionsIsMutable();
+          conditions_.add(index, value);
+          onChanged();
+        } else {
+          conditionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addConditions(
+          com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder builderForValue) {
+        if (conditionsBuilder_ == null) {
+          ensureConditionsIsMutable();
+          conditions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          conditionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addConditions(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder builderForValue) {
+        if (conditionsBuilder_ == null) {
+          ensureConditionsIsMutable();
+          conditions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          conditionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder addAllConditions(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.Condition> values) {
+        if (conditionsBuilder_ == null) {
+          ensureConditionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, conditions_);
+          onChanged();
+        } else {
+          conditionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearConditions() {
+        if (conditionsBuilder_ == null) {
+          conditions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          conditionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder removeConditions(int index) {
+        if (conditionsBuilder_ == null) {
+          ensureConditionsIsMutable();
+          conditions_.remove(index);
+          onChanged();
+        } else {
+          conditionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder getConditionsBuilder(
+          int index) {
+        return getConditionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder getConditionsOrBuilder(
+          int index) {
+        if (conditionsBuilder_ == null) {
+          return conditions_.get(index);  } else {
+          return conditionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder> 
+           getConditionsOrBuilderList() {
+        if (conditionsBuilder_ != null) {
+          return conditionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(conditions_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder addConditionsBuilder() {
+        return getConditionsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.Condition.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder addConditionsBuilder(
+          int index) {
+        return getConditionsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.Condition.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Condition conditions = 5 [json_name = "conditions", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder> 
+           getConditionsBuilderList() {
+        return getConditionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Condition, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder> 
+          getConditionsFieldBuilder() {
+        if (conditionsBuilder_ == null) {
+          conditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Condition, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder>(
+                  conditions_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          conditions_ = null;
+        }
+        return conditionsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Consideration> considerations_ =
+        java.util.Collections.emptyList();
+      private void ensureConsiderationsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          considerations_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.Consideration>(considerations_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Consideration, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder> considerationsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Consideration> getConsiderationsList() {
+        if (considerationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(considerations_);
+        } else {
+          return considerationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public int getConsiderationsCount() {
+        if (considerationsBuilder_ == null) {
+          return considerations_.size();
+        } else {
+          return considerationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration getConsiderations(int index) {
+        if (considerationsBuilder_ == null) {
+          return considerations_.get(index);
+        } else {
+          return considerationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder setConsiderations(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Consideration value) {
+        if (considerationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConsiderationsIsMutable();
+          considerations_.set(index, value);
+          onChanged();
+        } else {
+          considerationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder setConsiderations(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder builderForValue) {
+        if (considerationsBuilder_ == null) {
+          ensureConsiderationsIsMutable();
+          considerations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          considerationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder addConsiderations(com.provenance.metadata.v1.p8e.P8eProto.Consideration value) {
+        if (considerationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConsiderationsIsMutable();
+          considerations_.add(value);
+          onChanged();
+        } else {
+          considerationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder addConsiderations(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Consideration value) {
+        if (considerationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConsiderationsIsMutable();
+          considerations_.add(index, value);
+          onChanged();
+        } else {
+          considerationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder addConsiderations(
+          com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder builderForValue) {
+        if (considerationsBuilder_ == null) {
+          ensureConsiderationsIsMutable();
+          considerations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          considerationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder addConsiderations(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder builderForValue) {
+        if (considerationsBuilder_ == null) {
+          ensureConsiderationsIsMutable();
+          considerations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          considerationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder addAllConsiderations(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.Consideration> values) {
+        if (considerationsBuilder_ == null) {
+          ensureConsiderationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, considerations_);
+          onChanged();
+        } else {
+          considerationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder clearConsiderations() {
+        if (considerationsBuilder_ == null) {
+          considerations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          considerationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public Builder removeConsiderations(int index) {
+        if (considerationsBuilder_ == null) {
+          ensureConsiderationsIsMutable();
+          considerations_.remove(index);
+          onChanged();
+        } else {
+          considerationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder getConsiderationsBuilder(
+          int index) {
+        return getConsiderationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder getConsiderationsOrBuilder(
+          int index) {
+        if (considerationsBuilder_ == null) {
+          return considerations_.get(index);  } else {
+          return considerationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder> 
+           getConsiderationsOrBuilderList() {
+        if (considerationsBuilder_ != null) {
+          return considerationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(considerations_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder addConsiderationsBuilder() {
+        return getConsiderationsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.Consideration.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder addConsiderationsBuilder(
+          int index) {
+        return getConsiderationsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.Consideration.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Consideration considerations = 6 [json_name = "considerations"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder> 
+           getConsiderationsBuilderList() {
+        return getConsiderationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Consideration, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder> 
+          getConsiderationsFieldBuilder() {
+        if (considerationsBuilder_ == null) {
+          considerationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Consideration, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder>(
+                  considerations_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          considerations_ = null;
+        }
+        return considerationsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> recitals_ =
+        java.util.Collections.emptyList();
+      private void ensureRecitalsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          recitals_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.Recital>(recitals_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Recital, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder, com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> recitalsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> getRecitalsList() {
+        if (recitalsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(recitals_);
+        } else {
+          return recitalsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public int getRecitalsCount() {
+        if (recitalsBuilder_ == null) {
+          return recitals_.size();
+        } else {
+          return recitalsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital getRecitals(int index) {
+        if (recitalsBuilder_ == null) {
+          return recitals_.get(index);
+        } else {
+          return recitalsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder setRecitals(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital value) {
+        if (recitalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecitalsIsMutable();
+          recitals_.set(index, value);
+          onChanged();
+        } else {
+          recitalsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder setRecitals(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder builderForValue) {
+        if (recitalsBuilder_ == null) {
+          ensureRecitalsIsMutable();
+          recitals_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recitalsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder addRecitals(com.provenance.metadata.v1.p8e.P8eProto.Recital value) {
+        if (recitalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecitalsIsMutable();
+          recitals_.add(value);
+          onChanged();
+        } else {
+          recitalsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder addRecitals(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital value) {
+        if (recitalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecitalsIsMutable();
+          recitals_.add(index, value);
+          onChanged();
+        } else {
+          recitalsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder addRecitals(
+          com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder builderForValue) {
+        if (recitalsBuilder_ == null) {
+          ensureRecitalsIsMutable();
+          recitals_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recitalsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder addRecitals(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder builderForValue) {
+        if (recitalsBuilder_ == null) {
+          ensureRecitalsIsMutable();
+          recitals_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recitalsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder addAllRecitals(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.Recital> values) {
+        if (recitalsBuilder_ == null) {
+          ensureRecitalsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, recitals_);
+          onChanged();
+        } else {
+          recitalsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder clearRecitals() {
+        if (recitalsBuilder_ == null) {
+          recitals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          recitalsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public Builder removeRecitals(int index) {
+        if (recitalsBuilder_ == null) {
+          ensureRecitalsIsMutable();
+          recitals_.remove(index);
+          onChanged();
+        } else {
+          recitalsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder getRecitalsBuilder(
+          int index) {
+        return getRecitalsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder getRecitalsOrBuilder(
+          int index) {
+        if (recitalsBuilder_ == null) {
+          return recitals_.get(index);  } else {
+          return recitalsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+           getRecitalsOrBuilderList() {
+        if (recitalsBuilder_ != null) {
+          return recitalsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(recitals_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder addRecitalsBuilder() {
+        return getRecitalsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.Recital.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder addRecitalsBuilder(
+          int index) {
+        return getRecitalsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.Recital.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital recitals = 7 [json_name = "recitals"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder> 
+           getRecitalsBuilderList() {
+        return getRecitalsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Recital, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder, com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+          getRecitalsFieldBuilder() {
+        if (recitalsBuilder_ == null) {
+          recitalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Recital, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder, com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder>(
+                  recitals_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          recitals_ = null;
+        }
+        return recitalsBuilder_;
+      }
+
+      private int timesExecuted_ ;
+      /**
+       * <code>int32 times_executed = 8 [json_name = "timesExecuted"];</code>
+       * @return The timesExecuted.
+       */
+      @java.lang.Override
+      public int getTimesExecuted() {
+        return timesExecuted_;
+      }
+      /**
+       * <code>int32 times_executed = 8 [json_name = "timesExecuted"];</code>
+       * @param value The timesExecuted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimesExecuted(int value) {
+
+        timesExecuted_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 times_executed = 8 [json_name = "timesExecuted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimesExecuted() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        timesExecuted_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Timestamp, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder, com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       * @return The startTime.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(com.provenance.metadata.v1.p8e.P8eProto.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(
+          com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      public Builder mergeStartTime(com.provenance.metadata.v1.p8e.P8eProto.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp start_time = 9 [json_name = "startTime"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Timestamp, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder, com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Timestamp, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder, com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.ByteString context_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes context = 10 [json_name = "context"];</code>
+       * @return The context.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContext() {
+        return context_;
+      }
+      /**
+       * <code>bytes context = 10 [json_name = "context"];</code>
+       * @param value The context to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContext(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        context_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes context = 10 [json_name = "context"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContext() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        context_ = getDefaultInstance().getContext();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Contract)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Contract)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Contract DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Contract();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Contract getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Contract>
+        PARSER = new com.google.protobuf.AbstractParser<Contract>() {
+      @java.lang.Override
+      public Contract parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Contract> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Contract> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Contract getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface DefinitionSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.DefinitionSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+     * @return Whether the resourceLocation field is set.
+     */
+    boolean hasResourceLocation();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+     * @return The resourceLocation.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Location getResourceLocation();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder getResourceLocationOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+     * @return Whether the signature field is set.
+     */
+    boolean hasSignature();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Signature getSignature();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder getSignatureOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType getType();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.DefinitionSpec}
+   */
+  @java.lang.Deprecated public static final class DefinitionSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.DefinitionSpec)
+      DefinitionSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DefinitionSpec.newBuilder() to construct.
+    private DefinitionSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DefinitionSpec() {
+      name_ = "";
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DefinitionSpec();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_DefinitionSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_DefinitionSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.class, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCE_LOCATION_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.Location resourceLocation_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+     * @return Whether the resourceLocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourceLocation() {
+      return resourceLocation_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+     * @return The resourceLocation.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Location getResourceLocation() {
+      return resourceLocation_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : resourceLocation_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder getResourceLocationOrBuilder() {
+      return resourceLocation_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : resourceLocation_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 3;
+    private com.provenance.metadata.v1.p8e.P8eProto.Signature signature_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+     * @return Whether the signature field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignature() {
+      return signature_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Signature getSignature() {
+      return signature_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance() : signature_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder getSignatureOrBuilder() {
+      return signature_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance() : signature_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private int type_ = 0;
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType getType() {
+      com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType result = com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.forNumber(type_);
+      return result == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (resourceLocation_ != null) {
+        output.writeMessage(2, getResourceLocation());
+      }
+      if (signature_ != null) {
+        output.writeMessage(3, getSignature());
+      }
+      if (type_ != com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.DEFINITION_SPEC_TYPE_UNKNOWN.getNumber()) {
+        output.writeEnum(4, type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (resourceLocation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResourceLocation());
+      }
+      if (signature_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSignature());
+      }
+      if (type_ != com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.DEFINITION_SPEC_TYPE_UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec other = (com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasResourceLocation() != other.hasResourceLocation()) return false;
+      if (hasResourceLocation()) {
+        if (!getResourceLocation()
+            .equals(other.getResourceLocation())) return false;
+      }
+      if (hasSignature() != other.hasSignature()) return false;
+      if (hasSignature()) {
+        if (!getSignature()
+            .equals(other.getSignature())) return false;
+      }
+      if (type_ != other.type_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasResourceLocation()) {
+        hash = (37 * hash) + RESOURCE_LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceLocation().hashCode();
+      }
+      if (hasSignature()) {
+        hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + getSignature().hashCode();
+      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.DefinitionSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.DefinitionSpec)
+        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_DefinitionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_DefinitionSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.class, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        resourceLocation_ = null;
+        if (resourceLocationBuilder_ != null) {
+          resourceLocationBuilder_.dispose();
+          resourceLocationBuilder_ = null;
+        }
+        signature_ = null;
+        if (signatureBuilder_ != null) {
+          signatureBuilder_.dispose();
+          signatureBuilder_ = null;
+        }
+        type_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_DefinitionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec build() {
+        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec result = new com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.resourceLocation_ = resourceLocationBuilder_ == null
+              ? resourceLocation_
+              : resourceLocationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.signature_ = signatureBuilder_ == null
+              ? signature_
+              : signatureBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.type_ = type_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasResourceLocation()) {
+          mergeResourceLocation(other.getResourceLocation());
+        }
+        if (other.hasSignature()) {
+          mergeSignature(other.getSignature());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getResourceLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getSignatureFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.Location resourceLocation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Location, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder, com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder> resourceLocationBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       * @return Whether the resourceLocation field is set.
+       */
+      public boolean hasResourceLocation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       * @return The resourceLocation.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Location getResourceLocation() {
+        if (resourceLocationBuilder_ == null) {
+          return resourceLocation_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : resourceLocation_;
+        } else {
+          return resourceLocationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      public Builder setResourceLocation(com.provenance.metadata.v1.p8e.P8eProto.Location value) {
+        if (resourceLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourceLocation_ = value;
+        } else {
+          resourceLocationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      public Builder setResourceLocation(
+          com.provenance.metadata.v1.p8e.P8eProto.Location.Builder builderForValue) {
+        if (resourceLocationBuilder_ == null) {
+          resourceLocation_ = builderForValue.build();
+        } else {
+          resourceLocationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      public Builder mergeResourceLocation(com.provenance.metadata.v1.p8e.P8eProto.Location value) {
+        if (resourceLocationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            resourceLocation_ != null &&
+            resourceLocation_ != com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance()) {
+            getResourceLocationBuilder().mergeFrom(value);
+          } else {
+            resourceLocation_ = value;
+          }
+        } else {
+          resourceLocationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      public Builder clearResourceLocation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        resourceLocation_ = null;
+        if (resourceLocationBuilder_ != null) {
+          resourceLocationBuilder_.dispose();
+          resourceLocationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Location.Builder getResourceLocationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResourceLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder getResourceLocationOrBuilder() {
+        if (resourceLocationBuilder_ != null) {
+          return resourceLocationBuilder_.getMessageOrBuilder();
+        } else {
+          return resourceLocation_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : resourceLocation_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location resource_location = 2 [json_name = "resourceLocation"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Location, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder, com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder> 
+          getResourceLocationFieldBuilder() {
+        if (resourceLocationBuilder_ == null) {
+          resourceLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Location, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder, com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder>(
+                  getResourceLocation(),
+                  getParentForChildren(),
+                  isClean());
+          resourceLocation_ = null;
+        }
+        return resourceLocationBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.Signature signature_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Signature, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder, com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> signatureBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       * @return Whether the signature field is set.
+       */
+      public boolean hasSignature() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature getSignature() {
+        if (signatureBuilder_ == null) {
+          return signature_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance() : signature_;
+        } else {
+          return signatureBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      public Builder setSignature(com.provenance.metadata.v1.p8e.P8eProto.Signature value) {
+        if (signatureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signature_ = value;
+        } else {
+          signatureBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      public Builder setSignature(
+          com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder builderForValue) {
+        if (signatureBuilder_ == null) {
+          signature_ = builderForValue.build();
+        } else {
+          signatureBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      public Builder mergeSignature(com.provenance.metadata.v1.p8e.P8eProto.Signature value) {
+        if (signatureBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            signature_ != null &&
+            signature_ != com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance()) {
+            getSignatureBuilder().mergeFrom(value);
+          } else {
+            signature_ = value;
+          }
+        } else {
+          signatureBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        signature_ = null;
+        if (signatureBuilder_ != null) {
+          signatureBuilder_.dispose();
+          signatureBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder getSignatureBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getSignatureFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder getSignatureOrBuilder() {
+        if (signatureBuilder_ != null) {
+          return signatureBuilder_.getMessageOrBuilder();
+        } else {
+          return signature_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance() : signature_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Signature signature = 3 [json_name = "signature"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Signature, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder, com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> 
+          getSignatureFieldBuilder() {
+        if (signatureBuilder_ == null) {
+          signatureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Signature, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder, com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder>(
+                  getSignature(),
+                  getParentForChildren(),
+                  isClean());
+          signature_ = null;
+        }
+        return signatureBuilder_;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType getType() {
+        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType result = com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.forNumber(type_);
+        return result == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpecType type = 4 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.DefinitionSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.DefinitionSpec)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DefinitionSpec>
+        PARSER = new com.google.protobuf.AbstractParser<DefinitionSpec>() {
+      @java.lang.Override
+      public DefinitionSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DefinitionSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DefinitionSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface FactOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Fact)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+     * @return Whether the dataLocation field is set.
+     */
+    boolean hasDataLocation();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+     * @return The dataLocation.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Location getDataLocation();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder getDataLocationOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Fact}
+   */
+  @java.lang.Deprecated public static final class Fact extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Fact)
+      FactOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Fact.newBuilder() to construct.
+    private Fact(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Fact() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Fact();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Fact_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Fact_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Fact.class, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_LOCATION_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.Location dataLocation_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+     * @return Whether the dataLocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataLocation() {
+      return dataLocation_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+     * @return The dataLocation.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Location getDataLocation() {
+      return dataLocation_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : dataLocation_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder getDataLocationOrBuilder() {
+      return dataLocation_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : dataLocation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (dataLocation_ != null) {
+        output.writeMessage(2, getDataLocation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (dataLocation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDataLocation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Fact)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Fact other = (com.provenance.metadata.v1.p8e.P8eProto.Fact) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasDataLocation() != other.hasDataLocation()) return false;
+      if (hasDataLocation()) {
+        if (!getDataLocation()
+            .equals(other.getDataLocation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasDataLocation()) {
+        hash = (37 * hash) + DATA_LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDataLocation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Fact prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Fact}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Fact)
+        com.provenance.metadata.v1.p8e.P8eProto.FactOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Fact_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Fact_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Fact.class, com.provenance.metadata.v1.p8e.P8eProto.Fact.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Fact.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        dataLocation_ = null;
+        if (dataLocationBuilder_ != null) {
+          dataLocationBuilder_.dispose();
+          dataLocationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Fact_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Fact result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Fact buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Fact result = new com.provenance.metadata.v1.p8e.P8eProto.Fact(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Fact result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dataLocation_ = dataLocationBuilder_ == null
+              ? dataLocation_
+              : dataLocationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Fact) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Fact)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Fact other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Fact.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasDataLocation()) {
+          mergeDataLocation(other.getDataLocation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDataLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.Location dataLocation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Location, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder, com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder> dataLocationBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       * @return Whether the dataLocation field is set.
+       */
+      public boolean hasDataLocation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       * @return The dataLocation.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Location getDataLocation() {
+        if (dataLocationBuilder_ == null) {
+          return dataLocation_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : dataLocation_;
+        } else {
+          return dataLocationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      public Builder setDataLocation(com.provenance.metadata.v1.p8e.P8eProto.Location value) {
+        if (dataLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataLocation_ = value;
+        } else {
+          dataLocationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      public Builder setDataLocation(
+          com.provenance.metadata.v1.p8e.P8eProto.Location.Builder builderForValue) {
+        if (dataLocationBuilder_ == null) {
+          dataLocation_ = builderForValue.build();
+        } else {
+          dataLocationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      public Builder mergeDataLocation(com.provenance.metadata.v1.p8e.P8eProto.Location value) {
+        if (dataLocationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            dataLocation_ != null &&
+            dataLocation_ != com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance()) {
+            getDataLocationBuilder().mergeFrom(value);
+          } else {
+            dataLocation_ = value;
+          }
+        } else {
+          dataLocationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      public Builder clearDataLocation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dataLocation_ = null;
+        if (dataLocationBuilder_ != null) {
+          dataLocationBuilder_.dispose();
+          dataLocationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Location.Builder getDataLocationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDataLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder getDataLocationOrBuilder() {
+        if (dataLocationBuilder_ != null) {
+          return dataLocationBuilder_.getMessageOrBuilder();
+        } else {
+          return dataLocation_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance() : dataLocation_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Location data_location = 2 [json_name = "dataLocation"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Location, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder, com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder> 
+          getDataLocationFieldBuilder() {
+        if (dataLocationBuilder_ == null) {
+          dataLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Location, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder, com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder>(
+                  getDataLocation(),
+                  getParentForChildren(),
+                  isClean());
+          dataLocation_ = null;
+        }
+        return dataLocationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Fact)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Fact)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Fact DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Fact();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Fact getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Fact>
+        PARSER = new com.google.protobuf.AbstractParser<Fact>() {
+      @java.lang.Override
+      public Fact parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Fact> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Fact> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Fact getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ConditionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Condition)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+     * @return The conditionName.
+     */
+    java.lang.String getConditionName();
+    /**
+     * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+     * @return The bytes for conditionName.
+     */
+    com.google.protobuf.ByteString
+        getConditionNameBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+     * @return The result.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getResult();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder getResultOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Condition}
+   */
+  @java.lang.Deprecated public static final class Condition extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Condition)
+      ConditionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Condition.newBuilder() to construct.
+    private Condition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Condition() {
+      conditionName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Condition();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Condition_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Condition_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Condition.class, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder.class);
+    }
+
+    public static final int CONDITION_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object conditionName_ = "";
+    /**
+     * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+     * @return The conditionName.
+     */
+    @java.lang.Override
+    public java.lang.String getConditionName() {
+      java.lang.Object ref = conditionName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        conditionName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+     * @return The bytes for conditionName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConditionNameBytes() {
+      java.lang.Object ref = conditionName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        conditionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getResult() {
+      return result_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conditionName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, conditionName_);
+      }
+      if (result_ != null) {
+        output.writeMessage(2, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conditionName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, conditionName_);
+      }
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Condition)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Condition other = (com.provenance.metadata.v1.p8e.P8eProto.Condition) obj;
+
+      if (!getConditionName()
+          .equals(other.getConditionName())) return false;
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONDITION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getConditionName().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Condition prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Condition}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Condition)
+        com.provenance.metadata.v1.p8e.P8eProto.ConditionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Condition_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Condition_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Condition.class, com.provenance.metadata.v1.p8e.P8eProto.Condition.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Condition.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        conditionName_ = "";
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Condition_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Condition getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Condition.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Condition build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Condition result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Condition buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Condition result = new com.provenance.metadata.v1.p8e.P8eProto.Condition(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Condition result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.conditionName_ = conditionName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Condition) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Condition)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Condition other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Condition.getDefaultInstance()) return this;
+        if (!other.getConditionName().isEmpty()) {
+          conditionName_ = other.conditionName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                conditionName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object conditionName_ = "";
+      /**
+       * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+       * @return The conditionName.
+       */
+      public java.lang.String getConditionName() {
+        java.lang.Object ref = conditionName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          conditionName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+       * @return The bytes for conditionName.
+       */
+      public com.google.protobuf.ByteString
+          getConditionNameBytes() {
+        java.lang.Object ref = conditionName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          conditionName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+       * @param value The conditionName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConditionName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        conditionName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConditionName() {
+        conditionName_ = getDefaultInstance().getConditionName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string condition_name = 1 [json_name = "conditionName"];</code>
+       * @param value The bytes for conditionName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConditionNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        conditionName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder> resultBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       * @return The result.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      public Builder setResult(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      public Builder setResult(
+          com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      public Builder mergeResult(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            result_ != null &&
+            result_ != com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder getResultBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 2 [json_name = "result"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Condition)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Condition)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Condition DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Condition();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Condition getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Condition>
+        PARSER = new com.google.protobuf.AbstractParser<Condition>() {
+      @java.lang.Override
+      public Condition parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Condition> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Condition> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Condition getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ConsiderationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Consideration)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+     * @return The considerationName.
+     */
+    java.lang.String getConsiderationName();
+    /**
+     * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+     * @return The bytes for considerationName.
+     */
+    com.google.protobuf.ByteString
+        getConsiderationNameBytes();
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact> 
+        getInputsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getInputs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    int getInputsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+     * @return The result.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getResult();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder getResultOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Consideration}
+   */
+  @java.lang.Deprecated public static final class Consideration extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Consideration)
+      ConsiderationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Consideration.newBuilder() to construct.
+    private Consideration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Consideration() {
+      considerationName_ = "";
+      inputs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Consideration();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Consideration_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Consideration_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Consideration.class, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder.class);
+    }
+
+    public static final int CONSIDERATION_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object considerationName_ = "";
+    /**
+     * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+     * @return The considerationName.
+     */
+    @java.lang.Override
+    public java.lang.String getConsiderationName() {
+      java.lang.Object ref = considerationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        considerationName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+     * @return The bytes for considerationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConsiderationNameBytes() {
+      java.lang.Object ref = considerationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        considerationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact> inputs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 3;
+    private com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getResult() {
+      return result_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(considerationName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, considerationName_);
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(2, inputs_.get(i));
+      }
+      if (result_ != null) {
+        output.writeMessage(3, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(considerationName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, considerationName_);
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, inputs_.get(i));
+      }
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Consideration)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Consideration other = (com.provenance.metadata.v1.p8e.P8eProto.Consideration) obj;
+
+      if (!getConsiderationName()
+          .equals(other.getConsiderationName())) return false;
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONSIDERATION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getConsiderationName().hashCode();
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Consideration prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Consideration}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Consideration)
+        com.provenance.metadata.v1.p8e.P8eProto.ConsiderationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Consideration_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Consideration_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Consideration.class, com.provenance.metadata.v1.p8e.P8eProto.Consideration.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Consideration.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        considerationName_ = "";
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Consideration_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Consideration.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Consideration result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Consideration buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Consideration result = new com.provenance.metadata.v1.p8e.P8eProto.Consideration(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.Consideration result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Consideration result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.considerationName_ = considerationName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Consideration) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Consideration)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Consideration other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Consideration.getDefaultInstance()) return this;
+        if (!other.getConsiderationName().isEmpty()) {
+          considerationName_ = other.considerationName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                considerationName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.metadata.v1.p8e.P8eProto.ProposedFact m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object considerationName_ = "";
+      /**
+       * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+       * @return The considerationName.
+       */
+      public java.lang.String getConsiderationName() {
+        java.lang.Object ref = considerationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          considerationName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+       * @return The bytes for considerationName.
+       */
+      public com.google.protobuf.ByteString
+          getConsiderationNameBytes() {
+        java.lang.Object ref = considerationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          considerationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+       * @param value The considerationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsiderationName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        considerationName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsiderationName() {
+        considerationName_ = getDefaultInstance().getConsiderationName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consideration_name = 1 [json_name = "considerationName"];</code>
+       * @param value The bytes for considerationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsiderationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        considerationName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          inputs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact>(inputs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProposedFact, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> inputsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(com.provenance.metadata.v1.p8e.P8eProto.ProposedFact value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.ProposedFact> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ProposedFact inputs = 2 [json_name = "inputs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProposedFact, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ProposedFact, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder> resultBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       * @return The result.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      public Builder setResult(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      public Builder setResult(
+          com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      public Builder mergeResult(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            result_ != null &&
+            result_ != com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder getResultBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResult result = 3 [json_name = "result"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Consideration)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Consideration)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Consideration DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Consideration();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Consideration getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Consideration>
+        PARSER = new com.google.protobuf.AbstractParser<Consideration>() {
+      @java.lang.Override
+      public Consideration parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Consideration> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Consideration> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Consideration getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ProposedFactOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.ProposedFact)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <code>string classname = 3 [json_name = "classname"];</code>
+     * @return The classname.
+     */
+    java.lang.String getClassname();
+    /**
+     * <code>string classname = 3 [json_name = "classname"];</code>
+     * @return The bytes for classname.
+     */
+    com.google.protobuf.ByteString
+        getClassnameBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+     * @return Whether the ancestor field is set.
+     */
+    boolean hasAncestor();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+     * @return The ancestor.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getAncestor();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder getAncestorOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.ProposedFact}
+   */
+  @java.lang.Deprecated public static final class ProposedFact extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.ProposedFact)
+      ProposedFactOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProposedFact.newBuilder() to construct.
+    private ProposedFact(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProposedFact() {
+      name_ = "";
+      hash_ = "";
+      classname_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProposedFact();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProposedFact_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProposedFact_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.class, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HASH_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hash_ = "";
+    /**
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASSNAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classname_ = "";
+    /**
+     * <code>string classname = 3 [json_name = "classname"];</code>
+     * @return The classname.
+     */
+    @java.lang.Override
+    public java.lang.String getClassname() {
+      java.lang.Object ref = classname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classname = 3 [json_name = "classname"];</code>
+     * @return The bytes for classname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassnameBytes() {
+      java.lang.Object ref = classname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ANCESTOR_FIELD_NUMBER = 4;
+    private com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference ancestor_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+     * @return Whether the ancestor field is set.
+     */
+    @java.lang.Override
+    public boolean hasAncestor() {
+      return ancestor_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+     * @return The ancestor.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getAncestor() {
+      return ancestor_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ancestor_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder getAncestorOrBuilder() {
+      return ancestor_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ancestor_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classname_);
+      }
+      if (ancestor_ != null) {
+        output.writeMessage(4, getAncestor());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classname_);
+      }
+      if (ancestor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getAncestor());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.ProposedFact)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.ProposedFact other = (com.provenance.metadata.v1.p8e.P8eProto.ProposedFact) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getHash()
+          .equals(other.getHash())) return false;
+      if (!getClassname()
+          .equals(other.getClassname())) return false;
+      if (hasAncestor() != other.hasAncestor()) return false;
+      if (hasAncestor()) {
+        if (!getAncestor()
+            .equals(other.getAncestor())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
+      hash = (37 * hash) + CLASSNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClassname().hashCode();
+      if (hasAncestor()) {
+        hash = (37 * hash) + ANCESTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getAncestor().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.ProposedFact prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.ProposedFact}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.ProposedFact)
+        com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProposedFact_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProposedFact_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.class, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        hash_ = "";
+        classname_ = "";
+        ancestor_ = null;
+        if (ancestorBuilder_ != null) {
+          ancestorBuilder_.dispose();
+          ancestorBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProposedFact_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact build() {
+        com.provenance.metadata.v1.p8e.P8eProto.ProposedFact result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.ProposedFact result = new com.provenance.metadata.v1.p8e.P8eProto.ProposedFact(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ProposedFact result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.hash_ = hash_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.classname_ = classname_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ancestor_ = ancestorBuilder_ == null
+              ? ancestor_
+              : ancestorBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.ProposedFact) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.ProposedFact)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.ProposedFact other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getClassname().isEmpty()) {
+          classname_ = other.classname_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasAncestor()) {
+          mergeAncestor(other.getAncestor());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                hash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                classname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getAncestorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        hash_ = getDefaultInstance().getHash();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classname_ = "";
+      /**
+       * <code>string classname = 3 [json_name = "classname"];</code>
+       * @return The classname.
+       */
+      public java.lang.String getClassname() {
+        java.lang.Object ref = classname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classname = 3 [json_name = "classname"];</code>
+       * @return The bytes for classname.
+       */
+      public com.google.protobuf.ByteString
+          getClassnameBytes() {
+        java.lang.Object ref = classname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classname = 3 [json_name = "classname"];</code>
+       * @param value The classname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassname(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classname_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classname = 3 [json_name = "classname"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassname() {
+        classname_ = getDefaultInstance().getClassname();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classname = 3 [json_name = "classname"];</code>
+       * @param value The bytes for classname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classname_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference ancestor_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder> ancestorBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       * @return Whether the ancestor field is set.
+       */
+      public boolean hasAncestor() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       * @return The ancestor.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getAncestor() {
+        if (ancestorBuilder_ == null) {
+          return ancestor_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ancestor_;
+        } else {
+          return ancestorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      public Builder setAncestor(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference value) {
+        if (ancestorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ancestor_ = value;
+        } else {
+          ancestorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      public Builder setAncestor(
+          com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder builderForValue) {
+        if (ancestorBuilder_ == null) {
+          ancestor_ = builderForValue.build();
+        } else {
+          ancestorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      public Builder mergeAncestor(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference value) {
+        if (ancestorBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            ancestor_ != null &&
+            ancestor_ != com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance()) {
+            getAncestorBuilder().mergeFrom(value);
+          } else {
+            ancestor_ = value;
+          }
+        } else {
+          ancestorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      public Builder clearAncestor() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ancestor_ = null;
+        if (ancestorBuilder_ != null) {
+          ancestorBuilder_.dispose();
+          ancestorBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder getAncestorBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getAncestorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder getAncestorOrBuilder() {
+        if (ancestorBuilder_ != null) {
+          return ancestorBuilder_.getMessageOrBuilder();
+        } else {
+          return ancestor_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ancestor_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ancestor = 4 [json_name = "ancestor"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder> 
+          getAncestorFieldBuilder() {
+        if (ancestorBuilder_ == null) {
+          ancestorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder>(
+                  getAncestor(),
+                  getParentForChildren(),
+                  isClean());
+          ancestor_ = null;
+        }
+        return ancestorBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.ProposedFact)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.ProposedFact)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.ProposedFact DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.ProposedFact();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProposedFact>
+        PARSER = new com.google.protobuf.AbstractParser<ProposedFact>() {
+      @java.lang.Override
+      public ProposedFact parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProposedFact> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProposedFact> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ExecutionResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.ExecutionResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+     * @return Whether the output field is set.
+     */
+    boolean hasOutput();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+     * @return The output.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getOutput();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder getOutputOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+     * @return The enum numeric value on the wire for result.
+     */
+    int getResultValue();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+     * @return The result.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType getResult();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+     * @return Whether the recordedAt field is set.
+     */
+    boolean hasRecordedAt();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+     * @return The recordedAt.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Timestamp getRecordedAt();
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder getRecordedAtOrBuilder();
+
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    java.lang.String getErrorMessage();
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    com.google.protobuf.ByteString
+        getErrorMessageBytes();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.ExecutionResult}
+   */
+  @java.lang.Deprecated public static final class ExecutionResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.ExecutionResult)
+      ExecutionResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExecutionResult.newBuilder() to construct.
+    private ExecutionResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExecutionResult() {
+      result_ = 0;
+      errorMessage_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExecutionResult();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ExecutionResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ExecutionResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.class, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder.class);
+    }
+
+    public static final int OUTPUT_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.ProposedFact output_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+     * @return Whether the output field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutput() {
+      return output_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+     * @return The output.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getOutput() {
+      return output_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance() : output_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder getOutputOrBuilder() {
+      return output_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance() : output_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private int result_ = 0;
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+     * @return The enum numeric value on the wire for result.
+     */
+    @java.lang.Override public int getResultValue() {
+      return result_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType getResult() {
+      com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType result = com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.forNumber(result_);
+      return result == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.UNRECOGNIZED : result;
+    }
+
+    public static final int RECORDED_AT_FIELD_NUMBER = 3;
+    private com.provenance.metadata.v1.p8e.P8eProto.Timestamp recordedAt_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+     * @return Whether the recordedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecordedAt() {
+      return recordedAt_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+     * @return The recordedAt.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Timestamp getRecordedAt() {
+      return recordedAt_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : recordedAt_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder getRecordedAtOrBuilder() {
+      return recordedAt_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : recordedAt_;
+    }
+
+    public static final int ERROR_MESSAGE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object errorMessage_ = "";
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    @java.lang.Override
+    public java.lang.String getErrorMessage() {
+      java.lang.Object ref = errorMessage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errorMessage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorMessageBytes() {
+      java.lang.Object ref = errorMessage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errorMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (output_ != null) {
+        output.writeMessage(1, getOutput());
+      }
+      if (result_ != com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.RESULT_TYPE_UNKNOWN.getNumber()) {
+        output.writeEnum(2, result_);
+      }
+      if (recordedAt_ != null) {
+        output.writeMessage(3, getRecordedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errorMessage_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (output_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOutput());
+      }
+      if (result_ != com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.RESULT_TYPE_UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, result_);
+      }
+      if (recordedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRecordedAt());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errorMessage_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult other = (com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult) obj;
+
+      if (hasOutput() != other.hasOutput()) return false;
+      if (hasOutput()) {
+        if (!getOutput()
+            .equals(other.getOutput())) return false;
+      }
+      if (result_ != other.result_) return false;
+      if (hasRecordedAt() != other.hasRecordedAt()) return false;
+      if (hasRecordedAt()) {
+        if (!getRecordedAt()
+            .equals(other.getRecordedAt())) return false;
+      }
+      if (!getErrorMessage()
+          .equals(other.getErrorMessage())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOutput()) {
+        hash = (37 * hash) + OUTPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutput().hashCode();
+      }
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + result_;
+      if (hasRecordedAt()) {
+        hash = (37 * hash) + RECORDED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordedAt().hashCode();
+      }
+      hash = (37 * hash) + ERROR_MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getErrorMessage().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.ExecutionResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.ExecutionResult)
+        com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ExecutionResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ExecutionResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.class, com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        output_ = null;
+        if (outputBuilder_ != null) {
+          outputBuilder_.dispose();
+          outputBuilder_ = null;
+        }
+        result_ = 0;
+        recordedAt_ = null;
+        if (recordedAtBuilder_ != null) {
+          recordedAtBuilder_.dispose();
+          recordedAtBuilder_ = null;
+        }
+        errorMessage_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ExecutionResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult build() {
+        com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result = new com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.output_ = outputBuilder_ == null
+              ? output_
+              : outputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.result_ = result_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.recordedAt_ = recordedAtBuilder_ == null
+              ? recordedAt_
+              : recordedAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.errorMessage_ = errorMessage_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult.getDefaultInstance()) return this;
+        if (other.hasOutput()) {
+          mergeOutput(other.getOutput());
+        }
+        if (other.result_ != 0) {
+          setResultValue(other.getResultValue());
+        }
+        if (other.hasRecordedAt()) {
+          mergeRecordedAt(other.getRecordedAt());
+        }
+        if (!other.getErrorMessage().isEmpty()) {
+          errorMessage_ = other.errorMessage_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOutputFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                result_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getRecordedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                errorMessage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.ProposedFact output_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProposedFact, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> outputBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       * @return Whether the output field is set.
+       */
+      public boolean hasOutput() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       * @return The output.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact getOutput() {
+        if (outputBuilder_ == null) {
+          return output_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance() : output_;
+        } else {
+          return outputBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      public Builder setOutput(com.provenance.metadata.v1.p8e.P8eProto.ProposedFact value) {
+        if (outputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          output_ = value;
+        } else {
+          outputBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      public Builder setOutput(
+          com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder builderForValue) {
+        if (outputBuilder_ == null) {
+          output_ = builderForValue.build();
+        } else {
+          outputBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      public Builder mergeOutput(com.provenance.metadata.v1.p8e.P8eProto.ProposedFact value) {
+        if (outputBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            output_ != null &&
+            output_ != com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance()) {
+            getOutputBuilder().mergeFrom(value);
+          } else {
+            output_ = value;
+          }
+        } else {
+          outputBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      public Builder clearOutput() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        output_ = null;
+        if (outputBuilder_ != null) {
+          outputBuilder_.dispose();
+          outputBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder getOutputBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOutputFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder getOutputOrBuilder() {
+        if (outputBuilder_ != null) {
+          return outputBuilder_.getMessageOrBuilder();
+        } else {
+          return output_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.getDefaultInstance() : output_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProposedFact output = 1 [json_name = "output"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProposedFact, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder> 
+          getOutputFieldBuilder() {
+        if (outputBuilder_ == null) {
+          outputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ProposedFact, com.provenance.metadata.v1.p8e.P8eProto.ProposedFact.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProposedFactOrBuilder>(
+                  getOutput(),
+                  getParentForChildren(),
+                  isClean());
+          output_ = null;
+        }
+        return outputBuilder_;
+      }
+
+      private int result_ = 0;
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+       * @return The enum numeric value on the wire for result.
+       */
+      @java.lang.Override public int getResultValue() {
+        return result_;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+       * @param value The enum numeric value on the wire for result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultValue(int value) {
+        result_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+       * @return The result.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType getResult() {
+        com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType result = com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.forNumber(result_);
+        return result == null ? com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(com.provenance.metadata.v1.p8e.P8eProto.ExecutionResultType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        result_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ExecutionResultType result = 2 [json_name = "result"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        result_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.Timestamp recordedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Timestamp, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder, com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder> recordedAtBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       * @return Whether the recordedAt field is set.
+       */
+      public boolean hasRecordedAt() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       * @return The recordedAt.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp getRecordedAt() {
+        if (recordedAtBuilder_ == null) {
+          return recordedAt_ == null ? com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : recordedAt_;
+        } else {
+          return recordedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      public Builder setRecordedAt(com.provenance.metadata.v1.p8e.P8eProto.Timestamp value) {
+        if (recordedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recordedAt_ = value;
+        } else {
+          recordedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      public Builder setRecordedAt(
+          com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder builderForValue) {
+        if (recordedAtBuilder_ == null) {
+          recordedAt_ = builderForValue.build();
+        } else {
+          recordedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      public Builder mergeRecordedAt(com.provenance.metadata.v1.p8e.P8eProto.Timestamp value) {
+        if (recordedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            recordedAt_ != null &&
+            recordedAt_ != com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance()) {
+            getRecordedAtBuilder().mergeFrom(value);
+          } else {
+            recordedAt_ = value;
+          }
+        } else {
+          recordedAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      public Builder clearRecordedAt() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        recordedAt_ = null;
+        if (recordedAtBuilder_ != null) {
+          recordedAtBuilder_.dispose();
+          recordedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder getRecordedAtBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getRecordedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder getRecordedAtOrBuilder() {
+        if (recordedAtBuilder_ != null) {
+          return recordedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return recordedAt_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance() : recordedAt_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.Timestamp recorded_at = 3 [json_name = "recordedAt"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Timestamp, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder, com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder> 
+          getRecordedAtFieldBuilder() {
+        if (recordedAtBuilder_ == null) {
+          recordedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Timestamp, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder, com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder>(
+                  getRecordedAt(),
+                  getParentForChildren(),
+                  isClean());
+          recordedAt_ = null;
+        }
+        return recordedAtBuilder_;
+      }
+
+      private java.lang.Object errorMessage_ = "";
+      /**
+       * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+       * @return The errorMessage.
+       */
+      public java.lang.String getErrorMessage() {
+        java.lang.Object ref = errorMessage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errorMessage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+       * @return The bytes for errorMessage.
+       */
+      public com.google.protobuf.ByteString
+          getErrorMessageBytes() {
+        java.lang.Object ref = errorMessage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorMessage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+       * @param value The errorMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorMessage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        errorMessage_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorMessage() {
+        errorMessage_ = getDefaultInstance().getErrorMessage();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+       * @param value The bytes for errorMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        errorMessage_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.ExecutionResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.ExecutionResult)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExecutionResult>
+        PARSER = new com.google.protobuf.AbstractParser<ExecutionResult>() {
+      @java.lang.Override
+      public ExecutionResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExecutionResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExecutionResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ExecutionResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface RecitalsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Recitals)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> 
+        getPartiesList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Recital getParties(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    int getPartiesCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+        getPartiesOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder getPartiesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Recitals}
+   */
+  @java.lang.Deprecated public static final class Recitals extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Recitals)
+      RecitalsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Recitals.newBuilder() to construct.
+    private Recitals(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Recitals() {
+      parties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Recitals();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recitals_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recitals_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Recitals.class, com.provenance.metadata.v1.p8e.P8eProto.Recitals.Builder.class);
+    }
+
+    public static final int PARTIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> parties_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> getPartiesList() {
+      return parties_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+        getPartiesOrBuilderList() {
+      return parties_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    @java.lang.Override
+    public int getPartiesCount() {
+      return parties_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Recital getParties(int index) {
+      return parties_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder getPartiesOrBuilder(
+        int index) {
+      return parties_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < parties_.size(); i++) {
+        output.writeMessage(1, parties_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < parties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, parties_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Recitals)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Recitals other = (com.provenance.metadata.v1.p8e.P8eProto.Recitals) obj;
+
+      if (!getPartiesList()
+          .equals(other.getPartiesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPartiesCount() > 0) {
+        hash = (37 * hash) + PARTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getPartiesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Recitals prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Recitals}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Recitals)
+        com.provenance.metadata.v1.p8e.P8eProto.RecitalsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recitals_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recitals_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Recitals.class, com.provenance.metadata.v1.p8e.P8eProto.Recitals.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Recitals.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (partiesBuilder_ == null) {
+          parties_ = java.util.Collections.emptyList();
+        } else {
+          parties_ = null;
+          partiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recitals_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Recitals getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Recitals.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Recitals build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Recitals result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Recitals buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Recitals result = new com.provenance.metadata.v1.p8e.P8eProto.Recitals(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.Recitals result) {
+        if (partiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            parties_ = java.util.Collections.unmodifiableList(parties_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.parties_ = parties_;
+        } else {
+          result.parties_ = partiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Recitals result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Recitals) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Recitals)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Recitals other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Recitals.getDefaultInstance()) return this;
+        if (partiesBuilder_ == null) {
+          if (!other.parties_.isEmpty()) {
+            if (parties_.isEmpty()) {
+              parties_ = other.parties_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePartiesIsMutable();
+              parties_.addAll(other.parties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.parties_.isEmpty()) {
+            if (partiesBuilder_.isEmpty()) {
+              partiesBuilder_.dispose();
+              partiesBuilder_ = null;
+              parties_ = other.parties_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              partiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPartiesFieldBuilder() : null;
+            } else {
+              partiesBuilder_.addAllMessages(other.parties_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.provenance.metadata.v1.p8e.P8eProto.Recital m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.Recital.parser(),
+                        extensionRegistry);
+                if (partiesBuilder_ == null) {
+                  ensurePartiesIsMutable();
+                  parties_.add(m);
+                } else {
+                  partiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> parties_ =
+        java.util.Collections.emptyList();
+      private void ensurePartiesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          parties_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.Recital>(parties_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Recital, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder, com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> partiesBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital> getPartiesList() {
+        if (partiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(parties_);
+        } else {
+          return partiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public int getPartiesCount() {
+        if (partiesBuilder_ == null) {
+          return parties_.size();
+        } else {
+          return partiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital getParties(int index) {
+        if (partiesBuilder_ == null) {
+          return parties_.get(index);
+        } else {
+          return partiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder setParties(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital value) {
+        if (partiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartiesIsMutable();
+          parties_.set(index, value);
+          onChanged();
+        } else {
+          partiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder setParties(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder builderForValue) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          partiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder addParties(com.provenance.metadata.v1.p8e.P8eProto.Recital value) {
+        if (partiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartiesIsMutable();
+          parties_.add(value);
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder addParties(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital value) {
+        if (partiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartiesIsMutable();
+          parties_.add(index, value);
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder addParties(
+          com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder builderForValue) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder addParties(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder builderForValue) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder addAllParties(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.Recital> values) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
+          onChanged();
+        } else {
+          partiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder clearParties() {
+        if (partiesBuilder_ == null) {
+          parties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          partiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public Builder removeParties(int index) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.remove(index);
+          onChanged();
+        } else {
+          partiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder getPartiesBuilder(
+          int index) {
+        return getPartiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder getPartiesOrBuilder(
+          int index) {
+        if (partiesBuilder_ == null) {
+          return parties_.get(index);  } else {
+          return partiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+           getPartiesOrBuilderList() {
+        if (partiesBuilder_ != null) {
+          return partiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(parties_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder addPartiesBuilder() {
+        return getPartiesFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.Recital.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder addPartiesBuilder(
+          int index) {
+        return getPartiesFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.Recital.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Recital parties = 1 [json_name = "parties"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder> 
+           getPartiesBuilderList() {
+        return getPartiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Recital, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder, com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder> 
+          getPartiesFieldBuilder() {
+        if (partiesBuilder_ == null) {
+          partiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Recital, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder, com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder>(
+                  parties_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          parties_ = null;
+        }
+        return partiesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Recitals)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Recitals)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Recitals DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Recitals();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recitals getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Recitals>
+        PARSER = new com.google.protobuf.AbstractParser<Recitals>() {
+      @java.lang.Override
+      public Recitals parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Recitals> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Recitals> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Recitals getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface RecitalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Recital)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+     * @return The enum numeric value on the wire for signerRole.
+     */
+    int getSignerRoleValue();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+     * @return The signerRole.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PartyType getSignerRole();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+     * @return Whether the signer field is set.
+     */
+    boolean hasSigner();
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getSigner();
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getSignerOrBuilder();
+
+    /**
+     * <code>bytes address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Recital}
+   */
+  @java.lang.Deprecated public static final class Recital extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Recital)
+      RecitalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Recital.newBuilder() to construct.
+    private Recital(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Recital() {
+      signerRole_ = 0;
+      address_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Recital();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recital_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recital_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Recital.class, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder.class);
+    }
+
+    public static final int SIGNER_ROLE_FIELD_NUMBER = 1;
+    private int signerRole_ = 0;
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+     * @return The enum numeric value on the wire for signerRole.
+     */
+    @java.lang.Override public int getSignerRoleValue() {
+      return signerRole_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+     * @return The signerRole.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.p8e.P8eProto.PartyType getSignerRole() {
+      com.provenance.metadata.v1.p8e.P8eProto.PartyType result = com.provenance.metadata.v1.p8e.P8eProto.PartyType.forNumber(signerRole_);
+      return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PartyType.UNRECOGNIZED : result;
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys signer_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+     * @return Whether the signer field is set.
+     */
+    @java.lang.Override
+    public boolean hasSigner() {
+      return signer_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getSigner() {
+      return signer_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getSignerOrBuilder() {
+      return signer_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (signerRole_ != com.provenance.metadata.v1.p8e.P8eProto.PartyType.PARTY_TYPE_UNKNOWN.getNumber()) {
+        output.writeEnum(1, signerRole_);
+      }
+      if (signer_ != null) {
+        output.writeMessage(2, getSigner());
+      }
+      if (!address_.isEmpty()) {
+        output.writeBytes(3, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (signerRole_ != com.provenance.metadata.v1.p8e.P8eProto.PartyType.PARTY_TYPE_UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, signerRole_);
+      }
+      if (signer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSigner());
+      }
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Recital)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Recital other = (com.provenance.metadata.v1.p8e.P8eProto.Recital) obj;
+
+      if (signerRole_ != other.signerRole_) return false;
+      if (hasSigner() != other.hasSigner()) return false;
+      if (hasSigner()) {
+        if (!getSigner()
+            .equals(other.getSigner())) return false;
+      }
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + signerRole_;
+      if (hasSigner()) {
+        hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+        hash = (53 * hash) + getSigner().hashCode();
+      }
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Recital prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Recital}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Recital)
+        com.provenance.metadata.v1.p8e.P8eProto.RecitalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recital_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recital_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Recital.class, com.provenance.metadata.v1.p8e.P8eProto.Recital.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Recital.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signerRole_ = 0;
+        signer_ = null;
+        if (signerBuilder_ != null) {
+          signerBuilder_.dispose();
+          signerBuilder_ = null;
+        }
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Recital_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Recital.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Recital result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Recital buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Recital result = new com.provenance.metadata.v1.p8e.P8eProto.Recital(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Recital result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signerRole_ = signerRole_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signer_ = signerBuilder_ == null
+              ? signer_
+              : signerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Recital) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Recital)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Recital other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Recital.getDefaultInstance()) return this;
+        if (other.signerRole_ != 0) {
+          setSignerRoleValue(other.getSignerRoleValue());
+        }
+        if (other.hasSigner()) {
+          mergeSigner(other.getSigner());
+        }
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                signerRole_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getSignerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int signerRole_ = 0;
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+       * @return The enum numeric value on the wire for signerRole.
+       */
+      @java.lang.Override public int getSignerRoleValue() {
+        return signerRole_;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+       * @param value The enum numeric value on the wire for signerRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerRoleValue(int value) {
+        signerRole_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+       * @return The signerRole.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PartyType getSignerRole() {
+        com.provenance.metadata.v1.p8e.P8eProto.PartyType result = com.provenance.metadata.v1.p8e.P8eProto.PartyType.forNumber(signerRole_);
+        return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PartyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+       * @param value The signerRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerRole(com.provenance.metadata.v1.p8e.P8eProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        signerRole_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType signer_role = 1 [json_name = "signerRole"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignerRole() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signerRole_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys signer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder> signerBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       * @return Whether the signer field is set.
+       */
+      public boolean hasSigner() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getSigner() {
+        if (signerBuilder_ == null) {
+          return signer_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+        } else {
+          return signerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      public Builder setSigner(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys value) {
+        if (signerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signer_ = value;
+        } else {
+          signerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      public Builder setSigner(
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder builderForValue) {
+        if (signerBuilder_ == null) {
+          signer_ = builderForValue.build();
+        } else {
+          signerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      public Builder mergeSigner(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys value) {
+        if (signerBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            signer_ != null &&
+            signer_ != com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance()) {
+            getSignerBuilder().mergeFrom(value);
+          } else {
+            signer_ = value;
+          }
+        } else {
+          signerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      public Builder clearSigner() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signer_ = null;
+        if (signerBuilder_ != null) {
+          signerBuilder_.dispose();
+          signerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder getSignerBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSignerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getSignerOrBuilder() {
+        if (signerBuilder_ != null) {
+          return signerBuilder_.getMessageOrBuilder();
+        } else {
+          return signer_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 2 [json_name = "signer"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder> 
+          getSignerFieldBuilder() {
+        if (signerBuilder_ == null) {
+          signerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder>(
+                  getSigner(),
+                  getParentForChildren(),
+                  isClean());
+          signer_ = null;
+        }
+        return signerBuilder_;
+      }
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes address = 3 [json_name = "address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <code>bytes address = 3 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes address = 3 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Recital)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Recital)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Recital DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Recital();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Recital getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Recital>
+        PARSER = new com.google.protobuf.AbstractParser<Recital>() {
+      @java.lang.Override
+      public Recital parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Recital> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Recital> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Recital getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface LocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Location)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+     * @return Whether the ref field is set.
+     */
+    boolean hasRef();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+     * @return The ref.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getRef();
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder getRefOrBuilder();
+
+    /**
+     * <code>string classname = 2 [json_name = "classname"];</code>
+     * @return The classname.
+     */
+    java.lang.String getClassname();
+    /**
+     * <code>string classname = 2 [json_name = "classname"];</code>
+     * @return The bytes for classname.
+     */
+    com.google.protobuf.ByteString
+        getClassnameBytes();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Location}
+   */
+  @java.lang.Deprecated public static final class Location extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Location)
+      LocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Location.newBuilder() to construct.
+    private Location(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Location() {
+      classname_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Location();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Location_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Location_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Location.class, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder.class);
+    }
+
+    public static final int REF_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference ref_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+     * @return Whether the ref field is set.
+     */
+    @java.lang.Override
+    public boolean hasRef() {
+      return ref_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+     * @return The ref.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getRef() {
+      return ref_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ref_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder getRefOrBuilder() {
+      return ref_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ref_;
+    }
+
+    public static final int CLASSNAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classname_ = "";
+    /**
+     * <code>string classname = 2 [json_name = "classname"];</code>
+     * @return The classname.
+     */
+    @java.lang.Override
+    public java.lang.String getClassname() {
+      java.lang.Object ref = classname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classname = 2 [json_name = "classname"];</code>
+     * @return The bytes for classname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassnameBytes() {
+      java.lang.Object ref = classname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (ref_ != null) {
+        output.writeMessage(1, getRef());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classname_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (ref_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRef());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classname_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classname_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Location)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Location other = (com.provenance.metadata.v1.p8e.P8eProto.Location) obj;
+
+      if (hasRef() != other.hasRef()) return false;
+      if (hasRef()) {
+        if (!getRef()
+            .equals(other.getRef())) return false;
+      }
+      if (!getClassname()
+          .equals(other.getClassname())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRef()) {
+        hash = (37 * hash) + REF_FIELD_NUMBER;
+        hash = (53 * hash) + getRef().hashCode();
+      }
+      hash = (37 * hash) + CLASSNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClassname().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Location prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Location}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Location)
+        com.provenance.metadata.v1.p8e.P8eProto.LocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Location_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Location_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Location.class, com.provenance.metadata.v1.p8e.P8eProto.Location.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Location.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ref_ = null;
+        if (refBuilder_ != null) {
+          refBuilder_.dispose();
+          refBuilder_ = null;
+        }
+        classname_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Location_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Location getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Location build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Location result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Location buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Location result = new com.provenance.metadata.v1.p8e.P8eProto.Location(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Location result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ref_ = refBuilder_ == null
+              ? ref_
+              : refBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classname_ = classname_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Location) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Location)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Location other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Location.getDefaultInstance()) return this;
+        if (other.hasRef()) {
+          mergeRef(other.getRef());
+        }
+        if (!other.getClassname().isEmpty()) {
+          classname_ = other.classname_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRefFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                classname_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference ref_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder> refBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       * @return Whether the ref field is set.
+       */
+      public boolean hasRef() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       * @return The ref.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getRef() {
+        if (refBuilder_ == null) {
+          return ref_ == null ? com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ref_;
+        } else {
+          return refBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      public Builder setRef(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference value) {
+        if (refBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ref_ = value;
+        } else {
+          refBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      public Builder setRef(
+          com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder builderForValue) {
+        if (refBuilder_ == null) {
+          ref_ = builderForValue.build();
+        } else {
+          refBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      public Builder mergeRef(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference value) {
+        if (refBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            ref_ != null &&
+            ref_ != com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance()) {
+            getRefBuilder().mergeFrom(value);
+          } else {
+            ref_ = value;
+          }
+        } else {
+          refBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      public Builder clearRef() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ref_ = null;
+        if (refBuilder_ != null) {
+          refBuilder_.dispose();
+          refBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder getRefBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRefFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder getRefOrBuilder() {
+        if (refBuilder_ != null) {
+          return refBuilder_.getMessageOrBuilder();
+        } else {
+          return ref_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance() : ref_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.ProvenanceReference ref = 1 [json_name = "ref"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder> 
+          getRefFieldBuilder() {
+        if (refBuilder_ == null) {
+          refBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder>(
+                  getRef(),
+                  getParentForChildren(),
+                  isClean());
+          ref_ = null;
+        }
+        return refBuilder_;
+      }
+
+      private java.lang.Object classname_ = "";
+      /**
+       * <code>string classname = 2 [json_name = "classname"];</code>
+       * @return The classname.
+       */
+      public java.lang.String getClassname() {
+        java.lang.Object ref = classname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classname = 2 [json_name = "classname"];</code>
+       * @return The bytes for classname.
+       */
+      public com.google.protobuf.ByteString
+          getClassnameBytes() {
+        java.lang.Object ref = classname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classname = 2 [json_name = "classname"];</code>
+       * @param value The classname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassname(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classname_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classname = 2 [json_name = "classname"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassname() {
+        classname_ = getDefaultInstance().getClassname();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classname = 2 [json_name = "classname"];</code>
+       * @param value The bytes for classname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassnameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classname_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Location)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Location)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Location DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Location();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Location getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Location>
+        PARSER = new com.google.protobuf.AbstractParser<Location>() {
+      @java.lang.Override
+      public Location parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Location> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Location> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Location getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ProvenanceReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.ProvenanceReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+     * @return Whether the scopeUuid field is set.
+     */
+    boolean hasScopeUuid();
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+     * @return The scopeUuid.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.UUID getScopeUuid();
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder getScopeUuidOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+     * @return Whether the groupUuid field is set.
+     */
+    boolean hasGroupUuid();
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+     * @return The groupUuid.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.UUID getGroupUuid();
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder getGroupUuidOrBuilder();
+
+    /**
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.ProvenanceReference}
+   */
+  @java.lang.Deprecated public static final class ProvenanceReference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.ProvenanceReference)
+      ProvenanceReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProvenanceReference.newBuilder() to construct.
+    private ProvenanceReference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProvenanceReference() {
+      hash_ = "";
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProvenanceReference();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProvenanceReference_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProvenanceReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.class, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder.class);
+    }
+
+    public static final int SCOPE_UUID_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.UUID scopeUuid_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+     * @return Whether the scopeUuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasScopeUuid() {
+      return scopeUuid_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+     * @return The scopeUuid.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.UUID getScopeUuid() {
+      return scopeUuid_ == null ? com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : scopeUuid_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder getScopeUuidOrBuilder() {
+      return scopeUuid_ == null ? com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : scopeUuid_;
+    }
+
+    public static final int GROUP_UUID_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.UUID groupUuid_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+     * @return Whether the groupUuid field is set.
+     */
+    @java.lang.Override
+    public boolean hasGroupUuid() {
+      return groupUuid_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+     * @return The groupUuid.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.UUID getGroupUuid() {
+      return groupUuid_ == null ? com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : groupUuid_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder getGroupUuidOrBuilder() {
+      return groupUuid_ == null ? com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : groupUuid_;
+    }
+
+    public static final int HASH_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hash_ = "";
+    /**
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (scopeUuid_ != null) {
+        output.writeMessage(1, getScopeUuid());
+      }
+      if (groupUuid_ != null) {
+        output.writeMessage(2, getGroupUuid());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (scopeUuid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getScopeUuid());
+      }
+      if (groupUuid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getGroupUuid());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference other = (com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference) obj;
+
+      if (hasScopeUuid() != other.hasScopeUuid()) return false;
+      if (hasScopeUuid()) {
+        if (!getScopeUuid()
+            .equals(other.getScopeUuid())) return false;
+      }
+      if (hasGroupUuid() != other.hasGroupUuid()) return false;
+      if (hasGroupUuid()) {
+        if (!getGroupUuid()
+            .equals(other.getGroupUuid())) return false;
+      }
+      if (!getHash()
+          .equals(other.getHash())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasScopeUuid()) {
+        hash = (37 * hash) + SCOPE_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getScopeUuid().hashCode();
+      }
+      if (hasGroupUuid()) {
+        hash = (37 * hash) + GROUP_UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupUuid().hashCode();
+      }
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.ProvenanceReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.ProvenanceReference)
+        com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProvenanceReference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProvenanceReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.class, com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeUuid_ = null;
+        if (scopeUuidBuilder_ != null) {
+          scopeUuidBuilder_.dispose();
+          scopeUuidBuilder_ = null;
+        }
+        groupUuid_ = null;
+        if (groupUuidBuilder_ != null) {
+          groupUuidBuilder_.dispose();
+          groupUuidBuilder_ = null;
+        }
+        hash_ = "";
+        name_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ProvenanceReference_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference build() {
+        com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference result = new com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeUuid_ = scopeUuidBuilder_ == null
+              ? scopeUuid_
+              : scopeUuidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.groupUuid_ = groupUuidBuilder_ == null
+              ? groupUuid_
+              : groupUuidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.hash_ = hash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.name_ = name_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference.getDefaultInstance()) return this;
+        if (other.hasScopeUuid()) {
+          mergeScopeUuid(other.getScopeUuid());
+        }
+        if (other.hasGroupUuid()) {
+          mergeGroupUuid(other.getGroupUuid());
+        }
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getScopeUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getGroupUuidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                hash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.UUID scopeUuid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.UUID, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder, com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder> scopeUuidBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       * @return Whether the scopeUuid field is set.
+       */
+      public boolean hasScopeUuid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       * @return The scopeUuid.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID getScopeUuid() {
+        if (scopeUuidBuilder_ == null) {
+          return scopeUuid_ == null ? com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : scopeUuid_;
+        } else {
+          return scopeUuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      public Builder setScopeUuid(com.provenance.metadata.v1.p8e.P8eProto.UUID value) {
+        if (scopeUuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scopeUuid_ = value;
+        } else {
+          scopeUuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      public Builder setScopeUuid(
+          com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder builderForValue) {
+        if (scopeUuidBuilder_ == null) {
+          scopeUuid_ = builderForValue.build();
+        } else {
+          scopeUuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      public Builder mergeScopeUuid(com.provenance.metadata.v1.p8e.P8eProto.UUID value) {
+        if (scopeUuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            scopeUuid_ != null &&
+            scopeUuid_ != com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance()) {
+            getScopeUuidBuilder().mergeFrom(value);
+          } else {
+            scopeUuid_ = value;
+          }
+        } else {
+          scopeUuidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      public Builder clearScopeUuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        scopeUuid_ = null;
+        if (scopeUuidBuilder_ != null) {
+          scopeUuidBuilder_.dispose();
+          scopeUuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder getScopeUuidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getScopeUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder getScopeUuidOrBuilder() {
+        if (scopeUuidBuilder_ != null) {
+          return scopeUuidBuilder_.getMessageOrBuilder();
+        } else {
+          return scopeUuid_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : scopeUuid_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID scope_uuid = 1 [json_name = "scopeUuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.UUID, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder, com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder> 
+          getScopeUuidFieldBuilder() {
+        if (scopeUuidBuilder_ == null) {
+          scopeUuidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.UUID, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder, com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder>(
+                  getScopeUuid(),
+                  getParentForChildren(),
+                  isClean());
+          scopeUuid_ = null;
+        }
+        return scopeUuidBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.UUID groupUuid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.UUID, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder, com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder> groupUuidBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       * @return Whether the groupUuid field is set.
+       */
+      public boolean hasGroupUuid() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       * @return The groupUuid.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID getGroupUuid() {
+        if (groupUuidBuilder_ == null) {
+          return groupUuid_ == null ? com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : groupUuid_;
+        } else {
+          return groupUuidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      public Builder setGroupUuid(com.provenance.metadata.v1.p8e.P8eProto.UUID value) {
+        if (groupUuidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          groupUuid_ = value;
+        } else {
+          groupUuidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      public Builder setGroupUuid(
+          com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder builderForValue) {
+        if (groupUuidBuilder_ == null) {
+          groupUuid_ = builderForValue.build();
+        } else {
+          groupUuidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      public Builder mergeGroupUuid(com.provenance.metadata.v1.p8e.P8eProto.UUID value) {
+        if (groupUuidBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            groupUuid_ != null &&
+            groupUuid_ != com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance()) {
+            getGroupUuidBuilder().mergeFrom(value);
+          } else {
+            groupUuid_ = value;
+          }
+        } else {
+          groupUuidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      public Builder clearGroupUuid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        groupUuid_ = null;
+        if (groupUuidBuilder_ != null) {
+          groupUuidBuilder_.dispose();
+          groupUuidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder getGroupUuidBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getGroupUuidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder getGroupUuidOrBuilder() {
+        if (groupUuidBuilder_ != null) {
+          return groupUuidBuilder_.getMessageOrBuilder();
+        } else {
+          return groupUuid_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance() : groupUuid_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.UUID group_uuid = 2 [json_name = "groupUuid"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.UUID, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder, com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder> 
+          getGroupUuidFieldBuilder() {
+        if (groupUuidBuilder_ == null) {
+          groupUuidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.UUID, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder, com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder>(
+                  getGroupUuid(),
+                  getParentForChildren(),
+                  isClean());
+          groupUuid_ = null;
+        }
+        return groupUuidBuilder_;
+      }
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        hash_ = getDefaultInstance().getHash();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 4 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.ProvenanceReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.ProvenanceReference)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProvenanceReference>
+        PARSER = new com.google.protobuf.AbstractParser<ProvenanceReference>() {
+      @java.lang.Override
+      public ProvenanceReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProvenanceReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProvenanceReference> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ProvenanceReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface SignatureSetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.SignatureSet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Signature> 
+        getSignaturesList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.Signature getSignatures(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    int getSignaturesCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> 
+        getSignaturesOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder getSignaturesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.SignatureSet}
+   */
+  @java.lang.Deprecated public static final class SignatureSet extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.SignatureSet)
+      SignatureSetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SignatureSet.newBuilder() to construct.
+    private SignatureSet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SignatureSet() {
+      signatures_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SignatureSet();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SignatureSet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SignatureSet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.class, com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.Builder.class);
+    }
+
+    public static final int SIGNATURES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Signature> signatures_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Signature> getSignaturesList() {
+      return signatures_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> 
+        getSignaturesOrBuilderList() {
+      return signatures_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    @java.lang.Override
+    public int getSignaturesCount() {
+      return signatures_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Signature getSignatures(int index) {
+      return signatures_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder getSignaturesOrBuilder(
+        int index) {
+      return signatures_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < signatures_.size(); i++) {
+        output.writeMessage(1, signatures_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < signatures_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, signatures_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.SignatureSet)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.SignatureSet other = (com.provenance.metadata.v1.p8e.P8eProto.SignatureSet) obj;
+
+      if (!getSignaturesList()
+          .equals(other.getSignaturesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSignaturesCount() > 0) {
+        hash = (37 * hash) + SIGNATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getSignaturesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.SignatureSet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.SignatureSet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.SignatureSet)
+        com.provenance.metadata.v1.p8e.P8eProto.SignatureSetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SignatureSet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SignatureSet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.class, com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (signaturesBuilder_ == null) {
+          signatures_ = java.util.Collections.emptyList();
+        } else {
+          signatures_ = null;
+          signaturesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SignatureSet_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.SignatureSet getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.SignatureSet build() {
+        com.provenance.metadata.v1.p8e.P8eProto.SignatureSet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.SignatureSet buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.SignatureSet result = new com.provenance.metadata.v1.p8e.P8eProto.SignatureSet(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.SignatureSet result) {
+        if (signaturesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            signatures_ = java.util.Collections.unmodifiableList(signatures_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.signatures_ = signatures_;
+        } else {
+          result.signatures_ = signaturesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.SignatureSet result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.SignatureSet) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.SignatureSet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.SignatureSet other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.SignatureSet.getDefaultInstance()) return this;
+        if (signaturesBuilder_ == null) {
+          if (!other.signatures_.isEmpty()) {
+            if (signatures_.isEmpty()) {
+              signatures_ = other.signatures_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSignaturesIsMutable();
+              signatures_.addAll(other.signatures_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.signatures_.isEmpty()) {
+            if (signaturesBuilder_.isEmpty()) {
+              signaturesBuilder_.dispose();
+              signaturesBuilder_ = null;
+              signatures_ = other.signatures_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              signaturesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSignaturesFieldBuilder() : null;
+            } else {
+              signaturesBuilder_.addAllMessages(other.signatures_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.provenance.metadata.v1.p8e.P8eProto.Signature m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.Signature.parser(),
+                        extensionRegistry);
+                if (signaturesBuilder_ == null) {
+                  ensureSignaturesIsMutable();
+                  signatures_.add(m);
+                } else {
+                  signaturesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Signature> signatures_ =
+        java.util.Collections.emptyList();
+      private void ensureSignaturesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          signatures_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.Signature>(signatures_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Signature, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder, com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> signaturesBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Signature> getSignaturesList() {
+        if (signaturesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(signatures_);
+        } else {
+          return signaturesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public int getSignaturesCount() {
+        if (signaturesBuilder_ == null) {
+          return signatures_.size();
+        } else {
+          return signaturesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature getSignatures(int index) {
+        if (signaturesBuilder_ == null) {
+          return signatures_.get(index);
+        } else {
+          return signaturesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder setSignatures(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Signature value) {
+        if (signaturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignaturesIsMutable();
+          signatures_.set(index, value);
+          onChanged();
+        } else {
+          signaturesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder setSignatures(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder builderForValue) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          signaturesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder addSignatures(com.provenance.metadata.v1.p8e.P8eProto.Signature value) {
+        if (signaturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignaturesIsMutable();
+          signatures_.add(value);
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder addSignatures(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Signature value) {
+        if (signaturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignaturesIsMutable();
+          signatures_.add(index, value);
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder addSignatures(
+          com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder builderForValue) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.add(builderForValue.build());
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder addSignatures(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder builderForValue) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder addAllSignatures(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.Signature> values) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, signatures_);
+          onChanged();
+        } else {
+          signaturesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder clearSignatures() {
+        if (signaturesBuilder_ == null) {
+          signatures_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          signaturesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public Builder removeSignatures(int index) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.remove(index);
+          onChanged();
+        } else {
+          signaturesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder getSignaturesBuilder(
+          int index) {
+        return getSignaturesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder getSignaturesOrBuilder(
+          int index) {
+        if (signaturesBuilder_ == null) {
+          return signatures_.get(index);  } else {
+          return signaturesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> 
+           getSignaturesOrBuilderList() {
+        if (signaturesBuilder_ != null) {
+          return signaturesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(signatures_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder addSignaturesBuilder() {
+        return getSignaturesFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder addSignaturesBuilder(
+          int index) {
+        return getSignaturesFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.Signature signatures = 1 [json_name = "signatures"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder> 
+           getSignaturesBuilderList() {
+        return getSignaturesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.Signature, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder, com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder> 
+          getSignaturesFieldBuilder() {
+        if (signaturesBuilder_ == null) {
+          signaturesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.Signature, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder, com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder>(
+                  signatures_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          signatures_ = null;
+        }
+        return signaturesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.SignatureSet)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.SignatureSet)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.SignatureSet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.SignatureSet();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SignatureSet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SignatureSet>
+        PARSER = new com.google.protobuf.AbstractParser<SignatureSet>() {
+      @java.lang.Override
+      public SignatureSet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SignatureSet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignatureSet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SignatureSet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface SignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Signature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string algo = 1 [json_name = "algo"];</code>
+     * @return The algo.
+     */
+    java.lang.String getAlgo();
+    /**
+     * <code>string algo = 1 [json_name = "algo"];</code>
+     * @return The bytes for algo.
+     */
+    com.google.protobuf.ByteString
+        getAlgoBytes();
+
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+
+    /**
+     * <code>string signature = 3 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    java.lang.String getSignature();
+    /**
+     * <code>string signature = 3 [json_name = "signature"];</code>
+     * @return The bytes for signature.
+     */
+    com.google.protobuf.ByteString
+        getSignatureBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+     * @return Whether the signer field is set.
+     */
+    boolean hasSigner();
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getSigner();
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getSignerOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Signature}
+   */
+  @java.lang.Deprecated public static final class Signature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Signature)
+      SignatureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Signature.newBuilder() to construct.
+    private Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Signature() {
+      algo_ = "";
+      provider_ = "";
+      signature_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Signature();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Signature_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Signature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Signature.class, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder.class);
+    }
+
+    public static final int ALGO_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object algo_ = "";
+    /**
+     * <code>string algo = 1 [json_name = "algo"];</code>
+     * @return The algo.
+     */
+    @java.lang.Override
+    public java.lang.String getAlgo() {
+      java.lang.Object ref = algo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        algo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string algo = 1 [json_name = "algo"];</code>
+     * @return The bytes for algo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAlgoBytes() {
+      java.lang.Object ref = algo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        algo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object provider_ = "";
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signature_ = "";
+    /**
+     * <code>string signature = 3 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public java.lang.String getSignature() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string signature = 3 [json_name = "signature"];</code>
+     * @return The bytes for signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignatureBytes() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 4;
+    private com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys signer_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+     * @return Whether the signer field is set.
+     */
+    @java.lang.Override
+    public boolean hasSigner() {
+      return signer_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getSigner() {
+      return signer_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getSignerOrBuilder() {
+      return signer_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(algo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, algo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, provider_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, signature_);
+      }
+      if (signer_ != null) {
+        output.writeMessage(4, getSigner());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(algo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, algo_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, provider_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signature_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, signature_);
+      }
+      if (signer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSigner());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Signature)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Signature other = (com.provenance.metadata.v1.p8e.P8eProto.Signature) obj;
+
+      if (!getAlgo()
+          .equals(other.getAlgo())) return false;
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (hasSigner() != other.hasSigner()) return false;
+      if (hasSigner()) {
+        if (!getSigner()
+            .equals(other.getSigner())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ALGO_FIELD_NUMBER;
+      hash = (53 * hash) + getAlgo().hashCode();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      if (hasSigner()) {
+        hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+        hash = (53 * hash) + getSigner().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Signature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Signature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Signature)
+        com.provenance.metadata.v1.p8e.P8eProto.SignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Signature_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Signature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Signature.class, com.provenance.metadata.v1.p8e.P8eProto.Signature.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Signature.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        algo_ = "";
+        provider_ = "";
+        signature_ = "";
+        signer_ = null;
+        if (signerBuilder_ != null) {
+          signerBuilder_.dispose();
+          signerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Signature_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Signature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Signature buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Signature result = new com.provenance.metadata.v1.p8e.P8eProto.Signature(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Signature result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.algo_ = algo_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.provider_ = provider_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.signature_ = signature_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.signer_ = signerBuilder_ == null
+              ? signer_
+              : signerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Signature) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Signature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Signature other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Signature.getDefaultInstance()) return this;
+        if (!other.getAlgo().isEmpty()) {
+          algo_ = other.algo_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSignature().isEmpty()) {
+          signature_ = other.signature_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasSigner()) {
+          mergeSigner(other.getSigner());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                algo_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                provider_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                signature_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getSignerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object algo_ = "";
+      /**
+       * <code>string algo = 1 [json_name = "algo"];</code>
+       * @return The algo.
+       */
+      public java.lang.String getAlgo() {
+        java.lang.Object ref = algo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          algo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string algo = 1 [json_name = "algo"];</code>
+       * @return The bytes for algo.
+       */
+      public com.google.protobuf.ByteString
+          getAlgoBytes() {
+        java.lang.Object ref = algo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          algo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string algo = 1 [json_name = "algo"];</code>
+       * @param value The algo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlgo(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        algo_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string algo = 1 [json_name = "algo"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAlgo() {
+        algo_ = getDefaultInstance().getAlgo();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string algo = 1 [json_name = "algo"];</code>
+       * @param value The bytes for algo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAlgoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        algo_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        provider_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        provider_ = getDefaultInstance().getProvider();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        provider_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signature_ = "";
+      /**
+       * <code>string signature = 3 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      public java.lang.String getSignature() {
+        java.lang.Object ref = signature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string signature = 3 [json_name = "signature"];</code>
+       * @return The bytes for signature.
+       */
+      public com.google.protobuf.ByteString
+          getSignatureBytes() {
+        java.lang.Object ref = signature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string signature = 3 [json_name = "signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signature = 3 [json_name = "signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        signature_ = getDefaultInstance().getSignature();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string signature = 3 [json_name = "signature"];</code>
+       * @param value The bytes for signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signature_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys signer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder> signerBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       * @return Whether the signer field is set.
+       */
+      public boolean hasSigner() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getSigner() {
+        if (signerBuilder_ == null) {
+          return signer_ == null ? com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+        } else {
+          return signerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      public Builder setSigner(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys value) {
+        if (signerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signer_ = value;
+        } else {
+          signerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      public Builder setSigner(
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder builderForValue) {
+        if (signerBuilder_ == null) {
+          signer_ = builderForValue.build();
+        } else {
+          signerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      public Builder mergeSigner(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys value) {
+        if (signerBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            signer_ != null &&
+            signer_ != com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance()) {
+            getSignerBuilder().mergeFrom(value);
+          } else {
+            signer_ = value;
+          }
+        } else {
+          signerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      public Builder clearSigner() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        signer_ = null;
+        if (signerBuilder_ != null) {
+          signerBuilder_.dispose();
+          signerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder getSignerBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getSignerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder getSignerOrBuilder() {
+        if (signerBuilder_ != null) {
+          return signerBuilder_.getMessageOrBuilder();
+        } else {
+          return signer_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance() : signer_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys signer = 4 [json_name = "signer"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder> 
+          getSignerFieldBuilder() {
+        if (signerBuilder_ == null) {
+          signerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder>(
+                  getSigner(),
+                  getParentForChildren(),
+                  isClean());
+          signer_ = null;
+        }
+        return signerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Signature)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Signature)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Signature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Signature();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Signature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Signature>
+        PARSER = new com.google.protobuf.AbstractParser<Signature>() {
+      @java.lang.Override
+      public Signature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Signature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Signature> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Signature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface SigningAndEncryptionPublicKeysOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+     * @return Whether the signingPublicKey field is set.
+     */
+    boolean hasSigningPublicKey();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+     * @return The signingPublicKey.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PublicKey getSigningPublicKey();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder getSigningPublicKeyOrBuilder();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+     * @return Whether the encryptionPublicKey field is set.
+     */
+    boolean hasEncryptionPublicKey();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+     * @return The encryptionPublicKey.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PublicKey getEncryptionPublicKey();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder getEncryptionPublicKeyOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys}
+   */
+  @java.lang.Deprecated public static final class SigningAndEncryptionPublicKeys extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys)
+      SigningAndEncryptionPublicKeysOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SigningAndEncryptionPublicKeys.newBuilder() to construct.
+    private SigningAndEncryptionPublicKeys(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SigningAndEncryptionPublicKeys() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SigningAndEncryptionPublicKeys();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.class, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder.class);
+    }
+
+    public static final int SIGNING_PUBLIC_KEY_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.PublicKey signingPublicKey_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+     * @return Whether the signingPublicKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasSigningPublicKey() {
+      return signingPublicKey_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+     * @return The signingPublicKey.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.PublicKey getSigningPublicKey() {
+      return signingPublicKey_ == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : signingPublicKey_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder getSigningPublicKeyOrBuilder() {
+      return signingPublicKey_ == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : signingPublicKey_;
+    }
+
+    public static final int ENCRYPTION_PUBLIC_KEY_FIELD_NUMBER = 2;
+    private com.provenance.metadata.v1.p8e.P8eProto.PublicKey encryptionPublicKey_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+     * @return Whether the encryptionPublicKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryptionPublicKey() {
+      return encryptionPublicKey_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+     * @return The encryptionPublicKey.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.PublicKey getEncryptionPublicKey() {
+      return encryptionPublicKey_ == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : encryptionPublicKey_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder getEncryptionPublicKeyOrBuilder() {
+      return encryptionPublicKey_ == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : encryptionPublicKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (signingPublicKey_ != null) {
+        output.writeMessage(1, getSigningPublicKey());
+      }
+      if (encryptionPublicKey_ != null) {
+        output.writeMessage(2, getEncryptionPublicKey());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (signingPublicKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSigningPublicKey());
+      }
+      if (encryptionPublicKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEncryptionPublicKey());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys other = (com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys) obj;
+
+      if (hasSigningPublicKey() != other.hasSigningPublicKey()) return false;
+      if (hasSigningPublicKey()) {
+        if (!getSigningPublicKey()
+            .equals(other.getSigningPublicKey())) return false;
+      }
+      if (hasEncryptionPublicKey() != other.hasEncryptionPublicKey()) return false;
+      if (hasEncryptionPublicKey()) {
+        if (!getEncryptionPublicKey()
+            .equals(other.getEncryptionPublicKey())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSigningPublicKey()) {
+        hash = (37 * hash) + SIGNING_PUBLIC_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getSigningPublicKey().hashCode();
+      }
+      if (hasEncryptionPublicKey()) {
+        hash = (37 * hash) + ENCRYPTION_PUBLIC_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryptionPublicKey().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys)
+        com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeysOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.class, com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signingPublicKey_ = null;
+        if (signingPublicKeyBuilder_ != null) {
+          signingPublicKeyBuilder_.dispose();
+          signingPublicKeyBuilder_ = null;
+        }
+        encryptionPublicKey_ = null;
+        if (encryptionPublicKeyBuilder_ != null) {
+          encryptionPublicKeyBuilder_.dispose();
+          encryptionPublicKeyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys build() {
+        com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys result = new com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signingPublicKey_ = signingPublicKeyBuilder_ == null
+              ? signingPublicKey_
+              : signingPublicKeyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.encryptionPublicKey_ = encryptionPublicKeyBuilder_ == null
+              ? encryptionPublicKey_
+              : encryptionPublicKeyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys.getDefaultInstance()) return this;
+        if (other.hasSigningPublicKey()) {
+          mergeSigningPublicKey(other.getSigningPublicKey());
+        }
+        if (other.hasEncryptionPublicKey()) {
+          mergeEncryptionPublicKey(other.getEncryptionPublicKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSigningPublicKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getEncryptionPublicKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.PublicKey signingPublicKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.PublicKey, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder, com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder> signingPublicKeyBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       * @return Whether the signingPublicKey field is set.
+       */
+      public boolean hasSigningPublicKey() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       * @return The signingPublicKey.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey getSigningPublicKey() {
+        if (signingPublicKeyBuilder_ == null) {
+          return signingPublicKey_ == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : signingPublicKey_;
+        } else {
+          return signingPublicKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      public Builder setSigningPublicKey(com.provenance.metadata.v1.p8e.P8eProto.PublicKey value) {
+        if (signingPublicKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signingPublicKey_ = value;
+        } else {
+          signingPublicKeyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      public Builder setSigningPublicKey(
+          com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder builderForValue) {
+        if (signingPublicKeyBuilder_ == null) {
+          signingPublicKey_ = builderForValue.build();
+        } else {
+          signingPublicKeyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      public Builder mergeSigningPublicKey(com.provenance.metadata.v1.p8e.P8eProto.PublicKey value) {
+        if (signingPublicKeyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            signingPublicKey_ != null &&
+            signingPublicKey_ != com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance()) {
+            getSigningPublicKeyBuilder().mergeFrom(value);
+          } else {
+            signingPublicKey_ = value;
+          }
+        } else {
+          signingPublicKeyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      public Builder clearSigningPublicKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signingPublicKey_ = null;
+        if (signingPublicKeyBuilder_ != null) {
+          signingPublicKeyBuilder_.dispose();
+          signingPublicKeyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder getSigningPublicKeyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSigningPublicKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder getSigningPublicKeyOrBuilder() {
+        if (signingPublicKeyBuilder_ != null) {
+          return signingPublicKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return signingPublicKey_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : signingPublicKey_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey signing_public_key = 1 [json_name = "signingPublicKey"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.PublicKey, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder, com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder> 
+          getSigningPublicKeyFieldBuilder() {
+        if (signingPublicKeyBuilder_ == null) {
+          signingPublicKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.PublicKey, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder, com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder>(
+                  getSigningPublicKey(),
+                  getParentForChildren(),
+                  isClean());
+          signingPublicKey_ = null;
+        }
+        return signingPublicKeyBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.PublicKey encryptionPublicKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.PublicKey, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder, com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder> encryptionPublicKeyBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       * @return Whether the encryptionPublicKey field is set.
+       */
+      public boolean hasEncryptionPublicKey() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       * @return The encryptionPublicKey.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey getEncryptionPublicKey() {
+        if (encryptionPublicKeyBuilder_ == null) {
+          return encryptionPublicKey_ == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : encryptionPublicKey_;
+        } else {
+          return encryptionPublicKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      public Builder setEncryptionPublicKey(com.provenance.metadata.v1.p8e.P8eProto.PublicKey value) {
+        if (encryptionPublicKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          encryptionPublicKey_ = value;
+        } else {
+          encryptionPublicKeyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      public Builder setEncryptionPublicKey(
+          com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder builderForValue) {
+        if (encryptionPublicKeyBuilder_ == null) {
+          encryptionPublicKey_ = builderForValue.build();
+        } else {
+          encryptionPublicKeyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      public Builder mergeEncryptionPublicKey(com.provenance.metadata.v1.p8e.P8eProto.PublicKey value) {
+        if (encryptionPublicKeyBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            encryptionPublicKey_ != null &&
+            encryptionPublicKey_ != com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance()) {
+            getEncryptionPublicKeyBuilder().mergeFrom(value);
+          } else {
+            encryptionPublicKey_ = value;
+          }
+        } else {
+          encryptionPublicKeyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      public Builder clearEncryptionPublicKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        encryptionPublicKey_ = null;
+        if (encryptionPublicKeyBuilder_ != null) {
+          encryptionPublicKeyBuilder_.dispose();
+          encryptionPublicKeyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder getEncryptionPublicKeyBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEncryptionPublicKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder getEncryptionPublicKeyOrBuilder() {
+        if (encryptionPublicKeyBuilder_ != null) {
+          return encryptionPublicKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return encryptionPublicKey_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance() : encryptionPublicKey_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKey encryption_public_key = 2 [json_name = "encryptionPublicKey"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.PublicKey, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder, com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder> 
+          getEncryptionPublicKeyFieldBuilder() {
+        if (encryptionPublicKeyBuilder_ == null) {
+          encryptionPublicKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.PublicKey, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder, com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder>(
+                  getEncryptionPublicKey(),
+                  getParentForChildren(),
+                  isClean());
+          encryptionPublicKey_ = null;
+        }
+        return encryptionPublicKeyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.SigningAndEncryptionPublicKeys)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SigningAndEncryptionPublicKeys>
+        PARSER = new com.google.protobuf.AbstractParser<SigningAndEncryptionPublicKeys>() {
+      @java.lang.Override
+      public SigningAndEncryptionPublicKeys parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SigningAndEncryptionPublicKeys> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SigningAndEncryptionPublicKeys> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.SigningAndEncryptionPublicKeys getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface PublicKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.PublicKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes public_key_bytes = 1 [json_name = "publicKeyBytes"];</code>
+     * @return The publicKeyBytes.
+     */
+    com.google.protobuf.ByteString getPublicKeyBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType getType();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+     * @return The enum numeric value on the wire for curve.
+     */
+    int getCurveValue();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+     * @return The curve.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve getCurve();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.PublicKey}
+   */
+  @java.lang.Deprecated public static final class PublicKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.PublicKey)
+      PublicKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PublicKey.newBuilder() to construct.
+    private PublicKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PublicKey() {
+      publicKeyBytes_ = com.google.protobuf.ByteString.EMPTY;
+      type_ = 0;
+      curve_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PublicKey();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_PublicKey_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_PublicKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.PublicKey.class, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder.class);
+    }
+
+    public static final int PUBLIC_KEY_BYTES_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString publicKeyBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes public_key_bytes = 1 [json_name = "publicKeyBytes"];</code>
+     * @return The publicKeyBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicKeyBytes() {
+      return publicKeyBytes_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_ = 0;
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType getType() {
+      com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType result = com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType.forNumber(type_);
+      return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType.UNRECOGNIZED : result;
+    }
+
+    public static final int CURVE_FIELD_NUMBER = 3;
+    private int curve_ = 0;
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+     * @return The enum numeric value on the wire for curve.
+     */
+    @java.lang.Override public int getCurveValue() {
+      return curve_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+     * @return The curve.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve getCurve() {
+      com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve result = com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve.forNumber(curve_);
+      return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!publicKeyBytes_.isEmpty()) {
+        output.writeBytes(1, publicKeyBytes_);
+      }
+      if (type_ != com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType.ELLIPTIC.getNumber()) {
+        output.writeEnum(2, type_);
+      }
+      if (curve_ != com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve.SECP256K1.getNumber()) {
+        output.writeEnum(3, curve_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!publicKeyBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, publicKeyBytes_);
+      }
+      if (type_ != com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType.ELLIPTIC.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      if (curve_ != com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve.SECP256K1.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, curve_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.PublicKey)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.PublicKey other = (com.provenance.metadata.v1.p8e.P8eProto.PublicKey) obj;
+
+      if (!getPublicKeyBytes()
+          .equals(other.getPublicKeyBytes())) return false;
+      if (type_ != other.type_) return false;
+      if (curve_ != other.curve_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLIC_KEY_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKeyBytes().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + CURVE_FIELD_NUMBER;
+      hash = (53 * hash) + curve_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.PublicKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.PublicKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.PublicKey)
+        com.provenance.metadata.v1.p8e.P8eProto.PublicKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_PublicKey_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_PublicKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.PublicKey.class, com.provenance.metadata.v1.p8e.P8eProto.PublicKey.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.PublicKey.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publicKeyBytes_ = com.google.protobuf.ByteString.EMPTY;
+        type_ = 0;
+        curve_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_PublicKey_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey build() {
+        com.provenance.metadata.v1.p8e.P8eProto.PublicKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKey buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.PublicKey result = new com.provenance.metadata.v1.p8e.P8eProto.PublicKey(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.PublicKey result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publicKeyBytes_ = publicKeyBytes_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.curve_ = curve_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.PublicKey) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.PublicKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.PublicKey other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.PublicKey.getDefaultInstance()) return this;
+        if (other.getPublicKeyBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicKeyBytes(other.getPublicKeyBytes());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.curve_ != 0) {
+          setCurveValue(other.getCurveValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publicKeyBytes_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                curve_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString publicKeyBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes public_key_bytes = 1 [json_name = "publicKeyBytes"];</code>
+       * @return The publicKeyBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicKeyBytes() {
+        return publicKeyBytes_;
+      }
+      /**
+       * <code>bytes public_key_bytes = 1 [json_name = "publicKeyBytes"];</code>
+       * @param value The publicKeyBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKeyBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicKeyBytes_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes public_key_bytes = 1 [json_name = "publicKeyBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKeyBytes() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publicKeyBytes_ = getDefaultInstance().getPublicKeyBytes();
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType getType() {
+        com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType result = com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType.forNumber(type_);
+        return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.provenance.metadata.v1.p8e.P8eProto.PublicKeyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyType type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int curve_ = 0;
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+       * @return The enum numeric value on the wire for curve.
+       */
+      @java.lang.Override public int getCurveValue() {
+        return curve_;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+       * @param value The enum numeric value on the wire for curve to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurveValue(int value) {
+        curve_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+       * @return The curve.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve getCurve() {
+        com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve result = com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve.forNumber(curve_);
+        return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+       * @param value The curve to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurve(com.provenance.metadata.v1.p8e.P8eProto.PublicKeyCurve value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        curve_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PublicKeyCurve curve = 3 [json_name = "curve"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurve() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        curve_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.PublicKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.PublicKey)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.PublicKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.PublicKey();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.PublicKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PublicKey>
+        PARSER = new com.google.protobuf.AbstractParser<PublicKey>() {
+      @java.lang.Override
+      public PublicKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PublicKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PublicKey> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.PublicKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface UUIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.UUID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string value = 1 [json_name = "value"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 1 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.UUID}
+   */
+  @java.lang.Deprecated public static final class UUID extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.UUID)
+      UUIDOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UUID.newBuilder() to construct.
+    private UUID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UUID() {
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UUID();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_UUID_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_UUID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.UUID.class, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder.class);
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 1 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 1 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.UUID)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.UUID other = (com.provenance.metadata.v1.p8e.P8eProto.UUID) obj;
+
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.UUID prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.UUID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.UUID)
+        com.provenance.metadata.v1.p8e.P8eProto.UUIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_UUID_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_UUID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.UUID.class, com.provenance.metadata.v1.p8e.P8eProto.UUID.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.UUID.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_UUID_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID build() {
+        com.provenance.metadata.v1.p8e.P8eProto.UUID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.UUID buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.UUID result = new com.provenance.metadata.v1.p8e.P8eProto.UUID(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.UUID result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.UUID) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.UUID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.UUID other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.UUID.getDefaultInstance()) return this;
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 1 [json_name = "value"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 1 [json_name = "value"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 1 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 1 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 1 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.UUID)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.UUID)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.UUID DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.UUID();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.UUID getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UUID>
+        PARSER = new com.google.protobuf.AbstractParser<UUID>() {
+      @java.lang.Override
+      public UUID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UUID> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UUID> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.UUID getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface TimestampOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.Timestamp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 seconds = 1 [json_name = "seconds"];</code>
+     * @return The seconds.
+     */
+    long getSeconds();
+
+    /**
+     * <code>int32 nanos = 2 [json_name = "nanos"];</code>
+     * @return The nanos.
+     */
+    int getNanos();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.Timestamp}
+   */
+  @java.lang.Deprecated public static final class Timestamp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.Timestamp)
+      TimestampOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Timestamp.newBuilder() to construct.
+    private Timestamp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Timestamp() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Timestamp();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Timestamp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Timestamp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.Timestamp.class, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder.class);
+    }
+
+    public static final int SECONDS_FIELD_NUMBER = 1;
+    private long seconds_ = 0L;
+    /**
+     * <code>int64 seconds = 1 [json_name = "seconds"];</code>
+     * @return The seconds.
+     */
+    @java.lang.Override
+    public long getSeconds() {
+      return seconds_;
+    }
+
+    public static final int NANOS_FIELD_NUMBER = 2;
+    private int nanos_ = 0;
+    /**
+     * <code>int32 nanos = 2 [json_name = "nanos"];</code>
+     * @return The nanos.
+     */
+    @java.lang.Override
+    public int getNanos() {
+      return nanos_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (seconds_ != 0L) {
+        output.writeInt64(1, seconds_);
+      }
+      if (nanos_ != 0) {
+        output.writeInt32(2, nanos_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (seconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, seconds_);
+      }
+      if (nanos_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, nanos_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.Timestamp)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.Timestamp other = (com.provenance.metadata.v1.p8e.P8eProto.Timestamp) obj;
+
+      if (getSeconds()
+          != other.getSeconds()) return false;
+      if (getNanos()
+          != other.getNanos()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeconds());
+      hash = (37 * hash) + NANOS_FIELD_NUMBER;
+      hash = (53 * hash) + getNanos();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.Timestamp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.Timestamp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.Timestamp)
+        com.provenance.metadata.v1.p8e.P8eProto.TimestampOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Timestamp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Timestamp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.Timestamp.class, com.provenance.metadata.v1.p8e.P8eProto.Timestamp.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.Timestamp.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        seconds_ = 0L;
+        nanos_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_Timestamp_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp build() {
+        com.provenance.metadata.v1.p8e.P8eProto.Timestamp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.Timestamp buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.Timestamp result = new com.provenance.metadata.v1.p8e.P8eProto.Timestamp(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.Timestamp result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.seconds_ = seconds_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nanos_ = nanos_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.Timestamp) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.Timestamp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.Timestamp other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.Timestamp.getDefaultInstance()) return this;
+        if (other.getSeconds() != 0L) {
+          setSeconds(other.getSeconds());
+        }
+        if (other.getNanos() != 0) {
+          setNanos(other.getNanos());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                seconds_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                nanos_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long seconds_ ;
+      /**
+       * <code>int64 seconds = 1 [json_name = "seconds"];</code>
+       * @return The seconds.
+       */
+      @java.lang.Override
+      public long getSeconds() {
+        return seconds_;
+      }
+      /**
+       * <code>int64 seconds = 1 [json_name = "seconds"];</code>
+       * @param value The seconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeconds(long value) {
+
+        seconds_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 seconds = 1 [json_name = "seconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        seconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int nanos_ ;
+      /**
+       * <code>int32 nanos = 2 [json_name = "nanos"];</code>
+       * @return The nanos.
+       */
+      @java.lang.Override
+      public int getNanos() {
+        return nanos_;
+      }
+      /**
+       * <code>int32 nanos = 2 [json_name = "nanos"];</code>
+       * @param value The nanos to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNanos(int value) {
+
+        nanos_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 nanos = 2 [json_name = "nanos"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNanos() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nanos_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.Timestamp)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.Timestamp)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.Timestamp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.Timestamp();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.Timestamp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Timestamp>
+        PARSER = new com.google.protobuf.AbstractParser<Timestamp>() {
+      @java.lang.Override
+      public Timestamp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Timestamp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Timestamp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.Timestamp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ContractSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.ContractSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return Whether the definition field is set.
+     */
+    boolean hasDefinition();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return The definition.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefinition();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getDefinitionOrBuilder();
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> 
+        getInputSpecsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    int getInputSpecsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+        getInputSpecsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @return A list containing the partiesInvolved.
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.PartyType> getPartiesInvolvedList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @return The count of partiesInvolved.
+     */
+    int getPartiesInvolvedCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @param index The index of the element to return.
+     * @return The partiesInvolved at the given index.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PartyType getPartiesInvolved(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @return A list containing the enum numeric values on the wire for partiesInvolved.
+     */
+    java.util.List<java.lang.Integer>
+    getPartiesInvolvedValueList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of partiesInvolved at the given index.
+     */
+    int getPartiesInvolvedValue(int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec> 
+        getConditionSpecsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec getConditionSpecs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    int getConditionSpecsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder> 
+        getConditionSpecsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder getConditionSpecsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec> 
+        getConsiderationSpecsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec getConsiderationSpecs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    int getConsiderationSpecsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder> 
+        getConsiderationSpecsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder getConsiderationSpecsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.ContractSpec}
+   */
+  @java.lang.Deprecated public static final class ContractSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.ContractSpec)
+      ContractSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractSpec.newBuilder() to construct.
+    private ContractSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractSpec() {
+      inputSpecs_ = java.util.Collections.emptyList();
+      partiesInvolved_ = java.util.Collections.emptyList();
+      conditionSpecs_ = java.util.Collections.emptyList();
+      considerationSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractSpec();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ContractSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ContractSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.Builder.class);
+    }
+
+    public static final int DEFINITION_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec definition_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return Whether the definition field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefinition() {
+      return definition_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     * @return The definition.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefinition() {
+      return definition_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getDefinitionOrBuilder() {
+      return definition_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+    }
+
+    public static final int INPUT_SPECS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> inputSpecs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> getInputSpecsList() {
+      return inputSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+        getInputSpecsOrBuilderList() {
+      return inputSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public int getInputSpecsCount() {
+      return inputSpecs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index) {
+      return inputSpecs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+        int index) {
+      return inputSpecs_.get(index);
+    }
+
+    public static final int PARTIES_INVOLVED_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> partiesInvolved_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.provenance.metadata.v1.p8e.P8eProto.PartyType> partiesInvolved_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.provenance.metadata.v1.p8e.P8eProto.PartyType>() {
+              public com.provenance.metadata.v1.p8e.P8eProto.PartyType convert(java.lang.Integer from) {
+                com.provenance.metadata.v1.p8e.P8eProto.PartyType result = com.provenance.metadata.v1.p8e.P8eProto.PartyType.forNumber(from);
+                return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PartyType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @return A list containing the partiesInvolved.
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.PartyType> getPartiesInvolvedList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.provenance.metadata.v1.p8e.P8eProto.PartyType>(partiesInvolved_, partiesInvolved_converter_);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @return The count of partiesInvolved.
+     */
+    @java.lang.Override
+    public int getPartiesInvolvedCount() {
+      return partiesInvolved_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @param index The index of the element to return.
+     * @return The partiesInvolved at the given index.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.PartyType getPartiesInvolved(int index) {
+      return partiesInvolved_converter_.convert(partiesInvolved_.get(index));
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @return A list containing the enum numeric values on the wire for partiesInvolved.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getPartiesInvolvedValueList() {
+      return partiesInvolved_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of partiesInvolved at the given index.
+     */
+    @java.lang.Override
+    public int getPartiesInvolvedValue(int index) {
+      return partiesInvolved_.get(index);
+    }
+    private int partiesInvolvedMemoizedSerializedSize;
+
+    public static final int CONDITION_SPECS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec> conditionSpecs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec> getConditionSpecsList() {
+      return conditionSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder> 
+        getConditionSpecsOrBuilderList() {
+      return conditionSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    @java.lang.Override
+    public int getConditionSpecsCount() {
+      return conditionSpecs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec getConditionSpecs(int index) {
+      return conditionSpecs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder getConditionSpecsOrBuilder(
+        int index) {
+      return conditionSpecs_.get(index);
+    }
+
+    public static final int CONSIDERATION_SPECS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec> considerationSpecs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec> getConsiderationSpecsList() {
+      return considerationSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder> 
+        getConsiderationSpecsOrBuilderList() {
+      return considerationSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    @java.lang.Override
+    public int getConsiderationSpecsCount() {
+      return considerationSpecs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec getConsiderationSpecs(int index) {
+      return considerationSpecs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder getConsiderationSpecsOrBuilder(
+        int index) {
+      return considerationSpecs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (definition_ != null) {
+        output.writeMessage(1, getDefinition());
+      }
+      for (int i = 0; i < inputSpecs_.size(); i++) {
+        output.writeMessage(2, inputSpecs_.get(i));
+      }
+      if (getPartiesInvolvedList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(partiesInvolvedMemoizedSerializedSize);
+      }
+      for (int i = 0; i < partiesInvolved_.size(); i++) {
+        output.writeEnumNoTag(partiesInvolved_.get(i));
+      }
+      for (int i = 0; i < conditionSpecs_.size(); i++) {
+        output.writeMessage(4, conditionSpecs_.get(i));
+      }
+      for (int i = 0; i < considerationSpecs_.size(); i++) {
+        output.writeMessage(5, considerationSpecs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (definition_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDefinition());
+      }
+      for (int i = 0; i < inputSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, inputSpecs_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < partiesInvolved_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(partiesInvolved_.get(i));
+        }
+        size += dataSize;
+        if (!getPartiesInvolvedList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }partiesInvolvedMemoizedSerializedSize = dataSize;
+      }
+      for (int i = 0; i < conditionSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, conditionSpecs_.get(i));
+      }
+      for (int i = 0; i < considerationSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, considerationSpecs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.ContractSpec)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.ContractSpec other = (com.provenance.metadata.v1.p8e.P8eProto.ContractSpec) obj;
+
+      if (hasDefinition() != other.hasDefinition()) return false;
+      if (hasDefinition()) {
+        if (!getDefinition()
+            .equals(other.getDefinition())) return false;
+      }
+      if (!getInputSpecsList()
+          .equals(other.getInputSpecsList())) return false;
+      if (!partiesInvolved_.equals(other.partiesInvolved_)) return false;
+      if (!getConditionSpecsList()
+          .equals(other.getConditionSpecsList())) return false;
+      if (!getConsiderationSpecsList()
+          .equals(other.getConsiderationSpecsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDefinition()) {
+        hash = (37 * hash) + DEFINITION_FIELD_NUMBER;
+        hash = (53 * hash) + getDefinition().hashCode();
+      }
+      if (getInputSpecsCount() > 0) {
+        hash = (37 * hash) + INPUT_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputSpecsList().hashCode();
+      }
+      if (getPartiesInvolvedCount() > 0) {
+        hash = (37 * hash) + PARTIES_INVOLVED_FIELD_NUMBER;
+        hash = (53 * hash) + partiesInvolved_.hashCode();
+      }
+      if (getConditionSpecsCount() > 0) {
+        hash = (37 * hash) + CONDITION_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getConditionSpecsList().hashCode();
+      }
+      if (getConsiderationSpecsCount() > 0) {
+        hash = (37 * hash) + CONSIDERATION_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getConsiderationSpecsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.ContractSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.ContractSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.ContractSpec)
+        com.provenance.metadata.v1.p8e.P8eProto.ContractSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ContractSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ContractSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        definition_ = null;
+        if (definitionBuilder_ != null) {
+          definitionBuilder_.dispose();
+          definitionBuilder_ = null;
+        }
+        if (inputSpecsBuilder_ == null) {
+          inputSpecs_ = java.util.Collections.emptyList();
+        } else {
+          inputSpecs_ = null;
+          inputSpecsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        partiesInvolved_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (conditionSpecsBuilder_ == null) {
+          conditionSpecs_ = java.util.Collections.emptyList();
+        } else {
+          conditionSpecs_ = null;
+          conditionSpecsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (considerationSpecsBuilder_ == null) {
+          considerationSpecs_ = java.util.Collections.emptyList();
+        } else {
+          considerationSpecs_ = null;
+          considerationSpecsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ContractSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ContractSpec getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ContractSpec build() {
+        com.provenance.metadata.v1.p8e.P8eProto.ContractSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ContractSpec buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.ContractSpec result = new com.provenance.metadata.v1.p8e.P8eProto.ContractSpec(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.ContractSpec result) {
+        if (inputSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            inputSpecs_ = java.util.Collections.unmodifiableList(inputSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.inputSpecs_ = inputSpecs_;
+        } else {
+          result.inputSpecs_ = inputSpecsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          partiesInvolved_ = java.util.Collections.unmodifiableList(partiesInvolved_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.partiesInvolved_ = partiesInvolved_;
+        if (conditionSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            conditionSpecs_ = java.util.Collections.unmodifiableList(conditionSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.conditionSpecs_ = conditionSpecs_;
+        } else {
+          result.conditionSpecs_ = conditionSpecsBuilder_.build();
+        }
+        if (considerationSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            considerationSpecs_ = java.util.Collections.unmodifiableList(considerationSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.considerationSpecs_ = considerationSpecs_;
+        } else {
+          result.considerationSpecs_ = considerationSpecsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ContractSpec result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.definition_ = definitionBuilder_ == null
+              ? definition_
+              : definitionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.ContractSpec) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.ContractSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.ContractSpec other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.ContractSpec.getDefaultInstance()) return this;
+        if (other.hasDefinition()) {
+          mergeDefinition(other.getDefinition());
+        }
+        if (inputSpecsBuilder_ == null) {
+          if (!other.inputSpecs_.isEmpty()) {
+            if (inputSpecs_.isEmpty()) {
+              inputSpecs_ = other.inputSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInputSpecsIsMutable();
+              inputSpecs_.addAll(other.inputSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputSpecs_.isEmpty()) {
+            if (inputSpecsBuilder_.isEmpty()) {
+              inputSpecsBuilder_.dispose();
+              inputSpecsBuilder_ = null;
+              inputSpecs_ = other.inputSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              inputSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputSpecsFieldBuilder() : null;
+            } else {
+              inputSpecsBuilder_.addAllMessages(other.inputSpecs_);
+            }
+          }
+        }
+        if (!other.partiesInvolved_.isEmpty()) {
+          if (partiesInvolved_.isEmpty()) {
+            partiesInvolved_ = other.partiesInvolved_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensurePartiesInvolvedIsMutable();
+            partiesInvolved_.addAll(other.partiesInvolved_);
+          }
+          onChanged();
+        }
+        if (conditionSpecsBuilder_ == null) {
+          if (!other.conditionSpecs_.isEmpty()) {
+            if (conditionSpecs_.isEmpty()) {
+              conditionSpecs_ = other.conditionSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureConditionSpecsIsMutable();
+              conditionSpecs_.addAll(other.conditionSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.conditionSpecs_.isEmpty()) {
+            if (conditionSpecsBuilder_.isEmpty()) {
+              conditionSpecsBuilder_.dispose();
+              conditionSpecsBuilder_ = null;
+              conditionSpecs_ = other.conditionSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              conditionSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConditionSpecsFieldBuilder() : null;
+            } else {
+              conditionSpecsBuilder_.addAllMessages(other.conditionSpecs_);
+            }
+          }
+        }
+        if (considerationSpecsBuilder_ == null) {
+          if (!other.considerationSpecs_.isEmpty()) {
+            if (considerationSpecs_.isEmpty()) {
+              considerationSpecs_ = other.considerationSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureConsiderationSpecsIsMutable();
+              considerationSpecs_.addAll(other.considerationSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.considerationSpecs_.isEmpty()) {
+            if (considerationSpecsBuilder_.isEmpty()) {
+              considerationSpecsBuilder_.dispose();
+              considerationSpecsBuilder_ = null;
+              considerationSpecs_ = other.considerationSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              considerationSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConsiderationSpecsFieldBuilder() : null;
+            } else {
+              considerationSpecsBuilder_.addAllMessages(other.considerationSpecs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDefinitionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.parser(),
+                        extensionRegistry);
+                if (inputSpecsBuilder_ == null) {
+                  ensureInputSpecsIsMutable();
+                  inputSpecs_.add(m);
+                } else {
+                  inputSpecsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                int tmpRaw = input.readEnum();
+                ensurePartiesInvolvedIsMutable();
+                partiesInvolved_.add(tmpRaw);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensurePartiesInvolvedIsMutable();
+                  partiesInvolved_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 26
+              case 34: {
+                com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.parser(),
+                        extensionRegistry);
+                if (conditionSpecsBuilder_ == null) {
+                  ensureConditionSpecsIsMutable();
+                  conditionSpecs_.add(m);
+                } else {
+                  conditionSpecsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.parser(),
+                        extensionRegistry);
+                if (considerationSpecsBuilder_ == null) {
+                  ensureConsiderationSpecsIsMutable();
+                  considerationSpecs_.add(m);
+                } else {
+                  considerationSpecsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec definition_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> definitionBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       * @return Whether the definition field is set.
+       */
+      public boolean hasDefinition() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       * @return The definition.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getDefinition() {
+        if (definitionBuilder_ == null) {
+          return definition_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+        } else {
+          return definitionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder setDefinition(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (definitionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          definition_ = value;
+        } else {
+          definitionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder setDefinition(
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (definitionBuilder_ == null) {
+          definition_ = builderForValue.build();
+        } else {
+          definitionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder mergeDefinition(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (definitionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            definition_ != null &&
+            definition_ != com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance()) {
+            getDefinitionBuilder().mergeFrom(value);
+          } else {
+            definition_ = value;
+          }
+        } else {
+          definitionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public Builder clearDefinition() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        definition_ = null;
+        if (definitionBuilder_ != null) {
+          definitionBuilder_.dispose();
+          definitionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder getDefinitionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDefinitionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getDefinitionOrBuilder() {
+        if (definitionBuilder_ != null) {
+          return definitionBuilder_.getMessageOrBuilder();
+        } else {
+          return definition_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : definition_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec definition = 1 [json_name = "definition"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+          getDefinitionFieldBuilder() {
+        if (definitionBuilder_ == null) {
+          definitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder>(
+                  getDefinition(),
+                  getParentForChildren(),
+                  isClean());
+          definition_ = null;
+        }
+        return definitionBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> inputSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          inputSpecs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec>(inputSpecs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> inputSpecsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> getInputSpecsList() {
+        if (inputSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputSpecs_);
+        } else {
+          return inputSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public int getInputSpecsCount() {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.size();
+        } else {
+          return inputSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index) {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.get(index);
+        } else {
+          return inputSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder setInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.set(index, value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder setInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(index, value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addAllInputSpecs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> values) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputSpecs_);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder clearInputSpecs() {
+        if (inputSpecsBuilder_ == null) {
+          inputSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder removeInputSpecs(int index) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.remove(index);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder getInputSpecsBuilder(
+          int index) {
+        return getInputSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+          int index) {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.get(index);  } else {
+          return inputSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+           getInputSpecsOrBuilderList() {
+        if (inputSpecsBuilder_ != null) {
+          return inputSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputSpecs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder addInputSpecsBuilder() {
+        return getInputSpecsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder addInputSpecsBuilder(
+          int index) {
+        return getInputSpecsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder> 
+           getInputSpecsBuilderList() {
+        return getInputSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+          getInputSpecsFieldBuilder() {
+        if (inputSpecsBuilder_ == null) {
+          inputSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder>(
+                  inputSpecs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputSpecs_ = null;
+        }
+        return inputSpecsBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> partiesInvolved_ =
+        java.util.Collections.emptyList();
+      private void ensurePartiesInvolvedIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          partiesInvolved_ = new java.util.ArrayList<java.lang.Integer>(partiesInvolved_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @return A list containing the partiesInvolved.
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.PartyType> getPartiesInvolvedList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.provenance.metadata.v1.p8e.P8eProto.PartyType>(partiesInvolved_, partiesInvolved_converter_);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @return The count of partiesInvolved.
+       */
+      public int getPartiesInvolvedCount() {
+        return partiesInvolved_.size();
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param index The index of the element to return.
+       * @return The partiesInvolved at the given index.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.PartyType getPartiesInvolved(int index) {
+        return partiesInvolved_converter_.convert(partiesInvolved_.get(index));
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param index The index to set the value at.
+       * @param value The partiesInvolved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartiesInvolved(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param value The partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartiesInvolved(com.provenance.metadata.v1.p8e.P8eProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param values The partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartiesInvolved(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.PartyType> values) {
+        ensurePartiesInvolvedIsMutable();
+        for (com.provenance.metadata.v1.p8e.P8eProto.PartyType value : values) {
+          partiesInvolved_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartiesInvolved() {
+        partiesInvolved_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @return A list containing the enum numeric values on the wire for partiesInvolved.
+       */
+      public java.util.List<java.lang.Integer>
+      getPartiesInvolvedValueList() {
+        return java.util.Collections.unmodifiableList(partiesInvolved_);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of partiesInvolved at the given index.
+       */
+      public int getPartiesInvolvedValue(int index) {
+        return partiesInvolved_.get(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for partiesInvolved to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartiesInvolvedValue(
+          int index, int value) {
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param value The enum numeric value on the wire for partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPartiesInvolvedValue(int value) {
+        ensurePartiesInvolvedIsMutable();
+        partiesInvolved_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.PartyType parties_involved = 3 [json_name = "partiesInvolved"];</code>
+       * @param values The enum numeric values on the wire for partiesInvolved to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPartiesInvolvedValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensurePartiesInvolvedIsMutable();
+        for (int value : values) {
+          partiesInvolved_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec> conditionSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureConditionSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          conditionSpecs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec>(conditionSpecs_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder> conditionSpecsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec> getConditionSpecsList() {
+        if (conditionSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(conditionSpecs_);
+        } else {
+          return conditionSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public int getConditionSpecsCount() {
+        if (conditionSpecsBuilder_ == null) {
+          return conditionSpecs_.size();
+        } else {
+          return conditionSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec getConditionSpecs(int index) {
+        if (conditionSpecsBuilder_ == null) {
+          return conditionSpecs_.get(index);
+        } else {
+          return conditionSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder setConditionSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec value) {
+        if (conditionSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.set(index, value);
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder setConditionSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder builderForValue) {
+        if (conditionSpecsBuilder_ == null) {
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder addConditionSpecs(com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec value) {
+        if (conditionSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.add(value);
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder addConditionSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec value) {
+        if (conditionSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.add(index, value);
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder addConditionSpecs(
+          com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder builderForValue) {
+        if (conditionSpecsBuilder_ == null) {
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder addConditionSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder builderForValue) {
+        if (conditionSpecsBuilder_ == null) {
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder addAllConditionSpecs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec> values) {
+        if (conditionSpecsBuilder_ == null) {
+          ensureConditionSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, conditionSpecs_);
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder clearConditionSpecs() {
+        if (conditionSpecsBuilder_ == null) {
+          conditionSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public Builder removeConditionSpecs(int index) {
+        if (conditionSpecsBuilder_ == null) {
+          ensureConditionSpecsIsMutable();
+          conditionSpecs_.remove(index);
+          onChanged();
+        } else {
+          conditionSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder getConditionSpecsBuilder(
+          int index) {
+        return getConditionSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder getConditionSpecsOrBuilder(
+          int index) {
+        if (conditionSpecsBuilder_ == null) {
+          return conditionSpecs_.get(index);  } else {
+          return conditionSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder> 
+           getConditionSpecsOrBuilderList() {
+        if (conditionSpecsBuilder_ != null) {
+          return conditionSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(conditionSpecs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder addConditionSpecsBuilder() {
+        return getConditionSpecsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder addConditionSpecsBuilder(
+          int index) {
+        return getConditionSpecsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConditionSpec condition_specs = 4 [json_name = "conditionSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder> 
+           getConditionSpecsBuilderList() {
+        return getConditionSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder> 
+          getConditionSpecsFieldBuilder() {
+        if (conditionSpecsBuilder_ == null) {
+          conditionSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder>(
+                  conditionSpecs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          conditionSpecs_ = null;
+        }
+        return conditionSpecsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec> considerationSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureConsiderationSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          considerationSpecs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec>(considerationSpecs_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder> considerationSpecsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec> getConsiderationSpecsList() {
+        if (considerationSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(considerationSpecs_);
+        } else {
+          return considerationSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public int getConsiderationSpecsCount() {
+        if (considerationSpecsBuilder_ == null) {
+          return considerationSpecs_.size();
+        } else {
+          return considerationSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec getConsiderationSpecs(int index) {
+        if (considerationSpecsBuilder_ == null) {
+          return considerationSpecs_.get(index);
+        } else {
+          return considerationSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder setConsiderationSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec value) {
+        if (considerationSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.set(index, value);
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder setConsiderationSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder builderForValue) {
+        if (considerationSpecsBuilder_ == null) {
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder addConsiderationSpecs(com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec value) {
+        if (considerationSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.add(value);
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder addConsiderationSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec value) {
+        if (considerationSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.add(index, value);
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder addConsiderationSpecs(
+          com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder builderForValue) {
+        if (considerationSpecsBuilder_ == null) {
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder addConsiderationSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder builderForValue) {
+        if (considerationSpecsBuilder_ == null) {
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder addAllConsiderationSpecs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec> values) {
+        if (considerationSpecsBuilder_ == null) {
+          ensureConsiderationSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, considerationSpecs_);
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder clearConsiderationSpecs() {
+        if (considerationSpecsBuilder_ == null) {
+          considerationSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public Builder removeConsiderationSpecs(int index) {
+        if (considerationSpecsBuilder_ == null) {
+          ensureConsiderationSpecsIsMutable();
+          considerationSpecs_.remove(index);
+          onChanged();
+        } else {
+          considerationSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder getConsiderationSpecsBuilder(
+          int index) {
+        return getConsiderationSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder getConsiderationSpecsOrBuilder(
+          int index) {
+        if (considerationSpecsBuilder_ == null) {
+          return considerationSpecs_.get(index);  } else {
+          return considerationSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder> 
+           getConsiderationSpecsOrBuilderList() {
+        if (considerationSpecsBuilder_ != null) {
+          return considerationSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(considerationSpecs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder addConsiderationSpecsBuilder() {
+        return getConsiderationSpecsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder addConsiderationSpecsBuilder(
+          int index) {
+        return getConsiderationSpecsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.ConsiderationSpec consideration_specs = 5 [json_name = "considerationSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder> 
+           getConsiderationSpecsBuilderList() {
+        return getConsiderationSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder> 
+          getConsiderationSpecsFieldBuilder() {
+        if (considerationSpecsBuilder_ == null) {
+          considerationSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder>(
+                  considerationSpecs_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          considerationSpecs_ = null;
+        }
+        return considerationSpecsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.ContractSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.ContractSpec)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.ContractSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.ContractSpec();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ContractSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ContractSpec>() {
+      @java.lang.Override
+      public ContractSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ContractSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ConditionSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.ConditionSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The funcName.
+     */
+    java.lang.String getFuncName();
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The bytes for funcName.
+     */
+    com.google.protobuf.ByteString
+        getFuncNameBytes();
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> 
+        getInputSpecsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    int getInputSpecsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+        getInputSpecsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+        int index);
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+     * @return Whether the outputSpec field is set.
+     */
+    boolean hasOutputSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+     * @return The outputSpec.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getOutputSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder getOutputSpecOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.ConditionSpec}
+   */
+  @java.lang.Deprecated public static final class ConditionSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.ConditionSpec)
+      ConditionSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConditionSpec.newBuilder() to construct.
+    private ConditionSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConditionSpec() {
+      funcName_ = "";
+      inputSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConditionSpec();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConditionSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConditionSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder.class);
+    }
+
+    public static final int FUNC_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object funcName_ = "";
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The funcName.
+     */
+    @java.lang.Override
+    public java.lang.String getFuncName() {
+      java.lang.Object ref = funcName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        funcName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The bytes for funcName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFuncNameBytes() {
+      java.lang.Object ref = funcName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        funcName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUT_SPECS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> inputSpecs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> getInputSpecsList() {
+      return inputSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+        getInputSpecsOrBuilderList() {
+      return inputSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public int getInputSpecsCount() {
+      return inputSpecs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index) {
+      return inputSpecs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+        int index) {
+      return inputSpecs_.get(index);
+    }
+
+    public static final int OUTPUT_SPEC_FIELD_NUMBER = 3;
+    private com.provenance.metadata.v1.p8e.P8eProto.OutputSpec outputSpec_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+     * @return Whether the outputSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutputSpec() {
+      return outputSpec_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+     * @return The outputSpec.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getOutputSpec() {
+      return outputSpec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder getOutputSpecOrBuilder() {
+      return outputSpec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funcName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, funcName_);
+      }
+      for (int i = 0; i < inputSpecs_.size(); i++) {
+        output.writeMessage(2, inputSpecs_.get(i));
+      }
+      if (outputSpec_ != null) {
+        output.writeMessage(3, getOutputSpec());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funcName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, funcName_);
+      }
+      for (int i = 0; i < inputSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, inputSpecs_.get(i));
+      }
+      if (outputSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOutputSpec());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec other = (com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec) obj;
+
+      if (!getFuncName()
+          .equals(other.getFuncName())) return false;
+      if (!getInputSpecsList()
+          .equals(other.getInputSpecsList())) return false;
+      if (hasOutputSpec() != other.hasOutputSpec()) return false;
+      if (hasOutputSpec()) {
+        if (!getOutputSpec()
+            .equals(other.getOutputSpec())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFuncName().hashCode();
+      if (getInputSpecsCount() > 0) {
+        hash = (37 * hash) + INPUT_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputSpecsList().hashCode();
+      }
+      if (hasOutputSpec()) {
+        hash = (37 * hash) + OUTPUT_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputSpec().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.ConditionSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.ConditionSpec)
+        com.provenance.metadata.v1.p8e.P8eProto.ConditionSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConditionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConditionSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        funcName_ = "";
+        if (inputSpecsBuilder_ == null) {
+          inputSpecs_ = java.util.Collections.emptyList();
+        } else {
+          inputSpecs_ = null;
+          inputSpecsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        outputSpec_ = null;
+        if (outputSpecBuilder_ != null) {
+          outputSpecBuilder_.dispose();
+          outputSpecBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConditionSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec build() {
+        com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec result = new com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec result) {
+        if (inputSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            inputSpecs_ = java.util.Collections.unmodifiableList(inputSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.inputSpecs_ = inputSpecs_;
+        } else {
+          result.inputSpecs_ = inputSpecsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.funcName_ = funcName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.outputSpec_ = outputSpecBuilder_ == null
+              ? outputSpec_
+              : outputSpecBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec.getDefaultInstance()) return this;
+        if (!other.getFuncName().isEmpty()) {
+          funcName_ = other.funcName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (inputSpecsBuilder_ == null) {
+          if (!other.inputSpecs_.isEmpty()) {
+            if (inputSpecs_.isEmpty()) {
+              inputSpecs_ = other.inputSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureInputSpecsIsMutable();
+              inputSpecs_.addAll(other.inputSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputSpecs_.isEmpty()) {
+            if (inputSpecsBuilder_.isEmpty()) {
+              inputSpecsBuilder_.dispose();
+              inputSpecsBuilder_ = null;
+              inputSpecs_ = other.inputSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              inputSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputSpecsFieldBuilder() : null;
+            } else {
+              inputSpecsBuilder_.addAllMessages(other.inputSpecs_);
+            }
+          }
+        }
+        if (other.hasOutputSpec()) {
+          mergeOutputSpec(other.getOutputSpec());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                funcName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.parser(),
+                        extensionRegistry);
+                if (inputSpecsBuilder_ == null) {
+                  ensureInputSpecsIsMutable();
+                  inputSpecs_.add(m);
+                } else {
+                  inputSpecsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getOutputSpecFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object funcName_ = "";
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @return The funcName.
+       */
+      public java.lang.String getFuncName() {
+        java.lang.Object ref = funcName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          funcName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @return The bytes for funcName.
+       */
+      public com.google.protobuf.ByteString
+          getFuncNameBytes() {
+        java.lang.Object ref = funcName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          funcName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @param value The funcName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFuncName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        funcName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFuncName() {
+        funcName_ = getDefaultInstance().getFuncName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @param value The bytes for funcName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFuncNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        funcName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> inputSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          inputSpecs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec>(inputSpecs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> inputSpecsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> getInputSpecsList() {
+        if (inputSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputSpecs_);
+        } else {
+          return inputSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public int getInputSpecsCount() {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.size();
+        } else {
+          return inputSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index) {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.get(index);
+        } else {
+          return inputSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder setInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.set(index, value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder setInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(index, value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addAllInputSpecs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> values) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputSpecs_);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder clearInputSpecs() {
+        if (inputSpecsBuilder_ == null) {
+          inputSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public Builder removeInputSpecs(int index) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.remove(index);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder getInputSpecsBuilder(
+          int index) {
+        return getInputSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+          int index) {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.get(index);  } else {
+          return inputSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+           getInputSpecsOrBuilderList() {
+        if (inputSpecsBuilder_ != null) {
+          return inputSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputSpecs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder addInputSpecsBuilder() {
+        return getInputSpecsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder addInputSpecsBuilder(
+          int index) {
+        return getInputSpecsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 2 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder> 
+           getInputSpecsBuilderList() {
+        return getInputSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+          getInputSpecsFieldBuilder() {
+        if (inputSpecsBuilder_ == null) {
+          inputSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder>(
+                  inputSpecs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputSpecs_ = null;
+        }
+        return inputSpecsBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.OutputSpec outputSpec_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.OutputSpec, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder> outputSpecBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       * @return Whether the outputSpec field is set.
+       */
+      public boolean hasOutputSpec() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       * @return The outputSpec.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getOutputSpec() {
+        if (outputSpecBuilder_ == null) {
+          return outputSpec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+        } else {
+          return outputSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      public Builder setOutputSpec(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec value) {
+        if (outputSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outputSpec_ = value;
+        } else {
+          outputSpecBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      public Builder setOutputSpec(
+          com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder builderForValue) {
+        if (outputSpecBuilder_ == null) {
+          outputSpec_ = builderForValue.build();
+        } else {
+          outputSpecBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      public Builder mergeOutputSpec(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec value) {
+        if (outputSpecBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            outputSpec_ != null &&
+            outputSpec_ != com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance()) {
+            getOutputSpecBuilder().mergeFrom(value);
+          } else {
+            outputSpec_ = value;
+          }
+        } else {
+          outputSpecBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      public Builder clearOutputSpec() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        outputSpec_ = null;
+        if (outputSpecBuilder_ != null) {
+          outputSpecBuilder_.dispose();
+          outputSpecBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder getOutputSpecBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getOutputSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder getOutputSpecOrBuilder() {
+        if (outputSpecBuilder_ != null) {
+          return outputSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return outputSpec_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 3 [json_name = "outputSpec"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.OutputSpec, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder> 
+          getOutputSpecFieldBuilder() {
+        if (outputSpecBuilder_ == null) {
+          outputSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.OutputSpec, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder>(
+                  getOutputSpec(),
+                  getParentForChildren(),
+                  isClean());
+          outputSpec_ = null;
+        }
+        return outputSpecBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.ConditionSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.ConditionSpec)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConditionSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ConditionSpec>() {
+      @java.lang.Override
+      public ConditionSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConditionSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConditionSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConditionSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface ConsiderationSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.ConsiderationSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The funcName.
+     */
+    java.lang.String getFuncName();
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The bytes for funcName.
+     */
+    com.google.protobuf.ByteString
+        getFuncNameBytes();
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+     * @return The enum numeric value on the wire for responsibleParty.
+     */
+    int getResponsiblePartyValue();
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+     * @return The responsibleParty.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.PartyType getResponsibleParty();
+
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> 
+        getInputSpecsList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index);
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    int getInputSpecsCount();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+        getInputSpecsOrBuilderList();
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+        int index);
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+     * @return Whether the outputSpec field is set.
+     */
+    boolean hasOutputSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+     * @return The outputSpec.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getOutputSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder getOutputSpecOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.ConsiderationSpec}
+   */
+  @java.lang.Deprecated public static final class ConsiderationSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.ConsiderationSpec)
+      ConsiderationSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConsiderationSpec.newBuilder() to construct.
+    private ConsiderationSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConsiderationSpec() {
+      funcName_ = "";
+      responsibleParty_ = 0;
+      inputSpecs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConsiderationSpec();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder.class);
+    }
+
+    public static final int FUNC_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object funcName_ = "";
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The funcName.
+     */
+    @java.lang.Override
+    public java.lang.String getFuncName() {
+      java.lang.Object ref = funcName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        funcName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string func_name = 1 [json_name = "funcName"];</code>
+     * @return The bytes for funcName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFuncNameBytes() {
+      java.lang.Object ref = funcName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        funcName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESPONSIBLE_PARTY_FIELD_NUMBER = 2;
+    private int responsibleParty_ = 0;
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+     * @return The enum numeric value on the wire for responsibleParty.
+     */
+    @java.lang.Override public int getResponsiblePartyValue() {
+      return responsibleParty_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+     * @return The responsibleParty.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.p8e.P8eProto.PartyType getResponsibleParty() {
+      com.provenance.metadata.v1.p8e.P8eProto.PartyType result = com.provenance.metadata.v1.p8e.P8eProto.PartyType.forNumber(responsibleParty_);
+      return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PartyType.UNRECOGNIZED : result;
+    }
+
+    public static final int INPUT_SPECS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> inputSpecs_;
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> getInputSpecsList() {
+      return inputSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+        getInputSpecsOrBuilderList() {
+      return inputSpecs_;
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public int getInputSpecsCount() {
+      return inputSpecs_.size();
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index) {
+      return inputSpecs_.get(index);
+    }
+    /**
+     * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+        int index) {
+      return inputSpecs_.get(index);
+    }
+
+    public static final int OUTPUT_SPEC_FIELD_NUMBER = 4;
+    private com.provenance.metadata.v1.p8e.P8eProto.OutputSpec outputSpec_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+     * @return Whether the outputSpec field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutputSpec() {
+      return outputSpec_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+     * @return The outputSpec.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getOutputSpec() {
+      return outputSpec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder getOutputSpecOrBuilder() {
+      return outputSpec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funcName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, funcName_);
+      }
+      if (responsibleParty_ != com.provenance.metadata.v1.p8e.P8eProto.PartyType.PARTY_TYPE_UNKNOWN.getNumber()) {
+        output.writeEnum(2, responsibleParty_);
+      }
+      for (int i = 0; i < inputSpecs_.size(); i++) {
+        output.writeMessage(3, inputSpecs_.get(i));
+      }
+      if (outputSpec_ != null) {
+        output.writeMessage(4, getOutputSpec());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funcName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, funcName_);
+      }
+      if (responsibleParty_ != com.provenance.metadata.v1.p8e.P8eProto.PartyType.PARTY_TYPE_UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, responsibleParty_);
+      }
+      for (int i = 0; i < inputSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, inputSpecs_.get(i));
+      }
+      if (outputSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getOutputSpec());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec other = (com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec) obj;
+
+      if (!getFuncName()
+          .equals(other.getFuncName())) return false;
+      if (responsibleParty_ != other.responsibleParty_) return false;
+      if (!getInputSpecsList()
+          .equals(other.getInputSpecsList())) return false;
+      if (hasOutputSpec() != other.hasOutputSpec()) return false;
+      if (hasOutputSpec()) {
+        if (!getOutputSpec()
+            .equals(other.getOutputSpec())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFuncName().hashCode();
+      hash = (37 * hash) + RESPONSIBLE_PARTY_FIELD_NUMBER;
+      hash = (53 * hash) + responsibleParty_;
+      if (getInputSpecsCount() > 0) {
+        hash = (37 * hash) + INPUT_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputSpecsList().hashCode();
+      }
+      if (hasOutputSpec()) {
+        hash = (37 * hash) + OUTPUT_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputSpec().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.ConsiderationSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.ConsiderationSpec)
+        com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.class, com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        funcName_ = "";
+        responsibleParty_ = 0;
+        if (inputSpecsBuilder_ == null) {
+          inputSpecs_ = java.util.Collections.emptyList();
+        } else {
+          inputSpecs_ = null;
+          inputSpecsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        outputSpec_ = null;
+        if (outputSpecBuilder_ != null) {
+          outputSpecBuilder_.dispose();
+          outputSpecBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec build() {
+        com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec result = new com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec result) {
+        if (inputSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            inputSpecs_ = java.util.Collections.unmodifiableList(inputSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.inputSpecs_ = inputSpecs_;
+        } else {
+          result.inputSpecs_ = inputSpecsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.funcName_ = funcName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.responsibleParty_ = responsibleParty_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.outputSpec_ = outputSpecBuilder_ == null
+              ? outputSpec_
+              : outputSpecBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec.getDefaultInstance()) return this;
+        if (!other.getFuncName().isEmpty()) {
+          funcName_ = other.funcName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.responsibleParty_ != 0) {
+          setResponsiblePartyValue(other.getResponsiblePartyValue());
+        }
+        if (inputSpecsBuilder_ == null) {
+          if (!other.inputSpecs_.isEmpty()) {
+            if (inputSpecs_.isEmpty()) {
+              inputSpecs_ = other.inputSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureInputSpecsIsMutable();
+              inputSpecs_.addAll(other.inputSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputSpecs_.isEmpty()) {
+            if (inputSpecsBuilder_.isEmpty()) {
+              inputSpecsBuilder_.dispose();
+              inputSpecsBuilder_ = null;
+              inputSpecs_ = other.inputSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              inputSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputSpecsFieldBuilder() : null;
+            } else {
+              inputSpecsBuilder_.addAllMessages(other.inputSpecs_);
+            }
+          }
+        }
+        if (other.hasOutputSpec()) {
+          mergeOutputSpec(other.getOutputSpec());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                funcName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                responsibleParty_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.parser(),
+                        extensionRegistry);
+                if (inputSpecsBuilder_ == null) {
+                  ensureInputSpecsIsMutable();
+                  inputSpecs_.add(m);
+                } else {
+                  inputSpecsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getOutputSpecFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object funcName_ = "";
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @return The funcName.
+       */
+      public java.lang.String getFuncName() {
+        java.lang.Object ref = funcName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          funcName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @return The bytes for funcName.
+       */
+      public com.google.protobuf.ByteString
+          getFuncNameBytes() {
+        java.lang.Object ref = funcName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          funcName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @param value The funcName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFuncName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        funcName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFuncName() {
+        funcName_ = getDefaultInstance().getFuncName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string func_name = 1 [json_name = "funcName"];</code>
+       * @param value The bytes for funcName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFuncNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        funcName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int responsibleParty_ = 0;
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+       * @return The enum numeric value on the wire for responsibleParty.
+       */
+      @java.lang.Override public int getResponsiblePartyValue() {
+        return responsibleParty_;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+       * @param value The enum numeric value on the wire for responsibleParty to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponsiblePartyValue(int value) {
+        responsibleParty_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+       * @return The responsibleParty.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.PartyType getResponsibleParty() {
+        com.provenance.metadata.v1.p8e.P8eProto.PartyType result = com.provenance.metadata.v1.p8e.P8eProto.PartyType.forNumber(responsibleParty_);
+        return result == null ? com.provenance.metadata.v1.p8e.P8eProto.PartyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+       * @param value The responsibleParty to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponsibleParty(com.provenance.metadata.v1.p8e.P8eProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        responsibleParty_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.PartyType responsible_party = 2 [json_name = "responsibleParty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponsibleParty() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        responsibleParty_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> inputSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          inputSpecs_ = new java.util.ArrayList<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec>(inputSpecs_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> inputSpecsBuilder_;
+
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> getInputSpecsList() {
+        if (inputSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputSpecs_);
+        } else {
+          return inputSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public int getInputSpecsCount() {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.size();
+        } else {
+          return inputSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getInputSpecs(int index) {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.get(index);
+        } else {
+          return inputSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder setInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.set(index, value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder setInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (inputSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(index, value);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addInputSpecs(
+          int index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder addAllInputSpecs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec> values) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputSpecs_);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder clearInputSpecs() {
+        if (inputSpecsBuilder_ == null) {
+          inputSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public Builder removeInputSpecs(int index) {
+        if (inputSpecsBuilder_ == null) {
+          ensureInputSpecsIsMutable();
+          inputSpecs_.remove(index);
+          onChanged();
+        } else {
+          inputSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder getInputSpecsBuilder(
+          int index) {
+        return getInputSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getInputSpecsOrBuilder(
+          int index) {
+        if (inputSpecsBuilder_ == null) {
+          return inputSpecs_.get(index);  } else {
+          return inputSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+           getInputSpecsOrBuilderList() {
+        if (inputSpecsBuilder_ != null) {
+          return inputSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputSpecs_);
+        }
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder addInputSpecsBuilder() {
+        return getInputSpecsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder addInputSpecsBuilder(
+          int index) {
+        return getInputSpecsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .provenance.metadata.v1.p8e.DefinitionSpec input_specs = 3 [json_name = "inputSpecs"];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder> 
+           getInputSpecsBuilderList() {
+        return getInputSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+          getInputSpecsFieldBuilder() {
+        if (inputSpecsBuilder_ == null) {
+          inputSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder>(
+                  inputSpecs_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputSpecs_ = null;
+        }
+        return inputSpecsBuilder_;
+      }
+
+      private com.provenance.metadata.v1.p8e.P8eProto.OutputSpec outputSpec_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.OutputSpec, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder> outputSpecBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       * @return Whether the outputSpec field is set.
+       */
+      public boolean hasOutputSpec() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       * @return The outputSpec.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getOutputSpec() {
+        if (outputSpecBuilder_ == null) {
+          return outputSpec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+        } else {
+          return outputSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      public Builder setOutputSpec(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec value) {
+        if (outputSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outputSpec_ = value;
+        } else {
+          outputSpecBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      public Builder setOutputSpec(
+          com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder builderForValue) {
+        if (outputSpecBuilder_ == null) {
+          outputSpec_ = builderForValue.build();
+        } else {
+          outputSpecBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      public Builder mergeOutputSpec(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec value) {
+        if (outputSpecBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            outputSpec_ != null &&
+            outputSpec_ != com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance()) {
+            getOutputSpecBuilder().mergeFrom(value);
+          } else {
+            outputSpec_ = value;
+          }
+        } else {
+          outputSpecBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      public Builder clearOutputSpec() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        outputSpec_ = null;
+        if (outputSpecBuilder_ != null) {
+          outputSpecBuilder_.dispose();
+          outputSpecBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder getOutputSpecBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getOutputSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder getOutputSpecOrBuilder() {
+        if (outputSpecBuilder_ != null) {
+          return outputSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return outputSpec_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance() : outputSpec_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.OutputSpec output_spec = 4 [json_name = "outputSpec"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.OutputSpec, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder> 
+          getOutputSpecFieldBuilder() {
+        if (outputSpecBuilder_ == null) {
+          outputSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.OutputSpec, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder>(
+                  getOutputSpec(),
+                  getParentForChildren(),
+                  isClean());
+          outputSpec_ = null;
+        }
+        return outputSpecBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.ConsiderationSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.ConsiderationSpec)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConsiderationSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ConsiderationSpec>() {
+      @java.lang.Override
+      public ConsiderationSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConsiderationSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConsiderationSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.ConsiderationSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  @java.lang.Deprecated public interface OutputSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.p8e.OutputSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+     * @return Whether the spec field is set.
+     */
+    boolean hasSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+     * @return The spec.
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getSpec();
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+     */
+    com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getSpecOrBuilder();
+  }
+  /**
+   * <pre>
+   * Deprecated: Do not use.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.p8e.OutputSpec}
+   */
+  @java.lang.Deprecated public static final class OutputSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.p8e.OutputSpec)
+      OutputSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OutputSpec.newBuilder() to construct.
+    private OutputSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OutputSpec() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OutputSpec();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_OutputSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_OutputSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.class, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder.class);
+    }
+
+    public static final int SPEC_FIELD_NUMBER = 1;
+    private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec spec_;
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+     * @return Whether the spec field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpec() {
+      return spec_ != null;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+     * @return The spec.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getSpec() {
+      return spec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : spec_;
+    }
+    /**
+     * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getSpecOrBuilder() {
+      return spec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : spec_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (spec_ != null) {
+        output.writeMessage(1, getSpec());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (spec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSpec());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.p8e.P8eProto.OutputSpec)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.p8e.P8eProto.OutputSpec other = (com.provenance.metadata.v1.p8e.P8eProto.OutputSpec) obj;
+
+      if (hasSpec() != other.hasSpec()) return false;
+      if (hasSpec()) {
+        if (!getSpec()
+            .equals(other.getSpec())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSpec()) {
+        hash = (37 * hash) + SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getSpec().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Deprecated: Do not use.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.p8e.OutputSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.p8e.OutputSpec)
+        com.provenance.metadata.v1.p8e.P8eProto.OutputSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_OutputSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_OutputSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.class, com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        spec_ = null;
+        if (specBuilder_ != null) {
+          specBuilder_.dispose();
+          specBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.internal_static_provenance_metadata_v1_p8e_OutputSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec build() {
+        com.provenance.metadata.v1.p8e.P8eProto.OutputSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec buildPartial() {
+        com.provenance.metadata.v1.p8e.P8eProto.OutputSpec result = new com.provenance.metadata.v1.p8e.P8eProto.OutputSpec(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.spec_ = specBuilder_ == null
+              ? spec_
+              : specBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.p8e.P8eProto.OutputSpec) {
+          return mergeFrom((com.provenance.metadata.v1.p8e.P8eProto.OutputSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.p8e.P8eProto.OutputSpec other) {
+        if (other == com.provenance.metadata.v1.p8e.P8eProto.OutputSpec.getDefaultInstance()) return this;
+        if (other.hasSpec()) {
+          mergeSpec(other.getSpec());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSpecFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec spec_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> specBuilder_;
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       * @return Whether the spec field is set.
+       */
+      public boolean hasSpec() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       * @return The spec.
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec getSpec() {
+        if (specBuilder_ == null) {
+          return spec_ == null ? com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : spec_;
+        } else {
+          return specBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      public Builder setSpec(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (specBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spec_ = value;
+        } else {
+          specBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      public Builder setSpec(
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder builderForValue) {
+        if (specBuilder_ == null) {
+          spec_ = builderForValue.build();
+        } else {
+          specBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      public Builder mergeSpec(com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec value) {
+        if (specBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            spec_ != null &&
+            spec_ != com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance()) {
+            getSpecBuilder().mergeFrom(value);
+          } else {
+            spec_ = value;
+          }
+        } else {
+          specBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      public Builder clearSpec() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        spec_ = null;
+        if (specBuilder_ != null) {
+          specBuilder_.dispose();
+          specBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder getSpecBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      public com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder getSpecOrBuilder() {
+        if (specBuilder_ != null) {
+          return specBuilder_.getMessageOrBuilder();
+        } else {
+          return spec_ == null ?
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.getDefaultInstance() : spec_;
+        }
+      }
+      /**
+       * <code>.provenance.metadata.v1.p8e.DefinitionSpec spec = 1 [json_name = "spec"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder> 
+          getSpecFieldBuilder() {
+        if (specBuilder_ == null) {
+          specBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpec.Builder, com.provenance.metadata.v1.p8e.P8eProto.DefinitionSpecOrBuilder>(
+                  getSpec(),
+                  getParentForChildren(),
+                  isClean());
+          spec_ = null;
+        }
+        return specBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.p8e.OutputSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.p8e.OutputSpec)
+    private static final com.provenance.metadata.v1.p8e.P8eProto.OutputSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.p8e.P8eProto.OutputSpec();
+    }
+
+    public static com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OutputSpec>
+        PARSER = new com.google.protobuf.AbstractParser<OutputSpec>() {
+      @java.lang.Override
+      public OutputSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OutputSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OutputSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.p8e.P8eProto.OutputSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Contract_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Contract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_DefinitionSpec_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_DefinitionSpec_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Fact_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Fact_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Condition_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Condition_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Consideration_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Consideration_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_ProposedFact_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_ProposedFact_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_ExecutionResult_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_ExecutionResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Recitals_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Recitals_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Recital_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Recital_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Location_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Location_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_ProvenanceReference_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_ProvenanceReference_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_SignatureSet_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_SignatureSet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Signature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Signature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_SigningAndEncryptionPublicKeys_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_PublicKey_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_PublicKey_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_UUID_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_UUID_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_Timestamp_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_Timestamp_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_ContractSpec_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_ContractSpec_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_ConditionSpec_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_ConditionSpec_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_ConsiderationSpec_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_p8e_OutputSpec_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_p8e_OutputSpec_fieldAccessorTable;
 
@@ -251,7 +22657,7 @@ public final class P8eProto {
       "\022\031\n\025PARTY_TYPE_PROVENANCE\020\010\022\025\n\021PARTY_TYP" +
       "E_MARKER\020\t\022\031\n\025PARTY_TYPE_CONTROLLER\020\n\022\030\n" +
       "\024PARTY_TYPE_VALIDATOR\020\013\032\002\030\001B\360\001\n\036com.prov" +
-      "enance.metadata.v1.p8eB\010P8eProtoP\001Z8gith" +
+      "enance.metadata.v1.p8eB\010P8eProtoP\000Z8gith" +
       "ub.com/provenance-io/provenance/x/metada" +
       "ta/types/p8e\242\002\004PMVP\252\002\032Provenance.Metadat" +
       "a.V1.P8e\312\002\032Provenance\\Metadata\\V1\\P8e\342\002&" +

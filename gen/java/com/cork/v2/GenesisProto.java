@@ -14,14 +14,2239 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cork.v2.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.cork.v2.GenesisProto.Params getParams();
+    /**
+     * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.cork.v2.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+     * @return Whether the cellarIds field is set.
+     */
+    boolean hasCellarIds();
+    /**
+     * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+     * @return The cellarIds.
+     */
+    com.cork.v2.CorkProto.CellarIDSet getCellarIds();
+    /**
+     * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+     */
+    com.cork.v2.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder();
+
+    /**
+     * <code>uint64 invalidation_nonce = 3 [json_name = "invalidationNonce"];</code>
+     * @return The invalidationNonce.
+     */
+    long getInvalidationNonce();
+
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    java.util.List<com.cork.v2.CorkProto.ScheduledCork> 
+        getScheduledCorksList();
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    com.cork.v2.CorkProto.ScheduledCork getScheduledCorks(int index);
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    int getScheduledCorksCount();
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    java.util.List<? extends com.cork.v2.CorkProto.ScheduledCorkOrBuilder> 
+        getScheduledCorksOrBuilderList();
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    com.cork.v2.CorkProto.ScheduledCorkOrBuilder getScheduledCorksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    java.util.List<com.cork.v2.CorkProto.CorkResult> 
+        getCorkResultsList();
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    com.cork.v2.CorkProto.CorkResult getCorkResults(int index);
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    int getCorkResultsCount();
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    java.util.List<? extends com.cork.v2.CorkProto.CorkResultOrBuilder> 
+        getCorkResultsOrBuilderList();
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    com.cork.v2.CorkProto.CorkResultOrBuilder getCorkResultsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState - all cork state that must be provided at genesis
+   * </pre>
+   *
+   * Protobuf type {@code cork.v2.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cork.v2.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      scheduledCorks_ = java.util.Collections.emptyList();
+      corkResults_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cork.v2.GenesisProto.internal_static_cork_v2_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cork.v2.GenesisProto.internal_static_cork_v2_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cork.v2.GenesisProto.GenesisState.class, com.cork.v2.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.cork.v2.GenesisProto.Params params_;
+    /**
+     * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.cork.v2.GenesisProto.Params getParams() {
+      return params_ == null ? com.cork.v2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cork.v2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.cork.v2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CELLAR_IDS_FIELD_NUMBER = 2;
+    private com.cork.v2.CorkProto.CellarIDSet cellarIds_;
+    /**
+     * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+     * @return Whether the cellarIds field is set.
+     */
+    @java.lang.Override
+    public boolean hasCellarIds() {
+      return cellarIds_ != null;
+    }
+    /**
+     * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+     * @return The cellarIds.
+     */
+    @java.lang.Override
+    public com.cork.v2.CorkProto.CellarIDSet getCellarIds() {
+      return cellarIds_ == null ? com.cork.v2.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+    }
+    /**
+     * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cork.v2.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder() {
+      return cellarIds_ == null ? com.cork.v2.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+    }
+
+    public static final int INVALIDATION_NONCE_FIELD_NUMBER = 3;
+    private long invalidationNonce_ = 0L;
+    /**
+     * <code>uint64 invalidation_nonce = 3 [json_name = "invalidationNonce"];</code>
+     * @return The invalidationNonce.
+     */
+    @java.lang.Override
+    public long getInvalidationNonce() {
+      return invalidationNonce_;
+    }
+
+    public static final int SCHEDULED_CORKS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cork.v2.CorkProto.ScheduledCork> scheduledCorks_;
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cork.v2.CorkProto.ScheduledCork> getScheduledCorksList() {
+      return scheduledCorks_;
+    }
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cork.v2.CorkProto.ScheduledCorkOrBuilder> 
+        getScheduledCorksOrBuilderList() {
+      return scheduledCorks_;
+    }
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    @java.lang.Override
+    public int getScheduledCorksCount() {
+      return scheduledCorks_.size();
+    }
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    @java.lang.Override
+    public com.cork.v2.CorkProto.ScheduledCork getScheduledCorks(int index) {
+      return scheduledCorks_.get(index);
+    }
+    /**
+     * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+     */
+    @java.lang.Override
+    public com.cork.v2.CorkProto.ScheduledCorkOrBuilder getScheduledCorksOrBuilder(
+        int index) {
+      return scheduledCorks_.get(index);
+    }
+
+    public static final int CORK_RESULTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cork.v2.CorkProto.CorkResult> corkResults_;
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cork.v2.CorkProto.CorkResult> getCorkResultsList() {
+      return corkResults_;
+    }
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cork.v2.CorkProto.CorkResultOrBuilder> 
+        getCorkResultsOrBuilderList() {
+      return corkResults_;
+    }
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    @java.lang.Override
+    public int getCorkResultsCount() {
+      return corkResults_.size();
+    }
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    @java.lang.Override
+    public com.cork.v2.CorkProto.CorkResult getCorkResults(int index) {
+      return corkResults_.get(index);
+    }
+    /**
+     * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+     */
+    @java.lang.Override
+    public com.cork.v2.CorkProto.CorkResultOrBuilder getCorkResultsOrBuilder(
+        int index) {
+      return corkResults_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (cellarIds_ != null) {
+        output.writeMessage(2, getCellarIds());
+      }
+      if (invalidationNonce_ != 0L) {
+        output.writeUInt64(3, invalidationNonce_);
+      }
+      for (int i = 0; i < scheduledCorks_.size(); i++) {
+        output.writeMessage(4, scheduledCorks_.get(i));
+      }
+      for (int i = 0; i < corkResults_.size(); i++) {
+        output.writeMessage(5, corkResults_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (cellarIds_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCellarIds());
+      }
+      if (invalidationNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, invalidationNonce_);
+      }
+      for (int i = 0; i < scheduledCorks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, scheduledCorks_.get(i));
+      }
+      for (int i = 0; i < corkResults_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, corkResults_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cork.v2.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.cork.v2.GenesisProto.GenesisState other = (com.cork.v2.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasCellarIds() != other.hasCellarIds()) return false;
+      if (hasCellarIds()) {
+        if (!getCellarIds()
+            .equals(other.getCellarIds())) return false;
+      }
+      if (getInvalidationNonce()
+          != other.getInvalidationNonce()) return false;
+      if (!getScheduledCorksList()
+          .equals(other.getScheduledCorksList())) return false;
+      if (!getCorkResultsList()
+          .equals(other.getCorkResultsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasCellarIds()) {
+        hash = (37 * hash) + CELLAR_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellarIds().hashCode();
+      }
+      hash = (37 * hash) + INVALIDATION_NONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInvalidationNonce());
+      if (getScheduledCorksCount() > 0) {
+        hash = (37 * hash) + SCHEDULED_CORKS_FIELD_NUMBER;
+        hash = (53 * hash) + getScheduledCorksList().hashCode();
+      }
+      if (getCorkResultsCount() > 0) {
+        hash = (37 * hash) + CORK_RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCorkResultsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cork.v2.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cork.v2.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cork.v2.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState - all cork state that must be provided at genesis
+     * </pre>
+     *
+     * Protobuf type {@code cork.v2.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cork.v2.GenesisState)
+        com.cork.v2.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cork.v2.GenesisProto.internal_static_cork_v2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cork.v2.GenesisProto.internal_static_cork_v2_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cork.v2.GenesisProto.GenesisState.class, com.cork.v2.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.cork.v2.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        cellarIds_ = null;
+        if (cellarIdsBuilder_ != null) {
+          cellarIdsBuilder_.dispose();
+          cellarIdsBuilder_ = null;
+        }
+        invalidationNonce_ = 0L;
+        if (scheduledCorksBuilder_ == null) {
+          scheduledCorks_ = java.util.Collections.emptyList();
+        } else {
+          scheduledCorks_ = null;
+          scheduledCorksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (corkResultsBuilder_ == null) {
+          corkResults_ = java.util.Collections.emptyList();
+        } else {
+          corkResults_ = null;
+          corkResultsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cork.v2.GenesisProto.internal_static_cork_v2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cork.v2.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.cork.v2.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cork.v2.GenesisProto.GenesisState build() {
+        com.cork.v2.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cork.v2.GenesisProto.GenesisState buildPartial() {
+        com.cork.v2.GenesisProto.GenesisState result = new com.cork.v2.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.cork.v2.GenesisProto.GenesisState result) {
+        if (scheduledCorksBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            scheduledCorks_ = java.util.Collections.unmodifiableList(scheduledCorks_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.scheduledCorks_ = scheduledCorks_;
+        } else {
+          result.scheduledCorks_ = scheduledCorksBuilder_.build();
+        }
+        if (corkResultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            corkResults_ = java.util.Collections.unmodifiableList(corkResults_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.corkResults_ = corkResults_;
+        } else {
+          result.corkResults_ = corkResultsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.cork.v2.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.cellarIds_ = cellarIdsBuilder_ == null
+              ? cellarIds_
+              : cellarIdsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.invalidationNonce_ = invalidationNonce_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cork.v2.GenesisProto.GenesisState) {
+          return mergeFrom((com.cork.v2.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cork.v2.GenesisProto.GenesisState other) {
+        if (other == com.cork.v2.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasCellarIds()) {
+          mergeCellarIds(other.getCellarIds());
+        }
+        if (other.getInvalidationNonce() != 0L) {
+          setInvalidationNonce(other.getInvalidationNonce());
+        }
+        if (scheduledCorksBuilder_ == null) {
+          if (!other.scheduledCorks_.isEmpty()) {
+            if (scheduledCorks_.isEmpty()) {
+              scheduledCorks_ = other.scheduledCorks_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureScheduledCorksIsMutable();
+              scheduledCorks_.addAll(other.scheduledCorks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.scheduledCorks_.isEmpty()) {
+            if (scheduledCorksBuilder_.isEmpty()) {
+              scheduledCorksBuilder_.dispose();
+              scheduledCorksBuilder_ = null;
+              scheduledCorks_ = other.scheduledCorks_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              scheduledCorksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getScheduledCorksFieldBuilder() : null;
+            } else {
+              scheduledCorksBuilder_.addAllMessages(other.scheduledCorks_);
+            }
+          }
+        }
+        if (corkResultsBuilder_ == null) {
+          if (!other.corkResults_.isEmpty()) {
+            if (corkResults_.isEmpty()) {
+              corkResults_ = other.corkResults_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureCorkResultsIsMutable();
+              corkResults_.addAll(other.corkResults_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.corkResults_.isEmpty()) {
+            if (corkResultsBuilder_.isEmpty()) {
+              corkResultsBuilder_.dispose();
+              corkResultsBuilder_ = null;
+              corkResults_ = other.corkResults_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              corkResultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCorkResultsFieldBuilder() : null;
+            } else {
+              corkResultsBuilder_.addAllMessages(other.corkResults_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCellarIdsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                invalidationNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                com.cork.v2.CorkProto.ScheduledCork m =
+                    input.readMessage(
+                        com.cork.v2.CorkProto.ScheduledCork.parser(),
+                        extensionRegistry);
+                if (scheduledCorksBuilder_ == null) {
+                  ensureScheduledCorksIsMutable();
+                  scheduledCorks_.add(m);
+                } else {
+                  scheduledCorksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.cork.v2.CorkProto.CorkResult m =
+                    input.readMessage(
+                        com.cork.v2.CorkProto.CorkResult.parser(),
+                        extensionRegistry);
+                if (corkResultsBuilder_ == null) {
+                  ensureCorkResultsIsMutable();
+                  corkResults_.add(m);
+                } else {
+                  corkResultsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cork.v2.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v2.GenesisProto.Params, com.cork.v2.GenesisProto.Params.Builder, com.cork.v2.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.cork.v2.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.cork.v2.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.cork.v2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.cork.v2.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.cork.v2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.cork.v2.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cork.v2.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cork.v2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.cork.v2.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.cork.v2.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v2.GenesisProto.Params, com.cork.v2.GenesisProto.Params.Builder, com.cork.v2.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cork.v2.GenesisProto.Params, com.cork.v2.GenesisProto.Params.Builder, com.cork.v2.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.cork.v2.CorkProto.CellarIDSet cellarIds_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v2.CorkProto.CellarIDSet, com.cork.v2.CorkProto.CellarIDSet.Builder, com.cork.v2.CorkProto.CellarIDSetOrBuilder> cellarIdsBuilder_;
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       * @return Whether the cellarIds field is set.
+       */
+      public boolean hasCellarIds() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       * @return The cellarIds.
+       */
+      public com.cork.v2.CorkProto.CellarIDSet getCellarIds() {
+        if (cellarIdsBuilder_ == null) {
+          return cellarIds_ == null ? com.cork.v2.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+        } else {
+          return cellarIdsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCellarIds(com.cork.v2.CorkProto.CellarIDSet value) {
+        if (cellarIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cellarIds_ = value;
+        } else {
+          cellarIdsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCellarIds(
+          com.cork.v2.CorkProto.CellarIDSet.Builder builderForValue) {
+        if (cellarIdsBuilder_ == null) {
+          cellarIds_ = builderForValue.build();
+        } else {
+          cellarIdsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCellarIds(com.cork.v2.CorkProto.CellarIDSet value) {
+        if (cellarIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            cellarIds_ != null &&
+            cellarIds_ != com.cork.v2.CorkProto.CellarIDSet.getDefaultInstance()) {
+            getCellarIdsBuilder().mergeFrom(value);
+          } else {
+            cellarIds_ = value;
+          }
+        } else {
+          cellarIdsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCellarIds() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cellarIds_ = null;
+        if (cellarIdsBuilder_ != null) {
+          cellarIdsBuilder_.dispose();
+          cellarIdsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cork.v2.CorkProto.CellarIDSet.Builder getCellarIdsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCellarIdsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cork.v2.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder() {
+        if (cellarIdsBuilder_ != null) {
+          return cellarIdsBuilder_.getMessageOrBuilder();
+        } else {
+          return cellarIds_ == null ?
+              com.cork.v2.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+        }
+      }
+      /**
+       * <code>.cork.v2.CellarIDSet cellar_ids = 2 [json_name = "cellarIds", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v2.CorkProto.CellarIDSet, com.cork.v2.CorkProto.CellarIDSet.Builder, com.cork.v2.CorkProto.CellarIDSetOrBuilder> 
+          getCellarIdsFieldBuilder() {
+        if (cellarIdsBuilder_ == null) {
+          cellarIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cork.v2.CorkProto.CellarIDSet, com.cork.v2.CorkProto.CellarIDSet.Builder, com.cork.v2.CorkProto.CellarIDSetOrBuilder>(
+                  getCellarIds(),
+                  getParentForChildren(),
+                  isClean());
+          cellarIds_ = null;
+        }
+        return cellarIdsBuilder_;
+      }
+
+      private long invalidationNonce_ ;
+      /**
+       * <code>uint64 invalidation_nonce = 3 [json_name = "invalidationNonce"];</code>
+       * @return The invalidationNonce.
+       */
+      @java.lang.Override
+      public long getInvalidationNonce() {
+        return invalidationNonce_;
+      }
+      /**
+       * <code>uint64 invalidation_nonce = 3 [json_name = "invalidationNonce"];</code>
+       * @param value The invalidationNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvalidationNonce(long value) {
+
+        invalidationNonce_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 invalidation_nonce = 3 [json_name = "invalidationNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvalidationNonce() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        invalidationNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cork.v2.CorkProto.ScheduledCork> scheduledCorks_ =
+        java.util.Collections.emptyList();
+      private void ensureScheduledCorksIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          scheduledCorks_ = new java.util.ArrayList<com.cork.v2.CorkProto.ScheduledCork>(scheduledCorks_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cork.v2.CorkProto.ScheduledCork, com.cork.v2.CorkProto.ScheduledCork.Builder, com.cork.v2.CorkProto.ScheduledCorkOrBuilder> scheduledCorksBuilder_;
+
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public java.util.List<com.cork.v2.CorkProto.ScheduledCork> getScheduledCorksList() {
+        if (scheduledCorksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(scheduledCorks_);
+        } else {
+          return scheduledCorksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public int getScheduledCorksCount() {
+        if (scheduledCorksBuilder_ == null) {
+          return scheduledCorks_.size();
+        } else {
+          return scheduledCorksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public com.cork.v2.CorkProto.ScheduledCork getScheduledCorks(int index) {
+        if (scheduledCorksBuilder_ == null) {
+          return scheduledCorks_.get(index);
+        } else {
+          return scheduledCorksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder setScheduledCorks(
+          int index, com.cork.v2.CorkProto.ScheduledCork value) {
+        if (scheduledCorksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.set(index, value);
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder setScheduledCorks(
+          int index, com.cork.v2.CorkProto.ScheduledCork.Builder builderForValue) {
+        if (scheduledCorksBuilder_ == null) {
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder addScheduledCorks(com.cork.v2.CorkProto.ScheduledCork value) {
+        if (scheduledCorksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.add(value);
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder addScheduledCorks(
+          int index, com.cork.v2.CorkProto.ScheduledCork value) {
+        if (scheduledCorksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.add(index, value);
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder addScheduledCorks(
+          com.cork.v2.CorkProto.ScheduledCork.Builder builderForValue) {
+        if (scheduledCorksBuilder_ == null) {
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder addScheduledCorks(
+          int index, com.cork.v2.CorkProto.ScheduledCork.Builder builderForValue) {
+        if (scheduledCorksBuilder_ == null) {
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder addAllScheduledCorks(
+          java.lang.Iterable<? extends com.cork.v2.CorkProto.ScheduledCork> values) {
+        if (scheduledCorksBuilder_ == null) {
+          ensureScheduledCorksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, scheduledCorks_);
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder clearScheduledCorks() {
+        if (scheduledCorksBuilder_ == null) {
+          scheduledCorks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public Builder removeScheduledCorks(int index) {
+        if (scheduledCorksBuilder_ == null) {
+          ensureScheduledCorksIsMutable();
+          scheduledCorks_.remove(index);
+          onChanged();
+        } else {
+          scheduledCorksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public com.cork.v2.CorkProto.ScheduledCork.Builder getScheduledCorksBuilder(
+          int index) {
+        return getScheduledCorksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public com.cork.v2.CorkProto.ScheduledCorkOrBuilder getScheduledCorksOrBuilder(
+          int index) {
+        if (scheduledCorksBuilder_ == null) {
+          return scheduledCorks_.get(index);  } else {
+          return scheduledCorksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public java.util.List<? extends com.cork.v2.CorkProto.ScheduledCorkOrBuilder> 
+           getScheduledCorksOrBuilderList() {
+        if (scheduledCorksBuilder_ != null) {
+          return scheduledCorksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(scheduledCorks_);
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public com.cork.v2.CorkProto.ScheduledCork.Builder addScheduledCorksBuilder() {
+        return getScheduledCorksFieldBuilder().addBuilder(
+            com.cork.v2.CorkProto.ScheduledCork.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public com.cork.v2.CorkProto.ScheduledCork.Builder addScheduledCorksBuilder(
+          int index) {
+        return getScheduledCorksFieldBuilder().addBuilder(
+            index, com.cork.v2.CorkProto.ScheduledCork.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cork.v2.ScheduledCork scheduled_corks = 4 [json_name = "scheduledCorks"];</code>
+       */
+      public java.util.List<com.cork.v2.CorkProto.ScheduledCork.Builder> 
+           getScheduledCorksBuilderList() {
+        return getScheduledCorksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cork.v2.CorkProto.ScheduledCork, com.cork.v2.CorkProto.ScheduledCork.Builder, com.cork.v2.CorkProto.ScheduledCorkOrBuilder> 
+          getScheduledCorksFieldBuilder() {
+        if (scheduledCorksBuilder_ == null) {
+          scheduledCorksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cork.v2.CorkProto.ScheduledCork, com.cork.v2.CorkProto.ScheduledCork.Builder, com.cork.v2.CorkProto.ScheduledCorkOrBuilder>(
+                  scheduledCorks_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          scheduledCorks_ = null;
+        }
+        return scheduledCorksBuilder_;
+      }
+
+      private java.util.List<com.cork.v2.CorkProto.CorkResult> corkResults_ =
+        java.util.Collections.emptyList();
+      private void ensureCorkResultsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          corkResults_ = new java.util.ArrayList<com.cork.v2.CorkProto.CorkResult>(corkResults_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cork.v2.CorkProto.CorkResult, com.cork.v2.CorkProto.CorkResult.Builder, com.cork.v2.CorkProto.CorkResultOrBuilder> corkResultsBuilder_;
+
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public java.util.List<com.cork.v2.CorkProto.CorkResult> getCorkResultsList() {
+        if (corkResultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(corkResults_);
+        } else {
+          return corkResultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public int getCorkResultsCount() {
+        if (corkResultsBuilder_ == null) {
+          return corkResults_.size();
+        } else {
+          return corkResultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public com.cork.v2.CorkProto.CorkResult getCorkResults(int index) {
+        if (corkResultsBuilder_ == null) {
+          return corkResults_.get(index);
+        } else {
+          return corkResultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder setCorkResults(
+          int index, com.cork.v2.CorkProto.CorkResult value) {
+        if (corkResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorkResultsIsMutable();
+          corkResults_.set(index, value);
+          onChanged();
+        } else {
+          corkResultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder setCorkResults(
+          int index, com.cork.v2.CorkProto.CorkResult.Builder builderForValue) {
+        if (corkResultsBuilder_ == null) {
+          ensureCorkResultsIsMutable();
+          corkResults_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          corkResultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder addCorkResults(com.cork.v2.CorkProto.CorkResult value) {
+        if (corkResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorkResultsIsMutable();
+          corkResults_.add(value);
+          onChanged();
+        } else {
+          corkResultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder addCorkResults(
+          int index, com.cork.v2.CorkProto.CorkResult value) {
+        if (corkResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCorkResultsIsMutable();
+          corkResults_.add(index, value);
+          onChanged();
+        } else {
+          corkResultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder addCorkResults(
+          com.cork.v2.CorkProto.CorkResult.Builder builderForValue) {
+        if (corkResultsBuilder_ == null) {
+          ensureCorkResultsIsMutable();
+          corkResults_.add(builderForValue.build());
+          onChanged();
+        } else {
+          corkResultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder addCorkResults(
+          int index, com.cork.v2.CorkProto.CorkResult.Builder builderForValue) {
+        if (corkResultsBuilder_ == null) {
+          ensureCorkResultsIsMutable();
+          corkResults_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          corkResultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder addAllCorkResults(
+          java.lang.Iterable<? extends com.cork.v2.CorkProto.CorkResult> values) {
+        if (corkResultsBuilder_ == null) {
+          ensureCorkResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, corkResults_);
+          onChanged();
+        } else {
+          corkResultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder clearCorkResults() {
+        if (corkResultsBuilder_ == null) {
+          corkResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          corkResultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public Builder removeCorkResults(int index) {
+        if (corkResultsBuilder_ == null) {
+          ensureCorkResultsIsMutable();
+          corkResults_.remove(index);
+          onChanged();
+        } else {
+          corkResultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public com.cork.v2.CorkProto.CorkResult.Builder getCorkResultsBuilder(
+          int index) {
+        return getCorkResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public com.cork.v2.CorkProto.CorkResultOrBuilder getCorkResultsOrBuilder(
+          int index) {
+        if (corkResultsBuilder_ == null) {
+          return corkResults_.get(index);  } else {
+          return corkResultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public java.util.List<? extends com.cork.v2.CorkProto.CorkResultOrBuilder> 
+           getCorkResultsOrBuilderList() {
+        if (corkResultsBuilder_ != null) {
+          return corkResultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(corkResults_);
+        }
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public com.cork.v2.CorkProto.CorkResult.Builder addCorkResultsBuilder() {
+        return getCorkResultsFieldBuilder().addBuilder(
+            com.cork.v2.CorkProto.CorkResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public com.cork.v2.CorkProto.CorkResult.Builder addCorkResultsBuilder(
+          int index) {
+        return getCorkResultsFieldBuilder().addBuilder(
+            index, com.cork.v2.CorkProto.CorkResult.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cork.v2.CorkResult cork_results = 5 [json_name = "corkResults"];</code>
+       */
+      public java.util.List<com.cork.v2.CorkProto.CorkResult.Builder> 
+           getCorkResultsBuilderList() {
+        return getCorkResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cork.v2.CorkProto.CorkResult, com.cork.v2.CorkProto.CorkResult.Builder, com.cork.v2.CorkProto.CorkResultOrBuilder> 
+          getCorkResultsFieldBuilder() {
+        if (corkResultsBuilder_ == null) {
+          corkResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cork.v2.CorkProto.CorkResult, com.cork.v2.CorkProto.CorkResult.Builder, com.cork.v2.CorkProto.CorkResultOrBuilder>(
+                  corkResults_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          corkResults_ = null;
+        }
+        return corkResultsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cork.v2.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:cork.v2.GenesisState)
+    private static final com.cork.v2.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cork.v2.GenesisProto.GenesisState();
+    }
+
+    public static com.cork.v2.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cork.v2.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cork.v2.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+     * </pre>
+     *
+     * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The voteThreshold.
+     */
+    java.lang.String getVoteThreshold();
+    /**
+     * <pre>
+     * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+     * </pre>
+     *
+     * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The bytes for voteThreshold.
+     */
+    com.google.protobuf.ByteString
+        getVoteThresholdBytes();
+  }
+  /**
+   * <pre>
+   * Params cork parameters
+   * </pre>
+   *
+   * Protobuf type {@code cork.v2.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cork.v2.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      voteThreshold_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cork.v2.GenesisProto.internal_static_cork_v2_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cork.v2.GenesisProto.internal_static_cork_v2_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cork.v2.GenesisProto.Params.class, com.cork.v2.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int VOTE_THRESHOLD_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voteThreshold_ = "";
+    /**
+     * <pre>
+     * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+     * </pre>
+     *
+     * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The voteThreshold.
+     */
+    @java.lang.Override
+    public java.lang.String getVoteThreshold() {
+      java.lang.Object ref = voteThreshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voteThreshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+     * </pre>
+     *
+     * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The bytes for voteThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoteThresholdBytes() {
+      java.lang.Object ref = voteThreshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voteThreshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteThreshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, voteThreshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteThreshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, voteThreshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cork.v2.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.cork.v2.GenesisProto.Params other = (com.cork.v2.GenesisProto.Params) obj;
+
+      if (!getVoteThreshold()
+          .equals(other.getVoteThreshold())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VOTE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getVoteThreshold().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cork.v2.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cork.v2.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v2.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cork.v2.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params cork parameters
+     * </pre>
+     *
+     * Protobuf type {@code cork.v2.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cork.v2.Params)
+        com.cork.v2.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cork.v2.GenesisProto.internal_static_cork_v2_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cork.v2.GenesisProto.internal_static_cork_v2_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cork.v2.GenesisProto.Params.class, com.cork.v2.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.cork.v2.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        voteThreshold_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cork.v2.GenesisProto.internal_static_cork_v2_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cork.v2.GenesisProto.Params getDefaultInstanceForType() {
+        return com.cork.v2.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cork.v2.GenesisProto.Params build() {
+        com.cork.v2.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cork.v2.GenesisProto.Params buildPartial() {
+        com.cork.v2.GenesisProto.Params result = new com.cork.v2.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cork.v2.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.voteThreshold_ = voteThreshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cork.v2.GenesisProto.Params) {
+          return mergeFrom((com.cork.v2.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cork.v2.GenesisProto.Params other) {
+        if (other == com.cork.v2.GenesisProto.Params.getDefaultInstance()) return this;
+        if (!other.getVoteThreshold().isEmpty()) {
+          voteThreshold_ = other.voteThreshold_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                voteThreshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object voteThreshold_ = "";
+      /**
+       * <pre>
+       * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+       * </pre>
+       *
+       * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @return The voteThreshold.
+       */
+      public java.lang.String getVoteThreshold() {
+        java.lang.Object ref = voteThreshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voteThreshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+       * </pre>
+       *
+       * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @return The bytes for voteThreshold.
+       */
+      public com.google.protobuf.ByteString
+          getVoteThresholdBytes() {
+        java.lang.Object ref = voteThreshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voteThreshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+       * </pre>
+       *
+       * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @param value The voteThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoteThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voteThreshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+       * </pre>
+       *
+       * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoteThreshold() {
+        voteThreshold_ = getDefaultInstance().getVoteThreshold();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * VoteThreshold defines the percentage of bonded stake required to vote for a scheduled cork to be approved
+       * </pre>
+       *
+       * <code>string vote_threshold = 1 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @param value The bytes for voteThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoteThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voteThreshold_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cork.v2.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:cork.v2.Params)
+    private static final com.cork.v2.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cork.v2.GenesisProto.Params();
+    }
+
+    public static com.cork.v2.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cork.v2.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cork_v2_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cork_v2_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cork_v2_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cork_v2_Params_fieldAccessorTable;
 
@@ -45,11 +2270,11 @@ public final class GenesisProto {
       "2.CorkResultR\013corkResults\"x\n\006Params\022n\n\016v" +
       "ote_threshold\030\001 \001(\tBG\310\336\037\000\332\336\037&github.com/" +
       "cosmos/cosmos-sdk/types.Dec\362\336\037\025yaml:\"vot" +
-      "e_threshold\"R\rvoteThresholdB\206\001\n\013com.cork" +
-      ".v2B\014GenesisProtoP\001Z,github.com/peggyjv/" +
-      "sommelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V" +
-      "2\312\002\007Cork\\V2\342\002\023Cork\\V2\\GPBMetadata\352\002\010Cork" +
-      "::V2b\006proto3"
+      "e_threshold\"R\rvoteThresholdB\204\001\n\013com.cork" +
+      ".v2B\014GenesisProtoZ,github.com/peggyjv/so" +
+      "mmelier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V2\312" +
+      "\002\007Cork\\V2\342\002\023Cork\\V2\\GPBMetadata\352\002\010Cork::" +
+      "V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

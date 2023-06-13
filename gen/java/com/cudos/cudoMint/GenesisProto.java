@@ -14,9 +14,933 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cudos.cudoMint.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * minter is a space for holding current minting progress information.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minter field is set.
+     */
+    boolean hasMinter();
+    /**
+     * <pre>
+     * minter is a space for holding current minting progress information.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return The minter.
+     */
+    com.cudos.cudoMint.MintProto.Minter getMinter();
+    /**
+     * <pre>
+     * minter is a space for holding current minting progress information.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudos.cudoMint.MintProto.MinterOrBuilder getMinterOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.cudos.cudoMint.MintProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.cudos.cudoMint.MintProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the cudoMint module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code cudos.cudoMint.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cudos.cudoMint.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cudos.cudoMint.GenesisProto.internal_static_cudos_cudoMint_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cudos.cudoMint.GenesisProto.internal_static_cudos_cudoMint_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cudos.cudoMint.GenesisProto.GenesisState.class, com.cudos.cudoMint.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 1;
+    private com.cudos.cudoMint.MintProto.Minter minter_;
+    /**
+     * <pre>
+     * minter is a space for holding current minting progress information.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minter field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinter() {
+      return minter_ != null;
+    }
+    /**
+     * <pre>
+     * minter is a space for holding current minting progress information.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public com.cudos.cudoMint.MintProto.Minter getMinter() {
+      return minter_ == null ? com.cudos.cudoMint.MintProto.Minter.getDefaultInstance() : minter_;
+    }
+    /**
+     * <pre>
+     * minter is a space for holding current minting progress information.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudos.cudoMint.MintProto.MinterOrBuilder getMinterOrBuilder() {
+      return minter_ == null ? com.cudos.cudoMint.MintProto.Minter.getDefaultInstance() : minter_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.cudos.cudoMint.MintProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.cudos.cudoMint.MintProto.Params getParams() {
+      return params_ == null ? com.cudos.cudoMint.MintProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cudos.cudoMint.MintProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.cudos.cudoMint.MintProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minter_ != null) {
+        output.writeMessage(1, getMinter());
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMinter());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cudos.cudoMint.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.cudos.cudoMint.GenesisProto.GenesisState other = (com.cudos.cudoMint.GenesisProto.GenesisState) obj;
+
+      if (hasMinter() != other.hasMinter()) return false;
+      if (hasMinter()) {
+        if (!getMinter()
+            .equals(other.getMinter())) return false;
+      }
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMinter()) {
+        hash = (37 * hash) + MINTER_FIELD_NUMBER;
+        hash = (53 * hash) + getMinter().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cudos.cudoMint.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cudos.cudoMint.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the cudoMint module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code cudos.cudoMint.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cudos.cudoMint.GenesisState)
+        com.cudos.cudoMint.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cudos.cudoMint.GenesisProto.internal_static_cudos_cudoMint_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cudos.cudoMint.GenesisProto.internal_static_cudos_cudoMint_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cudos.cudoMint.GenesisProto.GenesisState.class, com.cudos.cudoMint.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.cudos.cudoMint.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minter_ = null;
+        if (minterBuilder_ != null) {
+          minterBuilder_.dispose();
+          minterBuilder_ = null;
+        }
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cudos.cudoMint.GenesisProto.internal_static_cudos_cudoMint_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cudos.cudoMint.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.cudos.cudoMint.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cudos.cudoMint.GenesisProto.GenesisState build() {
+        com.cudos.cudoMint.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cudos.cudoMint.GenesisProto.GenesisState buildPartial() {
+        com.cudos.cudoMint.GenesisProto.GenesisState result = new com.cudos.cudoMint.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cudos.cudoMint.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minter_ = minterBuilder_ == null
+              ? minter_
+              : minterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cudos.cudoMint.GenesisProto.GenesisState) {
+          return mergeFrom((com.cudos.cudoMint.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cudos.cudoMint.GenesisProto.GenesisState other) {
+        if (other == com.cudos.cudoMint.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasMinter()) {
+          mergeMinter(other.getMinter());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMinterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cudos.cudoMint.MintProto.Minter minter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudos.cudoMint.MintProto.Minter, com.cudos.cudoMint.MintProto.Minter.Builder, com.cudos.cudoMint.MintProto.MinterOrBuilder> minterBuilder_;
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minter field is set.
+       */
+      public boolean hasMinter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       * @return The minter.
+       */
+      public com.cudos.cudoMint.MintProto.Minter getMinter() {
+        if (minterBuilder_ == null) {
+          return minter_ == null ? com.cudos.cudoMint.MintProto.Minter.getDefaultInstance() : minter_;
+        } else {
+          return minterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinter(com.cudos.cudoMint.MintProto.Minter value) {
+        if (minterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minter_ = value;
+        } else {
+          minterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinter(
+          com.cudos.cudoMint.MintProto.Minter.Builder builderForValue) {
+        if (minterBuilder_ == null) {
+          minter_ = builderForValue.build();
+        } else {
+          minterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinter(com.cudos.cudoMint.MintProto.Minter value) {
+        if (minterBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            minter_ != null &&
+            minter_ != com.cudos.cudoMint.MintProto.Minter.getDefaultInstance()) {
+            getMinterBuilder().mergeFrom(value);
+          } else {
+            minter_ = value;
+          }
+        } else {
+          minterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minter_ = null;
+        if (minterBuilder_ != null) {
+          minterBuilder_.dispose();
+          minterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudos.cudoMint.MintProto.Minter.Builder getMinterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMinterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudos.cudoMint.MintProto.MinterOrBuilder getMinterOrBuilder() {
+        if (minterBuilder_ != null) {
+          return minterBuilder_.getMessageOrBuilder();
+        } else {
+          return minter_ == null ?
+              com.cudos.cudoMint.MintProto.Minter.getDefaultInstance() : minter_;
+        }
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current minting progress information.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudos.cudoMint.MintProto.Minter, com.cudos.cudoMint.MintProto.Minter.Builder, com.cudos.cudoMint.MintProto.MinterOrBuilder> 
+          getMinterFieldBuilder() {
+        if (minterBuilder_ == null) {
+          minterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudos.cudoMint.MintProto.Minter, com.cudos.cudoMint.MintProto.Minter.Builder, com.cudos.cudoMint.MintProto.MinterOrBuilder>(
+                  getMinter(),
+                  getParentForChildren(),
+                  isClean());
+          minter_ = null;
+        }
+        return minterBuilder_;
+      }
+
+      private com.cudos.cudoMint.MintProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudos.cudoMint.MintProto.Params, com.cudos.cudoMint.MintProto.Params.Builder, com.cudos.cudoMint.MintProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.cudos.cudoMint.MintProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.cudos.cudoMint.MintProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.cudos.cudoMint.MintProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.cudos.cudoMint.MintProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.cudos.cudoMint.MintProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.cudos.cudoMint.MintProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudos.cudoMint.MintProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cudos.cudoMint.MintProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.cudos.cudoMint.MintProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.cudos.cudoMint.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cudos.cudoMint.MintProto.Params, com.cudos.cudoMint.MintProto.Params.Builder, com.cudos.cudoMint.MintProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cudos.cudoMint.MintProto.Params, com.cudos.cudoMint.MintProto.Params.Builder, com.cudos.cudoMint.MintProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cudos.cudoMint.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:cudos.cudoMint.GenesisState)
+    private static final com.cudos.cudoMint.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cudos.cudoMint.GenesisProto.GenesisState();
+    }
+
+    public static com.cudos.cudoMint.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cudos.cudoMint.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cudos_cudoMint_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cudos_cudoMint_GenesisState_fieldAccessorTable;
 
@@ -33,12 +957,12 @@ public final class GenesisProto {
       "roto/gogo.proto\"z\n\014GenesisState\0224\n\006minte" +
       "r\030\001 \001(\0132\026.cudos.cudoMint.MinterB\004\310\336\037\000R\006m" +
       "inter\0224\n\006params\030\002 \001(\0132\026.cudos.cudoMint.P" +
-      "aramsB\004\310\336\037\000R\006paramsB\260\001\n\022com.cudos.cudoMi" +
-      "ntB\014GenesisProtoP\001Z3github.com/CudoVentu" +
-      "res/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016" +
-      "Cudos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\" +
-      "CudoMint\\GPBMetadata\352\002\017Cudos::CudoMintb\006" +
-      "proto3"
+      "aramsB\004\310\336\037\000R\006paramsB\256\001\n\022com.cudos.cudoMi" +
+      "ntB\014GenesisProtoZ3github.com/CudoVenture" +
+      "s/cudos-node/x/cudoMint/types\242\002\003CCX\252\002\016Cu" +
+      "dos.CudoMint\312\002\016Cudos\\CudoMint\342\002\032Cudos\\Cu" +
+      "doMint\\GPBMetadata\352\002\017Cudos::CudoMintb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

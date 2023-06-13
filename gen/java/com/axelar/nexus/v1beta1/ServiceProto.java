@@ -105,13 +105,13 @@ public final class ServiceProto {
       "t/{chain}/{asset}\022}\n\007Message\022$.axelar.ne" +
       "xus.v1beta1.MessageRequest\032%.axelar.nexu" +
       "s.v1beta1.MessageResponse\"%\202\323\344\223\002\037\022\035/axel" +
-      "ar/nexus/v1beta1/messageB\322\001\n\030com.axelar." +
-      "nexus.v1beta1B\014ServiceProtoP\001Z2github.co" +
-      "m/axelarnetwork/axelar-core/x/nexus/type" +
-      "s\242\002\003ANX\252\002\024Axelar.Nexus.V1beta1\312\002\024Axelar\\" +
-      "Nexus\\V1beta1\342\002 Axelar\\Nexus\\V1beta1\\GPB" +
-      "Metadata\352\002\026Axelar::Nexus::V1beta1\300\343\036\001b\006p" +
-      "roto3"
+      "ar/nexus/v1beta1/messageB\320\001\n\030com.axelar." +
+      "nexus.v1beta1B\014ServiceProtoZ2github.com/" +
+      "axelarnetwork/axelar-core/x/nexus/types\242" +
+      "\002\003ANX\252\002\024Axelar.Nexus.V1beta1\312\002\024Axelar\\Ne" +
+      "xus\\V1beta1\342\002 Axelar\\Nexus\\V1beta1\\GPBMe" +
+      "tadata\352\002\026Axelar::Nexus::V1beta1\300\343\036\001b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

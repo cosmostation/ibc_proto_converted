@@ -14,14 +14,1692 @@ public final class AuthorityProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AuthorityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.Authority)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+     * @return The formerAddress.
+     */
+    java.lang.String getFormerAddress();
+    /**
+     * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+     * @return The bytes for formerAddress.
+     */
+    com.google.protobuf.ByteString
+        getFormerAddressBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastModified field is set.
+     */
+    boolean hasLastModified();
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastModified.
+     */
+    com.google.protobuf.Timestamp getLastModified();
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.Authority}
+   */
+  public static final class Authority extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.Authority)
+      AuthorityOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Authority.newBuilder() to construct.
+    private Authority(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Authority() {
+      address_ = "";
+      formerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Authority();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_Authority_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_Authority_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.AuthorityProto.Authority.class, com.em.authority.v1.AuthorityProto.Authority.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FORMER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object formerAddress_ = "";
+    /**
+     * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+     * @return The formerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFormerAddress() {
+      java.lang.Object ref = formerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        formerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+     * @return The bytes for formerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFormerAddressBytes() {
+      java.lang.Object ref = formerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        formerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAST_MODIFIED_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp lastModified_;
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastModified field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastModified() {
+      return lastModified_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastModified.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastModified() {
+      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
+      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, formerAddress_);
+      }
+      if (lastModified_ != null) {
+        output.writeMessage(3, getLastModified());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(formerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, formerAddress_);
+      }
+      if (lastModified_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getLastModified());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.AuthorityProto.Authority)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.AuthorityProto.Authority other = (com.em.authority.v1.AuthorityProto.Authority) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getFormerAddress()
+          .equals(other.getFormerAddress())) return false;
+      if (hasLastModified() != other.hasLastModified()) return false;
+      if (hasLastModified()) {
+        if (!getLastModified()
+            .equals(other.getLastModified())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + FORMER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFormerAddress().hashCode();
+      if (hasLastModified()) {
+        hash = (37 * hash) + LAST_MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getLastModified().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.AuthorityProto.Authority parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.AuthorityProto.Authority parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.AuthorityProto.Authority parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.AuthorityProto.Authority prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.Authority}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.Authority)
+        com.em.authority.v1.AuthorityProto.AuthorityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_Authority_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_Authority_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.AuthorityProto.Authority.class, com.em.authority.v1.AuthorityProto.Authority.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.AuthorityProto.Authority.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        formerAddress_ = "";
+        lastModified_ = null;
+        if (lastModifiedBuilder_ != null) {
+          lastModifiedBuilder_.dispose();
+          lastModifiedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_Authority_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.AuthorityProto.Authority getDefaultInstanceForType() {
+        return com.em.authority.v1.AuthorityProto.Authority.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.AuthorityProto.Authority build() {
+        com.em.authority.v1.AuthorityProto.Authority result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.AuthorityProto.Authority buildPartial() {
+        com.em.authority.v1.AuthorityProto.Authority result = new com.em.authority.v1.AuthorityProto.Authority(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.authority.v1.AuthorityProto.Authority result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.formerAddress_ = formerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastModified_ = lastModifiedBuilder_ == null
+              ? lastModified_
+              : lastModifiedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.AuthorityProto.Authority) {
+          return mergeFrom((com.em.authority.v1.AuthorityProto.Authority)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.AuthorityProto.Authority other) {
+        if (other == com.em.authority.v1.AuthorityProto.Authority.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFormerAddress().isEmpty()) {
+          formerAddress_ = other.formerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasLastModified()) {
+          mergeLastModified(other.getLastModified());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                formerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getLastModifiedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object formerAddress_ = "";
+      /**
+       * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+       * @return The formerAddress.
+       */
+      public java.lang.String getFormerAddress() {
+        java.lang.Object ref = formerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          formerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+       * @return The bytes for formerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFormerAddressBytes() {
+        java.lang.Object ref = formerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          formerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+       * @param value The formerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        formerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormerAddress() {
+        formerAddress_ = getDefaultInstance().getFormerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string former_address = 2 [json_name = "formerAddress", (.gogoproto.moretags) = "yaml:&#92;"former_address&#92;""];</code>
+       * @param value The bytes for formerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        formerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp lastModified_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastModifiedBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastModified field is set.
+       */
+      public boolean hasLastModified() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastModified.
+       */
+      public com.google.protobuf.Timestamp getLastModified() {
+        if (lastModifiedBuilder_ == null) {
+          return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+        } else {
+          return lastModifiedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastModified(com.google.protobuf.Timestamp value) {
+        if (lastModifiedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastModified_ = value;
+        } else {
+          lastModifiedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastModified(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastModifiedBuilder_ == null) {
+          lastModified_ = builderForValue.build();
+        } else {
+          lastModifiedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastModified(com.google.protobuf.Timestamp value) {
+        if (lastModifiedBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            lastModified_ != null &&
+            lastModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastModifiedBuilder().mergeFrom(value);
+          } else {
+            lastModified_ = value;
+          }
+        } else {
+          lastModifiedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastModified() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastModified_ = null;
+        if (lastModifiedBuilder_ != null) {
+          lastModifiedBuilder_.dispose();
+          lastModifiedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastModifiedBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getLastModifiedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
+        if (lastModifiedBuilder_ != null) {
+          return lastModifiedBuilder_.getMessageOrBuilder();
+        } else {
+          return lastModified_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_modified = 3 [json_name = "lastModified", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"last_modified&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastModifiedFieldBuilder() {
+        if (lastModifiedBuilder_ == null) {
+          lastModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastModified(),
+                  getParentForChildren(),
+                  isClean());
+          lastModified_ = null;
+        }
+        return lastModifiedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.Authority)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.Authority)
+    private static final com.em.authority.v1.AuthorityProto.Authority DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.AuthorityProto.Authority();
+    }
+
+    public static com.em.authority.v1.AuthorityProto.Authority getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Authority>
+        PARSER = new com.google.protobuf.AbstractParser<Authority>() {
+      @java.lang.Override
+      public Authority parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Authority> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Authority> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.AuthorityProto.Authority getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GasPricesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.authority.v1.GasPrices)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getMinimumList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimum(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getMinimumCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinimumOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.authority.v1.GasPrices}
+   */
+  public static final class GasPrices extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.authority.v1.GasPrices)
+      GasPricesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GasPrices.newBuilder() to construct.
+    private GasPrices(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GasPrices() {
+      minimum_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GasPrices();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_GasPrices_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_GasPrices_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.authority.v1.AuthorityProto.GasPrices.class, com.em.authority.v1.AuthorityProto.GasPrices.Builder.class);
+    }
+
+    public static final int MINIMUM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minimum_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinimumList() {
+      return minimum_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinimumOrBuilderList() {
+      return minimum_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getMinimumCount() {
+      return minimum_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimum(int index) {
+      return minimum_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumOrBuilder(
+        int index) {
+      return minimum_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minimum_.size(); i++) {
+        output.writeMessage(1, minimum_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minimum_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minimum_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.authority.v1.AuthorityProto.GasPrices)) {
+        return super.equals(obj);
+      }
+      com.em.authority.v1.AuthorityProto.GasPrices other = (com.em.authority.v1.AuthorityProto.GasPrices) obj;
+
+      if (!getMinimumList()
+          .equals(other.getMinimumList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMinimumCount() > 0) {
+        hash = (37 * hash) + MINIMUM_FIELD_NUMBER;
+        hash = (53 * hash) + getMinimumList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.authority.v1.AuthorityProto.GasPrices parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.authority.v1.AuthorityProto.GasPrices prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.authority.v1.GasPrices}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.authority.v1.GasPrices)
+        com.em.authority.v1.AuthorityProto.GasPricesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_GasPrices_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_GasPrices_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.authority.v1.AuthorityProto.GasPrices.class, com.em.authority.v1.AuthorityProto.GasPrices.Builder.class);
+      }
+
+      // Construct using com.em.authority.v1.AuthorityProto.GasPrices.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (minimumBuilder_ == null) {
+          minimum_ = java.util.Collections.emptyList();
+        } else {
+          minimum_ = null;
+          minimumBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.authority.v1.AuthorityProto.internal_static_em_authority_v1_GasPrices_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.AuthorityProto.GasPrices getDefaultInstanceForType() {
+        return com.em.authority.v1.AuthorityProto.GasPrices.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.AuthorityProto.GasPrices build() {
+        com.em.authority.v1.AuthorityProto.GasPrices result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.authority.v1.AuthorityProto.GasPrices buildPartial() {
+        com.em.authority.v1.AuthorityProto.GasPrices result = new com.em.authority.v1.AuthorityProto.GasPrices(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.authority.v1.AuthorityProto.GasPrices result) {
+        if (minimumBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minimum_ = java.util.Collections.unmodifiableList(minimum_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minimum_ = minimum_;
+        } else {
+          result.minimum_ = minimumBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.authority.v1.AuthorityProto.GasPrices result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.authority.v1.AuthorityProto.GasPrices) {
+          return mergeFrom((com.em.authority.v1.AuthorityProto.GasPrices)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.authority.v1.AuthorityProto.GasPrices other) {
+        if (other == com.em.authority.v1.AuthorityProto.GasPrices.getDefaultInstance()) return this;
+        if (minimumBuilder_ == null) {
+          if (!other.minimum_.isEmpty()) {
+            if (minimum_.isEmpty()) {
+              minimum_ = other.minimum_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMinimumIsMutable();
+              minimum_.addAll(other.minimum_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minimum_.isEmpty()) {
+            if (minimumBuilder_.isEmpty()) {
+              minimumBuilder_.dispose();
+              minimumBuilder_ = null;
+              minimum_ = other.minimum_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              minimumBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinimumFieldBuilder() : null;
+            } else {
+              minimumBuilder_.addAllMessages(other.minimum_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (minimumBuilder_ == null) {
+                  ensureMinimumIsMutable();
+                  minimum_.add(m);
+                } else {
+                  minimumBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minimum_ =
+        java.util.Collections.emptyList();
+      private void ensureMinimumIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minimum_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(minimum_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> minimumBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinimumList() {
+        if (minimumBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minimum_);
+        } else {
+          return minimumBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getMinimumCount() {
+        if (minimumBuilder_ == null) {
+          return minimum_.size();
+        } else {
+          return minimumBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimum(int index) {
+        if (minimumBuilder_ == null) {
+          return minimum_.get(index);
+        } else {
+          return minimumBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setMinimum(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumIsMutable();
+          minimum_.set(index, value);
+          onChanged();
+        } else {
+          minimumBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setMinimum(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumBuilder_ == null) {
+          ensureMinimumIsMutable();
+          minimum_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minimumBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimum(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumIsMutable();
+          minimum_.add(value);
+          onChanged();
+        } else {
+          minimumBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimum(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumIsMutable();
+          minimum_.add(index, value);
+          onChanged();
+        } else {
+          minimumBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimum(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumBuilder_ == null) {
+          ensureMinimumIsMutable();
+          minimum_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minimumBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimum(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumBuilder_ == null) {
+          ensureMinimumIsMutable();
+          minimum_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minimumBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllMinimum(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (minimumBuilder_ == null) {
+          ensureMinimumIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minimum_);
+          onChanged();
+        } else {
+          minimumBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearMinimum() {
+        if (minimumBuilder_ == null) {
+          minimum_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          minimumBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeMinimum(int index) {
+        if (minimumBuilder_ == null) {
+          ensureMinimumIsMutable();
+          minimum_.remove(index);
+          onChanged();
+        } else {
+          minimumBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getMinimumBuilder(
+          int index) {
+        return getMinimumFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumOrBuilder(
+          int index) {
+        if (minimumBuilder_ == null) {
+          return minimum_.get(index);  } else {
+          return minimumBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getMinimumOrBuilderList() {
+        if (minimumBuilder_ != null) {
+          return minimumBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minimum_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinimumBuilder() {
+        return getMinimumFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinimumBuilder(
+          int index) {
+        return getMinimumFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum = 1 [json_name = "minimum", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"minimum&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getMinimumBuilderList() {
+        return getMinimumFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getMinimumFieldBuilder() {
+        if (minimumBuilder_ == null) {
+          minimumBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  minimum_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minimum_ = null;
+        }
+        return minimumBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.authority.v1.GasPrices)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.authority.v1.GasPrices)
+    private static final com.em.authority.v1.AuthorityProto.GasPrices DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.authority.v1.AuthorityProto.GasPrices();
+    }
+
+    public static com.em.authority.v1.AuthorityProto.GasPrices getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GasPrices>
+        PARSER = new com.google.protobuf.AbstractParser<GasPrices>() {
+      @java.lang.Override
+      public GasPrices parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GasPrices> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GasPrices> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.authority.v1.AuthorityProto.GasPrices getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_Authority_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_Authority_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_authority_v1_GasPrices_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_authority_v1_GasPrices_fieldAccessorTable;
 
@@ -45,12 +1723,12 @@ public final class AuthorityProto {
       "ed\"\212\001\n\tGasPrices\022}\n\007minimum\030\001 \003(\0132\034.cosm" +
       "os.base.v1beta1.DecCoinBE\310\336\037\000\362\336\037\016yaml:\"m" +
       "inimum\"\252\337\037+github.com/cosmos/cosmos-sdk/" +
-      "types.DecCoinsR\007minimumB\263\001\n\023com.em.autho" +
-      "rity.v1B\016AuthorityProtoP\001Z.github.com/e-" +
-      "money/em-ledger/x/authority/types\242\002\003EAX\252" +
-      "\002\017Em.Authority.V1\312\002\017Em\\Authority\\V1\342\002\033Em" +
-      "\\Authority\\V1\\GPBMetadata\352\002\021Em::Authorit" +
-      "y::V1b\006proto3"
+      "types.DecCoinsR\007minimumB\261\001\n\023com.em.autho" +
+      "rity.v1B\016AuthorityProtoZ.github.com/e-mo" +
+      "ney/em-ledger/x/authority/types\242\002\003EAX\252\002\017" +
+      "Em.Authority.V1\312\002\017Em\\Authority\\V1\342\002\033Em\\A" +
+      "uthority\\V1\\GPBMetadata\352\002\021Em::Authority:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

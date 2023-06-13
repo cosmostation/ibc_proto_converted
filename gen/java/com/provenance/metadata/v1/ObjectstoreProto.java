@@ -14,14 +14,1464 @@ public final class ObjectstoreProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ObjectStoreLocatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.ObjectStoreLocator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * account address the endpoint is owned by
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * account address the endpoint is owned by
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * locator endpoint uri
+     * </pre>
+     *
+     * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+     * @return The locatorUri.
+     */
+    java.lang.String getLocatorUri();
+    /**
+     * <pre>
+     * locator endpoint uri
+     * </pre>
+     *
+     * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+     * @return The bytes for locatorUri.
+     */
+    com.google.protobuf.ByteString
+        getLocatorUriBytes();
+
+    /**
+     * <pre>
+     * owners encryption key address
+     * </pre>
+     *
+     * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+     * @return The encryptionKey.
+     */
+    java.lang.String getEncryptionKey();
+    /**
+     * <pre>
+     * owners encryption key address
+     * </pre>
+     *
+     * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+     * @return The bytes for encryptionKey.
+     */
+    com.google.protobuf.ByteString
+        getEncryptionKeyBytes();
+  }
+  /**
+   * <pre>
+   * Defines an Locator object stored on chain, which represents a owner( blockchain address) associated with a endpoint
+   * uri for it's associated object store.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.ObjectStoreLocator}
+   */
+  public static final class ObjectStoreLocator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.ObjectStoreLocator)
+      ObjectStoreLocatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ObjectStoreLocator.newBuilder() to construct.
+    private ObjectStoreLocator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ObjectStoreLocator() {
+      owner_ = "";
+      locatorUri_ = "";
+      encryptionKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ObjectStoreLocator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_ObjectStoreLocator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_ObjectStoreLocator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.class, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * account address the endpoint is owned by
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account address the endpoint is owned by
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATOR_URI_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object locatorUri_ = "";
+    /**
+     * <pre>
+     * locator endpoint uri
+     * </pre>
+     *
+     * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+     * @return The locatorUri.
+     */
+    @java.lang.Override
+    public java.lang.String getLocatorUri() {
+      java.lang.Object ref = locatorUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        locatorUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * locator endpoint uri
+     * </pre>
+     *
+     * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+     * @return The bytes for locatorUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocatorUriBytes() {
+      java.lang.Object ref = locatorUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        locatorUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENCRYPTION_KEY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object encryptionKey_ = "";
+    /**
+     * <pre>
+     * owners encryption key address
+     * </pre>
+     *
+     * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+     * @return The encryptionKey.
+     */
+    @java.lang.Override
+    public java.lang.String getEncryptionKey() {
+      java.lang.Object ref = encryptionKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        encryptionKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owners encryption key address
+     * </pre>
+     *
+     * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+     * @return The bytes for encryptionKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEncryptionKeyBytes() {
+      java.lang.Object ref = encryptionKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        encryptionKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locatorUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, locatorUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encryptionKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, encryptionKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locatorUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, locatorUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encryptionKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, encryptionKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator other = (com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getLocatorUri()
+          .equals(other.getLocatorUri())) return false;
+      if (!getEncryptionKey()
+          .equals(other.getEncryptionKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + LOCATOR_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getLocatorUri().hashCode();
+      hash = (37 * hash) + ENCRYPTION_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getEncryptionKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Defines an Locator object stored on chain, which represents a owner( blockchain address) associated with a endpoint
+     * uri for it's associated object store.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.ObjectStoreLocator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.ObjectStoreLocator)
+        com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_ObjectStoreLocator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_ObjectStoreLocator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.class, com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        locatorUri_ = "";
+        encryptionKey_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_ObjectStoreLocator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator build() {
+        com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator buildPartial() {
+        com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator result = new com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.locatorUri_ = locatorUri_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.encryptionKey_ = encryptionKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator) {
+          return mergeFrom((com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator other) {
+        if (other == com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getLocatorUri().isEmpty()) {
+          locatorUri_ = other.locatorUri_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getEncryptionKey().isEmpty()) {
+          encryptionKey_ = other.encryptionKey_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                locatorUri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                encryptionKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * account address the endpoint is owned by
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address the endpoint is owned by
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account address the endpoint is owned by
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address the endpoint is owned by
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account address the endpoint is owned by
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object locatorUri_ = "";
+      /**
+       * <pre>
+       * locator endpoint uri
+       * </pre>
+       *
+       * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+       * @return The locatorUri.
+       */
+      public java.lang.String getLocatorUri() {
+        java.lang.Object ref = locatorUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          locatorUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * locator endpoint uri
+       * </pre>
+       *
+       * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+       * @return The bytes for locatorUri.
+       */
+      public com.google.protobuf.ByteString
+          getLocatorUriBytes() {
+        java.lang.Object ref = locatorUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          locatorUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * locator endpoint uri
+       * </pre>
+       *
+       * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+       * @param value The locatorUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocatorUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        locatorUri_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * locator endpoint uri
+       * </pre>
+       *
+       * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocatorUri() {
+        locatorUri_ = getDefaultInstance().getLocatorUri();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * locator endpoint uri
+       * </pre>
+       *
+       * <code>string locator_uri = 2 [json_name = "locatorUri"];</code>
+       * @param value The bytes for locatorUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocatorUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        locatorUri_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object encryptionKey_ = "";
+      /**
+       * <pre>
+       * owners encryption key address
+       * </pre>
+       *
+       * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+       * @return The encryptionKey.
+       */
+      public java.lang.String getEncryptionKey() {
+        java.lang.Object ref = encryptionKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          encryptionKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owners encryption key address
+       * </pre>
+       *
+       * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+       * @return The bytes for encryptionKey.
+       */
+      public com.google.protobuf.ByteString
+          getEncryptionKeyBytes() {
+        java.lang.Object ref = encryptionKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          encryptionKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owners encryption key address
+       * </pre>
+       *
+       * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+       * @param value The encryptionKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptionKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        encryptionKey_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owners encryption key address
+       * </pre>
+       *
+       * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncryptionKey() {
+        encryptionKey_ = getDefaultInstance().getEncryptionKey();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owners encryption key address
+       * </pre>
+       *
+       * <code>string encryption_key = 3 [json_name = "encryptionKey"];</code>
+       * @param value The bytes for encryptionKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncryptionKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        encryptionKey_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.ObjectStoreLocator)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.ObjectStoreLocator)
+    private static final com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator();
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ObjectStoreLocator>
+        PARSER = new com.google.protobuf.AbstractParser<ObjectStoreLocator>() {
+      @java.lang.Override
+      public ObjectStoreLocator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ObjectStoreLocator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ObjectStoreLocator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ObjectstoreProto.ObjectStoreLocator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OSLocatorParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.OSLocatorParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 max_uri_length = 1 [json_name = "maxUriLength", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "uint32", (.gogoproto.moretags) = "yaml:&#92;"max_uri_length&#92;""];</code>
+     * @return The maxUriLength.
+     */
+    int getMaxUriLength();
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the metadata-locator module methods.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.OSLocatorParams}
+   */
+  public static final class OSLocatorParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.OSLocatorParams)
+      OSLocatorParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OSLocatorParams.newBuilder() to construct.
+    private OSLocatorParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OSLocatorParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OSLocatorParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_OSLocatorParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_OSLocatorParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.class, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder.class);
+    }
+
+    public static final int MAX_URI_LENGTH_FIELD_NUMBER = 1;
+    private int maxUriLength_ = 0;
+    /**
+     * <code>uint32 max_uri_length = 1 [json_name = "maxUriLength", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "uint32", (.gogoproto.moretags) = "yaml:&#92;"max_uri_length&#92;""];</code>
+     * @return The maxUriLength.
+     */
+    @java.lang.Override
+    public int getMaxUriLength() {
+      return maxUriLength_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (maxUriLength_ != 0) {
+        output.writeUInt32(1, maxUriLength_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (maxUriLength_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, maxUriLength_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams other = (com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams) obj;
+
+      if (getMaxUriLength()
+          != other.getMaxUriLength()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAX_URI_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxUriLength();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the metadata-locator module methods.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.OSLocatorParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.OSLocatorParams)
+        com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_OSLocatorParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_OSLocatorParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.class, com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        maxUriLength_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ObjectstoreProto.internal_static_provenance_metadata_v1_OSLocatorParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams build() {
+        com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams buildPartial() {
+        com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams result = new com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.maxUriLength_ = maxUriLength_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams) {
+          return mergeFrom((com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams other) {
+        if (other == com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams.getDefaultInstance()) return this;
+        if (other.getMaxUriLength() != 0) {
+          setMaxUriLength(other.getMaxUriLength());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                maxUriLength_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int maxUriLength_ ;
+      /**
+       * <code>uint32 max_uri_length = 1 [json_name = "maxUriLength", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "uint32", (.gogoproto.moretags) = "yaml:&#92;"max_uri_length&#92;""];</code>
+       * @return The maxUriLength.
+       */
+      @java.lang.Override
+      public int getMaxUriLength() {
+        return maxUriLength_;
+      }
+      /**
+       * <code>uint32 max_uri_length = 1 [json_name = "maxUriLength", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "uint32", (.gogoproto.moretags) = "yaml:&#92;"max_uri_length&#92;""];</code>
+       * @param value The maxUriLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxUriLength(int value) {
+
+        maxUriLength_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 max_uri_length = 1 [json_name = "maxUriLength", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "uint32", (.gogoproto.moretags) = "yaml:&#92;"max_uri_length&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxUriLength() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maxUriLength_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.OSLocatorParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.OSLocatorParams)
+    private static final com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams();
+    }
+
+    public static com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OSLocatorParams>
+        PARSER = new com.google.protobuf.AbstractParser<OSLocatorParams>() {
+      @java.lang.Override
+      public OSLocatorParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OSLocatorParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OSLocatorParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ObjectstoreProto.OSLocatorParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_ObjectStoreLocator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_ObjectStoreLocator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_OSLocatorParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_OSLocatorParams_fieldAccessorTable;
 
@@ -41,7 +1491,7 @@ public final class ObjectstoreProto {
       "nKey\"`\n\017OSLocatorParams\022M\n\016max_uri_lengt" +
       "h\030\001 \001(\rB\'\310\336\037\000\332\336\037\006uint32\362\336\037\025yaml:\"max_uri" +
       "_length\"R\014maxUriLengthB\336\001\n\032com.provenanc" +
-      "e.metadata.v1B\020ObjectstoreProtoP\001Z4githu" +
+      "e.metadata.v1B\020ObjectstoreProtoP\000Z4githu" +
       "b.com/provenance-io/provenance/x/metadat" +
       "a/types\242\002\003PMX\252\002\026Provenance.Metadata.V1\312\002" +
       "\026Provenance\\Metadata\\V1\342\002\"Provenance\\Met" +

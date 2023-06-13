@@ -14,9 +14,1435 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.uibc.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.umee.uibc.v1.QuotaProto.Params getParams();
+    /**
+     * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.uibc.v1.QuotaProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getOutflowsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getOutflows(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getOutflowsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getOutflowsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getOutflowsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+     * </pre>
+     *
+     * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The totalOutflowSum.
+     */
+    java.lang.String getTotalOutflowSum();
+    /**
+     * <pre>
+     * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+     * </pre>
+     *
+     * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for totalOutflowSum.
+     */
+    com.google.protobuf.ByteString
+        getTotalOutflowSumBytes();
+
+    /**
+     * <pre>
+     * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the quotaExpires field is set.
+     */
+    boolean hasQuotaExpires();
+    /**
+     * <pre>
+     * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The quotaExpires.
+     */
+    com.google.protobuf.Timestamp getQuotaExpires();
+    /**
+     * <pre>
+     * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getQuotaExpiresOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the uibc module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code umee.uibc.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.uibc.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      outflows_ = java.util.Collections.emptyList();
+      totalOutflowSum_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.uibc.v1.GenesisProto.internal_static_umee_uibc_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.uibc.v1.GenesisProto.internal_static_umee_uibc_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.uibc.v1.GenesisProto.GenesisState.class, com.umee.uibc.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.umee.uibc.v1.QuotaProto.Params params_;
+    /**
+     * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.umee.uibc.v1.QuotaProto.Params getParams() {
+      return params_ == null ? com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.uibc.v1.QuotaProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int OUTFLOWS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> outflows_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getOutflowsList() {
+      return outflows_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getOutflowsOrBuilderList() {
+      return outflows_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getOutflowsCount() {
+      return outflows_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getOutflows(int index) {
+      return outflows_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getOutflowsOrBuilder(
+        int index) {
+      return outflows_.get(index);
+    }
+
+    public static final int TOTAL_OUTFLOW_SUM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalOutflowSum_ = "";
+    /**
+     * <pre>
+     * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+     * </pre>
+     *
+     * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The totalOutflowSum.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalOutflowSum() {
+      java.lang.Object ref = totalOutflowSum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalOutflowSum_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+     * </pre>
+     *
+     * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for totalOutflowSum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalOutflowSumBytes() {
+      java.lang.Object ref = totalOutflowSum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalOutflowSum_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTA_EXPIRES_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp quotaExpires_;
+    /**
+     * <pre>
+     * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the quotaExpires field is set.
+     */
+    @java.lang.Override
+    public boolean hasQuotaExpires() {
+      return quotaExpires_ != null;
+    }
+    /**
+     * <pre>
+     * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The quotaExpires.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getQuotaExpires() {
+      return quotaExpires_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : quotaExpires_;
+    }
+    /**
+     * <pre>
+     * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getQuotaExpiresOrBuilder() {
+      return quotaExpires_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : quotaExpires_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < outflows_.size(); i++) {
+        output.writeMessage(2, outflows_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalOutflowSum_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, totalOutflowSum_);
+      }
+      if (quotaExpires_ != null) {
+        output.writeMessage(4, getQuotaExpires());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < outflows_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, outflows_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalOutflowSum_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, totalOutflowSum_);
+      }
+      if (quotaExpires_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getQuotaExpires());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.uibc.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.umee.uibc.v1.GenesisProto.GenesisState other = (com.umee.uibc.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getOutflowsList()
+          .equals(other.getOutflowsList())) return false;
+      if (!getTotalOutflowSum()
+          .equals(other.getTotalOutflowSum())) return false;
+      if (hasQuotaExpires() != other.hasQuotaExpires()) return false;
+      if (hasQuotaExpires()) {
+        if (!getQuotaExpires()
+            .equals(other.getQuotaExpires())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getOutflowsCount() > 0) {
+        hash = (37 * hash) + OUTFLOWS_FIELD_NUMBER;
+        hash = (53 * hash) + getOutflowsList().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_OUTFLOW_SUM_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalOutflowSum().hashCode();
+      if (hasQuotaExpires()) {
+        hash = (37 * hash) + QUOTA_EXPIRES_FIELD_NUMBER;
+        hash = (53 * hash) + getQuotaExpires().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.uibc.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.uibc.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the uibc module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code umee.uibc.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.uibc.v1.GenesisState)
+        com.umee.uibc.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.uibc.v1.GenesisProto.internal_static_umee_uibc_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.uibc.v1.GenesisProto.internal_static_umee_uibc_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.uibc.v1.GenesisProto.GenesisState.class, com.umee.uibc.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.umee.uibc.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (outflowsBuilder_ == null) {
+          outflows_ = java.util.Collections.emptyList();
+        } else {
+          outflows_ = null;
+          outflowsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalOutflowSum_ = "";
+        quotaExpires_ = null;
+        if (quotaExpiresBuilder_ != null) {
+          quotaExpiresBuilder_.dispose();
+          quotaExpiresBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.uibc.v1.GenesisProto.internal_static_umee_uibc_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.uibc.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.umee.uibc.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.uibc.v1.GenesisProto.GenesisState build() {
+        com.umee.uibc.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.uibc.v1.GenesisProto.GenesisState buildPartial() {
+        com.umee.uibc.v1.GenesisProto.GenesisState result = new com.umee.uibc.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.uibc.v1.GenesisProto.GenesisState result) {
+        if (outflowsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            outflows_ = java.util.Collections.unmodifiableList(outflows_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.outflows_ = outflows_;
+        } else {
+          result.outflows_ = outflowsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.uibc.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalOutflowSum_ = totalOutflowSum_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.quotaExpires_ = quotaExpiresBuilder_ == null
+              ? quotaExpires_
+              : quotaExpiresBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.uibc.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.umee.uibc.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.uibc.v1.GenesisProto.GenesisState other) {
+        if (other == com.umee.uibc.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (outflowsBuilder_ == null) {
+          if (!other.outflows_.isEmpty()) {
+            if (outflows_.isEmpty()) {
+              outflows_ = other.outflows_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureOutflowsIsMutable();
+              outflows_.addAll(other.outflows_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outflows_.isEmpty()) {
+            if (outflowsBuilder_.isEmpty()) {
+              outflowsBuilder_.dispose();
+              outflowsBuilder_ = null;
+              outflows_ = other.outflows_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              outflowsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOutflowsFieldBuilder() : null;
+            } else {
+              outflowsBuilder_.addAllMessages(other.outflows_);
+            }
+          }
+        }
+        if (!other.getTotalOutflowSum().isEmpty()) {
+          totalOutflowSum_ = other.totalOutflowSum_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasQuotaExpires()) {
+          mergeQuotaExpires(other.getQuotaExpires());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (outflowsBuilder_ == null) {
+                  ensureOutflowsIsMutable();
+                  outflows_.add(m);
+                } else {
+                  outflowsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                totalOutflowSum_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getQuotaExpiresFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.uibc.v1.QuotaProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.uibc.v1.QuotaProto.Params, com.umee.uibc.v1.QuotaProto.Params.Builder, com.umee.uibc.v1.QuotaProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.umee.uibc.v1.QuotaProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.umee.uibc.v1.QuotaProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.umee.uibc.v1.QuotaProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.umee.uibc.v1.QuotaProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.uibc.v1.QuotaProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.uibc.v1.QuotaProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.umee.uibc.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.uibc.v1.QuotaProto.Params, com.umee.uibc.v1.QuotaProto.Params.Builder, com.umee.uibc.v1.QuotaProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.uibc.v1.QuotaProto.Params, com.umee.uibc.v1.QuotaProto.Params.Builder, com.umee.uibc.v1.QuotaProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> outflows_ =
+        java.util.Collections.emptyList();
+      private void ensureOutflowsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          outflows_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(outflows_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> outflowsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getOutflowsList() {
+        if (outflowsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outflows_);
+        } else {
+          return outflowsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getOutflowsCount() {
+        if (outflowsBuilder_ == null) {
+          return outflows_.size();
+        } else {
+          return outflowsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getOutflows(int index) {
+        if (outflowsBuilder_ == null) {
+          return outflows_.get(index);
+        } else {
+          return outflowsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setOutflows(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (outflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutflowsIsMutable();
+          outflows_.set(index, value);
+          onChanged();
+        } else {
+          outflowsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setOutflows(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (outflowsBuilder_ == null) {
+          ensureOutflowsIsMutable();
+          outflows_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outflowsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addOutflows(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (outflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutflowsIsMutable();
+          outflows_.add(value);
+          onChanged();
+        } else {
+          outflowsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addOutflows(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (outflowsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutflowsIsMutable();
+          outflows_.add(index, value);
+          onChanged();
+        } else {
+          outflowsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addOutflows(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (outflowsBuilder_ == null) {
+          ensureOutflowsIsMutable();
+          outflows_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outflowsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addOutflows(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (outflowsBuilder_ == null) {
+          ensureOutflowsIsMutable();
+          outflows_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outflowsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllOutflows(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (outflowsBuilder_ == null) {
+          ensureOutflowsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outflows_);
+          onChanged();
+        } else {
+          outflowsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearOutflows() {
+        if (outflowsBuilder_ == null) {
+          outflows_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          outflowsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeOutflows(int index) {
+        if (outflowsBuilder_ == null) {
+          ensureOutflowsIsMutable();
+          outflows_.remove(index);
+          onChanged();
+        } else {
+          outflowsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getOutflowsBuilder(
+          int index) {
+        return getOutflowsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getOutflowsOrBuilder(
+          int index) {
+        if (outflowsBuilder_ == null) {
+          return outflows_.get(index);  } else {
+          return outflowsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getOutflowsOrBuilderList() {
+        if (outflowsBuilder_ != null) {
+          return outflowsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outflows_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addOutflowsBuilder() {
+        return getOutflowsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addOutflowsBuilder(
+          int index) {
+        return getOutflowsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin outflows = 2 [json_name = "outflows", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getOutflowsBuilderList() {
+        return getOutflowsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getOutflowsFieldBuilder() {
+        if (outflowsBuilder_ == null) {
+          outflowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  outflows_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          outflows_ = null;
+        }
+        return outflowsBuilder_;
+      }
+
+      private java.lang.Object totalOutflowSum_ = "";
+      /**
+       * <pre>
+       * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+       * </pre>
+       *
+       * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The totalOutflowSum.
+       */
+      public java.lang.String getTotalOutflowSum() {
+        java.lang.Object ref = totalOutflowSum_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalOutflowSum_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+       * </pre>
+       *
+       * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for totalOutflowSum.
+       */
+      public com.google.protobuf.ByteString
+          getTotalOutflowSumBytes() {
+        java.lang.Object ref = totalOutflowSum_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalOutflowSum_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+       * </pre>
+       *
+       * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The totalOutflowSum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalOutflowSum(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalOutflowSum_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+       * </pre>
+       *
+       * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalOutflowSum() {
+        totalOutflowSum_ = getDefaultInstance().getTotalOutflowSum();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_outflow_sum defines the total outflow sum of ibc-transfer in USD.
+       * </pre>
+       *
+       * <code>string total_outflow_sum = 3 [json_name = "totalOutflowSum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for totalOutflowSum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalOutflowSumBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalOutflowSum_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp quotaExpires_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> quotaExpiresBuilder_;
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the quotaExpires field is set.
+       */
+      public boolean hasQuotaExpires() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The quotaExpires.
+       */
+      public com.google.protobuf.Timestamp getQuotaExpires() {
+        if (quotaExpiresBuilder_ == null) {
+          return quotaExpires_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : quotaExpires_;
+        } else {
+          return quotaExpiresBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setQuotaExpires(com.google.protobuf.Timestamp value) {
+        if (quotaExpiresBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          quotaExpires_ = value;
+        } else {
+          quotaExpiresBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setQuotaExpires(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (quotaExpiresBuilder_ == null) {
+          quotaExpires_ = builderForValue.build();
+        } else {
+          quotaExpiresBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeQuotaExpires(com.google.protobuf.Timestamp value) {
+        if (quotaExpiresBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            quotaExpires_ != null &&
+            quotaExpires_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getQuotaExpiresBuilder().mergeFrom(value);
+          } else {
+            quotaExpires_ = value;
+          }
+        } else {
+          quotaExpiresBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearQuotaExpires() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        quotaExpires_ = null;
+        if (quotaExpiresBuilder_ != null) {
+          quotaExpiresBuilder_.dispose();
+          quotaExpiresBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getQuotaExpiresBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getQuotaExpiresFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getQuotaExpiresOrBuilder() {
+        if (quotaExpiresBuilder_ != null) {
+          return quotaExpiresBuilder_.getMessageOrBuilder();
+        } else {
+          return quotaExpires_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : quotaExpires_;
+        }
+      }
+      /**
+       * <pre>
+       * quota_expires defines quota expire time (as unix timestamp) for ibc-transfer denom.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp quota_expires = 4 [json_name = "quotaExpires", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_expires&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getQuotaExpiresFieldBuilder() {
+        if (quotaExpiresBuilder_ == null) {
+          quotaExpiresBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getQuotaExpires(),
+                  getParentForChildren(),
+                  isClean());
+          quotaExpires_ = null;
+        }
+        return quotaExpiresBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.uibc.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.uibc.v1.GenesisState)
+    private static final com.umee.uibc.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.uibc.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.umee.uibc.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.uibc.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_uibc_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_uibc_v1_GenesisState_fieldAccessorTable;
 
@@ -42,12 +1468,12 @@ public final class GenesisProto {
       "\ncosmos.DecR\017totalOutflowSum\022}\n\rquota_ex" +
       "pires\030\004 \001(\0132\032.google.protobuf.TimestampB" +
       "<\310\336\037\000\352\336\037\030quota_duration,omitempty\362\336\037\024yam" +
-      "l:\"quota_expires\"\220\337\037\001R\014quotaExpiresB\236\001\n\020" +
-      "com.umee.uibc.v1B\014GenesisProtoP\001Z&github" +
-      ".com/umee-network/umee/v5/x/uibc\242\002\003UUX\252\002" +
-      "\014Umee.Uibc.V1\312\002\014Umee\\Uibc\\V1\342\002\030Umee\\Uibc" +
-      "\\V1\\GPBMetadata\352\002\016Umee::Uibc::V1\310\341\036\000b\006pr" +
-      "oto3"
+      "l:\"quota_expires\"\220\337\037\001R\014quotaExpiresB\234\001\n\020" +
+      "com.umee.uibc.v1B\014GenesisProtoZ&github.c" +
+      "om/umee-network/umee/v5/x/uibc\242\002\003UUX\252\002\014U" +
+      "mee.Uibc.V1\312\002\014Umee\\Uibc\\V1\342\002\030Umee\\Uibc\\V" +
+      "1\\GPBMetadata\352\002\016Umee::Uibc::V1\310\341\036\000b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

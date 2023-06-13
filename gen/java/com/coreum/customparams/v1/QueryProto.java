@@ -14,14 +14,1027 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryStakingParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.customparams.v1.QueryStakingParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryStakingParamsRequest defines the request type for querying x/customparams staking parameters.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.customparams.v1.QueryStakingParamsRequest}
+   */
+  public static final class QueryStakingParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.customparams.v1.QueryStakingParamsRequest)
+      QueryStakingParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakingParamsRequest.newBuilder() to construct.
+    private QueryStakingParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakingParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakingParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.class, com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest other = (com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStakingParamsRequest defines the request type for querying x/customparams staking parameters.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.customparams.v1.QueryStakingParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.customparams.v1.QueryStakingParamsRequest)
+        com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.class, com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.Builder.class);
+      }
+
+      // Construct using com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest getDefaultInstanceForType() {
+        return com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest build() {
+        com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest buildPartial() {
+        com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest result = new com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest) {
+          return mergeFrom((com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest other) {
+        if (other == com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.customparams.v1.QueryStakingParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.customparams.v1.QueryStakingParamsRequest)
+    private static final com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest();
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakingParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakingParamsRequest>() {
+      @java.lang.Override
+      public QueryStakingParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakingParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakingParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.customparams.v1.QueryProto.QueryStakingParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStakingParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.customparams.v1.QueryStakingParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.coreum.customparams.v1.ParamsProto.StakingParams getParams();
+    /**
+     * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryStakingParamsResponse defines the response type for querying x/customparams staking parameters.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.customparams.v1.QueryStakingParamsResponse}
+   */
+  public static final class QueryStakingParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.customparams.v1.QueryStakingParamsResponse)
+      QueryStakingParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStakingParamsResponse.newBuilder() to construct.
+    private QueryStakingParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStakingParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStakingParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.class, com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.coreum.customparams.v1.ParamsProto.StakingParams params_;
+    /**
+     * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.coreum.customparams.v1.ParamsProto.StakingParams getParams() {
+      return params_ == null ? com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse other = (com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStakingParamsResponse defines the response type for querying x/customparams staking parameters.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.customparams.v1.QueryStakingParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.customparams.v1.QueryStakingParamsResponse)
+        com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.class, com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.Builder.class);
+      }
+
+      // Construct using com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.customparams.v1.QueryProto.internal_static_coreum_customparams_v1_QueryStakingParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse getDefaultInstanceForType() {
+        return com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse build() {
+        com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse buildPartial() {
+        com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse result = new com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse) {
+          return mergeFrom((com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse other) {
+        if (other == com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.coreum.customparams.v1.ParamsProto.StakingParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.customparams.v1.ParamsProto.StakingParams, com.coreum.customparams.v1.ParamsProto.StakingParams.Builder, com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.coreum.customparams.v1.ParamsProto.StakingParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.coreum.customparams.v1.ParamsProto.StakingParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.coreum.customparams.v1.ParamsProto.StakingParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.coreum.customparams.v1.ParamsProto.StakingParams value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.customparams.v1.ParamsProto.StakingParams.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.coreum.customparams.v1.ParamsProto.StakingParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.coreum.customparams.v1.StakingParams params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.customparams.v1.ParamsProto.StakingParams, com.coreum.customparams.v1.ParamsProto.StakingParams.Builder, com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.coreum.customparams.v1.ParamsProto.StakingParams, com.coreum.customparams.v1.ParamsProto.StakingParams.Builder, com.coreum.customparams.v1.ParamsProto.StakingParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.customparams.v1.QueryStakingParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.customparams.v1.QueryStakingParamsResponse)
+    private static final com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse();
+    }
+
+    public static com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStakingParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStakingParamsResponse>() {
+      @java.lang.Override
+      public QueryStakingParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStakingParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStakingParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.customparams.v1.QueryProto.QueryStakingParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_customparams_v1_QueryStakingParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_customparams_v1_QueryStakingParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_customparams_v1_QueryStakingParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_customparams_v1_QueryStakingParamsResponse_fieldAccessorTable;
 
@@ -45,12 +1058,12 @@ public final class QueryProto {
       "v1.QueryStakingParamsRequest\0322.coreum.cu" +
       "stomparams.v1.QueryStakingParamsResponse" +
       "\"-\202\323\344\223\002\'\022%/coreum/customparams/v1/stakin" +
-      "gparamsB\333\001\n\032com.coreum.customparams.v1B\n" +
-      "QueryProtoP\001Z7github.com/CoreumFoundatio" +
-      "n/coreum/x/customparams/types\242\002\003CCX\252\002\026Co" +
-      "reum.Customparams.V1\312\002\026Coreum\\Custompara" +
-      "ms\\V1\342\002\"Coreum\\Customparams\\V1\\GPBMetada" +
-      "ta\352\002\030Coreum::Customparams::V1b\006proto3"
+      "gparamsB\331\001\n\032com.coreum.customparams.v1B\n" +
+      "QueryProtoZ7github.com/CoreumFoundation/" +
+      "coreum/x/customparams/types\242\002\003CCX\252\002\026Core" +
+      "um.Customparams.V1\312\002\026Coreum\\Customparams" +
+      "\\V1\342\002\"Coreum\\Customparams\\V1\\GPBMetadata" +
+      "\352\002\030Coreum::Customparams::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

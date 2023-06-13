@@ -14,24 +14,2598 @@ public final class MessagesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgRequestRedemptionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgRequestRedemption)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return The value.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getValue();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder();
+
+    /**
+     * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The destinationAddress.
+     */
+    java.lang.String getDestinationAddress();
+    /**
+     * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for destinationAddress.
+     */
+    com.google.protobuf.ByteString
+        getDestinationAddressBytes();
+
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The fromAddress.
+     */
+    java.lang.String getFromAddress();
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for fromAddress.
+     */
+    com.google.protobuf.ByteString
+        getFromAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgRequestRedemption represents a message type to request a burn of qAssets
+   * for native assets.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgRequestRedemption}
+   */
+  public static final class MsgRequestRedemption extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgRequestRedemption)
+      MsgRequestRedemptionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRequestRedemption.newBuilder() to construct.
+    private MsgRequestRedemption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRequestRedemption() {
+      destinationAddress_ = "";
+      fromAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRequestRedemption();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.Builder.class);
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin value_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getValue() {
+      return value_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder() {
+      return value_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+    }
+
+    public static final int DESTINATION_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object destinationAddress_ = "";
+    /**
+     * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The destinationAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationAddress() {
+      java.lang.Object ref = destinationAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for destinationAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationAddressBytes() {
+      java.lang.Object ref = destinationAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fromAddress_ = "";
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The fromAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFromAddress() {
+      java.lang.Object ref = fromAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for fromAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromAddressBytes() {
+      java.lang.Object ref = fromAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (value_ != null) {
+        output.writeMessage(1, getValue());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getValue());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption other = (com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption) obj;
+
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!getDestinationAddress()
+          .equals(other.getDestinationAddress())) return false;
+      if (!getFromAddress()
+          .equals(other.getFromAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (37 * hash) + DESTINATION_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationAddress().hashCode();
+      hash = (37 * hash) + FROM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFromAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRequestRedemption represents a message type to request a burn of qAssets
+     * for native assets.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgRequestRedemption}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgRequestRedemption)
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
+          valueBuilder_ = null;
+        }
+        destinationAddress_ = "";
+        fromAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption build() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption buildPartial() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption result = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = valueBuilder_ == null
+              ? value_
+              : valueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.destinationAddress_ = destinationAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.fromAddress_ = fromAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption other) {
+        if (other == com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        if (!other.getDestinationAddress().isEmpty()) {
+          destinationAddress_ = other.destinationAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getFromAddress().isEmpty()) {
+          fromAddress_ = other.fromAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                destinationAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                fromAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin value_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> valueBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       * @return The value.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder setValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder setValue(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder mergeValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            value_ != null &&
+            value_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getValueBuilder().mergeFrom(value);
+          } else {
+            value_ = value;
+          }
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
+          valueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getValueBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 1 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coin&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+
+      private java.lang.Object destinationAddress_ = "";
+      /**
+       * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The destinationAddress.
+       */
+      public java.lang.String getDestinationAddress() {
+        java.lang.Object ref = destinationAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for destinationAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationAddressBytes() {
+        java.lang.Object ref = destinationAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The destinationAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        destinationAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationAddress() {
+        destinationAddress_ = getDefaultInstance().getDestinationAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination_address = 2 [json_name = "destinationAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for destinationAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        destinationAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromAddress_ = "";
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The fromAddress.
+       */
+      public java.lang.String getFromAddress() {
+        java.lang.Object ref = fromAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for fromAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFromAddressBytes() {
+        java.lang.Object ref = fromAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The fromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fromAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromAddress() {
+        fromAddress_ = getDefaultInstance().getFromAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for fromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fromAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgRequestRedemption)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgRequestRedemption)
+    private static final com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRequestRedemption>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRequestRedemption>() {
+      @java.lang.Override
+      public MsgRequestRedemption parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRequestRedemption> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRequestRedemption> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemption getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSignalIntentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgSignalIntent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+     * @return The intents.
+     */
+    java.lang.String getIntents();
+    /**
+     * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+     * @return The bytes for intents.
+     */
+    com.google.protobuf.ByteString
+        getIntentsBytes();
+
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The fromAddress.
+     */
+    java.lang.String getFromAddress();
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for fromAddress.
+     */
+    com.google.protobuf.ByteString
+        getFromAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgSignalIntent represents a message type for signalling voting intent for
+   * one or more validators.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgSignalIntent}
+   */
+  public static final class MsgSignalIntent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgSignalIntent)
+      MsgSignalIntentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSignalIntent.newBuilder() to construct.
+    private MsgSignalIntent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSignalIntent() {
+      chainId_ = "";
+      intents_ = "";
+      fromAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSignalIntent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.Builder.class);
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INTENTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object intents_ = "";
+    /**
+     * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+     * @return The intents.
+     */
+    @java.lang.Override
+    public java.lang.String getIntents() {
+      java.lang.Object ref = intents_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        intents_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+     * @return The bytes for intents.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIntentsBytes() {
+      java.lang.Object ref = intents_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        intents_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fromAddress_ = "";
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The fromAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFromAddress() {
+      java.lang.Object ref = fromAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for fromAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromAddressBytes() {
+      java.lang.Object ref = fromAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(intents_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, intents_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(intents_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, intents_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent other = (com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent) obj;
+
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getIntents()
+          .equals(other.getIntents())) return false;
+      if (!getFromAddress()
+          .equals(other.getFromAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + INTENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getIntents().hashCode();
+      hash = (37 * hash) + FROM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFromAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSignalIntent represents a message type for signalling voting intent for
+     * one or more validators.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgSignalIntent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgSignalIntent)
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = "";
+        intents_ = "";
+        fromAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent build() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent buildPartial() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent result = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.intents_ = intents_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.fromAddress_ = fromAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent other) {
+        if (other == com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent.getDefaultInstance()) return this;
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIntents().isEmpty()) {
+          intents_ = other.intents_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getFromAddress().isEmpty()) {
+          fromAddress_ = other.fromAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                intents_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                fromAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 1 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object intents_ = "";
+      /**
+       * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+       * @return The intents.
+       */
+      public java.lang.String getIntents() {
+        java.lang.Object ref = intents_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          intents_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+       * @return The bytes for intents.
+       */
+      public com.google.protobuf.ByteString
+          getIntentsBytes() {
+        java.lang.Object ref = intents_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          intents_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+       * @param value The intents to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIntents(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        intents_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIntents() {
+        intents_ = getDefaultInstance().getIntents();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string intents = 2 [json_name = "intents", (.gogoproto.moretags) = "yaml:&#92;"intents&#92;""];</code>
+       * @param value The bytes for intents to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIntentsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        intents_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromAddress_ = "";
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The fromAddress.
+       */
+      public java.lang.String getFromAddress() {
+        java.lang.Object ref = fromAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for fromAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFromAddressBytes() {
+        java.lang.Object ref = fromAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The fromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fromAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromAddress() {
+        fromAddress_ = getDefaultInstance().getFromAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string from_address = 3 [json_name = "fromAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for fromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fromAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgSignalIntent)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgSignalIntent)
+    private static final com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSignalIntent>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSignalIntent>() {
+      @java.lang.Override
+      public MsgSignalIntent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSignalIntent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSignalIntent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRequestRedemptionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRequestRedemptionResponse defines the MsgRequestRedemption response type.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse}
+   */
+  public static final class MsgRequestRedemptionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse)
+      MsgRequestRedemptionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRequestRedemptionResponse.newBuilder() to construct.
+    private MsgRequestRedemptionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRequestRedemptionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRequestRedemptionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse other = (com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRequestRedemptionResponse defines the MsgRequestRedemption response type.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse)
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse build() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse buildPartial() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse result = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse other) {
+        if (other == com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgRequestRedemptionResponse)
+    private static final com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRequestRedemptionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRequestRedemptionResponse>() {
+      @java.lang.Override
+      public MsgRequestRedemptionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRequestRedemptionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRequestRedemptionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.MessagesProto.MsgRequestRedemptionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSignalIntentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgSignalIntentResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSignalIntentResponse defines the MsgSignalIntent response type.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgSignalIntentResponse}
+   */
+  public static final class MsgSignalIntentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgSignalIntentResponse)
+      MsgSignalIntentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSignalIntentResponse.newBuilder() to construct.
+    private MsgSignalIntentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSignalIntentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSignalIntentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse other = (com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSignalIntentResponse defines the MsgSignalIntent response type.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgSignalIntentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgSignalIntentResponse)
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.class, com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse build() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse buildPartial() {
+        com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse result = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse other) {
+        if (other == com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgSignalIntentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgSignalIntentResponse)
+    private static final com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSignalIntentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSignalIntentResponse>() {
+      @java.lang.Override
+      public MsgSignalIntentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSignalIntentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSignalIntentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.MessagesProto.MsgSignalIntentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemption_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgSignalIntent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgRequestRedemptionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgSignalIntentResponse_fieldAccessorTable;
 
@@ -81,14 +2655,14 @@ public final class MessagesProto {
       "ksilver.interchainstaking.v1.MsgGovReope" +
       "nChannelResponse\">\202\323\344\223\0028\"3/quicksilver/t" +
       "x/v1/interchainstaking/reopen_channel:\001*" +
-      "B\231\002\n$com.quicksilver.interchainstaking.v" +
-      "1B\rMessagesProtoP\001Z@github.com/ingenuity" +
-      "-build/quicksilver/x/interchainstaking/t" +
-      "ypes\242\002\003QIX\252\002 Quicksilver.Interchainstaki" +
-      "ng.V1\312\002 Quicksilver\\Interchainstaking\\V1" +
-      "\342\002,Quicksilver\\Interchainstaking\\V1\\GPBM" +
-      "etadata\352\002\"Quicksilver::Interchainstaking" +
-      "::V1b\006proto3"
+      "B\227\002\n$com.quicksilver.interchainstaking.v" +
+      "1B\rMessagesProtoZ@github.com/ingenuity-b" +
+      "uild/quicksilver/x/interchainstaking/typ" +
+      "es\242\002\003QIX\252\002 Quicksilver.Interchainstaking" +
+      ".V1\312\002 Quicksilver\\Interchainstaking\\V1\342\002" +
+      ",Quicksilver\\Interchainstaking\\V1\\GPBMet" +
+      "adata\352\002\"Quicksilver::Interchainstaking::" +
+      "V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

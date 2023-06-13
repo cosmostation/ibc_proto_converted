@@ -33,14 +33,14 @@ public final class ServiceProto {
       "plits.queries.splits.QueryRequest\0328.asse" +
       "tmantle.modules.splits.queries.splits.Qu" +
       "eryResponse\"%\202\323\344\223\002\037\022\035/mantle/splits/v1be" +
-      "ta1/splitsB\207\002\n-com.assetmantle.modules.s" +
-      "plits.queries.splitsB\014ServiceProtoP\001\242\002\005A" +
-      "MSQS\252\002)Assetmantle.Modules.Splits.Querie" +
-      "s.Splits\312\002)Assetmantle\\Modules\\Splits\\Qu" +
-      "eries\\Splits\342\0025Assetmantle\\Modules\\Split" +
-      "s\\Queries\\Splits\\GPBMetadata\352\002-Assetmant" +
-      "le::Modules::Splits::Queries::Splitsb\006pr" +
-      "oto3"
+      "ta1/splitsB\205\002\n-com.assetmantle.modules.s" +
+      "plits.queries.splitsB\014ServiceProto\242\002\005AMS" +
+      "QS\252\002)Assetmantle.Modules.Splits.Queries." +
+      "Splits\312\002)Assetmantle\\Modules\\Splits\\Quer" +
+      "ies\\Splits\342\0025Assetmantle\\Modules\\Splits\\" +
+      "Queries\\Splits\\GPBMetadata\352\002-Assetmantle" +
+      "::Modules::Splits::Queries::Splitsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,1326 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:passage3d.claim.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool airdrop_enabled = 1 [json_name = "airdropEnabled"];</code>
+     * @return The airdropEnabled.
+     */
+    boolean getAirdropEnabled();
+
+    /**
+     * <pre>
+     * airdrop starting time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the airdropStartTime field is set.
+     */
+    boolean hasAirdropStartTime();
+    /**
+     * <pre>
+     * airdrop starting time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The airdropStartTime.
+     */
+    com.google.protobuf.Timestamp getAirdropStartTime();
+    /**
+     * <pre>
+     * airdrop starting time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getAirdropStartTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationUntilDecay field is set.
+     */
+    boolean hasDurationUntilDecay();
+    /**
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The durationUntilDecay.
+     */
+    com.google.protobuf.Duration getDurationUntilDecay();
+    /**
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationUntilDecayOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationOfDecay field is set.
+     */
+    boolean hasDurationOfDecay();
+    /**
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The durationOfDecay.
+     */
+    com.google.protobuf.Duration getDurationOfDecay();
+    /**
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOfDecayOrBuilder();
+
+    /**
+     * <pre>
+     * denom of claimable asset
+     * </pre>
+     *
+     * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+     * @return The claimDenom.
+     */
+    java.lang.String getClaimDenom();
+    /**
+     * <pre>
+     * denom of claimable asset
+     * </pre>
+     *
+     * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+     * @return The bytes for claimDenom.
+     */
+    com.google.protobuf.ByteString
+        getClaimDenomBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the claim module's parameters.
+   * </pre>
+   *
+   * Protobuf type {@code passage3d.claim.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:passage3d.claim.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      claimDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passage3d.claim.v1beta1.ParamsProto.internal_static_passage3d_claim_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passage3d.claim.v1beta1.ParamsProto.internal_static_passage3d_claim_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passage3d.claim.v1beta1.ParamsProto.Params.class, com.passage3d.claim.v1beta1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int AIRDROP_ENABLED_FIELD_NUMBER = 1;
+    private boolean airdropEnabled_ = false;
+    /**
+     * <code>bool airdrop_enabled = 1 [json_name = "airdropEnabled"];</code>
+     * @return The airdropEnabled.
+     */
+    @java.lang.Override
+    public boolean getAirdropEnabled() {
+      return airdropEnabled_;
+    }
+
+    public static final int AIRDROP_START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp airdropStartTime_;
+    /**
+     * <pre>
+     * airdrop starting time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the airdropStartTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAirdropStartTime() {
+      return airdropStartTime_ != null;
+    }
+    /**
+     * <pre>
+     * airdrop starting time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The airdropStartTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getAirdropStartTime() {
+      return airdropStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+    }
+    /**
+     * <pre>
+     * airdrop starting time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getAirdropStartTimeOrBuilder() {
+      return airdropStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+    }
+
+    public static final int DURATION_UNTIL_DECAY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration durationUntilDecay_;
+    /**
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationUntilDecay field is set.
+     */
+    @java.lang.Override
+    public boolean hasDurationUntilDecay() {
+      return durationUntilDecay_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The durationUntilDecay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDurationUntilDecay() {
+      return durationUntilDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationUntilDecayOrBuilder() {
+      return durationUntilDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+    }
+
+    public static final int DURATION_OF_DECAY_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration durationOfDecay_;
+    /**
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the durationOfDecay field is set.
+     */
+    @java.lang.Override
+    public boolean hasDurationOfDecay() {
+      return durationOfDecay_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The durationOfDecay.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDurationOfDecay() {
+      return durationOfDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOfDecayOrBuilder() {
+      return durationOfDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+    }
+
+    public static final int CLAIM_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimDenom_ = "";
+    /**
+     * <pre>
+     * denom of claimable asset
+     * </pre>
+     *
+     * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+     * @return The claimDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimDenom() {
+      java.lang.Object ref = claimDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom of claimable asset
+     * </pre>
+     *
+     * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+     * @return The bytes for claimDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimDenomBytes() {
+      java.lang.Object ref = claimDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (airdropEnabled_ != false) {
+        output.writeBool(1, airdropEnabled_);
+      }
+      if (airdropStartTime_ != null) {
+        output.writeMessage(2, getAirdropStartTime());
+      }
+      if (durationUntilDecay_ != null) {
+        output.writeMessage(3, getDurationUntilDecay());
+      }
+      if (durationOfDecay_ != null) {
+        output.writeMessage(4, getDurationOfDecay());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, claimDenom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (airdropEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, airdropEnabled_);
+      }
+      if (airdropStartTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAirdropStartTime());
+      }
+      if (durationUntilDecay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDurationUntilDecay());
+      }
+      if (durationOfDecay_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDurationOfDecay());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, claimDenom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passage3d.claim.v1beta1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.passage3d.claim.v1beta1.ParamsProto.Params other = (com.passage3d.claim.v1beta1.ParamsProto.Params) obj;
+
+      if (getAirdropEnabled()
+          != other.getAirdropEnabled()) return false;
+      if (hasAirdropStartTime() != other.hasAirdropStartTime()) return false;
+      if (hasAirdropStartTime()) {
+        if (!getAirdropStartTime()
+            .equals(other.getAirdropStartTime())) return false;
+      }
+      if (hasDurationUntilDecay() != other.hasDurationUntilDecay()) return false;
+      if (hasDurationUntilDecay()) {
+        if (!getDurationUntilDecay()
+            .equals(other.getDurationUntilDecay())) return false;
+      }
+      if (hasDurationOfDecay() != other.hasDurationOfDecay()) return false;
+      if (hasDurationOfDecay()) {
+        if (!getDurationOfDecay()
+            .equals(other.getDurationOfDecay())) return false;
+      }
+      if (!getClaimDenom()
+          .equals(other.getClaimDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AIRDROP_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAirdropEnabled());
+      if (hasAirdropStartTime()) {
+        hash = (37 * hash) + AIRDROP_START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getAirdropStartTime().hashCode();
+      }
+      if (hasDurationUntilDecay()) {
+        hash = (37 * hash) + DURATION_UNTIL_DECAY_FIELD_NUMBER;
+        hash = (53 * hash) + getDurationUntilDecay().hashCode();
+      }
+      if (hasDurationOfDecay()) {
+        hash = (37 * hash) + DURATION_OF_DECAY_FIELD_NUMBER;
+        hash = (53 * hash) + getDurationOfDecay().hashCode();
+      }
+      hash = (37 * hash) + CLAIM_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passage3d.claim.v1beta1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the claim module's parameters.
+     * </pre>
+     *
+     * Protobuf type {@code passage3d.claim.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:passage3d.claim.v1beta1.Params)
+        com.passage3d.claim.v1beta1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passage3d.claim.v1beta1.ParamsProto.internal_static_passage3d_claim_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passage3d.claim.v1beta1.ParamsProto.internal_static_passage3d_claim_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passage3d.claim.v1beta1.ParamsProto.Params.class, com.passage3d.claim.v1beta1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.passage3d.claim.v1beta1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        airdropEnabled_ = false;
+        airdropStartTime_ = null;
+        if (airdropStartTimeBuilder_ != null) {
+          airdropStartTimeBuilder_.dispose();
+          airdropStartTimeBuilder_ = null;
+        }
+        durationUntilDecay_ = null;
+        if (durationUntilDecayBuilder_ != null) {
+          durationUntilDecayBuilder_.dispose();
+          durationUntilDecayBuilder_ = null;
+        }
+        durationOfDecay_ = null;
+        if (durationOfDecayBuilder_ != null) {
+          durationOfDecayBuilder_.dispose();
+          durationOfDecayBuilder_ = null;
+        }
+        claimDenom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passage3d.claim.v1beta1.ParamsProto.internal_static_passage3d_claim_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.ParamsProto.Params build() {
+        com.passage3d.claim.v1beta1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passage3d.claim.v1beta1.ParamsProto.Params buildPartial() {
+        com.passage3d.claim.v1beta1.ParamsProto.Params result = new com.passage3d.claim.v1beta1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.passage3d.claim.v1beta1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.airdropEnabled_ = airdropEnabled_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.airdropStartTime_ = airdropStartTimeBuilder_ == null
+              ? airdropStartTime_
+              : airdropStartTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.durationUntilDecay_ = durationUntilDecayBuilder_ == null
+              ? durationUntilDecay_
+              : durationUntilDecayBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.durationOfDecay_ = durationOfDecayBuilder_ == null
+              ? durationOfDecay_
+              : durationOfDecayBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.claimDenom_ = claimDenom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passage3d.claim.v1beta1.ParamsProto.Params) {
+          return mergeFrom((com.passage3d.claim.v1beta1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passage3d.claim.v1beta1.ParamsProto.Params other) {
+        if (other == com.passage3d.claim.v1beta1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.getAirdropEnabled() != false) {
+          setAirdropEnabled(other.getAirdropEnabled());
+        }
+        if (other.hasAirdropStartTime()) {
+          mergeAirdropStartTime(other.getAirdropStartTime());
+        }
+        if (other.hasDurationUntilDecay()) {
+          mergeDurationUntilDecay(other.getDurationUntilDecay());
+        }
+        if (other.hasDurationOfDecay()) {
+          mergeDurationOfDecay(other.getDurationOfDecay());
+        }
+        if (!other.getClaimDenom().isEmpty()) {
+          claimDenom_ = other.claimDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                airdropEnabled_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getAirdropStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationUntilDecayFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getDurationOfDecayFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                claimDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean airdropEnabled_ ;
+      /**
+       * <code>bool airdrop_enabled = 1 [json_name = "airdropEnabled"];</code>
+       * @return The airdropEnabled.
+       */
+      @java.lang.Override
+      public boolean getAirdropEnabled() {
+        return airdropEnabled_;
+      }
+      /**
+       * <code>bool airdrop_enabled = 1 [json_name = "airdropEnabled"];</code>
+       * @param value The airdropEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAirdropEnabled(boolean value) {
+
+        airdropEnabled_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool airdrop_enabled = 1 [json_name = "airdropEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAirdropEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        airdropEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp airdropStartTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> airdropStartTimeBuilder_;
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the airdropStartTime field is set.
+       */
+      public boolean hasAirdropStartTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The airdropStartTime.
+       */
+      public com.google.protobuf.Timestamp getAirdropStartTime() {
+        if (airdropStartTimeBuilder_ == null) {
+          return airdropStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+        } else {
+          return airdropStartTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setAirdropStartTime(com.google.protobuf.Timestamp value) {
+        if (airdropStartTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          airdropStartTime_ = value;
+        } else {
+          airdropStartTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setAirdropStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (airdropStartTimeBuilder_ == null) {
+          airdropStartTime_ = builderForValue.build();
+        } else {
+          airdropStartTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeAirdropStartTime(com.google.protobuf.Timestamp value) {
+        if (airdropStartTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            airdropStartTime_ != null &&
+            airdropStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getAirdropStartTimeBuilder().mergeFrom(value);
+          } else {
+            airdropStartTime_ = value;
+          }
+        } else {
+          airdropStartTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearAirdropStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        airdropStartTime_ = null;
+        if (airdropStartTimeBuilder_ != null) {
+          airdropStartTimeBuilder_.dispose();
+          airdropStartTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getAirdropStartTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAirdropStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getAirdropStartTimeOrBuilder() {
+        if (airdropStartTimeBuilder_ != null) {
+          return airdropStartTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return airdropStartTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : airdropStartTime_;
+        }
+      }
+      /**
+       * <pre>
+       * airdrop starting time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp airdrop_start_time = 2 [json_name = "airdropStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"airdrop_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getAirdropStartTimeFieldBuilder() {
+        if (airdropStartTimeBuilder_ == null) {
+          airdropStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getAirdropStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          airdropStartTime_ = null;
+        }
+        return airdropStartTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration durationUntilDecay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationUntilDecayBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the durationUntilDecay field is set.
+       */
+      public boolean hasDurationUntilDecay() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The durationUntilDecay.
+       */
+      public com.google.protobuf.Duration getDurationUntilDecay() {
+        if (durationUntilDecayBuilder_ == null) {
+          return durationUntilDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+        } else {
+          return durationUntilDecayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationUntilDecay(com.google.protobuf.Duration value) {
+        if (durationUntilDecayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          durationUntilDecay_ = value;
+        } else {
+          durationUntilDecayBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationUntilDecay(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationUntilDecayBuilder_ == null) {
+          durationUntilDecay_ = builderForValue.build();
+        } else {
+          durationUntilDecayBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDurationUntilDecay(com.google.protobuf.Duration value) {
+        if (durationUntilDecayBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            durationUntilDecay_ != null &&
+            durationUntilDecay_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationUntilDecayBuilder().mergeFrom(value);
+          } else {
+            durationUntilDecay_ = value;
+          }
+        } else {
+          durationUntilDecayBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDurationUntilDecay() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        durationUntilDecay_ = null;
+        if (durationUntilDecayBuilder_ != null) {
+          durationUntilDecayBuilder_.dispose();
+          durationUntilDecayBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationUntilDecayBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationUntilDecayFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationUntilDecayOrBuilder() {
+        if (durationUntilDecayBuilder_ != null) {
+          return durationUntilDecayBuilder_.getMessageOrBuilder();
+        } else {
+          return durationUntilDecay_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : durationUntilDecay_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_until_decay = 3 [json_name = "durationUntilDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_until_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_until_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationUntilDecayFieldBuilder() {
+        if (durationUntilDecayBuilder_ == null) {
+          durationUntilDecayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDurationUntilDecay(),
+                  getParentForChildren(),
+                  isClean());
+          durationUntilDecay_ = null;
+        }
+        return durationUntilDecayBuilder_;
+      }
+
+      private com.google.protobuf.Duration durationOfDecay_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationOfDecayBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the durationOfDecay field is set.
+       */
+      public boolean hasDurationOfDecay() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The durationOfDecay.
+       */
+      public com.google.protobuf.Duration getDurationOfDecay() {
+        if (durationOfDecayBuilder_ == null) {
+          return durationOfDecay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+        } else {
+          return durationOfDecayBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationOfDecay(com.google.protobuf.Duration value) {
+        if (durationOfDecayBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          durationOfDecay_ = value;
+        } else {
+          durationOfDecayBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDurationOfDecay(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationOfDecayBuilder_ == null) {
+          durationOfDecay_ = builderForValue.build();
+        } else {
+          durationOfDecayBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDurationOfDecay(com.google.protobuf.Duration value) {
+        if (durationOfDecayBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            durationOfDecay_ != null &&
+            durationOfDecay_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationOfDecayBuilder().mergeFrom(value);
+          } else {
+            durationOfDecay_ = value;
+          }
+        } else {
+          durationOfDecayBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDurationOfDecay() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        durationOfDecay_ = null;
+        if (durationOfDecayBuilder_ != null) {
+          durationOfDecayBuilder_.dispose();
+          durationOfDecayBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationOfDecayBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getDurationOfDecayFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOfDecayOrBuilder() {
+        if (durationOfDecayBuilder_ != null) {
+          return durationOfDecayBuilder_.getMessageOrBuilder();
+        } else {
+          return durationOfDecay_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : durationOfDecay_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration_of_decay = 4 [json_name = "durationOfDecay", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration_of_decay,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration_of_decay&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationOfDecayFieldBuilder() {
+        if (durationOfDecayBuilder_ == null) {
+          durationOfDecayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDurationOfDecay(),
+                  getParentForChildren(),
+                  isClean());
+          durationOfDecay_ = null;
+        }
+        return durationOfDecayBuilder_;
+      }
+
+      private java.lang.Object claimDenom_ = "";
+      /**
+       * <pre>
+       * denom of claimable asset
+       * </pre>
+       *
+       * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+       * @return The claimDenom.
+       */
+      public java.lang.String getClaimDenom() {
+        java.lang.Object ref = claimDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom of claimable asset
+       * </pre>
+       *
+       * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+       * @return The bytes for claimDenom.
+       */
+      public com.google.protobuf.ByteString
+          getClaimDenomBytes() {
+        java.lang.Object ref = claimDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom of claimable asset
+       * </pre>
+       *
+       * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+       * @param value The claimDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom of claimable asset
+       * </pre>
+       *
+       * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimDenom() {
+        claimDenom_ = getDefaultInstance().getClaimDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom of claimable asset
+       * </pre>
+       *
+       * <code>string claim_denom = 5 [json_name = "claimDenom"];</code>
+       * @param value The bytes for claimDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:passage3d.claim.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:passage3d.claim.v1beta1.Params)
+    private static final com.passage3d.claim.v1beta1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passage3d.claim.v1beta1.ParamsProto.Params();
+    }
+
+    public static com.passage3d.claim.v1beta1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passage3d.claim.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_passage3d_claim_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_passage3d_claim_v1beta1_Params_fieldAccessorTable;
 
@@ -44,12 +1361,12 @@ public final class ParamsProto {
       "ionBC\310\336\037\000\352\336\037\033duration_of_decay,omitempty" +
       "\362\336\037\030yaml:\"duration_of_decay\"\230\337\037\001R\017durati" +
       "onOfDecay\022\037\n\013claim_denom\030\005 \001(\tR\nclaimDen" +
-      "om:\004\230\240\037\000B\324\001\n\033com.passage3d.claim.v1beta1" +
-      "B\013ParamsProtoP\001Z*github.com/envadiv/pass" +
-      "age3d/x/claim/types\242\002\003PCX\252\002\027Passage3d.Cl" +
-      "aim.V1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#" +
-      "Passage3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Pa" +
-      "ssage3d::Claim::V1beta1b\006proto3"
+      "om:\004\230\240\037\000B\322\001\n\033com.passage3d.claim.v1beta1" +
+      "B\013ParamsProtoZ*github.com/envadiv/passag" +
+      "e3d/x/claim/types\242\002\003PCX\252\002\027Passage3d.Clai" +
+      "m.V1beta1\312\002\027Passage3d\\Claim\\V1beta1\342\002#Pa" +
+      "ssage3d\\Claim\\V1beta1\\GPBMetadata\352\002\031Pass" +
+      "age3d::Claim::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

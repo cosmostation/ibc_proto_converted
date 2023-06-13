@@ -14,24 +14,4936 @@ public final class IncentivesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IncentiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.Incentive)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract address of the smart contract to be incentivized
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract address of the smart contract to be incentivized
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getAllocationsList();
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocations(int index);
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getAllocationsCount();
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAllocationsOrBuilderList();
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * epochs defines the number of remaining epochs for the incentive
+     * </pre>
+     *
+     * <code>uint32 epochs = 3 [json_name = "epochs"];</code>
+     * @return The epochs.
+     */
+    int getEpochs();
+
+    /**
+     * <pre>
+     * start_time of the incentive distribution
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time of the incentive distribution
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time of the incentive distribution
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * total_gas is the cumulative gas spent by all gas meters of the incentive during the epoch
+     * </pre>
+     *
+     * <code>uint64 total_gas = 5 [json_name = "totalGas"];</code>
+     * @return The totalGas.
+     */
+    long getTotalGas();
+  }
+  /**
+   * <pre>
+   * Incentive defines an instance that organizes distribution conditions for a
+   * given smart contract
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.Incentive}
+   */
+  public static final class Incentive extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.Incentive)
+      IncentiveOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Incentive.newBuilder() to construct.
+    private Incentive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Incentive() {
+      contract_ = "";
+      allocations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Incentive();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_Incentive_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_Incentive_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.IncentivesProto.Incentive.class, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract address of the smart contract to be incentivized
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract address of the smart contract to be incentivized
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALLOCATIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> allocations_;
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAllocationsList() {
+      return allocations_;
+    }
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAllocationsOrBuilderList() {
+      return allocations_;
+    }
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getAllocationsCount() {
+      return allocations_.size();
+    }
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocations(int index) {
+      return allocations_.get(index);
+    }
+    /**
+     * <pre>
+     * allocations is a slice of denoms and percentages of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationsOrBuilder(
+        int index) {
+      return allocations_.get(index);
+    }
+
+    public static final int EPOCHS_FIELD_NUMBER = 3;
+    private int epochs_ = 0;
+    /**
+     * <pre>
+     * epochs defines the number of remaining epochs for the incentive
+     * </pre>
+     *
+     * <code>uint32 epochs = 3 [json_name = "epochs"];</code>
+     * @return The epochs.
+     */
+    @java.lang.Override
+    public int getEpochs() {
+      return epochs_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time of the incentive distribution
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time of the incentive distribution
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time of the incentive distribution
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int TOTAL_GAS_FIELD_NUMBER = 5;
+    private long totalGas_ = 0L;
+    /**
+     * <pre>
+     * total_gas is the cumulative gas spent by all gas meters of the incentive during the epoch
+     * </pre>
+     *
+     * <code>uint64 total_gas = 5 [json_name = "totalGas"];</code>
+     * @return The totalGas.
+     */
+    @java.lang.Override
+    public long getTotalGas() {
+      return totalGas_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      for (int i = 0; i < allocations_.size(); i++) {
+        output.writeMessage(2, allocations_.get(i));
+      }
+      if (epochs_ != 0) {
+        output.writeUInt32(3, epochs_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(4, getStartTime());
+      }
+      if (totalGas_ != 0L) {
+        output.writeUInt64(5, totalGas_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      for (int i = 0; i < allocations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, allocations_.get(i));
+      }
+      if (epochs_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, epochs_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartTime());
+      }
+      if (totalGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, totalGas_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.IncentivesProto.Incentive)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.IncentivesProto.Incentive other = (com.evmos.incentives.v1.IncentivesProto.Incentive) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getAllocationsList()
+          .equals(other.getAllocationsList())) return false;
+      if (getEpochs()
+          != other.getEpochs()) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (getTotalGas()
+          != other.getTotalGas()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      if (getAllocationsCount() > 0) {
+        hash = (37 * hash) + ALLOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllocationsList().hashCode();
+      }
+      hash = (37 * hash) + EPOCHS_FIELD_NUMBER;
+      hash = (53 * hash) + getEpochs();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalGas());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.IncentivesProto.Incentive prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Incentive defines an instance that organizes distribution conditions for a
+     * given smart contract
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.Incentive}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.Incentive)
+        com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_Incentive_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_Incentive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.IncentivesProto.Incentive.class, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.IncentivesProto.Incentive.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        if (allocationsBuilder_ == null) {
+          allocations_ = java.util.Collections.emptyList();
+        } else {
+          allocations_ = null;
+          allocationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        epochs_ = 0;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        totalGas_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_Incentive_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.Incentive getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.Incentive build() {
+        com.evmos.incentives.v1.IncentivesProto.Incentive result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.Incentive buildPartial() {
+        com.evmos.incentives.v1.IncentivesProto.Incentive result = new com.evmos.incentives.v1.IncentivesProto.Incentive(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.incentives.v1.IncentivesProto.Incentive result) {
+        if (allocationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            allocations_ = java.util.Collections.unmodifiableList(allocations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.allocations_ = allocations_;
+        } else {
+          result.allocations_ = allocationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.IncentivesProto.Incentive result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.epochs_ = epochs_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.totalGas_ = totalGas_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.IncentivesProto.Incentive) {
+          return mergeFrom((com.evmos.incentives.v1.IncentivesProto.Incentive)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.IncentivesProto.Incentive other) {
+        if (other == com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (allocationsBuilder_ == null) {
+          if (!other.allocations_.isEmpty()) {
+            if (allocations_.isEmpty()) {
+              allocations_ = other.allocations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAllocationsIsMutable();
+              allocations_.addAll(other.allocations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.allocations_.isEmpty()) {
+            if (allocationsBuilder_.isEmpty()) {
+              allocationsBuilder_.dispose();
+              allocationsBuilder_ = null;
+              allocations_ = other.allocations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              allocationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAllocationsFieldBuilder() : null;
+            } else {
+              allocationsBuilder_.addAllMessages(other.allocations_);
+            }
+          }
+        }
+        if (other.getEpochs() != 0) {
+          setEpochs(other.getEpochs());
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.getTotalGas() != 0L) {
+          setTotalGas(other.getTotalGas());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (allocationsBuilder_ == null) {
+                  ensureAllocationsIsMutable();
+                  allocations_.add(m);
+                } else {
+                  allocationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                epochs_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                totalGas_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract address of the smart contract to be incentivized
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address of the smart contract to be incentivized
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address of the smart contract to be incentivized
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address of the smart contract to be incentivized
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address of the smart contract to be incentivized
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> allocations_ =
+        java.util.Collections.emptyList();
+      private void ensureAllocationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          allocations_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(allocations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> allocationsBuilder_;
+
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAllocationsList() {
+        if (allocationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(allocations_);
+        } else {
+          return allocationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getAllocationsCount() {
+        if (allocationsBuilder_ == null) {
+          return allocations_.size();
+        } else {
+          return allocationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocations(int index) {
+        if (allocationsBuilder_ == null) {
+          return allocations_.get(index);
+        } else {
+          return allocationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.set(index, value);
+          onChanged();
+        } else {
+          allocationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.add(value);
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.add(index, value);
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllAllocations(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, allocations_);
+          onChanged();
+        } else {
+          allocationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearAllocations() {
+        if (allocationsBuilder_ == null) {
+          allocations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          allocationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeAllocations(int index) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.remove(index);
+          onChanged();
+        } else {
+          allocationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getAllocationsBuilder(
+          int index) {
+        return getAllocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationsOrBuilder(
+          int index) {
+        if (allocationsBuilder_ == null) {
+          return allocations_.get(index);  } else {
+          return allocationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getAllocationsOrBuilderList() {
+        if (allocationsBuilder_ != null) {
+          return allocationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(allocations_);
+        }
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAllocationsBuilder() {
+        return getAllocationsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAllocationsBuilder(
+          int index) {
+        return getAllocationsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * allocations is a slice of denoms and percentages of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 2 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getAllocationsBuilderList() {
+        return getAllocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getAllocationsFieldBuilder() {
+        if (allocationsBuilder_ == null) {
+          allocationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  allocations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          allocations_ = null;
+        }
+        return allocationsBuilder_;
+      }
+
+      private int epochs_ ;
+      /**
+       * <pre>
+       * epochs defines the number of remaining epochs for the incentive
+       * </pre>
+       *
+       * <code>uint32 epochs = 3 [json_name = "epochs"];</code>
+       * @return The epochs.
+       */
+      @java.lang.Override
+      public int getEpochs() {
+        return epochs_;
+      }
+      /**
+       * <pre>
+       * epochs defines the number of remaining epochs for the incentive
+       * </pre>
+       *
+       * <code>uint32 epochs = 3 [json_name = "epochs"];</code>
+       * @param value The epochs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochs(int value) {
+
+        epochs_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs defines the number of remaining epochs for the incentive
+       * </pre>
+       *
+       * <code>uint32 epochs = 3 [json_name = "epochs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        epochs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time of the incentive distribution
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private long totalGas_ ;
+      /**
+       * <pre>
+       * total_gas is the cumulative gas spent by all gas meters of the incentive during the epoch
+       * </pre>
+       *
+       * <code>uint64 total_gas = 5 [json_name = "totalGas"];</code>
+       * @return The totalGas.
+       */
+      @java.lang.Override
+      public long getTotalGas() {
+        return totalGas_;
+      }
+      /**
+       * <pre>
+       * total_gas is the cumulative gas spent by all gas meters of the incentive during the epoch
+       * </pre>
+       *
+       * <code>uint64 total_gas = 5 [json_name = "totalGas"];</code>
+       * @param value The totalGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalGas(long value) {
+
+        totalGas_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_gas is the cumulative gas spent by all gas meters of the incentive during the epoch
+       * </pre>
+       *
+       * <code>uint64 total_gas = 5 [json_name = "totalGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalGas() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        totalGas_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.Incentive)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.Incentive)
+    private static final com.evmos.incentives.v1.IncentivesProto.Incentive DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.IncentivesProto.Incentive();
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.Incentive getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Incentive>
+        PARSER = new com.google.protobuf.AbstractParser<Incentive>() {
+      @java.lang.Override
+      public Incentive parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Incentive> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Incentive> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.Incentive getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GasMeterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.GasMeter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract is the hex address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract is the hex address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <pre>
+     * participant address that interacts with the incentive
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The participant.
+     */
+    java.lang.String getParticipant();
+    /**
+     * <pre>
+     * participant address that interacts with the incentive
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The bytes for participant.
+     */
+    com.google.protobuf.ByteString
+        getParticipantBytes();
+
+    /**
+     * <pre>
+     * cumulative_gas spent during the epoch
+     * </pre>
+     *
+     * <code>uint64 cumulative_gas = 3 [json_name = "cumulativeGas"];</code>
+     * @return The cumulativeGas.
+     */
+    long getCumulativeGas();
+  }
+  /**
+   * <pre>
+   * GasMeter tracks the cumulative gas spent per participant in one epoch
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.GasMeter}
+   */
+  public static final class GasMeter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.GasMeter)
+      GasMeterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GasMeter.newBuilder() to construct.
+    private GasMeter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GasMeter() {
+      contract_ = "";
+      participant_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GasMeter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_GasMeter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_GasMeter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.IncentivesProto.GasMeter.class, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract is the hex address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract is the hex address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object participant_ = "";
+    /**
+     * <pre>
+     * participant address that interacts with the incentive
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public java.lang.String getParticipant() {
+      java.lang.Object ref = participant_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        participant_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * participant address that interacts with the incentive
+     * </pre>
+     *
+     * <code>string participant = 2 [json_name = "participant"];</code>
+     * @return The bytes for participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParticipantBytes() {
+      java.lang.Object ref = participant_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        participant_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CUMULATIVE_GAS_FIELD_NUMBER = 3;
+    private long cumulativeGas_ = 0L;
+    /**
+     * <pre>
+     * cumulative_gas spent during the epoch
+     * </pre>
+     *
+     * <code>uint64 cumulative_gas = 3 [json_name = "cumulativeGas"];</code>
+     * @return The cumulativeGas.
+     */
+    @java.lang.Override
+    public long getCumulativeGas() {
+      return cumulativeGas_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participant_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, participant_);
+      }
+      if (cumulativeGas_ != 0L) {
+        output.writeUInt64(3, cumulativeGas_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(participant_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, participant_);
+      }
+      if (cumulativeGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, cumulativeGas_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.IncentivesProto.GasMeter)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.IncentivesProto.GasMeter other = (com.evmos.incentives.v1.IncentivesProto.GasMeter) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getParticipant()
+          .equals(other.getParticipant())) return false;
+      if (getCumulativeGas()
+          != other.getCumulativeGas()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (37 * hash) + CUMULATIVE_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCumulativeGas());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.IncentivesProto.GasMeter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GasMeter tracks the cumulative gas spent per participant in one epoch
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.GasMeter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.GasMeter)
+        com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_GasMeter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_GasMeter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.IncentivesProto.GasMeter.class, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.IncentivesProto.GasMeter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        participant_ = "";
+        cumulativeGas_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_GasMeter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.IncentivesProto.GasMeter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter build() {
+        com.evmos.incentives.v1.IncentivesProto.GasMeter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter buildPartial() {
+        com.evmos.incentives.v1.IncentivesProto.GasMeter result = new com.evmos.incentives.v1.IncentivesProto.GasMeter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.IncentivesProto.GasMeter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.participant_ = participant_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cumulativeGas_ = cumulativeGas_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.IncentivesProto.GasMeter) {
+          return mergeFrom((com.evmos.incentives.v1.IncentivesProto.GasMeter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.IncentivesProto.GasMeter other) {
+        if (other == com.evmos.incentives.v1.IncentivesProto.GasMeter.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getParticipant().isEmpty()) {
+          participant_ = other.participant_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getCumulativeGas() != 0L) {
+          setCumulativeGas(other.getCumulativeGas());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                participant_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                cumulativeGas_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract is the hex address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract is the hex address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the hex address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object participant_ = "";
+      /**
+       * <pre>
+       * participant address that interacts with the incentive
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @return The participant.
+       */
+      public java.lang.String getParticipant() {
+        java.lang.Object ref = participant_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          participant_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * participant address that interacts with the incentive
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @return The bytes for participant.
+       */
+      public com.google.protobuf.ByteString
+          getParticipantBytes() {
+        java.lang.Object ref = participant_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          participant_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * participant address that interacts with the incentive
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * participant address that interacts with the incentive
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        participant_ = getDefaultInstance().getParticipant();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * participant address that interacts with the incentive
+       * </pre>
+       *
+       * <code>string participant = 2 [json_name = "participant"];</code>
+       * @param value The bytes for participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipantBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        participant_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long cumulativeGas_ ;
+      /**
+       * <pre>
+       * cumulative_gas spent during the epoch
+       * </pre>
+       *
+       * <code>uint64 cumulative_gas = 3 [json_name = "cumulativeGas"];</code>
+       * @return The cumulativeGas.
+       */
+      @java.lang.Override
+      public long getCumulativeGas() {
+        return cumulativeGas_;
+      }
+      /**
+       * <pre>
+       * cumulative_gas spent during the epoch
+       * </pre>
+       *
+       * <code>uint64 cumulative_gas = 3 [json_name = "cumulativeGas"];</code>
+       * @param value The cumulativeGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCumulativeGas(long value) {
+
+        cumulativeGas_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cumulative_gas spent during the epoch
+       * </pre>
+       *
+       * <code>uint64 cumulative_gas = 3 [json_name = "cumulativeGas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCumulativeGas() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cumulativeGas_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.GasMeter)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.GasMeter)
+    private static final com.evmos.incentives.v1.IncentivesProto.GasMeter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.IncentivesProto.GasMeter();
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.GasMeter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GasMeter>
+        PARSER = new com.google.protobuf.AbstractParser<GasMeter>() {
+      @java.lang.Override
+      public GasMeter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GasMeter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GasMeter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.GasMeter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterIncentiveProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.RegisterIncentiveProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * contract address to be registered
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract address to be registered
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getAllocationsList();
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocations(int index);
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getAllocationsCount();
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAllocationsOrBuilderList();
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * epochs is the number of remaining epochs for the incentive
+     * </pre>
+     *
+     * <code>uint32 epochs = 5 [json_name = "epochs"];</code>
+     * @return The epochs.
+     */
+    int getEpochs();
+  }
+  /**
+   * <pre>
+   * RegisterIncentiveProposal is a gov Content type to register an incentive
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.RegisterIncentiveProposal}
+   */
+  public static final class RegisterIncentiveProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.RegisterIncentiveProposal)
+      RegisterIncentiveProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterIncentiveProposal.newBuilder() to construct.
+    private RegisterIncentiveProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterIncentiveProposal() {
+      title_ = "";
+      description_ = "";
+      contract_ = "";
+      allocations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterIncentiveProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_RegisterIncentiveProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_RegisterIncentiveProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.class, com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract address to be registered
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract address to be registered
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALLOCATIONS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> allocations_;
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAllocationsList() {
+      return allocations_;
+    }
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getAllocationsOrBuilderList() {
+      return allocations_;
+    }
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getAllocationsCount() {
+      return allocations_.size();
+    }
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocations(int index) {
+      return allocations_.get(index);
+    }
+    /**
+     * <pre>
+     * allocations defines the denoms and percentage of rewards to be allocated
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationsOrBuilder(
+        int index) {
+      return allocations_.get(index);
+    }
+
+    public static final int EPOCHS_FIELD_NUMBER = 5;
+    private int epochs_ = 0;
+    /**
+     * <pre>
+     * epochs is the number of remaining epochs for the incentive
+     * </pre>
+     *
+     * <code>uint32 epochs = 5 [json_name = "epochs"];</code>
+     * @return The epochs.
+     */
+    @java.lang.Override
+    public int getEpochs() {
+      return epochs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contract_);
+      }
+      for (int i = 0; i < allocations_.size(); i++) {
+        output.writeMessage(4, allocations_.get(i));
+      }
+      if (epochs_ != 0) {
+        output.writeUInt32(5, epochs_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contract_);
+      }
+      for (int i = 0; i < allocations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, allocations_.get(i));
+      }
+      if (epochs_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, epochs_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal other = (com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getAllocationsList()
+          .equals(other.getAllocationsList())) return false;
+      if (getEpochs()
+          != other.getEpochs()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      if (getAllocationsCount() > 0) {
+        hash = (37 * hash) + ALLOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllocationsList().hashCode();
+      }
+      hash = (37 * hash) + EPOCHS_FIELD_NUMBER;
+      hash = (53 * hash) + getEpochs();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegisterIncentiveProposal is a gov Content type to register an incentive
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.RegisterIncentiveProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.RegisterIncentiveProposal)
+        com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_RegisterIncentiveProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_RegisterIncentiveProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.class, com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        contract_ = "";
+        if (allocationsBuilder_ == null) {
+          allocations_ = java.util.Collections.emptyList();
+        } else {
+          allocations_ = null;
+          allocationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        epochs_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_RegisterIncentiveProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal build() {
+        com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal buildPartial() {
+        com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal result = new com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal result) {
+        if (allocationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            allocations_ = java.util.Collections.unmodifiableList(allocations_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.allocations_ = allocations_;
+        } else {
+          result.allocations_ = allocationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.epochs_ = epochs_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal) {
+          return mergeFrom((com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal other) {
+        if (other == com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (allocationsBuilder_ == null) {
+          if (!other.allocations_.isEmpty()) {
+            if (allocations_.isEmpty()) {
+              allocations_ = other.allocations_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAllocationsIsMutable();
+              allocations_.addAll(other.allocations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.allocations_.isEmpty()) {
+            if (allocationsBuilder_.isEmpty()) {
+              allocationsBuilder_.dispose();
+              allocationsBuilder_ = null;
+              allocations_ = other.allocations_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              allocationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAllocationsFieldBuilder() : null;
+            } else {
+              allocationsBuilder_.addAllMessages(other.allocations_);
+            }
+          }
+        }
+        if (other.getEpochs() != 0) {
+          setEpochs(other.getEpochs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (allocationsBuilder_ == null) {
+                  ensureAllocationsIsMutable();
+                  allocations_.add(m);
+                } else {
+                  allocationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                epochs_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract address to be registered
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address to be registered
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address to be registered
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address to be registered
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address to be registered
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> allocations_ =
+        java.util.Collections.emptyList();
+      private void ensureAllocationsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          allocations_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(allocations_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> allocationsBuilder_;
+
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getAllocationsList() {
+        if (allocationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(allocations_);
+        } else {
+          return allocationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getAllocationsCount() {
+        if (allocationsBuilder_ == null) {
+          return allocations_.size();
+        } else {
+          return allocationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getAllocations(int index) {
+        if (allocationsBuilder_ == null) {
+          return allocations_.get(index);
+        } else {
+          return allocationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.set(index, value);
+          onChanged();
+        } else {
+          allocationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.add(value);
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (allocationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAllocationsIsMutable();
+          allocations_.add(index, value);
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllocations(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          allocationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllAllocations(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, allocations_);
+          onChanged();
+        } else {
+          allocationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearAllocations() {
+        if (allocationsBuilder_ == null) {
+          allocations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          allocationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeAllocations(int index) {
+        if (allocationsBuilder_ == null) {
+          ensureAllocationsIsMutable();
+          allocations_.remove(index);
+          onChanged();
+        } else {
+          allocationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getAllocationsBuilder(
+          int index) {
+        return getAllocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getAllocationsOrBuilder(
+          int index) {
+        if (allocationsBuilder_ == null) {
+          return allocations_.get(index);  } else {
+          return allocationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getAllocationsOrBuilderList() {
+        if (allocationsBuilder_ != null) {
+          return allocationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(allocations_);
+        }
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAllocationsBuilder() {
+        return getAllocationsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addAllocationsBuilder(
+          int index) {
+        return getAllocationsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * allocations defines the denoms and percentage of rewards to be allocated
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin allocations = 4 [json_name = "allocations", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getAllocationsBuilderList() {
+        return getAllocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getAllocationsFieldBuilder() {
+        if (allocationsBuilder_ == null) {
+          allocationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  allocations_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          allocations_ = null;
+        }
+        return allocationsBuilder_;
+      }
+
+      private int epochs_ ;
+      /**
+       * <pre>
+       * epochs is the number of remaining epochs for the incentive
+       * </pre>
+       *
+       * <code>uint32 epochs = 5 [json_name = "epochs"];</code>
+       * @return The epochs.
+       */
+      @java.lang.Override
+      public int getEpochs() {
+        return epochs_;
+      }
+      /**
+       * <pre>
+       * epochs is the number of remaining epochs for the incentive
+       * </pre>
+       *
+       * <code>uint32 epochs = 5 [json_name = "epochs"];</code>
+       * @param value The epochs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochs(int value) {
+
+        epochs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epochs is the number of remaining epochs for the incentive
+       * </pre>
+       *
+       * <code>uint32 epochs = 5 [json_name = "epochs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        epochs_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.RegisterIncentiveProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.RegisterIncentiveProposal)
+    private static final com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal();
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterIncentiveProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterIncentiveProposal>() {
+      @java.lang.Override
+      public RegisterIncentiveProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterIncentiveProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterIncentiveProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.RegisterIncentiveProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CancelIncentiveProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.CancelIncentiveProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * contract address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <pre>
+     * contract address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+  }
+  /**
+   * <pre>
+   * CancelIncentiveProposal is a gov Content type to cancel an incentive
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.CancelIncentiveProposal}
+   */
+  public static final class CancelIncentiveProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.CancelIncentiveProposal)
+      CancelIncentiveProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CancelIncentiveProposal.newBuilder() to construct.
+    private CancelIncentiveProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CancelIncentiveProposal() {
+      title_ = "";
+      description_ = "";
+      contract_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelIncentiveProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_CancelIncentiveProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_CancelIncentiveProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.class, com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title of the proposal
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * description of the proposal
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <pre>
+     * contract address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract address of the incentivized smart contract
+     * </pre>
+     *
+     * <code>string contract = 3 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contract_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contract_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal other = (com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CancelIncentiveProposal is a gov Content type to cancel an incentive
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.CancelIncentiveProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.CancelIncentiveProposal)
+        com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_CancelIncentiveProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_CancelIncentiveProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.class, com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        contract_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.IncentivesProto.internal_static_evmos_incentives_v1_CancelIncentiveProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal build() {
+        com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal buildPartial() {
+        com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal result = new com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.contract_ = contract_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal) {
+          return mergeFrom((com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal other) {
+        if (other == com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title of the proposal
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description of the proposal
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <pre>
+       * contract address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract address of the incentivized smart contract
+       * </pre>
+       *
+       * <code>string contract = 3 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.CancelIncentiveProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.CancelIncentiveProposal)
+    private static final com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal();
+    }
+
+    public static com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CancelIncentiveProposal>
+        PARSER = new com.google.protobuf.AbstractParser<CancelIncentiveProposal>() {
+      @java.lang.Override
+      public CancelIncentiveProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CancelIncentiveProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CancelIncentiveProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.CancelIncentiveProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_Incentive_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_Incentive_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_GasMeter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_GasMeter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_RegisterIncentiveProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_RegisterIncentiveProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_CancelIncentiveProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_CancelIncentiveProposal_fieldAccessorTable;
 
@@ -65,13 +4977,13 @@ public final class IncentivesProto {
       "allocations\022\026\n\006epochs\030\005 \001(\rR\006epochs:\004\350\240\037" +
       "\000\"s\n\027CancelIncentiveProposal\022\024\n\005title\030\001 " +
       "\001(\tR\005title\022 \n\013description\030\002 \001(\tR\013descrip" +
-      "tion\022\032\n\010contract\030\003 \001(\tR\010contract:\004\350\240\037\000B\307" +
+      "tion\022\032\n\010contract\030\003 \001(\tR\010contract:\004\350\240\037\000B\305" +
       "\001\n\027com.evmos.incentives.v1B\017IncentivesPr" +
-      "otoP\001Z-github.com/evmos/evmos/v13/x/ince" +
-      "ntives/types\242\002\003EIX\252\002\023Evmos.Incentives.V1" +
-      "\312\002\023Evmos\\Incentives\\V1\342\002\037Evmos\\Incentive" +
-      "s\\V1\\GPBMetadata\352\002\025Evmos::Incentives::V1" +
-      "b\006proto3"
+      "otoZ-github.com/evmos/evmos/v13/x/incent" +
+      "ives/types\242\002\003EIX\252\002\023Evmos.Incentives.V1\312\002" +
+      "\023Evmos\\Incentives\\V1\342\002\037Evmos\\Incentives\\" +
+      "V1\\GPBMetadata\352\002\025Evmos::Incentives::V1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

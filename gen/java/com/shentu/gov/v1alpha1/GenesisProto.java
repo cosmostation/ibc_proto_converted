@@ -14,9 +14,3240 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.gov.v1alpha1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * starting_proposal_id is the ID of the starting proposal.
+     * </pre>
+     *
+     * <code>uint64 starting_proposal_id = 1 [json_name = "startingProposalId", (.gogoproto.moretags) = "yaml:&#92;"starting_proposal_id&#92;""];</code>
+     * @return The startingProposalId.
+     */
+    long getStartingProposalId();
+
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.gov.v1beta1.GovProto.Deposit> 
+        getDepositsList();
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.Deposit getDeposits(int index);
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    int getDepositsCount();
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder> 
+        getDepositsOrBuilderList();
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder getDepositsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.gov.v1beta1.GovProto.Vote> 
+        getVotesList();
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.Vote getVotes(int index);
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    int getVotesCount();
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder> 
+        getVotesOrBuilderList();
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder getVotesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.gov.v1beta1.GovProto.Proposal> 
+        getProposalsList();
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.Proposal getProposals(int index);
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    int getProposalsCount();
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder> 
+        getProposalsOrBuilderList();
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder getProposalsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * params defines all the parameters of related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+     * @return Whether the depositParams field is set.
+     */
+    boolean hasDepositParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+     * @return The depositParams.
+     */
+    com.cosmos.gov.v1beta1.GovProto.DepositParams getDepositParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder getDepositParamsOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the parameters of related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+     * @return Whether the votingParams field is set.
+     */
+    boolean hasVotingParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+     * @return The votingParams.
+     */
+    com.cosmos.gov.v1beta1.GovProto.VotingParams getVotingParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder getVotingParamsOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the parameters of related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+     * @return Whether the tallyParams field is set.
+     */
+    boolean hasTallyParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+     * @return The tallyParams.
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParams getTallyParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getTallyParamsOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the parameters of related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+     * @return Whether the customParams field is set.
+     */
+    boolean hasCustomParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+     * @return The customParams.
+     */
+    com.shentu.gov.v1alpha1.GovProto.CustomParams getCustomParams();
+    /**
+     * <pre>
+     * params defines all the parameters of related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+     */
+    com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder getCustomParamsOrBuilder();
+
+    /**
+     * <pre>
+     * proposals that require and have passed cert votes.
+     * </pre>
+     *
+     * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+     * @return A list containing the certVotedProposalIds.
+     */
+    java.util.List<java.lang.Long> getCertVotedProposalIdsList();
+    /**
+     * <pre>
+     * proposals that require and have passed cert votes.
+     * </pre>
+     *
+     * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+     * @return The count of certVotedProposalIds.
+     */
+    int getCertVotedProposalIdsCount();
+    /**
+     * <pre>
+     * proposals that require and have passed cert votes.
+     * </pre>
+     *
+     * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The certVotedProposalIds at the given index.
+     */
+    long getCertVotedProposalIds(int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the gov module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code shentu.gov.v1alpha1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.gov.v1alpha1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      deposits_ = java.util.Collections.emptyList();
+      votes_ = java.util.Collections.emptyList();
+      proposals_ = java.util.Collections.emptyList();
+      certVotedProposalIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.gov.v1alpha1.GenesisProto.internal_static_shentu_gov_v1alpha1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.gov.v1alpha1.GenesisProto.internal_static_shentu_gov_v1alpha1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.gov.v1alpha1.GenesisProto.GenesisState.class, com.shentu.gov.v1alpha1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int STARTING_PROPOSAL_ID_FIELD_NUMBER = 1;
+    private long startingProposalId_ = 0L;
+    /**
+     * <pre>
+     * starting_proposal_id is the ID of the starting proposal.
+     * </pre>
+     *
+     * <code>uint64 starting_proposal_id = 1 [json_name = "startingProposalId", (.gogoproto.moretags) = "yaml:&#92;"starting_proposal_id&#92;""];</code>
+     * @return The startingProposalId.
+     */
+    @java.lang.Override
+    public long getStartingProposalId() {
+      return startingProposalId_;
+    }
+
+    public static final int DEPOSITS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.gov.v1beta1.GovProto.Deposit> deposits_;
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.gov.v1beta1.GovProto.Deposit> getDepositsList() {
+      return deposits_;
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder> 
+        getDepositsOrBuilderList() {
+      return deposits_;
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDepositsCount() {
+      return deposits_.size();
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.Deposit getDeposits(int index) {
+      return deposits_.get(index);
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder getDepositsOrBuilder(
+        int index) {
+      return deposits_.get(index);
+    }
+
+    public static final int VOTES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.gov.v1beta1.GovProto.Vote> votes_;
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.gov.v1beta1.GovProto.Vote> getVotesList() {
+      return votes_;
+    }
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder> 
+        getVotesOrBuilderList() {
+      return votes_;
+    }
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getVotesCount() {
+      return votes_.size();
+    }
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.Vote getVotes(int index) {
+      return votes_.get(index);
+    }
+    /**
+     * <pre>
+     * votes defines all the votes present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder getVotesOrBuilder(
+        int index) {
+      return votes_.get(index);
+    }
+
+    public static final int PROPOSALS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.gov.v1beta1.GovProto.Proposal> proposals_;
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.gov.v1beta1.GovProto.Proposal> getProposalsList() {
+      return proposals_;
+    }
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder> 
+        getProposalsOrBuilderList() {
+      return proposals_;
+    }
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getProposalsCount() {
+      return proposals_.size();
+    }
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.Proposal getProposals(int index) {
+      return proposals_.get(index);
+    }
+    /**
+     * <pre>
+     * proposals defines all the proposals present at genesis.
+     * </pre>
+     *
+     * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder getProposalsOrBuilder(
+        int index) {
+      return proposals_.get(index);
+    }
+
+    public static final int DEPOSIT_PARAMS_FIELD_NUMBER = 5;
+    private com.cosmos.gov.v1beta1.GovProto.DepositParams depositParams_;
+    /**
+     * <pre>
+     * params defines all the parameters of related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+     * @return Whether the depositParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepositParams() {
+      return depositParams_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+     * @return The depositParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.DepositParams getDepositParams() {
+      return depositParams_ == null ? com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder getDepositParamsOrBuilder() {
+      return depositParams_ == null ? com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+    }
+
+    public static final int VOTING_PARAMS_FIELD_NUMBER = 6;
+    private com.cosmos.gov.v1beta1.GovProto.VotingParams votingParams_;
+    /**
+     * <pre>
+     * params defines all the parameters of related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+     * @return Whether the votingParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingParams() {
+      return votingParams_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+     * @return The votingParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.VotingParams getVotingParams() {
+      return votingParams_ == null ? com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder getVotingParamsOrBuilder() {
+      return votingParams_ == null ? com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+    }
+
+    public static final int TALLY_PARAMS_FIELD_NUMBER = 7;
+    private com.cosmos.gov.v1beta1.GovProto.TallyParams tallyParams_;
+    /**
+     * <pre>
+     * params defines all the parameters of related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+     * @return Whether the tallyParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTallyParams() {
+      return tallyParams_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+     * @return The tallyParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParams getTallyParams() {
+      return tallyParams_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getTallyParamsOrBuilder() {
+      return tallyParams_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+    }
+
+    public static final int CUSTOM_PARAMS_FIELD_NUMBER = 8;
+    private com.shentu.gov.v1alpha1.GovProto.CustomParams customParams_;
+    /**
+     * <pre>
+     * params defines all the parameters of related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+     * @return Whether the customParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomParams() {
+      return customParams_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+     * @return The customParams.
+     */
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.GovProto.CustomParams getCustomParams() {
+      return customParams_ == null ? com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder getCustomParamsOrBuilder() {
+      return customParams_ == null ? com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+    }
+
+    public static final int CERT_VOTED_PROPOSAL_IDS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList certVotedProposalIds_;
+    /**
+     * <pre>
+     * proposals that require and have passed cert votes.
+     * </pre>
+     *
+     * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+     * @return A list containing the certVotedProposalIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getCertVotedProposalIdsList() {
+      return certVotedProposalIds_;
+    }
+    /**
+     * <pre>
+     * proposals that require and have passed cert votes.
+     * </pre>
+     *
+     * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+     * @return The count of certVotedProposalIds.
+     */
+    public int getCertVotedProposalIdsCount() {
+      return certVotedProposalIds_.size();
+    }
+    /**
+     * <pre>
+     * proposals that require and have passed cert votes.
+     * </pre>
+     *
+     * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The certVotedProposalIds at the given index.
+     */
+    public long getCertVotedProposalIds(int index) {
+      return certVotedProposalIds_.getLong(index);
+    }
+    private int certVotedProposalIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (startingProposalId_ != 0L) {
+        output.writeUInt64(1, startingProposalId_);
+      }
+      for (int i = 0; i < deposits_.size(); i++) {
+        output.writeMessage(2, deposits_.get(i));
+      }
+      for (int i = 0; i < votes_.size(); i++) {
+        output.writeMessage(3, votes_.get(i));
+      }
+      for (int i = 0; i < proposals_.size(); i++) {
+        output.writeMessage(4, proposals_.get(i));
+      }
+      if (depositParams_ != null) {
+        output.writeMessage(5, getDepositParams());
+      }
+      if (votingParams_ != null) {
+        output.writeMessage(6, getVotingParams());
+      }
+      if (tallyParams_ != null) {
+        output.writeMessage(7, getTallyParams());
+      }
+      if (customParams_ != null) {
+        output.writeMessage(8, getCustomParams());
+      }
+      if (getCertVotedProposalIdsList().size() > 0) {
+        output.writeUInt32NoTag(74);
+        output.writeUInt32NoTag(certVotedProposalIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < certVotedProposalIds_.size(); i++) {
+        output.writeUInt64NoTag(certVotedProposalIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startingProposalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, startingProposalId_);
+      }
+      for (int i = 0; i < deposits_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, deposits_.get(i));
+      }
+      for (int i = 0; i < votes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, votes_.get(i));
+      }
+      for (int i = 0; i < proposals_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, proposals_.get(i));
+      }
+      if (depositParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDepositParams());
+      }
+      if (votingParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getVotingParams());
+      }
+      if (tallyParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTallyParams());
+      }
+      if (customParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getCustomParams());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < certVotedProposalIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(certVotedProposalIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getCertVotedProposalIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        certVotedProposalIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.gov.v1alpha1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.shentu.gov.v1alpha1.GenesisProto.GenesisState other = (com.shentu.gov.v1alpha1.GenesisProto.GenesisState) obj;
+
+      if (getStartingProposalId()
+          != other.getStartingProposalId()) return false;
+      if (!getDepositsList()
+          .equals(other.getDepositsList())) return false;
+      if (!getVotesList()
+          .equals(other.getVotesList())) return false;
+      if (!getProposalsList()
+          .equals(other.getProposalsList())) return false;
+      if (hasDepositParams() != other.hasDepositParams()) return false;
+      if (hasDepositParams()) {
+        if (!getDepositParams()
+            .equals(other.getDepositParams())) return false;
+      }
+      if (hasVotingParams() != other.hasVotingParams()) return false;
+      if (hasVotingParams()) {
+        if (!getVotingParams()
+            .equals(other.getVotingParams())) return false;
+      }
+      if (hasTallyParams() != other.hasTallyParams()) return false;
+      if (hasTallyParams()) {
+        if (!getTallyParams()
+            .equals(other.getTallyParams())) return false;
+      }
+      if (hasCustomParams() != other.hasCustomParams()) return false;
+      if (hasCustomParams()) {
+        if (!getCustomParams()
+            .equals(other.getCustomParams())) return false;
+      }
+      if (!getCertVotedProposalIdsList()
+          .equals(other.getCertVotedProposalIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STARTING_PROPOSAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartingProposalId());
+      if (getDepositsCount() > 0) {
+        hash = (37 * hash) + DEPOSITS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsList().hashCode();
+      }
+      if (getVotesCount() > 0) {
+        hash = (37 * hash) + VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getVotesList().hashCode();
+      }
+      if (getProposalsCount() > 0) {
+        hash = (37 * hash) + PROPOSALS_FIELD_NUMBER;
+        hash = (53 * hash) + getProposalsList().hashCode();
+      }
+      if (hasDepositParams()) {
+        hash = (37 * hash) + DEPOSIT_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositParams().hashCode();
+      }
+      if (hasVotingParams()) {
+        hash = (37 * hash) + VOTING_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingParams().hashCode();
+      }
+      if (hasTallyParams()) {
+        hash = (37 * hash) + TALLY_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTallyParams().hashCode();
+      }
+      if (hasCustomParams()) {
+        hash = (37 * hash) + CUSTOM_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomParams().hashCode();
+      }
+      if (getCertVotedProposalIdsCount() > 0) {
+        hash = (37 * hash) + CERT_VOTED_PROPOSAL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCertVotedProposalIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.gov.v1alpha1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the gov module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code shentu.gov.v1alpha1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.gov.v1alpha1.GenesisState)
+        com.shentu.gov.v1alpha1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.gov.v1alpha1.GenesisProto.internal_static_shentu_gov_v1alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.gov.v1alpha1.GenesisProto.internal_static_shentu_gov_v1alpha1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.gov.v1alpha1.GenesisProto.GenesisState.class, com.shentu.gov.v1alpha1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.shentu.gov.v1alpha1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        startingProposalId_ = 0L;
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+        } else {
+          deposits_ = null;
+          depositsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (votesBuilder_ == null) {
+          votes_ = java.util.Collections.emptyList();
+        } else {
+          votes_ = null;
+          votesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (proposalsBuilder_ == null) {
+          proposals_ = java.util.Collections.emptyList();
+        } else {
+          proposals_ = null;
+          proposalsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        depositParams_ = null;
+        if (depositParamsBuilder_ != null) {
+          depositParamsBuilder_.dispose();
+          depositParamsBuilder_ = null;
+        }
+        votingParams_ = null;
+        if (votingParamsBuilder_ != null) {
+          votingParamsBuilder_.dispose();
+          votingParamsBuilder_ = null;
+        }
+        tallyParams_ = null;
+        if (tallyParamsBuilder_ != null) {
+          tallyParamsBuilder_.dispose();
+          tallyParamsBuilder_ = null;
+        }
+        customParams_ = null;
+        if (customParamsBuilder_ != null) {
+          customParamsBuilder_.dispose();
+          customParamsBuilder_ = null;
+        }
+        certVotedProposalIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.gov.v1alpha1.GenesisProto.internal_static_shentu_gov_v1alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.shentu.gov.v1alpha1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.GenesisProto.GenesisState build() {
+        com.shentu.gov.v1alpha1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.GenesisProto.GenesisState buildPartial() {
+        com.shentu.gov.v1alpha1.GenesisProto.GenesisState result = new com.shentu.gov.v1alpha1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.gov.v1alpha1.GenesisProto.GenesisState result) {
+        if (depositsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            deposits_ = java.util.Collections.unmodifiableList(deposits_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.deposits_ = deposits_;
+        } else {
+          result.deposits_ = depositsBuilder_.build();
+        }
+        if (votesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            votes_ = java.util.Collections.unmodifiableList(votes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.votes_ = votes_;
+        } else {
+          result.votes_ = votesBuilder_.build();
+        }
+        if (proposalsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            proposals_ = java.util.Collections.unmodifiableList(proposals_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.proposals_ = proposals_;
+        } else {
+          result.proposals_ = proposalsBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000100) != 0)) {
+          certVotedProposalIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.certVotedProposalIds_ = certVotedProposalIds_;
+      }
+
+      private void buildPartial0(com.shentu.gov.v1alpha1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startingProposalId_ = startingProposalId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.depositParams_ = depositParamsBuilder_ == null
+              ? depositParams_
+              : depositParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.votingParams_ = votingParamsBuilder_ == null
+              ? votingParams_
+              : votingParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.tallyParams_ = tallyParamsBuilder_ == null
+              ? tallyParams_
+              : tallyParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.customParams_ = customParamsBuilder_ == null
+              ? customParams_
+              : customParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.gov.v1alpha1.GenesisProto.GenesisState) {
+          return mergeFrom((com.shentu.gov.v1alpha1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.gov.v1alpha1.GenesisProto.GenesisState other) {
+        if (other == com.shentu.gov.v1alpha1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.getStartingProposalId() != 0L) {
+          setStartingProposalId(other.getStartingProposalId());
+        }
+        if (depositsBuilder_ == null) {
+          if (!other.deposits_.isEmpty()) {
+            if (deposits_.isEmpty()) {
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDepositsIsMutable();
+              deposits_.addAll(other.deposits_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deposits_.isEmpty()) {
+            if (depositsBuilder_.isEmpty()) {
+              depositsBuilder_.dispose();
+              depositsBuilder_ = null;
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              depositsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositsFieldBuilder() : null;
+            } else {
+              depositsBuilder_.addAllMessages(other.deposits_);
+            }
+          }
+        }
+        if (votesBuilder_ == null) {
+          if (!other.votes_.isEmpty()) {
+            if (votes_.isEmpty()) {
+              votes_ = other.votes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureVotesIsMutable();
+              votes_.addAll(other.votes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.votes_.isEmpty()) {
+            if (votesBuilder_.isEmpty()) {
+              votesBuilder_.dispose();
+              votesBuilder_ = null;
+              votes_ = other.votes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              votesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVotesFieldBuilder() : null;
+            } else {
+              votesBuilder_.addAllMessages(other.votes_);
+            }
+          }
+        }
+        if (proposalsBuilder_ == null) {
+          if (!other.proposals_.isEmpty()) {
+            if (proposals_.isEmpty()) {
+              proposals_ = other.proposals_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureProposalsIsMutable();
+              proposals_.addAll(other.proposals_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.proposals_.isEmpty()) {
+            if (proposalsBuilder_.isEmpty()) {
+              proposalsBuilder_.dispose();
+              proposalsBuilder_ = null;
+              proposals_ = other.proposals_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              proposalsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProposalsFieldBuilder() : null;
+            } else {
+              proposalsBuilder_.addAllMessages(other.proposals_);
+            }
+          }
+        }
+        if (other.hasDepositParams()) {
+          mergeDepositParams(other.getDepositParams());
+        }
+        if (other.hasVotingParams()) {
+          mergeVotingParams(other.getVotingParams());
+        }
+        if (other.hasTallyParams()) {
+          mergeTallyParams(other.getTallyParams());
+        }
+        if (other.hasCustomParams()) {
+          mergeCustomParams(other.getCustomParams());
+        }
+        if (!other.certVotedProposalIds_.isEmpty()) {
+          if (certVotedProposalIds_.isEmpty()) {
+            certVotedProposalIds_ = other.certVotedProposalIds_;
+            bitField0_ = (bitField0_ & ~0x00000100);
+          } else {
+            ensureCertVotedProposalIdsIsMutable();
+            certVotedProposalIds_.addAll(other.certVotedProposalIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                startingProposalId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.cosmos.gov.v1beta1.GovProto.Deposit m =
+                    input.readMessage(
+                        com.cosmos.gov.v1beta1.GovProto.Deposit.parser(),
+                        extensionRegistry);
+                if (depositsBuilder_ == null) {
+                  ensureDepositsIsMutable();
+                  deposits_.add(m);
+                } else {
+                  depositsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.gov.v1beta1.GovProto.Vote m =
+                    input.readMessage(
+                        com.cosmos.gov.v1beta1.GovProto.Vote.parser(),
+                        extensionRegistry);
+                if (votesBuilder_ == null) {
+                  ensureVotesIsMutable();
+                  votes_.add(m);
+                } else {
+                  votesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.gov.v1beta1.GovProto.Proposal m =
+                    input.readMessage(
+                        com.cosmos.gov.v1beta1.GovProto.Proposal.parser(),
+                        extensionRegistry);
+                if (proposalsBuilder_ == null) {
+                  ensureProposalsIsMutable();
+                  proposals_.add(m);
+                } else {
+                  proposalsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDepositParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getVotingParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getTallyParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getCustomParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 72: {
+                long v = input.readUInt64();
+                ensureCertVotedProposalIdsIsMutable();
+                certVotedProposalIds_.addLong(v);
+                break;
+              } // case 72
+              case 74: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureCertVotedProposalIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  certVotedProposalIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long startingProposalId_ ;
+      /**
+       * <pre>
+       * starting_proposal_id is the ID of the starting proposal.
+       * </pre>
+       *
+       * <code>uint64 starting_proposal_id = 1 [json_name = "startingProposalId", (.gogoproto.moretags) = "yaml:&#92;"starting_proposal_id&#92;""];</code>
+       * @return The startingProposalId.
+       */
+      @java.lang.Override
+      public long getStartingProposalId() {
+        return startingProposalId_;
+      }
+      /**
+       * <pre>
+       * starting_proposal_id is the ID of the starting proposal.
+       * </pre>
+       *
+       * <code>uint64 starting_proposal_id = 1 [json_name = "startingProposalId", (.gogoproto.moretags) = "yaml:&#92;"starting_proposal_id&#92;""];</code>
+       * @param value The startingProposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartingProposalId(long value) {
+
+        startingProposalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * starting_proposal_id is the ID of the starting proposal.
+       * </pre>
+       *
+       * <code>uint64 starting_proposal_id = 1 [json_name = "startingProposalId", (.gogoproto.moretags) = "yaml:&#92;"starting_proposal_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartingProposalId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startingProposalId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.gov.v1beta1.GovProto.Deposit> deposits_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          deposits_ = new java.util.ArrayList<com.cosmos.gov.v1beta1.GovProto.Deposit>(deposits_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.Deposit, com.cosmos.gov.v1beta1.GovProto.Deposit.Builder, com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder> depositsBuilder_;
+
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.gov.v1beta1.GovProto.Deposit> getDepositsList() {
+        if (depositsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deposits_);
+        } else {
+          return depositsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDepositsCount() {
+        if (depositsBuilder_ == null) {
+          return deposits_.size();
+        } else {
+          return depositsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Deposit getDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);
+        } else {
+          return depositsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposits(
+          int index, com.cosmos.gov.v1beta1.GovProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.set(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposits(
+          int index, com.cosmos.gov.v1beta1.GovProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(com.cosmos.gov.v1beta1.GovProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          int index, com.cosmos.gov.v1beta1.GovProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          com.cosmos.gov.v1beta1.GovProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          int index, com.cosmos.gov.v1beta1.GovProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDeposits(
+          java.lang.Iterable<? extends com.cosmos.gov.v1beta1.GovProto.Deposit> values) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deposits_);
+          onChanged();
+        } else {
+          depositsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDeposits() {
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          depositsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.remove(index);
+          onChanged();
+        } else {
+          depositsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Deposit.Builder getDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder getDepositsOrBuilder(
+          int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);  } else {
+          return depositsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder> 
+           getDepositsOrBuilderList() {
+        if (depositsBuilder_ != null) {
+          return depositsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deposits_);
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Deposit.Builder addDepositsBuilder() {
+        return getDepositsFieldBuilder().addBuilder(
+            com.cosmos.gov.v1beta1.GovProto.Deposit.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Deposit.Builder addDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().addBuilder(
+            index, com.cosmos.gov.v1beta1.GovProto.Deposit.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Deposit deposits = 2 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.gov.v1beta1.GovProto.Deposit.Builder> 
+           getDepositsBuilderList() {
+        return getDepositsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.Deposit, com.cosmos.gov.v1beta1.GovProto.Deposit.Builder, com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder> 
+          getDepositsFieldBuilder() {
+        if (depositsBuilder_ == null) {
+          depositsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.Deposit, com.cosmos.gov.v1beta1.GovProto.Deposit.Builder, com.cosmos.gov.v1beta1.GovProto.DepositOrBuilder>(
+                  deposits_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deposits_ = null;
+        }
+        return depositsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.gov.v1beta1.GovProto.Vote> votes_ =
+        java.util.Collections.emptyList();
+      private void ensureVotesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          votes_ = new java.util.ArrayList<com.cosmos.gov.v1beta1.GovProto.Vote>(votes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.Vote, com.cosmos.gov.v1beta1.GovProto.Vote.Builder, com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder> votesBuilder_;
+
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.gov.v1beta1.GovProto.Vote> getVotesList() {
+        if (votesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(votes_);
+        } else {
+          return votesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getVotesCount() {
+        if (votesBuilder_ == null) {
+          return votes_.size();
+        } else {
+          return votesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Vote getVotes(int index) {
+        if (votesBuilder_ == null) {
+          return votes_.get(index);
+        } else {
+          return votesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotes(
+          int index, com.cosmos.gov.v1beta1.GovProto.Vote value) {
+        if (votesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotesIsMutable();
+          votes_.set(index, value);
+          onChanged();
+        } else {
+          votesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotes(
+          int index, com.cosmos.gov.v1beta1.GovProto.Vote.Builder builderForValue) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          votesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addVotes(com.cosmos.gov.v1beta1.GovProto.Vote value) {
+        if (votesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotesIsMutable();
+          votes_.add(value);
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addVotes(
+          int index, com.cosmos.gov.v1beta1.GovProto.Vote value) {
+        if (votesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVotesIsMutable();
+          votes_.add(index, value);
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addVotes(
+          com.cosmos.gov.v1beta1.GovProto.Vote.Builder builderForValue) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addVotes(
+          int index, com.cosmos.gov.v1beta1.GovProto.Vote.Builder builderForValue) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          votesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllVotes(
+          java.lang.Iterable<? extends com.cosmos.gov.v1beta1.GovProto.Vote> values) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, votes_);
+          onChanged();
+        } else {
+          votesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotes() {
+        if (votesBuilder_ == null) {
+          votes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          votesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeVotes(int index) {
+        if (votesBuilder_ == null) {
+          ensureVotesIsMutable();
+          votes_.remove(index);
+          onChanged();
+        } else {
+          votesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Vote.Builder getVotesBuilder(
+          int index) {
+        return getVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder getVotesOrBuilder(
+          int index) {
+        if (votesBuilder_ == null) {
+          return votes_.get(index);  } else {
+          return votesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder> 
+           getVotesOrBuilderList() {
+        if (votesBuilder_ != null) {
+          return votesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(votes_);
+        }
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Vote.Builder addVotesBuilder() {
+        return getVotesFieldBuilder().addBuilder(
+            com.cosmos.gov.v1beta1.GovProto.Vote.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Vote.Builder addVotesBuilder(
+          int index) {
+        return getVotesFieldBuilder().addBuilder(
+            index, com.cosmos.gov.v1beta1.GovProto.Vote.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * votes defines all the votes present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Vote votes = 3 [json_name = "votes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.gov.v1beta1.GovProto.Vote.Builder> 
+           getVotesBuilderList() {
+        return getVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.Vote, com.cosmos.gov.v1beta1.GovProto.Vote.Builder, com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder> 
+          getVotesFieldBuilder() {
+        if (votesBuilder_ == null) {
+          votesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.Vote, com.cosmos.gov.v1beta1.GovProto.Vote.Builder, com.cosmos.gov.v1beta1.GovProto.VoteOrBuilder>(
+                  votes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          votes_ = null;
+        }
+        return votesBuilder_;
+      }
+
+      private java.util.List<com.cosmos.gov.v1beta1.GovProto.Proposal> proposals_ =
+        java.util.Collections.emptyList();
+      private void ensureProposalsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          proposals_ = new java.util.ArrayList<com.cosmos.gov.v1beta1.GovProto.Proposal>(proposals_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.Proposal, com.cosmos.gov.v1beta1.GovProto.Proposal.Builder, com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder> proposalsBuilder_;
+
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.gov.v1beta1.GovProto.Proposal> getProposalsList() {
+        if (proposalsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(proposals_);
+        } else {
+          return proposalsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public int getProposalsCount() {
+        if (proposalsBuilder_ == null) {
+          return proposals_.size();
+        } else {
+          return proposalsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Proposal getProposals(int index) {
+        if (proposalsBuilder_ == null) {
+          return proposals_.get(index);
+        } else {
+          return proposalsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProposals(
+          int index, com.cosmos.gov.v1beta1.GovProto.Proposal value) {
+        if (proposalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProposalsIsMutable();
+          proposals_.set(index, value);
+          onChanged();
+        } else {
+          proposalsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProposals(
+          int index, com.cosmos.gov.v1beta1.GovProto.Proposal.Builder builderForValue) {
+        if (proposalsBuilder_ == null) {
+          ensureProposalsIsMutable();
+          proposals_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          proposalsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProposals(com.cosmos.gov.v1beta1.GovProto.Proposal value) {
+        if (proposalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProposalsIsMutable();
+          proposals_.add(value);
+          onChanged();
+        } else {
+          proposalsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProposals(
+          int index, com.cosmos.gov.v1beta1.GovProto.Proposal value) {
+        if (proposalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProposalsIsMutable();
+          proposals_.add(index, value);
+          onChanged();
+        } else {
+          proposalsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProposals(
+          com.cosmos.gov.v1beta1.GovProto.Proposal.Builder builderForValue) {
+        if (proposalsBuilder_ == null) {
+          ensureProposalsIsMutable();
+          proposals_.add(builderForValue.build());
+          onChanged();
+        } else {
+          proposalsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addProposals(
+          int index, com.cosmos.gov.v1beta1.GovProto.Proposal.Builder builderForValue) {
+        if (proposalsBuilder_ == null) {
+          ensureProposalsIsMutable();
+          proposals_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          proposalsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllProposals(
+          java.lang.Iterable<? extends com.cosmos.gov.v1beta1.GovProto.Proposal> values) {
+        if (proposalsBuilder_ == null) {
+          ensureProposalsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, proposals_);
+          onChanged();
+        } else {
+          proposalsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProposals() {
+        if (proposalsBuilder_ == null) {
+          proposals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          proposalsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeProposals(int index) {
+        if (proposalsBuilder_ == null) {
+          ensureProposalsIsMutable();
+          proposals_.remove(index);
+          onChanged();
+        } else {
+          proposalsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Proposal.Builder getProposalsBuilder(
+          int index) {
+        return getProposalsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder getProposalsOrBuilder(
+          int index) {
+        if (proposalsBuilder_ == null) {
+          return proposals_.get(index);  } else {
+          return proposalsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder> 
+           getProposalsOrBuilderList() {
+        if (proposalsBuilder_ != null) {
+          return proposalsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(proposals_);
+        }
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Proposal.Builder addProposalsBuilder() {
+        return getProposalsFieldBuilder().addBuilder(
+            com.cosmos.gov.v1beta1.GovProto.Proposal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.Proposal.Builder addProposalsBuilder(
+          int index) {
+        return getProposalsFieldBuilder().addBuilder(
+            index, com.cosmos.gov.v1beta1.GovProto.Proposal.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * proposals defines all the proposals present at genesis.
+       * </pre>
+       *
+       * <code>repeated .cosmos.gov.v1beta1.Proposal proposals = 4 [json_name = "proposals", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.gov.v1beta1.GovProto.Proposal.Builder> 
+           getProposalsBuilderList() {
+        return getProposalsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.Proposal, com.cosmos.gov.v1beta1.GovProto.Proposal.Builder, com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder> 
+          getProposalsFieldBuilder() {
+        if (proposalsBuilder_ == null) {
+          proposalsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.Proposal, com.cosmos.gov.v1beta1.GovProto.Proposal.Builder, com.cosmos.gov.v1beta1.GovProto.ProposalOrBuilder>(
+                  proposals_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          proposals_ = null;
+        }
+        return proposalsBuilder_;
+      }
+
+      private com.cosmos.gov.v1beta1.GovProto.DepositParams depositParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.DepositParams, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder, com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder> depositParamsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       * @return Whether the depositParams field is set.
+       */
+      public boolean hasDepositParams() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       * @return The depositParams.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositParams getDepositParams() {
+        if (depositParamsBuilder_ == null) {
+          return depositParams_ == null ? com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+        } else {
+          return depositParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      public Builder setDepositParams(com.cosmos.gov.v1beta1.GovProto.DepositParams value) {
+        if (depositParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          depositParams_ = value;
+        } else {
+          depositParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      public Builder setDepositParams(
+          com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder builderForValue) {
+        if (depositParamsBuilder_ == null) {
+          depositParams_ = builderForValue.build();
+        } else {
+          depositParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      public Builder mergeDepositParams(com.cosmos.gov.v1beta1.GovProto.DepositParams value) {
+        if (depositParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            depositParams_ != null &&
+            depositParams_ != com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance()) {
+            getDepositParamsBuilder().mergeFrom(value);
+          } else {
+            depositParams_ = value;
+          }
+        } else {
+          depositParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      public Builder clearDepositParams() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        depositParams_ = null;
+        if (depositParamsBuilder_ != null) {
+          depositParamsBuilder_.dispose();
+          depositParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder getDepositParamsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDepositParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder getDepositParamsOrBuilder() {
+        if (depositParamsBuilder_ != null) {
+          return depositParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return depositParams_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 5 [json_name = "depositParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"deposit_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.DepositParams, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder, com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder> 
+          getDepositParamsFieldBuilder() {
+        if (depositParamsBuilder_ == null) {
+          depositParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.DepositParams, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder, com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder>(
+                  getDepositParams(),
+                  getParentForChildren(),
+                  isClean());
+          depositParams_ = null;
+        }
+        return depositParamsBuilder_;
+      }
+
+      private com.cosmos.gov.v1beta1.GovProto.VotingParams votingParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.VotingParams, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder, com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder> votingParamsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       * @return Whether the votingParams field is set.
+       */
+      public boolean hasVotingParams() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       * @return The votingParams.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VotingParams getVotingParams() {
+        if (votingParamsBuilder_ == null) {
+          return votingParams_ == null ? com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+        } else {
+          return votingParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      public Builder setVotingParams(com.cosmos.gov.v1beta1.GovProto.VotingParams value) {
+        if (votingParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingParams_ = value;
+        } else {
+          votingParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      public Builder setVotingParams(
+          com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder builderForValue) {
+        if (votingParamsBuilder_ == null) {
+          votingParams_ = builderForValue.build();
+        } else {
+          votingParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      public Builder mergeVotingParams(com.cosmos.gov.v1beta1.GovProto.VotingParams value) {
+        if (votingParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            votingParams_ != null &&
+            votingParams_ != com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance()) {
+            getVotingParamsBuilder().mergeFrom(value);
+          } else {
+            votingParams_ = value;
+          }
+        } else {
+          votingParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      public Builder clearVotingParams() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        votingParams_ = null;
+        if (votingParamsBuilder_ != null) {
+          votingParamsBuilder_.dispose();
+          votingParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder getVotingParamsBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getVotingParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder getVotingParamsOrBuilder() {
+        if (votingParamsBuilder_ != null) {
+          return votingParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return votingParams_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 6 [json_name = "votingParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.VotingParams, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder, com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder> 
+          getVotingParamsFieldBuilder() {
+        if (votingParamsBuilder_ == null) {
+          votingParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.VotingParams, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder, com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder>(
+                  getVotingParams(),
+                  getParentForChildren(),
+                  isClean());
+          votingParams_ = null;
+        }
+        return votingParamsBuilder_;
+      }
+
+      private com.cosmos.gov.v1beta1.GovProto.TallyParams tallyParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> tallyParamsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       * @return Whether the tallyParams field is set.
+       */
+      public boolean hasTallyParams() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       * @return The tallyParams.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams getTallyParams() {
+        if (tallyParamsBuilder_ == null) {
+          return tallyParams_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+        } else {
+          return tallyParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      public Builder setTallyParams(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (tallyParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tallyParams_ = value;
+        } else {
+          tallyParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      public Builder setTallyParams(
+          com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder builderForValue) {
+        if (tallyParamsBuilder_ == null) {
+          tallyParams_ = builderForValue.build();
+        } else {
+          tallyParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      public Builder mergeTallyParams(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (tallyParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            tallyParams_ != null &&
+            tallyParams_ != com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance()) {
+            getTallyParamsBuilder().mergeFrom(value);
+          } else {
+            tallyParams_ = value;
+          }
+        } else {
+          tallyParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      public Builder clearTallyParams() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        tallyParams_ = null;
+        if (tallyParamsBuilder_ != null) {
+          tallyParamsBuilder_.dispose();
+          tallyParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder getTallyParamsBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getTallyParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getTallyParamsOrBuilder() {
+        if (tallyParamsBuilder_ != null) {
+          return tallyParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return tallyParams_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 7 [json_name = "tallyParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tally_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> 
+          getTallyParamsFieldBuilder() {
+        if (tallyParamsBuilder_ == null) {
+          tallyParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder>(
+                  getTallyParams(),
+                  getParentForChildren(),
+                  isClean());
+          tallyParams_ = null;
+        }
+        return tallyParamsBuilder_;
+      }
+
+      private com.shentu.gov.v1alpha1.GovProto.CustomParams customParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.gov.v1alpha1.GovProto.CustomParams, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder, com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder> customParamsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       * @return Whether the customParams field is set.
+       */
+      public boolean hasCustomParams() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       * @return The customParams.
+       */
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams getCustomParams() {
+        if (customParamsBuilder_ == null) {
+          return customParams_ == null ? com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+        } else {
+          return customParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      public Builder setCustomParams(com.shentu.gov.v1alpha1.GovProto.CustomParams value) {
+        if (customParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customParams_ = value;
+        } else {
+          customParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      public Builder setCustomParams(
+          com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder builderForValue) {
+        if (customParamsBuilder_ == null) {
+          customParams_ = builderForValue.build();
+        } else {
+          customParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      public Builder mergeCustomParams(com.shentu.gov.v1alpha1.GovProto.CustomParams value) {
+        if (customParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            customParams_ != null &&
+            customParams_ != com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance()) {
+            getCustomParamsBuilder().mergeFrom(value);
+          } else {
+            customParams_ = value;
+          }
+        } else {
+          customParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      public Builder clearCustomParams() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        customParams_ = null;
+        if (customParamsBuilder_ != null) {
+          customParamsBuilder_.dispose();
+          customParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder getCustomParamsBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getCustomParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      public com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder getCustomParamsOrBuilder() {
+        if (customParamsBuilder_ != null) {
+          return customParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return customParams_ == null ?
+              com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 8 [json_name = "customParams", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"custom_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.gov.v1alpha1.GovProto.CustomParams, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder, com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder> 
+          getCustomParamsFieldBuilder() {
+        if (customParamsBuilder_ == null) {
+          customParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.gov.v1alpha1.GovProto.CustomParams, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder, com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder>(
+                  getCustomParams(),
+                  getParentForChildren(),
+                  isClean());
+          customParams_ = null;
+        }
+        return customParamsBuilder_;
+      }
+
+      private com.google.protobuf.Internal.LongList certVotedProposalIds_ = emptyLongList();
+      private void ensureCertVotedProposalIdsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          certVotedProposalIds_ = mutableCopy(certVotedProposalIds_);
+          bitField0_ |= 0x00000100;
+        }
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @return A list containing the certVotedProposalIds.
+       */
+      public java.util.List<java.lang.Long>
+          getCertVotedProposalIdsList() {
+        return ((bitField0_ & 0x00000100) != 0) ?
+                 java.util.Collections.unmodifiableList(certVotedProposalIds_) : certVotedProposalIds_;
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @return The count of certVotedProposalIds.
+       */
+      public int getCertVotedProposalIdsCount() {
+        return certVotedProposalIds_.size();
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The certVotedProposalIds at the given index.
+       */
+      public long getCertVotedProposalIds(int index) {
+        return certVotedProposalIds_.getLong(index);
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The certVotedProposalIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertVotedProposalIds(
+          int index, long value) {
+
+        ensureCertVotedProposalIdsIsMutable();
+        certVotedProposalIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @param value The certVotedProposalIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCertVotedProposalIds(long value) {
+
+        ensureCertVotedProposalIdsIsMutable();
+        certVotedProposalIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @param values The certVotedProposalIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCertVotedProposalIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureCertVotedProposalIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, certVotedProposalIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposals that require and have passed cert votes.
+       * </pre>
+       *
+       * <code>repeated uint64 cert_voted_proposal_ids = 9 [json_name = "certVotedProposalIds", (.gogoproto.moretags) = "yaml:&#92;"cert_voted_proposal_ids&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertVotedProposalIds() {
+        certVotedProposalIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.gov.v1alpha1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.gov.v1alpha1.GenesisState)
+    private static final com.shentu.gov.v1alpha1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.gov.v1alpha1.GenesisProto.GenesisState();
+    }
+
+    public static com.shentu.gov.v1alpha1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_gov_v1alpha1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_gov_v1alpha1_GenesisState_fieldAccessorTable;
 
@@ -50,13 +3281,13 @@ public final class GenesisProto {
       "v.v1alpha1.CustomParamsB\034\310\336\037\000\362\336\037\024yaml:\"c" +
       "ustom_params\"R\014customParams\022Y\n\027cert_vote" +
       "d_proposal_ids\030\t \003(\004B\"\362\336\037\036yaml:\"cert_vot" +
-      "ed_proposal_ids\"R\024certVotedProposalIdsB\305" +
+      "ed_proposal_ids\"R\024certVotedProposalIdsB\303" +
       "\001\n\027com.shentu.gov.v1alpha1B\014GenesisProto" +
-      "P\001Z.github.com/shentufoundation/shentu/x" +
-      "/gov/types\242\002\003SGX\252\002\023Shentu.Gov.V1alpha1\312\002" +
-      "\023Shentu\\Gov\\V1alpha1\342\002\037Shentu\\Gov\\V1alph" +
-      "a1\\GPBMetadata\352\002\025Shentu::Gov::V1alpha1b\006" +
-      "proto3"
+      "Z.github.com/shentufoundation/shentu/x/g" +
+      "ov/types\242\002\003SGX\252\002\023Shentu.Gov.V1alpha1\312\002\023S" +
+      "hentu\\Gov\\V1alpha1\342\002\037Shentu\\Gov\\V1alpha1" +
+      "\\GPBMetadata\352\002\025Shentu::Gov::V1alpha1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

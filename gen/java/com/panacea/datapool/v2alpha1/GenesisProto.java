@@ -14,14 +14,3172 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+     * @return The nextPoolNumber.
+     */
+    long getNextPoolNumber();
+
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datapool.v2alpha1.PoolProto.Pool> 
+        getPoolsList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.Pool getPools(int index);
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder getPoolsOrBuilder(
+        int index);
+
+    /**
+     * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.panacea.datapool.v2alpha1.GenesisProto.Params getParams();
+    /**
+     * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> 
+        getDataPassRedeemReceiptsList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDataPassRedeemReceipts(int index);
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataPassRedeemReceiptsCount();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+        getDataPassRedeemReceiptsOrBuilderList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getDataPassRedeemReceiptsOrBuilder(
+        int index);
+
+    /**
+     * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+     * @return Whether the instantRevenueDistribution field is set.
+     */
+    boolean hasInstantRevenueDistribution();
+    /**
+     * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+     * @return The instantRevenueDistribution.
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution getInstantRevenueDistribution();
+    /**
+     * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder getInstantRevenueDistributionOrBuilder();
+
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    java.util.List<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory> 
+        getSalesHistoriesList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.SalesHistory getSalesHistories(int index);
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    int getSalesHistoriesCount();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder> 
+        getSalesHistoriesOrBuilderList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder getSalesHistoriesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory> 
+        getDataPassRedeemHistoriesList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory getDataPassRedeemHistories(int index);
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataPassRedeemHistoriesCount();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder> 
+        getDataPassRedeemHistoriesOrBuilderList();
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder getDataPassRedeemHistoriesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the datapool module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      pools_ = java.util.Collections.emptyList();
+      dataPassRedeemReceipts_ = java.util.Collections.emptyList();
+      salesHistories_ = java.util.Collections.emptyList();
+      dataPassRedeemHistories_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.class, com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int NEXT_POOL_NUMBER_FIELD_NUMBER = 2;
+    private long nextPoolNumber_ = 0L;
+    /**
+     * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+     * @return The nextPoolNumber.
+     */
+    @java.lang.Override
+    public long getNextPoolNumber() {
+      return nextPoolNumber_;
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.Pool> pools_;
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.Pool> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.Pool getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 4;
+    private com.panacea.datapool.v2alpha1.GenesisProto.Params params_;
+    /**
+     * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.GenesisProto.Params getParams() {
+      return params_ == null ? com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int DATA_PASS_REDEEM_RECEIPTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> dataPassRedeemReceipts_;
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> getDataPassRedeemReceiptsList() {
+      return dataPassRedeemReceipts_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+        getDataPassRedeemReceiptsOrBuilderList() {
+      return dataPassRedeemReceipts_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataPassRedeemReceiptsCount() {
+      return dataPassRedeemReceipts_.size();
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDataPassRedeemReceipts(int index) {
+      return dataPassRedeemReceipts_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getDataPassRedeemReceiptsOrBuilder(
+        int index) {
+      return dataPassRedeemReceipts_.get(index);
+    }
+
+    public static final int INSTANT_REVENUE_DISTRIBUTION_FIELD_NUMBER = 6;
+    private com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution instantRevenueDistribution_;
+    /**
+     * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+     * @return Whether the instantRevenueDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasInstantRevenueDistribution() {
+      return instantRevenueDistribution_ != null;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+     * @return The instantRevenueDistribution.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution getInstantRevenueDistribution() {
+      return instantRevenueDistribution_ == null ? com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance() : instantRevenueDistribution_;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder getInstantRevenueDistributionOrBuilder() {
+      return instantRevenueDistribution_ == null ? com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance() : instantRevenueDistribution_;
+    }
+
+    public static final int SALES_HISTORIES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory> salesHistories_;
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory> getSalesHistoriesList() {
+      return salesHistories_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder> 
+        getSalesHistoriesOrBuilderList() {
+      return salesHistories_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    @java.lang.Override
+    public int getSalesHistoriesCount() {
+      return salesHistories_.size();
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory getSalesHistories(int index) {
+      return salesHistories_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder getSalesHistoriesOrBuilder(
+        int index) {
+      return salesHistories_.get(index);
+    }
+
+    public static final int DATA_PASS_REDEEM_HISTORIES_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory> dataPassRedeemHistories_;
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory> getDataPassRedeemHistoriesList() {
+      return dataPassRedeemHistories_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder> 
+        getDataPassRedeemHistoriesOrBuilderList() {
+      return dataPassRedeemHistories_;
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataPassRedeemHistoriesCount() {
+      return dataPassRedeemHistories_.size();
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory getDataPassRedeemHistories(int index) {
+      return dataPassRedeemHistories_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder getDataPassRedeemHistoriesOrBuilder(
+        int index) {
+      return dataPassRedeemHistories_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (nextPoolNumber_ != 0L) {
+        output.writeUInt64(2, nextPoolNumber_);
+      }
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(3, pools_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(4, getParams());
+      }
+      for (int i = 0; i < dataPassRedeemReceipts_.size(); i++) {
+        output.writeMessage(5, dataPassRedeemReceipts_.get(i));
+      }
+      if (instantRevenueDistribution_ != null) {
+        output.writeMessage(6, getInstantRevenueDistribution());
+      }
+      for (int i = 0; i < salesHistories_.size(); i++) {
+        output.writeMessage(7, salesHistories_.get(i));
+      }
+      for (int i = 0; i < dataPassRedeemHistories_.size(); i++) {
+        output.writeMessage(8, dataPassRedeemHistories_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (nextPoolNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, nextPoolNumber_);
+      }
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, pools_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getParams());
+      }
+      for (int i = 0; i < dataPassRedeemReceipts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, dataPassRedeemReceipts_.get(i));
+      }
+      if (instantRevenueDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getInstantRevenueDistribution());
+      }
+      for (int i = 0; i < salesHistories_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, salesHistories_.get(i));
+      }
+      for (int i = 0; i < dataPassRedeemHistories_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, dataPassRedeemHistories_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.GenesisProto.GenesisState other = (com.panacea.datapool.v2alpha1.GenesisProto.GenesisState) obj;
+
+      if (getNextPoolNumber()
+          != other.getNextPoolNumber()) return false;
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getDataPassRedeemReceiptsList()
+          .equals(other.getDataPassRedeemReceiptsList())) return false;
+      if (hasInstantRevenueDistribution() != other.hasInstantRevenueDistribution()) return false;
+      if (hasInstantRevenueDistribution()) {
+        if (!getInstantRevenueDistribution()
+            .equals(other.getInstantRevenueDistribution())) return false;
+      }
+      if (!getSalesHistoriesList()
+          .equals(other.getSalesHistoriesList())) return false;
+      if (!getDataPassRedeemHistoriesList()
+          .equals(other.getDataPassRedeemHistoriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NEXT_POOL_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNextPoolNumber());
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getDataPassRedeemReceiptsCount() > 0) {
+        hash = (37 * hash) + DATA_PASS_REDEEM_RECEIPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataPassRedeemReceiptsList().hashCode();
+      }
+      if (hasInstantRevenueDistribution()) {
+        hash = (37 * hash) + INSTANT_REVENUE_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getInstantRevenueDistribution().hashCode();
+      }
+      if (getSalesHistoriesCount() > 0) {
+        hash = (37 * hash) + SALES_HISTORIES_FIELD_NUMBER;
+        hash = (53 * hash) + getSalesHistoriesList().hashCode();
+      }
+      if (getDataPassRedeemHistoriesCount() > 0) {
+        hash = (37 * hash) + DATA_PASS_REDEEM_HISTORIES_FIELD_NUMBER;
+        hash = (53 * hash) + getDataPassRedeemHistoriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the datapool module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.GenesisState)
+        com.panacea.datapool.v2alpha1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.class, com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        nextPoolNumber_ = 0L;
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          dataPassRedeemReceipts_ = java.util.Collections.emptyList();
+        } else {
+          dataPassRedeemReceipts_ = null;
+          dataPassRedeemReceiptsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        instantRevenueDistribution_ = null;
+        if (instantRevenueDistributionBuilder_ != null) {
+          instantRevenueDistributionBuilder_.dispose();
+          instantRevenueDistributionBuilder_ = null;
+        }
+        if (salesHistoriesBuilder_ == null) {
+          salesHistories_ = java.util.Collections.emptyList();
+        } else {
+          salesHistories_ = null;
+          salesHistoriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          dataPassRedeemHistories_ = java.util.Collections.emptyList();
+        } else {
+          dataPassRedeemHistories_ = null;
+          dataPassRedeemHistoriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.GenesisProto.GenesisState build() {
+        com.panacea.datapool.v2alpha1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.GenesisProto.GenesisState buildPartial() {
+        com.panacea.datapool.v2alpha1.GenesisProto.GenesisState result = new com.panacea.datapool.v2alpha1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.datapool.v2alpha1.GenesisProto.GenesisState result) {
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            dataPassRedeemReceipts_ = java.util.Collections.unmodifiableList(dataPassRedeemReceipts_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.dataPassRedeemReceipts_ = dataPassRedeemReceipts_;
+        } else {
+          result.dataPassRedeemReceipts_ = dataPassRedeemReceiptsBuilder_.build();
+        }
+        if (salesHistoriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            salesHistories_ = java.util.Collections.unmodifiableList(salesHistories_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.salesHistories_ = salesHistories_;
+        } else {
+          result.salesHistories_ = salesHistoriesBuilder_.build();
+        }
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            dataPassRedeemHistories_ = java.util.Collections.unmodifiableList(dataPassRedeemHistories_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.dataPassRedeemHistories_ = dataPassRedeemHistories_;
+        } else {
+          result.dataPassRedeemHistories_ = dataPassRedeemHistoriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.nextPoolNumber_ = nextPoolNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.instantRevenueDistribution_ = instantRevenueDistributionBuilder_ == null
+              ? instantRevenueDistribution_
+              : instantRevenueDistributionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.GenesisProto.GenesisState) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.GenesisProto.GenesisState other) {
+        if (other == com.panacea.datapool.v2alpha1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.getNextPoolNumber() != 0L) {
+          setNextPoolNumber(other.getNextPoolNumber());
+        }
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (!other.dataPassRedeemReceipts_.isEmpty()) {
+            if (dataPassRedeemReceipts_.isEmpty()) {
+              dataPassRedeemReceipts_ = other.dataPassRedeemReceipts_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureDataPassRedeemReceiptsIsMutable();
+              dataPassRedeemReceipts_.addAll(other.dataPassRedeemReceipts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataPassRedeemReceipts_.isEmpty()) {
+            if (dataPassRedeemReceiptsBuilder_.isEmpty()) {
+              dataPassRedeemReceiptsBuilder_.dispose();
+              dataPassRedeemReceiptsBuilder_ = null;
+              dataPassRedeemReceipts_ = other.dataPassRedeemReceipts_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              dataPassRedeemReceiptsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataPassRedeemReceiptsFieldBuilder() : null;
+            } else {
+              dataPassRedeemReceiptsBuilder_.addAllMessages(other.dataPassRedeemReceipts_);
+            }
+          }
+        }
+        if (other.hasInstantRevenueDistribution()) {
+          mergeInstantRevenueDistribution(other.getInstantRevenueDistribution());
+        }
+        if (salesHistoriesBuilder_ == null) {
+          if (!other.salesHistories_.isEmpty()) {
+            if (salesHistories_.isEmpty()) {
+              salesHistories_ = other.salesHistories_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureSalesHistoriesIsMutable();
+              salesHistories_.addAll(other.salesHistories_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.salesHistories_.isEmpty()) {
+            if (salesHistoriesBuilder_.isEmpty()) {
+              salesHistoriesBuilder_.dispose();
+              salesHistoriesBuilder_ = null;
+              salesHistories_ = other.salesHistories_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              salesHistoriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSalesHistoriesFieldBuilder() : null;
+            } else {
+              salesHistoriesBuilder_.addAllMessages(other.salesHistories_);
+            }
+          }
+        }
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          if (!other.dataPassRedeemHistories_.isEmpty()) {
+            if (dataPassRedeemHistories_.isEmpty()) {
+              dataPassRedeemHistories_ = other.dataPassRedeemHistories_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureDataPassRedeemHistoriesIsMutable();
+              dataPassRedeemHistories_.addAll(other.dataPassRedeemHistories_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataPassRedeemHistories_.isEmpty()) {
+            if (dataPassRedeemHistoriesBuilder_.isEmpty()) {
+              dataPassRedeemHistoriesBuilder_.dispose();
+              dataPassRedeemHistoriesBuilder_ = null;
+              dataPassRedeemHistories_ = other.dataPassRedeemHistories_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              dataPassRedeemHistoriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataPassRedeemHistoriesFieldBuilder() : null;
+            } else {
+              dataPassRedeemHistoriesBuilder_.addAllMessages(other.dataPassRedeemHistories_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                nextPoolNumber_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 16
+              case 26: {
+                com.panacea.datapool.v2alpha1.PoolProto.Pool m =
+                    input.readMessage(
+                        com.panacea.datapool.v2alpha1.PoolProto.Pool.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              case 42: {
+                com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt m =
+                    input.readMessage(
+                        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.parser(),
+                        extensionRegistry);
+                if (dataPassRedeemReceiptsBuilder_ == null) {
+                  ensureDataPassRedeemReceiptsIsMutable();
+                  dataPassRedeemReceipts_.add(m);
+                } else {
+                  dataPassRedeemReceiptsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getInstantRevenueDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              case 58: {
+                com.panacea.datapool.v2alpha1.PoolProto.SalesHistory m =
+                    input.readMessage(
+                        com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.parser(),
+                        extensionRegistry);
+                if (salesHistoriesBuilder_ == null) {
+                  ensureSalesHistoriesIsMutable();
+                  salesHistories_.add(m);
+                } else {
+                  salesHistoriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory m =
+                    input.readMessage(
+                        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.parser(),
+                        extensionRegistry);
+                if (dataPassRedeemHistoriesBuilder_ == null) {
+                  ensureDataPassRedeemHistoriesIsMutable();
+                  dataPassRedeemHistories_.add(m);
+                } else {
+                  dataPassRedeemHistoriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long nextPoolNumber_ ;
+      /**
+       * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+       * @return The nextPoolNumber.
+       */
+      @java.lang.Override
+      public long getNextPoolNumber() {
+        return nextPoolNumber_;
+      }
+      /**
+       * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+       * @param value The nextPoolNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPoolNumber(long value) {
+
+        nextPoolNumber_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPoolNumber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nextPoolNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.Pool> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          pools_ = new java.util.ArrayList<com.panacea.datapool.v2alpha1.PoolProto.Pool>(pools_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.Pool, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.Pool> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPools(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(com.panacea.datapool.v2alpha1.PoolProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.Pool value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPools(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.panacea.datapool.v2alpha1.PoolProto.Pool> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.panacea.datapool.v2alpha1.PoolProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.panacea.datapool.v2alpha1.PoolProto.Pool.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.Pool pools = 3 [json_name = "pools", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.Pool, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.Pool, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
+      }
+
+      private com.panacea.datapool.v2alpha1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.GenesisProto.Params, com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder, com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.panacea.datapool.v2alpha1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.panacea.datapool.v2alpha1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.panacea.datapool.v2alpha1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            params_ != null &&
+            params_ != com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.GenesisProto.Params, com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder, com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.GenesisProto.Params, com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder, com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> dataPassRedeemReceipts_ =
+        java.util.Collections.emptyList();
+      private void ensureDataPassRedeemReceiptsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          dataPassRedeemReceipts_ = new java.util.ArrayList<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt>(dataPassRedeemReceipts_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> dataPassRedeemReceiptsBuilder_;
+
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> getDataPassRedeemReceiptsList() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataPassRedeemReceipts_);
+        } else {
+          return dataPassRedeemReceiptsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataPassRedeemReceiptsCount() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return dataPassRedeemReceipts_.size();
+        } else {
+          return dataPassRedeemReceiptsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDataPassRedeemReceipts(int index) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return dataPassRedeemReceipts_.get(index);
+        } else {
+          return dataPassRedeemReceiptsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.set(index, value);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(value);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(index, value);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataPassRedeemReceipts(
+          java.lang.Iterable<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> values) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataPassRedeemReceipts_);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataPassRedeemReceipts() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          dataPassRedeemReceipts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataPassRedeemReceipts(int index) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.remove(index);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder getDataPassRedeemReceiptsBuilder(
+          int index) {
+        return getDataPassRedeemReceiptsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getDataPassRedeemReceiptsOrBuilder(
+          int index) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return dataPassRedeemReceipts_.get(index);  } else {
+          return dataPassRedeemReceiptsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+           getDataPassRedeemReceiptsOrBuilderList() {
+        if (dataPassRedeemReceiptsBuilder_ != null) {
+          return dataPassRedeemReceiptsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataPassRedeemReceipts_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder addDataPassRedeemReceiptsBuilder() {
+        return getDataPassRedeemReceiptsFieldBuilder().addBuilder(
+            com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder addDataPassRedeemReceiptsBuilder(
+          int index) {
+        return getDataPassRedeemReceiptsFieldBuilder().addBuilder(
+            index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 5 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder> 
+           getDataPassRedeemReceiptsBuilderList() {
+        return getDataPassRedeemReceiptsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+          getDataPassRedeemReceiptsFieldBuilder() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          dataPassRedeemReceiptsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder>(
+                  dataPassRedeemReceipts_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataPassRedeemReceipts_ = null;
+        }
+        return dataPassRedeemReceiptsBuilder_;
+      }
+
+      private com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution instantRevenueDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder> instantRevenueDistributionBuilder_;
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       * @return Whether the instantRevenueDistribution field is set.
+       */
+      public boolean hasInstantRevenueDistribution() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       * @return The instantRevenueDistribution.
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution getInstantRevenueDistribution() {
+        if (instantRevenueDistributionBuilder_ == null) {
+          return instantRevenueDistribution_ == null ? com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance() : instantRevenueDistribution_;
+        } else {
+          return instantRevenueDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInstantRevenueDistribution(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution value) {
+        if (instantRevenueDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          instantRevenueDistribution_ = value;
+        } else {
+          instantRevenueDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInstantRevenueDistribution(
+          com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder builderForValue) {
+        if (instantRevenueDistributionBuilder_ == null) {
+          instantRevenueDistribution_ = builderForValue.build();
+        } else {
+          instantRevenueDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeInstantRevenueDistribution(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution value) {
+        if (instantRevenueDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            instantRevenueDistribution_ != null &&
+            instantRevenueDistribution_ != com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance()) {
+            getInstantRevenueDistributionBuilder().mergeFrom(value);
+          } else {
+            instantRevenueDistribution_ = value;
+          }
+        } else {
+          instantRevenueDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearInstantRevenueDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        instantRevenueDistribution_ = null;
+        if (instantRevenueDistributionBuilder_ != null) {
+          instantRevenueDistributionBuilder_.dispose();
+          instantRevenueDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder getInstantRevenueDistributionBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getInstantRevenueDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder getInstantRevenueDistributionOrBuilder() {
+        if (instantRevenueDistributionBuilder_ != null) {
+          return instantRevenueDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return instantRevenueDistribution_ == null ?
+              com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance() : instantRevenueDistribution_;
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.InstantRevenueDistribution instant_revenue_distribution = 6 [json_name = "instantRevenueDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder> 
+          getInstantRevenueDistributionFieldBuilder() {
+        if (instantRevenueDistributionBuilder_ == null) {
+          instantRevenueDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder>(
+                  getInstantRevenueDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          instantRevenueDistribution_ = null;
+        }
+        return instantRevenueDistributionBuilder_;
+      }
+
+      private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory> salesHistories_ =
+        java.util.Collections.emptyList();
+      private void ensureSalesHistoriesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          salesHistories_ = new java.util.ArrayList<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory>(salesHistories_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.SalesHistory, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder, com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder> salesHistoriesBuilder_;
+
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory> getSalesHistoriesList() {
+        if (salesHistoriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(salesHistories_);
+        } else {
+          return salesHistoriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public int getSalesHistoriesCount() {
+        if (salesHistoriesBuilder_ == null) {
+          return salesHistories_.size();
+        } else {
+          return salesHistoriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory getSalesHistories(int index) {
+        if (salesHistoriesBuilder_ == null) {
+          return salesHistories_.get(index);
+        } else {
+          return salesHistoriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder setSalesHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory value) {
+        if (salesHistoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.set(index, value);
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder setSalesHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder builderForValue) {
+        if (salesHistoriesBuilder_ == null) {
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder addSalesHistories(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory value) {
+        if (salesHistoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.add(value);
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder addSalesHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory value) {
+        if (salesHistoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.add(index, value);
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder addSalesHistories(
+          com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder builderForValue) {
+        if (salesHistoriesBuilder_ == null) {
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.add(builderForValue.build());
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder addSalesHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder builderForValue) {
+        if (salesHistoriesBuilder_ == null) {
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder addAllSalesHistories(
+          java.lang.Iterable<? extends com.panacea.datapool.v2alpha1.PoolProto.SalesHistory> values) {
+        if (salesHistoriesBuilder_ == null) {
+          ensureSalesHistoriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, salesHistories_);
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder clearSalesHistories() {
+        if (salesHistoriesBuilder_ == null) {
+          salesHistories_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public Builder removeSalesHistories(int index) {
+        if (salesHistoriesBuilder_ == null) {
+          ensureSalesHistoriesIsMutable();
+          salesHistories_.remove(index);
+          onChanged();
+        } else {
+          salesHistoriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder getSalesHistoriesBuilder(
+          int index) {
+        return getSalesHistoriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder getSalesHistoriesOrBuilder(
+          int index) {
+        if (salesHistoriesBuilder_ == null) {
+          return salesHistories_.get(index);  } else {
+          return salesHistoriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder> 
+           getSalesHistoriesOrBuilderList() {
+        if (salesHistoriesBuilder_ != null) {
+          return salesHistoriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(salesHistories_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder addSalesHistoriesBuilder() {
+        return getSalesHistoriesFieldBuilder().addBuilder(
+            com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder addSalesHistoriesBuilder(
+          int index) {
+        return getSalesHistoriesFieldBuilder().addBuilder(
+            index, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.SalesHistory sales_histories = 7 [json_name = "salesHistories"];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder> 
+           getSalesHistoriesBuilderList() {
+        return getSalesHistoriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.SalesHistory, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder, com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder> 
+          getSalesHistoriesFieldBuilder() {
+        if (salesHistoriesBuilder_ == null) {
+          salesHistoriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.SalesHistory, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder, com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder>(
+                  salesHistories_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          salesHistories_ = null;
+        }
+        return salesHistoriesBuilder_;
+      }
+
+      private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory> dataPassRedeemHistories_ =
+        java.util.Collections.emptyList();
+      private void ensureDataPassRedeemHistoriesIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          dataPassRedeemHistories_ = new java.util.ArrayList<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory>(dataPassRedeemHistories_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder> dataPassRedeemHistoriesBuilder_;
+
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory> getDataPassRedeemHistoriesList() {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataPassRedeemHistories_);
+        } else {
+          return dataPassRedeemHistoriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataPassRedeemHistoriesCount() {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          return dataPassRedeemHistories_.size();
+        } else {
+          return dataPassRedeemHistoriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory getDataPassRedeemHistories(int index) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          return dataPassRedeemHistories_.get(index);
+        } else {
+          return dataPassRedeemHistoriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataPassRedeemHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory value) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.set(index, value);
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataPassRedeemHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder builderForValue) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemHistories(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory value) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.add(value);
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory value) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.add(index, value);
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemHistories(
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder builderForValue) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemHistories(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder builderForValue) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataPassRedeemHistories(
+          java.lang.Iterable<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory> values) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          ensureDataPassRedeemHistoriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataPassRedeemHistories_);
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataPassRedeemHistories() {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          dataPassRedeemHistories_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataPassRedeemHistories(int index) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          ensureDataPassRedeemHistoriesIsMutable();
+          dataPassRedeemHistories_.remove(index);
+          onChanged();
+        } else {
+          dataPassRedeemHistoriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder getDataPassRedeemHistoriesBuilder(
+          int index) {
+        return getDataPassRedeemHistoriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder getDataPassRedeemHistoriesOrBuilder(
+          int index) {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          return dataPassRedeemHistories_.get(index);  } else {
+          return dataPassRedeemHistoriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder> 
+           getDataPassRedeemHistoriesOrBuilderList() {
+        if (dataPassRedeemHistoriesBuilder_ != null) {
+          return dataPassRedeemHistoriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataPassRedeemHistories_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder addDataPassRedeemHistoriesBuilder() {
+        return getDataPassRedeemHistoriesFieldBuilder().addBuilder(
+            com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder addDataPassRedeemHistoriesBuilder(
+          int index) {
+        return getDataPassRedeemHistoriesFieldBuilder().addBuilder(
+            index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemHistory data_pass_redeem_histories = 8 [json_name = "dataPassRedeemHistories", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder> 
+           getDataPassRedeemHistoriesBuilderList() {
+        return getDataPassRedeemHistoriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder> 
+          getDataPassRedeemHistoriesFieldBuilder() {
+        if (dataPassRedeemHistoriesBuilder_ == null) {
+          dataPassRedeemHistoriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder>(
+                  dataPassRedeemHistories_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataPassRedeemHistories_ = null;
+        }
+        return dataPassRedeemHistoriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.GenesisState)
+    private static final com.panacea.datapool.v2alpha1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.GenesisProto.GenesisState();
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+     * @return The dataPoolCommissionRate.
+     */
+    java.lang.String getDataPoolCommissionRate();
+    /**
+     * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+     * @return The bytes for dataPoolCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getDataPoolCommissionRateBytes();
+
+    /**
+     * <code>uint64 data_pool_code_id = 2 [json_name = "dataPoolCodeId"];</code>
+     * @return The dataPoolCodeId.
+     */
+    long getDataPoolCodeId();
+
+    /**
+     * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+     * @return The dataPoolNftContractAddress.
+     */
+    java.lang.String getDataPoolNftContractAddress();
+    /**
+     * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+     * @return The bytes for dataPoolNftContractAddress.
+     */
+    com.google.protobuf.ByteString
+        getDataPoolNftContractAddressBytes();
+  }
+  /**
+   * <pre>
+   * Params define parameters of datapool module
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      dataPoolCommissionRate_ = "";
+      dataPoolNftContractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.GenesisProto.Params.class, com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int DATA_POOL_COMMISSION_RATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataPoolCommissionRate_ = "";
+    /**
+     * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+     * @return The dataPoolCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getDataPoolCommissionRate() {
+      java.lang.Object ref = dataPoolCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataPoolCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+     * @return The bytes for dataPoolCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataPoolCommissionRateBytes() {
+      java.lang.Object ref = dataPoolCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataPoolCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_POOL_CODE_ID_FIELD_NUMBER = 2;
+    private long dataPoolCodeId_ = 0L;
+    /**
+     * <code>uint64 data_pool_code_id = 2 [json_name = "dataPoolCodeId"];</code>
+     * @return The dataPoolCodeId.
+     */
+    @java.lang.Override
+    public long getDataPoolCodeId() {
+      return dataPoolCodeId_;
+    }
+
+    public static final int DATA_POOL_NFT_CONTRACT_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataPoolNftContractAddress_ = "";
+    /**
+     * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+     * @return The dataPoolNftContractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDataPoolNftContractAddress() {
+      java.lang.Object ref = dataPoolNftContractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataPoolNftContractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+     * @return The bytes for dataPoolNftContractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataPoolNftContractAddressBytes() {
+      java.lang.Object ref = dataPoolNftContractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataPoolNftContractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataPoolCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataPoolCommissionRate_);
+      }
+      if (dataPoolCodeId_ != 0L) {
+        output.writeUInt64(2, dataPoolCodeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataPoolNftContractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, dataPoolNftContractAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataPoolCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataPoolCommissionRate_);
+      }
+      if (dataPoolCodeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, dataPoolCodeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataPoolNftContractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, dataPoolNftContractAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.GenesisProto.Params other = (com.panacea.datapool.v2alpha1.GenesisProto.Params) obj;
+
+      if (!getDataPoolCommissionRate()
+          .equals(other.getDataPoolCommissionRate())) return false;
+      if (getDataPoolCodeId()
+          != other.getDataPoolCodeId()) return false;
+      if (!getDataPoolNftContractAddress()
+          .equals(other.getDataPoolNftContractAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_POOL_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDataPoolCommissionRate().hashCode();
+      hash = (37 * hash) + DATA_POOL_CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDataPoolCodeId());
+      hash = (37 * hash) + DATA_POOL_NFT_CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDataPoolNftContractAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params define parameters of datapool module
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.Params)
+        com.panacea.datapool.v2alpha1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.GenesisProto.Params.class, com.panacea.datapool.v2alpha1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dataPoolCommissionRate_ = "";
+        dataPoolCodeId_ = 0L;
+        dataPoolNftContractAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.internal_static_panacea_datapool_v2alpha1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.GenesisProto.Params build() {
+        com.panacea.datapool.v2alpha1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.GenesisProto.Params buildPartial() {
+        com.panacea.datapool.v2alpha1.GenesisProto.Params result = new com.panacea.datapool.v2alpha1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataPoolCommissionRate_ = dataPoolCommissionRate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dataPoolCodeId_ = dataPoolCodeId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.dataPoolNftContractAddress_ = dataPoolNftContractAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.GenesisProto.Params) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.GenesisProto.Params other) {
+        if (other == com.panacea.datapool.v2alpha1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (!other.getDataPoolCommissionRate().isEmpty()) {
+          dataPoolCommissionRate_ = other.dataPoolCommissionRate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getDataPoolCodeId() != 0L) {
+          setDataPoolCodeId(other.getDataPoolCodeId());
+        }
+        if (!other.getDataPoolNftContractAddress().isEmpty()) {
+          dataPoolNftContractAddress_ = other.dataPoolNftContractAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                dataPoolCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                dataPoolCodeId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                dataPoolNftContractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dataPoolCommissionRate_ = "";
+      /**
+       * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+       * @return The dataPoolCommissionRate.
+       */
+      public java.lang.String getDataPoolCommissionRate() {
+        java.lang.Object ref = dataPoolCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataPoolCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+       * @return The bytes for dataPoolCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getDataPoolCommissionRateBytes() {
+        java.lang.Object ref = dataPoolCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataPoolCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+       * @param value The dataPoolCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPoolCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataPoolCommissionRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataPoolCommissionRate() {
+        dataPoolCommissionRate_ = getDefaultInstance().getDataPoolCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_pool_commission_rate = 1 [json_name = "dataPoolCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"data_pool_commission_rate&#92;""];</code>
+       * @param value The bytes for dataPoolCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPoolCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataPoolCommissionRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long dataPoolCodeId_ ;
+      /**
+       * <code>uint64 data_pool_code_id = 2 [json_name = "dataPoolCodeId"];</code>
+       * @return The dataPoolCodeId.
+       */
+      @java.lang.Override
+      public long getDataPoolCodeId() {
+        return dataPoolCodeId_;
+      }
+      /**
+       * <code>uint64 data_pool_code_id = 2 [json_name = "dataPoolCodeId"];</code>
+       * @param value The dataPoolCodeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPoolCodeId(long value) {
+
+        dataPoolCodeId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 data_pool_code_id = 2 [json_name = "dataPoolCodeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataPoolCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dataPoolCodeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataPoolNftContractAddress_ = "";
+      /**
+       * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+       * @return The dataPoolNftContractAddress.
+       */
+      public java.lang.String getDataPoolNftContractAddress() {
+        java.lang.Object ref = dataPoolNftContractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataPoolNftContractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+       * @return The bytes for dataPoolNftContractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDataPoolNftContractAddressBytes() {
+        java.lang.Object ref = dataPoolNftContractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataPoolNftContractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+       * @param value The dataPoolNftContractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPoolNftContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataPoolNftContractAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataPoolNftContractAddress() {
+        dataPoolNftContractAddress_ = getDefaultInstance().getDataPoolNftContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_pool_nft_contract_address = 3 [json_name = "dataPoolNftContractAddress"];</code>
+       * @param value The bytes for dataPoolNftContractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPoolNftContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataPoolNftContractAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.Params)
+    private static final com.panacea.datapool.v2alpha1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.GenesisProto.Params();
+    }
+
+    public static com.panacea.datapool.v2alpha1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_Params_fieldAccessorTable;
 
@@ -58,13 +3216,13 @@ public final class GenesisProto {
       "rate\"R\026dataPoolCommissionRate\022)\n\021data_po" +
       "ol_code_id\030\002 \001(\004R\016dataPoolCodeId\022B\n\036data" +
       "_pool_nft_contract_address\030\003 \001(\tR\032dataPo" +
-      "olNftContractAddressB\351\001\n\035com.panacea.dat" +
-      "apool.v2alpha1B\014GenesisProtoP\001Z4github.c" +
-      "om/medibloc/panacea-core/v2/x/datapool/t" +
-      "ypes\242\002\003PDX\252\002\031Panacea.Datapool.V2alpha1\312\002" +
-      "\031Panacea\\Datapool\\V2alpha1\342\002%Panacea\\Dat" +
-      "apool\\V2alpha1\\GPBMetadata\352\002\033Panacea::Da" +
-      "tapool::V2alpha1b\006proto3"
+      "olNftContractAddressB\347\001\n\035com.panacea.dat" +
+      "apool.v2alpha1B\014GenesisProtoZ4github.com" +
+      "/medibloc/panacea-core/v2/x/datapool/typ" +
+      "es\242\002\003PDX\252\002\031Panacea.Datapool.V2alpha1\312\002\031P" +
+      "anacea\\Datapool\\V2alpha1\342\002%Panacea\\Datap" +
+      "ool\\V2alpha1\\GPBMetadata\352\002\033Panacea::Data" +
+      "pool::V2alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

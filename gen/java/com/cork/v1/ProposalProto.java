@@ -14,24 +14,3956 @@ public final class ProposalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AddManagedCellarIDsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cork.v1.AddManagedCellarIDsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return Whether the cellarIds field is set.
+     */
+    boolean hasCellarIds();
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The cellarIds.
+     */
+    com.cork.v1.CorkProto.CellarIDSet getCellarIds();
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     */
+    com.cork.v1.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cork.v1.AddManagedCellarIDsProposal}
+   */
+  public static final class AddManagedCellarIDsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cork.v1.AddManagedCellarIDsProposal)
+      AddManagedCellarIDsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddManagedCellarIDsProposal.newBuilder() to construct.
+    private AddManagedCellarIDsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddManagedCellarIDsProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddManagedCellarIDsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.class, com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELLAR_IDS_FIELD_NUMBER = 3;
+    private com.cork.v1.CorkProto.CellarIDSet cellarIds_;
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return Whether the cellarIds field is set.
+     */
+    @java.lang.Override
+    public boolean hasCellarIds() {
+      return cellarIds_ != null;
+    }
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The cellarIds.
+     */
+    @java.lang.Override
+    public com.cork.v1.CorkProto.CellarIDSet getCellarIds() {
+      return cellarIds_ == null ? com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+    }
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     */
+    @java.lang.Override
+    public com.cork.v1.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder() {
+      return cellarIds_ == null ? com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (cellarIds_ != null) {
+        output.writeMessage(3, getCellarIds());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (cellarIds_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCellarIds());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cork.v1.ProposalProto.AddManagedCellarIDsProposal)) {
+        return super.equals(obj);
+      }
+      com.cork.v1.ProposalProto.AddManagedCellarIDsProposal other = (com.cork.v1.ProposalProto.AddManagedCellarIDsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasCellarIds() != other.hasCellarIds()) return false;
+      if (hasCellarIds()) {
+        if (!getCellarIds()
+            .equals(other.getCellarIds())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasCellarIds()) {
+        hash = (37 * hash) + CELLAR_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellarIds().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cork.v1.ProposalProto.AddManagedCellarIDsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cork.v1.AddManagedCellarIDsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cork.v1.AddManagedCellarIDsProposal)
+        com.cork.v1.ProposalProto.AddManagedCellarIDsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.class, com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.Builder.class);
+      }
+
+      // Construct using com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        cellarIds_ = null;
+        if (cellarIdsBuilder_ != null) {
+          cellarIdsBuilder_.dispose();
+          cellarIdsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.AddManagedCellarIDsProposal getDefaultInstanceForType() {
+        return com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.AddManagedCellarIDsProposal build() {
+        com.cork.v1.ProposalProto.AddManagedCellarIDsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.AddManagedCellarIDsProposal buildPartial() {
+        com.cork.v1.ProposalProto.AddManagedCellarIDsProposal result = new com.cork.v1.ProposalProto.AddManagedCellarIDsProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cork.v1.ProposalProto.AddManagedCellarIDsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cellarIds_ = cellarIdsBuilder_ == null
+              ? cellarIds_
+              : cellarIdsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cork.v1.ProposalProto.AddManagedCellarIDsProposal) {
+          return mergeFrom((com.cork.v1.ProposalProto.AddManagedCellarIDsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cork.v1.ProposalProto.AddManagedCellarIDsProposal other) {
+        if (other == com.cork.v1.ProposalProto.AddManagedCellarIDsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCellarIds()) {
+          mergeCellarIds(other.getCellarIds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCellarIdsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cork.v1.CorkProto.CellarIDSet cellarIds_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v1.CorkProto.CellarIDSet, com.cork.v1.CorkProto.CellarIDSet.Builder, com.cork.v1.CorkProto.CellarIDSetOrBuilder> cellarIdsBuilder_;
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return Whether the cellarIds field is set.
+       */
+      public boolean hasCellarIds() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return The cellarIds.
+       */
+      public com.cork.v1.CorkProto.CellarIDSet getCellarIds() {
+        if (cellarIdsBuilder_ == null) {
+          return cellarIds_ == null ? com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+        } else {
+          return cellarIdsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder setCellarIds(com.cork.v1.CorkProto.CellarIDSet value) {
+        if (cellarIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cellarIds_ = value;
+        } else {
+          cellarIdsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder setCellarIds(
+          com.cork.v1.CorkProto.CellarIDSet.Builder builderForValue) {
+        if (cellarIdsBuilder_ == null) {
+          cellarIds_ = builderForValue.build();
+        } else {
+          cellarIdsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder mergeCellarIds(com.cork.v1.CorkProto.CellarIDSet value) {
+        if (cellarIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            cellarIds_ != null &&
+            cellarIds_ != com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance()) {
+            getCellarIdsBuilder().mergeFrom(value);
+          } else {
+            cellarIds_ = value;
+          }
+        } else {
+          cellarIdsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder clearCellarIds() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cellarIds_ = null;
+        if (cellarIdsBuilder_ != null) {
+          cellarIdsBuilder_.dispose();
+          cellarIdsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public com.cork.v1.CorkProto.CellarIDSet.Builder getCellarIdsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCellarIdsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public com.cork.v1.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder() {
+        if (cellarIdsBuilder_ != null) {
+          return cellarIdsBuilder_.getMessageOrBuilder();
+        } else {
+          return cellarIds_ == null ?
+              com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+        }
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v1.CorkProto.CellarIDSet, com.cork.v1.CorkProto.CellarIDSet.Builder, com.cork.v1.CorkProto.CellarIDSetOrBuilder> 
+          getCellarIdsFieldBuilder() {
+        if (cellarIdsBuilder_ == null) {
+          cellarIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cork.v1.CorkProto.CellarIDSet, com.cork.v1.CorkProto.CellarIDSet.Builder, com.cork.v1.CorkProto.CellarIDSetOrBuilder>(
+                  getCellarIds(),
+                  getParentForChildren(),
+                  isClean());
+          cellarIds_ = null;
+        }
+        return cellarIdsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cork.v1.AddManagedCellarIDsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:cork.v1.AddManagedCellarIDsProposal)
+    private static final com.cork.v1.ProposalProto.AddManagedCellarIDsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cork.v1.ProposalProto.AddManagedCellarIDsProposal();
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddManagedCellarIDsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddManagedCellarIDsProposal>() {
+      @java.lang.Override
+      public AddManagedCellarIDsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddManagedCellarIDsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddManagedCellarIDsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cork.v1.ProposalProto.AddManagedCellarIDsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddManagedCellarIDsProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cork.v1.AddManagedCellarIDsProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return A list containing the cellarIds.
+     */
+    java.util.List<java.lang.String>
+        getCellarIdsList();
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The count of cellarIds.
+     */
+    int getCellarIdsCount();
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the element to return.
+     * @return The cellarIds at the given index.
+     */
+    java.lang.String getCellarIds(int index);
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the cellarIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCellarIdsBytes(int index);
+
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * <pre>
+   * AddManagedCellarIDsProposalWithDeposit is a specific definition for CLI commands
+   * </pre>
+   *
+   * Protobuf type {@code cork.v1.AddManagedCellarIDsProposalWithDeposit}
+   */
+  public static final class AddManagedCellarIDsProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cork.v1.AddManagedCellarIDsProposalWithDeposit)
+      AddManagedCellarIDsProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddManagedCellarIDsProposalWithDeposit.newBuilder() to construct.
+    private AddManagedCellarIDsProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddManagedCellarIDsProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      cellarIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddManagedCellarIDsProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.class, com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELLAR_IDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList cellarIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return A list containing the cellarIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCellarIdsList() {
+      return cellarIds_;
+    }
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The count of cellarIds.
+     */
+    public int getCellarIdsCount() {
+      return cellarIds_.size();
+    }
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the element to return.
+     * @return The cellarIds at the given index.
+     */
+    public java.lang.String getCellarIds(int index) {
+      return cellarIds_.get(index);
+    }
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the cellarIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCellarIdsBytes(int index) {
+      return cellarIds_.getByteString(index);
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < cellarIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cellarIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cellarIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(cellarIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCellarIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit other = (com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getCellarIdsList()
+          .equals(other.getCellarIdsList())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getCellarIdsCount() > 0) {
+        hash = (37 * hash) + CELLAR_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellarIdsList().hashCode();
+      }
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AddManagedCellarIDsProposalWithDeposit is a specific definition for CLI commands
+     * </pre>
+     *
+     * Protobuf type {@code cork.v1.AddManagedCellarIDsProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cork.v1.AddManagedCellarIDsProposalWithDeposit)
+        com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.class, com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        cellarIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit getDefaultInstanceForType() {
+        return com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit build() {
+        com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit buildPartial() {
+        com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit result = new com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          cellarIds_.makeImmutable();
+          result.cellarIds_ = cellarIds_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit) {
+          return mergeFrom((com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit other) {
+        if (other == com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.cellarIds_.isEmpty()) {
+          if (cellarIds_.isEmpty()) {
+            cellarIds_ = other.cellarIds_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureCellarIdsIsMutable();
+            cellarIds_.addAll(other.cellarIds_);
+          }
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCellarIdsIsMutable();
+                cellarIds_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList cellarIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureCellarIdsIsMutable() {
+        if (!cellarIds_.isModifiable()) {
+          cellarIds_ = new com.google.protobuf.LazyStringArrayList(cellarIds_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return A list containing the cellarIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCellarIdsList() {
+        cellarIds_.makeImmutable();
+        return cellarIds_;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return The count of cellarIds.
+       */
+      public int getCellarIdsCount() {
+        return cellarIds_.size();
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param index The index of the element to return.
+       * @return The cellarIds at the given index.
+       */
+      public java.lang.String getCellarIds(int index) {
+        return cellarIds_.get(index);
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the cellarIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCellarIdsBytes(int index) {
+        return cellarIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The cellarIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCellarIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCellarIdsIsMutable();
+        cellarIds_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param value The cellarIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCellarIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCellarIdsIsMutable();
+        cellarIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param values The cellarIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCellarIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCellarIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cellarIds_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCellarIds() {
+        cellarIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param value The bytes of the cellarIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCellarIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureCellarIdsIsMutable();
+        cellarIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cork.v1.AddManagedCellarIDsProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:cork.v1.AddManagedCellarIDsProposalWithDeposit)
+    private static final com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit();
+    }
+
+    public static com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddManagedCellarIDsProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<AddManagedCellarIDsProposalWithDeposit>() {
+      @java.lang.Override
+      public AddManagedCellarIDsProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddManagedCellarIDsProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddManagedCellarIDsProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cork.v1.ProposalProto.AddManagedCellarIDsProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveManagedCellarIDsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cork.v1.RemoveManagedCellarIDsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return Whether the cellarIds field is set.
+     */
+    boolean hasCellarIds();
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The cellarIds.
+     */
+    com.cork.v1.CorkProto.CellarIDSet getCellarIds();
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     */
+    com.cork.v1.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cork.v1.RemoveManagedCellarIDsProposal}
+   */
+  public static final class RemoveManagedCellarIDsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cork.v1.RemoveManagedCellarIDsProposal)
+      RemoveManagedCellarIDsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveManagedCellarIDsProposal.newBuilder() to construct.
+    private RemoveManagedCellarIDsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveManagedCellarIDsProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveManagedCellarIDsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.class, com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELLAR_IDS_FIELD_NUMBER = 3;
+    private com.cork.v1.CorkProto.CellarIDSet cellarIds_;
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return Whether the cellarIds field is set.
+     */
+    @java.lang.Override
+    public boolean hasCellarIds() {
+      return cellarIds_ != null;
+    }
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The cellarIds.
+     */
+    @java.lang.Override
+    public com.cork.v1.CorkProto.CellarIDSet getCellarIds() {
+      return cellarIds_ == null ? com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+    }
+    /**
+     * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+     */
+    @java.lang.Override
+    public com.cork.v1.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder() {
+      return cellarIds_ == null ? com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (cellarIds_ != null) {
+        output.writeMessage(3, getCellarIds());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (cellarIds_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCellarIds());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal)) {
+        return super.equals(obj);
+      }
+      com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal other = (com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasCellarIds() != other.hasCellarIds()) return false;
+      if (hasCellarIds()) {
+        if (!getCellarIds()
+            .equals(other.getCellarIds())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasCellarIds()) {
+        hash = (37 * hash) + CELLAR_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellarIds().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cork.v1.RemoveManagedCellarIDsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cork.v1.RemoveManagedCellarIDsProposal)
+        com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.class, com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.Builder.class);
+      }
+
+      // Construct using com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        cellarIds_ = null;
+        if (cellarIdsBuilder_ != null) {
+          cellarIdsBuilder_.dispose();
+          cellarIdsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal getDefaultInstanceForType() {
+        return com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal build() {
+        com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal buildPartial() {
+        com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal result = new com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cellarIds_ = cellarIdsBuilder_ == null
+              ? cellarIds_
+              : cellarIdsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal) {
+          return mergeFrom((com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal other) {
+        if (other == com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasCellarIds()) {
+          mergeCellarIds(other.getCellarIds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCellarIdsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cork.v1.CorkProto.CellarIDSet cellarIds_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v1.CorkProto.CellarIDSet, com.cork.v1.CorkProto.CellarIDSet.Builder, com.cork.v1.CorkProto.CellarIDSetOrBuilder> cellarIdsBuilder_;
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return Whether the cellarIds field is set.
+       */
+      public boolean hasCellarIds() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return The cellarIds.
+       */
+      public com.cork.v1.CorkProto.CellarIDSet getCellarIds() {
+        if (cellarIdsBuilder_ == null) {
+          return cellarIds_ == null ? com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+        } else {
+          return cellarIdsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder setCellarIds(com.cork.v1.CorkProto.CellarIDSet value) {
+        if (cellarIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cellarIds_ = value;
+        } else {
+          cellarIdsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder setCellarIds(
+          com.cork.v1.CorkProto.CellarIDSet.Builder builderForValue) {
+        if (cellarIdsBuilder_ == null) {
+          cellarIds_ = builderForValue.build();
+        } else {
+          cellarIdsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder mergeCellarIds(com.cork.v1.CorkProto.CellarIDSet value) {
+        if (cellarIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            cellarIds_ != null &&
+            cellarIds_ != com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance()) {
+            getCellarIdsBuilder().mergeFrom(value);
+          } else {
+            cellarIds_ = value;
+          }
+        } else {
+          cellarIdsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public Builder clearCellarIds() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cellarIds_ = null;
+        if (cellarIdsBuilder_ != null) {
+          cellarIdsBuilder_.dispose();
+          cellarIdsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public com.cork.v1.CorkProto.CellarIDSet.Builder getCellarIdsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCellarIdsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      public com.cork.v1.CorkProto.CellarIDSetOrBuilder getCellarIdsOrBuilder() {
+        if (cellarIdsBuilder_ != null) {
+          return cellarIdsBuilder_.getMessageOrBuilder();
+        } else {
+          return cellarIds_ == null ?
+              com.cork.v1.CorkProto.CellarIDSet.getDefaultInstance() : cellarIds_;
+        }
+      }
+      /**
+       * <code>.cork.v1.CellarIDSet cellar_ids = 3 [json_name = "cellarIds"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cork.v1.CorkProto.CellarIDSet, com.cork.v1.CorkProto.CellarIDSet.Builder, com.cork.v1.CorkProto.CellarIDSetOrBuilder> 
+          getCellarIdsFieldBuilder() {
+        if (cellarIdsBuilder_ == null) {
+          cellarIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cork.v1.CorkProto.CellarIDSet, com.cork.v1.CorkProto.CellarIDSet.Builder, com.cork.v1.CorkProto.CellarIDSetOrBuilder>(
+                  getCellarIds(),
+                  getParentForChildren(),
+                  isClean());
+          cellarIds_ = null;
+        }
+        return cellarIdsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cork.v1.RemoveManagedCellarIDsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:cork.v1.RemoveManagedCellarIDsProposal)
+    private static final com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal();
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveManagedCellarIDsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveManagedCellarIDsProposal>() {
+      @java.lang.Override
+      public RemoveManagedCellarIDsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveManagedCellarIDsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveManagedCellarIDsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveManagedCellarIDsProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cork.v1.RemoveManagedCellarIDsProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return A list containing the cellarIds.
+     */
+    java.util.List<java.lang.String>
+        getCellarIdsList();
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The count of cellarIds.
+     */
+    int getCellarIdsCount();
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the element to return.
+     * @return The cellarIds at the given index.
+     */
+    java.lang.String getCellarIds(int index);
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the cellarIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCellarIdsBytes(int index);
+
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * <pre>
+   * RemoveManagedCellarIDsProposalWithDeposit is a specific definition for CLI commands
+   * </pre>
+   *
+   * Protobuf type {@code cork.v1.RemoveManagedCellarIDsProposalWithDeposit}
+   */
+  public static final class RemoveManagedCellarIDsProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cork.v1.RemoveManagedCellarIDsProposalWithDeposit)
+      RemoveManagedCellarIDsProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveManagedCellarIDsProposalWithDeposit.newBuilder() to construct.
+    private RemoveManagedCellarIDsProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveManagedCellarIDsProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      cellarIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveManagedCellarIDsProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.class, com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELLAR_IDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList cellarIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return A list containing the cellarIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCellarIdsList() {
+      return cellarIds_;
+    }
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @return The count of cellarIds.
+     */
+    public int getCellarIdsCount() {
+      return cellarIds_.size();
+    }
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the element to return.
+     * @return The cellarIds at the given index.
+     */
+    public java.lang.String getCellarIds(int index) {
+      return cellarIds_.get(index);
+    }
+    /**
+     * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the cellarIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCellarIdsBytes(int index) {
+      return cellarIds_.getByteString(index);
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < cellarIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cellarIds_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cellarIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(cellarIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCellarIdsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit other = (com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getCellarIdsList()
+          .equals(other.getCellarIdsList())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getCellarIdsCount() > 0) {
+        hash = (37 * hash) + CELLAR_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellarIdsList().hashCode();
+      }
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RemoveManagedCellarIDsProposalWithDeposit is a specific definition for CLI commands
+     * </pre>
+     *
+     * Protobuf type {@code cork.v1.RemoveManagedCellarIDsProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cork.v1.RemoveManagedCellarIDsProposalWithDeposit)
+        com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.class, com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        cellarIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cork.v1.ProposalProto.internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit getDefaultInstanceForType() {
+        return com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit build() {
+        com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit buildPartial() {
+        com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit result = new com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          cellarIds_.makeImmutable();
+          result.cellarIds_ = cellarIds_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit) {
+          return mergeFrom((com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit other) {
+        if (other == com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.cellarIds_.isEmpty()) {
+          if (cellarIds_.isEmpty()) {
+            cellarIds_ = other.cellarIds_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureCellarIdsIsMutable();
+            cellarIds_.addAll(other.cellarIds_);
+          }
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCellarIdsIsMutable();
+                cellarIds_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList cellarIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureCellarIdsIsMutable() {
+        if (!cellarIds_.isModifiable()) {
+          cellarIds_ = new com.google.protobuf.LazyStringArrayList(cellarIds_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return A list containing the cellarIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCellarIdsList() {
+        cellarIds_.makeImmutable();
+        return cellarIds_;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return The count of cellarIds.
+       */
+      public int getCellarIdsCount() {
+        return cellarIds_.size();
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param index The index of the element to return.
+       * @return The cellarIds at the given index.
+       */
+      public java.lang.String getCellarIds(int index) {
+        return cellarIds_.get(index);
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the cellarIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCellarIdsBytes(int index) {
+        return cellarIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The cellarIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCellarIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCellarIdsIsMutable();
+        cellarIds_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param value The cellarIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCellarIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCellarIdsIsMutable();
+        cellarIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param values The cellarIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCellarIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCellarIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cellarIds_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCellarIds() {
+        cellarIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string cellar_ids = 3 [json_name = "cellarIds"];</code>
+       * @param value The bytes of the cellarIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCellarIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureCellarIdsIsMutable();
+        cellarIds_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cork.v1.RemoveManagedCellarIDsProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:cork.v1.RemoveManagedCellarIDsProposalWithDeposit)
+    private static final com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit();
+    }
+
+    public static com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveManagedCellarIDsProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveManagedCellarIDsProposalWithDeposit>() {
+      @java.lang.Override
+      public RemoveManagedCellarIDsProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveManagedCellarIDsProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveManagedCellarIDsProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cork.v1.ProposalProto.RemoveManagedCellarIDsProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cork_v1_AddManagedCellarIDsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cork_v1_AddManagedCellarIDsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cork_v1_AddManagedCellarIDsProposalWithDeposit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cork_v1_RemoveManagedCellarIDsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cork_v1_RemoveManagedCellarIDsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cork_v1_RemoveManagedCellarIDsProposalWithDeposit_fieldAccessorTable;
 
@@ -60,11 +3992,11 @@ public final class ProposalProto {
       "ellarIDsProposalWithDeposit\022\024\n\005title\030\001 \001" +
       "(\tR\005title\022 \n\013description\030\002 \001(\tR\013descript" +
       "ion\022\035\n\ncellar_ids\030\003 \003(\tR\tcellarIds\022\030\n\007de" +
-      "posit\030\004 \001(\tR\007depositB\207\001\n\013com.cork.v1B\rPr" +
-      "oposalProtoP\001Z,github.com/peggyjv/sommel" +
-      "ier/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V1\312\002\007Co" +
-      "rk\\V1\342\002\023Cork\\V1\\GPBMetadata\352\002\010Cork::V1b\006" +
-      "proto3"
+      "posit\030\004 \001(\tR\007depositB\205\001\n\013com.cork.v1B\rPr" +
+      "oposalProtoZ,github.com/peggyjv/sommelie" +
+      "r/v4/x/cork/types\242\002\003CXX\252\002\007Cork.V1\312\002\007Cork" +
+      "\\V1\342\002\023Cork\\V1\\GPBMetadata\352\002\010Cork::V1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,494 @@ public final class ResourcevalueProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ResourceValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.ResourceValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes val = 1 [json_name = "val", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The val.
+     */
+    com.google.protobuf.ByteString getVal();
+  }
+  /**
+   * <pre>
+   * Unit stores cpu, memory and storage metrics
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.ResourceValue}
+   */
+  public static final class ResourceValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.ResourceValue)
+      ResourceValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceValue.newBuilder() to construct.
+    private ResourceValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceValue() {
+      val_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceValue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.ResourcevalueProto.internal_static_akash_base_v1beta2_ResourceValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.ResourcevalueProto.internal_static_akash_base_v1beta2_ResourceValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.class, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder.class);
+    }
+
+    public static final int VAL_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString val_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes val = 1 [json_name = "val", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The val.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getVal() {
+      return val_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!val_.isEmpty()) {
+        output.writeBytes(1, val_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!val_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, val_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.ResourcevalueProto.ResourceValue)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.ResourcevalueProto.ResourceValue other = (com.akash.base.v1beta2.ResourcevalueProto.ResourceValue) obj;
+
+      if (!getVal()
+          .equals(other.getVal())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VAL_FIELD_NUMBER;
+      hash = (53 * hash) + getVal().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Unit stores cpu, memory and storage metrics
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.ResourceValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.ResourceValue)
+        com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.ResourcevalueProto.internal_static_akash_base_v1beta2_ResourceValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.ResourcevalueProto.internal_static_akash_base_v1beta2_ResourceValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.class, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        val_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.ResourcevalueProto.internal_static_akash_base_v1beta2_ResourceValue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue build() {
+        com.akash.base.v1beta2.ResourcevalueProto.ResourceValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue buildPartial() {
+        com.akash.base.v1beta2.ResourcevalueProto.ResourceValue result = new com.akash.base.v1beta2.ResourcevalueProto.ResourceValue(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.val_ = val_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.ResourcevalueProto.ResourceValue) {
+          return mergeFrom((com.akash.base.v1beta2.ResourcevalueProto.ResourceValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue other) {
+        if (other == com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance()) return this;
+        if (other.getVal() != com.google.protobuf.ByteString.EMPTY) {
+          setVal(other.getVal());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                val_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString val_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes val = 1 [json_name = "val", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The val.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getVal() {
+        return val_;
+      }
+      /**
+       * <code>bytes val = 1 [json_name = "val", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The val to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        val_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes val = 1 [json_name = "val", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVal() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        val_ = getDefaultInstance().getVal();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.ResourceValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.ResourceValue)
+    private static final com.akash.base.v1beta2.ResourcevalueProto.ResourceValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.ResourcevalueProto.ResourceValue();
+    }
+
+    public static com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceValue>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceValue>() {
+      @java.lang.Override
+      public ResourceValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_ResourceValue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_ResourceValue_fieldAccessorTable;
 
@@ -32,12 +517,12 @@ public final class ResourcevalueProto {
       "\022\022akash.base.v1beta2\032\024gogoproto/gogo.pro" +
       "to\"W\n\rResourceValue\022@\n\003val\030\001 \001(\014B.\310\336\037\000\332\336" +
       "\037&github.com/cosmos/cosmos-sdk/types.Int" +
-      "R\003val:\004\350\240\037\001B\320\001\n\026com.akash.base.v1beta2B\022" +
-      "ResourcevalueProtoP\001Z8github.com/akash-n" +
-      "etwork/akash-api/go/node/types/v1beta2\242\002" +
-      "\003ABX\252\002\022Akash.Base.V1beta2\312\002\022Akash\\Base\\V" +
-      "1beta2\342\002\036Akash\\Base\\V1beta2\\GPBMetadata\352" +
-      "\002\024Akash::Base::V1beta2b\006proto3"
+      "R\003val:\004\350\240\037\001B\316\001\n\026com.akash.base.v1beta2B\022" +
+      "ResourcevalueProtoZ8github.com/akash-net" +
+      "work/akash-api/go/node/types/v1beta2\242\002\003A" +
+      "BX\252\002\022Akash.Base.V1beta2\312\002\022Akash\\Base\\V1b" +
+      "eta2\342\002\036Akash\\Base\\V1beta2\\GPBMetadata\352\002\024" +
+      "Akash::Base::V1beta2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,34 +14,4625 @@ public final class QuerierProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryPlansRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.plan.v2.QueryPlansRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.sentinel.types.v1.StatusProto.Status getStatus();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.plan.v2.QueryPlansRequest}
+   */
+  public static final class QueryPlansRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.plan.v2.QueryPlansRequest)
+      QueryPlansRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlansRequest.newBuilder() to construct.
+    private QueryPlansRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlansRequest() {
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlansRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.class, com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_ = 0;
+    /**
+     * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.sentinel.types.v1.StatusProto.Status getStatus() {
+      com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+      return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, status_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.plan.v2.QuerierProto.QueryPlansRequest other = (com.sentinel.plan.v2.QuerierProto.QueryPlansRequest) obj;
+
+      if (status_ != other.status_) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.plan.v2.QuerierProto.QueryPlansRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.plan.v2.QueryPlansRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.plan.v2.QueryPlansRequest)
+        com.sentinel.plan.v2.QuerierProto.QueryPlansRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.class, com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        status_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansRequest getDefaultInstanceForType() {
+        return com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansRequest build() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansRequest buildPartial() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansRequest result = new com.sentinel.plan.v2.QuerierProto.QueryPlansRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.plan.v2.QuerierProto.QueryPlansRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansRequest) {
+          return mergeFrom((com.sentinel.plan.v2.QuerierProto.QueryPlansRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.plan.v2.QuerierProto.QueryPlansRequest other) {
+        if (other == com.sentinel.plan.v2.QuerierProto.QueryPlansRequest.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int status_ = 0;
+      /**
+       * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.sentinel.types.v1.StatusProto.Status getStatus() {
+        com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+        return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.sentinel.types.v1.StatusProto.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 1 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.plan.v2.QueryPlansRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.plan.v2.QueryPlansRequest)
+    private static final com.sentinel.plan.v2.QuerierProto.QueryPlansRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.plan.v2.QuerierProto.QueryPlansRequest();
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlansRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlansRequest>() {
+      @java.lang.Override
+      public QueryPlansRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlansRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlansRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.plan.v2.QuerierProto.QueryPlansRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlansForProviderRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.plan.v2.QueryPlansForProviderRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.sentinel.types.v1.StatusProto.Status getStatus();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.plan.v2.QueryPlansForProviderRequest}
+   */
+  public static final class QueryPlansForProviderRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.plan.v2.QueryPlansForProviderRequest)
+      QueryPlansForProviderRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlansForProviderRequest.newBuilder() to construct.
+    private QueryPlansForProviderRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlansForProviderRequest() {
+      address_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlansForProviderRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.class, com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.sentinel.types.v1.StatusProto.Status getStatus() {
+      com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+      return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest other = (com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (status_ != other.status_) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.plan.v2.QueryPlansForProviderRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.plan.v2.QueryPlansForProviderRequest)
+        com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.class, com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        status_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest getDefaultInstanceForType() {
+        return com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest build() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest buildPartial() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest result = new com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest) {
+          return mergeFrom((com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest other) {
+        if (other == com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.sentinel.types.v1.StatusProto.Status getStatus() {
+        com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+        return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.sentinel.types.v1.StatusProto.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.plan.v2.QueryPlansForProviderRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.plan.v2.QueryPlansForProviderRequest)
+    private static final com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest();
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlansForProviderRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlansForProviderRequest>() {
+      @java.lang.Override
+      public QueryPlansForProviderRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlansForProviderRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlansForProviderRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlanRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.plan.v2.QueryPlanRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code sentinel.plan.v2.QueryPlanRequest}
+   */
+  public static final class QueryPlanRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.plan.v2.QueryPlanRequest)
+      QueryPlanRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlanRequest.newBuilder() to construct.
+    private QueryPlanRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlanRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlanRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.class, com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.plan.v2.QuerierProto.QueryPlanRequest)) {
+        return super.equals(obj);
+      }
+      com.sentinel.plan.v2.QuerierProto.QueryPlanRequest other = (com.sentinel.plan.v2.QuerierProto.QueryPlanRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.plan.v2.QuerierProto.QueryPlanRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.plan.v2.QueryPlanRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.plan.v2.QueryPlanRequest)
+        com.sentinel.plan.v2.QuerierProto.QueryPlanRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.class, com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.Builder.class);
+      }
+
+      // Construct using com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlanRequest getDefaultInstanceForType() {
+        return com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlanRequest build() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlanRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlanRequest buildPartial() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlanRequest result = new com.sentinel.plan.v2.QuerierProto.QueryPlanRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.plan.v2.QuerierProto.QueryPlanRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.plan.v2.QuerierProto.QueryPlanRequest) {
+          return mergeFrom((com.sentinel.plan.v2.QuerierProto.QueryPlanRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.plan.v2.QuerierProto.QueryPlanRequest other) {
+        if (other == com.sentinel.plan.v2.QuerierProto.QueryPlanRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.plan.v2.QueryPlanRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.plan.v2.QueryPlanRequest)
+    private static final com.sentinel.plan.v2.QuerierProto.QueryPlanRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.plan.v2.QuerierProto.QueryPlanRequest();
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlanRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlanRequest>() {
+      @java.lang.Override
+      public QueryPlanRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlanRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlanRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.plan.v2.QuerierProto.QueryPlanRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlansResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.plan.v2.QueryPlansResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.plan.v2.PlanProto.Plan> 
+        getPlansList();
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.PlanProto.Plan getPlans(int index);
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    int getPlansCount();
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+        getPlansOrBuilderList();
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlansOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.plan.v2.QueryPlansResponse}
+   */
+  public static final class QueryPlansResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.plan.v2.QueryPlansResponse)
+      QueryPlansResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlansResponse.newBuilder() to construct.
+    private QueryPlansResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlansResponse() {
+      plans_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlansResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.class, com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.Builder.class);
+    }
+
+    public static final int PLANS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.plan.v2.PlanProto.Plan> plans_;
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.plan.v2.PlanProto.Plan> getPlansList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+        getPlansOrBuilderList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPlansCount() {
+      return plans_.size();
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.PlanProto.Plan getPlans(int index) {
+      return plans_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlansOrBuilder(
+        int index) {
+      return plans_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < plans_.size(); i++) {
+        output.writeMessage(1, plans_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < plans_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, plans_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.plan.v2.QuerierProto.QueryPlansResponse other = (com.sentinel.plan.v2.QuerierProto.QueryPlansResponse) obj;
+
+      if (!getPlansList()
+          .equals(other.getPlansList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPlansCount() > 0) {
+        hash = (37 * hash) + PLANS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlansList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.plan.v2.QuerierProto.QueryPlansResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.plan.v2.QueryPlansResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.plan.v2.QueryPlansResponse)
+        com.sentinel.plan.v2.QuerierProto.QueryPlansResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.class, com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+        } else {
+          plans_ = null;
+          plansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansResponse getDefaultInstanceForType() {
+        return com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansResponse build() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansResponse buildPartial() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansResponse result = new com.sentinel.plan.v2.QuerierProto.QueryPlansResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.plan.v2.QuerierProto.QueryPlansResponse result) {
+        if (plansBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            plans_ = java.util.Collections.unmodifiableList(plans_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.plans_ = plans_;
+        } else {
+          result.plans_ = plansBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.plan.v2.QuerierProto.QueryPlansResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansResponse) {
+          return mergeFrom((com.sentinel.plan.v2.QuerierProto.QueryPlansResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.plan.v2.QuerierProto.QueryPlansResponse other) {
+        if (other == com.sentinel.plan.v2.QuerierProto.QueryPlansResponse.getDefaultInstance()) return this;
+        if (plansBuilder_ == null) {
+          if (!other.plans_.isEmpty()) {
+            if (plans_.isEmpty()) {
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePlansIsMutable();
+              plans_.addAll(other.plans_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.plans_.isEmpty()) {
+            if (plansBuilder_.isEmpty()) {
+              plansBuilder_.dispose();
+              plansBuilder_ = null;
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              plansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlansFieldBuilder() : null;
+            } else {
+              plansBuilder_.addAllMessages(other.plans_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.plan.v2.PlanProto.Plan m =
+                    input.readMessage(
+                        com.sentinel.plan.v2.PlanProto.Plan.parser(),
+                        extensionRegistry);
+                if (plansBuilder_ == null) {
+                  ensurePlansIsMutable();
+                  plans_.add(m);
+                } else {
+                  plansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.plan.v2.PlanProto.Plan> plans_ =
+        java.util.Collections.emptyList();
+      private void ensurePlansIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          plans_ = new java.util.ArrayList<com.sentinel.plan.v2.PlanProto.Plan>(plans_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder> plansBuilder_;
+
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.plan.v2.PlanProto.Plan> getPlansList() {
+        if (plansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(plans_);
+        } else {
+          return plansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPlansCount() {
+        if (plansBuilder_ == null) {
+          return plans_.size();
+        } else {
+          return plansBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan getPlans(int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);
+        } else {
+          return plansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.set(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPlans(
+          java.lang.Iterable<? extends com.sentinel.plan.v2.PlanProto.Plan> values) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, plans_);
+          onChanged();
+        } else {
+          plansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPlans() {
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          plansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePlans(int index) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.remove(index);
+          onChanged();
+        } else {
+          plansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder getPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlansOrBuilder(
+          int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);  } else {
+          return plansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+           getPlansOrBuilderList() {
+        if (plansBuilder_ != null) {
+          return plansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(plans_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder addPlansBuilder() {
+        return getPlansFieldBuilder().addBuilder(
+            com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder addPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().addBuilder(
+            index, com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.plan.v2.PlanProto.Plan.Builder> 
+           getPlansBuilderList() {
+        return getPlansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+          getPlansFieldBuilder() {
+        if (plansBuilder_ == null) {
+          plansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder>(
+                  plans_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          plans_ = null;
+        }
+        return plansBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.plan.v2.QueryPlansResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.plan.v2.QueryPlansResponse)
+    private static final com.sentinel.plan.v2.QuerierProto.QueryPlansResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.plan.v2.QuerierProto.QueryPlansResponse();
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlansResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlansResponse>() {
+      @java.lang.Override
+      public QueryPlansResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlansResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlansResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.plan.v2.QuerierProto.QueryPlansResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlansForProviderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.plan.v2.QueryPlansForProviderResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.sentinel.plan.v2.PlanProto.Plan> 
+        getPlansList();
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.PlanProto.Plan getPlans(int index);
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    int getPlansCount();
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+        getPlansOrBuilderList();
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlansOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.plan.v2.QueryPlansForProviderResponse}
+   */
+  public static final class QueryPlansForProviderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.plan.v2.QueryPlansForProviderResponse)
+      QueryPlansForProviderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlansForProviderResponse.newBuilder() to construct.
+    private QueryPlansForProviderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlansForProviderResponse() {
+      plans_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlansForProviderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.class, com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.Builder.class);
+    }
+
+    public static final int PLANS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.sentinel.plan.v2.PlanProto.Plan> plans_;
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.sentinel.plan.v2.PlanProto.Plan> getPlansList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+        getPlansOrBuilderList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPlansCount() {
+      return plans_.size();
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.PlanProto.Plan getPlans(int index) {
+      return plans_.get(index);
+    }
+    /**
+     * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlansOrBuilder(
+        int index) {
+      return plans_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < plans_.size(); i++) {
+        output.writeMessage(1, plans_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < plans_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, plans_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse other = (com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse) obj;
+
+      if (!getPlansList()
+          .equals(other.getPlansList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPlansCount() > 0) {
+        hash = (37 * hash) + PLANS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlansList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.plan.v2.QueryPlansForProviderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.plan.v2.QueryPlansForProviderResponse)
+        com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.class, com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+        } else {
+          plans_ = null;
+          plansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse getDefaultInstanceForType() {
+        return com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse build() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse buildPartial() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse result = new com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse result) {
+        if (plansBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            plans_ = java.util.Collections.unmodifiableList(plans_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.plans_ = plans_;
+        } else {
+          result.plans_ = plansBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse) {
+          return mergeFrom((com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse other) {
+        if (other == com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse.getDefaultInstance()) return this;
+        if (plansBuilder_ == null) {
+          if (!other.plans_.isEmpty()) {
+            if (plans_.isEmpty()) {
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePlansIsMutable();
+              plans_.addAll(other.plans_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.plans_.isEmpty()) {
+            if (plansBuilder_.isEmpty()) {
+              plansBuilder_.dispose();
+              plansBuilder_ = null;
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              plansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlansFieldBuilder() : null;
+            } else {
+              plansBuilder_.addAllMessages(other.plans_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.sentinel.plan.v2.PlanProto.Plan m =
+                    input.readMessage(
+                        com.sentinel.plan.v2.PlanProto.Plan.parser(),
+                        extensionRegistry);
+                if (plansBuilder_ == null) {
+                  ensurePlansIsMutable();
+                  plans_.add(m);
+                } else {
+                  plansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.sentinel.plan.v2.PlanProto.Plan> plans_ =
+        java.util.Collections.emptyList();
+      private void ensurePlansIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          plans_ = new java.util.ArrayList<com.sentinel.plan.v2.PlanProto.Plan>(plans_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder> plansBuilder_;
+
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.plan.v2.PlanProto.Plan> getPlansList() {
+        if (plansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(plans_);
+        } else {
+          return plansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPlansCount() {
+        if (plansBuilder_ == null) {
+          return plans_.size();
+        } else {
+          return plansBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan getPlans(int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);
+        } else {
+          return plansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.set(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPlans(
+          java.lang.Iterable<? extends com.sentinel.plan.v2.PlanProto.Plan> values) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, plans_);
+          onChanged();
+        } else {
+          plansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPlans() {
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          plansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePlans(int index) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.remove(index);
+          onChanged();
+        } else {
+          plansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder getPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlansOrBuilder(
+          int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);  } else {
+          return plansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+           getPlansOrBuilderList() {
+        if (plansBuilder_ != null) {
+          return plansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(plans_);
+        }
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder addPlansBuilder() {
+        return getPlansFieldBuilder().addBuilder(
+            com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder addPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().addBuilder(
+            index, com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .sentinel.plan.v2.Plan plans = 1 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.sentinel.plan.v2.PlanProto.Plan.Builder> 
+           getPlansBuilderList() {
+        return getPlansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+          getPlansFieldBuilder() {
+        if (plansBuilder_ == null) {
+          plansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder>(
+                  plans_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          plans_ = null;
+        }
+        return plansBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.plan.v2.QueryPlansForProviderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.plan.v2.QueryPlansForProviderResponse)
+    private static final com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse();
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlansForProviderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlansForProviderResponse>() {
+      @java.lang.Override
+      public QueryPlansForProviderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlansForProviderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlansForProviderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.plan.v2.QuerierProto.QueryPlansForProviderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPlanResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.plan.v2.QueryPlanResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return Whether the plan field is set.
+     */
+    boolean hasPlan();
+    /**
+     * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return The plan.
+     */
+    com.sentinel.plan.v2.PlanProto.Plan getPlan();
+    /**
+     * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     */
+    com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlanOrBuilder();
+  }
+  /**
+   * Protobuf type {@code sentinel.plan.v2.QueryPlanResponse}
+   */
+  public static final class QueryPlanResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.plan.v2.QueryPlanResponse)
+      QueryPlanResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPlanResponse.newBuilder() to construct.
+    private QueryPlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPlanResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPlanResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.class, com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.Builder.class);
+    }
+
+    public static final int PLAN_FIELD_NUMBER = 1;
+    private com.sentinel.plan.v2.PlanProto.Plan plan_;
+    /**
+     * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return Whether the plan field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlan() {
+      return plan_ != null;
+    }
+    /**
+     * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     * @return The plan.
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.PlanProto.Plan getPlan() {
+      return plan_ == null ? com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance() : plan_;
+    }
+    /**
+     * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlanOrBuilder() {
+      return plan_ == null ? com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance() : plan_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (plan_ != null) {
+        output.writeMessage(1, getPlan());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (plan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPlan());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.plan.v2.QuerierProto.QueryPlanResponse)) {
+        return super.equals(obj);
+      }
+      com.sentinel.plan.v2.QuerierProto.QueryPlanResponse other = (com.sentinel.plan.v2.QuerierProto.QueryPlanResponse) obj;
+
+      if (hasPlan() != other.hasPlan()) return false;
+      if (hasPlan()) {
+        if (!getPlan()
+            .equals(other.getPlan())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPlan()) {
+        hash = (37 * hash) + PLAN_FIELD_NUMBER;
+        hash = (53 * hash) + getPlan().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.plan.v2.QuerierProto.QueryPlanResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.plan.v2.QueryPlanResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.plan.v2.QueryPlanResponse)
+        com.sentinel.plan.v2.QuerierProto.QueryPlanResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.class, com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.Builder.class);
+      }
+
+      // Construct using com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.plan.v2.QuerierProto.internal_static_sentinel_plan_v2_QueryPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlanResponse getDefaultInstanceForType() {
+        return com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlanResponse build() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlanResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.plan.v2.QuerierProto.QueryPlanResponse buildPartial() {
+        com.sentinel.plan.v2.QuerierProto.QueryPlanResponse result = new com.sentinel.plan.v2.QuerierProto.QueryPlanResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.plan.v2.QuerierProto.QueryPlanResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.plan_ = planBuilder_ == null
+              ? plan_
+              : planBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.plan.v2.QuerierProto.QueryPlanResponse) {
+          return mergeFrom((com.sentinel.plan.v2.QuerierProto.QueryPlanResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.plan.v2.QuerierProto.QueryPlanResponse other) {
+        if (other == com.sentinel.plan.v2.QuerierProto.QueryPlanResponse.getDefaultInstance()) return this;
+        if (other.hasPlan()) {
+          mergePlan(other.getPlan());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPlanFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.sentinel.plan.v2.PlanProto.Plan plan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder> planBuilder_;
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       * @return Whether the plan field is set.
+       */
+      public boolean hasPlan() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       * @return The plan.
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan getPlan() {
+        if (planBuilder_ == null) {
+          return plan_ == null ? com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance() : plan_;
+        } else {
+          return planBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlan(com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (planBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plan_ = value;
+        } else {
+          planBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlan(
+          com.sentinel.plan.v2.PlanProto.Plan.Builder builderForValue) {
+        if (planBuilder_ == null) {
+          plan_ = builderForValue.build();
+        } else {
+          planBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePlan(com.sentinel.plan.v2.PlanProto.Plan value) {
+        if (planBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            plan_ != null &&
+            plan_ != com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance()) {
+            getPlanBuilder().mergeFrom(value);
+          } else {
+            plan_ = value;
+          }
+        } else {
+          planBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPlan() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.Plan.Builder getPlanBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPlanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      public com.sentinel.plan.v2.PlanProto.PlanOrBuilder getPlanOrBuilder() {
+        if (planBuilder_ != null) {
+          return planBuilder_.getMessageOrBuilder();
+        } else {
+          return plan_ == null ?
+              com.sentinel.plan.v2.PlanProto.Plan.getDefaultInstance() : plan_;
+        }
+      }
+      /**
+       * <code>.sentinel.plan.v2.Plan plan = 1 [json_name = "plan", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder> 
+          getPlanFieldBuilder() {
+        if (planBuilder_ == null) {
+          planBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sentinel.plan.v2.PlanProto.Plan, com.sentinel.plan.v2.PlanProto.Plan.Builder, com.sentinel.plan.v2.PlanProto.PlanOrBuilder>(
+                  getPlan(),
+                  getParentForChildren(),
+                  isClean());
+          plan_ = null;
+        }
+        return planBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.plan.v2.QueryPlanResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.plan.v2.QueryPlanResponse)
+    private static final com.sentinel.plan.v2.QuerierProto.QueryPlanResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.plan.v2.QuerierProto.QueryPlanResponse();
+    }
+
+    public static com.sentinel.plan.v2.QuerierProto.QueryPlanResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPlanResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPlanResponse>() {
+      @java.lang.Override
+      public QueryPlanResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPlanResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPlanResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.plan.v2.QuerierProto.QueryPlanResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_plan_v2_QueryPlansRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_plan_v2_QueryPlansRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_plan_v2_QueryPlansForProviderRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_plan_v2_QueryPlanRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_plan_v2_QueryPlanRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_plan_v2_QueryPlansResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_plan_v2_QueryPlansResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_plan_v2_QueryPlansForProviderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_plan_v2_QueryPlanResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_plan_v2_QueryPlanResponse_fieldAccessorTable;
 
@@ -87,12 +4678,12 @@ public final class QuerierProto {
       "}/plans\022r\n\tQueryPlan\022\".sentinel.plan.v2." +
       "QueryPlanRequest\032#.sentinel.plan.v2.Quer" +
       "yPlanResponse\"\034\202\323\344\223\002\026\022\024/sentinel/plans/{" +
-      "id}B\275\001\n\024com.sentinel.plan.v2B\014QuerierPro" +
-      "toP\001Z-github.com/sentinel-official/hub/x" +
-      "/plan/types\242\002\003SPX\252\002\020Sentinel.Plan.V2\312\002\020S" +
-      "entinel\\Plan\\V2\342\002\034Sentinel\\Plan\\V2\\GPBMe" +
-      "tadata\352\002\022Sentinel::Plan::V2\310\341\036\000\250\342\036\000b\006pro" +
-      "to3"
+      "id}B\273\001\n\024com.sentinel.plan.v2B\014QuerierPro" +
+      "toZ-github.com/sentinel-official/hub/x/p" +
+      "lan/types\242\002\003SPX\252\002\020Sentinel.Plan.V2\312\002\020Sen" +
+      "tinel\\Plan\\V2\342\002\034Sentinel\\Plan\\V2\\GPBMeta" +
+      "data\352\002\022Sentinel::Plan::V2\310\341\036\000\250\342\036\000b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

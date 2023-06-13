@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.orders.transactions.d" +
       "efine.Message\032C.assetmantle.modules.orde" +
       "rs.transactions.define.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/defineB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/defineB\236\002\n2co" +
       "m.assetmantle.modules.orders.transaction" +
-      "s.defineB\014ServiceProtoP\001\242\002\005AMOTD\252\002.Asset" +
-      "mantle.Modules.Orders.Transactions.Defin" +
-      "e\312\002.Assetmantle\\Modules\\Orders\\Transacti" +
-      "ons\\Define\342\002:Assetmantle\\Modules\\Orders\\" +
-      "Transactions\\Define\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Orders::Transactions::De" +
-      "fineb\006proto3"
+      "s.defineB\014ServiceProto\242\002\005AMOTD\252\002.Assetma" +
+      "ntle.Modules.Orders.Transactions.Define\312" +
+      "\002.Assetmantle\\Modules\\Orders\\Transaction" +
+      "s\\Define\342\002:Assetmantle\\Modules\\Orders\\Tr" +
+      "ansactions\\Define\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Orders::Transactions::Defi" +
+      "neb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

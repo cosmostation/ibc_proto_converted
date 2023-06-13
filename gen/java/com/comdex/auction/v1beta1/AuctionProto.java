@@ -14,34 +14,11553 @@ public final class AuctionProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface SurplusAuctionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.SurplusAuction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+     * @return The auctionId.
+     */
+    long getAuctionId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the sellToken field is set.
+     */
+    boolean hasSellToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The sellToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSellToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSellTokenOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the buyToken field is set.
+     */
+    boolean hasBuyToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The buyToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBuyToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBuyTokenOrBuilder();
+
+    /**
+     * <code>uint64 active_bidding_id = 4 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+     * @return The activeBiddingId.
+     */
+    long getActiveBiddingId();
+
+    /**
+     * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bidder.
+     */
+    java.lang.String getBidder();
+    /**
+     * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bytes for bidder.
+     */
+    com.google.protobuf.ByteString
+        getBidderBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the bid field is set.
+     */
+    boolean hasBid();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The bid.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBid();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBidOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bidFactor.
+     */
+    java.lang.String getBidFactor();
+    /**
+     * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bytes for bidFactor.
+     */
+    com.google.protobuf.ByteString
+        getBidFactorBytes();
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> 
+        getBiddingIdsList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    int getBiddingIdsCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+        getBiddingIdsOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 auction_status = 10 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+     * @return The auctionStatus.
+     */
+    long getAuctionStatus();
+
+    /**
+     * <code>uint64 app_id = 11 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_id = 12 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+     * @return The auctionMappingId.
+     */
+    long getAuctionMappingId();
+
+    /**
+     * <code>uint64 asset_in_id = 14 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+     * @return The assetInId.
+     */
+    long getAssetInId();
+
+    /**
+     * <code>uint64 asset_out_id = 15 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+     * @return The assetOutId.
+     */
+    long getAssetOutId();
+
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the bidEndTime field is set.
+     */
+    boolean hasBidEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The bidEndTime.
+     */
+    com.google.protobuf.Timestamp getBidEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getBidEndTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.SurplusAuction}
+   */
+  public static final class SurplusAuction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.SurplusAuction)
+      SurplusAuctionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SurplusAuction.newBuilder() to construct.
+    private SurplusAuction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SurplusAuction() {
+      bidder_ = "";
+      bidFactor_ = "";
+      biddingIds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SurplusAuction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_SurplusAuction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_SurplusAuction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.class, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder.class);
+    }
+
+    public static final int AUCTION_ID_FIELD_NUMBER = 1;
+    private long auctionId_ = 0L;
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+     * @return The auctionId.
+     */
+    @java.lang.Override
+    public long getAuctionId() {
+      return auctionId_;
+    }
+
+    public static final int SELL_TOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin sellToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the sellToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasSellToken() {
+      return sellToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The sellToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSellToken() {
+      return sellToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sellToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSellTokenOrBuilder() {
+      return sellToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sellToken_;
+    }
+
+    public static final int BUY_TOKEN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin buyToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the buyToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasBuyToken() {
+      return buyToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The buyToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBuyToken() {
+      return buyToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : buyToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBuyTokenOrBuilder() {
+      return buyToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : buyToken_;
+    }
+
+    public static final int ACTIVE_BIDDING_ID_FIELD_NUMBER = 4;
+    private long activeBiddingId_ = 0L;
+    /**
+     * <code>uint64 active_bidding_id = 4 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+     * @return The activeBiddingId.
+     */
+    @java.lang.Override
+    public long getActiveBiddingId() {
+      return activeBiddingId_;
+    }
+
+    public static final int BIDDER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidder_ = "";
+    /**
+     * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bidder.
+     */
+    @java.lang.Override
+    public java.lang.String getBidder() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bytes for bidder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidderBytes() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BID_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin bid_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the bid field is set.
+     */
+    @java.lang.Override
+    public boolean hasBid() {
+      return bid_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The bid.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBid() {
+      return bid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bid_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBidOrBuilder() {
+      return bid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bid_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int BID_FACTOR_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidFactor_ = "";
+    /**
+     * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bidFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getBidFactor() {
+      java.lang.Object ref = bidFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bytes for bidFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidFactorBytes() {
+      java.lang.Object ref = bidFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BIDDING_IDS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> biddingIds_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> getBiddingIdsList() {
+      return biddingIds_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+        getBiddingIdsOrBuilderList() {
+      return biddingIds_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBiddingIdsCount() {
+      return biddingIds_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index) {
+      return biddingIds_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+        int index) {
+      return biddingIds_.get(index);
+    }
+
+    public static final int AUCTION_STATUS_FIELD_NUMBER = 10;
+    private long auctionStatus_ = 0L;
+    /**
+     * <code>uint64 auction_status = 10 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+     * @return The auctionStatus.
+     */
+    @java.lang.Override
+    public long getAuctionStatus() {
+      return auctionStatus_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 11;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 11 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 12;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 12 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int AUCTION_MAPPING_ID_FIELD_NUMBER = 13;
+    private long auctionMappingId_ = 0L;
+    /**
+     * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+     * @return The auctionMappingId.
+     */
+    @java.lang.Override
+    public long getAuctionMappingId() {
+      return auctionMappingId_;
+    }
+
+    public static final int ASSET_IN_ID_FIELD_NUMBER = 14;
+    private long assetInId_ = 0L;
+    /**
+     * <code>uint64 asset_in_id = 14 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+     * @return The assetInId.
+     */
+    @java.lang.Override
+    public long getAssetInId() {
+      return assetInId_;
+    }
+
+    public static final int ASSET_OUT_ID_FIELD_NUMBER = 15;
+    private long assetOutId_ = 0L;
+    /**
+     * <code>uint64 asset_out_id = 15 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+     * @return The assetOutId.
+     */
+    @java.lang.Override
+    public long getAssetOutId() {
+      return assetOutId_;
+    }
+
+    public static final int BID_END_TIME_FIELD_NUMBER = 16;
+    private com.google.protobuf.Timestamp bidEndTime_;
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the bidEndTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasBidEndTime() {
+      return bidEndTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The bidEndTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getBidEndTime() {
+      return bidEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getBidEndTimeOrBuilder() {
+      return bidEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (auctionId_ != 0L) {
+        output.writeUInt64(1, auctionId_);
+      }
+      if (sellToken_ != null) {
+        output.writeMessage(2, getSellToken());
+      }
+      if (buyToken_ != null) {
+        output.writeMessage(3, getBuyToken());
+      }
+      if (activeBiddingId_ != 0L) {
+        output.writeUInt64(4, activeBiddingId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bidder_);
+      }
+      if (bid_ != null) {
+        output.writeMessage(6, getBid());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(7, getEndTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, bidFactor_);
+      }
+      for (int i = 0; i < biddingIds_.size(); i++) {
+        output.writeMessage(9, biddingIds_.get(i));
+      }
+      if (auctionStatus_ != 0L) {
+        output.writeUInt64(10, auctionStatus_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(11, appId_);
+      }
+      if (assetId_ != 0L) {
+        output.writeUInt64(12, assetId_);
+      }
+      if (auctionMappingId_ != 0L) {
+        output.writeUInt64(13, auctionMappingId_);
+      }
+      if (assetInId_ != 0L) {
+        output.writeUInt64(14, assetInId_);
+      }
+      if (assetOutId_ != 0L) {
+        output.writeUInt64(15, assetOutId_);
+      }
+      if (bidEndTime_ != null) {
+        output.writeMessage(16, getBidEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (auctionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, auctionId_);
+      }
+      if (sellToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSellToken());
+      }
+      if (buyToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBuyToken());
+      }
+      if (activeBiddingId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, activeBiddingId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bidder_);
+      }
+      if (bid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getBid());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getEndTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, bidFactor_);
+      }
+      for (int i = 0; i < biddingIds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, biddingIds_.get(i));
+      }
+      if (auctionStatus_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, auctionStatus_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(11, appId_);
+      }
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, assetId_);
+      }
+      if (auctionMappingId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, auctionMappingId_);
+      }
+      if (assetInId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(14, assetInId_);
+      }
+      if (assetOutId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, assetOutId_);
+      }
+      if (bidEndTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getBidEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.AuctionProto.SurplusAuction)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.AuctionProto.SurplusAuction other = (com.comdex.auction.v1beta1.AuctionProto.SurplusAuction) obj;
+
+      if (getAuctionId()
+          != other.getAuctionId()) return false;
+      if (hasSellToken() != other.hasSellToken()) return false;
+      if (hasSellToken()) {
+        if (!getSellToken()
+            .equals(other.getSellToken())) return false;
+      }
+      if (hasBuyToken() != other.hasBuyToken()) return false;
+      if (hasBuyToken()) {
+        if (!getBuyToken()
+            .equals(other.getBuyToken())) return false;
+      }
+      if (getActiveBiddingId()
+          != other.getActiveBiddingId()) return false;
+      if (!getBidder()
+          .equals(other.getBidder())) return false;
+      if (hasBid() != other.hasBid()) return false;
+      if (hasBid()) {
+        if (!getBid()
+            .equals(other.getBid())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getBidFactor()
+          .equals(other.getBidFactor())) return false;
+      if (!getBiddingIdsList()
+          .equals(other.getBiddingIdsList())) return false;
+      if (getAuctionStatus()
+          != other.getAuctionStatus()) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (getAuctionMappingId()
+          != other.getAuctionMappingId()) return false;
+      if (getAssetInId()
+          != other.getAssetInId()) return false;
+      if (getAssetOutId()
+          != other.getAssetOutId()) return false;
+      if (hasBidEndTime() != other.hasBidEndTime()) return false;
+      if (hasBidEndTime()) {
+        if (!getBidEndTime()
+            .equals(other.getBidEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionId());
+      if (hasSellToken()) {
+        hash = (37 * hash) + SELL_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getSellToken().hashCode();
+      }
+      if (hasBuyToken()) {
+        hash = (37 * hash) + BUY_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getBuyToken().hashCode();
+      }
+      hash = (37 * hash) + ACTIVE_BIDDING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getActiveBiddingId());
+      hash = (37 * hash) + BIDDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidder().hashCode();
+      if (hasBid()) {
+        hash = (37 * hash) + BID_FIELD_NUMBER;
+        hash = (53 * hash) + getBid().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + BID_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getBidFactor().hashCode();
+      if (getBiddingIdsCount() > 0) {
+        hash = (37 * hash) + BIDDING_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBiddingIdsList().hashCode();
+      }
+      hash = (37 * hash) + AUCTION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionStatus());
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + AUCTION_MAPPING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionMappingId());
+      hash = (37 * hash) + ASSET_IN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetInId());
+      hash = (37 * hash) + ASSET_OUT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetOutId());
+      if (hasBidEndTime()) {
+        hash = (37 * hash) + BID_END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getBidEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.AuctionProto.SurplusAuction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.SurplusAuction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.SurplusAuction)
+        com.comdex.auction.v1beta1.AuctionProto.SurplusAuctionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_SurplusAuction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_SurplusAuction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.class, com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        auctionId_ = 0L;
+        sellToken_ = null;
+        if (sellTokenBuilder_ != null) {
+          sellTokenBuilder_.dispose();
+          sellTokenBuilder_ = null;
+        }
+        buyToken_ = null;
+        if (buyTokenBuilder_ != null) {
+          buyTokenBuilder_.dispose();
+          buyTokenBuilder_ = null;
+        }
+        activeBiddingId_ = 0L;
+        bidder_ = "";
+        bid_ = null;
+        if (bidBuilder_ != null) {
+          bidBuilder_.dispose();
+          bidBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        bidFactor_ = "";
+        if (biddingIdsBuilder_ == null) {
+          biddingIds_ = java.util.Collections.emptyList();
+        } else {
+          biddingIds_ = null;
+          biddingIdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        auctionStatus_ = 0L;
+        appId_ = 0L;
+        assetId_ = 0L;
+        auctionMappingId_ = 0L;
+        assetInId_ = 0L;
+        assetOutId_ = 0L;
+        bidEndTime_ = null;
+        if (bidEndTimeBuilder_ != null) {
+          bidEndTimeBuilder_.dispose();
+          bidEndTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_SurplusAuction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction build() {
+        com.comdex.auction.v1beta1.AuctionProto.SurplusAuction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction buildPartial() {
+        com.comdex.auction.v1beta1.AuctionProto.SurplusAuction result = new com.comdex.auction.v1beta1.AuctionProto.SurplusAuction(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.auction.v1beta1.AuctionProto.SurplusAuction result) {
+        if (biddingIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            biddingIds_ = java.util.Collections.unmodifiableList(biddingIds_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.biddingIds_ = biddingIds_;
+        } else {
+          result.biddingIds_ = biddingIdsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.AuctionProto.SurplusAuction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.auctionId_ = auctionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sellToken_ = sellTokenBuilder_ == null
+              ? sellToken_
+              : sellTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.buyToken_ = buyTokenBuilder_ == null
+              ? buyToken_
+              : buyTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.activeBiddingId_ = activeBiddingId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.bidder_ = bidder_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.bid_ = bidBuilder_ == null
+              ? bid_
+              : bidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.bidFactor_ = bidFactor_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.auctionStatus_ = auctionStatus_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.auctionMappingId_ = auctionMappingId_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.assetInId_ = assetInId_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.assetOutId_ = assetOutId_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.bidEndTime_ = bidEndTimeBuilder_ == null
+              ? bidEndTime_
+              : bidEndTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.AuctionProto.SurplusAuction) {
+          return mergeFrom((com.comdex.auction.v1beta1.AuctionProto.SurplusAuction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.AuctionProto.SurplusAuction other) {
+        if (other == com.comdex.auction.v1beta1.AuctionProto.SurplusAuction.getDefaultInstance()) return this;
+        if (other.getAuctionId() != 0L) {
+          setAuctionId(other.getAuctionId());
+        }
+        if (other.hasSellToken()) {
+          mergeSellToken(other.getSellToken());
+        }
+        if (other.hasBuyToken()) {
+          mergeBuyToken(other.getBuyToken());
+        }
+        if (other.getActiveBiddingId() != 0L) {
+          setActiveBiddingId(other.getActiveBiddingId());
+        }
+        if (!other.getBidder().isEmpty()) {
+          bidder_ = other.bidder_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasBid()) {
+          mergeBid(other.getBid());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (!other.getBidFactor().isEmpty()) {
+          bidFactor_ = other.bidFactor_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (biddingIdsBuilder_ == null) {
+          if (!other.biddingIds_.isEmpty()) {
+            if (biddingIds_.isEmpty()) {
+              biddingIds_ = other.biddingIds_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureBiddingIdsIsMutable();
+              biddingIds_.addAll(other.biddingIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.biddingIds_.isEmpty()) {
+            if (biddingIdsBuilder_.isEmpty()) {
+              biddingIdsBuilder_.dispose();
+              biddingIdsBuilder_ = null;
+              biddingIds_ = other.biddingIds_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              biddingIdsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBiddingIdsFieldBuilder() : null;
+            } else {
+              biddingIdsBuilder_.addAllMessages(other.biddingIds_);
+            }
+          }
+        }
+        if (other.getAuctionStatus() != 0L) {
+          setAuctionStatus(other.getAuctionStatus());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (other.getAuctionMappingId() != 0L) {
+          setAuctionMappingId(other.getAuctionMappingId());
+        }
+        if (other.getAssetInId() != 0L) {
+          setAssetInId(other.getAssetInId());
+        }
+        if (other.getAssetOutId() != 0L) {
+          setAssetOutId(other.getAssetOutId());
+        }
+        if (other.hasBidEndTime()) {
+          mergeBidEndTime(other.getBidEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                auctionId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getSellTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBuyTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                activeBiddingId_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                bidder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getBidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                bidFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.parser(),
+                        extensionRegistry);
+                if (biddingIdsBuilder_ == null) {
+                  ensureBiddingIdsIsMutable();
+                  biddingIds_.add(m);
+                } else {
+                  biddingIdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 80: {
+                auctionStatus_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                auctionMappingId_ = input.readUInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              case 112: {
+                assetInId_ = input.readUInt64();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              case 120: {
+                assetOutId_ = input.readUInt64();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 130: {
+                input.readMessage(
+                    getBidEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long auctionId_ ;
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @return The auctionId.
+       */
+      @java.lang.Override
+      public long getAuctionId() {
+        return auctionId_;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @param value The auctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionId(long value) {
+
+        auctionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        auctionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin sellToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> sellTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the sellToken field is set.
+       */
+      public boolean hasSellToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The sellToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSellToken() {
+        if (sellTokenBuilder_ == null) {
+          return sellToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sellToken_;
+        } else {
+          return sellTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setSellToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sellTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sellToken_ = value;
+        } else {
+          sellTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setSellToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sellTokenBuilder_ == null) {
+          sellToken_ = builderForValue.build();
+        } else {
+          sellTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeSellToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sellTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            sellToken_ != null &&
+            sellToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getSellTokenBuilder().mergeFrom(value);
+          } else {
+            sellToken_ = value;
+          }
+        } else {
+          sellTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearSellToken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sellToken_ = null;
+        if (sellTokenBuilder_ != null) {
+          sellTokenBuilder_.dispose();
+          sellTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSellTokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSellTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSellTokenOrBuilder() {
+        if (sellTokenBuilder_ != null) {
+          return sellTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return sellToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : sellToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin sell_token = 2 [json_name = "sellToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"sell_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSellTokenFieldBuilder() {
+        if (sellTokenBuilder_ == null) {
+          sellTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getSellToken(),
+                  getParentForChildren(),
+                  isClean());
+          sellToken_ = null;
+        }
+        return sellTokenBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin buyToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> buyTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the buyToken field is set.
+       */
+      public boolean hasBuyToken() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The buyToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBuyToken() {
+        if (buyTokenBuilder_ == null) {
+          return buyToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : buyToken_;
+        } else {
+          return buyTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBuyToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (buyTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          buyToken_ = value;
+        } else {
+          buyTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBuyToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (buyTokenBuilder_ == null) {
+          buyToken_ = builderForValue.build();
+        } else {
+          buyTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeBuyToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (buyTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            buyToken_ != null &&
+            buyToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBuyTokenBuilder().mergeFrom(value);
+          } else {
+            buyToken_ = value;
+          }
+        } else {
+          buyTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearBuyToken() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        buyToken_ = null;
+        if (buyTokenBuilder_ != null) {
+          buyTokenBuilder_.dispose();
+          buyTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBuyTokenBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBuyTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBuyTokenOrBuilder() {
+        if (buyTokenBuilder_ != null) {
+          return buyTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return buyToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : buyToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin buy_token = 3 [json_name = "buyToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"buy_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBuyTokenFieldBuilder() {
+        if (buyTokenBuilder_ == null) {
+          buyTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBuyToken(),
+                  getParentForChildren(),
+                  isClean());
+          buyToken_ = null;
+        }
+        return buyTokenBuilder_;
+      }
+
+      private long activeBiddingId_ ;
+      /**
+       * <code>uint64 active_bidding_id = 4 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+       * @return The activeBiddingId.
+       */
+      @java.lang.Override
+      public long getActiveBiddingId() {
+        return activeBiddingId_;
+      }
+      /**
+       * <code>uint64 active_bidding_id = 4 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+       * @param value The activeBiddingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActiveBiddingId(long value) {
+
+        activeBiddingId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 active_bidding_id = 4 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActiveBiddingId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        activeBiddingId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidder_ = "";
+      /**
+       * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The bidder.
+       */
+      public java.lang.String getBidder() {
+        java.lang.Object ref = bidder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The bytes for bidder.
+       */
+      public com.google.protobuf.ByteString
+          getBidderBytes() {
+        java.lang.Object ref = bidder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidder_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidder() {
+        bidder_ = getDefaultInstance().getBidder();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 5 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The bytes for bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidder_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin bid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> bidBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the bid field is set.
+       */
+      public boolean hasBid() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The bid.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBid() {
+        if (bidBuilder_ == null) {
+          return bid_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bid_;
+        } else {
+          return bidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBid(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (bidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bid_ = value;
+        } else {
+          bidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setBid(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (bidBuilder_ == null) {
+          bid_ = builderForValue.build();
+        } else {
+          bidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeBid(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (bidBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            bid_ != null &&
+            bid_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBidBuilder().mergeFrom(value);
+          } else {
+            bid_ = value;
+          }
+        } else {
+          bidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearBid() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        bid_ = null;
+        if (bidBuilder_ != null) {
+          bidBuilder_.dispose();
+          bidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBidBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getBidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBidOrBuilder() {
+        if (bidBuilder_ != null) {
+          return bidBuilder_.getMessageOrBuilder();
+        } else {
+          return bid_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : bid_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin bid = 6 [json_name = "bid", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBidFieldBuilder() {
+        if (bidBuilder_ == null) {
+          bidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBid(),
+                  getParentForChildren(),
+                  isClean());
+          bid_ = null;
+        }
+        return bidBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private java.lang.Object bidFactor_ = "";
+      /**
+       * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @return The bidFactor.
+       */
+      public java.lang.String getBidFactor() {
+        java.lang.Object ref = bidFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @return The bytes for bidFactor.
+       */
+      public com.google.protobuf.ByteString
+          getBidFactorBytes() {
+        java.lang.Object ref = bidFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @param value The bidFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidFactor_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidFactor() {
+        bidFactor_ = getDefaultInstance().getBidFactor();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bid_factor = 8 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @param value The bytes for bidFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidFactor_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> biddingIds_ =
+        java.util.Collections.emptyList();
+      private void ensureBiddingIdsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          biddingIds_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping>(biddingIds_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> biddingIdsBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> getBiddingIdsList() {
+        if (biddingIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(biddingIds_);
+        } else {
+          return biddingIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public int getBiddingIdsCount() {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.size();
+        } else {
+          return biddingIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index) {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.get(index);
+        } else {
+          return biddingIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder setBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.set(index, value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder setBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(index, value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addAllBiddingIds(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> values) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, biddingIds_);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder clearBiddingIds() {
+        if (biddingIdsBuilder_ == null) {
+          biddingIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder removeBiddingIds(int index) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.remove(index);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder getBiddingIdsBuilder(
+          int index) {
+        return getBiddingIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+          int index) {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.get(index);  } else {
+          return biddingIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+           getBiddingIdsOrBuilderList() {
+        if (biddingIdsBuilder_ != null) {
+          return biddingIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(biddingIds_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder addBiddingIdsBuilder() {
+        return getBiddingIdsFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder addBiddingIdsBuilder(
+          int index) {
+        return getBiddingIdsFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 9 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder> 
+           getBiddingIdsBuilderList() {
+        return getBiddingIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+          getBiddingIdsFieldBuilder() {
+        if (biddingIdsBuilder_ == null) {
+          biddingIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder>(
+                  biddingIds_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          biddingIds_ = null;
+        }
+        return biddingIdsBuilder_;
+      }
+
+      private long auctionStatus_ ;
+      /**
+       * <code>uint64 auction_status = 10 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @return The auctionStatus.
+       */
+      @java.lang.Override
+      public long getAuctionStatus() {
+        return auctionStatus_;
+      }
+      /**
+       * <code>uint64 auction_status = 10 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @param value The auctionStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionStatus(long value) {
+
+        auctionStatus_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_status = 10 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionStatus() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        auctionStatus_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 11 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 11 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 11 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 12 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 12 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 12 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long auctionMappingId_ ;
+      /**
+       * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @return The auctionMappingId.
+       */
+      @java.lang.Override
+      public long getAuctionMappingId() {
+        return auctionMappingId_;
+      }
+      /**
+       * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @param value The auctionMappingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionMappingId(long value) {
+
+        auctionMappingId_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionMappingId() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        auctionMappingId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetInId_ ;
+      /**
+       * <code>uint64 asset_in_id = 14 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @return The assetInId.
+       */
+      @java.lang.Override
+      public long getAssetInId() {
+        return assetInId_;
+      }
+      /**
+       * <code>uint64 asset_in_id = 14 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @param value The assetInId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetInId(long value) {
+
+        assetInId_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_in_id = 14 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetInId() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        assetInId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetOutId_ ;
+      /**
+       * <code>uint64 asset_out_id = 15 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @return The assetOutId.
+       */
+      @java.lang.Override
+      public long getAssetOutId() {
+        return assetOutId_;
+      }
+      /**
+       * <code>uint64 asset_out_id = 15 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @param value The assetOutId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetOutId(long value) {
+
+        assetOutId_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_out_id = 15 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetOutId() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        assetOutId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp bidEndTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> bidEndTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the bidEndTime field is set.
+       */
+      public boolean hasBidEndTime() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The bidEndTime.
+       */
+      public com.google.protobuf.Timestamp getBidEndTime() {
+        if (bidEndTimeBuilder_ == null) {
+          return bidEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+        } else {
+          return bidEndTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setBidEndTime(com.google.protobuf.Timestamp value) {
+        if (bidEndTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bidEndTime_ = value;
+        } else {
+          bidEndTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setBidEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (bidEndTimeBuilder_ == null) {
+          bidEndTime_ = builderForValue.build();
+        } else {
+          bidEndTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeBidEndTime(com.google.protobuf.Timestamp value) {
+        if (bidEndTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) != 0) &&
+            bidEndTime_ != null &&
+            bidEndTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getBidEndTimeBuilder().mergeFrom(value);
+          } else {
+            bidEndTime_ = value;
+          }
+        } else {
+          bidEndTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearBidEndTime() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        bidEndTime_ = null;
+        if (bidEndTimeBuilder_ != null) {
+          bidEndTimeBuilder_.dispose();
+          bidEndTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getBidEndTimeBuilder() {
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return getBidEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getBidEndTimeOrBuilder() {
+        if (bidEndTimeBuilder_ != null) {
+          return bidEndTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return bidEndTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 16 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getBidEndTimeFieldBuilder() {
+        if (bidEndTimeBuilder_ == null) {
+          bidEndTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getBidEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          bidEndTime_ = null;
+        }
+        return bidEndTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.SurplusAuction)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.SurplusAuction)
+    private static final com.comdex.auction.v1beta1.AuctionProto.SurplusAuction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.AuctionProto.SurplusAuction();
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.SurplusAuction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SurplusAuction>
+        PARSER = new com.google.protobuf.AbstractParser<SurplusAuction>() {
+      @java.lang.Override
+      public SurplusAuction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SurplusAuction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SurplusAuction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.SurplusAuction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DebtAuctionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.DebtAuction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+     * @return The auctionId.
+     */
+    long getAuctionId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the auctionedToken field is set.
+     */
+    boolean hasAuctionedToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The auctionedToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAuctionedToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAuctionedTokenOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the expectedUserToken field is set.
+     */
+    boolean hasExpectedUserToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The expectedUserToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getExpectedUserToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getExpectedUserTokenOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the expectedMintedToken field is set.
+     */
+    boolean hasExpectedMintedToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The expectedMintedToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getExpectedMintedToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getExpectedMintedTokenOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <code>uint64 active_bidding_id = 6 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+     * @return The activeBiddingId.
+     */
+    long getActiveBiddingId();
+
+    /**
+     * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bidder.
+     */
+    java.lang.String getBidder();
+    /**
+     * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bytes for bidder.
+     */
+    com.google.protobuf.ByteString
+        getBidderBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the currentBidAmount field is set.
+     */
+    boolean hasCurrentBidAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The currentBidAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCurrentBidAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCurrentBidAmountOrBuilder();
+
+    /**
+     * <code>uint64 auction_status = 9 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+     * @return The auctionStatus.
+     */
+    long getAuctionStatus();
+
+    /**
+     * <code>uint64 app_id = 10 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_id = 11 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> 
+        getBiddingIdsList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    int getBiddingIdsCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+        getBiddingIdsOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+     * @return The auctionMappingId.
+     */
+    long getAuctionMappingId();
+
+    /**
+     * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bidFactor.
+     */
+    java.lang.String getBidFactor();
+    /**
+     * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bytes for bidFactor.
+     */
+    com.google.protobuf.ByteString
+        getBidFactorBytes();
+
+    /**
+     * <code>uint64 asset_in_id = 15 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+     * @return The assetInId.
+     */
+    long getAssetInId();
+
+    /**
+     * <code>uint64 asset_out_id = 16 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+     * @return The assetOutId.
+     */
+    long getAssetOutId();
+
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the bidEndTime field is set.
+     */
+    boolean hasBidEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The bidEndTime.
+     */
+    com.google.protobuf.Timestamp getBidEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getBidEndTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.DebtAuction}
+   */
+  public static final class DebtAuction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.DebtAuction)
+      DebtAuctionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DebtAuction.newBuilder() to construct.
+    private DebtAuction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DebtAuction() {
+      bidder_ = "";
+      biddingIds_ = java.util.Collections.emptyList();
+      bidFactor_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DebtAuction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DebtAuction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DebtAuction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.AuctionProto.DebtAuction.class, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder.class);
+    }
+
+    public static final int AUCTION_ID_FIELD_NUMBER = 1;
+    private long auctionId_ = 0L;
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+     * @return The auctionId.
+     */
+    @java.lang.Override
+    public long getAuctionId() {
+      return auctionId_;
+    }
+
+    public static final int AUCTIONED_TOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin auctionedToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the auctionedToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuctionedToken() {
+      return auctionedToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The auctionedToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAuctionedToken() {
+      return auctionedToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : auctionedToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAuctionedTokenOrBuilder() {
+      return auctionedToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : auctionedToken_;
+    }
+
+    public static final int EXPECTED_USER_TOKEN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin expectedUserToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the expectedUserToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpectedUserToken() {
+      return expectedUserToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The expectedUserToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getExpectedUserToken() {
+      return expectedUserToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedUserToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getExpectedUserTokenOrBuilder() {
+      return expectedUserToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedUserToken_;
+    }
+
+    public static final int EXPECTED_MINTED_TOKEN_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin expectedMintedToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the expectedMintedToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpectedMintedToken() {
+      return expectedMintedToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The expectedMintedToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getExpectedMintedToken() {
+      return expectedMintedToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedMintedToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getExpectedMintedTokenOrBuilder() {
+      return expectedMintedToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedMintedToken_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int ACTIVE_BIDDING_ID_FIELD_NUMBER = 6;
+    private long activeBiddingId_ = 0L;
+    /**
+     * <code>uint64 active_bidding_id = 6 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+     * @return The activeBiddingId.
+     */
+    @java.lang.Override
+    public long getActiveBiddingId() {
+      return activeBiddingId_;
+    }
+
+    public static final int BIDDER_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidder_ = "";
+    /**
+     * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bidder.
+     */
+    @java.lang.Override
+    public java.lang.String getBidder() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bytes for bidder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidderBytes() {
+      java.lang.Object ref = bidder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENT_BID_AMOUNT_FIELD_NUMBER = 8;
+    private com.cosmos.base.v1beta1.CoinProto.Coin currentBidAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the currentBidAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentBidAmount() {
+      return currentBidAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The currentBidAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCurrentBidAmount() {
+      return currentBidAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentBidAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCurrentBidAmountOrBuilder() {
+      return currentBidAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentBidAmount_;
+    }
+
+    public static final int AUCTION_STATUS_FIELD_NUMBER = 9;
+    private long auctionStatus_ = 0L;
+    /**
+     * <code>uint64 auction_status = 9 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+     * @return The auctionStatus.
+     */
+    @java.lang.Override
+    public long getAuctionStatus() {
+      return auctionStatus_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 10;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 10 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 11;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 11 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int BIDDING_IDS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> biddingIds_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> getBiddingIdsList() {
+      return biddingIds_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+        getBiddingIdsOrBuilderList() {
+      return biddingIds_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBiddingIdsCount() {
+      return biddingIds_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index) {
+      return biddingIds_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+        int index) {
+      return biddingIds_.get(index);
+    }
+
+    public static final int AUCTION_MAPPING_ID_FIELD_NUMBER = 13;
+    private long auctionMappingId_ = 0L;
+    /**
+     * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+     * @return The auctionMappingId.
+     */
+    @java.lang.Override
+    public long getAuctionMappingId() {
+      return auctionMappingId_;
+    }
+
+    public static final int BID_FACTOR_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidFactor_ = "";
+    /**
+     * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bidFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getBidFactor() {
+      java.lang.Object ref = bidFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+     * @return The bytes for bidFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidFactorBytes() {
+      java.lang.Object ref = bidFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_IN_ID_FIELD_NUMBER = 15;
+    private long assetInId_ = 0L;
+    /**
+     * <code>uint64 asset_in_id = 15 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+     * @return The assetInId.
+     */
+    @java.lang.Override
+    public long getAssetInId() {
+      return assetInId_;
+    }
+
+    public static final int ASSET_OUT_ID_FIELD_NUMBER = 16;
+    private long assetOutId_ = 0L;
+    /**
+     * <code>uint64 asset_out_id = 16 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+     * @return The assetOutId.
+     */
+    @java.lang.Override
+    public long getAssetOutId() {
+      return assetOutId_;
+    }
+
+    public static final int BID_END_TIME_FIELD_NUMBER = 17;
+    private com.google.protobuf.Timestamp bidEndTime_;
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the bidEndTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasBidEndTime() {
+      return bidEndTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The bidEndTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getBidEndTime() {
+      return bidEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getBidEndTimeOrBuilder() {
+      return bidEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (auctionId_ != 0L) {
+        output.writeUInt64(1, auctionId_);
+      }
+      if (auctionedToken_ != null) {
+        output.writeMessage(2, getAuctionedToken());
+      }
+      if (expectedUserToken_ != null) {
+        output.writeMessage(3, getExpectedUserToken());
+      }
+      if (expectedMintedToken_ != null) {
+        output.writeMessage(4, getExpectedMintedToken());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(5, getEndTime());
+      }
+      if (activeBiddingId_ != 0L) {
+        output.writeUInt64(6, activeBiddingId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, bidder_);
+      }
+      if (currentBidAmount_ != null) {
+        output.writeMessage(8, getCurrentBidAmount());
+      }
+      if (auctionStatus_ != 0L) {
+        output.writeUInt64(9, auctionStatus_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(10, appId_);
+      }
+      if (assetId_ != 0L) {
+        output.writeUInt64(11, assetId_);
+      }
+      for (int i = 0; i < biddingIds_.size(); i++) {
+        output.writeMessage(12, biddingIds_.get(i));
+      }
+      if (auctionMappingId_ != 0L) {
+        output.writeUInt64(13, auctionMappingId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, bidFactor_);
+      }
+      if (assetInId_ != 0L) {
+        output.writeUInt64(15, assetInId_);
+      }
+      if (assetOutId_ != 0L) {
+        output.writeUInt64(16, assetOutId_);
+      }
+      if (bidEndTime_ != null) {
+        output.writeMessage(17, getBidEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (auctionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, auctionId_);
+      }
+      if (auctionedToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAuctionedToken());
+      }
+      if (expectedUserToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getExpectedUserToken());
+      }
+      if (expectedMintedToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getExpectedMintedToken());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEndTime());
+      }
+      if (activeBiddingId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, activeBiddingId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, bidder_);
+      }
+      if (currentBidAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getCurrentBidAmount());
+      }
+      if (auctionStatus_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, auctionStatus_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, appId_);
+      }
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(11, assetId_);
+      }
+      for (int i = 0; i < biddingIds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, biddingIds_.get(i));
+      }
+      if (auctionMappingId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, auctionMappingId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, bidFactor_);
+      }
+      if (assetInId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, assetInId_);
+      }
+      if (assetOutId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(16, assetOutId_);
+      }
+      if (bidEndTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getBidEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.AuctionProto.DebtAuction)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.AuctionProto.DebtAuction other = (com.comdex.auction.v1beta1.AuctionProto.DebtAuction) obj;
+
+      if (getAuctionId()
+          != other.getAuctionId()) return false;
+      if (hasAuctionedToken() != other.hasAuctionedToken()) return false;
+      if (hasAuctionedToken()) {
+        if (!getAuctionedToken()
+            .equals(other.getAuctionedToken())) return false;
+      }
+      if (hasExpectedUserToken() != other.hasExpectedUserToken()) return false;
+      if (hasExpectedUserToken()) {
+        if (!getExpectedUserToken()
+            .equals(other.getExpectedUserToken())) return false;
+      }
+      if (hasExpectedMintedToken() != other.hasExpectedMintedToken()) return false;
+      if (hasExpectedMintedToken()) {
+        if (!getExpectedMintedToken()
+            .equals(other.getExpectedMintedToken())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (getActiveBiddingId()
+          != other.getActiveBiddingId()) return false;
+      if (!getBidder()
+          .equals(other.getBidder())) return false;
+      if (hasCurrentBidAmount() != other.hasCurrentBidAmount()) return false;
+      if (hasCurrentBidAmount()) {
+        if (!getCurrentBidAmount()
+            .equals(other.getCurrentBidAmount())) return false;
+      }
+      if (getAuctionStatus()
+          != other.getAuctionStatus()) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (!getBiddingIdsList()
+          .equals(other.getBiddingIdsList())) return false;
+      if (getAuctionMappingId()
+          != other.getAuctionMappingId()) return false;
+      if (!getBidFactor()
+          .equals(other.getBidFactor())) return false;
+      if (getAssetInId()
+          != other.getAssetInId()) return false;
+      if (getAssetOutId()
+          != other.getAssetOutId()) return false;
+      if (hasBidEndTime() != other.hasBidEndTime()) return false;
+      if (hasBidEndTime()) {
+        if (!getBidEndTime()
+            .equals(other.getBidEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionId());
+      if (hasAuctionedToken()) {
+        hash = (37 * hash) + AUCTIONED_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getAuctionedToken().hashCode();
+      }
+      if (hasExpectedUserToken()) {
+        hash = (37 * hash) + EXPECTED_USER_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getExpectedUserToken().hashCode();
+      }
+      if (hasExpectedMintedToken()) {
+        hash = (37 * hash) + EXPECTED_MINTED_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getExpectedMintedToken().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + ACTIVE_BIDDING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getActiveBiddingId());
+      hash = (37 * hash) + BIDDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidder().hashCode();
+      if (hasCurrentBidAmount()) {
+        hash = (37 * hash) + CURRENT_BID_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentBidAmount().hashCode();
+      }
+      hash = (37 * hash) + AUCTION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionStatus());
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      if (getBiddingIdsCount() > 0) {
+        hash = (37 * hash) + BIDDING_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBiddingIdsList().hashCode();
+      }
+      hash = (37 * hash) + AUCTION_MAPPING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionMappingId());
+      hash = (37 * hash) + BID_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getBidFactor().hashCode();
+      hash = (37 * hash) + ASSET_IN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetInId());
+      hash = (37 * hash) + ASSET_OUT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetOutId());
+      if (hasBidEndTime()) {
+        hash = (37 * hash) + BID_END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getBidEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.AuctionProto.DebtAuction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.DebtAuction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.DebtAuction)
+        com.comdex.auction.v1beta1.AuctionProto.DebtAuctionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DebtAuction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DebtAuction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.AuctionProto.DebtAuction.class, com.comdex.auction.v1beta1.AuctionProto.DebtAuction.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.AuctionProto.DebtAuction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        auctionId_ = 0L;
+        auctionedToken_ = null;
+        if (auctionedTokenBuilder_ != null) {
+          auctionedTokenBuilder_.dispose();
+          auctionedTokenBuilder_ = null;
+        }
+        expectedUserToken_ = null;
+        if (expectedUserTokenBuilder_ != null) {
+          expectedUserTokenBuilder_.dispose();
+          expectedUserTokenBuilder_ = null;
+        }
+        expectedMintedToken_ = null;
+        if (expectedMintedTokenBuilder_ != null) {
+          expectedMintedTokenBuilder_.dispose();
+          expectedMintedTokenBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        activeBiddingId_ = 0L;
+        bidder_ = "";
+        currentBidAmount_ = null;
+        if (currentBidAmountBuilder_ != null) {
+          currentBidAmountBuilder_.dispose();
+          currentBidAmountBuilder_ = null;
+        }
+        auctionStatus_ = 0L;
+        appId_ = 0L;
+        assetId_ = 0L;
+        if (biddingIdsBuilder_ == null) {
+          biddingIds_ = java.util.Collections.emptyList();
+        } else {
+          biddingIds_ = null;
+          biddingIdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        auctionMappingId_ = 0L;
+        bidFactor_ = "";
+        assetInId_ = 0L;
+        assetOutId_ = 0L;
+        bidEndTime_ = null;
+        if (bidEndTimeBuilder_ != null) {
+          bidEndTimeBuilder_.dispose();
+          bidEndTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DebtAuction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.DebtAuction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction build() {
+        com.comdex.auction.v1beta1.AuctionProto.DebtAuction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.DebtAuction buildPartial() {
+        com.comdex.auction.v1beta1.AuctionProto.DebtAuction result = new com.comdex.auction.v1beta1.AuctionProto.DebtAuction(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.auction.v1beta1.AuctionProto.DebtAuction result) {
+        if (biddingIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            biddingIds_ = java.util.Collections.unmodifiableList(biddingIds_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.biddingIds_ = biddingIds_;
+        } else {
+          result.biddingIds_ = biddingIdsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.AuctionProto.DebtAuction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.auctionId_ = auctionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.auctionedToken_ = auctionedTokenBuilder_ == null
+              ? auctionedToken_
+              : auctionedTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.expectedUserToken_ = expectedUserTokenBuilder_ == null
+              ? expectedUserToken_
+              : expectedUserTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.expectedMintedToken_ = expectedMintedTokenBuilder_ == null
+              ? expectedMintedToken_
+              : expectedMintedTokenBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.activeBiddingId_ = activeBiddingId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.bidder_ = bidder_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.currentBidAmount_ = currentBidAmountBuilder_ == null
+              ? currentBidAmount_
+              : currentBidAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.auctionStatus_ = auctionStatus_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.auctionMappingId_ = auctionMappingId_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.bidFactor_ = bidFactor_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.assetInId_ = assetInId_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.assetOutId_ = assetOutId_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.bidEndTime_ = bidEndTimeBuilder_ == null
+              ? bidEndTime_
+              : bidEndTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.AuctionProto.DebtAuction) {
+          return mergeFrom((com.comdex.auction.v1beta1.AuctionProto.DebtAuction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.AuctionProto.DebtAuction other) {
+        if (other == com.comdex.auction.v1beta1.AuctionProto.DebtAuction.getDefaultInstance()) return this;
+        if (other.getAuctionId() != 0L) {
+          setAuctionId(other.getAuctionId());
+        }
+        if (other.hasAuctionedToken()) {
+          mergeAuctionedToken(other.getAuctionedToken());
+        }
+        if (other.hasExpectedUserToken()) {
+          mergeExpectedUserToken(other.getExpectedUserToken());
+        }
+        if (other.hasExpectedMintedToken()) {
+          mergeExpectedMintedToken(other.getExpectedMintedToken());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (other.getActiveBiddingId() != 0L) {
+          setActiveBiddingId(other.getActiveBiddingId());
+        }
+        if (!other.getBidder().isEmpty()) {
+          bidder_ = other.bidder_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.hasCurrentBidAmount()) {
+          mergeCurrentBidAmount(other.getCurrentBidAmount());
+        }
+        if (other.getAuctionStatus() != 0L) {
+          setAuctionStatus(other.getAuctionStatus());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (biddingIdsBuilder_ == null) {
+          if (!other.biddingIds_.isEmpty()) {
+            if (biddingIds_.isEmpty()) {
+              biddingIds_ = other.biddingIds_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureBiddingIdsIsMutable();
+              biddingIds_.addAll(other.biddingIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.biddingIds_.isEmpty()) {
+            if (biddingIdsBuilder_.isEmpty()) {
+              biddingIdsBuilder_.dispose();
+              biddingIdsBuilder_ = null;
+              biddingIds_ = other.biddingIds_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              biddingIdsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBiddingIdsFieldBuilder() : null;
+            } else {
+              biddingIdsBuilder_.addAllMessages(other.biddingIds_);
+            }
+          }
+        }
+        if (other.getAuctionMappingId() != 0L) {
+          setAuctionMappingId(other.getAuctionMappingId());
+        }
+        if (!other.getBidFactor().isEmpty()) {
+          bidFactor_ = other.bidFactor_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (other.getAssetInId() != 0L) {
+          setAssetInId(other.getAssetInId());
+        }
+        if (other.getAssetOutId() != 0L) {
+          setAssetOutId(other.getAssetOutId());
+        }
+        if (other.hasBidEndTime()) {
+          mergeBidEndTime(other.getBidEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                auctionId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getAuctionedTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getExpectedUserTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getExpectedMintedTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                activeBiddingId_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                bidder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getCurrentBidAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 72: {
+                auctionStatus_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 98: {
+                com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.parser(),
+                        extensionRegistry);
+                if (biddingIdsBuilder_ == null) {
+                  ensureBiddingIdsIsMutable();
+                  biddingIds_.add(m);
+                } else {
+                  biddingIdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+              case 104: {
+                auctionMappingId_ = input.readUInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              case 114: {
+                bidFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 120: {
+                assetInId_ = input.readUInt64();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 128: {
+                assetOutId_ = input.readUInt64();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 128
+              case 138: {
+                input.readMessage(
+                    getBidEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long auctionId_ ;
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @return The auctionId.
+       */
+      @java.lang.Override
+      public long getAuctionId() {
+        return auctionId_;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @param value The auctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionId(long value) {
+
+        auctionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        auctionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin auctionedToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> auctionedTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the auctionedToken field is set.
+       */
+      public boolean hasAuctionedToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The auctionedToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAuctionedToken() {
+        if (auctionedTokenBuilder_ == null) {
+          return auctionedToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : auctionedToken_;
+        } else {
+          return auctionedTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setAuctionedToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (auctionedTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          auctionedToken_ = value;
+        } else {
+          auctionedTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setAuctionedToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (auctionedTokenBuilder_ == null) {
+          auctionedToken_ = builderForValue.build();
+        } else {
+          auctionedTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeAuctionedToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (auctionedTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            auctionedToken_ != null &&
+            auctionedToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAuctionedTokenBuilder().mergeFrom(value);
+          } else {
+            auctionedToken_ = value;
+          }
+        } else {
+          auctionedTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearAuctionedToken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        auctionedToken_ = null;
+        if (auctionedTokenBuilder_ != null) {
+          auctionedTokenBuilder_.dispose();
+          auctionedTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAuctionedTokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getAuctionedTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAuctionedTokenOrBuilder() {
+        if (auctionedTokenBuilder_ != null) {
+          return auctionedTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return auctionedToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : auctionedToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin auctioned_token = 2 [json_name = "auctionedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"auctioned_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAuctionedTokenFieldBuilder() {
+        if (auctionedTokenBuilder_ == null) {
+          auctionedTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAuctionedToken(),
+                  getParentForChildren(),
+                  isClean());
+          auctionedToken_ = null;
+        }
+        return auctionedTokenBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin expectedUserToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> expectedUserTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the expectedUserToken field is set.
+       */
+      public boolean hasExpectedUserToken() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The expectedUserToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getExpectedUserToken() {
+        if (expectedUserTokenBuilder_ == null) {
+          return expectedUserToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedUserToken_;
+        } else {
+          return expectedUserTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setExpectedUserToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (expectedUserTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expectedUserToken_ = value;
+        } else {
+          expectedUserTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setExpectedUserToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (expectedUserTokenBuilder_ == null) {
+          expectedUserToken_ = builderForValue.build();
+        } else {
+          expectedUserTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeExpectedUserToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (expectedUserTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            expectedUserToken_ != null &&
+            expectedUserToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getExpectedUserTokenBuilder().mergeFrom(value);
+          } else {
+            expectedUserToken_ = value;
+          }
+        } else {
+          expectedUserTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearExpectedUserToken() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        expectedUserToken_ = null;
+        if (expectedUserTokenBuilder_ != null) {
+          expectedUserTokenBuilder_.dispose();
+          expectedUserTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getExpectedUserTokenBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getExpectedUserTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getExpectedUserTokenOrBuilder() {
+        if (expectedUserTokenBuilder_ != null) {
+          return expectedUserTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return expectedUserToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedUserToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_user_token = 3 [json_name = "expectedUserToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_user_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getExpectedUserTokenFieldBuilder() {
+        if (expectedUserTokenBuilder_ == null) {
+          expectedUserTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getExpectedUserToken(),
+                  getParentForChildren(),
+                  isClean());
+          expectedUserToken_ = null;
+        }
+        return expectedUserTokenBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin expectedMintedToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> expectedMintedTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the expectedMintedToken field is set.
+       */
+      public boolean hasExpectedMintedToken() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The expectedMintedToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getExpectedMintedToken() {
+        if (expectedMintedTokenBuilder_ == null) {
+          return expectedMintedToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedMintedToken_;
+        } else {
+          return expectedMintedTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setExpectedMintedToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (expectedMintedTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expectedMintedToken_ = value;
+        } else {
+          expectedMintedTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setExpectedMintedToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (expectedMintedTokenBuilder_ == null) {
+          expectedMintedToken_ = builderForValue.build();
+        } else {
+          expectedMintedTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeExpectedMintedToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (expectedMintedTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            expectedMintedToken_ != null &&
+            expectedMintedToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getExpectedMintedTokenBuilder().mergeFrom(value);
+          } else {
+            expectedMintedToken_ = value;
+          }
+        } else {
+          expectedMintedTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearExpectedMintedToken() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        expectedMintedToken_ = null;
+        if (expectedMintedTokenBuilder_ != null) {
+          expectedMintedTokenBuilder_.dispose();
+          expectedMintedTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getExpectedMintedTokenBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getExpectedMintedTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getExpectedMintedTokenOrBuilder() {
+        if (expectedMintedTokenBuilder_ != null) {
+          return expectedMintedTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return expectedMintedToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : expectedMintedToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin expected_minted_token = 4 [json_name = "expectedMintedToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"expected_minted_token&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getExpectedMintedTokenFieldBuilder() {
+        if (expectedMintedTokenBuilder_ == null) {
+          expectedMintedTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getExpectedMintedToken(),
+                  getParentForChildren(),
+                  isClean());
+          expectedMintedToken_ = null;
+        }
+        return expectedMintedTokenBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private long activeBiddingId_ ;
+      /**
+       * <code>uint64 active_bidding_id = 6 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+       * @return The activeBiddingId.
+       */
+      @java.lang.Override
+      public long getActiveBiddingId() {
+        return activeBiddingId_;
+      }
+      /**
+       * <code>uint64 active_bidding_id = 6 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+       * @param value The activeBiddingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActiveBiddingId(long value) {
+
+        activeBiddingId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 active_bidding_id = 6 [json_name = "activeBiddingId", (.gogoproto.moretags) = "yaml:&#92;"active_bidding_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActiveBiddingId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        activeBiddingId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidder_ = "";
+      /**
+       * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The bidder.
+       */
+      public java.lang.String getBidder() {
+        java.lang.Object ref = bidder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The bytes for bidder.
+       */
+      public com.google.protobuf.ByteString
+          getBidderBytes() {
+        java.lang.Object ref = bidder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidder_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidder() {
+        bidder_ = getDefaultInstance().getBidder();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bidder = 7 [json_name = "bidder", (.gogoproto.moretags) = "yaml:&#92;"bidder&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The bytes for bidder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidder_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin currentBidAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> currentBidAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the currentBidAmount field is set.
+       */
+      public boolean hasCurrentBidAmount() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The currentBidAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCurrentBidAmount() {
+        if (currentBidAmountBuilder_ == null) {
+          return currentBidAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentBidAmount_;
+        } else {
+          return currentBidAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCurrentBidAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (currentBidAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          currentBidAmount_ = value;
+        } else {
+          currentBidAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setCurrentBidAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (currentBidAmountBuilder_ == null) {
+          currentBidAmount_ = builderForValue.build();
+        } else {
+          currentBidAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeCurrentBidAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (currentBidAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            currentBidAmount_ != null &&
+            currentBidAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCurrentBidAmountBuilder().mergeFrom(value);
+          } else {
+            currentBidAmount_ = value;
+          }
+        } else {
+          currentBidAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearCurrentBidAmount() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        currentBidAmount_ = null;
+        if (currentBidAmountBuilder_ != null) {
+          currentBidAmountBuilder_.dispose();
+          currentBidAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCurrentBidAmountBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getCurrentBidAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCurrentBidAmountOrBuilder() {
+        if (currentBidAmountBuilder_ != null) {
+          return currentBidAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return currentBidAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : currentBidAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin current_bid_amount = 8 [json_name = "currentBidAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_bid_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCurrentBidAmountFieldBuilder() {
+        if (currentBidAmountBuilder_ == null) {
+          currentBidAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCurrentBidAmount(),
+                  getParentForChildren(),
+                  isClean());
+          currentBidAmount_ = null;
+        }
+        return currentBidAmountBuilder_;
+      }
+
+      private long auctionStatus_ ;
+      /**
+       * <code>uint64 auction_status = 9 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @return The auctionStatus.
+       */
+      @java.lang.Override
+      public long getAuctionStatus() {
+        return auctionStatus_;
+      }
+      /**
+       * <code>uint64 auction_status = 9 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @param value The auctionStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionStatus(long value) {
+
+        auctionStatus_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_status = 9 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionStatus() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        auctionStatus_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 10 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 10 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 10 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 11 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 11 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 11 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> biddingIds_ =
+        java.util.Collections.emptyList();
+      private void ensureBiddingIdsIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          biddingIds_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping>(biddingIds_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> biddingIdsBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> getBiddingIdsList() {
+        if (biddingIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(biddingIds_);
+        } else {
+          return biddingIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public int getBiddingIdsCount() {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.size();
+        } else {
+          return biddingIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index) {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.get(index);
+        } else {
+          return biddingIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder setBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.set(index, value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder setBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(index, value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addAllBiddingIds(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> values) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, biddingIds_);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder clearBiddingIds() {
+        if (biddingIdsBuilder_ == null) {
+          biddingIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder removeBiddingIds(int index) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.remove(index);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder getBiddingIdsBuilder(
+          int index) {
+        return getBiddingIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+          int index) {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.get(index);  } else {
+          return biddingIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+           getBiddingIdsOrBuilderList() {
+        if (biddingIdsBuilder_ != null) {
+          return biddingIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(biddingIds_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder addBiddingIdsBuilder() {
+        return getBiddingIdsFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder addBiddingIdsBuilder(
+          int index) {
+        return getBiddingIdsFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 12 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder> 
+           getBiddingIdsBuilderList() {
+        return getBiddingIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+          getBiddingIdsFieldBuilder() {
+        if (biddingIdsBuilder_ == null) {
+          biddingIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder>(
+                  biddingIds_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          biddingIds_ = null;
+        }
+        return biddingIdsBuilder_;
+      }
+
+      private long auctionMappingId_ ;
+      /**
+       * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @return The auctionMappingId.
+       */
+      @java.lang.Override
+      public long getAuctionMappingId() {
+        return auctionMappingId_;
+      }
+      /**
+       * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @param value The auctionMappingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionMappingId(long value) {
+
+        auctionMappingId_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_mapping_id = 13 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionMappingId() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        auctionMappingId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidFactor_ = "";
+      /**
+       * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @return The bidFactor.
+       */
+      public java.lang.String getBidFactor() {
+        java.lang.Object ref = bidFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @return The bytes for bidFactor.
+       */
+      public com.google.protobuf.ByteString
+          getBidFactorBytes() {
+        java.lang.Object ref = bidFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @param value The bidFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidFactor_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidFactor() {
+        bidFactor_ = getDefaultInstance().getBidFactor();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bid_factor = 14 [json_name = "bidFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"bid_factor&#92;""];</code>
+       * @param value The bytes for bidFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidFactor_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private long assetInId_ ;
+      /**
+       * <code>uint64 asset_in_id = 15 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @return The assetInId.
+       */
+      @java.lang.Override
+      public long getAssetInId() {
+        return assetInId_;
+      }
+      /**
+       * <code>uint64 asset_in_id = 15 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @param value The assetInId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetInId(long value) {
+
+        assetInId_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_in_id = 15 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetInId() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        assetInId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetOutId_ ;
+      /**
+       * <code>uint64 asset_out_id = 16 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @return The assetOutId.
+       */
+      @java.lang.Override
+      public long getAssetOutId() {
+        return assetOutId_;
+      }
+      /**
+       * <code>uint64 asset_out_id = 16 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @param value The assetOutId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetOutId(long value) {
+
+        assetOutId_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_out_id = 16 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetOutId() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        assetOutId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp bidEndTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> bidEndTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the bidEndTime field is set.
+       */
+      public boolean hasBidEndTime() {
+        return ((bitField0_ & 0x00010000) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The bidEndTime.
+       */
+      public com.google.protobuf.Timestamp getBidEndTime() {
+        if (bidEndTimeBuilder_ == null) {
+          return bidEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+        } else {
+          return bidEndTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setBidEndTime(com.google.protobuf.Timestamp value) {
+        if (bidEndTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bidEndTime_ = value;
+        } else {
+          bidEndTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setBidEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (bidEndTimeBuilder_ == null) {
+          bidEndTime_ = builderForValue.build();
+        } else {
+          bidEndTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeBidEndTime(com.google.protobuf.Timestamp value) {
+        if (bidEndTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) != 0) &&
+            bidEndTime_ != null &&
+            bidEndTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getBidEndTimeBuilder().mergeFrom(value);
+          } else {
+            bidEndTime_ = value;
+          }
+        } else {
+          bidEndTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearBidEndTime() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        bidEndTime_ = null;
+        if (bidEndTimeBuilder_ != null) {
+          bidEndTimeBuilder_.dispose();
+          bidEndTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getBidEndTimeBuilder() {
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return getBidEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getBidEndTimeOrBuilder() {
+        if (bidEndTimeBuilder_ != null) {
+          return bidEndTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return bidEndTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : bidEndTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp bid_end_time = 17 [json_name = "bidEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bid_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getBidEndTimeFieldBuilder() {
+        if (bidEndTimeBuilder_ == null) {
+          bidEndTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getBidEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          bidEndTime_ = null;
+        }
+        return bidEndTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.DebtAuction)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.DebtAuction)
+    private static final com.comdex.auction.v1beta1.AuctionProto.DebtAuction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.AuctionProto.DebtAuction();
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DebtAuction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DebtAuction>
+        PARSER = new com.google.protobuf.AbstractParser<DebtAuction>() {
+      @java.lang.Override
+      public DebtAuction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DebtAuction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DebtAuction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DebtAuction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DutchAuctionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.DutchAuction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+     * @return The auctionId.
+     */
+    long getAuctionId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the outflowTokenInitAmount field is set.
+     */
+    boolean hasOutflowTokenInitAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The outflowTokenInitAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getOutflowTokenInitAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutflowTokenInitAmountOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the outflowTokenCurrentAmount field is set.
+     */
+    boolean hasOutflowTokenCurrentAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The outflowTokenCurrentAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getOutflowTokenCurrentAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutflowTokenCurrentAmountOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the inflowTokenTargetAmount field is set.
+     */
+    boolean hasInflowTokenTargetAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The inflowTokenTargetAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getInflowTokenTargetAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInflowTokenTargetAmountOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the inflowTokenCurrentAmount field is set.
+     */
+    boolean hasInflowTokenCurrentAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The inflowTokenCurrentAmount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getInflowTokenCurrentAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInflowTokenCurrentAmountOrBuilder();
+
+    /**
+     * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+     * @return The outflowTokenInitialPrice.
+     */
+    java.lang.String getOutflowTokenInitialPrice();
+    /**
+     * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+     * @return The bytes for outflowTokenInitialPrice.
+     */
+    com.google.protobuf.ByteString
+        getOutflowTokenInitialPriceBytes();
+
+    /**
+     * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+     * @return The outflowTokenCurrentPrice.
+     */
+    java.lang.String getOutflowTokenCurrentPrice();
+    /**
+     * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+     * @return The bytes for outflowTokenCurrentPrice.
+     */
+    com.google.protobuf.ByteString
+        getOutflowTokenCurrentPriceBytes();
+
+    /**
+     * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+     * @return The outflowTokenEndPrice.
+     */
+    java.lang.String getOutflowTokenEndPrice();
+    /**
+     * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+     * @return The bytes for outflowTokenEndPrice.
+     */
+    com.google.protobuf.ByteString
+        getOutflowTokenEndPriceBytes();
+
+    /**
+     * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+     * @return The inflowTokenCurrentPrice.
+     */
+    java.lang.String getInflowTokenCurrentPrice();
+    /**
+     * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+     * @return The bytes for inflowTokenCurrentPrice.
+     */
+    com.google.protobuf.ByteString
+        getInflowTokenCurrentPriceBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <code>uint64 auction_status = 11 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+     * @return The auctionStatus.
+     */
+    long getAuctionStatus();
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> 
+        getBiddingIdsList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index);
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    int getBiddingIdsCount();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+        getBiddingIdsOrBuilderList();
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 auction_mapping_id = 14 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+     * @return The auctionMappingId.
+     */
+    long getAuctionMappingId();
+
+    /**
+     * <code>uint64 app_id = 15 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_in_id = 16 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+     * @return The assetInId.
+     */
+    long getAssetInId();
+
+    /**
+     * <code>uint64 asset_out_id = 17 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+     * @return The assetOutId.
+     */
+    long getAssetOutId();
+
+    /**
+     * <code>uint64 locked_vault_id = 18 [json_name = "lockedVaultId", (.gogoproto.moretags) = "yaml:&#92;"locked_vault_id&#92;""];</code>
+     * @return The lockedVaultId.
+     */
+    long getLockedVaultId();
+
+    /**
+     * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The vaultOwner.
+     */
+    java.lang.String getVaultOwner();
+    /**
+     * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bytes for vaultOwner.
+     */
+    com.google.protobuf.ByteString
+        getVaultOwnerBytes();
+
+    /**
+     * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+     * @return The liquidationPenalty.
+     */
+    java.lang.String getLiquidationPenalty();
+    /**
+     * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+     * @return The bytes for liquidationPenalty.
+     */
+    com.google.protobuf.ByteString
+        getLiquidationPenaltyBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.DutchAuction}
+   */
+  public static final class DutchAuction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.DutchAuction)
+      DutchAuctionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DutchAuction.newBuilder() to construct.
+    private DutchAuction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DutchAuction() {
+      outflowTokenInitialPrice_ = "";
+      outflowTokenCurrentPrice_ = "";
+      outflowTokenEndPrice_ = "";
+      inflowTokenCurrentPrice_ = "";
+      biddingIds_ = java.util.Collections.emptyList();
+      vaultOwner_ = "";
+      liquidationPenalty_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DutchAuction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DutchAuction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DutchAuction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.AuctionProto.DutchAuction.class, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder.class);
+    }
+
+    public static final int AUCTION_ID_FIELD_NUMBER = 1;
+    private long auctionId_ = 0L;
+    /**
+     * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+     * @return The auctionId.
+     */
+    @java.lang.Override
+    public long getAuctionId() {
+      return auctionId_;
+    }
+
+    public static final int OUTFLOW_TOKEN_INIT_AMOUNT_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin outflowTokenInitAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the outflowTokenInitAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutflowTokenInitAmount() {
+      return outflowTokenInitAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The outflowTokenInitAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getOutflowTokenInitAmount() {
+      return outflowTokenInitAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenInitAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutflowTokenInitAmountOrBuilder() {
+      return outflowTokenInitAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenInitAmount_;
+    }
+
+    public static final int OUTFLOW_TOKEN_CURRENT_AMOUNT_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin outflowTokenCurrentAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the outflowTokenCurrentAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasOutflowTokenCurrentAmount() {
+      return outflowTokenCurrentAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The outflowTokenCurrentAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getOutflowTokenCurrentAmount() {
+      return outflowTokenCurrentAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenCurrentAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutflowTokenCurrentAmountOrBuilder() {
+      return outflowTokenCurrentAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenCurrentAmount_;
+    }
+
+    public static final int INFLOW_TOKEN_TARGET_AMOUNT_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin inflowTokenTargetAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the inflowTokenTargetAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasInflowTokenTargetAmount() {
+      return inflowTokenTargetAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The inflowTokenTargetAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getInflowTokenTargetAmount() {
+      return inflowTokenTargetAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenTargetAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInflowTokenTargetAmountOrBuilder() {
+      return inflowTokenTargetAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenTargetAmount_;
+    }
+
+    public static final int INFLOW_TOKEN_CURRENT_AMOUNT_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin inflowTokenCurrentAmount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the inflowTokenCurrentAmount field is set.
+     */
+    @java.lang.Override
+    public boolean hasInflowTokenCurrentAmount() {
+      return inflowTokenCurrentAmount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The inflowTokenCurrentAmount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getInflowTokenCurrentAmount() {
+      return inflowTokenCurrentAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenCurrentAmount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInflowTokenCurrentAmountOrBuilder() {
+      return inflowTokenCurrentAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenCurrentAmount_;
+    }
+
+    public static final int OUTFLOW_TOKEN_INITIAL_PRICE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object outflowTokenInitialPrice_ = "";
+    /**
+     * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+     * @return The outflowTokenInitialPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getOutflowTokenInitialPrice() {
+      java.lang.Object ref = outflowTokenInitialPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outflowTokenInitialPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+     * @return The bytes for outflowTokenInitialPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutflowTokenInitialPriceBytes() {
+      java.lang.Object ref = outflowTokenInitialPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outflowTokenInitialPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTFLOW_TOKEN_CURRENT_PRICE_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object outflowTokenCurrentPrice_ = "";
+    /**
+     * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+     * @return The outflowTokenCurrentPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getOutflowTokenCurrentPrice() {
+      java.lang.Object ref = outflowTokenCurrentPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outflowTokenCurrentPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+     * @return The bytes for outflowTokenCurrentPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutflowTokenCurrentPriceBytes() {
+      java.lang.Object ref = outflowTokenCurrentPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outflowTokenCurrentPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTFLOW_TOKEN_END_PRICE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object outflowTokenEndPrice_ = "";
+    /**
+     * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+     * @return The outflowTokenEndPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getOutflowTokenEndPrice() {
+      java.lang.Object ref = outflowTokenEndPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outflowTokenEndPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+     * @return The bytes for outflowTokenEndPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutflowTokenEndPriceBytes() {
+      java.lang.Object ref = outflowTokenEndPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outflowTokenEndPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFLOW_TOKEN_CURRENT_PRICE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object inflowTokenCurrentPrice_ = "";
+    /**
+     * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+     * @return The inflowTokenCurrentPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getInflowTokenCurrentPrice() {
+      java.lang.Object ref = inflowTokenCurrentPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inflowTokenCurrentPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+     * @return The bytes for inflowTokenCurrentPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInflowTokenCurrentPriceBytes() {
+      java.lang.Object ref = inflowTokenCurrentPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inflowTokenCurrentPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 10;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int AUCTION_STATUS_FIELD_NUMBER = 11;
+    private long auctionStatus_ = 0L;
+    /**
+     * <code>uint64 auction_status = 11 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+     * @return The auctionStatus.
+     */
+    @java.lang.Override
+    public long getAuctionStatus() {
+      return auctionStatus_;
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 12;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int BIDDING_IDS_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> biddingIds_;
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> getBiddingIdsList() {
+      return biddingIds_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+        getBiddingIdsOrBuilderList() {
+      return biddingIds_;
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBiddingIdsCount() {
+      return biddingIds_.size();
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index) {
+      return biddingIds_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+        int index) {
+      return biddingIds_.get(index);
+    }
+
+    public static final int AUCTION_MAPPING_ID_FIELD_NUMBER = 14;
+    private long auctionMappingId_ = 0L;
+    /**
+     * <code>uint64 auction_mapping_id = 14 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+     * @return The auctionMappingId.
+     */
+    @java.lang.Override
+    public long getAuctionMappingId() {
+      return auctionMappingId_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 15;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 15 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_IN_ID_FIELD_NUMBER = 16;
+    private long assetInId_ = 0L;
+    /**
+     * <code>uint64 asset_in_id = 16 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+     * @return The assetInId.
+     */
+    @java.lang.Override
+    public long getAssetInId() {
+      return assetInId_;
+    }
+
+    public static final int ASSET_OUT_ID_FIELD_NUMBER = 17;
+    private long assetOutId_ = 0L;
+    /**
+     * <code>uint64 asset_out_id = 17 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+     * @return The assetOutId.
+     */
+    @java.lang.Override
+    public long getAssetOutId() {
+      return assetOutId_;
+    }
+
+    public static final int LOCKED_VAULT_ID_FIELD_NUMBER = 18;
+    private long lockedVaultId_ = 0L;
+    /**
+     * <code>uint64 locked_vault_id = 18 [json_name = "lockedVaultId", (.gogoproto.moretags) = "yaml:&#92;"locked_vault_id&#92;""];</code>
+     * @return The lockedVaultId.
+     */
+    @java.lang.Override
+    public long getLockedVaultId() {
+      return lockedVaultId_;
+    }
+
+    public static final int VAULT_OWNER_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object vaultOwner_ = "";
+    /**
+     * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The vaultOwner.
+     */
+    @java.lang.Override
+    public java.lang.String getVaultOwner() {
+      java.lang.Object ref = vaultOwner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vaultOwner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The bytes for vaultOwner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVaultOwnerBytes() {
+      java.lang.Object ref = vaultOwner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vaultOwner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUIDATION_PENALTY_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidationPenalty_ = "";
+    /**
+     * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+     * @return The liquidationPenalty.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidationPenalty() {
+      java.lang.Object ref = liquidationPenalty_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidationPenalty_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+     * @return The bytes for liquidationPenalty.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidationPenaltyBytes() {
+      java.lang.Object ref = liquidationPenalty_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidationPenalty_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (auctionId_ != 0L) {
+        output.writeUInt64(1, auctionId_);
+      }
+      if (outflowTokenInitAmount_ != null) {
+        output.writeMessage(2, getOutflowTokenInitAmount());
+      }
+      if (outflowTokenCurrentAmount_ != null) {
+        output.writeMessage(3, getOutflowTokenCurrentAmount());
+      }
+      if (inflowTokenTargetAmount_ != null) {
+        output.writeMessage(4, getInflowTokenTargetAmount());
+      }
+      if (inflowTokenCurrentAmount_ != null) {
+        output.writeMessage(5, getInflowTokenCurrentAmount());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outflowTokenInitialPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, outflowTokenInitialPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outflowTokenCurrentPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, outflowTokenCurrentPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outflowTokenEndPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, outflowTokenEndPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflowTokenCurrentPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, inflowTokenCurrentPrice_);
+      }
+      if (endTime_ != null) {
+        output.writeMessage(10, getEndTime());
+      }
+      if (auctionStatus_ != 0L) {
+        output.writeUInt64(11, auctionStatus_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(12, getStartTime());
+      }
+      for (int i = 0; i < biddingIds_.size(); i++) {
+        output.writeMessage(13, biddingIds_.get(i));
+      }
+      if (auctionMappingId_ != 0L) {
+        output.writeUInt64(14, auctionMappingId_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(15, appId_);
+      }
+      if (assetInId_ != 0L) {
+        output.writeUInt64(16, assetInId_);
+      }
+      if (assetOutId_ != 0L) {
+        output.writeUInt64(17, assetOutId_);
+      }
+      if (lockedVaultId_ != 0L) {
+        output.writeUInt64(18, lockedVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vaultOwner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, vaultOwner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationPenalty_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, liquidationPenalty_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (auctionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, auctionId_);
+      }
+      if (outflowTokenInitAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOutflowTokenInitAmount());
+      }
+      if (outflowTokenCurrentAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOutflowTokenCurrentAmount());
+      }
+      if (inflowTokenTargetAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getInflowTokenTargetAmount());
+      }
+      if (inflowTokenCurrentAmount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getInflowTokenCurrentAmount());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outflowTokenInitialPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, outflowTokenInitialPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outflowTokenCurrentPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, outflowTokenCurrentPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outflowTokenEndPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, outflowTokenEndPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflowTokenCurrentPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, inflowTokenCurrentPrice_);
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getEndTime());
+      }
+      if (auctionStatus_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(11, auctionStatus_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getStartTime());
+      }
+      for (int i = 0; i < biddingIds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, biddingIds_.get(i));
+      }
+      if (auctionMappingId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(14, auctionMappingId_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, appId_);
+      }
+      if (assetInId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(16, assetInId_);
+      }
+      if (assetOutId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(17, assetOutId_);
+      }
+      if (lockedVaultId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(18, lockedVaultId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vaultOwner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, vaultOwner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidationPenalty_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, liquidationPenalty_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.AuctionProto.DutchAuction)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.AuctionProto.DutchAuction other = (com.comdex.auction.v1beta1.AuctionProto.DutchAuction) obj;
+
+      if (getAuctionId()
+          != other.getAuctionId()) return false;
+      if (hasOutflowTokenInitAmount() != other.hasOutflowTokenInitAmount()) return false;
+      if (hasOutflowTokenInitAmount()) {
+        if (!getOutflowTokenInitAmount()
+            .equals(other.getOutflowTokenInitAmount())) return false;
+      }
+      if (hasOutflowTokenCurrentAmount() != other.hasOutflowTokenCurrentAmount()) return false;
+      if (hasOutflowTokenCurrentAmount()) {
+        if (!getOutflowTokenCurrentAmount()
+            .equals(other.getOutflowTokenCurrentAmount())) return false;
+      }
+      if (hasInflowTokenTargetAmount() != other.hasInflowTokenTargetAmount()) return false;
+      if (hasInflowTokenTargetAmount()) {
+        if (!getInflowTokenTargetAmount()
+            .equals(other.getInflowTokenTargetAmount())) return false;
+      }
+      if (hasInflowTokenCurrentAmount() != other.hasInflowTokenCurrentAmount()) return false;
+      if (hasInflowTokenCurrentAmount()) {
+        if (!getInflowTokenCurrentAmount()
+            .equals(other.getInflowTokenCurrentAmount())) return false;
+      }
+      if (!getOutflowTokenInitialPrice()
+          .equals(other.getOutflowTokenInitialPrice())) return false;
+      if (!getOutflowTokenCurrentPrice()
+          .equals(other.getOutflowTokenCurrentPrice())) return false;
+      if (!getOutflowTokenEndPrice()
+          .equals(other.getOutflowTokenEndPrice())) return false;
+      if (!getInflowTokenCurrentPrice()
+          .equals(other.getInflowTokenCurrentPrice())) return false;
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (getAuctionStatus()
+          != other.getAuctionStatus()) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (!getBiddingIdsList()
+          .equals(other.getBiddingIdsList())) return false;
+      if (getAuctionMappingId()
+          != other.getAuctionMappingId()) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetInId()
+          != other.getAssetInId()) return false;
+      if (getAssetOutId()
+          != other.getAssetOutId()) return false;
+      if (getLockedVaultId()
+          != other.getLockedVaultId()) return false;
+      if (!getVaultOwner()
+          .equals(other.getVaultOwner())) return false;
+      if (!getLiquidationPenalty()
+          .equals(other.getLiquidationPenalty())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionId());
+      if (hasOutflowTokenInitAmount()) {
+        hash = (37 * hash) + OUTFLOW_TOKEN_INIT_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutflowTokenInitAmount().hashCode();
+      }
+      if (hasOutflowTokenCurrentAmount()) {
+        hash = (37 * hash) + OUTFLOW_TOKEN_CURRENT_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getOutflowTokenCurrentAmount().hashCode();
+      }
+      if (hasInflowTokenTargetAmount()) {
+        hash = (37 * hash) + INFLOW_TOKEN_TARGET_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getInflowTokenTargetAmount().hashCode();
+      }
+      if (hasInflowTokenCurrentAmount()) {
+        hash = (37 * hash) + INFLOW_TOKEN_CURRENT_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getInflowTokenCurrentAmount().hashCode();
+      }
+      hash = (37 * hash) + OUTFLOW_TOKEN_INITIAL_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getOutflowTokenInitialPrice().hashCode();
+      hash = (37 * hash) + OUTFLOW_TOKEN_CURRENT_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getOutflowTokenCurrentPrice().hashCode();
+      hash = (37 * hash) + OUTFLOW_TOKEN_END_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getOutflowTokenEndPrice().hashCode();
+      hash = (37 * hash) + INFLOW_TOKEN_CURRENT_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getInflowTokenCurrentPrice().hashCode();
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + AUCTION_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionStatus());
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (getBiddingIdsCount() > 0) {
+        hash = (37 * hash) + BIDDING_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBiddingIdsList().hashCode();
+      }
+      hash = (37 * hash) + AUCTION_MAPPING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionMappingId());
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_IN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetInId());
+      hash = (37 * hash) + ASSET_OUT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetOutId());
+      hash = (37 * hash) + LOCKED_VAULT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockedVaultId());
+      hash = (37 * hash) + VAULT_OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getVaultOwner().hashCode();
+      hash = (37 * hash) + LIQUIDATION_PENALTY_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidationPenalty().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.AuctionProto.DutchAuction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.DutchAuction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.DutchAuction)
+        com.comdex.auction.v1beta1.AuctionProto.DutchAuctionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DutchAuction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DutchAuction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.AuctionProto.DutchAuction.class, com.comdex.auction.v1beta1.AuctionProto.DutchAuction.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.AuctionProto.DutchAuction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        auctionId_ = 0L;
+        outflowTokenInitAmount_ = null;
+        if (outflowTokenInitAmountBuilder_ != null) {
+          outflowTokenInitAmountBuilder_.dispose();
+          outflowTokenInitAmountBuilder_ = null;
+        }
+        outflowTokenCurrentAmount_ = null;
+        if (outflowTokenCurrentAmountBuilder_ != null) {
+          outflowTokenCurrentAmountBuilder_.dispose();
+          outflowTokenCurrentAmountBuilder_ = null;
+        }
+        inflowTokenTargetAmount_ = null;
+        if (inflowTokenTargetAmountBuilder_ != null) {
+          inflowTokenTargetAmountBuilder_.dispose();
+          inflowTokenTargetAmountBuilder_ = null;
+        }
+        inflowTokenCurrentAmount_ = null;
+        if (inflowTokenCurrentAmountBuilder_ != null) {
+          inflowTokenCurrentAmountBuilder_.dispose();
+          inflowTokenCurrentAmountBuilder_ = null;
+        }
+        outflowTokenInitialPrice_ = "";
+        outflowTokenCurrentPrice_ = "";
+        outflowTokenEndPrice_ = "";
+        inflowTokenCurrentPrice_ = "";
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        auctionStatus_ = 0L;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        if (biddingIdsBuilder_ == null) {
+          biddingIds_ = java.util.Collections.emptyList();
+        } else {
+          biddingIds_ = null;
+          biddingIdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        auctionMappingId_ = 0L;
+        appId_ = 0L;
+        assetInId_ = 0L;
+        assetOutId_ = 0L;
+        lockedVaultId_ = 0L;
+        vaultOwner_ = "";
+        liquidationPenalty_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_DutchAuction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.DutchAuction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction build() {
+        com.comdex.auction.v1beta1.AuctionProto.DutchAuction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.DutchAuction buildPartial() {
+        com.comdex.auction.v1beta1.AuctionProto.DutchAuction result = new com.comdex.auction.v1beta1.AuctionProto.DutchAuction(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.auction.v1beta1.AuctionProto.DutchAuction result) {
+        if (biddingIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0)) {
+            biddingIds_ = java.util.Collections.unmodifiableList(biddingIds_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.biddingIds_ = biddingIds_;
+        } else {
+          result.biddingIds_ = biddingIdsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.AuctionProto.DutchAuction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.auctionId_ = auctionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.outflowTokenInitAmount_ = outflowTokenInitAmountBuilder_ == null
+              ? outflowTokenInitAmount_
+              : outflowTokenInitAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.outflowTokenCurrentAmount_ = outflowTokenCurrentAmountBuilder_ == null
+              ? outflowTokenCurrentAmount_
+              : outflowTokenCurrentAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.inflowTokenTargetAmount_ = inflowTokenTargetAmountBuilder_ == null
+              ? inflowTokenTargetAmount_
+              : inflowTokenTargetAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.inflowTokenCurrentAmount_ = inflowTokenCurrentAmountBuilder_ == null
+              ? inflowTokenCurrentAmount_
+              : inflowTokenCurrentAmountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.outflowTokenInitialPrice_ = outflowTokenInitialPrice_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.outflowTokenCurrentPrice_ = outflowTokenCurrentPrice_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.outflowTokenEndPrice_ = outflowTokenEndPrice_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.inflowTokenCurrentPrice_ = inflowTokenCurrentPrice_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.auctionStatus_ = auctionStatus_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.auctionMappingId_ = auctionMappingId_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.assetInId_ = assetInId_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.assetOutId_ = assetOutId_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.lockedVaultId_ = lockedVaultId_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.vaultOwner_ = vaultOwner_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.liquidationPenalty_ = liquidationPenalty_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.AuctionProto.DutchAuction) {
+          return mergeFrom((com.comdex.auction.v1beta1.AuctionProto.DutchAuction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.AuctionProto.DutchAuction other) {
+        if (other == com.comdex.auction.v1beta1.AuctionProto.DutchAuction.getDefaultInstance()) return this;
+        if (other.getAuctionId() != 0L) {
+          setAuctionId(other.getAuctionId());
+        }
+        if (other.hasOutflowTokenInitAmount()) {
+          mergeOutflowTokenInitAmount(other.getOutflowTokenInitAmount());
+        }
+        if (other.hasOutflowTokenCurrentAmount()) {
+          mergeOutflowTokenCurrentAmount(other.getOutflowTokenCurrentAmount());
+        }
+        if (other.hasInflowTokenTargetAmount()) {
+          mergeInflowTokenTargetAmount(other.getInflowTokenTargetAmount());
+        }
+        if (other.hasInflowTokenCurrentAmount()) {
+          mergeInflowTokenCurrentAmount(other.getInflowTokenCurrentAmount());
+        }
+        if (!other.getOutflowTokenInitialPrice().isEmpty()) {
+          outflowTokenInitialPrice_ = other.outflowTokenInitialPrice_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getOutflowTokenCurrentPrice().isEmpty()) {
+          outflowTokenCurrentPrice_ = other.outflowTokenCurrentPrice_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getOutflowTokenEndPrice().isEmpty()) {
+          outflowTokenEndPrice_ = other.outflowTokenEndPrice_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getInflowTokenCurrentPrice().isEmpty()) {
+          inflowTokenCurrentPrice_ = other.inflowTokenCurrentPrice_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (other.getAuctionStatus() != 0L) {
+          setAuctionStatus(other.getAuctionStatus());
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (biddingIdsBuilder_ == null) {
+          if (!other.biddingIds_.isEmpty()) {
+            if (biddingIds_.isEmpty()) {
+              biddingIds_ = other.biddingIds_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureBiddingIdsIsMutable();
+              biddingIds_.addAll(other.biddingIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.biddingIds_.isEmpty()) {
+            if (biddingIdsBuilder_.isEmpty()) {
+              biddingIdsBuilder_.dispose();
+              biddingIdsBuilder_ = null;
+              biddingIds_ = other.biddingIds_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              biddingIdsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBiddingIdsFieldBuilder() : null;
+            } else {
+              biddingIdsBuilder_.addAllMessages(other.biddingIds_);
+            }
+          }
+        }
+        if (other.getAuctionMappingId() != 0L) {
+          setAuctionMappingId(other.getAuctionMappingId());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetInId() != 0L) {
+          setAssetInId(other.getAssetInId());
+        }
+        if (other.getAssetOutId() != 0L) {
+          setAssetOutId(other.getAssetOutId());
+        }
+        if (other.getLockedVaultId() != 0L) {
+          setLockedVaultId(other.getLockedVaultId());
+        }
+        if (!other.getVaultOwner().isEmpty()) {
+          vaultOwner_ = other.vaultOwner_;
+          bitField0_ |= 0x00040000;
+          onChanged();
+        }
+        if (!other.getLiquidationPenalty().isEmpty()) {
+          liquidationPenalty_ = other.liquidationPenalty_;
+          bitField0_ |= 0x00080000;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                auctionId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getOutflowTokenInitAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getOutflowTokenCurrentAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getInflowTokenTargetAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getInflowTokenCurrentAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                outflowTokenInitialPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                outflowTokenCurrentPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                outflowTokenEndPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                inflowTokenCurrentPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 88: {
+                auctionStatus_ = input.readUInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 98: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping m =
+                    input.readMessage(
+                        com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.parser(),
+                        extensionRegistry);
+                if (biddingIdsBuilder_ == null) {
+                  ensureBiddingIdsIsMutable();
+                  biddingIds_.add(m);
+                } else {
+                  biddingIdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 106
+              case 112: {
+                auctionMappingId_ = input.readUInt64();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              case 120: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 128: {
+                assetInId_ = input.readUInt64();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 128
+              case 136: {
+                assetOutId_ = input.readUInt64();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 136
+              case 144: {
+                lockedVaultId_ = input.readUInt64();
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 144
+              case 154: {
+                vaultOwner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 154
+              case 162: {
+                liquidationPenalty_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 162
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long auctionId_ ;
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @return The auctionId.
+       */
+      @java.lang.Override
+      public long getAuctionId() {
+        return auctionId_;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @param value The auctionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionId(long value) {
+
+        auctionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_id = 1 [json_name = "auctionId", (.gogoproto.moretags) = "yaml:&#92;"auction_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        auctionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin outflowTokenInitAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> outflowTokenInitAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the outflowTokenInitAmount field is set.
+       */
+      public boolean hasOutflowTokenInitAmount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The outflowTokenInitAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getOutflowTokenInitAmount() {
+        if (outflowTokenInitAmountBuilder_ == null) {
+          return outflowTokenInitAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenInitAmount_;
+        } else {
+          return outflowTokenInitAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setOutflowTokenInitAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outflowTokenInitAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outflowTokenInitAmount_ = value;
+        } else {
+          outflowTokenInitAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setOutflowTokenInitAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (outflowTokenInitAmountBuilder_ == null) {
+          outflowTokenInitAmount_ = builderForValue.build();
+        } else {
+          outflowTokenInitAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeOutflowTokenInitAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outflowTokenInitAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            outflowTokenInitAmount_ != null &&
+            outflowTokenInitAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getOutflowTokenInitAmountBuilder().mergeFrom(value);
+          } else {
+            outflowTokenInitAmount_ = value;
+          }
+        } else {
+          outflowTokenInitAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearOutflowTokenInitAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        outflowTokenInitAmount_ = null;
+        if (outflowTokenInitAmountBuilder_ != null) {
+          outflowTokenInitAmountBuilder_.dispose();
+          outflowTokenInitAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getOutflowTokenInitAmountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOutflowTokenInitAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutflowTokenInitAmountOrBuilder() {
+        if (outflowTokenInitAmountBuilder_ != null) {
+          return outflowTokenInitAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return outflowTokenInitAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenInitAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_init_amount = 2 [json_name = "outflowTokenInitAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_init_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getOutflowTokenInitAmountFieldBuilder() {
+        if (outflowTokenInitAmountBuilder_ == null) {
+          outflowTokenInitAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getOutflowTokenInitAmount(),
+                  getParentForChildren(),
+                  isClean());
+          outflowTokenInitAmount_ = null;
+        }
+        return outflowTokenInitAmountBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin outflowTokenCurrentAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> outflowTokenCurrentAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the outflowTokenCurrentAmount field is set.
+       */
+      public boolean hasOutflowTokenCurrentAmount() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The outflowTokenCurrentAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getOutflowTokenCurrentAmount() {
+        if (outflowTokenCurrentAmountBuilder_ == null) {
+          return outflowTokenCurrentAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenCurrentAmount_;
+        } else {
+          return outflowTokenCurrentAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setOutflowTokenCurrentAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outflowTokenCurrentAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outflowTokenCurrentAmount_ = value;
+        } else {
+          outflowTokenCurrentAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setOutflowTokenCurrentAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (outflowTokenCurrentAmountBuilder_ == null) {
+          outflowTokenCurrentAmount_ = builderForValue.build();
+        } else {
+          outflowTokenCurrentAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeOutflowTokenCurrentAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (outflowTokenCurrentAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            outflowTokenCurrentAmount_ != null &&
+            outflowTokenCurrentAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getOutflowTokenCurrentAmountBuilder().mergeFrom(value);
+          } else {
+            outflowTokenCurrentAmount_ = value;
+          }
+        } else {
+          outflowTokenCurrentAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearOutflowTokenCurrentAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        outflowTokenCurrentAmount_ = null;
+        if (outflowTokenCurrentAmountBuilder_ != null) {
+          outflowTokenCurrentAmountBuilder_.dispose();
+          outflowTokenCurrentAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getOutflowTokenCurrentAmountBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getOutflowTokenCurrentAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOutflowTokenCurrentAmountOrBuilder() {
+        if (outflowTokenCurrentAmountBuilder_ != null) {
+          return outflowTokenCurrentAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return outflowTokenCurrentAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : outflowTokenCurrentAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin outflow_token_current_amount = 3 [json_name = "outflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getOutflowTokenCurrentAmountFieldBuilder() {
+        if (outflowTokenCurrentAmountBuilder_ == null) {
+          outflowTokenCurrentAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getOutflowTokenCurrentAmount(),
+                  getParentForChildren(),
+                  isClean());
+          outflowTokenCurrentAmount_ = null;
+        }
+        return outflowTokenCurrentAmountBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin inflowTokenTargetAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> inflowTokenTargetAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the inflowTokenTargetAmount field is set.
+       */
+      public boolean hasInflowTokenTargetAmount() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The inflowTokenTargetAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getInflowTokenTargetAmount() {
+        if (inflowTokenTargetAmountBuilder_ == null) {
+          return inflowTokenTargetAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenTargetAmount_;
+        } else {
+          return inflowTokenTargetAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setInflowTokenTargetAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (inflowTokenTargetAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inflowTokenTargetAmount_ = value;
+        } else {
+          inflowTokenTargetAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setInflowTokenTargetAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (inflowTokenTargetAmountBuilder_ == null) {
+          inflowTokenTargetAmount_ = builderForValue.build();
+        } else {
+          inflowTokenTargetAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeInflowTokenTargetAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (inflowTokenTargetAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            inflowTokenTargetAmount_ != null &&
+            inflowTokenTargetAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getInflowTokenTargetAmountBuilder().mergeFrom(value);
+          } else {
+            inflowTokenTargetAmount_ = value;
+          }
+        } else {
+          inflowTokenTargetAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearInflowTokenTargetAmount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        inflowTokenTargetAmount_ = null;
+        if (inflowTokenTargetAmountBuilder_ != null) {
+          inflowTokenTargetAmountBuilder_.dispose();
+          inflowTokenTargetAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getInflowTokenTargetAmountBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getInflowTokenTargetAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInflowTokenTargetAmountOrBuilder() {
+        if (inflowTokenTargetAmountBuilder_ != null) {
+          return inflowTokenTargetAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return inflowTokenTargetAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenTargetAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_target_amount = 4 [json_name = "inflowTokenTargetAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_target_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getInflowTokenTargetAmountFieldBuilder() {
+        if (inflowTokenTargetAmountBuilder_ == null) {
+          inflowTokenTargetAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getInflowTokenTargetAmount(),
+                  getParentForChildren(),
+                  isClean());
+          inflowTokenTargetAmount_ = null;
+        }
+        return inflowTokenTargetAmountBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin inflowTokenCurrentAmount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> inflowTokenCurrentAmountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the inflowTokenCurrentAmount field is set.
+       */
+      public boolean hasInflowTokenCurrentAmount() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The inflowTokenCurrentAmount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getInflowTokenCurrentAmount() {
+        if (inflowTokenCurrentAmountBuilder_ == null) {
+          return inflowTokenCurrentAmount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenCurrentAmount_;
+        } else {
+          return inflowTokenCurrentAmountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setInflowTokenCurrentAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (inflowTokenCurrentAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inflowTokenCurrentAmount_ = value;
+        } else {
+          inflowTokenCurrentAmountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setInflowTokenCurrentAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (inflowTokenCurrentAmountBuilder_ == null) {
+          inflowTokenCurrentAmount_ = builderForValue.build();
+        } else {
+          inflowTokenCurrentAmountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeInflowTokenCurrentAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (inflowTokenCurrentAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            inflowTokenCurrentAmount_ != null &&
+            inflowTokenCurrentAmount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getInflowTokenCurrentAmountBuilder().mergeFrom(value);
+          } else {
+            inflowTokenCurrentAmount_ = value;
+          }
+        } else {
+          inflowTokenCurrentAmountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearInflowTokenCurrentAmount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        inflowTokenCurrentAmount_ = null;
+        if (inflowTokenCurrentAmountBuilder_ != null) {
+          inflowTokenCurrentAmountBuilder_.dispose();
+          inflowTokenCurrentAmountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getInflowTokenCurrentAmountBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getInflowTokenCurrentAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInflowTokenCurrentAmountOrBuilder() {
+        if (inflowTokenCurrentAmountBuilder_ != null) {
+          return inflowTokenCurrentAmountBuilder_.getMessageOrBuilder();
+        } else {
+          return inflowTokenCurrentAmount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : inflowTokenCurrentAmount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin inflow_token_current_amount = 5 [json_name = "inflowTokenCurrentAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_amount&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getInflowTokenCurrentAmountFieldBuilder() {
+        if (inflowTokenCurrentAmountBuilder_ == null) {
+          inflowTokenCurrentAmountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getInflowTokenCurrentAmount(),
+                  getParentForChildren(),
+                  isClean());
+          inflowTokenCurrentAmount_ = null;
+        }
+        return inflowTokenCurrentAmountBuilder_;
+      }
+
+      private java.lang.Object outflowTokenInitialPrice_ = "";
+      /**
+       * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+       * @return The outflowTokenInitialPrice.
+       */
+      public java.lang.String getOutflowTokenInitialPrice() {
+        java.lang.Object ref = outflowTokenInitialPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outflowTokenInitialPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+       * @return The bytes for outflowTokenInitialPrice.
+       */
+      public com.google.protobuf.ByteString
+          getOutflowTokenInitialPriceBytes() {
+        java.lang.Object ref = outflowTokenInitialPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outflowTokenInitialPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+       * @param value The outflowTokenInitialPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutflowTokenInitialPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        outflowTokenInitialPrice_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutflowTokenInitialPrice() {
+        outflowTokenInitialPrice_ = getDefaultInstance().getOutflowTokenInitialPrice();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outflow_token_initial_price = 6 [json_name = "outflowTokenInitialPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_initial_price&#92;""];</code>
+       * @param value The bytes for outflowTokenInitialPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutflowTokenInitialPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        outflowTokenInitialPrice_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object outflowTokenCurrentPrice_ = "";
+      /**
+       * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+       * @return The outflowTokenCurrentPrice.
+       */
+      public java.lang.String getOutflowTokenCurrentPrice() {
+        java.lang.Object ref = outflowTokenCurrentPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outflowTokenCurrentPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+       * @return The bytes for outflowTokenCurrentPrice.
+       */
+      public com.google.protobuf.ByteString
+          getOutflowTokenCurrentPriceBytes() {
+        java.lang.Object ref = outflowTokenCurrentPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outflowTokenCurrentPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+       * @param value The outflowTokenCurrentPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutflowTokenCurrentPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        outflowTokenCurrentPrice_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutflowTokenCurrentPrice() {
+        outflowTokenCurrentPrice_ = getDefaultInstance().getOutflowTokenCurrentPrice();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outflow_token_current_price = 7 [json_name = "outflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_current_price&#92;""];</code>
+       * @param value The bytes for outflowTokenCurrentPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutflowTokenCurrentPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        outflowTokenCurrentPrice_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object outflowTokenEndPrice_ = "";
+      /**
+       * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+       * @return The outflowTokenEndPrice.
+       */
+      public java.lang.String getOutflowTokenEndPrice() {
+        java.lang.Object ref = outflowTokenEndPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          outflowTokenEndPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+       * @return The bytes for outflowTokenEndPrice.
+       */
+      public com.google.protobuf.ByteString
+          getOutflowTokenEndPriceBytes() {
+        java.lang.Object ref = outflowTokenEndPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          outflowTokenEndPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+       * @param value The outflowTokenEndPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutflowTokenEndPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        outflowTokenEndPrice_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutflowTokenEndPrice() {
+        outflowTokenEndPrice_ = getDefaultInstance().getOutflowTokenEndPrice();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string outflow_token_end_price = 8 [json_name = "outflowTokenEndPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"outflow_token_end_price&#92;""];</code>
+       * @param value The bytes for outflowTokenEndPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutflowTokenEndPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        outflowTokenEndPrice_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inflowTokenCurrentPrice_ = "";
+      /**
+       * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+       * @return The inflowTokenCurrentPrice.
+       */
+      public java.lang.String getInflowTokenCurrentPrice() {
+        java.lang.Object ref = inflowTokenCurrentPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inflowTokenCurrentPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+       * @return The bytes for inflowTokenCurrentPrice.
+       */
+      public com.google.protobuf.ByteString
+          getInflowTokenCurrentPriceBytes() {
+        java.lang.Object ref = inflowTokenCurrentPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inflowTokenCurrentPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+       * @param value The inflowTokenCurrentPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflowTokenCurrentPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        inflowTokenCurrentPrice_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInflowTokenCurrentPrice() {
+        inflowTokenCurrentPrice_ = getDefaultInstance().getInflowTokenCurrentPrice();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inflow_token_current_price = 9 [json_name = "inflowTokenCurrentPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflow_token_current_price&#92;""];</code>
+       * @param value The bytes for inflowTokenCurrentPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflowTokenCurrentPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        inflowTokenCurrentPrice_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 10 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private long auctionStatus_ ;
+      /**
+       * <code>uint64 auction_status = 11 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @return The auctionStatus.
+       */
+      @java.lang.Override
+      public long getAuctionStatus() {
+        return auctionStatus_;
+      }
+      /**
+       * <code>uint64 auction_status = 11 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @param value The auctionStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionStatus(long value) {
+
+        auctionStatus_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_status = 11 [json_name = "auctionStatus", (.gogoproto.moretags) = "yaml:&#92;"auction_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionStatus() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        auctionStatus_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 12 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> biddingIds_ =
+        java.util.Collections.emptyList();
+      private void ensureBiddingIdsIsMutable() {
+        if (!((bitField0_ & 0x00001000) != 0)) {
+          biddingIds_ = new java.util.ArrayList<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping>(biddingIds_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> biddingIdsBuilder_;
+
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> getBiddingIdsList() {
+        if (biddingIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(biddingIds_);
+        } else {
+          return biddingIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public int getBiddingIdsCount() {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.size();
+        } else {
+          return biddingIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getBiddingIds(int index) {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.get(index);
+        } else {
+          return biddingIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder setBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.set(index, value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder setBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping value) {
+        if (biddingIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(index, value);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addBiddingIds(
+          int index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder builderForValue) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder addAllBiddingIds(
+          java.lang.Iterable<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping> values) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, biddingIds_);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder clearBiddingIds() {
+        if (biddingIdsBuilder_ == null) {
+          biddingIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public Builder removeBiddingIds(int index) {
+        if (biddingIdsBuilder_ == null) {
+          ensureBiddingIdsIsMutable();
+          biddingIds_.remove(index);
+          onChanged();
+        } else {
+          biddingIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder getBiddingIdsBuilder(
+          int index) {
+        return getBiddingIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder getBiddingIdsOrBuilder(
+          int index) {
+        if (biddingIdsBuilder_ == null) {
+          return biddingIds_.get(index);  } else {
+          return biddingIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+           getBiddingIdsOrBuilderList() {
+        if (biddingIdsBuilder_ != null) {
+          return biddingIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(biddingIds_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder addBiddingIdsBuilder() {
+        return getBiddingIdsFieldBuilder().addBuilder(
+            com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder addBiddingIdsBuilder(
+          int index) {
+        return getBiddingIdsFieldBuilder().addBuilder(
+            index, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.auction.v1beta1.bidOwnerMapping bidding_ids = 13 [json_name = "biddingIds", (.gogoproto.moretags) = "yaml:&#92;"bidding_ids&#92;""];</code>
+       */
+      public java.util.List<com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder> 
+           getBiddingIdsBuilderList() {
+        return getBiddingIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder> 
+          getBiddingIdsFieldBuilder() {
+        if (biddingIdsBuilder_ == null) {
+          biddingIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder>(
+                  biddingIds_,
+                  ((bitField0_ & 0x00001000) != 0),
+                  getParentForChildren(),
+                  isClean());
+          biddingIds_ = null;
+        }
+        return biddingIdsBuilder_;
+      }
+
+      private long auctionMappingId_ ;
+      /**
+       * <code>uint64 auction_mapping_id = 14 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @return The auctionMappingId.
+       */
+      @java.lang.Override
+      public long getAuctionMappingId() {
+        return auctionMappingId_;
+      }
+      /**
+       * <code>uint64 auction_mapping_id = 14 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @param value The auctionMappingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionMappingId(long value) {
+
+        auctionMappingId_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_mapping_id = 14 [json_name = "auctionMappingId", (.gogoproto.moretags) = "yaml:&#92;"auction_mapping_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionMappingId() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        auctionMappingId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 15 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 15 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 15 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetInId_ ;
+      /**
+       * <code>uint64 asset_in_id = 16 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @return The assetInId.
+       */
+      @java.lang.Override
+      public long getAssetInId() {
+        return assetInId_;
+      }
+      /**
+       * <code>uint64 asset_in_id = 16 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @param value The assetInId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetInId(long value) {
+
+        assetInId_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_in_id = 16 [json_name = "assetInId", (.gogoproto.moretags) = "yaml:&#92;"asset_in_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetInId() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        assetInId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetOutId_ ;
+      /**
+       * <code>uint64 asset_out_id = 17 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @return The assetOutId.
+       */
+      @java.lang.Override
+      public long getAssetOutId() {
+        return assetOutId_;
+      }
+      /**
+       * <code>uint64 asset_out_id = 17 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @param value The assetOutId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetOutId(long value) {
+
+        assetOutId_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_out_id = 17 [json_name = "assetOutId", (.gogoproto.moretags) = "yaml:&#92;"asset_out_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetOutId() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        assetOutId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lockedVaultId_ ;
+      /**
+       * <code>uint64 locked_vault_id = 18 [json_name = "lockedVaultId", (.gogoproto.moretags) = "yaml:&#92;"locked_vault_id&#92;""];</code>
+       * @return The lockedVaultId.
+       */
+      @java.lang.Override
+      public long getLockedVaultId() {
+        return lockedVaultId_;
+      }
+      /**
+       * <code>uint64 locked_vault_id = 18 [json_name = "lockedVaultId", (.gogoproto.moretags) = "yaml:&#92;"locked_vault_id&#92;""];</code>
+       * @param value The lockedVaultId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockedVaultId(long value) {
+
+        lockedVaultId_ = value;
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 locked_vault_id = 18 [json_name = "lockedVaultId", (.gogoproto.moretags) = "yaml:&#92;"locked_vault_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockedVaultId() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        lockedVaultId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vaultOwner_ = "";
+      /**
+       * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The vaultOwner.
+       */
+      public java.lang.String getVaultOwner() {
+        java.lang.Object ref = vaultOwner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vaultOwner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The bytes for vaultOwner.
+       */
+      public com.google.protobuf.ByteString
+          getVaultOwnerBytes() {
+        java.lang.Object ref = vaultOwner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vaultOwner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The vaultOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVaultOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        vaultOwner_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVaultOwner() {
+        vaultOwner_ = getDefaultInstance().getVaultOwner();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vault_owner = 19 [json_name = "vaultOwner", (.gogoproto.moretags) = "yaml:&#92;"vault_owner&#92;"", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The bytes for vaultOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVaultOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        vaultOwner_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidationPenalty_ = "";
+      /**
+       * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+       * @return The liquidationPenalty.
+       */
+      public java.lang.String getLiquidationPenalty() {
+        java.lang.Object ref = liquidationPenalty_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidationPenalty_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+       * @return The bytes for liquidationPenalty.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidationPenaltyBytes() {
+        java.lang.Object ref = liquidationPenalty_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidationPenalty_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+       * @param value The liquidationPenalty to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidationPenalty(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidationPenalty_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidationPenalty() {
+        liquidationPenalty_ = getDefaultInstance().getLiquidationPenalty();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquidation_penalty = 20 [json_name = "liquidationPenalty", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidatin_penalty&#92;""];</code>
+       * @param value The bytes for liquidationPenalty to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidationPenaltyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidationPenalty_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.DutchAuction)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.DutchAuction)
+    private static final com.comdex.auction.v1beta1.AuctionProto.DutchAuction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.AuctionProto.DutchAuction();
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DutchAuction>
+        PARSER = new com.google.protobuf.AbstractParser<DutchAuction>() {
+      @java.lang.Override
+      public DutchAuction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DutchAuction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DutchAuction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.DutchAuction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface bidOwnerMappingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.bidOwnerMapping)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 bid_id = 1 [json_name = "bidId"];</code>
+     * @return The bidId.
+     */
+    long getBidId();
+
+    /**
+     * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+     * @return The bidOwner.
+     */
+    java.lang.String getBidOwner();
+    /**
+     * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+     * @return The bytes for bidOwner.
+     */
+    com.google.protobuf.ByteString
+        getBidOwnerBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.bidOwnerMapping}
+   */
+  public static final class bidOwnerMapping extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.bidOwnerMapping)
+      bidOwnerMappingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use bidOwnerMapping.newBuilder() to construct.
+    private bidOwnerMapping(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private bidOwnerMapping() {
+      bidOwner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new bidOwnerMapping();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_bidOwnerMapping_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_bidOwnerMapping_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.class, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder.class);
+    }
+
+    public static final int BID_ID_FIELD_NUMBER = 1;
+    private long bidId_ = 0L;
+    /**
+     * <code>uint64 bid_id = 1 [json_name = "bidId"];</code>
+     * @return The bidId.
+     */
+    @java.lang.Override
+    public long getBidId() {
+      return bidId_;
+    }
+
+    public static final int BID_OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bidOwner_ = "";
+    /**
+     * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+     * @return The bidOwner.
+     */
+    @java.lang.Override
+    public java.lang.String getBidOwner() {
+      java.lang.Object ref = bidOwner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bidOwner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+     * @return The bytes for bidOwner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBidOwnerBytes() {
+      java.lang.Object ref = bidOwner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bidOwner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (bidId_ != 0L) {
+        output.writeUInt64(1, bidId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidOwner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bidOwner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (bidId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, bidId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bidOwner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bidOwner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping other = (com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping) obj;
+
+      if (getBidId()
+          != other.getBidId()) return false;
+      if (!getBidOwner()
+          .equals(other.getBidOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BID_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBidId());
+      hash = (37 * hash) + BID_OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getBidOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.bidOwnerMapping}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.bidOwnerMapping)
+        com.comdex.auction.v1beta1.AuctionProto.bidOwnerMappingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_bidOwnerMapping_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_bidOwnerMapping_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.class, com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bidId_ = 0L;
+        bidOwner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_bidOwnerMapping_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping build() {
+        com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping buildPartial() {
+        com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping result = new com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bidId_ = bidId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bidOwner_ = bidOwner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping) {
+          return mergeFrom((com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping other) {
+        if (other == com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping.getDefaultInstance()) return this;
+        if (other.getBidId() != 0L) {
+          setBidId(other.getBidId());
+        }
+        if (!other.getBidOwner().isEmpty()) {
+          bidOwner_ = other.bidOwner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                bidId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                bidOwner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long bidId_ ;
+      /**
+       * <code>uint64 bid_id = 1 [json_name = "bidId"];</code>
+       * @return The bidId.
+       */
+      @java.lang.Override
+      public long getBidId() {
+        return bidId_;
+      }
+      /**
+       * <code>uint64 bid_id = 1 [json_name = "bidId"];</code>
+       * @param value The bidId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidId(long value) {
+
+        bidId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 bid_id = 1 [json_name = "bidId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bidId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bidOwner_ = "";
+      /**
+       * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+       * @return The bidOwner.
+       */
+      public java.lang.String getBidOwner() {
+        java.lang.Object ref = bidOwner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bidOwner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+       * @return The bytes for bidOwner.
+       */
+      public com.google.protobuf.ByteString
+          getBidOwnerBytes() {
+        java.lang.Object ref = bidOwner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bidOwner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+       * @param value The bidOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bidOwner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidOwner() {
+        bidOwner_ = getDefaultInstance().getBidOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bid_owner = 2 [json_name = "bidOwner"];</code>
+       * @param value The bytes for bidOwner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bidOwner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.bidOwnerMapping)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.bidOwnerMapping)
+    private static final com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping();
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<bidOwnerMapping>
+        PARSER = new com.google.protobuf.AbstractParser<bidOwnerMapping>() {
+      @java.lang.Override
+      public bidOwnerMapping parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<bidOwnerMapping> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<bidOwnerMapping> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.bidOwnerMapping getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProtocolStatisticsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.ProtocolStatistics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+     * @return The loss.
+     */
+    java.lang.String getLoss();
+    /**
+     * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+     * @return The bytes for loss.
+     */
+    com.google.protobuf.ByteString
+        getLossBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.ProtocolStatistics}
+   */
+  public static final class ProtocolStatistics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.ProtocolStatistics)
+      ProtocolStatisticsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProtocolStatistics.newBuilder() to construct.
+    private ProtocolStatistics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProtocolStatistics() {
+      loss_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProtocolStatistics();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_ProtocolStatistics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_ProtocolStatistics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.class, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 2;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int LOSS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object loss_ = "";
+    /**
+     * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+     * @return The loss.
+     */
+    @java.lang.Override
+    public java.lang.String getLoss() {
+      java.lang.Object ref = loss_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loss_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+     * @return The bytes for loss.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLossBytes() {
+      java.lang.Object ref = loss_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loss_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (assetId_ != 0L) {
+        output.writeUInt64(2, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loss_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, loss_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loss_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, loss_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics other = (com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (!getLoss()
+          .equals(other.getLoss())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + LOSS_FIELD_NUMBER;
+      hash = (53 * hash) + getLoss().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.ProtocolStatistics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.ProtocolStatistics)
+        com.comdex.auction.v1beta1.AuctionProto.ProtocolStatisticsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_ProtocolStatistics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_ProtocolStatistics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.class, com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        assetId_ = 0L;
+        loss_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_ProtocolStatistics_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics build() {
+        com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics buildPartial() {
+        com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics result = new com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.loss_ = loss_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics) {
+          return mergeFrom((com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics other) {
+        if (other == com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (!other.getLoss().isEmpty()) {
+          loss_ = other.loss_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                loss_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 2 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object loss_ = "";
+      /**
+       * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+       * @return The loss.
+       */
+      public java.lang.String getLoss() {
+        java.lang.Object ref = loss_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loss_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+       * @return The bytes for loss.
+       */
+      public com.google.protobuf.ByteString
+          getLossBytes() {
+        java.lang.Object ref = loss_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loss_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+       * @param value The loss to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoss(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        loss_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoss() {
+        loss_ = getDefaultInstance().getLoss();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string loss = 3 [json_name = "loss", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"loss&#92;""];</code>
+       * @param value The bytes for loss to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLossBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        loss_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.ProtocolStatistics)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.ProtocolStatistics)
+    private static final com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics();
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProtocolStatistics>
+        PARSER = new com.google.protobuf.AbstractParser<ProtocolStatistics>() {
+      @java.lang.Override
+      public ProtocolStatistics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProtocolStatistics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProtocolStatistics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.ProtocolStatistics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AuctionParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.auction.v1beta1.AuctionParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 auction_duration_seconds = 2 [json_name = "auctionDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"auction_duration_seconds&#92;""];</code>
+     * @return The auctionDurationSeconds.
+     */
+    long getAuctionDurationSeconds();
+
+    /**
+     * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+     * @return The buffer.
+     */
+    java.lang.String getBuffer();
+    /**
+     * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+     * @return The bytes for buffer.
+     */
+    com.google.protobuf.ByteString
+        getBufferBytes();
+
+    /**
+     * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+     * @return The cusp.
+     */
+    java.lang.String getCusp();
+    /**
+     * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+     * @return The bytes for cusp.
+     */
+    com.google.protobuf.ByteString
+        getCuspBytes();
+
+    /**
+     * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+     * @return The step.
+     */
+    java.lang.String getStep();
+    /**
+     * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+     * @return The bytes for step.
+     */
+    com.google.protobuf.ByteString
+        getStepBytes();
+
+    /**
+     * <code>uint64 price_function_type = 6 [json_name = "priceFunctionType", (.gogoproto.moretags) = "yaml:&#92;"price_function_type&#92;""];</code>
+     * @return The priceFunctionType.
+     */
+    long getPriceFunctionType();
+
+    /**
+     * <code>uint64 surplus_id = 7 [json_name = "surplusId", (.gogoproto.moretags) = "yaml:&#92;"surplus_id&#92;""];</code>
+     * @return The surplusId.
+     */
+    long getSurplusId();
+
+    /**
+     * <code>uint64 debt_id = 8 [json_name = "debtId", (.gogoproto.moretags) = "yaml:&#92;"debt_id&#92;""];</code>
+     * @return The debtId.
+     */
+    long getDebtId();
+
+    /**
+     * <code>uint64 dutch_id = 9 [json_name = "dutchId", (.gogoproto.moretags) = "yaml:&#92;"dutch_id&#92;""];</code>
+     * @return The dutchId.
+     */
+    long getDutchId();
+
+    /**
+     * <code>uint64 bid_duration_seconds = 10 [json_name = "bidDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"bid_duration_seconds&#92;""];</code>
+     * @return The bidDurationSeconds.
+     */
+    long getBidDurationSeconds();
+  }
+  /**
+   * Protobuf type {@code comdex.auction.v1beta1.AuctionParams}
+   */
+  public static final class AuctionParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.auction.v1beta1.AuctionParams)
+      AuctionParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AuctionParams.newBuilder() to construct.
+    private AuctionParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AuctionParams() {
+      buffer_ = "";
+      cusp_ = "";
+      step_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuctionParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_AuctionParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_AuctionParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.auction.v1beta1.AuctionProto.AuctionParams.class, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int AUCTION_DURATION_SECONDS_FIELD_NUMBER = 2;
+    private long auctionDurationSeconds_ = 0L;
+    /**
+     * <code>uint64 auction_duration_seconds = 2 [json_name = "auctionDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"auction_duration_seconds&#92;""];</code>
+     * @return The auctionDurationSeconds.
+     */
+    @java.lang.Override
+    public long getAuctionDurationSeconds() {
+      return auctionDurationSeconds_;
+    }
+
+    public static final int BUFFER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buffer_ = "";
+    /**
+     * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+     * @return The buffer.
+     */
+    @java.lang.Override
+    public java.lang.String getBuffer() {
+      java.lang.Object ref = buffer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buffer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+     * @return The bytes for buffer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBufferBytes() {
+      java.lang.Object ref = buffer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buffer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CUSP_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cusp_ = "";
+    /**
+     * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+     * @return The cusp.
+     */
+    @java.lang.Override
+    public java.lang.String getCusp() {
+      java.lang.Object ref = cusp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cusp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+     * @return The bytes for cusp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCuspBytes() {
+      java.lang.Object ref = cusp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cusp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STEP_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object step_ = "";
+    /**
+     * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+     * @return The step.
+     */
+    @java.lang.Override
+    public java.lang.String getStep() {
+      java.lang.Object ref = step_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        step_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+     * @return The bytes for step.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStepBytes() {
+      java.lang.Object ref = step_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        step_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRICE_FUNCTION_TYPE_FIELD_NUMBER = 6;
+    private long priceFunctionType_ = 0L;
+    /**
+     * <code>uint64 price_function_type = 6 [json_name = "priceFunctionType", (.gogoproto.moretags) = "yaml:&#92;"price_function_type&#92;""];</code>
+     * @return The priceFunctionType.
+     */
+    @java.lang.Override
+    public long getPriceFunctionType() {
+      return priceFunctionType_;
+    }
+
+    public static final int SURPLUS_ID_FIELD_NUMBER = 7;
+    private long surplusId_ = 0L;
+    /**
+     * <code>uint64 surplus_id = 7 [json_name = "surplusId", (.gogoproto.moretags) = "yaml:&#92;"surplus_id&#92;""];</code>
+     * @return The surplusId.
+     */
+    @java.lang.Override
+    public long getSurplusId() {
+      return surplusId_;
+    }
+
+    public static final int DEBT_ID_FIELD_NUMBER = 8;
+    private long debtId_ = 0L;
+    /**
+     * <code>uint64 debt_id = 8 [json_name = "debtId", (.gogoproto.moretags) = "yaml:&#92;"debt_id&#92;""];</code>
+     * @return The debtId.
+     */
+    @java.lang.Override
+    public long getDebtId() {
+      return debtId_;
+    }
+
+    public static final int DUTCH_ID_FIELD_NUMBER = 9;
+    private long dutchId_ = 0L;
+    /**
+     * <code>uint64 dutch_id = 9 [json_name = "dutchId", (.gogoproto.moretags) = "yaml:&#92;"dutch_id&#92;""];</code>
+     * @return The dutchId.
+     */
+    @java.lang.Override
+    public long getDutchId() {
+      return dutchId_;
+    }
+
+    public static final int BID_DURATION_SECONDS_FIELD_NUMBER = 10;
+    private long bidDurationSeconds_ = 0L;
+    /**
+     * <code>uint64 bid_duration_seconds = 10 [json_name = "bidDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"bid_duration_seconds&#92;""];</code>
+     * @return The bidDurationSeconds.
+     */
+    @java.lang.Override
+    public long getBidDurationSeconds() {
+      return bidDurationSeconds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (auctionDurationSeconds_ != 0L) {
+        output.writeUInt64(2, auctionDurationSeconds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buffer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, buffer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cusp_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cusp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(step_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, step_);
+      }
+      if (priceFunctionType_ != 0L) {
+        output.writeUInt64(6, priceFunctionType_);
+      }
+      if (surplusId_ != 0L) {
+        output.writeUInt64(7, surplusId_);
+      }
+      if (debtId_ != 0L) {
+        output.writeUInt64(8, debtId_);
+      }
+      if (dutchId_ != 0L) {
+        output.writeUInt64(9, dutchId_);
+      }
+      if (bidDurationSeconds_ != 0L) {
+        output.writeUInt64(10, bidDurationSeconds_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (auctionDurationSeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, auctionDurationSeconds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buffer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, buffer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cusp_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cusp_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(step_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, step_);
+      }
+      if (priceFunctionType_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, priceFunctionType_);
+      }
+      if (surplusId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, surplusId_);
+      }
+      if (debtId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, debtId_);
+      }
+      if (dutchId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, dutchId_);
+      }
+      if (bidDurationSeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, bidDurationSeconds_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.auction.v1beta1.AuctionProto.AuctionParams)) {
+        return super.equals(obj);
+      }
+      com.comdex.auction.v1beta1.AuctionProto.AuctionParams other = (com.comdex.auction.v1beta1.AuctionProto.AuctionParams) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getAuctionDurationSeconds()
+          != other.getAuctionDurationSeconds()) return false;
+      if (!getBuffer()
+          .equals(other.getBuffer())) return false;
+      if (!getCusp()
+          .equals(other.getCusp())) return false;
+      if (!getStep()
+          .equals(other.getStep())) return false;
+      if (getPriceFunctionType()
+          != other.getPriceFunctionType()) return false;
+      if (getSurplusId()
+          != other.getSurplusId()) return false;
+      if (getDebtId()
+          != other.getDebtId()) return false;
+      if (getDutchId()
+          != other.getDutchId()) return false;
+      if (getBidDurationSeconds()
+          != other.getBidDurationSeconds()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + AUCTION_DURATION_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAuctionDurationSeconds());
+      hash = (37 * hash) + BUFFER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuffer().hashCode();
+      hash = (37 * hash) + CUSP_FIELD_NUMBER;
+      hash = (53 * hash) + getCusp().hashCode();
+      hash = (37 * hash) + STEP_FIELD_NUMBER;
+      hash = (53 * hash) + getStep().hashCode();
+      hash = (37 * hash) + PRICE_FUNCTION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPriceFunctionType());
+      hash = (37 * hash) + SURPLUS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSurplusId());
+      hash = (37 * hash) + DEBT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDebtId());
+      hash = (37 * hash) + DUTCH_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDutchId());
+      hash = (37 * hash) + BID_DURATION_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBidDurationSeconds());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.auction.v1beta1.AuctionProto.AuctionParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.auction.v1beta1.AuctionParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.auction.v1beta1.AuctionParams)
+        com.comdex.auction.v1beta1.AuctionProto.AuctionParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_AuctionParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_AuctionParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.auction.v1beta1.AuctionProto.AuctionParams.class, com.comdex.auction.v1beta1.AuctionProto.AuctionParams.Builder.class);
+      }
+
+      // Construct using com.comdex.auction.v1beta1.AuctionProto.AuctionParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        auctionDurationSeconds_ = 0L;
+        buffer_ = "";
+        cusp_ = "";
+        step_ = "";
+        priceFunctionType_ = 0L;
+        surplusId_ = 0L;
+        debtId_ = 0L;
+        dutchId_ = 0L;
+        bidDurationSeconds_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.internal_static_comdex_auction_v1beta1_AuctionParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams getDefaultInstanceForType() {
+        return com.comdex.auction.v1beta1.AuctionProto.AuctionParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams build() {
+        com.comdex.auction.v1beta1.AuctionProto.AuctionParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.auction.v1beta1.AuctionProto.AuctionParams buildPartial() {
+        com.comdex.auction.v1beta1.AuctionProto.AuctionParams result = new com.comdex.auction.v1beta1.AuctionProto.AuctionParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.auction.v1beta1.AuctionProto.AuctionParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.auctionDurationSeconds_ = auctionDurationSeconds_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.buffer_ = buffer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.cusp_ = cusp_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.step_ = step_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.priceFunctionType_ = priceFunctionType_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.surplusId_ = surplusId_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.debtId_ = debtId_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.dutchId_ = dutchId_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.bidDurationSeconds_ = bidDurationSeconds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.auction.v1beta1.AuctionProto.AuctionParams) {
+          return mergeFrom((com.comdex.auction.v1beta1.AuctionProto.AuctionParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.auction.v1beta1.AuctionProto.AuctionParams other) {
+        if (other == com.comdex.auction.v1beta1.AuctionProto.AuctionParams.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getAuctionDurationSeconds() != 0L) {
+          setAuctionDurationSeconds(other.getAuctionDurationSeconds());
+        }
+        if (!other.getBuffer().isEmpty()) {
+          buffer_ = other.buffer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getCusp().isEmpty()) {
+          cusp_ = other.cusp_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getStep().isEmpty()) {
+          step_ = other.step_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getPriceFunctionType() != 0L) {
+          setPriceFunctionType(other.getPriceFunctionType());
+        }
+        if (other.getSurplusId() != 0L) {
+          setSurplusId(other.getSurplusId());
+        }
+        if (other.getDebtId() != 0L) {
+          setDebtId(other.getDebtId());
+        }
+        if (other.getDutchId() != 0L) {
+          setDutchId(other.getDutchId());
+        }
+        if (other.getBidDurationSeconds() != 0L) {
+          setBidDurationSeconds(other.getBidDurationSeconds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                auctionDurationSeconds_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                buffer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                cusp_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                step_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                priceFunctionType_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                surplusId_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                debtId_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                dutchId_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                bidDurationSeconds_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long auctionDurationSeconds_ ;
+      /**
+       * <code>uint64 auction_duration_seconds = 2 [json_name = "auctionDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"auction_duration_seconds&#92;""];</code>
+       * @return The auctionDurationSeconds.
+       */
+      @java.lang.Override
+      public long getAuctionDurationSeconds() {
+        return auctionDurationSeconds_;
+      }
+      /**
+       * <code>uint64 auction_duration_seconds = 2 [json_name = "auctionDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"auction_duration_seconds&#92;""];</code>
+       * @param value The auctionDurationSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuctionDurationSeconds(long value) {
+
+        auctionDurationSeconds_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 auction_duration_seconds = 2 [json_name = "auctionDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"auction_duration_seconds&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuctionDurationSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        auctionDurationSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object buffer_ = "";
+      /**
+       * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+       * @return The buffer.
+       */
+      public java.lang.String getBuffer() {
+        java.lang.Object ref = buffer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buffer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+       * @return The bytes for buffer.
+       */
+      public com.google.protobuf.ByteString
+          getBufferBytes() {
+        java.lang.Object ref = buffer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buffer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+       * @param value The buffer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuffer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        buffer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuffer() {
+        buffer_ = getDefaultInstance().getBuffer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string buffer = 3 [json_name = "buffer", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"buffer&#92;""];</code>
+       * @param value The bytes for buffer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBufferBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        buffer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cusp_ = "";
+      /**
+       * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+       * @return The cusp.
+       */
+      public java.lang.String getCusp() {
+        java.lang.Object ref = cusp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cusp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+       * @return The bytes for cusp.
+       */
+      public com.google.protobuf.ByteString
+          getCuspBytes() {
+        java.lang.Object ref = cusp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cusp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+       * @param value The cusp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCusp(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        cusp_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCusp() {
+        cusp_ = getDefaultInstance().getCusp();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cusp = 4 [json_name = "cusp", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"cusp&#92;""];</code>
+       * @param value The bytes for cusp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCuspBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        cusp_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object step_ = "";
+      /**
+       * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+       * @return The step.
+       */
+      public java.lang.String getStep() {
+        java.lang.Object ref = step_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          step_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+       * @return The bytes for step.
+       */
+      public com.google.protobuf.ByteString
+          getStepBytes() {
+        java.lang.Object ref = step_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          step_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+       * @param value The step to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStep(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        step_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStep() {
+        step_ = getDefaultInstance().getStep();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string step = 5 [json_name = "step", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"step&#92;""];</code>
+       * @param value The bytes for step to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStepBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        step_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long priceFunctionType_ ;
+      /**
+       * <code>uint64 price_function_type = 6 [json_name = "priceFunctionType", (.gogoproto.moretags) = "yaml:&#92;"price_function_type&#92;""];</code>
+       * @return The priceFunctionType.
+       */
+      @java.lang.Override
+      public long getPriceFunctionType() {
+        return priceFunctionType_;
+      }
+      /**
+       * <code>uint64 price_function_type = 6 [json_name = "priceFunctionType", (.gogoproto.moretags) = "yaml:&#92;"price_function_type&#92;""];</code>
+       * @param value The priceFunctionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceFunctionType(long value) {
+
+        priceFunctionType_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 price_function_type = 6 [json_name = "priceFunctionType", (.gogoproto.moretags) = "yaml:&#92;"price_function_type&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPriceFunctionType() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        priceFunctionType_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long surplusId_ ;
+      /**
+       * <code>uint64 surplus_id = 7 [json_name = "surplusId", (.gogoproto.moretags) = "yaml:&#92;"surplus_id&#92;""];</code>
+       * @return The surplusId.
+       */
+      @java.lang.Override
+      public long getSurplusId() {
+        return surplusId_;
+      }
+      /**
+       * <code>uint64 surplus_id = 7 [json_name = "surplusId", (.gogoproto.moretags) = "yaml:&#92;"surplus_id&#92;""];</code>
+       * @param value The surplusId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSurplusId(long value) {
+
+        surplusId_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 surplus_id = 7 [json_name = "surplusId", (.gogoproto.moretags) = "yaml:&#92;"surplus_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSurplusId() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        surplusId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long debtId_ ;
+      /**
+       * <code>uint64 debt_id = 8 [json_name = "debtId", (.gogoproto.moretags) = "yaml:&#92;"debt_id&#92;""];</code>
+       * @return The debtId.
+       */
+      @java.lang.Override
+      public long getDebtId() {
+        return debtId_;
+      }
+      /**
+       * <code>uint64 debt_id = 8 [json_name = "debtId", (.gogoproto.moretags) = "yaml:&#92;"debt_id&#92;""];</code>
+       * @param value The debtId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDebtId(long value) {
+
+        debtId_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 debt_id = 8 [json_name = "debtId", (.gogoproto.moretags) = "yaml:&#92;"debt_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDebtId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        debtId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dutchId_ ;
+      /**
+       * <code>uint64 dutch_id = 9 [json_name = "dutchId", (.gogoproto.moretags) = "yaml:&#92;"dutch_id&#92;""];</code>
+       * @return The dutchId.
+       */
+      @java.lang.Override
+      public long getDutchId() {
+        return dutchId_;
+      }
+      /**
+       * <code>uint64 dutch_id = 9 [json_name = "dutchId", (.gogoproto.moretags) = "yaml:&#92;"dutch_id&#92;""];</code>
+       * @param value The dutchId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDutchId(long value) {
+
+        dutchId_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 dutch_id = 9 [json_name = "dutchId", (.gogoproto.moretags) = "yaml:&#92;"dutch_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDutchId() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        dutchId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long bidDurationSeconds_ ;
+      /**
+       * <code>uint64 bid_duration_seconds = 10 [json_name = "bidDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"bid_duration_seconds&#92;""];</code>
+       * @return The bidDurationSeconds.
+       */
+      @java.lang.Override
+      public long getBidDurationSeconds() {
+        return bidDurationSeconds_;
+      }
+      /**
+       * <code>uint64 bid_duration_seconds = 10 [json_name = "bidDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"bid_duration_seconds&#92;""];</code>
+       * @param value The bidDurationSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBidDurationSeconds(long value) {
+
+        bidDurationSeconds_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 bid_duration_seconds = 10 [json_name = "bidDurationSeconds", (.gogoproto.moretags) = "yaml:&#92;"bid_duration_seconds&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBidDurationSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        bidDurationSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.auction.v1beta1.AuctionParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.auction.v1beta1.AuctionParams)
+    private static final com.comdex.auction.v1beta1.AuctionProto.AuctionParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.auction.v1beta1.AuctionProto.AuctionParams();
+    }
+
+    public static com.comdex.auction.v1beta1.AuctionProto.AuctionParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AuctionParams>
+        PARSER = new com.google.protobuf.AbstractParser<AuctionParams>() {
+      @java.lang.Override
+      public AuctionParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AuctionParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AuctionParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.auction.v1beta1.AuctionProto.AuctionParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_SurplusAuction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_SurplusAuction_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_DebtAuction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_DebtAuction_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_DutchAuction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_DutchAuction_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_bidOwnerMapping_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_bidOwnerMapping_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_ProtocolStatistics_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_ProtocolStatistics_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_auction_v1beta1_AuctionParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_auction_v1beta1_AuctionParams_fieldAccessorTable;
 
@@ -209,13 +11728,13 @@ public final class AuctionProto {
       "\"debt_id\"R\006debtId\022.\n\010dutch_id\030\t \001(\004B\023\362\336\037" +
       "\017yaml:\"dutch_id\"R\007dutchId\022Q\n\024bid_duratio" +
       "n_seconds\030\n \001(\004B\037\362\336\037\033yaml:\"bid_duration_" +
-      "seconds\"R\022bidDurationSecondsB\337\001\n\032com.com" +
-      "dex.auction.v1beta1B\014AuctionProtoP\001Z1git" +
-      "hub.com/comdex-official/comdex/x/auction" +
-      "/types\242\002\003CAX\252\002\026Comdex.Auction.V1beta1\312\002\026" +
-      "Comdex\\Auction\\V1beta1\342\002\"Comdex\\Auction\\" +
-      "V1beta1\\GPBMetadata\352\002\030Comdex::Auction::V" +
-      "1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "seconds\"R\022bidDurationSecondsB\335\001\n\032com.com" +
+      "dex.auction.v1beta1B\014AuctionProtoZ1githu" +
+      "b.com/comdex-official/comdex/x/auction/t" +
+      "ypes\242\002\003CAX\252\002\026Comdex.Auction.V1beta1\312\002\026Co" +
+      "mdex\\Auction\\V1beta1\342\002\"Comdex\\Auction\\V1" +
+      "beta1\\GPBMetadata\352\002\030Comdex::Auction::V1b" +
+      "eta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

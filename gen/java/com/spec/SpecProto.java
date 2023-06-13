@@ -14,9 +14,1709 @@ public final class SpecProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TemplateAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:spec.TemplateAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+
+    /**
+     * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return Whether the publicKey field is set.
+     */
+    boolean hasPublicKey();
+    /**
+     * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The publicKey.
+     */
+    com.crypto.CryptoProto.PublicKey getPublicKey();
+    /**
+     * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    com.crypto.CryptoProto.PublicKeyOrBuilder getPublicKeyOrBuilder();
+
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    java.util.List<com.balance.BalanceProto.Balance> 
+        getAmountsList();
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    com.balance.BalanceProto.Balance getAmounts(int index);
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    int getAmountsCount();
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    java.util.List<? extends com.balance.BalanceProto.BalanceOrBuilder> 
+        getAmountsOrBuilderList();
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    com.balance.BalanceProto.BalanceOrBuilder getAmountsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return A list containing the permissions.
+     */
+    java.util.List<java.lang.String>
+        getPermissionsList();
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The count of permissions.
+     */
+    int getPermissionsCount();
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    java.lang.String getPermissions(int index);
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPermissionsBytes(int index);
+
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return A list containing the roles.
+     */
+    java.util.List<java.lang.String>
+        getRolesList();
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The count of roles.
+     */
+    int getRolesCount();
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The roles at the given index.
+     */
+    java.lang.String getRoles(int index);
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the roles at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRolesBytes(int index);
+
+    /**
+     * <code>bytes Code = 7 [json_name = "Code", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/hyperledger/burrow/acm.Bytecode"];</code>
+     * @return The code.
+     */
+    com.google.protobuf.ByteString getCode();
+  }
+  /**
+   * Protobuf type {@code spec.TemplateAccount}
+   */
+  public static final class TemplateAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:spec.TemplateAccount)
+      TemplateAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TemplateAccount.newBuilder() to construct.
+    private TemplateAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TemplateAccount() {
+      name_ = "";
+      address_ = com.google.protobuf.ByteString.EMPTY;
+      amounts_ = java.util.Collections.emptyList();
+      permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      roles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      code_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TemplateAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.spec.SpecProto.internal_static_spec_TemplateAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.spec.SpecProto.internal_static_spec_TemplateAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.spec.SpecProto.TemplateAccount.class, com.spec.SpecProto.TemplateAccount.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Name = 1 [json_name = "Name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    public static final int PUBLICKEY_FIELD_NUMBER = 3;
+    private com.crypto.CryptoProto.PublicKey publicKey_;
+    /**
+     * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return Whether the publicKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublicKey() {
+      return publicKey_ != null;
+    }
+    /**
+     * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The publicKey.
+     */
+    @java.lang.Override
+    public com.crypto.CryptoProto.PublicKey getPublicKey() {
+      return publicKey_ == null ? com.crypto.CryptoProto.PublicKey.getDefaultInstance() : publicKey_;
+    }
+    /**
+     * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.crypto.CryptoProto.PublicKeyOrBuilder getPublicKeyOrBuilder() {
+      return publicKey_ == null ? com.crypto.CryptoProto.PublicKey.getDefaultInstance() : publicKey_;
+    }
+
+    public static final int AMOUNTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.balance.BalanceProto.Balance> amounts_;
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.balance.BalanceProto.Balance> getAmountsList() {
+      return amounts_;
+    }
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.balance.BalanceProto.BalanceOrBuilder> 
+        getAmountsOrBuilderList() {
+      return amounts_;
+    }
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAmountsCount() {
+      return amounts_.size();
+    }
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.balance.BalanceProto.Balance getAmounts(int index) {
+      return amounts_.get(index);
+    }
+    /**
+     * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.balance.BalanceProto.BalanceOrBuilder getAmountsOrBuilder(
+        int index) {
+      return amounts_.get(index);
+    }
+
+    public static final int PERMISSIONS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList permissions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return A list containing the permissions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The count of permissions.
+     */
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    public java.lang.String getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permissions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPermissionsBytes(int index) {
+      return permissions_.getByteString(index);
+    }
+
+    public static final int ROLES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList roles_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return A list containing the roles.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRolesList() {
+      return roles_;
+    }
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @return The count of roles.
+     */
+    public int getRolesCount() {
+      return roles_.size();
+    }
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The roles at the given index.
+     */
+    public java.lang.String getRoles(int index) {
+      return roles_.get(index);
+    }
+    /**
+     * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the roles at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRolesBytes(int index) {
+      return roles_.getByteString(index);
+    }
+
+    public static final int CODE_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes Code = 7 [json_name = "Code", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/hyperledger/burrow/acm.Bytecode"];</code>
+     * @return The code.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCode() {
+      return code_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!address_.isEmpty()) {
+        output.writeBytes(2, address_);
+      }
+      if (publicKey_ != null) {
+        output.writeMessage(3, getPublicKey());
+      }
+      for (int i = 0; i < amounts_.size(); i++) {
+        output.writeMessage(4, amounts_.get(i));
+      }
+      for (int i = 0; i < permissions_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, permissions_.getRaw(i));
+      }
+      for (int i = 0; i < roles_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, roles_.getRaw(i));
+      }
+      if (!code_.isEmpty()) {
+        output.writeBytes(7, code_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, address_);
+      }
+      if (publicKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPublicKey());
+      }
+      for (int i = 0; i < amounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, amounts_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < permissions_.size(); i++) {
+          dataSize += computeStringSizeNoTag(permissions_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPermissionsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < roles_.size(); i++) {
+          dataSize += computeStringSizeNoTag(roles_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRolesList().size();
+      }
+      if (!code_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, code_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.spec.SpecProto.TemplateAccount)) {
+        return super.equals(obj);
+      }
+      com.spec.SpecProto.TemplateAccount other = (com.spec.SpecProto.TemplateAccount) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasPublicKey() != other.hasPublicKey()) return false;
+      if (hasPublicKey()) {
+        if (!getPublicKey()
+            .equals(other.getPublicKey())) return false;
+      }
+      if (!getAmountsList()
+          .equals(other.getAmountsList())) return false;
+      if (!getPermissionsList()
+          .equals(other.getPermissionsList())) return false;
+      if (!getRolesList()
+          .equals(other.getRolesList())) return false;
+      if (!getCode()
+          .equals(other.getCode())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasPublicKey()) {
+        hash = (37 * hash) + PUBLICKEY_FIELD_NUMBER;
+        hash = (53 * hash) + getPublicKey().hashCode();
+      }
+      if (getAmountsCount() > 0) {
+        hash = (37 * hash) + AMOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountsList().hashCode();
+      }
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionsList().hashCode();
+      }
+      if (getRolesCount() > 0) {
+        hash = (37 * hash) + ROLES_FIELD_NUMBER;
+        hash = (53 * hash) + getRolesList().hashCode();
+      }
+      hash = (37 * hash) + CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCode().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.spec.SpecProto.TemplateAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.spec.SpecProto.TemplateAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.spec.SpecProto.TemplateAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.spec.SpecProto.TemplateAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code spec.TemplateAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:spec.TemplateAccount)
+        com.spec.SpecProto.TemplateAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.spec.SpecProto.internal_static_spec_TemplateAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.spec.SpecProto.internal_static_spec_TemplateAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.spec.SpecProto.TemplateAccount.class, com.spec.SpecProto.TemplateAccount.Builder.class);
+      }
+
+      // Construct using com.spec.SpecProto.TemplateAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        publicKey_ = null;
+        if (publicKeyBuilder_ != null) {
+          publicKeyBuilder_.dispose();
+          publicKeyBuilder_ = null;
+        }
+        if (amountsBuilder_ == null) {
+          amounts_ = java.util.Collections.emptyList();
+        } else {
+          amounts_ = null;
+          amountsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        permissions_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        roles_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        code_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.spec.SpecProto.internal_static_spec_TemplateAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.spec.SpecProto.TemplateAccount getDefaultInstanceForType() {
+        return com.spec.SpecProto.TemplateAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.spec.SpecProto.TemplateAccount build() {
+        com.spec.SpecProto.TemplateAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.spec.SpecProto.TemplateAccount buildPartial() {
+        com.spec.SpecProto.TemplateAccount result = new com.spec.SpecProto.TemplateAccount(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.spec.SpecProto.TemplateAccount result) {
+        if (amountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            amounts_ = java.util.Collections.unmodifiableList(amounts_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.amounts_ = amounts_;
+        } else {
+          result.amounts_ = amountsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.spec.SpecProto.TemplateAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.publicKey_ = publicKeyBuilder_ == null
+              ? publicKey_
+              : publicKeyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          permissions_.makeImmutable();
+          result.permissions_ = permissions_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          roles_.makeImmutable();
+          result.roles_ = roles_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.code_ = code_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.spec.SpecProto.TemplateAccount) {
+          return mergeFrom((com.spec.SpecProto.TemplateAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.spec.SpecProto.TemplateAccount other) {
+        if (other == com.spec.SpecProto.TemplateAccount.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        if (other.hasPublicKey()) {
+          mergePublicKey(other.getPublicKey());
+        }
+        if (amountsBuilder_ == null) {
+          if (!other.amounts_.isEmpty()) {
+            if (amounts_.isEmpty()) {
+              amounts_ = other.amounts_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAmountsIsMutable();
+              amounts_.addAll(other.amounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.amounts_.isEmpty()) {
+            if (amountsBuilder_.isEmpty()) {
+              amountsBuilder_.dispose();
+              amountsBuilder_ = null;
+              amounts_ = other.amounts_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              amountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAmountsFieldBuilder() : null;
+            } else {
+              amountsBuilder_.addAllMessages(other.amounts_);
+            }
+          }
+        }
+        if (!other.permissions_.isEmpty()) {
+          if (permissions_.isEmpty()) {
+            permissions_ = other.permissions_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensurePermissionsIsMutable();
+            permissions_.addAll(other.permissions_);
+          }
+          onChanged();
+        }
+        if (!other.roles_.isEmpty()) {
+          if (roles_.isEmpty()) {
+            roles_ = other.roles_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureRolesIsMutable();
+            roles_.addAll(other.roles_);
+          }
+          onChanged();
+        }
+        if (other.getCode() != com.google.protobuf.ByteString.EMPTY) {
+          setCode(other.getCode());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPublicKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.balance.BalanceProto.Balance m =
+                    input.readMessage(
+                        com.balance.BalanceProto.Balance.parser(),
+                        extensionRegistry);
+                if (amountsBuilder_ == null) {
+                  ensureAmountsIsMutable();
+                  amounts_.add(m);
+                } else {
+                  amountsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePermissionsIsMutable();
+                permissions_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRolesIsMutable();
+                roles_.add(s);
+                break;
+              } // case 50
+              case 58: {
+                code_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Name = 1 [json_name = "Name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes Address = 2 [json_name = "Address", (.gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+
+      private com.crypto.CryptoProto.PublicKey publicKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crypto.CryptoProto.PublicKey, com.crypto.CryptoProto.PublicKey.Builder, com.crypto.CryptoProto.PublicKeyOrBuilder> publicKeyBuilder_;
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return Whether the publicKey field is set.
+       */
+      public boolean hasPublicKey() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return The publicKey.
+       */
+      public com.crypto.CryptoProto.PublicKey getPublicKey() {
+        if (publicKeyBuilder_ == null) {
+          return publicKey_ == null ? com.crypto.CryptoProto.PublicKey.getDefaultInstance() : publicKey_;
+        } else {
+          return publicKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder setPublicKey(com.crypto.CryptoProto.PublicKey value) {
+        if (publicKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          publicKey_ = value;
+        } else {
+          publicKeyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder setPublicKey(
+          com.crypto.CryptoProto.PublicKey.Builder builderForValue) {
+        if (publicKeyBuilder_ == null) {
+          publicKey_ = builderForValue.build();
+        } else {
+          publicKeyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder mergePublicKey(com.crypto.CryptoProto.PublicKey value) {
+        if (publicKeyBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            publicKey_ != null &&
+            publicKey_ != com.crypto.CryptoProto.PublicKey.getDefaultInstance()) {
+            getPublicKeyBuilder().mergeFrom(value);
+          } else {
+            publicKey_ = value;
+          }
+        } else {
+          publicKeyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder clearPublicKey() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        publicKey_ = null;
+        if (publicKeyBuilder_ != null) {
+          publicKeyBuilder_.dispose();
+          publicKeyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.crypto.CryptoProto.PublicKey.Builder getPublicKeyBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPublicKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.crypto.CryptoProto.PublicKeyOrBuilder getPublicKeyOrBuilder() {
+        if (publicKeyBuilder_ != null) {
+          return publicKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return publicKey_ == null ?
+              com.crypto.CryptoProto.PublicKey.getDefaultInstance() : publicKey_;
+        }
+      }
+      /**
+       * <code>.crypto.PublicKey PublicKey = 3 [json_name = "PublicKey", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crypto.CryptoProto.PublicKey, com.crypto.CryptoProto.PublicKey.Builder, com.crypto.CryptoProto.PublicKeyOrBuilder> 
+          getPublicKeyFieldBuilder() {
+        if (publicKeyBuilder_ == null) {
+          publicKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crypto.CryptoProto.PublicKey, com.crypto.CryptoProto.PublicKey.Builder, com.crypto.CryptoProto.PublicKeyOrBuilder>(
+                  getPublicKey(),
+                  getParentForChildren(),
+                  isClean());
+          publicKey_ = null;
+        }
+        return publicKeyBuilder_;
+      }
+
+      private java.util.List<com.balance.BalanceProto.Balance> amounts_ =
+        java.util.Collections.emptyList();
+      private void ensureAmountsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          amounts_ = new java.util.ArrayList<com.balance.BalanceProto.Balance>(amounts_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.balance.BalanceProto.Balance, com.balance.BalanceProto.Balance.Builder, com.balance.BalanceProto.BalanceOrBuilder> amountsBuilder_;
+
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public java.util.List<com.balance.BalanceProto.Balance> getAmountsList() {
+        if (amountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(amounts_);
+        } else {
+          return amountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public int getAmountsCount() {
+        if (amountsBuilder_ == null) {
+          return amounts_.size();
+        } else {
+          return amountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.balance.BalanceProto.Balance getAmounts(int index) {
+        if (amountsBuilder_ == null) {
+          return amounts_.get(index);
+        } else {
+          return amountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder setAmounts(
+          int index, com.balance.BalanceProto.Balance value) {
+        if (amountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountsIsMutable();
+          amounts_.set(index, value);
+          onChanged();
+        } else {
+          amountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder setAmounts(
+          int index, com.balance.BalanceProto.Balance.Builder builderForValue) {
+        if (amountsBuilder_ == null) {
+          ensureAmountsIsMutable();
+          amounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder addAmounts(com.balance.BalanceProto.Balance value) {
+        if (amountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountsIsMutable();
+          amounts_.add(value);
+          onChanged();
+        } else {
+          amountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder addAmounts(
+          int index, com.balance.BalanceProto.Balance value) {
+        if (amountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountsIsMutable();
+          amounts_.add(index, value);
+          onChanged();
+        } else {
+          amountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder addAmounts(
+          com.balance.BalanceProto.Balance.Builder builderForValue) {
+        if (amountsBuilder_ == null) {
+          ensureAmountsIsMutable();
+          amounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          amountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder addAmounts(
+          int index, com.balance.BalanceProto.Balance.Builder builderForValue) {
+        if (amountsBuilder_ == null) {
+          ensureAmountsIsMutable();
+          amounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder addAllAmounts(
+          java.lang.Iterable<? extends com.balance.BalanceProto.Balance> values) {
+        if (amountsBuilder_ == null) {
+          ensureAmountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, amounts_);
+          onChanged();
+        } else {
+          amountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder clearAmounts() {
+        if (amountsBuilder_ == null) {
+          amounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          amountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public Builder removeAmounts(int index) {
+        if (amountsBuilder_ == null) {
+          ensureAmountsIsMutable();
+          amounts_.remove(index);
+          onChanged();
+        } else {
+          amountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.balance.BalanceProto.Balance.Builder getAmountsBuilder(
+          int index) {
+        return getAmountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.balance.BalanceProto.BalanceOrBuilder getAmountsOrBuilder(
+          int index) {
+        if (amountsBuilder_ == null) {
+          return amounts_.get(index);  } else {
+          return amountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public java.util.List<? extends com.balance.BalanceProto.BalanceOrBuilder> 
+           getAmountsOrBuilderList() {
+        if (amountsBuilder_ != null) {
+          return amountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(amounts_);
+        }
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.balance.BalanceProto.Balance.Builder addAmountsBuilder() {
+        return getAmountsFieldBuilder().addBuilder(
+            com.balance.BalanceProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public com.balance.BalanceProto.Balance.Builder addAmountsBuilder(
+          int index) {
+        return getAmountsFieldBuilder().addBuilder(
+            index, com.balance.BalanceProto.Balance.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .balance.Balance Amounts = 4 [json_name = "Amounts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       */
+      public java.util.List<com.balance.BalanceProto.Balance.Builder> 
+           getAmountsBuilderList() {
+        return getAmountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.balance.BalanceProto.Balance, com.balance.BalanceProto.Balance.Builder, com.balance.BalanceProto.BalanceOrBuilder> 
+          getAmountsFieldBuilder() {
+        if (amountsBuilder_ == null) {
+          amountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.balance.BalanceProto.Balance, com.balance.BalanceProto.Balance.Builder, com.balance.BalanceProto.BalanceOrBuilder>(
+                  amounts_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          amounts_ = null;
+        }
+        return amountsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePermissionsIsMutable() {
+        if (!permissions_.isModifiable()) {
+          permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return A list containing the permissions.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPermissionsList() {
+        permissions_.makeImmutable();
+        return permissions_;
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return The count of permissions.
+       */
+      public int getPermissionsCount() {
+        return permissions_.size();
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The permissions at the given index.
+       */
+      public java.lang.String getPermissions(int index) {
+        return permissions_.get(index);
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the permissions at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionsBytes(int index) {
+        return permissions_.getByteString(index);
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The permissions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissions(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionsIsMutable();
+        permissions_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param value The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param values The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePermissionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, permissions_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissions() {
+        permissions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Permissions = 5 [json_name = "Permissions", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param value The bytes of the permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList roles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRolesIsMutable() {
+        if (!roles_.isModifiable()) {
+          roles_ = new com.google.protobuf.LazyStringArrayList(roles_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return A list containing the roles.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRolesList() {
+        roles_.makeImmutable();
+        return roles_;
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return The count of roles.
+       */
+      public int getRolesCount() {
+        return roles_.size();
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The roles at the given index.
+       */
+      public java.lang.String getRoles(int index) {
+        return roles_.get(index);
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the roles at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRolesBytes(int index) {
+        return roles_.getByteString(index);
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The roles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoles(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRolesIsMutable();
+        roles_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param value The roles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRoles(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRolesIsMutable();
+        roles_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param values The roles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRoles(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRolesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, roles_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoles() {
+        roles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Roles = 6 [json_name = "Roles", (.gogoproto.jsontag) = ",omitempty", (.gogoproto.moretags) = "toml:&#92;",omitempty&#92;""];</code>
+       * @param value The bytes of the roles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRolesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRolesIsMutable();
+        roles_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString code_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes Code = 7 [json_name = "Code", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/hyperledger/burrow/acm.Bytecode"];</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCode() {
+        return code_;
+      }
+      /**
+       * <code>bytes Code = 7 [json_name = "Code", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/hyperledger/burrow/acm.Bytecode"];</code>
+       * @param value The code to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCode(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        code_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes Code = 7 [json_name = "Code", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/hyperledger/burrow/acm.Bytecode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCode() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        code_ = getDefaultInstance().getCode();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:spec.TemplateAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:spec.TemplateAccount)
+    private static final com.spec.SpecProto.TemplateAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.spec.SpecProto.TemplateAccount();
+    }
+
+    public static com.spec.SpecProto.TemplateAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TemplateAccount>
+        PARSER = new com.google.protobuf.AbstractParser<TemplateAccount>() {
+      @java.lang.Override
+      public TemplateAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TemplateAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TemplateAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.spec.SpecProto.TemplateAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_spec_TemplateAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_spec_TemplateAccount_fieldAccessorTable;
 
@@ -44,10 +1744,10 @@ public final class SpecProto {
       "#\352\336\037\n,omitempty\362\336\037\021toml:\",omitempty\"R\005Ro" +
       "les\022F\n\004Code\030\007 \001(\014B2\310\336\037\001\332\336\037*github.com/hy" +
       "perledger/burrow/acm.BytecodeR\004Code:\010\220\242\037" +
-      "\000\230\242\037\000B\211\001\n\010com.specB\tSpecProtoP\001Z*github." +
-      "com/hyperledger/burrow/genesis/spec\242\002\003SX" +
-      "X\252\002\004Spec\312\002\004Spec\342\002\020Spec\\GPBMetadata\352\002\004Spe" +
-      "c\310\342\036\001\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
+      "\000\230\242\037\000B\207\001\n\010com.specB\tSpecProtoZ*github.co" +
+      "m/hyperledger/burrow/genesis/spec\242\002\003SXX\252" +
+      "\002\004Spec\312\002\004Spec\342\002\020Spec\\GPBMetadata\352\002\004Spec\310" +
+      "\342\036\001\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,19 +14,4030 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.lpfarm.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.Params getParams();
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastBlockTime field is set.
+     */
+    boolean hasLastBlockTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return The lastBlockTime.
+     */
+    com.google.protobuf.Timestamp getLastBlockTime();
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder();
+
+    /**
+     * <code>uint64 last_plan_id = 3 [json_name = "lastPlanId"];</code>
+     * @return The lastPlanId.
+     */
+    long getLastPlanId();
+
+    /**
+     * <code>uint64 num_private_plans = 4 [json_name = "numPrivatePlans"];</code>
+     * @return The numPrivatePlans.
+     */
+    long getNumPrivatePlans();
+
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan> 
+        getPlansList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.Plan getPlans(int index);
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    int getPlansCount();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder> 
+        getPlansOrBuilderList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder getPlansOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord> 
+        getFarmsList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord getFarms(int index);
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    int getFarmsCount();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder> 
+        getFarmsOrBuilderList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder getFarmsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Position> 
+        getPositionsList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.Position getPositions(int index);
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    int getPositionsCount();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder> 
+        getPositionsOrBuilderList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder getPositionsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord> 
+        getHistoricalRewardsList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord getHistoricalRewards(int index);
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    int getHistoricalRewardsCount();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder> 
+        getHistoricalRewardsOrBuilderList();
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder getHistoricalRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code crescent.lpfarm.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.lpfarm.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      plans_ = java.util.Collections.emptyList();
+      farms_ = java.util.Collections.emptyList();
+      positions_ = java.util.Collections.emptyList();
+      historicalRewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.class, com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.crescent.lpfarm.v1beta1.LpfarmProto.Params params_;
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.Params getParams() {
+      return params_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int LAST_BLOCK_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp lastBlockTime_;
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastBlockTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastBlockTime() {
+      return lastBlockTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     * @return The lastBlockTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastBlockTime() {
+      return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder() {
+      return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+    }
+
+    public static final int LAST_PLAN_ID_FIELD_NUMBER = 3;
+    private long lastPlanId_ = 0L;
+    /**
+     * <code>uint64 last_plan_id = 3 [json_name = "lastPlanId"];</code>
+     * @return The lastPlanId.
+     */
+    @java.lang.Override
+    public long getLastPlanId() {
+      return lastPlanId_;
+    }
+
+    public static final int NUM_PRIVATE_PLANS_FIELD_NUMBER = 4;
+    private long numPrivatePlans_ = 0L;
+    /**
+     * <code>uint64 num_private_plans = 4 [json_name = "numPrivatePlans"];</code>
+     * @return The numPrivatePlans.
+     */
+    @java.lang.Override
+    public long getNumPrivatePlans() {
+      return numPrivatePlans_;
+    }
+
+    public static final int PLANS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan> plans_;
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan> getPlansList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder> 
+        getPlansOrBuilderList() {
+      return plans_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPlansCount() {
+      return plans_.size();
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.Plan getPlans(int index) {
+      return plans_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder getPlansOrBuilder(
+        int index) {
+      return plans_.get(index);
+    }
+
+    public static final int FARMS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord> farms_;
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord> getFarmsList() {
+      return farms_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder> 
+        getFarmsOrBuilderList() {
+      return farms_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFarmsCount() {
+      return farms_.size();
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord getFarms(int index) {
+      return farms_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder getFarmsOrBuilder(
+        int index) {
+      return farms_.get(index);
+    }
+
+    public static final int POSITIONS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Position> positions_;
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Position> getPositionsList() {
+      return positions_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder> 
+        getPositionsOrBuilderList() {
+      return positions_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPositionsCount() {
+      return positions_.size();
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.Position getPositions(int index) {
+      return positions_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder getPositionsOrBuilder(
+        int index) {
+      return positions_.get(index);
+    }
+
+    public static final int HISTORICAL_REWARDS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord> historicalRewards_;
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord> getHistoricalRewardsList() {
+      return historicalRewards_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder> 
+        getHistoricalRewardsOrBuilderList() {
+      return historicalRewards_;
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getHistoricalRewardsCount() {
+      return historicalRewards_.size();
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord getHistoricalRewards(int index) {
+      return historicalRewards_.get(index);
+    }
+    /**
+     * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder getHistoricalRewardsOrBuilder(
+        int index) {
+      return historicalRewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (lastBlockTime_ != null) {
+        output.writeMessage(2, getLastBlockTime());
+      }
+      if (lastPlanId_ != 0L) {
+        output.writeUInt64(3, lastPlanId_);
+      }
+      if (numPrivatePlans_ != 0L) {
+        output.writeUInt64(4, numPrivatePlans_);
+      }
+      for (int i = 0; i < plans_.size(); i++) {
+        output.writeMessage(5, plans_.get(i));
+      }
+      for (int i = 0; i < farms_.size(); i++) {
+        output.writeMessage(6, farms_.get(i));
+      }
+      for (int i = 0; i < positions_.size(); i++) {
+        output.writeMessage(7, positions_.get(i));
+      }
+      for (int i = 0; i < historicalRewards_.size(); i++) {
+        output.writeMessage(8, historicalRewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (lastBlockTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLastBlockTime());
+      }
+      if (lastPlanId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, lastPlanId_);
+      }
+      if (numPrivatePlans_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, numPrivatePlans_);
+      }
+      for (int i = 0; i < plans_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, plans_.get(i));
+      }
+      for (int i = 0; i < farms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, farms_.get(i));
+      }
+      for (int i = 0; i < positions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, positions_.get(i));
+      }
+      for (int i = 0; i < historicalRewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, historicalRewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState other = (com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasLastBlockTime() != other.hasLastBlockTime()) return false;
+      if (hasLastBlockTime()) {
+        if (!getLastBlockTime()
+            .equals(other.getLastBlockTime())) return false;
+      }
+      if (getLastPlanId()
+          != other.getLastPlanId()) return false;
+      if (getNumPrivatePlans()
+          != other.getNumPrivatePlans()) return false;
+      if (!getPlansList()
+          .equals(other.getPlansList())) return false;
+      if (!getFarmsList()
+          .equals(other.getFarmsList())) return false;
+      if (!getPositionsList()
+          .equals(other.getPositionsList())) return false;
+      if (!getHistoricalRewardsList()
+          .equals(other.getHistoricalRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasLastBlockTime()) {
+        hash = (37 * hash) + LAST_BLOCK_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getLastBlockTime().hashCode();
+      }
+      hash = (37 * hash) + LAST_PLAN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastPlanId());
+      hash = (37 * hash) + NUM_PRIVATE_PLANS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumPrivatePlans());
+      if (getPlansCount() > 0) {
+        hash = (37 * hash) + PLANS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlansList().hashCode();
+      }
+      if (getFarmsCount() > 0) {
+        hash = (37 * hash) + FARMS_FIELD_NUMBER;
+        hash = (53 * hash) + getFarmsList().hashCode();
+      }
+      if (getPositionsCount() > 0) {
+        hash = (37 * hash) + POSITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPositionsList().hashCode();
+      }
+      if (getHistoricalRewardsCount() > 0) {
+        hash = (37 * hash) + HISTORICAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHistoricalRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.lpfarm.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.lpfarm.v1beta1.GenesisState)
+        com.crescent.lpfarm.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.class, com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        lastBlockTime_ = null;
+        if (lastBlockTimeBuilder_ != null) {
+          lastBlockTimeBuilder_.dispose();
+          lastBlockTimeBuilder_ = null;
+        }
+        lastPlanId_ = 0L;
+        numPrivatePlans_ = 0L;
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+        } else {
+          plans_ = null;
+          plansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (farmsBuilder_ == null) {
+          farms_ = java.util.Collections.emptyList();
+        } else {
+          farms_ = null;
+          farmsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (positionsBuilder_ == null) {
+          positions_ = java.util.Collections.emptyList();
+        } else {
+          positions_ = null;
+          positionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewards_ = java.util.Collections.emptyList();
+        } else {
+          historicalRewards_ = null;
+          historicalRewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState build() {
+        com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState result = new com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState result) {
+        if (plansBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            plans_ = java.util.Collections.unmodifiableList(plans_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.plans_ = plans_;
+        } else {
+          result.plans_ = plansBuilder_.build();
+        }
+        if (farmsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            farms_ = java.util.Collections.unmodifiableList(farms_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.farms_ = farms_;
+        } else {
+          result.farms_ = farmsBuilder_.build();
+        }
+        if (positionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            positions_ = java.util.Collections.unmodifiableList(positions_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.positions_ = positions_;
+        } else {
+          result.positions_ = positionsBuilder_.build();
+        }
+        if (historicalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            historicalRewards_ = java.util.Collections.unmodifiableList(historicalRewards_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.historicalRewards_ = historicalRewards_;
+        } else {
+          result.historicalRewards_ = historicalRewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lastBlockTime_ = lastBlockTimeBuilder_ == null
+              ? lastBlockTime_
+              : lastBlockTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastPlanId_ = lastPlanId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.numPrivatePlans_ = numPrivatePlans_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasLastBlockTime()) {
+          mergeLastBlockTime(other.getLastBlockTime());
+        }
+        if (other.getLastPlanId() != 0L) {
+          setLastPlanId(other.getLastPlanId());
+        }
+        if (other.getNumPrivatePlans() != 0L) {
+          setNumPrivatePlans(other.getNumPrivatePlans());
+        }
+        if (plansBuilder_ == null) {
+          if (!other.plans_.isEmpty()) {
+            if (plans_.isEmpty()) {
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensurePlansIsMutable();
+              plans_.addAll(other.plans_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.plans_.isEmpty()) {
+            if (plansBuilder_.isEmpty()) {
+              plansBuilder_.dispose();
+              plansBuilder_ = null;
+              plans_ = other.plans_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              plansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPlansFieldBuilder() : null;
+            } else {
+              plansBuilder_.addAllMessages(other.plans_);
+            }
+          }
+        }
+        if (farmsBuilder_ == null) {
+          if (!other.farms_.isEmpty()) {
+            if (farms_.isEmpty()) {
+              farms_ = other.farms_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureFarmsIsMutable();
+              farms_.addAll(other.farms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.farms_.isEmpty()) {
+            if (farmsBuilder_.isEmpty()) {
+              farmsBuilder_.dispose();
+              farmsBuilder_ = null;
+              farms_ = other.farms_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              farmsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFarmsFieldBuilder() : null;
+            } else {
+              farmsBuilder_.addAllMessages(other.farms_);
+            }
+          }
+        }
+        if (positionsBuilder_ == null) {
+          if (!other.positions_.isEmpty()) {
+            if (positions_.isEmpty()) {
+              positions_ = other.positions_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensurePositionsIsMutable();
+              positions_.addAll(other.positions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.positions_.isEmpty()) {
+            if (positionsBuilder_.isEmpty()) {
+              positionsBuilder_.dispose();
+              positionsBuilder_ = null;
+              positions_ = other.positions_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              positionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPositionsFieldBuilder() : null;
+            } else {
+              positionsBuilder_.addAllMessages(other.positions_);
+            }
+          }
+        }
+        if (historicalRewardsBuilder_ == null) {
+          if (!other.historicalRewards_.isEmpty()) {
+            if (historicalRewards_.isEmpty()) {
+              historicalRewards_ = other.historicalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureHistoricalRewardsIsMutable();
+              historicalRewards_.addAll(other.historicalRewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.historicalRewards_.isEmpty()) {
+            if (historicalRewardsBuilder_.isEmpty()) {
+              historicalRewardsBuilder_.dispose();
+              historicalRewardsBuilder_ = null;
+              historicalRewards_ = other.historicalRewards_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              historicalRewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHistoricalRewardsFieldBuilder() : null;
+            } else {
+              historicalRewardsBuilder_.addAllMessages(other.historicalRewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getLastBlockTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                lastPlanId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                numPrivatePlans_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                com.crescent.lpfarm.v1beta1.LpfarmProto.Plan m =
+                    input.readMessage(
+                        com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.parser(),
+                        extensionRegistry);
+                if (plansBuilder_ == null) {
+                  ensurePlansIsMutable();
+                  plans_.add(m);
+                } else {
+                  plansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord m =
+                    input.readMessage(
+                        com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.parser(),
+                        extensionRegistry);
+                if (farmsBuilder_ == null) {
+                  ensureFarmsIsMutable();
+                  farms_.add(m);
+                } else {
+                  farmsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.crescent.lpfarm.v1beta1.LpfarmProto.Position m =
+                    input.readMessage(
+                        com.crescent.lpfarm.v1beta1.LpfarmProto.Position.parser(),
+                        extensionRegistry);
+                if (positionsBuilder_ == null) {
+                  ensurePositionsIsMutable();
+                  positions_.add(m);
+                } else {
+                  positionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord m =
+                    input.readMessage(
+                        com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.parser(),
+                        extensionRegistry);
+                if (historicalRewardsBuilder_ == null) {
+                  ensureHistoricalRewardsIsMutable();
+                  historicalRewards_.add(m);
+                } else {
+                  historicalRewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.crescent.lpfarm.v1beta1.LpfarmProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Params, com.crescent.lpfarm.v1beta1.LpfarmProto.Params.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.crescent.lpfarm.v1beta1.LpfarmProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.crescent.lpfarm.v1beta1.LpfarmProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.crescent.lpfarm.v1beta1.LpfarmProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.crescent.lpfarm.v1beta1.LpfarmProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Params, com.crescent.lpfarm.v1beta1.LpfarmProto.Params.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.LpfarmProto.Params, com.crescent.lpfarm.v1beta1.LpfarmProto.Params.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp lastBlockTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastBlockTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastBlockTime field is set.
+       */
+      public boolean hasLastBlockTime() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       * @return The lastBlockTime.
+       */
+      public com.google.protobuf.Timestamp getLastBlockTime() {
+        if (lastBlockTimeBuilder_ == null) {
+          return lastBlockTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+        } else {
+          return lastBlockTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastBlockTime(com.google.protobuf.Timestamp value) {
+        if (lastBlockTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastBlockTime_ = value;
+        } else {
+          lastBlockTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastBlockTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastBlockTimeBuilder_ == null) {
+          lastBlockTime_ = builderForValue.build();
+        } else {
+          lastBlockTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastBlockTime(com.google.protobuf.Timestamp value) {
+        if (lastBlockTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            lastBlockTime_ != null &&
+            lastBlockTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastBlockTimeBuilder().mergeFrom(value);
+          } else {
+            lastBlockTime_ = value;
+          }
+        } else {
+          lastBlockTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastBlockTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        lastBlockTime_ = null;
+        if (lastBlockTimeBuilder_ != null) {
+          lastBlockTimeBuilder_.dispose();
+          lastBlockTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastBlockTimeBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getLastBlockTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastBlockTimeOrBuilder() {
+        if (lastBlockTimeBuilder_ != null) {
+          return lastBlockTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return lastBlockTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastBlockTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_block_time = 2 [json_name = "lastBlockTime", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastBlockTimeFieldBuilder() {
+        if (lastBlockTimeBuilder_ == null) {
+          lastBlockTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastBlockTime(),
+                  getParentForChildren(),
+                  isClean());
+          lastBlockTime_ = null;
+        }
+        return lastBlockTimeBuilder_;
+      }
+
+      private long lastPlanId_ ;
+      /**
+       * <code>uint64 last_plan_id = 3 [json_name = "lastPlanId"];</code>
+       * @return The lastPlanId.
+       */
+      @java.lang.Override
+      public long getLastPlanId() {
+        return lastPlanId_;
+      }
+      /**
+       * <code>uint64 last_plan_id = 3 [json_name = "lastPlanId"];</code>
+       * @param value The lastPlanId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPlanId(long value) {
+
+        lastPlanId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_plan_id = 3 [json_name = "lastPlanId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastPlanId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastPlanId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long numPrivatePlans_ ;
+      /**
+       * <code>uint64 num_private_plans = 4 [json_name = "numPrivatePlans"];</code>
+       * @return The numPrivatePlans.
+       */
+      @java.lang.Override
+      public long getNumPrivatePlans() {
+        return numPrivatePlans_;
+      }
+      /**
+       * <code>uint64 num_private_plans = 4 [json_name = "numPrivatePlans"];</code>
+       * @param value The numPrivatePlans to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumPrivatePlans(long value) {
+
+        numPrivatePlans_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 num_private_plans = 4 [json_name = "numPrivatePlans"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumPrivatePlans() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        numPrivatePlans_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan> plans_ =
+        java.util.Collections.emptyList();
+      private void ensurePlansIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          plans_ = new java.util.ArrayList<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan>(plans_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Plan, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder> plansBuilder_;
+
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan> getPlansList() {
+        if (plansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(plans_);
+        } else {
+          return plansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPlansCount() {
+        if (plansBuilder_ == null) {
+          return plans_.size();
+        } else {
+          return plansBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Plan getPlans(int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);
+        } else {
+          return plansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.set(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPlans(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(com.crescent.lpfarm.v1beta1.LpfarmProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan value) {
+        if (plansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePlansIsMutable();
+          plans_.add(index, value);
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPlans(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder builderForValue) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          plansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPlans(
+          java.lang.Iterable<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.Plan> values) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, plans_);
+          onChanged();
+        } else {
+          plansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPlans() {
+        if (plansBuilder_ == null) {
+          plans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          plansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePlans(int index) {
+        if (plansBuilder_ == null) {
+          ensurePlansIsMutable();
+          plans_.remove(index);
+          onChanged();
+        } else {
+          plansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder getPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder getPlansOrBuilder(
+          int index) {
+        if (plansBuilder_ == null) {
+          return plans_.get(index);  } else {
+          return plansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder> 
+           getPlansOrBuilderList() {
+        if (plansBuilder_ != null) {
+          return plansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(plans_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder addPlansBuilder() {
+        return getPlansFieldBuilder().addBuilder(
+            com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder addPlansBuilder(
+          int index) {
+        return getPlansFieldBuilder().addBuilder(
+            index, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Plan plans = 5 [json_name = "plans", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder> 
+           getPlansBuilderList() {
+        return getPlansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Plan, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder> 
+          getPlansFieldBuilder() {
+        if (plansBuilder_ == null) {
+          plansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.LpfarmProto.Plan, com.crescent.lpfarm.v1beta1.LpfarmProto.Plan.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.PlanOrBuilder>(
+                  plans_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          plans_ = null;
+        }
+        return plansBuilder_;
+      }
+
+      private java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord> farms_ =
+        java.util.Collections.emptyList();
+      private void ensureFarmsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          farms_ = new java.util.ArrayList<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord>(farms_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder> farmsBuilder_;
+
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord> getFarmsList() {
+        if (farmsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(farms_);
+        } else {
+          return farmsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFarmsCount() {
+        if (farmsBuilder_ == null) {
+          return farms_.size();
+        } else {
+          return farmsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord getFarms(int index) {
+        if (farmsBuilder_ == null) {
+          return farms_.get(index);
+        } else {
+          return farmsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFarms(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord value) {
+        if (farmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFarmsIsMutable();
+          farms_.set(index, value);
+          onChanged();
+        } else {
+          farmsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFarms(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder builderForValue) {
+        if (farmsBuilder_ == null) {
+          ensureFarmsIsMutable();
+          farms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          farmsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFarms(com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord value) {
+        if (farmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFarmsIsMutable();
+          farms_.add(value);
+          onChanged();
+        } else {
+          farmsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFarms(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord value) {
+        if (farmsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFarmsIsMutable();
+          farms_.add(index, value);
+          onChanged();
+        } else {
+          farmsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFarms(
+          com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder builderForValue) {
+        if (farmsBuilder_ == null) {
+          ensureFarmsIsMutable();
+          farms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          farmsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFarms(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder builderForValue) {
+        if (farmsBuilder_ == null) {
+          ensureFarmsIsMutable();
+          farms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          farmsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFarms(
+          java.lang.Iterable<? extends com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord> values) {
+        if (farmsBuilder_ == null) {
+          ensureFarmsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, farms_);
+          onChanged();
+        } else {
+          farmsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFarms() {
+        if (farmsBuilder_ == null) {
+          farms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          farmsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFarms(int index) {
+        if (farmsBuilder_ == null) {
+          ensureFarmsIsMutable();
+          farms_.remove(index);
+          onChanged();
+        } else {
+          farmsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder getFarmsBuilder(
+          int index) {
+        return getFarmsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder getFarmsOrBuilder(
+          int index) {
+        if (farmsBuilder_ == null) {
+          return farms_.get(index);  } else {
+          return farmsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder> 
+           getFarmsOrBuilderList() {
+        if (farmsBuilder_ != null) {
+          return farmsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(farms_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder addFarmsBuilder() {
+        return getFarmsFieldBuilder().addBuilder(
+            com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder addFarmsBuilder(
+          int index) {
+        return getFarmsFieldBuilder().addBuilder(
+            index, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.FarmRecord farms = 6 [json_name = "farms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder> 
+           getFarmsBuilderList() {
+        return getFarmsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder> 
+          getFarmsFieldBuilder() {
+        if (farmsBuilder_ == null) {
+          farmsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder>(
+                  farms_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          farms_ = null;
+        }
+        return farmsBuilder_;
+      }
+
+      private java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Position> positions_ =
+        java.util.Collections.emptyList();
+      private void ensurePositionsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          positions_ = new java.util.ArrayList<com.crescent.lpfarm.v1beta1.LpfarmProto.Position>(positions_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Position, com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder> positionsBuilder_;
+
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Position> getPositionsList() {
+        if (positionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(positions_);
+        } else {
+          return positionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPositionsCount() {
+        if (positionsBuilder_ == null) {
+          return positions_.size();
+        } else {
+          return positionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Position getPositions(int index) {
+        if (positionsBuilder_ == null) {
+          return positions_.get(index);
+        } else {
+          return positionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPositions(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Position value) {
+        if (positionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePositionsIsMutable();
+          positions_.set(index, value);
+          onChanged();
+        } else {
+          positionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPositions(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder builderForValue) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          positionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPositions(com.crescent.lpfarm.v1beta1.LpfarmProto.Position value) {
+        if (positionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePositionsIsMutable();
+          positions_.add(value);
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPositions(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Position value) {
+        if (positionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePositionsIsMutable();
+          positions_.add(index, value);
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPositions(
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder builderForValue) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPositions(
+          int index, com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder builderForValue) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPositions(
+          java.lang.Iterable<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.Position> values) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, positions_);
+          onChanged();
+        } else {
+          positionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPositions() {
+        if (positionsBuilder_ == null) {
+          positions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          positionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePositions(int index) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.remove(index);
+          onChanged();
+        } else {
+          positionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder getPositionsBuilder(
+          int index) {
+        return getPositionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder getPositionsOrBuilder(
+          int index) {
+        if (positionsBuilder_ == null) {
+          return positions_.get(index);  } else {
+          return positionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder> 
+           getPositionsOrBuilderList() {
+        if (positionsBuilder_ != null) {
+          return positionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(positions_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder addPositionsBuilder() {
+        return getPositionsFieldBuilder().addBuilder(
+            com.crescent.lpfarm.v1beta1.LpfarmProto.Position.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder addPositionsBuilder(
+          int index) {
+        return getPositionsFieldBuilder().addBuilder(
+            index, com.crescent.lpfarm.v1beta1.LpfarmProto.Position.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.Position positions = 7 [json_name = "positions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder> 
+           getPositionsBuilderList() {
+        return getPositionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Position, com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder> 
+          getPositionsFieldBuilder() {
+        if (positionsBuilder_ == null) {
+          positionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.LpfarmProto.Position, com.crescent.lpfarm.v1beta1.LpfarmProto.Position.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.PositionOrBuilder>(
+                  positions_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          positions_ = null;
+        }
+        return positionsBuilder_;
+      }
+
+      private java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord> historicalRewards_ =
+        java.util.Collections.emptyList();
+      private void ensureHistoricalRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          historicalRewards_ = new java.util.ArrayList<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord>(historicalRewards_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder> historicalRewardsBuilder_;
+
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord> getHistoricalRewardsList() {
+        if (historicalRewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(historicalRewards_);
+        } else {
+          return historicalRewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public int getHistoricalRewardsCount() {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_.size();
+        } else {
+          return historicalRewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord getHistoricalRewards(int index) {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_.get(index);
+        } else {
+          return historicalRewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricalRewards(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.set(index, value);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricalRewards(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(value);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(index, value);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(
+          com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricalRewards(
+          int index, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllHistoricalRewards(
+          java.lang.Iterable<? extends com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord> values) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, historicalRewards_);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHistoricalRewards() {
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeHistoricalRewards(int index) {
+        if (historicalRewardsBuilder_ == null) {
+          ensureHistoricalRewardsIsMutable();
+          historicalRewards_.remove(index);
+          onChanged();
+        } else {
+          historicalRewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder getHistoricalRewardsBuilder(
+          int index) {
+        return getHistoricalRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder getHistoricalRewardsOrBuilder(
+          int index) {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_.get(index);  } else {
+          return historicalRewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder> 
+           getHistoricalRewardsOrBuilderList() {
+        if (historicalRewardsBuilder_ != null) {
+          return historicalRewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(historicalRewards_);
+        }
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder addHistoricalRewardsBuilder() {
+        return getHistoricalRewardsFieldBuilder().addBuilder(
+            com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder addHistoricalRewardsBuilder(
+          int index) {
+        return getHistoricalRewardsFieldBuilder().addBuilder(
+            index, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .crescent.lpfarm.v1beta1.HistoricalRewardsRecord historical_rewards = 8 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder> 
+           getHistoricalRewardsBuilderList() {
+        return getHistoricalRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder> 
+          getHistoricalRewardsFieldBuilder() {
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder>(
+                  historicalRewards_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          historicalRewards_ = null;
+        }
+        return historicalRewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.lpfarm.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.lpfarm.v1beta1.GenesisState)
+    private static final com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FarmRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.lpfarm.v1beta1.FarmRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+     * @return Whether the farm field is set.
+     */
+    boolean hasFarm();
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+     * @return The farm.
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.Farm getFarm();
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.FarmOrBuilder getFarmOrBuilder();
+  }
+  /**
+   * Protobuf type {@code crescent.lpfarm.v1beta1.FarmRecord}
+   */
+  public static final class FarmRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.lpfarm.v1beta1.FarmRecord)
+      FarmRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FarmRecord.newBuilder() to construct.
+    private FarmRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FarmRecord() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FarmRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_FarmRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_FarmRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.class, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FARM_FIELD_NUMBER = 2;
+    private com.crescent.lpfarm.v1beta1.LpfarmProto.Farm farm_;
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+     * @return Whether the farm field is set.
+     */
+    @java.lang.Override
+    public boolean hasFarm() {
+      return farm_ != null;
+    }
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+     * @return The farm.
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.Farm getFarm() {
+      return farm_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.getDefaultInstance() : farm_;
+    }
+    /**
+     * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.FarmOrBuilder getFarmOrBuilder() {
+      return farm_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.getDefaultInstance() : farm_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (farm_ != null) {
+        output.writeMessage(2, getFarm());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (farm_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFarm());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord)) {
+        return super.equals(obj);
+      }
+      com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord other = (com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (hasFarm() != other.hasFarm()) return false;
+      if (hasFarm()) {
+        if (!getFarm()
+            .equals(other.getFarm())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      if (hasFarm()) {
+        hash = (37 * hash) + FARM_FIELD_NUMBER;
+        hash = (53 * hash) + getFarm().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.lpfarm.v1beta1.FarmRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.lpfarm.v1beta1.FarmRecord)
+        com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_FarmRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_FarmRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.class, com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.Builder.class);
+      }
+
+      // Construct using com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        farm_ = null;
+        if (farmBuilder_ != null) {
+          farmBuilder_.dispose();
+          farmBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_FarmRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord getDefaultInstanceForType() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord build() {
+        com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord buildPartial() {
+        com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord result = new com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.farm_ = farmBuilder_ == null
+              ? farm_
+              : farmBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord) {
+          return mergeFrom((com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord other) {
+        if (other == com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasFarm()) {
+          mergeFarm(other.getFarm());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFarmFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.crescent.lpfarm.v1beta1.LpfarmProto.Farm farm_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Farm, com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.FarmOrBuilder> farmBuilder_;
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       * @return Whether the farm field is set.
+       */
+      public boolean hasFarm() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       * @return The farm.
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Farm getFarm() {
+        if (farmBuilder_ == null) {
+          return farm_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.getDefaultInstance() : farm_;
+        } else {
+          return farmBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFarm(com.crescent.lpfarm.v1beta1.LpfarmProto.Farm value) {
+        if (farmBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          farm_ = value;
+        } else {
+          farmBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFarm(
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.Builder builderForValue) {
+        if (farmBuilder_ == null) {
+          farm_ = builderForValue.build();
+        } else {
+          farmBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFarm(com.crescent.lpfarm.v1beta1.LpfarmProto.Farm value) {
+        if (farmBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            farm_ != null &&
+            farm_ != com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.getDefaultInstance()) {
+            getFarmBuilder().mergeFrom(value);
+          } else {
+            farm_ = value;
+          }
+        } else {
+          farmBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFarm() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        farm_ = null;
+        if (farmBuilder_ != null) {
+          farmBuilder_.dispose();
+          farmBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.Builder getFarmBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getFarmFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.FarmOrBuilder getFarmOrBuilder() {
+        if (farmBuilder_ != null) {
+          return farmBuilder_.getMessageOrBuilder();
+        } else {
+          return farm_ == null ?
+              com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.getDefaultInstance() : farm_;
+        }
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.Farm farm = 2 [json_name = "farm", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.Farm, com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.FarmOrBuilder> 
+          getFarmFieldBuilder() {
+        if (farmBuilder_ == null) {
+          farmBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.LpfarmProto.Farm, com.crescent.lpfarm.v1beta1.LpfarmProto.Farm.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.FarmOrBuilder>(
+                  getFarm(),
+                  getParentForChildren(),
+                  isClean());
+          farm_ = null;
+        }
+        return farmBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.lpfarm.v1beta1.FarmRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.lpfarm.v1beta1.FarmRecord)
+    private static final com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord();
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FarmRecord>
+        PARSER = new com.google.protobuf.AbstractParser<FarmRecord>() {
+      @java.lang.Override
+      public FarmRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FarmRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FarmRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.FarmRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HistoricalRewardsRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.lpfarm.v1beta1.HistoricalRewardsRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 period = 2 [json_name = "period"];</code>
+     * @return The period.
+     */
+    long getPeriod();
+
+    /**
+     * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     * @return Whether the historicalRewards field is set.
+     */
+    boolean hasHistoricalRewards();
+    /**
+     * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     * @return The historicalRewards.
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards getHistoricalRewards();
+    /**
+     * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewardsOrBuilder getHistoricalRewardsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code crescent.lpfarm.v1beta1.HistoricalRewardsRecord}
+   */
+  public static final class HistoricalRewardsRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.lpfarm.v1beta1.HistoricalRewardsRecord)
+      HistoricalRewardsRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HistoricalRewardsRecord.newBuilder() to construct.
+    private HistoricalRewardsRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HistoricalRewardsRecord() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HistoricalRewardsRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.class, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERIOD_FIELD_NUMBER = 2;
+    private long period_ = 0L;
+    /**
+     * <code>uint64 period = 2 [json_name = "period"];</code>
+     * @return The period.
+     */
+    @java.lang.Override
+    public long getPeriod() {
+      return period_;
+    }
+
+    public static final int HISTORICAL_REWARDS_FIELD_NUMBER = 3;
+    private com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards historicalRewards_;
+    /**
+     * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     * @return Whether the historicalRewards field is set.
+     */
+    @java.lang.Override
+    public boolean hasHistoricalRewards() {
+      return historicalRewards_ != null;
+    }
+    /**
+     * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     * @return The historicalRewards.
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards getHistoricalRewards() {
+      return historicalRewards_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.getDefaultInstance() : historicalRewards_;
+    }
+    /**
+     * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewardsOrBuilder getHistoricalRewardsOrBuilder() {
+      return historicalRewards_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.getDefaultInstance() : historicalRewards_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (period_ != 0L) {
+        output.writeUInt64(2, period_);
+      }
+      if (historicalRewards_ != null) {
+        output.writeMessage(3, getHistoricalRewards());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (period_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, period_);
+      }
+      if (historicalRewards_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getHistoricalRewards());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord)) {
+        return super.equals(obj);
+      }
+      com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord other = (com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getPeriod()
+          != other.getPeriod()) return false;
+      if (hasHistoricalRewards() != other.hasHistoricalRewards()) return false;
+      if (hasHistoricalRewards()) {
+        if (!getHistoricalRewards()
+            .equals(other.getHistoricalRewards())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPeriod());
+      if (hasHistoricalRewards()) {
+        hash = (37 * hash) + HISTORICAL_REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHistoricalRewards().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.lpfarm.v1beta1.HistoricalRewardsRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.lpfarm.v1beta1.HistoricalRewardsRecord)
+        com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.class, com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.Builder.class);
+      }
+
+      // Construct using com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        period_ = 0L;
+        historicalRewards_ = null;
+        if (historicalRewardsBuilder_ != null) {
+          historicalRewardsBuilder_.dispose();
+          historicalRewardsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord getDefaultInstanceForType() {
+        return com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord build() {
+        com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord buildPartial() {
+        com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord result = new com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.period_ = period_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.historicalRewards_ = historicalRewardsBuilder_ == null
+              ? historicalRewards_
+              : historicalRewardsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord) {
+          return mergeFrom((com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord other) {
+        if (other == com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPeriod() != 0L) {
+          setPeriod(other.getPeriod());
+        }
+        if (other.hasHistoricalRewards()) {
+          mergeHistoricalRewards(other.getHistoricalRewards());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                period_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getHistoricalRewardsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long period_ ;
+      /**
+       * <code>uint64 period = 2 [json_name = "period"];</code>
+       * @return The period.
+       */
+      @java.lang.Override
+      public long getPeriod() {
+        return period_;
+      }
+      /**
+       * <code>uint64 period = 2 [json_name = "period"];</code>
+       * @param value The period to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPeriod(long value) {
+
+        period_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 period = 2 [json_name = "period"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        period_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards historicalRewards_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards, com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewardsOrBuilder> historicalRewardsBuilder_;
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       * @return Whether the historicalRewards field is set.
+       */
+      public boolean hasHistoricalRewards() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       * @return The historicalRewards.
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards getHistoricalRewards() {
+        if (historicalRewardsBuilder_ == null) {
+          return historicalRewards_ == null ? com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.getDefaultInstance() : historicalRewards_;
+        } else {
+          return historicalRewardsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricalRewards(com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          historicalRewards_ = value;
+        } else {
+          historicalRewardsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricalRewards(
+          com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.Builder builderForValue) {
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewards_ = builderForValue.build();
+        } else {
+          historicalRewardsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeHistoricalRewards(com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards value) {
+        if (historicalRewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            historicalRewards_ != null &&
+            historicalRewards_ != com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.getDefaultInstance()) {
+            getHistoricalRewardsBuilder().mergeFrom(value);
+          } else {
+            historicalRewards_ = value;
+          }
+        } else {
+          historicalRewardsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHistoricalRewards() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        historicalRewards_ = null;
+        if (historicalRewardsBuilder_ != null) {
+          historicalRewardsBuilder_.dispose();
+          historicalRewardsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.Builder getHistoricalRewardsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getHistoricalRewardsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewardsOrBuilder getHistoricalRewardsOrBuilder() {
+        if (historicalRewardsBuilder_ != null) {
+          return historicalRewardsBuilder_.getMessageOrBuilder();
+        } else {
+          return historicalRewards_ == null ?
+              com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.getDefaultInstance() : historicalRewards_;
+        }
+      }
+      /**
+       * <code>.crescent.lpfarm.v1beta1.HistoricalRewards historical_rewards = 3 [json_name = "historicalRewards", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards, com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewardsOrBuilder> 
+          getHistoricalRewardsFieldBuilder() {
+        if (historicalRewardsBuilder_ == null) {
+          historicalRewardsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards, com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewards.Builder, com.crescent.lpfarm.v1beta1.LpfarmProto.HistoricalRewardsOrBuilder>(
+                  getHistoricalRewards(),
+                  getParentForChildren(),
+                  isClean());
+          historicalRewards_ = null;
+        }
+        return historicalRewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.lpfarm.v1beta1.HistoricalRewardsRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.lpfarm.v1beta1.HistoricalRewardsRecord)
+    private static final com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord();
+    }
+
+    public static com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HistoricalRewardsRecord>
+        PARSER = new com.google.protobuf.AbstractParser<HistoricalRewardsRecord>() {
+      @java.lang.Override
+      public HistoricalRewardsRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HistoricalRewardsRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HistoricalRewardsRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.lpfarm.v1beta1.GenesisProto.HistoricalRewardsRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_lpfarm_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_lpfarm_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_lpfarm_v1beta1_FarmRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_lpfarm_v1beta1_FarmRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_lpfarm_v1beta1_HistoricalRewardsRecord_fieldAccessorTable;
 
@@ -61,13 +4072,13 @@ public final class GenesisProto {
       "dsRecord\022\024\n\005denom\030\001 \001(\tR\005denom\022\026\n\006period" +
       "\030\002 \001(\004R\006period\022_\n\022historical_rewards\030\003 \001" +
       "(\0132*.crescent.lpfarm.v1beta1.HistoricalR" +
-      "ewardsB\004\310\336\037\000R\021historicalRewardsB\345\001\n\033com." +
-      "crescent.lpfarm.v1beta1B\014GenesisProtoP\001Z" +
-      "6github.com/crescent-network/crescent/v5" +
-      "/x/lpfarm/types\242\002\003CLX\252\002\027Crescent.Lpfarm." +
-      "V1beta1\312\002\027Crescent\\Lpfarm\\V1beta1\342\002#Cres" +
-      "cent\\Lpfarm\\V1beta1\\GPBMetadata\352\002\031Cresce" +
-      "nt::Lpfarm::V1beta1\310\341\036\000b\006proto3"
+      "ewardsB\004\310\336\037\000R\021historicalRewardsB\343\001\n\033com." +
+      "crescent.lpfarm.v1beta1B\014GenesisProtoZ6g" +
+      "ithub.com/crescent-network/crescent/v5/x" +
+      "/lpfarm/types\242\002\003CLX\252\002\027Crescent.Lpfarm.V1" +
+      "beta1\312\002\027Crescent\\Lpfarm\\V1beta1\342\002#Cresce" +
+      "nt\\Lpfarm\\V1beta1\\GPBMetadata\352\002\031Crescent" +
+      "::Lpfarm::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

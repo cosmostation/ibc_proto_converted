@@ -14,44 +14,11499 @@ public final class ScopeProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * A set of types for inputs on a record (of fact)
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.RecordInputStatus}
+   */
+  public enum RecordInputStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * RECORD_INPUT_STATUS_UNSPECIFIED indicates an invalid/unknown input type
+     * </pre>
+     *
+     * <code>RECORD_INPUT_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unknown"];</code>
+     */
+    RECORD_INPUT_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * RECORD_INPUT_STATUS_PROPOSED indicates this input was an arbitrary piece of data that was hashed
+     * </pre>
+     *
+     * <code>RECORD_INPUT_STATUS_PROPOSED = 1 [(.gogoproto.enumvalue_customname) = "Proposed"];</code>
+     */
+    RECORD_INPUT_STATUS_PROPOSED(1),
+    /**
+     * <pre>
+     * RECORD_INPUT_STATUS_RECORD indicates this input is a reference to a previously recorded fact on blockchain
+     * </pre>
+     *
+     * <code>RECORD_INPUT_STATUS_RECORD = 2 [(.gogoproto.enumvalue_customname) = "Record"];</code>
+     */
+    RECORD_INPUT_STATUS_RECORD(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * RECORD_INPUT_STATUS_UNSPECIFIED indicates an invalid/unknown input type
+     * </pre>
+     *
+     * <code>RECORD_INPUT_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unknown"];</code>
+     */
+    public static final int RECORD_INPUT_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * RECORD_INPUT_STATUS_PROPOSED indicates this input was an arbitrary piece of data that was hashed
+     * </pre>
+     *
+     * <code>RECORD_INPUT_STATUS_PROPOSED = 1 [(.gogoproto.enumvalue_customname) = "Proposed"];</code>
+     */
+    public static final int RECORD_INPUT_STATUS_PROPOSED_VALUE = 1;
+    /**
+     * <pre>
+     * RECORD_INPUT_STATUS_RECORD indicates this input is a reference to a previously recorded fact on blockchain
+     * </pre>
+     *
+     * <code>RECORD_INPUT_STATUS_RECORD = 2 [(.gogoproto.enumvalue_customname) = "Record"];</code>
+     */
+    public static final int RECORD_INPUT_STATUS_RECORD_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RecordInputStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static RecordInputStatus forNumber(int value) {
+      switch (value) {
+        case 0: return RECORD_INPUT_STATUS_UNSPECIFIED;
+        case 1: return RECORD_INPUT_STATUS_PROPOSED;
+        case 2: return RECORD_INPUT_STATUS_RECORD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecordInputStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RecordInputStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecordInputStatus>() {
+            public RecordInputStatus findValueByNumber(int number) {
+              return RecordInputStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final RecordInputStatus[] VALUES = values();
+
+    public static RecordInputStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RecordInputStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.RecordInputStatus)
+  }
+
+  /**
+   * <pre>
+   * ResultStatus indicates the various states of execution of a record
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.metadata.v1.ResultStatus}
+   */
+  public enum ResultStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * RESULT_STATUS_UNSPECIFIED indicates an unset condition
+     * </pre>
+     *
+     * <code>RESULT_STATUS_UNSPECIFIED = 0;</code>
+     */
+    RESULT_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * RESULT_STATUS_PASS indicates the execution was successful
+     * </pre>
+     *
+     * <code>RESULT_STATUS_PASS = 1;</code>
+     */
+    RESULT_STATUS_PASS(1),
+    /**
+     * <pre>
+     * RESULT_STATUS_SKIP indicates condition/consideration was skipped due to missing inputs or delayed execution
+     * </pre>
+     *
+     * <code>RESULT_STATUS_SKIP = 2;</code>
+     */
+    RESULT_STATUS_SKIP(2),
+    /**
+     * <pre>
+     * RESULT_STATUS_FAIL indicates the execution of the condition/consideration failed.
+     * </pre>
+     *
+     * <code>RESULT_STATUS_FAIL = 3;</code>
+     */
+    RESULT_STATUS_FAIL(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * RESULT_STATUS_UNSPECIFIED indicates an unset condition
+     * </pre>
+     *
+     * <code>RESULT_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int RESULT_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * RESULT_STATUS_PASS indicates the execution was successful
+     * </pre>
+     *
+     * <code>RESULT_STATUS_PASS = 1;</code>
+     */
+    public static final int RESULT_STATUS_PASS_VALUE = 1;
+    /**
+     * <pre>
+     * RESULT_STATUS_SKIP indicates condition/consideration was skipped due to missing inputs or delayed execution
+     * </pre>
+     *
+     * <code>RESULT_STATUS_SKIP = 2;</code>
+     */
+    public static final int RESULT_STATUS_SKIP_VALUE = 2;
+    /**
+     * <pre>
+     * RESULT_STATUS_FAIL indicates the execution of the condition/consideration failed.
+     * </pre>
+     *
+     * <code>RESULT_STATUS_FAIL = 3;</code>
+     */
+    public static final int RESULT_STATUS_FAIL_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ResultStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ResultStatus forNumber(int value) {
+      switch (value) {
+        case 0: return RESULT_STATUS_UNSPECIFIED;
+        case 1: return RESULT_STATUS_PASS;
+        case 2: return RESULT_STATUS_SKIP;
+        case 3: return RESULT_STATUS_FAIL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResultStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ResultStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResultStatus>() {
+            public ResultStatus findValueByNumber(int number) {
+              return ResultStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ResultStatus[] VALUES = values();
+
+    public static ResultStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ResultStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.metadata.v1.ResultStatus)
+  }
+
+  public interface ScopeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Scope)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique ID for this scope.  Implements sdk.Address interface for use where addresses are required in Cosmos
+     * </pre>
+     *
+     * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+     * @return The scopeId.
+     */
+    com.google.protobuf.ByteString getScopeId();
+
+    /**
+     * <pre>
+     * the scope specification that contains the specifications for data elements allowed within this scope
+     * </pre>
+     *
+     * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    com.google.protobuf.ByteString getSpecificationId();
+
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.Party> 
+        getOwnersList();
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.Party getOwners(int index);
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    int getOwnersCount();
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+        getOwnersOrBuilderList();
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.PartyOrBuilder getOwnersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @return A list containing the dataAccess.
+     */
+    java.util.List<java.lang.String>
+        getDataAccessList();
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @return The count of dataAccess.
+     */
+    int getDataAccessCount();
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The dataAccess at the given index.
+     */
+    java.lang.String getDataAccess(int index);
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dataAccess at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDataAccessBytes(int index);
+
+    /**
+     * <pre>
+     * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+     * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+     * </pre>
+     *
+     * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+     * @return The valueOwnerAddress.
+     */
+    java.lang.String getValueOwnerAddress();
+    /**
+     * <pre>
+     * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+     * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+     * </pre>
+     *
+     * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+     * @return The bytes for valueOwnerAddress.
+     */
+    com.google.protobuf.ByteString
+        getValueOwnerAddressBytes();
+
+    /**
+     * <pre>
+     * Whether all parties in this scope and its sessions must be present in this scope's owners field.
+     * This also enables use of optional=true scope owners and session parties.
+     * </pre>
+     *
+     * <code>bool require_party_rollup = 6 [json_name = "requirePartyRollup", (.gogoproto.moretags) = "yaml:&#92;"require_party_rollup&#92;""];</code>
+     * @return The requirePartyRollup.
+     */
+    boolean getRequirePartyRollup();
+  }
+  /**
+   * <pre>
+   * Scope defines a root reference for a collection of records owned by one or more parties.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Scope}
+   */
+  public static final class Scope extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Scope)
+      ScopeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Scope.newBuilder() to construct.
+    private Scope(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Scope() {
+      scopeId_ = com.google.protobuf.ByteString.EMPTY;
+      specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      owners_ = java.util.Collections.emptyList();
+      dataAccess_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      valueOwnerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Scope();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Scope_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Scope_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.Scope.class, com.provenance.metadata.v1.ScopeProto.Scope.Builder.class);
+    }
+
+    public static final int SCOPE_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString scopeId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Unique ID for this scope.  Implements sdk.Address interface for use where addresses are required in Cosmos
+     * </pre>
+     *
+     * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+     * @return The scopeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeId() {
+      return scopeId_;
+    }
+
+    public static final int SPECIFICATION_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * the scope specification that contains the specifications for data elements allowed within this scope
+     * </pre>
+     *
+     * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpecificationId() {
+      return specificationId_;
+    }
+
+    public static final int OWNERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.Party> owners_;
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.Party> getOwnersList() {
+      return owners_;
+    }
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+        getOwnersOrBuilderList() {
+      return owners_;
+    }
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOwnersCount() {
+      return owners_.size();
+    }
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Party getOwners(int index) {
+      return owners_.get(index);
+    }
+    /**
+     * <pre>
+     * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+     * the data within the scope.  These addresses are in union with parties listed on the sessions.
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.PartyOrBuilder getOwnersOrBuilder(
+        int index) {
+      return owners_.get(index);
+    }
+
+    public static final int DATA_ACCESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList dataAccess_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @return A list containing the dataAccess.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDataAccessList() {
+      return dataAccess_;
+    }
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @return The count of dataAccess.
+     */
+    public int getDataAccessCount() {
+      return dataAccess_.size();
+    }
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The dataAccess at the given index.
+     */
+    public java.lang.String getDataAccess(int index) {
+      return dataAccess_.get(index);
+    }
+    /**
+     * <pre>
+     * Addresses in this list are authorized to receive off-chain data associated with this scope.
+     * </pre>
+     *
+     * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dataAccess at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDataAccessBytes(int index) {
+      return dataAccess_.getByteString(index);
+    }
+
+    public static final int VALUE_OWNER_ADDRESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valueOwnerAddress_ = "";
+    /**
+     * <pre>
+     * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+     * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+     * </pre>
+     *
+     * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+     * @return The valueOwnerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValueOwnerAddress() {
+      java.lang.Object ref = valueOwnerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valueOwnerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+     * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+     * </pre>
+     *
+     * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+     * @return The bytes for valueOwnerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueOwnerAddressBytes() {
+      java.lang.Object ref = valueOwnerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueOwnerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUIRE_PARTY_ROLLUP_FIELD_NUMBER = 6;
+    private boolean requirePartyRollup_ = false;
+    /**
+     * <pre>
+     * Whether all parties in this scope and its sessions must be present in this scope's owners field.
+     * This also enables use of optional=true scope owners and session parties.
+     * </pre>
+     *
+     * <code>bool require_party_rollup = 6 [json_name = "requirePartyRollup", (.gogoproto.moretags) = "yaml:&#92;"require_party_rollup&#92;""];</code>
+     * @return The requirePartyRollup.
+     */
+    @java.lang.Override
+    public boolean getRequirePartyRollup() {
+      return requirePartyRollup_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!scopeId_.isEmpty()) {
+        output.writeBytes(1, scopeId_);
+      }
+      if (!specificationId_.isEmpty()) {
+        output.writeBytes(2, specificationId_);
+      }
+      for (int i = 0; i < owners_.size(); i++) {
+        output.writeMessage(3, owners_.get(i));
+      }
+      for (int i = 0; i < dataAccess_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, dataAccess_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueOwnerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, valueOwnerAddress_);
+      }
+      if (requirePartyRollup_ != false) {
+        output.writeBool(6, requirePartyRollup_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!scopeId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, scopeId_);
+      }
+      if (!specificationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, specificationId_);
+      }
+      for (int i = 0; i < owners_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, owners_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dataAccess_.size(); i++) {
+          dataSize += computeStringSizeNoTag(dataAccess_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDataAccessList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueOwnerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, valueOwnerAddress_);
+      }
+      if (requirePartyRollup_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, requirePartyRollup_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.Scope)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.Scope other = (com.provenance.metadata.v1.ScopeProto.Scope) obj;
+
+      if (!getScopeId()
+          .equals(other.getScopeId())) return false;
+      if (!getSpecificationId()
+          .equals(other.getSpecificationId())) return false;
+      if (!getOwnersList()
+          .equals(other.getOwnersList())) return false;
+      if (!getDataAccessList()
+          .equals(other.getDataAccessList())) return false;
+      if (!getValueOwnerAddress()
+          .equals(other.getValueOwnerAddress())) return false;
+      if (getRequirePartyRollup()
+          != other.getRequirePartyRollup()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeId().hashCode();
+      hash = (37 * hash) + SPECIFICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpecificationId().hashCode();
+      if (getOwnersCount() > 0) {
+        hash = (37 * hash) + OWNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnersList().hashCode();
+      }
+      if (getDataAccessCount() > 0) {
+        hash = (37 * hash) + DATA_ACCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataAccessList().hashCode();
+      }
+      hash = (37 * hash) + VALUE_OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValueOwnerAddress().hashCode();
+      hash = (37 * hash) + REQUIRE_PARTY_ROLLUP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRequirePartyRollup());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Scope parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.Scope prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Scope defines a root reference for a collection of records owned by one or more parties.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Scope}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Scope)
+        com.provenance.metadata.v1.ScopeProto.ScopeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Scope_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Scope_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.Scope.class, com.provenance.metadata.v1.ScopeProto.Scope.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.Scope.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeId_ = com.google.protobuf.ByteString.EMPTY;
+        specificationId_ = com.google.protobuf.ByteString.EMPTY;
+        if (ownersBuilder_ == null) {
+          owners_ = java.util.Collections.emptyList();
+        } else {
+          owners_ = null;
+          ownersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataAccess_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        valueOwnerAddress_ = "";
+        requirePartyRollup_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Scope_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Scope getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.Scope.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Scope build() {
+        com.provenance.metadata.v1.ScopeProto.Scope result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Scope buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.Scope result = new com.provenance.metadata.v1.ScopeProto.Scope(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.ScopeProto.Scope result) {
+        if (ownersBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            owners_ = java.util.Collections.unmodifiableList(owners_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.owners_ = owners_;
+        } else {
+          result.owners_ = ownersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.Scope result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeId_ = scopeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.specificationId_ = specificationId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          dataAccess_.makeImmutable();
+          result.dataAccess_ = dataAccess_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.valueOwnerAddress_ = valueOwnerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.requirePartyRollup_ = requirePartyRollup_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.Scope) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.Scope)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.Scope other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.Scope.getDefaultInstance()) return this;
+        if (other.getScopeId() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeId(other.getScopeId());
+        }
+        if (other.getSpecificationId() != com.google.protobuf.ByteString.EMPTY) {
+          setSpecificationId(other.getSpecificationId());
+        }
+        if (ownersBuilder_ == null) {
+          if (!other.owners_.isEmpty()) {
+            if (owners_.isEmpty()) {
+              owners_ = other.owners_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureOwnersIsMutable();
+              owners_.addAll(other.owners_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.owners_.isEmpty()) {
+            if (ownersBuilder_.isEmpty()) {
+              ownersBuilder_.dispose();
+              ownersBuilder_ = null;
+              owners_ = other.owners_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              ownersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOwnersFieldBuilder() : null;
+            } else {
+              ownersBuilder_.addAllMessages(other.owners_);
+            }
+          }
+        }
+        if (!other.dataAccess_.isEmpty()) {
+          if (dataAccess_.isEmpty()) {
+            dataAccess_ = other.dataAccess_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureDataAccessIsMutable();
+            dataAccess_.addAll(other.dataAccess_);
+          }
+          onChanged();
+        }
+        if (!other.getValueOwnerAddress().isEmpty()) {
+          valueOwnerAddress_ = other.valueOwnerAddress_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getRequirePartyRollup() != false) {
+          setRequirePartyRollup(other.getRequirePartyRollup());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                specificationId_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.provenance.metadata.v1.ScopeProto.Party m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.Party.parser(),
+                        extensionRegistry);
+                if (ownersBuilder_ == null) {
+                  ensureOwnersIsMutable();
+                  owners_.add(m);
+                } else {
+                  ownersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDataAccessIsMutable();
+                dataAccess_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                valueOwnerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                requirePartyRollup_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString scopeId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Unique ID for this scope.  Implements sdk.Address interface for use where addresses are required in Cosmos
+       * </pre>
+       *
+       * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+       * @return The scopeId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeId() {
+        return scopeId_;
+      }
+      /**
+       * <pre>
+       * Unique ID for this scope.  Implements sdk.Address interface for use where addresses are required in Cosmos
+       * </pre>
+       *
+       * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+       * @param value The scopeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique ID for this scope.  Implements sdk.Address interface for use where addresses are required in Cosmos
+       * </pre>
+       *
+       * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        scopeId_ = getDefaultInstance().getScopeId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * the scope specification that contains the specifications for data elements allowed within this scope
+       * </pre>
+       *
+       * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return The specificationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpecificationId() {
+        return specificationId_;
+      }
+      /**
+       * <pre>
+       * the scope specification that contains the specifications for data elements allowed within this scope
+       * </pre>
+       *
+       * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @param value The specificationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificationId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        specificationId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the scope specification that contains the specifications for data elements allowed within this scope
+       * </pre>
+       *
+       * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificationId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        specificationId_ = getDefaultInstance().getSpecificationId();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.Party> owners_ =
+        java.util.Collections.emptyList();
+      private void ensureOwnersIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          owners_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.Party>(owners_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Party, com.provenance.metadata.v1.ScopeProto.Party.Builder, com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> ownersBuilder_;
+
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Party> getOwnersList() {
+        if (ownersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(owners_);
+        } else {
+          return ownersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOwnersCount() {
+        if (ownersBuilder_ == null) {
+          return owners_.size();
+        } else {
+          return ownersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party getOwners(int index) {
+        if (ownersBuilder_ == null) {
+          return owners_.get(index);
+        } else {
+          return ownersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOwners(
+          int index, com.provenance.metadata.v1.ScopeProto.Party value) {
+        if (ownersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOwnersIsMutable();
+          owners_.set(index, value);
+          onChanged();
+        } else {
+          ownersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOwners(
+          int index, com.provenance.metadata.v1.ScopeProto.Party.Builder builderForValue) {
+        if (ownersBuilder_ == null) {
+          ensureOwnersIsMutable();
+          owners_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ownersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOwners(com.provenance.metadata.v1.ScopeProto.Party value) {
+        if (ownersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOwnersIsMutable();
+          owners_.add(value);
+          onChanged();
+        } else {
+          ownersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOwners(
+          int index, com.provenance.metadata.v1.ScopeProto.Party value) {
+        if (ownersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOwnersIsMutable();
+          owners_.add(index, value);
+          onChanged();
+        } else {
+          ownersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOwners(
+          com.provenance.metadata.v1.ScopeProto.Party.Builder builderForValue) {
+        if (ownersBuilder_ == null) {
+          ensureOwnersIsMutable();
+          owners_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ownersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOwners(
+          int index, com.provenance.metadata.v1.ScopeProto.Party.Builder builderForValue) {
+        if (ownersBuilder_ == null) {
+          ensureOwnersIsMutable();
+          owners_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ownersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOwners(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.Party> values) {
+        if (ownersBuilder_ == null) {
+          ensureOwnersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, owners_);
+          onChanged();
+        } else {
+          ownersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOwners() {
+        if (ownersBuilder_ == null) {
+          owners_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          ownersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOwners(int index) {
+        if (ownersBuilder_ == null) {
+          ensureOwnersIsMutable();
+          owners_.remove(index);
+          onChanged();
+        } else {
+          ownersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party.Builder getOwnersBuilder(
+          int index) {
+        return getOwnersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.PartyOrBuilder getOwnersOrBuilder(
+          int index) {
+        if (ownersBuilder_ == null) {
+          return owners_.get(index);  } else {
+          return ownersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+           getOwnersOrBuilderList() {
+        if (ownersBuilder_ != null) {
+          return ownersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(owners_);
+        }
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party.Builder addOwnersBuilder() {
+        return getOwnersFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.Party.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party.Builder addOwnersBuilder(
+          int index) {
+        return getOwnersFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.Party.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * These parties represent top level owners of the records within.  These parties must sign any requests that modify
+       * the data within the scope.  These addresses are in union with parties listed on the sessions.
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party owners = 3 [json_name = "owners", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Party.Builder> 
+           getOwnersBuilderList() {
+        return getOwnersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Party, com.provenance.metadata.v1.ScopeProto.Party.Builder, com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+          getOwnersFieldBuilder() {
+        if (ownersBuilder_ == null) {
+          ownersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.Party, com.provenance.metadata.v1.ScopeProto.Party.Builder, com.provenance.metadata.v1.ScopeProto.PartyOrBuilder>(
+                  owners_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          owners_ = null;
+        }
+        return ownersBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList dataAccess_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDataAccessIsMutable() {
+        if (!dataAccess_.isModifiable()) {
+          dataAccess_ = new com.google.protobuf.LazyStringArrayList(dataAccess_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @return A list containing the dataAccess.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDataAccessList() {
+        dataAccess_.makeImmutable();
+        return dataAccess_;
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @return The count of dataAccess.
+       */
+      public int getDataAccessCount() {
+        return dataAccess_.size();
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The dataAccess at the given index.
+       */
+      public java.lang.String getDataAccess(int index) {
+        return dataAccess_.get(index);
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the dataAccess at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDataAccessBytes(int index) {
+        return dataAccess_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The dataAccess to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataAccess(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDataAccessIsMutable();
+        dataAccess_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @param value The dataAccess to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDataAccess(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDataAccessIsMutable();
+        dataAccess_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @param values The dataAccess to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDataAccess(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDataAccessIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dataAccess_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataAccess() {
+        dataAccess_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses in this list are authorized to receive off-chain data associated with this scope.
+       * </pre>
+       *
+       * <code>repeated string data_access = 4 [json_name = "dataAccess", (.gogoproto.moretags) = "yaml:&#92;"data_access&#92;""];</code>
+       * @param value The bytes of the dataAccess to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDataAccessBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDataAccessIsMutable();
+        dataAccess_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueOwnerAddress_ = "";
+      /**
+       * <pre>
+       * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+       * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+       * </pre>
+       *
+       * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+       * @return The valueOwnerAddress.
+       */
+      public java.lang.String getValueOwnerAddress() {
+        java.lang.Object ref = valueOwnerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valueOwnerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+       * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+       * </pre>
+       *
+       * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+       * @return The bytes for valueOwnerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValueOwnerAddressBytes() {
+        java.lang.Object ref = valueOwnerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueOwnerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+       * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+       * </pre>
+       *
+       * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+       * @param value The valueOwnerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valueOwnerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+       * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+       * </pre>
+       *
+       * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValueOwnerAddress() {
+        valueOwnerAddress_ = getDefaultInstance().getValueOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An address that controls the value associated with this scope.  Standard blockchain accounts and marker accounts
+       * are supported for this value.  This attribute may only be changed by the entity indicated once it is set.
+       * </pre>
+       *
+       * <code>string value_owner_address = 5 [json_name = "valueOwnerAddress", (.gogoproto.moretags) = "yaml:&#92;"value_owner_address&#92;""];</code>
+       * @param value The bytes for valueOwnerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valueOwnerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private boolean requirePartyRollup_ ;
+      /**
+       * <pre>
+       * Whether all parties in this scope and its sessions must be present in this scope's owners field.
+       * This also enables use of optional=true scope owners and session parties.
+       * </pre>
+       *
+       * <code>bool require_party_rollup = 6 [json_name = "requirePartyRollup", (.gogoproto.moretags) = "yaml:&#92;"require_party_rollup&#92;""];</code>
+       * @return The requirePartyRollup.
+       */
+      @java.lang.Override
+      public boolean getRequirePartyRollup() {
+        return requirePartyRollup_;
+      }
+      /**
+       * <pre>
+       * Whether all parties in this scope and its sessions must be present in this scope's owners field.
+       * This also enables use of optional=true scope owners and session parties.
+       * </pre>
+       *
+       * <code>bool require_party_rollup = 6 [json_name = "requirePartyRollup", (.gogoproto.moretags) = "yaml:&#92;"require_party_rollup&#92;""];</code>
+       * @param value The requirePartyRollup to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequirePartyRollup(boolean value) {
+
+        requirePartyRollup_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether all parties in this scope and its sessions must be present in this scope's owners field.
+       * This also enables use of optional=true scope owners and session parties.
+       * </pre>
+       *
+       * <code>bool require_party_rollup = 6 [json_name = "requirePartyRollup", (.gogoproto.moretags) = "yaml:&#92;"require_party_rollup&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequirePartyRollup() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        requirePartyRollup_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Scope)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Scope)
+    private static final com.provenance.metadata.v1.ScopeProto.Scope DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.Scope();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Scope getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Scope>
+        PARSER = new com.google.protobuf.AbstractParser<Scope>() {
+      @java.lang.Override
+      public Scope parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Scope> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Scope> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Scope getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SessionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Session)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+     * @return The sessionId.
+     */
+    com.google.protobuf.ByteString getSessionId();
+
+    /**
+     * <pre>
+     * unique id of the contract specification that was used to create this session.
+     * </pre>
+     *
+     * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    com.google.protobuf.ByteString getSpecificationId();
+
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.Party> 
+        getPartiesList();
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.Party getParties(int index);
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    int getPartiesCount();
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+        getPartiesOrBuilderList();
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.PartyOrBuilder getPartiesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * name to associate with this session execution context, typically classname
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name to associate with this session execution context, typically classname
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * context is a field for storing client specific data associated with a session.
+     * </pre>
+     *
+     * <code>bytes context = 5 [json_name = "context"];</code>
+     * @return The context.
+     */
+    com.google.protobuf.ByteString getContext();
+
+    /**
+     * <pre>
+     * Created by, updated by, timestamps, version number, and related info.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+     * @return Whether the audit field is set.
+     */
+    boolean hasAudit();
+    /**
+     * <pre>
+     * Created by, updated by, timestamps, version number, and related info.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+     * @return The audit.
+     */
+    com.provenance.metadata.v1.ScopeProto.AuditFields getAudit();
+    /**
+     * <pre>
+     * Created by, updated by, timestamps, version number, and related info.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder getAuditOrBuilder();
+  }
+  /**
+   * <pre>
+   * Session defines an execution context against a specific specification instance.
+   * The context will have a specification and set of parties involved.
+   *
+   * NOTE: When there are no more Records within a Scope that reference a Session, the Session is removed.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Session}
+   */
+  public static final class Session extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Session)
+      SessionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Session.newBuilder() to construct.
+    private Session(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Session() {
+      sessionId_ = com.google.protobuf.ByteString.EMPTY;
+      specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      parties_ = java.util.Collections.emptyList();
+      name_ = "";
+      context_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Session();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Session_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Session_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.Session.class, com.provenance.metadata.v1.ScopeProto.Session.Builder.class);
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSessionId() {
+      return sessionId_;
+    }
+
+    public static final int SPECIFICATION_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * unique id of the contract specification that was used to create this session.
+     * </pre>
+     *
+     * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpecificationId() {
+      return specificationId_;
+    }
+
+    public static final int PARTIES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.Party> parties_;
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.Party> getPartiesList() {
+      return parties_;
+    }
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+        getPartiesOrBuilderList() {
+      return parties_;
+    }
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPartiesCount() {
+      return parties_.size();
+    }
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Party getParties(int index) {
+      return parties_.get(index);
+    }
+    /**
+     * <pre>
+     * parties is the set of identities that signed this contract
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.PartyOrBuilder getPartiesOrBuilder(
+        int index) {
+      return parties_.get(index);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name to associate with this session execution context, typically classname
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name to associate with this session execution context, typically classname
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTEXT_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString context_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * context is a field for storing client specific data associated with a session.
+     * </pre>
+     *
+     * <code>bytes context = 5 [json_name = "context"];</code>
+     * @return The context.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContext() {
+      return context_;
+    }
+
+    public static final int AUDIT_FIELD_NUMBER = 99;
+    private com.provenance.metadata.v1.ScopeProto.AuditFields audit_;
+    /**
+     * <pre>
+     * Created by, updated by, timestamps, version number, and related info.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+     * @return Whether the audit field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudit() {
+      return audit_ != null;
+    }
+    /**
+     * <pre>
+     * Created by, updated by, timestamps, version number, and related info.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+     * @return The audit.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.AuditFields getAudit() {
+      return audit_ == null ? com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance() : audit_;
+    }
+    /**
+     * <pre>
+     * Created by, updated by, timestamps, version number, and related info.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder getAuditOrBuilder() {
+      return audit_ == null ? com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance() : audit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sessionId_.isEmpty()) {
+        output.writeBytes(1, sessionId_);
+      }
+      if (!specificationId_.isEmpty()) {
+        output.writeBytes(2, specificationId_);
+      }
+      for (int i = 0; i < parties_.size(); i++) {
+        output.writeMessage(3, parties_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+      }
+      if (!context_.isEmpty()) {
+        output.writeBytes(5, context_);
+      }
+      if (audit_ != null) {
+        output.writeMessage(99, getAudit());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sessionId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sessionId_);
+      }
+      if (!specificationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, specificationId_);
+      }
+      for (int i = 0; i < parties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, parties_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+      }
+      if (!context_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, context_);
+      }
+      if (audit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getAudit());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.Session)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.Session other = (com.provenance.metadata.v1.ScopeProto.Session) obj;
+
+      if (!getSessionId()
+          .equals(other.getSessionId())) return false;
+      if (!getSpecificationId()
+          .equals(other.getSpecificationId())) return false;
+      if (!getPartiesList()
+          .equals(other.getPartiesList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getContext()
+          .equals(other.getContext())) return false;
+      if (hasAudit() != other.hasAudit()) return false;
+      if (hasAudit()) {
+        if (!getAudit()
+            .equals(other.getAudit())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionId().hashCode();
+      hash = (37 * hash) + SPECIFICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpecificationId().hashCode();
+      if (getPartiesCount() > 0) {
+        hash = (37 * hash) + PARTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getPartiesList().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getContext().hashCode();
+      if (hasAudit()) {
+        hash = (37 * hash) + AUDIT_FIELD_NUMBER;
+        hash = (53 * hash) + getAudit().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Session parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Session parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Session parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.Session prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Session defines an execution context against a specific specification instance.
+     * The context will have a specification and set of parties involved.
+     *
+     * NOTE: When there are no more Records within a Scope that reference a Session, the Session is removed.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Session}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Session)
+        com.provenance.metadata.v1.ScopeProto.SessionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Session_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Session_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.Session.class, com.provenance.metadata.v1.ScopeProto.Session.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.Session.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionId_ = com.google.protobuf.ByteString.EMPTY;
+        specificationId_ = com.google.protobuf.ByteString.EMPTY;
+        if (partiesBuilder_ == null) {
+          parties_ = java.util.Collections.emptyList();
+        } else {
+          parties_ = null;
+          partiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        name_ = "";
+        context_ = com.google.protobuf.ByteString.EMPTY;
+        audit_ = null;
+        if (auditBuilder_ != null) {
+          auditBuilder_.dispose();
+          auditBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Session_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Session getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.Session.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Session build() {
+        com.provenance.metadata.v1.ScopeProto.Session result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Session buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.Session result = new com.provenance.metadata.v1.ScopeProto.Session(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.ScopeProto.Session result) {
+        if (partiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            parties_ = java.util.Collections.unmodifiableList(parties_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.parties_ = parties_;
+        } else {
+          result.parties_ = partiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.Session result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionId_ = sessionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.specificationId_ = specificationId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.context_ = context_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.audit_ = auditBuilder_ == null
+              ? audit_
+              : auditBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.Session) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.Session)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.Session other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.Session.getDefaultInstance()) return this;
+        if (other.getSessionId() != com.google.protobuf.ByteString.EMPTY) {
+          setSessionId(other.getSessionId());
+        }
+        if (other.getSpecificationId() != com.google.protobuf.ByteString.EMPTY) {
+          setSpecificationId(other.getSpecificationId());
+        }
+        if (partiesBuilder_ == null) {
+          if (!other.parties_.isEmpty()) {
+            if (parties_.isEmpty()) {
+              parties_ = other.parties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePartiesIsMutable();
+              parties_.addAll(other.parties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.parties_.isEmpty()) {
+            if (partiesBuilder_.isEmpty()) {
+              partiesBuilder_.dispose();
+              partiesBuilder_ = null;
+              parties_ = other.parties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              partiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPartiesFieldBuilder() : null;
+            } else {
+              partiesBuilder_.addAllMessages(other.parties_);
+            }
+          }
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getContext() != com.google.protobuf.ByteString.EMPTY) {
+          setContext(other.getContext());
+        }
+        if (other.hasAudit()) {
+          mergeAudit(other.getAudit());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                specificationId_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.provenance.metadata.v1.ScopeProto.Party m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.Party.parser(),
+                        extensionRegistry);
+                if (partiesBuilder_ == null) {
+                  ensurePartiesIsMutable();
+                  parties_.add(m);
+                } else {
+                  partiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                context_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 794: {
+                input.readMessage(
+                    getAuditFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSessionId() {
+        return sessionId_;
+      }
+      /**
+       * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sessionId_ = getDefaultInstance().getSessionId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * unique id of the contract specification that was used to create this session.
+       * </pre>
+       *
+       * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return The specificationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpecificationId() {
+        return specificationId_;
+      }
+      /**
+       * <pre>
+       * unique id of the contract specification that was used to create this session.
+       * </pre>
+       *
+       * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @param value The specificationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificationId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        specificationId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique id of the contract specification that was used to create this session.
+       * </pre>
+       *
+       * <code>bytes specification_id = 2 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificationId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        specificationId_ = getDefaultInstance().getSpecificationId();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.Party> parties_ =
+        java.util.Collections.emptyList();
+      private void ensurePartiesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          parties_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.Party>(parties_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Party, com.provenance.metadata.v1.ScopeProto.Party.Builder, com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> partiesBuilder_;
+
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Party> getPartiesList() {
+        if (partiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(parties_);
+        } else {
+          return partiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPartiesCount() {
+        if (partiesBuilder_ == null) {
+          return parties_.size();
+        } else {
+          return partiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party getParties(int index) {
+        if (partiesBuilder_ == null) {
+          return parties_.get(index);
+        } else {
+          return partiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParties(
+          int index, com.provenance.metadata.v1.ScopeProto.Party value) {
+        if (partiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartiesIsMutable();
+          parties_.set(index, value);
+          onChanged();
+        } else {
+          partiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParties(
+          int index, com.provenance.metadata.v1.ScopeProto.Party.Builder builderForValue) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          partiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addParties(com.provenance.metadata.v1.ScopeProto.Party value) {
+        if (partiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartiesIsMutable();
+          parties_.add(value);
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addParties(
+          int index, com.provenance.metadata.v1.ScopeProto.Party value) {
+        if (partiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePartiesIsMutable();
+          parties_.add(index, value);
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addParties(
+          com.provenance.metadata.v1.ScopeProto.Party.Builder builderForValue) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addParties(
+          int index, com.provenance.metadata.v1.ScopeProto.Party.Builder builderForValue) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          partiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllParties(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.Party> values) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, parties_);
+          onChanged();
+        } else {
+          partiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParties() {
+        if (partiesBuilder_ == null) {
+          parties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          partiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeParties(int index) {
+        if (partiesBuilder_ == null) {
+          ensurePartiesIsMutable();
+          parties_.remove(index);
+          onChanged();
+        } else {
+          partiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party.Builder getPartiesBuilder(
+          int index) {
+        return getPartiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.PartyOrBuilder getPartiesOrBuilder(
+          int index) {
+        if (partiesBuilder_ == null) {
+          return parties_.get(index);  } else {
+          return partiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+           getPartiesOrBuilderList() {
+        if (partiesBuilder_ != null) {
+          return partiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(parties_);
+        }
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party.Builder addPartiesBuilder() {
+        return getPartiesFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.Party.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Party.Builder addPartiesBuilder(
+          int index) {
+        return getPartiesFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.Party.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * parties is the set of identities that signed this contract
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.Party parties = 3 [json_name = "parties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.Party.Builder> 
+           getPartiesBuilderList() {
+        return getPartiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Party, com.provenance.metadata.v1.ScopeProto.Party.Builder, com.provenance.metadata.v1.ScopeProto.PartyOrBuilder> 
+          getPartiesFieldBuilder() {
+        if (partiesBuilder_ == null) {
+          partiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.Party, com.provenance.metadata.v1.ScopeProto.Party.Builder, com.provenance.metadata.v1.ScopeProto.PartyOrBuilder>(
+                  parties_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          parties_ = null;
+        }
+        return partiesBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name to associate with this session execution context, typically classname
+       * </pre>
+       *
+       * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name to associate with this session execution context, typically classname
+       * </pre>
+       *
+       * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name to associate with this session execution context, typically classname
+       * </pre>
+       *
+       * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name to associate with this session execution context, typically classname
+       * </pre>
+       *
+       * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name to associate with this session execution context, typically classname
+       * </pre>
+       *
+       * <code>string name = 4 [json_name = "name", (.gogoproto.jsontag) = "type", (.gogoproto.moretags) = "yaml:&#92;"type&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString context_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * context is a field for storing client specific data associated with a session.
+       * </pre>
+       *
+       * <code>bytes context = 5 [json_name = "context"];</code>
+       * @return The context.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContext() {
+        return context_;
+      }
+      /**
+       * <pre>
+       * context is a field for storing client specific data associated with a session.
+       * </pre>
+       *
+       * <code>bytes context = 5 [json_name = "context"];</code>
+       * @param value The context to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContext(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        context_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * context is a field for storing client specific data associated with a session.
+       * </pre>
+       *
+       * <code>bytes context = 5 [json_name = "context"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContext() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        context_ = getDefaultInstance().getContext();
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.ScopeProto.AuditFields audit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.AuditFields, com.provenance.metadata.v1.ScopeProto.AuditFields.Builder, com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder> auditBuilder_;
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       * @return Whether the audit field is set.
+       */
+      public boolean hasAudit() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       * @return The audit.
+       */
+      public com.provenance.metadata.v1.ScopeProto.AuditFields getAudit() {
+        if (auditBuilder_ == null) {
+          return audit_ == null ? com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance() : audit_;
+        } else {
+          return auditBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      public Builder setAudit(com.provenance.metadata.v1.ScopeProto.AuditFields value) {
+        if (auditBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          audit_ = value;
+        } else {
+          auditBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      public Builder setAudit(
+          com.provenance.metadata.v1.ScopeProto.AuditFields.Builder builderForValue) {
+        if (auditBuilder_ == null) {
+          audit_ = builderForValue.build();
+        } else {
+          auditBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      public Builder mergeAudit(com.provenance.metadata.v1.ScopeProto.AuditFields value) {
+        if (auditBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            audit_ != null &&
+            audit_ != com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance()) {
+            getAuditBuilder().mergeFrom(value);
+          } else {
+            audit_ = value;
+          }
+        } else {
+          auditBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      public Builder clearAudit() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        audit_ = null;
+        if (auditBuilder_ != null) {
+          auditBuilder_.dispose();
+          auditBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.AuditFields.Builder getAuditBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getAuditFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder getAuditOrBuilder() {
+        if (auditBuilder_ != null) {
+          return auditBuilder_.getMessageOrBuilder();
+        } else {
+          return audit_ == null ?
+              com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance() : audit_;
+        }
+      }
+      /**
+       * <pre>
+       * Created by, updated by, timestamps, version number, and related info.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.AuditFields audit = 99 [json_name = "audit", (.gogoproto.moretags) = "yaml:&#92;"audit,omitempty&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.AuditFields, com.provenance.metadata.v1.ScopeProto.AuditFields.Builder, com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder> 
+          getAuditFieldBuilder() {
+        if (auditBuilder_ == null) {
+          auditBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.AuditFields, com.provenance.metadata.v1.ScopeProto.AuditFields.Builder, com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder>(
+                  getAudit(),
+                  getParentForChildren(),
+                  isClean());
+          audit_ = null;
+        }
+        return auditBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Session)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Session)
+    private static final com.provenance.metadata.v1.ScopeProto.Session DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.Session();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Session getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Session>
+        PARSER = new com.google.protobuf.AbstractParser<Session>() {
+      @java.lang.Override
+      public Session parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Session> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Session> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Session getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Record)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * id of the session context that was used to create this record (use with filtered kvprefix iterator)
+     * </pre>
+     *
+     * <code>bytes session_id = 2 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+     * @return The sessionId.
+     */
+    com.google.protobuf.ByteString getSessionId();
+
+    /**
+     * <pre>
+     * process contain information used to uniquely identify an execution on or off chain that generated this record
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+     * @return Whether the process field is set.
+     */
+    boolean hasProcess();
+    /**
+     * <pre>
+     * process contain information used to uniquely identify an execution on or off chain that generated this record
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+     * @return The process.
+     */
+    com.provenance.metadata.v1.ScopeProto.Process getProcess();
+    /**
+     * <pre>
+     * process contain information used to uniquely identify an execution on or off chain that generated this record
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder getProcessOrBuilder();
+
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.RecordInput> 
+        getInputsList();
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.RecordInput getInputs(int index);
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    int getInputsCount();
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder> 
+        getInputsOrBuilderList();
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder getInputsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.metadata.v1.ScopeProto.RecordOutput> 
+        getOutputsList();
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.RecordOutput getOutputs(int index);
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    int getOutputsCount();
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder> 
+        getOutputsOrBuilderList();
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder getOutputsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * specification_id is the id of the record specification that was used to create this record.
+     * </pre>
+     *
+     * <code>bytes specification_id = 6 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    com.google.protobuf.ByteString getSpecificationId();
+  }
+  /**
+   * <pre>
+   * A record (of fact) is attached to a session or each consideration output from a contract
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Record}
+   */
+  public static final class Record extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Record)
+      RecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Record.newBuilder() to construct.
+    private Record(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Record() {
+      name_ = "";
+      sessionId_ = com.google.protobuf.ByteString.EMPTY;
+      inputs_ = java.util.Collections.emptyList();
+      outputs_ = java.util.Collections.emptyList();
+      specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Record();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Record_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Record_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.Record.class, com.provenance.metadata.v1.ScopeProto.Record.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * id of the session context that was used to create this record (use with filtered kvprefix iterator)
+     * </pre>
+     *
+     * <code>bytes session_id = 2 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSessionId() {
+      return sessionId_;
+    }
+
+    public static final int PROCESS_FIELD_NUMBER = 3;
+    private com.provenance.metadata.v1.ScopeProto.Process process_;
+    /**
+     * <pre>
+     * process contain information used to uniquely identify an execution on or off chain that generated this record
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+     * @return Whether the process field is set.
+     */
+    @java.lang.Override
+    public boolean hasProcess() {
+      return process_ != null;
+    }
+    /**
+     * <pre>
+     * process contain information used to uniquely identify an execution on or off chain that generated this record
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+     * @return The process.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Process getProcess() {
+      return process_ == null ? com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance() : process_;
+    }
+    /**
+     * <pre>
+     * process contain information used to uniquely identify an execution on or off chain that generated this record
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder getProcessOrBuilder() {
+      return process_ == null ? com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance() : process_;
+    }
+
+    public static final int INPUTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.RecordInput> inputs_;
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.RecordInput> getInputsList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder> 
+        getInputsOrBuilderList() {
+      return inputs_;
+    }
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getInputsCount() {
+      return inputs_.size();
+    }
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordInput getInputs(int index) {
+      return inputs_.get(index);
+    }
+    /**
+     * <pre>
+     * inputs used with the process to achieve the output on this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder getInputsOrBuilder(
+        int index) {
+      return inputs_.get(index);
+    }
+
+    public static final int OUTPUTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.metadata.v1.ScopeProto.RecordOutput> outputs_;
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.metadata.v1.ScopeProto.RecordOutput> getOutputsList() {
+      return outputs_;
+    }
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder> 
+        getOutputsOrBuilderList() {
+      return outputs_;
+    }
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOutputsCount() {
+      return outputs_.size();
+    }
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordOutput getOutputs(int index) {
+      return outputs_.get(index);
+    }
+    /**
+     * <pre>
+     * output(s) is the results of executing the process on the given process indicated in this record
+     * </pre>
+     *
+     * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder getOutputsOrBuilder(
+        int index) {
+      return outputs_.get(index);
+    }
+
+    public static final int SPECIFICATION_ID_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * specification_id is the id of the record specification that was used to create this record.
+     * </pre>
+     *
+     * <code>bytes specification_id = 6 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+     * @return The specificationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSpecificationId() {
+      return specificationId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!sessionId_.isEmpty()) {
+        output.writeBytes(2, sessionId_);
+      }
+      if (process_ != null) {
+        output.writeMessage(3, getProcess());
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        output.writeMessage(4, inputs_.get(i));
+      }
+      for (int i = 0; i < outputs_.size(); i++) {
+        output.writeMessage(5, outputs_.get(i));
+      }
+      if (!specificationId_.isEmpty()) {
+        output.writeBytes(6, specificationId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!sessionId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, sessionId_);
+      }
+      if (process_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getProcess());
+      }
+      for (int i = 0; i < inputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, inputs_.get(i));
+      }
+      for (int i = 0; i < outputs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, outputs_.get(i));
+      }
+      if (!specificationId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, specificationId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.Record)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.Record other = (com.provenance.metadata.v1.ScopeProto.Record) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getSessionId()
+          .equals(other.getSessionId())) return false;
+      if (hasProcess() != other.hasProcess()) return false;
+      if (hasProcess()) {
+        if (!getProcess()
+            .equals(other.getProcess())) return false;
+      }
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (!getOutputsList()
+          .equals(other.getOutputsList())) return false;
+      if (!getSpecificationId()
+          .equals(other.getSpecificationId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionId().hashCode();
+      if (hasProcess()) {
+        hash = (37 * hash) + PROCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getProcess().hashCode();
+      }
+      if (getInputsCount() > 0) {
+        hash = (37 * hash) + INPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getInputsList().hashCode();
+      }
+      if (getOutputsCount() > 0) {
+        hash = (37 * hash) + OUTPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputsList().hashCode();
+      }
+      hash = (37 * hash) + SPECIFICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpecificationId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Record parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Record parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Record parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.Record prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A record (of fact) is attached to a session or each consideration output from a contract
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Record}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Record)
+        com.provenance.metadata.v1.ScopeProto.RecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Record_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Record_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.Record.class, com.provenance.metadata.v1.ScopeProto.Record.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.Record.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        sessionId_ = com.google.protobuf.ByteString.EMPTY;
+        process_ = null;
+        if (processBuilder_ != null) {
+          processBuilder_.dispose();
+          processBuilder_ = null;
+        }
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+        } else {
+          inputs_ = null;
+          inputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (outputsBuilder_ == null) {
+          outputs_ = java.util.Collections.emptyList();
+        } else {
+          outputs_ = null;
+          outputsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        specificationId_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Record_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Record getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.Record.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Record build() {
+        com.provenance.metadata.v1.ScopeProto.Record result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Record buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.Record result = new com.provenance.metadata.v1.ScopeProto.Record(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.metadata.v1.ScopeProto.Record result) {
+        if (inputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            inputs_ = java.util.Collections.unmodifiableList(inputs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.inputs_ = inputs_;
+        } else {
+          result.inputs_ = inputsBuilder_.build();
+        }
+        if (outputsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            outputs_ = java.util.Collections.unmodifiableList(outputs_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.outputs_ = outputs_;
+        } else {
+          result.outputs_ = outputsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.Record result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sessionId_ = sessionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.process_ = processBuilder_ == null
+              ? process_
+              : processBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.specificationId_ = specificationId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.Record) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.Record)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.Record other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.Record.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSessionId() != com.google.protobuf.ByteString.EMPTY) {
+          setSessionId(other.getSessionId());
+        }
+        if (other.hasProcess()) {
+          mergeProcess(other.getProcess());
+        }
+        if (inputsBuilder_ == null) {
+          if (!other.inputs_.isEmpty()) {
+            if (inputs_.isEmpty()) {
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureInputsIsMutable();
+              inputs_.addAll(other.inputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inputs_.isEmpty()) {
+            if (inputsBuilder_.isEmpty()) {
+              inputsBuilder_.dispose();
+              inputsBuilder_ = null;
+              inputs_ = other.inputs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              inputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInputsFieldBuilder() : null;
+            } else {
+              inputsBuilder_.addAllMessages(other.inputs_);
+            }
+          }
+        }
+        if (outputsBuilder_ == null) {
+          if (!other.outputs_.isEmpty()) {
+            if (outputs_.isEmpty()) {
+              outputs_ = other.outputs_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureOutputsIsMutable();
+              outputs_.addAll(other.outputs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outputs_.isEmpty()) {
+            if (outputsBuilder_.isEmpty()) {
+              outputsBuilder_.dispose();
+              outputsBuilder_ = null;
+              outputs_ = other.outputs_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              outputsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOutputsFieldBuilder() : null;
+            } else {
+              outputsBuilder_.addAllMessages(other.outputs_);
+            }
+          }
+        }
+        if (other.getSpecificationId() != com.google.protobuf.ByteString.EMPTY) {
+          setSpecificationId(other.getSpecificationId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                sessionId_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getProcessFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.provenance.metadata.v1.ScopeProto.RecordInput m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.RecordInput.parser(),
+                        extensionRegistry);
+                if (inputsBuilder_ == null) {
+                  ensureInputsIsMutable();
+                  inputs_.add(m);
+                } else {
+                  inputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.provenance.metadata.v1.ScopeProto.RecordOutput m =
+                    input.readMessage(
+                        com.provenance.metadata.v1.ScopeProto.RecordOutput.parser(),
+                        extensionRegistry);
+                if (outputsBuilder_ == null) {
+                  ensureOutputsIsMutable();
+                  outputs_.add(m);
+                } else {
+                  outputsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                specificationId_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name/identifier for this record.  Value must be unique within the scope.  Also known as a Fact name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "id", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * id of the session context that was used to create this record (use with filtered kvprefix iterator)
+       * </pre>
+       *
+       * <code>bytes session_id = 2 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSessionId() {
+        return sessionId_;
+      }
+      /**
+       * <pre>
+       * id of the session context that was used to create this record (use with filtered kvprefix iterator)
+       * </pre>
+       *
+       * <code>bytes session_id = 2 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of the session context that was used to create this record (use with filtered kvprefix iterator)
+       * </pre>
+       *
+       * <code>bytes session_id = 2 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sessionId_ = getDefaultInstance().getSessionId();
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.ScopeProto.Process process_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Process, com.provenance.metadata.v1.ScopeProto.Process.Builder, com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder> processBuilder_;
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       * @return Whether the process field is set.
+       */
+      public boolean hasProcess() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       * @return The process.
+       */
+      public com.provenance.metadata.v1.ScopeProto.Process getProcess() {
+        if (processBuilder_ == null) {
+          return process_ == null ? com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance() : process_;
+        } else {
+          return processBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProcess(com.provenance.metadata.v1.ScopeProto.Process value) {
+        if (processBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          process_ = value;
+        } else {
+          processBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProcess(
+          com.provenance.metadata.v1.ScopeProto.Process.Builder builderForValue) {
+        if (processBuilder_ == null) {
+          process_ = builderForValue.build();
+        } else {
+          processBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeProcess(com.provenance.metadata.v1.ScopeProto.Process value) {
+        if (processBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            process_ != null &&
+            process_ != com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance()) {
+            getProcessBuilder().mergeFrom(value);
+          } else {
+            process_ = value;
+          }
+        } else {
+          processBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProcess() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        process_ = null;
+        if (processBuilder_ != null) {
+          processBuilder_.dispose();
+          processBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.Process.Builder getProcessBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getProcessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder getProcessOrBuilder() {
+        if (processBuilder_ != null) {
+          return processBuilder_.getMessageOrBuilder();
+        } else {
+          return process_ == null ?
+              com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance() : process_;
+        }
+      }
+      /**
+       * <pre>
+       * process contain information used to uniquely identify an execution on or off chain that generated this record
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.Process process = 3 [json_name = "process", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.Process, com.provenance.metadata.v1.ScopeProto.Process.Builder, com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder> 
+          getProcessFieldBuilder() {
+        if (processBuilder_ == null) {
+          processBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.Process, com.provenance.metadata.v1.ScopeProto.Process.Builder, com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder>(
+                  getProcess(),
+                  getParentForChildren(),
+                  isClean());
+          process_ = null;
+        }
+        return processBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.RecordInput> inputs_ =
+        java.util.Collections.emptyList();
+      private void ensureInputsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          inputs_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.RecordInput>(inputs_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.RecordInput, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder, com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder> inputsBuilder_;
+
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.RecordInput> getInputsList() {
+        if (inputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(inputs_);
+        } else {
+          return inputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getInputsCount() {
+        if (inputsBuilder_ == null) {
+          return inputs_.size();
+        } else {
+          return inputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordInput getInputs(int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);
+        } else {
+          return inputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.set(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInputs(com.provenance.metadata.v1.ScopeProto.RecordInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordInput value) {
+        if (inputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInputsIsMutable();
+          inputs_.add(index, value);
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInputs(
+          com.provenance.metadata.v1.ScopeProto.RecordInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addInputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder builderForValue) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllInputs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.RecordInput> values) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inputs_);
+          onChanged();
+        } else {
+          inputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearInputs() {
+        if (inputsBuilder_ == null) {
+          inputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          inputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeInputs(int index) {
+        if (inputsBuilder_ == null) {
+          ensureInputsIsMutable();
+          inputs_.remove(index);
+          onChanged();
+        } else {
+          inputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordInput.Builder getInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder getInputsOrBuilder(
+          int index) {
+        if (inputsBuilder_ == null) {
+          return inputs_.get(index);  } else {
+          return inputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder> 
+           getInputsOrBuilderList() {
+        if (inputsBuilder_ != null) {
+          return inputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inputs_);
+        }
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordInput.Builder addInputsBuilder() {
+        return getInputsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.RecordInput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordInput.Builder addInputsBuilder(
+          int index) {
+        return getInputsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.RecordInput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * inputs used with the process to achieve the output on this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordInput inputs = 4 [json_name = "inputs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.RecordInput.Builder> 
+           getInputsBuilderList() {
+        return getInputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.RecordInput, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder, com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder> 
+          getInputsFieldBuilder() {
+        if (inputsBuilder_ == null) {
+          inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.RecordInput, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder, com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder>(
+                  inputs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          inputs_ = null;
+        }
+        return inputsBuilder_;
+      }
+
+      private java.util.List<com.provenance.metadata.v1.ScopeProto.RecordOutput> outputs_ =
+        java.util.Collections.emptyList();
+      private void ensureOutputsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          outputs_ = new java.util.ArrayList<com.provenance.metadata.v1.ScopeProto.RecordOutput>(outputs_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.RecordOutput, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder, com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder> outputsBuilder_;
+
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.RecordOutput> getOutputsList() {
+        if (outputsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outputs_);
+        } else {
+          return outputsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOutputsCount() {
+        if (outputsBuilder_ == null) {
+          return outputs_.size();
+        } else {
+          return outputsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput getOutputs(int index) {
+        if (outputsBuilder_ == null) {
+          return outputs_.get(index);
+        } else {
+          return outputsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOutputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordOutput value) {
+        if (outputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputsIsMutable();
+          outputs_.set(index, value);
+          onChanged();
+        } else {
+          outputsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOutputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder builderForValue) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOutputs(com.provenance.metadata.v1.ScopeProto.RecordOutput value) {
+        if (outputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputsIsMutable();
+          outputs_.add(value);
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOutputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordOutput value) {
+        if (outputsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputsIsMutable();
+          outputs_.add(index, value);
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOutputs(
+          com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder builderForValue) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOutputs(
+          int index, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder builderForValue) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOutputs(
+          java.lang.Iterable<? extends com.provenance.metadata.v1.ScopeProto.RecordOutput> values) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outputs_);
+          onChanged();
+        } else {
+          outputsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOutputs() {
+        if (outputsBuilder_ == null) {
+          outputs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          outputsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOutputs(int index) {
+        if (outputsBuilder_ == null) {
+          ensureOutputsIsMutable();
+          outputs_.remove(index);
+          onChanged();
+        } else {
+          outputsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder getOutputsBuilder(
+          int index) {
+        return getOutputsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder getOutputsOrBuilder(
+          int index) {
+        if (outputsBuilder_ == null) {
+          return outputs_.get(index);  } else {
+          return outputsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder> 
+           getOutputsOrBuilderList() {
+        if (outputsBuilder_ != null) {
+          return outputsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outputs_);
+        }
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder addOutputsBuilder() {
+        return getOutputsFieldBuilder().addBuilder(
+            com.provenance.metadata.v1.ScopeProto.RecordOutput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder addOutputsBuilder(
+          int index) {
+        return getOutputsFieldBuilder().addBuilder(
+            index, com.provenance.metadata.v1.ScopeProto.RecordOutput.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * output(s) is the results of executing the process on the given process indicated in this record
+       * </pre>
+       *
+       * <code>repeated .provenance.metadata.v1.RecordOutput outputs = 5 [json_name = "outputs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder> 
+           getOutputsBuilderList() {
+        return getOutputsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.metadata.v1.ScopeProto.RecordOutput, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder, com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder> 
+          getOutputsFieldBuilder() {
+        if (outputsBuilder_ == null) {
+          outputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.metadata.v1.ScopeProto.RecordOutput, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder, com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder>(
+                  outputs_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          outputs_ = null;
+        }
+        return outputsBuilder_;
+      }
+
+      private com.google.protobuf.ByteString specificationId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * specification_id is the id of the record specification that was used to create this record.
+       * </pre>
+       *
+       * <code>bytes specification_id = 6 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return The specificationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSpecificationId() {
+        return specificationId_;
+      }
+      /**
+       * <pre>
+       * specification_id is the id of the record specification that was used to create this record.
+       * </pre>
+       *
+       * <code>bytes specification_id = 6 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @param value The specificationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpecificationId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        specificationId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * specification_id is the id of the record specification that was used to create this record.
+       * </pre>
+       *
+       * <code>bytes specification_id = 6 [json_name = "specificationId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"specification_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpecificationId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        specificationId_ = getDefaultInstance().getSpecificationId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Record)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Record)
+    private static final com.provenance.metadata.v1.ScopeProto.Record DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.Record();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Record getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Record>
+        PARSER = new com.google.protobuf.AbstractParser<Record>() {
+      @java.lang.Override
+      public Record parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Record> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Record> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Record getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProcessOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Process)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the address of a smart contract used for this process
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <pre>
+     * the address of a smart contract used for this process
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * the address of a smart contract used for this process
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * the hash of an off-chain process used
+     * </pre>
+     *
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * the hash of an off-chain process used
+     * </pre>
+     *
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <pre>
+     * the hash of an off-chain process used
+     * </pre>
+     *
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <pre>
+     * a name associated with the process (type_name, classname or smart contract common name)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * a name associated with the process (type_name, classname or smart contract common name)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The method.
+     */
+    java.lang.String getMethod();
+    /**
+     * <pre>
+     * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    com.google.protobuf.ByteString
+        getMethodBytes();
+
+    com.provenance.metadata.v1.ScopeProto.Process.ProcessIdCase getProcessIdCase();
+  }
+  /**
+   * <pre>
+   * Process contains information used to uniquely identify what was used to generate this record
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Process}
+   */
+  public static final class Process extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Process)
+      ProcessOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Process.newBuilder() to construct.
+    private Process(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Process() {
+      name_ = "";
+      method_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Process();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Process_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Process_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.Process.class, com.provenance.metadata.v1.ScopeProto.Process.Builder.class);
+    }
+
+    private int processIdCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object processId_;
+    public enum ProcessIdCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ADDRESS(1),
+      HASH(2),
+      PROCESSID_NOT_SET(0);
+      private final int value;
+      private ProcessIdCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ProcessIdCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ProcessIdCase forNumber(int value) {
+        switch (value) {
+          case 1: return ADDRESS;
+          case 2: return HASH;
+          case 0: return PROCESSID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ProcessIdCase
+    getProcessIdCase() {
+      return ProcessIdCase.forNumber(
+          processIdCase_);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * the address of a smart contract used for this process
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return Whether the address field is set.
+     */
+    public boolean hasAddress() {
+      return processIdCase_ == 1;
+    }
+    /**
+     * <pre>
+     * the address of a smart contract used for this process
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = "";
+      if (processIdCase_ == 1) {
+        ref = processId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (processIdCase_ == 1) {
+          processId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the address of a smart contract used for this process
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = "";
+      if (processIdCase_ == 1) {
+        ref = processId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (processIdCase_ == 1) {
+          processId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HASH_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * the hash of an off-chain process used
+     * </pre>
+     *
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    public boolean hasHash() {
+      return processIdCase_ == 2;
+    }
+    /**
+     * <pre>
+     * the hash of an off-chain process used
+     * </pre>
+     *
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    public java.lang.String getHash() {
+      java.lang.Object ref = "";
+      if (processIdCase_ == 2) {
+        ref = processId_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (processIdCase_ == 2) {
+          processId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the hash of an off-chain process used
+     * </pre>
+     *
+     * <code>string hash = 2 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = "";
+      if (processIdCase_ == 2) {
+        ref = processId_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (processIdCase_ == 2) {
+          processId_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * a name associated with the process (type_name, classname or smart contract common name)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * a name associated with the process (type_name, classname or smart contract common name)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object method_ = "";
+    /**
+     * <pre>
+     * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override
+    public java.lang.String getMethod() {
+      java.lang.Object ref = method_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        method_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodBytes() {
+      java.lang.Object ref = method_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        method_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (processIdCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, processId_);
+      }
+      if (processIdCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, processId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, method_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (processIdCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, processId_);
+      }
+      if (processIdCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, processId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, method_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.Process)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.Process other = (com.provenance.metadata.v1.ScopeProto.Process) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getMethod()
+          .equals(other.getMethod())) return false;
+      if (!getProcessIdCase().equals(other.getProcessIdCase())) return false;
+      switch (processIdCase_) {
+        case 1:
+          if (!getAddress()
+              .equals(other.getAddress())) return false;
+          break;
+        case 2:
+          if (!getHash()
+              .equals(other.getHash())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + getMethod().hashCode();
+      switch (processIdCase_) {
+        case 1:
+          hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAddress().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + HASH_FIELD_NUMBER;
+          hash = (53 * hash) + getHash().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Process parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Process parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Process parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.Process prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Process contains information used to uniquely identify what was used to generate this record
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Process}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Process)
+        com.provenance.metadata.v1.ScopeProto.ProcessOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Process_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Process_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.Process.class, com.provenance.metadata.v1.ScopeProto.Process.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.Process.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        method_ = "";
+        processIdCase_ = 0;
+        processId_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Process_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Process getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Process build() {
+        com.provenance.metadata.v1.ScopeProto.Process result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Process buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.Process result = new com.provenance.metadata.v1.ScopeProto.Process(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.Process result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.method_ = method_;
+        }
+      }
+
+      private void buildPartialOneofs(com.provenance.metadata.v1.ScopeProto.Process result) {
+        result.processIdCase_ = processIdCase_;
+        result.processId_ = this.processId_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.Process) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.Process)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.Process other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.Process.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMethod().isEmpty()) {
+          method_ = other.method_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        switch (other.getProcessIdCase()) {
+          case ADDRESS: {
+            processIdCase_ = 1;
+            processId_ = other.processId_;
+            onChanged();
+            break;
+          }
+          case HASH: {
+            processIdCase_ = 2;
+            processId_ = other.processId_;
+            onChanged();
+            break;
+          }
+          case PROCESSID_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                processIdCase_ = 1;
+                processId_ = s;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                processIdCase_ = 2;
+                processId_ = s;
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                method_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int processIdCase_ = 0;
+      private java.lang.Object processId_;
+      public ProcessIdCase
+          getProcessIdCase() {
+        return ProcessIdCase.forNumber(
+            processIdCase_);
+      }
+
+      public Builder clearProcessId() {
+        processIdCase_ = 0;
+        processId_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <pre>
+       * the address of a smart contract used for this process
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return Whether the address field is set.
+       */
+      @java.lang.Override
+      public boolean hasAddress() {
+        return processIdCase_ == 1;
+      }
+      /**
+       * <pre>
+       * the address of a smart contract used for this process
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public java.lang.String getAddress() {
+        java.lang.Object ref = "";
+        if (processIdCase_ == 1) {
+          ref = processId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (processIdCase_ == 1) {
+            processId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of a smart contract used for this process
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = "";
+        if (processIdCase_ == 1) {
+          ref = processId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (processIdCase_ == 1) {
+            processId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of a smart contract used for this process
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        processIdCase_ = 1;
+        processId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of a smart contract used for this process
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        if (processIdCase_ == 1) {
+          processIdCase_ = 0;
+          processId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of a smart contract used for this process
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        processIdCase_ = 1;
+        processId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the hash of an off-chain process used
+       * </pre>
+       *
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      @java.lang.Override
+      public boolean hasHash() {
+        return processIdCase_ == 2;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain process used
+       * </pre>
+       *
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      @java.lang.Override
+      public java.lang.String getHash() {
+        java.lang.Object ref = "";
+        if (processIdCase_ == 2) {
+          ref = processId_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (processIdCase_ == 2) {
+            processId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain process used
+       * </pre>
+       *
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = "";
+        if (processIdCase_ == 2) {
+          ref = processId_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (processIdCase_ == 2) {
+            processId_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain process used
+       * </pre>
+       *
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        processIdCase_ = 2;
+        processId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain process used
+       * </pre>
+       *
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        if (processIdCase_ == 2) {
+          processIdCase_ = 0;
+          processId_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain process used
+       * </pre>
+       *
+       * <code>string hash = 2 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        processIdCase_ = 2;
+        processId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * a name associated with the process (type_name, classname or smart contract common name)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a name associated with the process (type_name, classname or smart contract common name)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a name associated with the process (type_name, classname or smart contract common name)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a name associated with the process (type_name, classname or smart contract common name)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a name associated with the process (type_name, classname or smart contract common name)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object method_ = "";
+      /**
+       * <pre>
+       * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @return The method.
+       */
+      public java.lang.String getMethod() {
+        java.lang.Object ref = method_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          method_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @return The bytes for method.
+       */
+      public com.google.protobuf.ByteString
+          getMethodBytes() {
+        java.lang.Object ref = method_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          method_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        method_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        method_ = getDefaultInstance().getMethod();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * method is a name or reference to a specific operation (method) within a class/contract that was invoked
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @param value The bytes for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        method_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Process)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Process)
+    private static final com.provenance.metadata.v1.ScopeProto.Process DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.Process();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Process getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Process>
+        PARSER = new com.google.protobuf.AbstractParser<Process>() {
+      @java.lang.Override
+      public Process parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Process> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Process> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Process getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.RecordInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name value included to link back to the definition spec.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name value included to link back to the definition spec.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return Whether the recordId field is set.
+     */
+    boolean hasRecordId();
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return The recordId.
+     */
+    com.google.protobuf.ByteString getRecordId();
+
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <pre>
+     * from proposed fact structure to unmarshal
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The typeName.
+     */
+    java.lang.String getTypeName();
+    /**
+     * <pre>
+     * from proposed fact structure to unmarshal
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The bytes for typeName.
+     */
+    com.google.protobuf.ByteString
+        getTypeNameBytes();
+
+    /**
+     * <pre>
+     * Indicates if this input was a recorded fact on chain or just a given hashed input
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Indicates if this input was a recorded fact on chain or just a given hashed input
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.provenance.metadata.v1.ScopeProto.RecordInputStatus getStatus();
+
+    com.provenance.metadata.v1.ScopeProto.RecordInput.SourceCase getSourceCase();
+  }
+  /**
+   * <pre>
+   * Tracks the inputs used to establish this record
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.RecordInput}
+   */
+  public static final class RecordInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.RecordInput)
+      RecordInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecordInput.newBuilder() to construct.
+    private RecordInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecordInput() {
+      name_ = "";
+      typeName_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordInput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.RecordInput.class, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder.class);
+    }
+
+    private int sourceCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object source_;
+    public enum SourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      RECORD_ID(2),
+      HASH(3),
+      SOURCE_NOT_SET(0);
+      private final int value;
+      private SourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SourceCase forNumber(int value) {
+        switch (value) {
+          case 2: return RECORD_ID;
+          case 3: return HASH;
+          case 0: return SOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SourceCase
+    getSourceCase() {
+      return SourceCase.forNumber(
+          sourceCase_);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name value included to link back to the definition spec.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name value included to link back to the definition spec.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return Whether the recordId field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecordId() {
+      return sourceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * the address of a record on chain (For Established Records)
+     * </pre>
+     *
+     * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return The recordId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordId() {
+      if (sourceCase_ == 2) {
+        return (com.google.protobuf.ByteString) source_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int HASH_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    public boolean hasHash() {
+      return sourceCase_ == 3;
+    }
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    public java.lang.String getHash() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 3) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (sourceCase_ == 3) {
+          source_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the hash of an off-chain piece of information (For Proposed Records)
+     * </pre>
+     *
+     * <code>string hash = 3 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = "";
+      if (sourceCase_ == 3) {
+        ref = source_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (sourceCase_ == 3) {
+          source_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_NAME_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object typeName_ = "";
+    /**
+     * <pre>
+     * from proposed fact structure to unmarshal
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The typeName.
+     */
+    @java.lang.Override
+    public java.lang.String getTypeName() {
+      java.lang.Object ref = typeName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        typeName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * from proposed fact structure to unmarshal
+     * </pre>
+     *
+     * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+     * @return The bytes for typeName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeNameBytes() {
+      java.lang.Object ref = typeName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        typeName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 5;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Indicates if this input was a recorded fact on chain or just a given hashed input
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Indicates if this input was a recorded fact on chain or just a given hashed input
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.ScopeProto.RecordInputStatus getStatus() {
+      com.provenance.metadata.v1.ScopeProto.RecordInputStatus result = com.provenance.metadata.v1.ScopeProto.RecordInputStatus.forNumber(status_);
+      return result == null ? com.provenance.metadata.v1.ScopeProto.RecordInputStatus.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (sourceCase_ == 2) {
+        output.writeBytes(
+            2, (com.google.protobuf.ByteString) source_);
+      }
+      if (sourceCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, typeName_);
+      }
+      if (status_ != com.provenance.metadata.v1.ScopeProto.RecordInputStatus.RECORD_INPUT_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (sourceCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              2, (com.google.protobuf.ByteString) source_);
+      }
+      if (sourceCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, typeName_);
+      }
+      if (status_ != com.provenance.metadata.v1.ScopeProto.RecordInputStatus.RECORD_INPUT_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.RecordInput)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.RecordInput other = (com.provenance.metadata.v1.ScopeProto.RecordInput) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getTypeName()
+          .equals(other.getTypeName())) return false;
+      if (status_ != other.status_) return false;
+      if (!getSourceCase().equals(other.getSourceCase())) return false;
+      switch (sourceCase_) {
+        case 2:
+          if (!getRecordId()
+              .equals(other.getRecordId())) return false;
+          break;
+        case 3:
+          if (!getHash()
+              .equals(other.getHash())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTypeName().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      switch (sourceCase_) {
+        case 2:
+          hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getRecordId().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + HASH_FIELD_NUMBER;
+          hash = (53 * hash) + getHash().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.RecordInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Tracks the inputs used to establish this record
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.RecordInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.RecordInput)
+        com.provenance.metadata.v1.ScopeProto.RecordInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.RecordInput.class, com.provenance.metadata.v1.ScopeProto.RecordInput.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.RecordInput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        typeName_ = "";
+        status_ = 0;
+        sourceCase_ = 0;
+        source_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordInput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordInput getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.RecordInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordInput build() {
+        com.provenance.metadata.v1.ScopeProto.RecordInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordInput buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.RecordInput result = new com.provenance.metadata.v1.ScopeProto.RecordInput(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.RecordInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.typeName_ = typeName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.status_ = status_;
+        }
+      }
+
+      private void buildPartialOneofs(com.provenance.metadata.v1.ScopeProto.RecordInput result) {
+        result.sourceCase_ = sourceCase_;
+        result.source_ = this.source_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.RecordInput) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.RecordInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.RecordInput other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.RecordInput.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTypeName().isEmpty()) {
+          typeName_ = other.typeName_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        switch (other.getSourceCase()) {
+          case RECORD_ID: {
+            setRecordId(other.getRecordId());
+            break;
+          }
+          case HASH: {
+            sourceCase_ = 3;
+            source_ = other.source_;
+            onChanged();
+            break;
+          }
+          case SOURCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                source_ = input.readBytes();
+                sourceCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                sourceCase_ = 3;
+                source_ = s;
+                break;
+              } // case 26
+              case 34: {
+                typeName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int sourceCase_ = 0;
+      private java.lang.Object source_;
+      public SourceCase
+          getSourceCase() {
+        return SourceCase.forNumber(
+            sourceCase_);
+      }
+
+      public Builder clearSource() {
+        sourceCase_ = 0;
+        source_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name value included to link back to the definition spec.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name value included to link back to the definition spec.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name value included to link back to the definition spec.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name value included to link back to the definition spec.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name value included to link back to the definition spec.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return Whether the recordId field is set.
+       */
+      public boolean hasRecordId() {
+        return sourceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return The recordId.
+       */
+      public com.google.protobuf.ByteString getRecordId() {
+        if (sourceCase_ == 2) {
+          return (com.google.protobuf.ByteString) source_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @param value The recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCase_ = 2;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of a record on chain (For Established Records)
+       * </pre>
+       *
+       * <code>bytes record_id = 2 [json_name = "recordId", (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordId() {
+        if (sourceCase_ == 2) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      @java.lang.Override
+      public boolean hasHash() {
+        return sourceCase_ == 3;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      @java.lang.Override
+      public java.lang.String getHash() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 3) {
+          ref = source_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (sourceCase_ == 3) {
+            source_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = "";
+        if (sourceCase_ == 3) {
+          ref = source_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (sourceCase_ == 3) {
+            source_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceCase_ = 3;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        if (sourceCase_ == 3) {
+          sourceCase_ = 0;
+          source_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the hash of an off-chain piece of information (For Proposed Records)
+       * </pre>
+       *
+       * <code>string hash = 3 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceCase_ = 3;
+        source_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object typeName_ = "";
+      /**
+       * <pre>
+       * from proposed fact structure to unmarshal
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return The typeName.
+       */
+      public java.lang.String getTypeName() {
+        java.lang.Object ref = typeName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          typeName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * from proposed fact structure to unmarshal
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return The bytes for typeName.
+       */
+      public com.google.protobuf.ByteString
+          getTypeNameBytes() {
+        java.lang.Object ref = typeName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          typeName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * from proposed fact structure to unmarshal
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @param value The typeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        typeName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from proposed fact structure to unmarshal
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTypeName() {
+        typeName_ = getDefaultInstance().getTypeName();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from proposed fact structure to unmarshal
+       * </pre>
+       *
+       * <code>string type_name = 4 [json_name = "typeName", (.gogoproto.moretags) = "yaml:&#92;"type_name&#92;""];</code>
+       * @param value The bytes for typeName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        typeName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Indicates if this input was a recorded fact on chain or just a given hashed input
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Indicates if this input was a recorded fact on chain or just a given hashed input
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates if this input was a recorded fact on chain or just a given hashed input
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordInputStatus getStatus() {
+        com.provenance.metadata.v1.ScopeProto.RecordInputStatus result = com.provenance.metadata.v1.ScopeProto.RecordInputStatus.forNumber(status_);
+        return result == null ? com.provenance.metadata.v1.ScopeProto.RecordInputStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Indicates if this input was a recorded fact on chain or just a given hashed input
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.provenance.metadata.v1.ScopeProto.RecordInputStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates if this input was a recorded fact on chain or just a given hashed input
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.RecordInputStatus status = 5 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.RecordInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.RecordInput)
+    private static final com.provenance.metadata.v1.ScopeProto.RecordInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.RecordInput();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecordInput>
+        PARSER = new com.google.protobuf.AbstractParser<RecordInput>() {
+      @java.lang.Override
+      public RecordInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecordInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecordInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordOutputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.RecordOutput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Hash of the data output that was output/generated for this record
+     * </pre>
+     *
+     * <code>string hash = 1 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <pre>
+     * Hash of the data output that was output/generated for this record
+     * </pre>
+     *
+     * <code>string hash = 1 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <pre>
+     * Status of the process execution associated with this output indicating success,failure, or pending
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status of the process execution associated with this output indicating success,failure, or pending
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.provenance.metadata.v1.ScopeProto.ResultStatus getStatus();
+  }
+  /**
+   * <pre>
+   * RecordOutput encapsulates the output of a process recorded on chain
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.RecordOutput}
+   */
+  public static final class RecordOutput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.RecordOutput)
+      RecordOutputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecordOutput.newBuilder() to construct.
+    private RecordOutput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecordOutput() {
+      hash_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordOutput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordOutput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordOutput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.RecordOutput.class, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder.class);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hash_ = "";
+    /**
+     * <pre>
+     * Hash of the data output that was output/generated for this record
+     * </pre>
+     *
+     * <code>string hash = 1 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Hash of the data output that was output/generated for this record
+     * </pre>
+     *
+     * <code>string hash = 1 [json_name = "hash"];</code>
+     * @return The bytes for hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Status of the process execution associated with this output indicating success,failure, or pending
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status of the process execution associated with this output indicating success,failure, or pending
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.ScopeProto.ResultStatus getStatus() {
+      com.provenance.metadata.v1.ScopeProto.ResultStatus result = com.provenance.metadata.v1.ScopeProto.ResultStatus.forNumber(status_);
+      return result == null ? com.provenance.metadata.v1.ScopeProto.ResultStatus.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
+      }
+      if (status_ != com.provenance.metadata.v1.ScopeProto.ResultStatus.RESULT_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
+      }
+      if (status_ != com.provenance.metadata.v1.ScopeProto.ResultStatus.RESULT_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.RecordOutput)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.RecordOutput other = (com.provenance.metadata.v1.ScopeProto.RecordOutput) obj;
+
+      if (!getHash()
+          .equals(other.getHash())) return false;
+      if (status_ != other.status_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.RecordOutput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RecordOutput encapsulates the output of a process recorded on chain
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.RecordOutput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.RecordOutput)
+        com.provenance.metadata.v1.ScopeProto.RecordOutputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordOutput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordOutput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.RecordOutput.class, com.provenance.metadata.v1.ScopeProto.RecordOutput.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.RecordOutput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hash_ = "";
+        status_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_RecordOutput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.RecordOutput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput build() {
+        com.provenance.metadata.v1.ScopeProto.RecordOutput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.RecordOutput buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.RecordOutput result = new com.provenance.metadata.v1.ScopeProto.RecordOutput(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.RecordOutput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hash_ = hash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.RecordOutput) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.RecordOutput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.RecordOutput other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.RecordOutput.getDefaultInstance()) return this;
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                hash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <pre>
+       * Hash of the data output that was output/generated for this record
+       * </pre>
+       *
+       * <code>string hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hash of the data output that was output/generated for this record
+       * </pre>
+       *
+       * <code>string hash = 1 [json_name = "hash"];</code>
+       * @return The bytes for hash.
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hash of the data output that was output/generated for this record
+       * </pre>
+       *
+       * <code>string hash = 1 [json_name = "hash"];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hash of the data output that was output/generated for this record
+       * </pre>
+       *
+       * <code>string hash = 1 [json_name = "hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        hash_ = getDefaultInstance().getHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hash of the data output that was output/generated for this record
+       * </pre>
+       *
+       * <code>string hash = 1 [json_name = "hash"];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status of the process execution associated with this output indicating success,failure, or pending
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status of the process execution associated with this output indicating success,failure, or pending
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the process execution associated with this output indicating success,failure, or pending
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.ResultStatus getStatus() {
+        com.provenance.metadata.v1.ScopeProto.ResultStatus result = com.provenance.metadata.v1.ScopeProto.ResultStatus.forNumber(status_);
+        return result == null ? com.provenance.metadata.v1.ScopeProto.ResultStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status of the process execution associated with this output indicating success,failure, or pending
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.provenance.metadata.v1.ScopeProto.ResultStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status of the process execution associated with this output indicating success,failure, or pending
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ResultStatus status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.RecordOutput)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.RecordOutput)
+    private static final com.provenance.metadata.v1.ScopeProto.RecordOutput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.RecordOutput();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.RecordOutput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecordOutput>
+        PARSER = new com.google.protobuf.AbstractParser<RecordOutput>() {
+      @java.lang.Override
+      public RecordOutput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecordOutput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecordOutput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.RecordOutput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Party)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of the account (on chain)
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address of the account (on chain)
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * a role for this account within the context of the processes used
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+     * @return The enum numeric value on the wire for role.
+     */
+    int getRoleValue();
+    /**
+     * <pre>
+     * a role for this account within the context of the processes used
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+     * @return The role.
+     */
+    com.provenance.metadata.v1.SpecificationProto.PartyType getRole();
+
+    /**
+     * <pre>
+     * whether this party's signature is optional
+     * </pre>
+     *
+     * <code>bool optional = 3 [json_name = "optional"];</code>
+     * @return The optional.
+     */
+    boolean getOptional();
+  }
+  /**
+   * <pre>
+   * A Party is an address with/in a given role associated with a contract
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Party}
+   */
+  public static final class Party extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Party)
+      PartyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Party.newBuilder() to construct.
+    private Party(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Party() {
+      address_ = "";
+      role_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Party();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Party_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Party_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.Party.class, com.provenance.metadata.v1.ScopeProto.Party.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address of the account (on chain)
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of the account (on chain)
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROLE_FIELD_NUMBER = 2;
+    private int role_ = 0;
+    /**
+     * <pre>
+     * a role for this account within the context of the processes used
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+     * @return The enum numeric value on the wire for role.
+     */
+    @java.lang.Override public int getRoleValue() {
+      return role_;
+    }
+    /**
+     * <pre>
+     * a role for this account within the context of the processes used
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+     * @return The role.
+     */
+    @java.lang.Override public com.provenance.metadata.v1.SpecificationProto.PartyType getRole() {
+      com.provenance.metadata.v1.SpecificationProto.PartyType result = com.provenance.metadata.v1.SpecificationProto.PartyType.forNumber(role_);
+      return result == null ? com.provenance.metadata.v1.SpecificationProto.PartyType.UNRECOGNIZED : result;
+    }
+
+    public static final int OPTIONAL_FIELD_NUMBER = 3;
+    private boolean optional_ = false;
+    /**
+     * <pre>
+     * whether this party's signature is optional
+     * </pre>
+     *
+     * <code>bool optional = 3 [json_name = "optional"];</code>
+     * @return The optional.
+     */
+    @java.lang.Override
+    public boolean getOptional() {
+      return optional_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (role_ != com.provenance.metadata.v1.SpecificationProto.PartyType.PARTY_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, role_);
+      }
+      if (optional_ != false) {
+        output.writeBool(3, optional_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (role_ != com.provenance.metadata.v1.SpecificationProto.PartyType.PARTY_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, role_);
+      }
+      if (optional_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, optional_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.Party)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.Party other = (com.provenance.metadata.v1.ScopeProto.Party) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (role_ != other.role_) return false;
+      if (getOptional()
+          != other.getOptional()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + role_;
+      hash = (37 * hash) + OPTIONAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOptional());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Party parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Party parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.Party parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.Party prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A Party is an address with/in a given role associated with a contract
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Party}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Party)
+        com.provenance.metadata.v1.ScopeProto.PartyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Party_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Party_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.Party.class, com.provenance.metadata.v1.ScopeProto.Party.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.Party.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        role_ = 0;
+        optional_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_Party_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Party getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.Party.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Party build() {
+        com.provenance.metadata.v1.ScopeProto.Party result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.Party buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.Party result = new com.provenance.metadata.v1.ScopeProto.Party(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.Party result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.role_ = role_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.optional_ = optional_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.Party) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.Party)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.Party other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.Party.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.role_ != 0) {
+          setRoleValue(other.getRoleValue());
+        }
+        if (other.getOptional() != false) {
+          setOptional(other.getOptional());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                role_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                optional_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address of the account (on chain)
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of the account (on chain)
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of the account (on chain)
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of the account (on chain)
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of the account (on chain)
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int role_ = 0;
+      /**
+       * <pre>
+       * a role for this account within the context of the processes used
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+       * @return The enum numeric value on the wire for role.
+       */
+      @java.lang.Override public int getRoleValue() {
+        return role_;
+      }
+      /**
+       * <pre>
+       * a role for this account within the context of the processes used
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+       * @param value The enum numeric value on the wire for role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleValue(int value) {
+        role_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a role for this account within the context of the processes used
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+       * @return The role.
+       */
+      @java.lang.Override
+      public com.provenance.metadata.v1.SpecificationProto.PartyType getRole() {
+        com.provenance.metadata.v1.SpecificationProto.PartyType result = com.provenance.metadata.v1.SpecificationProto.PartyType.forNumber(role_);
+        return result == null ? com.provenance.metadata.v1.SpecificationProto.PartyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * a role for this account within the context of the processes used
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+       * @param value The role to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRole(com.provenance.metadata.v1.SpecificationProto.PartyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        role_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a role for this account within the context of the processes used
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.PartyType role = 2 [json_name = "role"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRole() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        role_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean optional_ ;
+      /**
+       * <pre>
+       * whether this party's signature is optional
+       * </pre>
+       *
+       * <code>bool optional = 3 [json_name = "optional"];</code>
+       * @return The optional.
+       */
+      @java.lang.Override
+      public boolean getOptional() {
+        return optional_;
+      }
+      /**
+       * <pre>
+       * whether this party's signature is optional
+       * </pre>
+       *
+       * <code>bool optional = 3 [json_name = "optional"];</code>
+       * @param value The optional to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptional(boolean value) {
+
+        optional_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * whether this party's signature is optional
+       * </pre>
+       *
+       * <code>bool optional = 3 [json_name = "optional"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptional() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        optional_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Party)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Party)
+    private static final com.provenance.metadata.v1.ScopeProto.Party DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.Party();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.Party getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Party>
+        PARSER = new com.google.protobuf.AbstractParser<Party>() {
+      @java.lang.Override
+      public Party parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Party> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Party> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.Party getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AuditFieldsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.AuditFields)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * the date/time when this entry was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdDate field is set.
+     */
+    boolean hasCreatedDate();
+    /**
+     * <pre>
+     * the date/time when this entry was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The createdDate.
+     */
+    com.google.protobuf.Timestamp getCreatedDate();
+    /**
+     * <pre>
+     * the date/time when this entry was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder();
+
+    /**
+     * <pre>
+     * the address of the account that created this record
+     * </pre>
+     *
+     * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+     * @return The createdBy.
+     */
+    java.lang.String getCreatedBy();
+    /**
+     * <pre>
+     * the address of the account that created this record
+     * </pre>
+     *
+     * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+     * @return The bytes for createdBy.
+     */
+    com.google.protobuf.ByteString
+        getCreatedByBytes();
+
+    /**
+     * <pre>
+     * the date/time when this entry was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the updatedDate field is set.
+     */
+    boolean hasUpdatedDate();
+    /**
+     * <pre>
+     * the date/time when this entry was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The updatedDate.
+     */
+    com.google.protobuf.Timestamp getUpdatedDate();
+    /**
+     * <pre>
+     * the date/time when this entry was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedDateOrBuilder();
+
+    /**
+     * <pre>
+     * the address of the account that modified this record
+     * </pre>
+     *
+     * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+     * @return The updatedBy.
+     */
+    java.lang.String getUpdatedBy();
+    /**
+     * <pre>
+     * the address of the account that modified this record
+     * </pre>
+     *
+     * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+     * @return The bytes for updatedBy.
+     */
+    com.google.protobuf.ByteString
+        getUpdatedByBytes();
+
+    /**
+     * <pre>
+     * an optional version number that is incremented with each update
+     * </pre>
+     *
+     * <code>uint32 version = 5 [json_name = "version", (.gogoproto.moretags) = "yaml:&#92;"version,omitempty&#92;""];</code>
+     * @return The version.
+     */
+    int getVersion();
+
+    /**
+     * <pre>
+     * an optional message associated with the creation/update event
+     * </pre>
+     *
+     * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <pre>
+     * an optional message associated with the creation/update event
+     * </pre>
+     *
+     * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * <pre>
+   * AuditFields capture information about the last account to make modifications and when they were made
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.AuditFields}
+   */
+  public static final class AuditFields extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.AuditFields)
+      AuditFieldsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AuditFields.newBuilder() to construct.
+    private AuditFields(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AuditFields() {
+      createdBy_ = "";
+      updatedBy_ = "";
+      message_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuditFields();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_AuditFields_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_AuditFields_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.ScopeProto.AuditFields.class, com.provenance.metadata.v1.ScopeProto.AuditFields.Builder.class);
+    }
+
+    public static final int CREATED_DATE_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp createdDate_;
+    /**
+     * <pre>
+     * the date/time when this entry was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedDate() {
+      return createdDate_ != null;
+    }
+    /**
+     * <pre>
+     * the date/time when this entry was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The createdDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedDate() {
+      return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
+    }
+    /**
+     * <pre>
+     * the date/time when this entry was created
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder() {
+      return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
+    }
+
+    public static final int CREATED_BY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object createdBy_ = "";
+    /**
+     * <pre>
+     * the address of the account that created this record
+     * </pre>
+     *
+     * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+     * @return The createdBy.
+     */
+    @java.lang.Override
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the address of the account that created this record
+     * </pre>
+     *
+     * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+     * @return The bytes for createdBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATED_DATE_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp updatedDate_;
+    /**
+     * <pre>
+     * the date/time when this entry was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the updatedDate field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedDate() {
+      return updatedDate_ != null;
+    }
+    /**
+     * <pre>
+     * the date/time when this entry was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The updatedDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedDate() {
+      return updatedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedDate_;
+    }
+    /**
+     * <pre>
+     * the date/time when this entry was last updated
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedDateOrBuilder() {
+      return updatedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedDate_;
+    }
+
+    public static final int UPDATED_BY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object updatedBy_ = "";
+    /**
+     * <pre>
+     * the address of the account that modified this record
+     * </pre>
+     *
+     * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+     * @return The updatedBy.
+     */
+    @java.lang.Override
+    public java.lang.String getUpdatedBy() {
+      java.lang.Object ref = updatedBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        updatedBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * the address of the account that modified this record
+     * </pre>
+     *
+     * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+     * @return The bytes for updatedBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUpdatedByBytes() {
+      java.lang.Object ref = updatedBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updatedBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 5;
+    private int version_ = 0;
+    /**
+     * <pre>
+     * an optional version number that is incremented with each update
+     * </pre>
+     *
+     * <code>uint32 version = 5 [json_name = "version", (.gogoproto.moretags) = "yaml:&#92;"version,omitempty&#92;""];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public int getVersion() {
+      return version_;
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
+    /**
+     * <pre>
+     * an optional message associated with the creation/update event
+     * </pre>
+     *
+     * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * an optional message associated with the creation/update event
+     * </pre>
+     *
+     * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (createdDate_ != null) {
+        output.writeMessage(1, getCreatedDate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, createdBy_);
+      }
+      if (updatedDate_ != null) {
+        output.writeMessage(3, getUpdatedDate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, updatedBy_);
+      }
+      if (version_ != 0) {
+        output.writeUInt32(5, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, message_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (createdDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCreatedDate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, createdBy_);
+      }
+      if (updatedDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdatedDate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updatedBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, updatedBy_);
+      }
+      if (version_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, message_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.ScopeProto.AuditFields)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.ScopeProto.AuditFields other = (com.provenance.metadata.v1.ScopeProto.AuditFields) obj;
+
+      if (hasCreatedDate() != other.hasCreatedDate()) return false;
+      if (hasCreatedDate()) {
+        if (!getCreatedDate()
+            .equals(other.getCreatedDate())) return false;
+      }
+      if (!getCreatedBy()
+          .equals(other.getCreatedBy())) return false;
+      if (hasUpdatedDate() != other.hasUpdatedDate()) return false;
+      if (hasUpdatedDate()) {
+        if (!getUpdatedDate()
+            .equals(other.getUpdatedDate())) return false;
+      }
+      if (!getUpdatedBy()
+          .equals(other.getUpdatedBy())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCreatedDate()) {
+        hash = (37 * hash) + CREATED_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedDate().hashCode();
+      }
+      hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedBy().hashCode();
+      if (hasUpdatedDate()) {
+        hash = (37 * hash) + UPDATED_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedDate().hashCode();
+      }
+      hash = (37 * hash) + UPDATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdatedBy().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.ScopeProto.AuditFields prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AuditFields capture information about the last account to make modifications and when they were made
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.AuditFields}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.AuditFields)
+        com.provenance.metadata.v1.ScopeProto.AuditFieldsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_AuditFields_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_AuditFields_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.ScopeProto.AuditFields.class, com.provenance.metadata.v1.ScopeProto.AuditFields.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.ScopeProto.AuditFields.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        createdDate_ = null;
+        if (createdDateBuilder_ != null) {
+          createdDateBuilder_.dispose();
+          createdDateBuilder_ = null;
+        }
+        createdBy_ = "";
+        updatedDate_ = null;
+        if (updatedDateBuilder_ != null) {
+          updatedDateBuilder_.dispose();
+          updatedDateBuilder_ = null;
+        }
+        updatedBy_ = "";
+        version_ = 0;
+        message_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.ScopeProto.internal_static_provenance_metadata_v1_AuditFields_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.AuditFields getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.AuditFields build() {
+        com.provenance.metadata.v1.ScopeProto.AuditFields result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.ScopeProto.AuditFields buildPartial() {
+        com.provenance.metadata.v1.ScopeProto.AuditFields result = new com.provenance.metadata.v1.ScopeProto.AuditFields(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.ScopeProto.AuditFields result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.createdDate_ = createdDateBuilder_ == null
+              ? createdDate_
+              : createdDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.createdBy_ = createdBy_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.updatedDate_ = updatedDateBuilder_ == null
+              ? updatedDate_
+              : updatedDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.updatedBy_ = updatedBy_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.message_ = message_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.ScopeProto.AuditFields) {
+          return mergeFrom((com.provenance.metadata.v1.ScopeProto.AuditFields)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.ScopeProto.AuditFields other) {
+        if (other == com.provenance.metadata.v1.ScopeProto.AuditFields.getDefaultInstance()) return this;
+        if (other.hasCreatedDate()) {
+          mergeCreatedDate(other.getCreatedDate());
+        }
+        if (!other.getCreatedBy().isEmpty()) {
+          createdBy_ = other.createdBy_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasUpdatedDate()) {
+          mergeUpdatedDate(other.getUpdatedDate());
+        }
+        if (!other.getUpdatedBy().isEmpty()) {
+          updatedBy_ = other.updatedBy_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getVersion() != 0) {
+          setVersion(other.getVersion());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCreatedDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                createdBy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUpdatedDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                updatedBy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                version_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                message_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp createdDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdDateBuilder_;
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the createdDate field is set.
+       */
+      public boolean hasCreatedDate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The createdDate.
+       */
+      public com.google.protobuf.Timestamp getCreatedDate() {
+        if (createdDateBuilder_ == null) {
+          return createdDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
+        } else {
+          return createdDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedDate(com.google.protobuf.Timestamp value) {
+        if (createdDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdDate_ = value;
+        } else {
+          createdDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdDateBuilder_ == null) {
+          createdDate_ = builderForValue.build();
+        } else {
+          createdDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCreatedDate(com.google.protobuf.Timestamp value) {
+        if (createdDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            createdDate_ != null &&
+            createdDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedDateBuilder().mergeFrom(value);
+          } else {
+            createdDate_ = value;
+          }
+        } else {
+          createdDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCreatedDate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        createdDate_ = null;
+        if (createdDateBuilder_ != null) {
+          createdDateBuilder_.dispose();
+          createdDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedDateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCreatedDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedDateOrBuilder() {
+        if (createdDateBuilder_ != null) {
+          return createdDateBuilder_.getMessageOrBuilder();
+        } else {
+          return createdDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdDate_;
+        }
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was created
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_date = 1 [json_name = "createdDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "created_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"created_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedDateFieldBuilder() {
+        if (createdDateBuilder_ == null) {
+          createdDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedDate(),
+                  getParentForChildren(),
+                  isClean());
+          createdDate_ = null;
+        }
+        return createdDateBuilder_;
+      }
+
+      private java.lang.Object createdBy_ = "";
+      /**
+       * <pre>
+       * the address of the account that created this record
+       * </pre>
+       *
+       * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+       * @return The createdBy.
+       */
+      public java.lang.String getCreatedBy() {
+        java.lang.Object ref = createdBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of the account that created this record
+       * </pre>
+       *
+       * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+       * @return The bytes for createdBy.
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByBytes() {
+        java.lang.Object ref = createdBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of the account that created this record
+       * </pre>
+       *
+       * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedBy(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        createdBy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of the account that created this record
+       * </pre>
+       *
+       * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedBy() {
+        createdBy_ = getDefaultInstance().getCreatedBy();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of the account that created this record
+       * </pre>
+       *
+       * <code>string created_by = 2 [json_name = "createdBy", (.gogoproto.moretags) = "yaml:&#92;"created_by,omitempty&#92;""];</code>
+       * @param value The bytes for createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        createdBy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp updatedDate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedDateBuilder_;
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the updatedDate field is set.
+       */
+      public boolean hasUpdatedDate() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The updatedDate.
+       */
+      public com.google.protobuf.Timestamp getUpdatedDate() {
+        if (updatedDateBuilder_ == null) {
+          return updatedDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedDate_;
+        } else {
+          return updatedDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setUpdatedDate(com.google.protobuf.Timestamp value) {
+        if (updatedDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedDate_ = value;
+        } else {
+          updatedDateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setUpdatedDate(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedDateBuilder_ == null) {
+          updatedDate_ = builderForValue.build();
+        } else {
+          updatedDateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeUpdatedDate(com.google.protobuf.Timestamp value) {
+        if (updatedDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            updatedDate_ != null &&
+            updatedDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedDateBuilder().mergeFrom(value);
+          } else {
+            updatedDate_ = value;
+          }
+        } else {
+          updatedDateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearUpdatedDate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        updatedDate_ = null;
+        if (updatedDateBuilder_ != null) {
+          updatedDateBuilder_.dispose();
+          updatedDateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedDateBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUpdatedDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedDateOrBuilder() {
+        if (updatedDateBuilder_ != null) {
+          return updatedDateBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedDate_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedDate_;
+        }
+      }
+      /**
+       * <pre>
+       * the date/time when this entry was last updated
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_date = 3 [json_name = "updatedDate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "updated_date,omitempty", (.gogoproto.moretags) = "yaml:&#92;"updated_date,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedDateFieldBuilder() {
+        if (updatedDateBuilder_ == null) {
+          updatedDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedDate(),
+                  getParentForChildren(),
+                  isClean());
+          updatedDate_ = null;
+        }
+        return updatedDateBuilder_;
+      }
+
+      private java.lang.Object updatedBy_ = "";
+      /**
+       * <pre>
+       * the address of the account that modified this record
+       * </pre>
+       *
+       * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+       * @return The updatedBy.
+       */
+      public java.lang.String getUpdatedBy() {
+        java.lang.Object ref = updatedBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          updatedBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of the account that modified this record
+       * </pre>
+       *
+       * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+       * @return The bytes for updatedBy.
+       */
+      public com.google.protobuf.ByteString
+          getUpdatedByBytes() {
+        java.lang.Object ref = updatedBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          updatedBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * the address of the account that modified this record
+       * </pre>
+       *
+       * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+       * @param value The updatedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedBy(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        updatedBy_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of the account that modified this record
+       * </pre>
+       *
+       * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatedBy() {
+        updatedBy_ = getDefaultInstance().getUpdatedBy();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * the address of the account that modified this record
+       * </pre>
+       *
+       * <code>string updated_by = 4 [json_name = "updatedBy", (.gogoproto.moretags) = "yaml:&#92;"updated_by,omitempty&#92;""];</code>
+       * @param value The bytes for updatedBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        updatedBy_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int version_ ;
+      /**
+       * <pre>
+       * an optional version number that is incremented with each update
+       * </pre>
+       *
+       * <code>uint32 version = 5 [json_name = "version", (.gogoproto.moretags) = "yaml:&#92;"version,omitempty&#92;""];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public int getVersion() {
+        return version_;
+      }
+      /**
+       * <pre>
+       * an optional version number that is incremented with each update
+       * </pre>
+       *
+       * <code>uint32 version = 5 [json_name = "version", (.gogoproto.moretags) = "yaml:&#92;"version,omitempty&#92;""];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(int value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * an optional version number that is incremented with each update
+       * </pre>
+       *
+       * <code>uint32 version = 5 [json_name = "version", (.gogoproto.moretags) = "yaml:&#92;"version,omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        version_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <pre>
+       * an optional message associated with the creation/update event
+       * </pre>
+       *
+       * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * an optional message associated with the creation/update event
+       * </pre>
+       *
+       * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * an optional message associated with the creation/update event
+       * </pre>
+       *
+       * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        message_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * an optional message associated with the creation/update event
+       * </pre>
+       *
+       * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * an optional message associated with the creation/update event
+       * </pre>
+       *
+       * <code>string message = 6 [json_name = "message", (.gogoproto.moretags) = "yaml:&#92;"message,omitempty&#92;""];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        message_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.AuditFields)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.AuditFields)
+    private static final com.provenance.metadata.v1.ScopeProto.AuditFields DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.ScopeProto.AuditFields();
+    }
+
+    public static com.provenance.metadata.v1.ScopeProto.AuditFields getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AuditFields>
+        PARSER = new com.google.protobuf.AbstractParser<AuditFields>() {
+      @java.lang.Override
+      public AuditFields parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AuditFields> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AuditFields> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.ScopeProto.AuditFields getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Scope_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Scope_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Session_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Session_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Record_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Record_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Process_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Process_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_RecordInput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_RecordInput_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_RecordOutput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_RecordOutput_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Party_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Party_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_AuditFields_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_AuditFields_fieldAccessorTable;
 
@@ -137,7 +11592,7 @@ public final class ScopeProto {
       "ECIFIED\020\000\022\026\n\022RESULT_STATUS_PASS\020\001\022\026\n\022RES" +
       "ULT_STATUS_SKIP\020\002\022\026\n\022RESULT_STATUS_FAIL\020" +
       "\003B\330\001\n\032com.provenance.metadata.v1B\nScopeP" +
-      "rotoP\001Z4github.com/provenance-io/provena" +
+      "rotoP\000Z4github.com/provenance-io/provena" +
       "nce/x/metadata/types\242\002\003PMX\252\002\026Provenance." +
       "Metadata.V1\312\002\026Provenance\\Metadata\\V1\342\002\"P" +
       "rovenance\\Metadata\\V1\\GPBMetadata\352\002\030Prov" +

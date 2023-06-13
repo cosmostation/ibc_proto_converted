@@ -14,9 +14,1369 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.bonds.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    java.util.List<com.ixo.bonds.v1beta1.BondsProto.Bond> 
+        getBondsList();
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    com.ixo.bonds.v1beta1.BondsProto.Bond getBonds(int index);
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    int getBondsCount();
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    java.util.List<? extends com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder> 
+        getBondsOrBuilderList();
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder getBondsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    java.util.List<com.ixo.bonds.v1beta1.BondsProto.Batch> 
+        getBatchesList();
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    com.ixo.bonds.v1beta1.BondsProto.Batch getBatches(int index);
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    int getBatchesCount();
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    java.util.List<? extends com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder> 
+        getBatchesOrBuilderList();
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder getBatchesOrBuilder(
+        int index);
+
+    /**
+     * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    com.ixo.bonds.v1beta1.BondsProto.Params getParams();
+    /**
+     * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    com.ixo.bonds.v1beta1.BondsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the bonds module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code ixo.bonds.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.bonds.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      bonds_ = java.util.Collections.emptyList();
+      batches_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.bonds.v1beta1.GenesisProto.internal_static_ixo_bonds_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.bonds.v1beta1.GenesisProto.internal_static_ixo_bonds_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.bonds.v1beta1.GenesisProto.GenesisState.class, com.ixo.bonds.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int BONDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.bonds.v1beta1.BondsProto.Bond> bonds_;
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.bonds.v1beta1.BondsProto.Bond> getBondsList() {
+      return bonds_;
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder> 
+        getBondsOrBuilderList() {
+      return bonds_;
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBondsCount() {
+      return bonds_.size();
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.BondsProto.Bond getBonds(int index) {
+      return bonds_.get(index);
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder getBondsOrBuilder(
+        int index) {
+      return bonds_.get(index);
+    }
+
+    public static final int BATCHES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.bonds.v1beta1.BondsProto.Batch> batches_;
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.bonds.v1beta1.BondsProto.Batch> getBatchesList() {
+      return batches_;
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder> 
+        getBatchesOrBuilderList() {
+      return batches_;
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBatchesCount() {
+      return batches_.size();
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.BondsProto.Batch getBatches(int index) {
+      return batches_.get(index);
+    }
+    /**
+     * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder getBatchesOrBuilder(
+        int index) {
+      return batches_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 3;
+    private com.ixo.bonds.v1beta1.BondsProto.Params params_;
+    /**
+     * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.BondsProto.Params getParams() {
+      return params_ == null ? com.ixo.bonds.v1beta1.BondsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.BondsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.ixo.bonds.v1beta1.BondsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < bonds_.size(); i++) {
+        output.writeMessage(1, bonds_.get(i));
+      }
+      for (int i = 0; i < batches_.size(); i++) {
+        output.writeMessage(2, batches_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(3, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < bonds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, bonds_.get(i));
+      }
+      for (int i = 0; i < batches_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, batches_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.bonds.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.ixo.bonds.v1beta1.GenesisProto.GenesisState other = (com.ixo.bonds.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getBondsList()
+          .equals(other.getBondsList())) return false;
+      if (!getBatchesList()
+          .equals(other.getBatchesList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBondsCount() > 0) {
+        hash = (37 * hash) + BONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBondsList().hashCode();
+      }
+      if (getBatchesCount() > 0) {
+        hash = (37 * hash) + BATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchesList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.bonds.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the bonds module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code ixo.bonds.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.bonds.v1beta1.GenesisState)
+        com.ixo.bonds.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.bonds.v1beta1.GenesisProto.internal_static_ixo_bonds_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.bonds.v1beta1.GenesisProto.internal_static_ixo_bonds_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.bonds.v1beta1.GenesisProto.GenesisState.class, com.ixo.bonds.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.ixo.bonds.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (bondsBuilder_ == null) {
+          bonds_ = java.util.Collections.emptyList();
+        } else {
+          bonds_ = null;
+          bondsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (batchesBuilder_ == null) {
+          batches_ = java.util.Collections.emptyList();
+        } else {
+          batches_ = null;
+          batchesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.bonds.v1beta1.GenesisProto.internal_static_ixo_bonds_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.bonds.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.ixo.bonds.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.bonds.v1beta1.GenesisProto.GenesisState build() {
+        com.ixo.bonds.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.bonds.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.ixo.bonds.v1beta1.GenesisProto.GenesisState result = new com.ixo.bonds.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.bonds.v1beta1.GenesisProto.GenesisState result) {
+        if (bondsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            bonds_ = java.util.Collections.unmodifiableList(bonds_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.bonds_ = bonds_;
+        } else {
+          result.bonds_ = bondsBuilder_.build();
+        }
+        if (batchesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            batches_ = java.util.Collections.unmodifiableList(batches_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.batches_ = batches_;
+        } else {
+          result.batches_ = batchesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.bonds.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.bonds.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.ixo.bonds.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.bonds.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.ixo.bonds.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (bondsBuilder_ == null) {
+          if (!other.bonds_.isEmpty()) {
+            if (bonds_.isEmpty()) {
+              bonds_ = other.bonds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBondsIsMutable();
+              bonds_.addAll(other.bonds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bonds_.isEmpty()) {
+            if (bondsBuilder_.isEmpty()) {
+              bondsBuilder_.dispose();
+              bondsBuilder_ = null;
+              bonds_ = other.bonds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              bondsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBondsFieldBuilder() : null;
+            } else {
+              bondsBuilder_.addAllMessages(other.bonds_);
+            }
+          }
+        }
+        if (batchesBuilder_ == null) {
+          if (!other.batches_.isEmpty()) {
+            if (batches_.isEmpty()) {
+              batches_ = other.batches_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBatchesIsMutable();
+              batches_.addAll(other.batches_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.batches_.isEmpty()) {
+            if (batchesBuilder_.isEmpty()) {
+              batchesBuilder_.dispose();
+              batchesBuilder_ = null;
+              batches_ = other.batches_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              batchesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBatchesFieldBuilder() : null;
+            } else {
+              batchesBuilder_.addAllMessages(other.batches_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.ixo.bonds.v1beta1.BondsProto.Bond m =
+                    input.readMessage(
+                        com.ixo.bonds.v1beta1.BondsProto.Bond.parser(),
+                        extensionRegistry);
+                if (bondsBuilder_ == null) {
+                  ensureBondsIsMutable();
+                  bonds_.add(m);
+                } else {
+                  bondsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.ixo.bonds.v1beta1.BondsProto.Batch m =
+                    input.readMessage(
+                        com.ixo.bonds.v1beta1.BondsProto.Batch.parser(),
+                        extensionRegistry);
+                if (batchesBuilder_ == null) {
+                  ensureBatchesIsMutable();
+                  batches_.add(m);
+                } else {
+                  batchesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.ixo.bonds.v1beta1.BondsProto.Bond> bonds_ =
+        java.util.Collections.emptyList();
+      private void ensureBondsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          bonds_ = new java.util.ArrayList<com.ixo.bonds.v1beta1.BondsProto.Bond>(bonds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.bonds.v1beta1.BondsProto.Bond, com.ixo.bonds.v1beta1.BondsProto.Bond.Builder, com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder> bondsBuilder_;
+
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public java.util.List<com.ixo.bonds.v1beta1.BondsProto.Bond> getBondsList() {
+        if (bondsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bonds_);
+        } else {
+          return bondsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public int getBondsCount() {
+        if (bondsBuilder_ == null) {
+          return bonds_.size();
+        } else {
+          return bondsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Bond getBonds(int index) {
+        if (bondsBuilder_ == null) {
+          return bonds_.get(index);
+        } else {
+          return bondsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder setBonds(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Bond value) {
+        if (bondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondsIsMutable();
+          bonds_.set(index, value);
+          onChanged();
+        } else {
+          bondsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder setBonds(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Bond.Builder builderForValue) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder addBonds(com.ixo.bonds.v1beta1.BondsProto.Bond value) {
+        if (bondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondsIsMutable();
+          bonds_.add(value);
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder addBonds(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Bond value) {
+        if (bondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondsIsMutable();
+          bonds_.add(index, value);
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder addBonds(
+          com.ixo.bonds.v1beta1.BondsProto.Bond.Builder builderForValue) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder addBonds(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Bond.Builder builderForValue) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder addAllBonds(
+          java.lang.Iterable<? extends com.ixo.bonds.v1beta1.BondsProto.Bond> values) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bonds_);
+          onChanged();
+        } else {
+          bondsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder clearBonds() {
+        if (bondsBuilder_ == null) {
+          bonds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          bondsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public Builder removeBonds(int index) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.remove(index);
+          onChanged();
+        } else {
+          bondsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Bond.Builder getBondsBuilder(
+          int index) {
+        return getBondsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder getBondsOrBuilder(
+          int index) {
+        if (bondsBuilder_ == null) {
+          return bonds_.get(index);  } else {
+          return bondsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public java.util.List<? extends com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder> 
+           getBondsOrBuilderList() {
+        if (bondsBuilder_ != null) {
+          return bondsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bonds_);
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Bond.Builder addBondsBuilder() {
+        return getBondsFieldBuilder().addBuilder(
+            com.ixo.bonds.v1beta1.BondsProto.Bond.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Bond.Builder addBondsBuilder(
+          int index) {
+        return getBondsFieldBuilder().addBuilder(
+            index, com.ixo.bonds.v1beta1.BondsProto.Bond.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Bond bonds = 1 [json_name = "bonds", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"bonds&#92;""];</code>
+       */
+      public java.util.List<com.ixo.bonds.v1beta1.BondsProto.Bond.Builder> 
+           getBondsBuilderList() {
+        return getBondsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.bonds.v1beta1.BondsProto.Bond, com.ixo.bonds.v1beta1.BondsProto.Bond.Builder, com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder> 
+          getBondsFieldBuilder() {
+        if (bondsBuilder_ == null) {
+          bondsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.bonds.v1beta1.BondsProto.Bond, com.ixo.bonds.v1beta1.BondsProto.Bond.Builder, com.ixo.bonds.v1beta1.BondsProto.BondOrBuilder>(
+                  bonds_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bonds_ = null;
+        }
+        return bondsBuilder_;
+      }
+
+      private java.util.List<com.ixo.bonds.v1beta1.BondsProto.Batch> batches_ =
+        java.util.Collections.emptyList();
+      private void ensureBatchesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          batches_ = new java.util.ArrayList<com.ixo.bonds.v1beta1.BondsProto.Batch>(batches_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.bonds.v1beta1.BondsProto.Batch, com.ixo.bonds.v1beta1.BondsProto.Batch.Builder, com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder> batchesBuilder_;
+
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public java.util.List<com.ixo.bonds.v1beta1.BondsProto.Batch> getBatchesList() {
+        if (batchesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(batches_);
+        } else {
+          return batchesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public int getBatchesCount() {
+        if (batchesBuilder_ == null) {
+          return batches_.size();
+        } else {
+          return batchesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Batch getBatches(int index) {
+        if (batchesBuilder_ == null) {
+          return batches_.get(index);
+        } else {
+          return batchesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder setBatches(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Batch value) {
+        if (batchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchesIsMutable();
+          batches_.set(index, value);
+          onChanged();
+        } else {
+          batchesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder setBatches(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Batch.Builder builderForValue) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder addBatches(com.ixo.bonds.v1beta1.BondsProto.Batch value) {
+        if (batchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchesIsMutable();
+          batches_.add(value);
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder addBatches(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Batch value) {
+        if (batchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBatchesIsMutable();
+          batches_.add(index, value);
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder addBatches(
+          com.ixo.bonds.v1beta1.BondsProto.Batch.Builder builderForValue) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.add(builderForValue.build());
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder addBatches(
+          int index, com.ixo.bonds.v1beta1.BondsProto.Batch.Builder builderForValue) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          batchesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder addAllBatches(
+          java.lang.Iterable<? extends com.ixo.bonds.v1beta1.BondsProto.Batch> values) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, batches_);
+          onChanged();
+        } else {
+          batchesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder clearBatches() {
+        if (batchesBuilder_ == null) {
+          batches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          batchesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public Builder removeBatches(int index) {
+        if (batchesBuilder_ == null) {
+          ensureBatchesIsMutable();
+          batches_.remove(index);
+          onChanged();
+        } else {
+          batchesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Batch.Builder getBatchesBuilder(
+          int index) {
+        return getBatchesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder getBatchesOrBuilder(
+          int index) {
+        if (batchesBuilder_ == null) {
+          return batches_.get(index);  } else {
+          return batchesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public java.util.List<? extends com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder> 
+           getBatchesOrBuilderList() {
+        if (batchesBuilder_ != null) {
+          return batchesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(batches_);
+        }
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Batch.Builder addBatchesBuilder() {
+        return getBatchesFieldBuilder().addBuilder(
+            com.ixo.bonds.v1beta1.BondsProto.Batch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Batch.Builder addBatchesBuilder(
+          int index) {
+        return getBatchesFieldBuilder().addBuilder(
+            index, com.ixo.bonds.v1beta1.BondsProto.Batch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.bonds.v1beta1.Batch batches = 2 [json_name = "batches", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"batches&#92;""];</code>
+       */
+      public java.util.List<com.ixo.bonds.v1beta1.BondsProto.Batch.Builder> 
+           getBatchesBuilderList() {
+        return getBatchesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.bonds.v1beta1.BondsProto.Batch, com.ixo.bonds.v1beta1.BondsProto.Batch.Builder, com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder> 
+          getBatchesFieldBuilder() {
+        if (batchesBuilder_ == null) {
+          batchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.bonds.v1beta1.BondsProto.Batch, com.ixo.bonds.v1beta1.BondsProto.Batch.Builder, com.ixo.bonds.v1beta1.BondsProto.BatchOrBuilder>(
+                  batches_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          batches_ = null;
+        }
+        return batchesBuilder_;
+      }
+
+      private com.ixo.bonds.v1beta1.BondsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.bonds.v1beta1.BondsProto.Params, com.ixo.bonds.v1beta1.BondsProto.Params.Builder, com.ixo.bonds.v1beta1.BondsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       * @return The params.
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.ixo.bonds.v1beta1.BondsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(com.ixo.bonds.v1beta1.BondsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder setParams(
+          com.ixo.bonds.v1beta1.BondsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder mergeParams(com.ixo.bonds.v1beta1.BondsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            params_ != null &&
+            params_ != com.ixo.bonds.v1beta1.BondsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      public com.ixo.bonds.v1beta1.BondsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.ixo.bonds.v1beta1.BondsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.ixo.bonds.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.bonds.v1beta1.BondsProto.Params, com.ixo.bonds.v1beta1.BondsProto.Params.Builder, com.ixo.bonds.v1beta1.BondsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.bonds.v1beta1.BondsProto.Params, com.ixo.bonds.v1beta1.BondsProto.Params.Builder, com.ixo.bonds.v1beta1.BondsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.bonds.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.bonds.v1beta1.GenesisState)
+    private static final com.ixo.bonds.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.bonds.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.ixo.bonds.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.bonds.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_bonds_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_bonds_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -36,12 +1396,12 @@ public final class GenesisProto {
       "es\030\002 \003(\0132\030.ixo.bonds.v1beta1.BatchB\026\310\336\037\000" +
       "\362\336\037\016yaml:\"batches\"R\007batches\022H\n\006params\030\003 " +
       "\001(\0132\031.ixo.bonds.v1beta1.ParamsB\025\310\336\037\000\362\336\037\r" +
-      "yaml:\"params\"R\006paramsB\302\001\n\025com.ixo.bonds." +
-      "v1beta1B\014GenesisProtoP\001Z5github.com/ixof" +
-      "oundation/ixo-blockchain/x/bonds/types\242\002" +
-      "\003IBX\252\002\021Ixo.Bonds.V1beta1\312\002\021Ixo\\Bonds\\V1b" +
-      "eta1\342\002\035Ixo\\Bonds\\V1beta1\\GPBMetadata\352\002\023I" +
-      "xo::Bonds::V1beta1b\006proto3"
+      "yaml:\"params\"R\006paramsB\300\001\n\025com.ixo.bonds." +
+      "v1beta1B\014GenesisProtoZ5github.com/ixofou" +
+      "ndation/ixo-blockchain/x/bonds/types\242\002\003I" +
+      "BX\252\002\021Ixo.Bonds.V1beta1\312\002\021Ixo\\Bonds\\V1bet" +
+      "a1\342\002\035Ixo\\Bonds\\V1beta1\\GPBMetadata\352\002\023Ixo" +
+      "::Bonds::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

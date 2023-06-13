@@ -14,14 +14,2346 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.canto.inflation.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.inflation.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * amount of past periods, based on the epochs per period param
+     * </pre>
+     *
+     * <code>uint64 period = 2 [json_name = "period"];</code>
+     * @return The period.
+     */
+    long getPeriod();
+
+    /**
+     * <pre>
+     * inflation epoch identifier
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+     * @return The epochIdentifier.
+     */
+    java.lang.String getEpochIdentifier();
+    /**
+     * <pre>
+     * inflation epoch identifier
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+     * @return The bytes for epochIdentifier.
+     */
+    com.google.protobuf.ByteString
+        getEpochIdentifierBytes();
+
+    /**
+     * <pre>
+     * number of epochs after which inflation is recalculated
+     * </pre>
+     *
+     * <code>int64 epochs_per_period = 4 [json_name = "epochsPerPeriod"];</code>
+     * @return The epochsPerPeriod.
+     */
+    long getEpochsPerPeriod();
+
+    /**
+     * <pre>
+     * number of epochs that have passed while inflation is disabled
+     * </pre>
+     *
+     * <code>uint64 skipped_epochs = 5 [json_name = "skippedEpochs"];</code>
+     * @return The skippedEpochs.
+     */
+    long getSkippedEpochs();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the inflation module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      epochIdentifier_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.GenesisProto.GenesisState.class, com.canto.inflation.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.canto.inflation.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int PERIOD_FIELD_NUMBER = 2;
+    private long period_ = 0L;
+    /**
+     * <pre>
+     * amount of past periods, based on the epochs per period param
+     * </pre>
+     *
+     * <code>uint64 period = 2 [json_name = "period"];</code>
+     * @return The period.
+     */
+    @java.lang.Override
+    public long getPeriod() {
+      return period_;
+    }
+
+    public static final int EPOCH_IDENTIFIER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object epochIdentifier_ = "";
+    /**
+     * <pre>
+     * inflation epoch identifier
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+     * @return The epochIdentifier.
+     */
+    @java.lang.Override
+    public java.lang.String getEpochIdentifier() {
+      java.lang.Object ref = epochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        epochIdentifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * inflation epoch identifier
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+     * @return The bytes for epochIdentifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEpochIdentifierBytes() {
+      java.lang.Object ref = epochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        epochIdentifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPOCHS_PER_PERIOD_FIELD_NUMBER = 4;
+    private long epochsPerPeriod_ = 0L;
+    /**
+     * <pre>
+     * number of epochs after which inflation is recalculated
+     * </pre>
+     *
+     * <code>int64 epochs_per_period = 4 [json_name = "epochsPerPeriod"];</code>
+     * @return The epochsPerPeriod.
+     */
+    @java.lang.Override
+    public long getEpochsPerPeriod() {
+      return epochsPerPeriod_;
+    }
+
+    public static final int SKIPPED_EPOCHS_FIELD_NUMBER = 5;
+    private long skippedEpochs_ = 0L;
+    /**
+     * <pre>
+     * number of epochs that have passed while inflation is disabled
+     * </pre>
+     *
+     * <code>uint64 skipped_epochs = 5 [json_name = "skippedEpochs"];</code>
+     * @return The skippedEpochs.
+     */
+    @java.lang.Override
+    public long getSkippedEpochs() {
+      return skippedEpochs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (period_ != 0L) {
+        output.writeUInt64(2, period_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochIdentifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, epochIdentifier_);
+      }
+      if (epochsPerPeriod_ != 0L) {
+        output.writeInt64(4, epochsPerPeriod_);
+      }
+      if (skippedEpochs_ != 0L) {
+        output.writeUInt64(5, skippedEpochs_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (period_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, period_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochIdentifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, epochIdentifier_);
+      }
+      if (epochsPerPeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, epochsPerPeriod_);
+      }
+      if (skippedEpochs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, skippedEpochs_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.GenesisProto.GenesisState other = (com.canto.inflation.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (getPeriod()
+          != other.getPeriod()) return false;
+      if (!getEpochIdentifier()
+          .equals(other.getEpochIdentifier())) return false;
+      if (getEpochsPerPeriod()
+          != other.getEpochsPerPeriod()) return false;
+      if (getSkippedEpochs()
+          != other.getSkippedEpochs()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (37 * hash) + PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPeriod());
+      hash = (37 * hash) + EPOCH_IDENTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getEpochIdentifier().hashCode();
+      hash = (37 * hash) + EPOCHS_PER_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEpochsPerPeriod());
+      hash = (37 * hash) + SKIPPED_EPOCHS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSkippedEpochs());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the inflation module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.GenesisState)
+        com.canto.inflation.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.GenesisProto.GenesisState.class, com.canto.inflation.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        period_ = 0L;
+        epochIdentifier_ = "";
+        epochsPerPeriod_ = 0L;
+        skippedEpochs_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.canto.inflation.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.GenesisProto.GenesisState build() {
+        com.canto.inflation.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.GenesisProto.GenesisState buildPartial() {
+        com.canto.inflation.v1.GenesisProto.GenesisState result = new com.canto.inflation.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.period_ = period_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.epochIdentifier_ = epochIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.epochsPerPeriod_ = epochsPerPeriod_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.skippedEpochs_ = skippedEpochs_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.canto.inflation.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.GenesisProto.GenesisState other) {
+        if (other == com.canto.inflation.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.getPeriod() != 0L) {
+          setPeriod(other.getPeriod());
+        }
+        if (!other.getEpochIdentifier().isEmpty()) {
+          epochIdentifier_ = other.epochIdentifier_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getEpochsPerPeriod() != 0L) {
+          setEpochsPerPeriod(other.getEpochsPerPeriod());
+        }
+        if (other.getSkippedEpochs() != 0L) {
+          setSkippedEpochs(other.getSkippedEpochs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                period_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                epochIdentifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                epochsPerPeriod_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                skippedEpochs_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.canto.inflation.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.GenesisProto.Params, com.canto.inflation.v1.GenesisProto.Params.Builder, com.canto.inflation.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.canto.inflation.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.canto.inflation.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.canto.inflation.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.canto.inflation.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.GenesisProto.Params, com.canto.inflation.v1.GenesisProto.Params.Builder, com.canto.inflation.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.inflation.v1.GenesisProto.Params, com.canto.inflation.v1.GenesisProto.Params.Builder, com.canto.inflation.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private long period_ ;
+      /**
+       * <pre>
+       * amount of past periods, based on the epochs per period param
+       * </pre>
+       *
+       * <code>uint64 period = 2 [json_name = "period"];</code>
+       * @return The period.
+       */
+      @java.lang.Override
+      public long getPeriod() {
+        return period_;
+      }
+      /**
+       * <pre>
+       * amount of past periods, based on the epochs per period param
+       * </pre>
+       *
+       * <code>uint64 period = 2 [json_name = "period"];</code>
+       * @param value The period to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPeriod(long value) {
+
+        period_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of past periods, based on the epochs per period param
+       * </pre>
+       *
+       * <code>uint64 period = 2 [json_name = "period"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        period_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object epochIdentifier_ = "";
+      /**
+       * <pre>
+       * inflation epoch identifier
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+       * @return The epochIdentifier.
+       */
+      public java.lang.String getEpochIdentifier() {
+        java.lang.Object ref = epochIdentifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          epochIdentifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * inflation epoch identifier
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+       * @return The bytes for epochIdentifier.
+       */
+      public com.google.protobuf.ByteString
+          getEpochIdentifierBytes() {
+        java.lang.Object ref = epochIdentifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          epochIdentifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * inflation epoch identifier
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+       * @param value The epochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochIdentifier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        epochIdentifier_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation epoch identifier
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochIdentifier() {
+        epochIdentifier_ = getDefaultInstance().getEpochIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation epoch identifier
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier"];</code>
+       * @param value The bytes for epochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochIdentifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        epochIdentifier_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long epochsPerPeriod_ ;
+      /**
+       * <pre>
+       * number of epochs after which inflation is recalculated
+       * </pre>
+       *
+       * <code>int64 epochs_per_period = 4 [json_name = "epochsPerPeriod"];</code>
+       * @return The epochsPerPeriod.
+       */
+      @java.lang.Override
+      public long getEpochsPerPeriod() {
+        return epochsPerPeriod_;
+      }
+      /**
+       * <pre>
+       * number of epochs after which inflation is recalculated
+       * </pre>
+       *
+       * <code>int64 epochs_per_period = 4 [json_name = "epochsPerPeriod"];</code>
+       * @param value The epochsPerPeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochsPerPeriod(long value) {
+
+        epochsPerPeriod_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of epochs after which inflation is recalculated
+       * </pre>
+       *
+       * <code>int64 epochs_per_period = 4 [json_name = "epochsPerPeriod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochsPerPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        epochsPerPeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long skippedEpochs_ ;
+      /**
+       * <pre>
+       * number of epochs that have passed while inflation is disabled
+       * </pre>
+       *
+       * <code>uint64 skipped_epochs = 5 [json_name = "skippedEpochs"];</code>
+       * @return The skippedEpochs.
+       */
+      @java.lang.Override
+      public long getSkippedEpochs() {
+        return skippedEpochs_;
+      }
+      /**
+       * <pre>
+       * number of epochs that have passed while inflation is disabled
+       * </pre>
+       *
+       * <code>uint64 skipped_epochs = 5 [json_name = "skippedEpochs"];</code>
+       * @param value The skippedEpochs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSkippedEpochs(long value) {
+
+        skippedEpochs_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of epochs that have passed while inflation is disabled
+       * </pre>
+       *
+       * <code>uint64 skipped_epochs = 5 [json_name = "skippedEpochs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSkippedEpochs() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        skippedEpochs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.GenesisState)
+    private static final com.canto.inflation.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.inflation.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    java.lang.String getMintDenom();
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    com.google.protobuf.ByteString
+        getMintDenomBytes();
+
+    /**
+     * <pre>
+     * variables to calculate exponential inflation
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+     * @return Whether the exponentialCalculation field is set.
+     */
+    boolean hasExponentialCalculation();
+    /**
+     * <pre>
+     * variables to calculate exponential inflation
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+     * @return The exponentialCalculation.
+     */
+    com.canto.inflation.v1.InflationProto.ExponentialCalculation getExponentialCalculation();
+    /**
+     * <pre>
+     * variables to calculate exponential inflation
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.inflation.v1.InflationProto.ExponentialCalculationOrBuilder getExponentialCalculationOrBuilder();
+
+    /**
+     * <pre>
+     * inflation distribution of the minted denom
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+     * @return Whether the inflationDistribution field is set.
+     */
+    boolean hasInflationDistribution();
+    /**
+     * <pre>
+     * inflation distribution of the minted denom
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+     * @return The inflationDistribution.
+     */
+    com.canto.inflation.v1.InflationProto.InflationDistribution getInflationDistribution();
+    /**
+     * <pre>
+     * inflation distribution of the minted denom
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+     */
+    com.canto.inflation.v1.InflationProto.InflationDistributionOrBuilder getInflationDistributionOrBuilder();
+
+    /**
+     * <pre>
+     * parameter to enable inflation and halt increasing the skipped_epochs
+     * </pre>
+     *
+     * <code>bool enable_inflation = 4 [json_name = "enableInflation"];</code>
+     * @return The enableInflation.
+     */
+    boolean getEnableInflation();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the inflation module.
+   * </pre>
+   *
+   * Protobuf type {@code canto.inflation.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.inflation.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      mintDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.inflation.v1.GenesisProto.Params.class, com.canto.inflation.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int MINT_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintDenom_ = "";
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getMintDenom() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type of coin to mint
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintDenomBytes() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPONENTIAL_CALCULATION_FIELD_NUMBER = 2;
+    private com.canto.inflation.v1.InflationProto.ExponentialCalculation exponentialCalculation_;
+    /**
+     * <pre>
+     * variables to calculate exponential inflation
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+     * @return Whether the exponentialCalculation field is set.
+     */
+    @java.lang.Override
+    public boolean hasExponentialCalculation() {
+      return exponentialCalculation_ != null;
+    }
+    /**
+     * <pre>
+     * variables to calculate exponential inflation
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+     * @return The exponentialCalculation.
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.InflationProto.ExponentialCalculation getExponentialCalculation() {
+      return exponentialCalculation_ == null ? com.canto.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance() : exponentialCalculation_;
+    }
+    /**
+     * <pre>
+     * variables to calculate exponential inflation
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.InflationProto.ExponentialCalculationOrBuilder getExponentialCalculationOrBuilder() {
+      return exponentialCalculation_ == null ? com.canto.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance() : exponentialCalculation_;
+    }
+
+    public static final int INFLATION_DISTRIBUTION_FIELD_NUMBER = 3;
+    private com.canto.inflation.v1.InflationProto.InflationDistribution inflationDistribution_;
+    /**
+     * <pre>
+     * inflation distribution of the minted denom
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+     * @return Whether the inflationDistribution field is set.
+     */
+    @java.lang.Override
+    public boolean hasInflationDistribution() {
+      return inflationDistribution_ != null;
+    }
+    /**
+     * <pre>
+     * inflation distribution of the minted denom
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+     * @return The inflationDistribution.
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.InflationProto.InflationDistribution getInflationDistribution() {
+      return inflationDistribution_ == null ? com.canto.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance() : inflationDistribution_;
+    }
+    /**
+     * <pre>
+     * inflation distribution of the minted denom
+     * </pre>
+     *
+     * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.canto.inflation.v1.InflationProto.InflationDistributionOrBuilder getInflationDistributionOrBuilder() {
+      return inflationDistribution_ == null ? com.canto.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance() : inflationDistribution_;
+    }
+
+    public static final int ENABLE_INFLATION_FIELD_NUMBER = 4;
+    private boolean enableInflation_ = false;
+    /**
+     * <pre>
+     * parameter to enable inflation and halt increasing the skipped_epochs
+     * </pre>
+     *
+     * <code>bool enable_inflation = 4 [json_name = "enableInflation"];</code>
+     * @return The enableInflation.
+     */
+    @java.lang.Override
+    public boolean getEnableInflation() {
+      return enableInflation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintDenom_);
+      }
+      if (exponentialCalculation_ != null) {
+        output.writeMessage(2, getExponentialCalculation());
+      }
+      if (inflationDistribution_ != null) {
+        output.writeMessage(3, getInflationDistribution());
+      }
+      if (enableInflation_ != false) {
+        output.writeBool(4, enableInflation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintDenom_);
+      }
+      if (exponentialCalculation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getExponentialCalculation());
+      }
+      if (inflationDistribution_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getInflationDistribution());
+      }
+      if (enableInflation_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, enableInflation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.inflation.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.canto.inflation.v1.GenesisProto.Params other = (com.canto.inflation.v1.GenesisProto.Params) obj;
+
+      if (!getMintDenom()
+          .equals(other.getMintDenom())) return false;
+      if (hasExponentialCalculation() != other.hasExponentialCalculation()) return false;
+      if (hasExponentialCalculation()) {
+        if (!getExponentialCalculation()
+            .equals(other.getExponentialCalculation())) return false;
+      }
+      if (hasInflationDistribution() != other.hasInflationDistribution()) return false;
+      if (hasInflationDistribution()) {
+        if (!getInflationDistribution()
+            .equals(other.getInflationDistribution())) return false;
+      }
+      if (getEnableInflation()
+          != other.getEnableInflation()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getMintDenom().hashCode();
+      if (hasExponentialCalculation()) {
+        hash = (37 * hash) + EXPONENTIAL_CALCULATION_FIELD_NUMBER;
+        hash = (53 * hash) + getExponentialCalculation().hashCode();
+      }
+      if (hasInflationDistribution()) {
+        hash = (37 * hash) + INFLATION_DISTRIBUTION_FIELD_NUMBER;
+        hash = (53 * hash) + getInflationDistribution().hashCode();
+      }
+      hash = (37 * hash) + ENABLE_INFLATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableInflation());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.inflation.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.inflation.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the inflation module.
+     * </pre>
+     *
+     * Protobuf type {@code canto.inflation.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.inflation.v1.Params)
+        com.canto.inflation.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.inflation.v1.GenesisProto.Params.class, com.canto.inflation.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.canto.inflation.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintDenom_ = "";
+        exponentialCalculation_ = null;
+        if (exponentialCalculationBuilder_ != null) {
+          exponentialCalculationBuilder_.dispose();
+          exponentialCalculationBuilder_ = null;
+        }
+        inflationDistribution_ = null;
+        if (inflationDistributionBuilder_ != null) {
+          inflationDistributionBuilder_.dispose();
+          inflationDistributionBuilder_ = null;
+        }
+        enableInflation_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.inflation.v1.GenesisProto.internal_static_canto_inflation_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.GenesisProto.Params build() {
+        com.canto.inflation.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.inflation.v1.GenesisProto.Params buildPartial() {
+        com.canto.inflation.v1.GenesisProto.Params result = new com.canto.inflation.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.inflation.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintDenom_ = mintDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.exponentialCalculation_ = exponentialCalculationBuilder_ == null
+              ? exponentialCalculation_
+              : exponentialCalculationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.inflationDistribution_ = inflationDistributionBuilder_ == null
+              ? inflationDistribution_
+              : inflationDistributionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.enableInflation_ = enableInflation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.inflation.v1.GenesisProto.Params) {
+          return mergeFrom((com.canto.inflation.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.inflation.v1.GenesisProto.Params other) {
+        if (other == com.canto.inflation.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (!other.getMintDenom().isEmpty()) {
+          mintDenom_ = other.mintDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasExponentialCalculation()) {
+          mergeExponentialCalculation(other.getExponentialCalculation());
+        }
+        if (other.hasInflationDistribution()) {
+          mergeInflationDistribution(other.getInflationDistribution());
+        }
+        if (other.getEnableInflation() != false) {
+          setEnableInflation(other.getEnableInflation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getExponentialCalculationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getInflationDistributionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                enableInflation_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintDenom_ = "";
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The mintDenom.
+       */
+      public java.lang.String getMintDenom() {
+        java.lang.Object ref = mintDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The bytes for mintDenom.
+       */
+      public com.google.protobuf.ByteString
+          getMintDenomBytes() {
+        java.lang.Object ref = mintDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintDenom() {
+        mintDenom_ = getDefaultInstance().getMintDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of coin to mint
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The bytes for mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.canto.inflation.v1.InflationProto.ExponentialCalculation exponentialCalculation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.InflationProto.ExponentialCalculation, com.canto.inflation.v1.InflationProto.ExponentialCalculation.Builder, com.canto.inflation.v1.InflationProto.ExponentialCalculationOrBuilder> exponentialCalculationBuilder_;
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       * @return Whether the exponentialCalculation field is set.
+       */
+      public boolean hasExponentialCalculation() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       * @return The exponentialCalculation.
+       */
+      public com.canto.inflation.v1.InflationProto.ExponentialCalculation getExponentialCalculation() {
+        if (exponentialCalculationBuilder_ == null) {
+          return exponentialCalculation_ == null ? com.canto.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance() : exponentialCalculation_;
+        } else {
+          return exponentialCalculationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExponentialCalculation(com.canto.inflation.v1.InflationProto.ExponentialCalculation value) {
+        if (exponentialCalculationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          exponentialCalculation_ = value;
+        } else {
+          exponentialCalculationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExponentialCalculation(
+          com.canto.inflation.v1.InflationProto.ExponentialCalculation.Builder builderForValue) {
+        if (exponentialCalculationBuilder_ == null) {
+          exponentialCalculation_ = builderForValue.build();
+        } else {
+          exponentialCalculationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeExponentialCalculation(com.canto.inflation.v1.InflationProto.ExponentialCalculation value) {
+        if (exponentialCalculationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            exponentialCalculation_ != null &&
+            exponentialCalculation_ != com.canto.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance()) {
+            getExponentialCalculationBuilder().mergeFrom(value);
+          } else {
+            exponentialCalculation_ = value;
+          }
+        } else {
+          exponentialCalculationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearExponentialCalculation() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        exponentialCalculation_ = null;
+        if (exponentialCalculationBuilder_ != null) {
+          exponentialCalculationBuilder_.dispose();
+          exponentialCalculationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.InflationProto.ExponentialCalculation.Builder getExponentialCalculationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getExponentialCalculationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.InflationProto.ExponentialCalculationOrBuilder getExponentialCalculationOrBuilder() {
+        if (exponentialCalculationBuilder_ != null) {
+          return exponentialCalculationBuilder_.getMessageOrBuilder();
+        } else {
+          return exponentialCalculation_ == null ?
+              com.canto.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance() : exponentialCalculation_;
+        }
+      }
+      /**
+       * <pre>
+       * variables to calculate exponential inflation
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.ExponentialCalculation exponential_calculation = 2 [json_name = "exponentialCalculation", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.InflationProto.ExponentialCalculation, com.canto.inflation.v1.InflationProto.ExponentialCalculation.Builder, com.canto.inflation.v1.InflationProto.ExponentialCalculationOrBuilder> 
+          getExponentialCalculationFieldBuilder() {
+        if (exponentialCalculationBuilder_ == null) {
+          exponentialCalculationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.inflation.v1.InflationProto.ExponentialCalculation, com.canto.inflation.v1.InflationProto.ExponentialCalculation.Builder, com.canto.inflation.v1.InflationProto.ExponentialCalculationOrBuilder>(
+                  getExponentialCalculation(),
+                  getParentForChildren(),
+                  isClean());
+          exponentialCalculation_ = null;
+        }
+        return exponentialCalculationBuilder_;
+      }
+
+      private com.canto.inflation.v1.InflationProto.InflationDistribution inflationDistribution_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.InflationProto.InflationDistribution, com.canto.inflation.v1.InflationProto.InflationDistribution.Builder, com.canto.inflation.v1.InflationProto.InflationDistributionOrBuilder> inflationDistributionBuilder_;
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       * @return Whether the inflationDistribution field is set.
+       */
+      public boolean hasInflationDistribution() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       * @return The inflationDistribution.
+       */
+      public com.canto.inflation.v1.InflationProto.InflationDistribution getInflationDistribution() {
+        if (inflationDistributionBuilder_ == null) {
+          return inflationDistribution_ == null ? com.canto.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance() : inflationDistribution_;
+        } else {
+          return inflationDistributionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInflationDistribution(com.canto.inflation.v1.InflationProto.InflationDistribution value) {
+        if (inflationDistributionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inflationDistribution_ = value;
+        } else {
+          inflationDistributionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setInflationDistribution(
+          com.canto.inflation.v1.InflationProto.InflationDistribution.Builder builderForValue) {
+        if (inflationDistributionBuilder_ == null) {
+          inflationDistribution_ = builderForValue.build();
+        } else {
+          inflationDistributionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeInflationDistribution(com.canto.inflation.v1.InflationProto.InflationDistribution value) {
+        if (inflationDistributionBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            inflationDistribution_ != null &&
+            inflationDistribution_ != com.canto.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance()) {
+            getInflationDistributionBuilder().mergeFrom(value);
+          } else {
+            inflationDistribution_ = value;
+          }
+        } else {
+          inflationDistributionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearInflationDistribution() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        inflationDistribution_ = null;
+        if (inflationDistributionBuilder_ != null) {
+          inflationDistributionBuilder_.dispose();
+          inflationDistributionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.InflationProto.InflationDistribution.Builder getInflationDistributionBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getInflationDistributionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      public com.canto.inflation.v1.InflationProto.InflationDistributionOrBuilder getInflationDistributionOrBuilder() {
+        if (inflationDistributionBuilder_ != null) {
+          return inflationDistributionBuilder_.getMessageOrBuilder();
+        } else {
+          return inflationDistribution_ == null ?
+              com.canto.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance() : inflationDistribution_;
+        }
+      }
+      /**
+       * <pre>
+       * inflation distribution of the minted denom
+       * </pre>
+       *
+       * <code>.canto.inflation.v1.InflationDistribution inflation_distribution = 3 [json_name = "inflationDistribution", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.inflation.v1.InflationProto.InflationDistribution, com.canto.inflation.v1.InflationProto.InflationDistribution.Builder, com.canto.inflation.v1.InflationProto.InflationDistributionOrBuilder> 
+          getInflationDistributionFieldBuilder() {
+        if (inflationDistributionBuilder_ == null) {
+          inflationDistributionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.inflation.v1.InflationProto.InflationDistribution, com.canto.inflation.v1.InflationProto.InflationDistribution.Builder, com.canto.inflation.v1.InflationProto.InflationDistributionOrBuilder>(
+                  getInflationDistribution(),
+                  getParentForChildren(),
+                  isClean());
+          inflationDistribution_ = null;
+        }
+        return inflationDistributionBuilder_;
+      }
+
+      private boolean enableInflation_ ;
+      /**
+       * <pre>
+       * parameter to enable inflation and halt increasing the skipped_epochs
+       * </pre>
+       *
+       * <code>bool enable_inflation = 4 [json_name = "enableInflation"];</code>
+       * @return The enableInflation.
+       */
+      @java.lang.Override
+      public boolean getEnableInflation() {
+        return enableInflation_;
+      }
+      /**
+       * <pre>
+       * parameter to enable inflation and halt increasing the skipped_epochs
+       * </pre>
+       *
+       * <code>bool enable_inflation = 4 [json_name = "enableInflation"];</code>
+       * @param value The enableInflation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableInflation(boolean value) {
+
+        enableInflation_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * parameter to enable inflation and halt increasing the skipped_epochs
+       * </pre>
+       *
+       * <code>bool enable_inflation = 4 [json_name = "enableInflation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableInflation() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        enableInflation_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.inflation.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.inflation.v1.Params)
+    private static final com.canto.inflation.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.inflation.v1.GenesisProto.Params();
+    }
+
+    public static com.canto.inflation.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.inflation.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_inflation_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_inflation_v1_Params_fieldAccessorTable;
 
@@ -48,13 +2380,12 @@ public final class GenesisProto {
       "lation\022f\n\026inflation_distribution\030\003 \001(\0132)" +
       ".canto.inflation.v1.InflationDistributio" +
       "nB\004\310\336\037\000R\025inflationDistribution\022)\n\020enable" +
-      "_inflation\030\004 \001(\010R\017enableInflationB\305\001\n\026co" +
-      "m.canto.inflation.v1B\014GenesisProtoP\001Z3gi" +
-      "thub.com/Canto-Network/Canto/v6/x/inflat" +
-      "ion/types\242\002\003CIX\252\002\022Canto.Inflation.V1\312\002\022C" +
-      "anto\\Inflation\\V1\342\002\036Canto\\Inflation\\V1\\G" +
-      "PBMetadata\352\002\024Canto::Inflation::V1b\006proto" +
-      "3"
+      "_inflation\030\004 \001(\010R\017enableInflationB\303\001\n\026co" +
+      "m.canto.inflation.v1B\014GenesisProtoZ3gith" +
+      "ub.com/Canto-Network/Canto/v6/x/inflatio" +
+      "n/types\242\002\003CIX\252\002\022Canto.Inflation.V1\312\002\022Can" +
+      "to\\Inflation\\V1\342\002\036Canto\\Inflation\\V1\\GPB" +
+      "Metadata\352\002\024Canto::Inflation::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

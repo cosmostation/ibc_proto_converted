@@ -14,24 +14,4488 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * MediaType defines MIME media types to be used with a ContentHash.Raw hash.
+   * </pre>
+   *
+   * Protobuf enum {@code regen.data.v1alpha2.MediaType}
+   */
+  public enum MediaType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * MEDIA_TYPE_UNSPECIFIED can be used for raw binary data
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_UNSPECIFIED = 0;</code>
+     */
+    MEDIA_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * plain text
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_TEXT_PLAIN = 1;</code>
+     */
+    MEDIA_TYPE_TEXT_PLAIN(1),
+    /**
+     * <pre>
+     * JSON
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_JSON = 2;</code>
+     */
+    MEDIA_TYPE_JSON(2),
+    /**
+     * <pre>
+     * CSV
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_CSV = 3;</code>
+     */
+    MEDIA_TYPE_CSV(3),
+    /**
+     * <pre>
+     * XML
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_XML = 4;</code>
+     */
+    MEDIA_TYPE_XML(4),
+    /**
+     * <pre>
+     * PDF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_PDF = 5;</code>
+     */
+    MEDIA_TYPE_PDF(5),
+    /**
+     * <pre>
+     * TIIF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_TIFF = 16;</code>
+     */
+    MEDIA_TYPE_TIFF(16),
+    /**
+     * <pre>
+     * JPG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_JPG = 17;</code>
+     */
+    MEDIA_TYPE_JPG(17),
+    /**
+     * <pre>
+     * PNG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_PNG = 18;</code>
+     */
+    MEDIA_TYPE_PNG(18),
+    /**
+     * <pre>
+     * SVG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_SVG = 19;</code>
+     */
+    MEDIA_TYPE_SVG(19),
+    /**
+     * <pre>
+     * WEBP
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_WEBP = 20;</code>
+     */
+    MEDIA_TYPE_WEBP(20),
+    /**
+     * <pre>
+     * AVIF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_AVIF = 21;</code>
+     */
+    MEDIA_TYPE_AVIF(21),
+    /**
+     * <pre>
+     * GIF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_GIF = 22;</code>
+     */
+    MEDIA_TYPE_GIF(22),
+    /**
+     * <pre>
+     * APNG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_APNG = 23;</code>
+     */
+    MEDIA_TYPE_APNG(23),
+    /**
+     * <pre>
+     * MPEG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_MPEG = 32;</code>
+     */
+    MEDIA_TYPE_MPEG(32),
+    /**
+     * <pre>
+     * MP4
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_MP4 = 33;</code>
+     */
+    MEDIA_TYPE_MP4(33),
+    /**
+     * <pre>
+     * WEBM
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_WEBM = 34;</code>
+     */
+    MEDIA_TYPE_WEBM(34),
+    /**
+     * <pre>
+     * OGG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_OGG = 35;</code>
+     */
+    MEDIA_TYPE_OGG(35),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * MEDIA_TYPE_UNSPECIFIED can be used for raw binary data
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int MEDIA_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * plain text
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_TEXT_PLAIN = 1;</code>
+     */
+    public static final int MEDIA_TYPE_TEXT_PLAIN_VALUE = 1;
+    /**
+     * <pre>
+     * JSON
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_JSON = 2;</code>
+     */
+    public static final int MEDIA_TYPE_JSON_VALUE = 2;
+    /**
+     * <pre>
+     * CSV
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_CSV = 3;</code>
+     */
+    public static final int MEDIA_TYPE_CSV_VALUE = 3;
+    /**
+     * <pre>
+     * XML
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_XML = 4;</code>
+     */
+    public static final int MEDIA_TYPE_XML_VALUE = 4;
+    /**
+     * <pre>
+     * PDF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_PDF = 5;</code>
+     */
+    public static final int MEDIA_TYPE_PDF_VALUE = 5;
+    /**
+     * <pre>
+     * TIIF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_TIFF = 16;</code>
+     */
+    public static final int MEDIA_TYPE_TIFF_VALUE = 16;
+    /**
+     * <pre>
+     * JPG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_JPG = 17;</code>
+     */
+    public static final int MEDIA_TYPE_JPG_VALUE = 17;
+    /**
+     * <pre>
+     * PNG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_PNG = 18;</code>
+     */
+    public static final int MEDIA_TYPE_PNG_VALUE = 18;
+    /**
+     * <pre>
+     * SVG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_SVG = 19;</code>
+     */
+    public static final int MEDIA_TYPE_SVG_VALUE = 19;
+    /**
+     * <pre>
+     * WEBP
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_WEBP = 20;</code>
+     */
+    public static final int MEDIA_TYPE_WEBP_VALUE = 20;
+    /**
+     * <pre>
+     * AVIF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_AVIF = 21;</code>
+     */
+    public static final int MEDIA_TYPE_AVIF_VALUE = 21;
+    /**
+     * <pre>
+     * GIF
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_GIF = 22;</code>
+     */
+    public static final int MEDIA_TYPE_GIF_VALUE = 22;
+    /**
+     * <pre>
+     * APNG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_APNG = 23;</code>
+     */
+    public static final int MEDIA_TYPE_APNG_VALUE = 23;
+    /**
+     * <pre>
+     * MPEG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_MPEG = 32;</code>
+     */
+    public static final int MEDIA_TYPE_MPEG_VALUE = 32;
+    /**
+     * <pre>
+     * MP4
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_MP4 = 33;</code>
+     */
+    public static final int MEDIA_TYPE_MP4_VALUE = 33;
+    /**
+     * <pre>
+     * WEBM
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_WEBM = 34;</code>
+     */
+    public static final int MEDIA_TYPE_WEBM_VALUE = 34;
+    /**
+     * <pre>
+     * OGG
+     * </pre>
+     *
+     * <code>MEDIA_TYPE_OGG = 35;</code>
+     */
+    public static final int MEDIA_TYPE_OGG_VALUE = 35;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MediaType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static MediaType forNumber(int value) {
+      switch (value) {
+        case 0: return MEDIA_TYPE_UNSPECIFIED;
+        case 1: return MEDIA_TYPE_TEXT_PLAIN;
+        case 2: return MEDIA_TYPE_JSON;
+        case 3: return MEDIA_TYPE_CSV;
+        case 4: return MEDIA_TYPE_XML;
+        case 5: return MEDIA_TYPE_PDF;
+        case 16: return MEDIA_TYPE_TIFF;
+        case 17: return MEDIA_TYPE_JPG;
+        case 18: return MEDIA_TYPE_PNG;
+        case 19: return MEDIA_TYPE_SVG;
+        case 20: return MEDIA_TYPE_WEBP;
+        case 21: return MEDIA_TYPE_AVIF;
+        case 22: return MEDIA_TYPE_GIF;
+        case 23: return MEDIA_TYPE_APNG;
+        case 32: return MEDIA_TYPE_MPEG;
+        case 33: return MEDIA_TYPE_MP4;
+        case 34: return MEDIA_TYPE_WEBM;
+        case 35: return MEDIA_TYPE_OGG;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MediaType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MediaType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MediaType>() {
+            public MediaType findValueByNumber(int number) {
+              return MediaType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final MediaType[] VALUES = values();
+
+    public static MediaType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private MediaType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:regen.data.v1alpha2.MediaType)
+  }
+
+  /**
+   * <pre>
+   * GraphCanonicalizationAlgorithm is the graph canonicalization algorithm
+   * </pre>
+   *
+   * Protobuf enum {@code regen.data.v1alpha2.GraphCanonicalizationAlgorithm}
+   */
+  public enum GraphCanonicalizationAlgorithm
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * unspecified and invalid
+     * </pre>
+     *
+     * <code>GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED = 0;</code>
+     */
+    GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * URDNA2015 graph hashing
+     * </pre>
+     *
+     * <code>GRAPH_CANONICALIZATION_ALGORITHM_URDNA2015 = 1;</code>
+     */
+    GRAPH_CANONICALIZATION_ALGORITHM_URDNA2015(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * unspecified and invalid
+     * </pre>
+     *
+     * <code>GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED = 0;</code>
+     */
+    public static final int GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * URDNA2015 graph hashing
+     * </pre>
+     *
+     * <code>GRAPH_CANONICALIZATION_ALGORITHM_URDNA2015 = 1;</code>
+     */
+    public static final int GRAPH_CANONICALIZATION_ALGORITHM_URDNA2015_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GraphCanonicalizationAlgorithm valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GraphCanonicalizationAlgorithm forNumber(int value) {
+      switch (value) {
+        case 0: return GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED;
+        case 1: return GRAPH_CANONICALIZATION_ALGORITHM_URDNA2015;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GraphCanonicalizationAlgorithm>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GraphCanonicalizationAlgorithm> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GraphCanonicalizationAlgorithm>() {
+            public GraphCanonicalizationAlgorithm findValueByNumber(int number) {
+              return GraphCanonicalizationAlgorithm.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TypesProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final GraphCanonicalizationAlgorithm[] VALUES = values();
+
+    public static GraphCanonicalizationAlgorithm valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GraphCanonicalizationAlgorithm(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:regen.data.v1alpha2.GraphCanonicalizationAlgorithm)
+  }
+
+  /**
+   * <pre>
+   * GraphMerkleTree is the graph merkle tree type used for hashing, if any
+   * </pre>
+   *
+   * Protobuf enum {@code regen.data.v1alpha2.GraphMerkleTree}
+   */
+  public enum GraphMerkleTree
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * no merkle tree
+     * </pre>
+     *
+     * <code>GRAPH_MERKLE_TREE_NONE_UNSPECIFIED = 0;</code>
+     */
+    GRAPH_MERKLE_TREE_NONE_UNSPECIFIED(0),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * no merkle tree
+     * </pre>
+     *
+     * <code>GRAPH_MERKLE_TREE_NONE_UNSPECIFIED = 0;</code>
+     */
+    public static final int GRAPH_MERKLE_TREE_NONE_UNSPECIFIED_VALUE = 0;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GraphMerkleTree valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GraphMerkleTree forNumber(int value) {
+      switch (value) {
+        case 0: return GRAPH_MERKLE_TREE_NONE_UNSPECIFIED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GraphMerkleTree>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GraphMerkleTree> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GraphMerkleTree>() {
+            public GraphMerkleTree findValueByNumber(int number) {
+              return GraphMerkleTree.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TypesProto.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final GraphMerkleTree[] VALUES = values();
+
+    public static GraphMerkleTree valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GraphMerkleTree(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:regen.data.v1alpha2.GraphMerkleTree)
+  }
+
+  /**
+   * <pre>
+   * DigestAlgorithm is the hash digest algorithm
+   * </pre>
+   *
+   * Protobuf enum {@code regen.data.v1alpha2.DigestAlgorithm}
+   */
+  public enum DigestAlgorithm
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * unspecified and invalid
+     * </pre>
+     *
+     * <code>DIGEST_ALGORITHM_UNSPECIFIED = 0;</code>
+     */
+    DIGEST_ALGORITHM_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * BLAKE2b-256
+     * </pre>
+     *
+     * <code>DIGEST_ALGORITHM_BLAKE2B_256 = 1;</code>
+     */
+    DIGEST_ALGORITHM_BLAKE2B_256(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * unspecified and invalid
+     * </pre>
+     *
+     * <code>DIGEST_ALGORITHM_UNSPECIFIED = 0;</code>
+     */
+    public static final int DIGEST_ALGORITHM_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * BLAKE2b-256
+     * </pre>
+     *
+     * <code>DIGEST_ALGORITHM_BLAKE2B_256 = 1;</code>
+     */
+    public static final int DIGEST_ALGORITHM_BLAKE2B_256_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DigestAlgorithm valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DigestAlgorithm forNumber(int value) {
+      switch (value) {
+        case 0: return DIGEST_ALGORITHM_UNSPECIFIED;
+        case 1: return DIGEST_ALGORITHM_BLAKE2B_256;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DigestAlgorithm>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DigestAlgorithm> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DigestAlgorithm>() {
+            public DigestAlgorithm findValueByNumber(int number) {
+              return DigestAlgorithm.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TypesProto.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final DigestAlgorithm[] VALUES = values();
+
+    public static DigestAlgorithm valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DigestAlgorithm(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:regen.data.v1alpha2.DigestAlgorithm)
+  }
+
+  public interface ContentHashOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.ContentHash)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+     * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+     * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+     * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+     * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+     * @return Whether the raw field is set.
+     */
+    boolean hasRaw();
+    /**
+     * <pre>
+     * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+     * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+     * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+     * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+     * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+     * @return The raw.
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash.Raw getRaw();
+    /**
+     * <pre>
+     * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+     * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+     * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+     * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+     * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder getRawOrBuilder();
+
+    /**
+     * <pre>
+     * Graph specifies graph data that conforms to the RDF data model.
+     * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+     * @return Whether the graph field is set.
+     */
+    boolean hasGraph();
+    /**
+     * <pre>
+     * Graph specifies graph data that conforms to the RDF data model.
+     * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+     * @return The graph.
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getGraph();
+    /**
+     * <pre>
+     * Graph specifies graph data that conforms to the RDF data model.
+     * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder getGraphOrBuilder();
+
+    com.regen.data.v1alpha2.TypesProto.ContentHash.SumCase getSumCase();
+  }
+  /**
+   * <pre>
+   * ContentHash specifies a hash based content identifier for a piece of data
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.ContentHash}
+   */
+  public static final class ContentHash extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.ContentHash)
+      ContentHashOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContentHash.newBuilder() to construct.
+    private ContentHash(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContentHash() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContentHash();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.TypesProto.ContentHash.class, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder.class);
+    }
+
+    public interface RawOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.ContentHash.Raw)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * hash represents the hash of the data based on the specified digest_algorithm
+       * </pre>
+       *
+       * <code>bytes hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      com.google.protobuf.ByteString getHash();
+
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The enum numeric value on the wire for digestAlgorithm.
+       */
+      int getDigestAlgorithmValue();
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The digestAlgorithm.
+       */
+      com.regen.data.v1alpha2.TypesProto.DigestAlgorithm getDigestAlgorithm();
+
+      /**
+       * <pre>
+       * media_type represents the MediaType for raw data.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+       * @return The enum numeric value on the wire for mediaType.
+       */
+      int getMediaTypeValue();
+      /**
+       * <pre>
+       * media_type represents the MediaType for raw data.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+       * @return The mediaType.
+       */
+      com.regen.data.v1alpha2.TypesProto.MediaType getMediaType();
+    }
+    /**
+     * <pre>
+     * Raw is the content hash type used for raw data
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.ContentHash.Raw}
+     */
+    public static final class Raw extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.ContentHash.Raw)
+        RawOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Raw.newBuilder() to construct.
+      private Raw(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Raw() {
+        hash_ = com.google.protobuf.ByteString.EMPTY;
+        digestAlgorithm_ = 0;
+        mediaType_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Raw();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Raw_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Raw_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.class, com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder.class);
+      }
+
+      public static final int HASH_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * hash represents the hash of the data based on the specified digest_algorithm
+       * </pre>
+       *
+       * <code>bytes hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getHash() {
+        return hash_;
+      }
+
+      public static final int DIGEST_ALGORITHM_FIELD_NUMBER = 2;
+      private int digestAlgorithm_ = 0;
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The enum numeric value on the wire for digestAlgorithm.
+       */
+      @java.lang.Override public int getDigestAlgorithmValue() {
+        return digestAlgorithm_;
+      }
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The digestAlgorithm.
+       */
+      @java.lang.Override public com.regen.data.v1alpha2.TypesProto.DigestAlgorithm getDigestAlgorithm() {
+        com.regen.data.v1alpha2.TypesProto.DigestAlgorithm result = com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.forNumber(digestAlgorithm_);
+        return result == null ? com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.UNRECOGNIZED : result;
+      }
+
+      public static final int MEDIA_TYPE_FIELD_NUMBER = 3;
+      private int mediaType_ = 0;
+      /**
+       * <pre>
+       * media_type represents the MediaType for raw data.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+       * @return The enum numeric value on the wire for mediaType.
+       */
+      @java.lang.Override public int getMediaTypeValue() {
+        return mediaType_;
+      }
+      /**
+       * <pre>
+       * media_type represents the MediaType for raw data.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+       * @return The mediaType.
+       */
+      @java.lang.Override public com.regen.data.v1alpha2.TypesProto.MediaType getMediaType() {
+        com.regen.data.v1alpha2.TypesProto.MediaType result = com.regen.data.v1alpha2.TypesProto.MediaType.forNumber(mediaType_);
+        return result == null ? com.regen.data.v1alpha2.TypesProto.MediaType.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!hash_.isEmpty()) {
+          output.writeBytes(1, hash_);
+        }
+        if (digestAlgorithm_ != com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.DIGEST_ALGORITHM_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, digestAlgorithm_);
+        }
+        if (mediaType_ != com.regen.data.v1alpha2.TypesProto.MediaType.MEDIA_TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(3, mediaType_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!hash_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, hash_);
+        }
+        if (digestAlgorithm_ != com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.DIGEST_ALGORITHM_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, digestAlgorithm_);
+        }
+        if (mediaType_ != com.regen.data.v1alpha2.TypesProto.MediaType.MEDIA_TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, mediaType_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.regen.data.v1alpha2.TypesProto.ContentHash.Raw)) {
+          return super.equals(obj);
+        }
+        com.regen.data.v1alpha2.TypesProto.ContentHash.Raw other = (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) obj;
+
+        if (!getHash()
+            .equals(other.getHash())) return false;
+        if (digestAlgorithm_ != other.digestAlgorithm_) return false;
+        if (mediaType_ != other.mediaType_) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getHash().hashCode();
+        hash = (37 * hash) + DIGEST_ALGORITHM_FIELD_NUMBER;
+        hash = (53 * hash) + digestAlgorithm_;
+        hash = (37 * hash) + MEDIA_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + mediaType_;
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.regen.data.v1alpha2.TypesProto.ContentHash.Raw prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Raw is the content hash type used for raw data
+       * </pre>
+       *
+       * Protobuf type {@code regen.data.v1alpha2.ContentHash.Raw}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.ContentHash.Raw)
+          com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Raw_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Raw_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.class, com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder.class);
+        }
+
+        // Construct using com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          hash_ = com.google.protobuf.ByteString.EMPTY;
+          digestAlgorithm_ = 0;
+          mediaType_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Raw_descriptor;
+        }
+
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw getDefaultInstanceForType() {
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw build() {
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Raw result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw buildPartial() {
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Raw result = new com.regen.data.v1alpha2.TypesProto.ContentHash.Raw(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.regen.data.v1alpha2.TypesProto.ContentHash.Raw result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.hash_ = hash_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.digestAlgorithm_ = digestAlgorithm_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.mediaType_ = mediaType_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) {
+            return mergeFrom((com.regen.data.v1alpha2.TypesProto.ContentHash.Raw)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.regen.data.v1alpha2.TypesProto.ContentHash.Raw other) {
+          if (other == com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance()) return this;
+          if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
+            setHash(other.getHash());
+          }
+          if (other.digestAlgorithm_ != 0) {
+            setDigestAlgorithmValue(other.getDigestAlgorithmValue());
+          }
+          if (other.mediaType_ != 0) {
+            setMediaTypeValue(other.getMediaTypeValue());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  hash_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 16: {
+                  digestAlgorithm_ = input.readEnum();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  mediaType_ = input.readEnum();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <pre>
+         * hash represents the hash of the data based on the specified digest_algorithm
+         * </pre>
+         *
+         * <code>bytes hash = 1 [json_name = "hash"];</code>
+         * @return The hash.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getHash() {
+          return hash_;
+        }
+        /**
+         * <pre>
+         * hash represents the hash of the data based on the specified digest_algorithm
+         * </pre>
+         *
+         * <code>bytes hash = 1 [json_name = "hash"];</code>
+         * @param value The hash to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHash(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          hash_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * hash represents the hash of the data based on the specified digest_algorithm
+         * </pre>
+         *
+         * <code>bytes hash = 1 [json_name = "hash"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHash() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          hash_ = getDefaultInstance().getHash();
+          onChanged();
+          return this;
+        }
+
+        private int digestAlgorithm_ = 0;
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @return The enum numeric value on the wire for digestAlgorithm.
+         */
+        @java.lang.Override public int getDigestAlgorithmValue() {
+          return digestAlgorithm_;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @param value The enum numeric value on the wire for digestAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDigestAlgorithmValue(int value) {
+          digestAlgorithm_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @return The digestAlgorithm.
+         */
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.DigestAlgorithm getDigestAlgorithm() {
+          com.regen.data.v1alpha2.TypesProto.DigestAlgorithm result = com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.forNumber(digestAlgorithm_);
+          return result == null ? com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @param value The digestAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDigestAlgorithm(com.regen.data.v1alpha2.TypesProto.DigestAlgorithm value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          digestAlgorithm_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDigestAlgorithm() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          digestAlgorithm_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int mediaType_ = 0;
+        /**
+         * <pre>
+         * media_type represents the MediaType for raw data.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+         * @return The enum numeric value on the wire for mediaType.
+         */
+        @java.lang.Override public int getMediaTypeValue() {
+          return mediaType_;
+        }
+        /**
+         * <pre>
+         * media_type represents the MediaType for raw data.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+         * @param value The enum numeric value on the wire for mediaType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMediaTypeValue(int value) {
+          mediaType_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * media_type represents the MediaType for raw data.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+         * @return The mediaType.
+         */
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.MediaType getMediaType() {
+          com.regen.data.v1alpha2.TypesProto.MediaType result = com.regen.data.v1alpha2.TypesProto.MediaType.forNumber(mediaType_);
+          return result == null ? com.regen.data.v1alpha2.TypesProto.MediaType.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * media_type represents the MediaType for raw data.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+         * @param value The mediaType to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMediaType(com.regen.data.v1alpha2.TypesProto.MediaType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000004;
+          mediaType_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * media_type represents the MediaType for raw data.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.MediaType media_type = 3 [json_name = "mediaType"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMediaType() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          mediaType_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.ContentHash.Raw)
+      }
+
+      // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.ContentHash.Raw)
+      private static final com.regen.data.v1alpha2.TypesProto.ContentHash.Raw DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TypesProto.ContentHash.Raw();
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Raw getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Raw>
+          PARSER = new com.google.protobuf.AbstractParser<Raw>() {
+        @java.lang.Override
+        public Raw parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Raw> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Raw> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface GraphOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.ContentHash.Graph)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * hash represents the hash of the data based on the specified digest_algorithm
+       * </pre>
+       *
+       * <code>bytes hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      com.google.protobuf.ByteString getHash();
+
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The enum numeric value on the wire for digestAlgorithm.
+       */
+      int getDigestAlgorithmValue();
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The digestAlgorithm.
+       */
+      com.regen.data.v1alpha2.TypesProto.DigestAlgorithm getDigestAlgorithm();
+
+      /**
+       * <pre>
+       * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+       * @return The enum numeric value on the wire for canonicalizationAlgorithm.
+       */
+      int getCanonicalizationAlgorithmValue();
+      /**
+       * <pre>
+       * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+       * @return The canonicalizationAlgorithm.
+       */
+      com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm getCanonicalizationAlgorithm();
+
+      /**
+       * <pre>
+       * merkle_tree is the merkle tree type used for the graph hash, if any
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+       * @return The enum numeric value on the wire for merkleTree.
+       */
+      int getMerkleTreeValue();
+      /**
+       * <pre>
+       * merkle_tree is the merkle tree type used for the graph hash, if any
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+       * @return The merkleTree.
+       */
+      com.regen.data.v1alpha2.TypesProto.GraphMerkleTree getMerkleTree();
+    }
+    /**
+     * <pre>
+     * Graph is the content hash type used for RDF graph data
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.ContentHash.Graph}
+     */
+    public static final class Graph extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.ContentHash.Graph)
+        GraphOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Graph.newBuilder() to construct.
+      private Graph(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Graph() {
+        hash_ = com.google.protobuf.ByteString.EMPTY;
+        digestAlgorithm_ = 0;
+        canonicalizationAlgorithm_ = 0;
+        merkleTree_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Graph();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Graph_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Graph_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.class, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder.class);
+      }
+
+      public static final int HASH_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * hash represents the hash of the data based on the specified digest_algorithm
+       * </pre>
+       *
+       * <code>bytes hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getHash() {
+        return hash_;
+      }
+
+      public static final int DIGEST_ALGORITHM_FIELD_NUMBER = 2;
+      private int digestAlgorithm_ = 0;
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The enum numeric value on the wire for digestAlgorithm.
+       */
+      @java.lang.Override public int getDigestAlgorithmValue() {
+        return digestAlgorithm_;
+      }
+      /**
+       * <pre>
+       * digest_algorithm represents the hash digest algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+       * @return The digestAlgorithm.
+       */
+      @java.lang.Override public com.regen.data.v1alpha2.TypesProto.DigestAlgorithm getDigestAlgorithm() {
+        com.regen.data.v1alpha2.TypesProto.DigestAlgorithm result = com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.forNumber(digestAlgorithm_);
+        return result == null ? com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.UNRECOGNIZED : result;
+      }
+
+      public static final int CANONICALIZATION_ALGORITHM_FIELD_NUMBER = 3;
+      private int canonicalizationAlgorithm_ = 0;
+      /**
+       * <pre>
+       * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+       * @return The enum numeric value on the wire for canonicalizationAlgorithm.
+       */
+      @java.lang.Override public int getCanonicalizationAlgorithmValue() {
+        return canonicalizationAlgorithm_;
+      }
+      /**
+       * <pre>
+       * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+       * @return The canonicalizationAlgorithm.
+       */
+      @java.lang.Override public com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm getCanonicalizationAlgorithm() {
+        com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm result = com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm.forNumber(canonicalizationAlgorithm_);
+        return result == null ? com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm.UNRECOGNIZED : result;
+      }
+
+      public static final int MERKLE_TREE_FIELD_NUMBER = 4;
+      private int merkleTree_ = 0;
+      /**
+       * <pre>
+       * merkle_tree is the merkle tree type used for the graph hash, if any
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+       * @return The enum numeric value on the wire for merkleTree.
+       */
+      @java.lang.Override public int getMerkleTreeValue() {
+        return merkleTree_;
+      }
+      /**
+       * <pre>
+       * merkle_tree is the merkle tree type used for the graph hash, if any
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+       * @return The merkleTree.
+       */
+      @java.lang.Override public com.regen.data.v1alpha2.TypesProto.GraphMerkleTree getMerkleTree() {
+        com.regen.data.v1alpha2.TypesProto.GraphMerkleTree result = com.regen.data.v1alpha2.TypesProto.GraphMerkleTree.forNumber(merkleTree_);
+        return result == null ? com.regen.data.v1alpha2.TypesProto.GraphMerkleTree.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!hash_.isEmpty()) {
+          output.writeBytes(1, hash_);
+        }
+        if (digestAlgorithm_ != com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.DIGEST_ALGORITHM_UNSPECIFIED.getNumber()) {
+          output.writeEnum(2, digestAlgorithm_);
+        }
+        if (canonicalizationAlgorithm_ != com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm.GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED.getNumber()) {
+          output.writeEnum(3, canonicalizationAlgorithm_);
+        }
+        if (merkleTree_ != com.regen.data.v1alpha2.TypesProto.GraphMerkleTree.GRAPH_MERKLE_TREE_NONE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(4, merkleTree_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!hash_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, hash_);
+        }
+        if (digestAlgorithm_ != com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.DIGEST_ALGORITHM_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, digestAlgorithm_);
+        }
+        if (canonicalizationAlgorithm_ != com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm.GRAPH_CANONICALIZATION_ALGORITHM_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, canonicalizationAlgorithm_);
+        }
+        if (merkleTree_ != com.regen.data.v1alpha2.TypesProto.GraphMerkleTree.GRAPH_MERKLE_TREE_NONE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(4, merkleTree_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.regen.data.v1alpha2.TypesProto.ContentHash.Graph)) {
+          return super.equals(obj);
+        }
+        com.regen.data.v1alpha2.TypesProto.ContentHash.Graph other = (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) obj;
+
+        if (!getHash()
+            .equals(other.getHash())) return false;
+        if (digestAlgorithm_ != other.digestAlgorithm_) return false;
+        if (canonicalizationAlgorithm_ != other.canonicalizationAlgorithm_) return false;
+        if (merkleTree_ != other.merkleTree_) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getHash().hashCode();
+        hash = (37 * hash) + DIGEST_ALGORITHM_FIELD_NUMBER;
+        hash = (53 * hash) + digestAlgorithm_;
+        hash = (37 * hash) + CANONICALIZATION_ALGORITHM_FIELD_NUMBER;
+        hash = (53 * hash) + canonicalizationAlgorithm_;
+        hash = (37 * hash) + MERKLE_TREE_FIELD_NUMBER;
+        hash = (53 * hash) + merkleTree_;
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Graph is the content hash type used for RDF graph data
+       * </pre>
+       *
+       * Protobuf type {@code regen.data.v1alpha2.ContentHash.Graph}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.ContentHash.Graph)
+          com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Graph_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Graph_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.class, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder.class);
+        }
+
+        // Construct using com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          hash_ = com.google.protobuf.ByteString.EMPTY;
+          digestAlgorithm_ = 0;
+          canonicalizationAlgorithm_ = 0;
+          merkleTree_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_Graph_descriptor;
+        }
+
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getDefaultInstanceForType() {
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph build() {
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph buildPartial() {
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph result = new com.regen.data.v1alpha2.TypesProto.ContentHash.Graph(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.hash_ = hash_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.digestAlgorithm_ = digestAlgorithm_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.canonicalizationAlgorithm_ = canonicalizationAlgorithm_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.merkleTree_ = merkleTree_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) {
+            return mergeFrom((com.regen.data.v1alpha2.TypesProto.ContentHash.Graph)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph other) {
+          if (other == com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance()) return this;
+          if (other.getHash() != com.google.protobuf.ByteString.EMPTY) {
+            setHash(other.getHash());
+          }
+          if (other.digestAlgorithm_ != 0) {
+            setDigestAlgorithmValue(other.getDigestAlgorithmValue());
+          }
+          if (other.canonicalizationAlgorithm_ != 0) {
+            setCanonicalizationAlgorithmValue(other.getCanonicalizationAlgorithmValue());
+          }
+          if (other.merkleTree_ != 0) {
+            setMerkleTreeValue(other.getMerkleTreeValue());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  hash_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 16: {
+                  digestAlgorithm_ = input.readEnum();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 24: {
+                  canonicalizationAlgorithm_ = input.readEnum();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 24
+                case 32: {
+                  merkleTree_ = input.readEnum();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <pre>
+         * hash represents the hash of the data based on the specified digest_algorithm
+         * </pre>
+         *
+         * <code>bytes hash = 1 [json_name = "hash"];</code>
+         * @return The hash.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getHash() {
+          return hash_;
+        }
+        /**
+         * <pre>
+         * hash represents the hash of the data based on the specified digest_algorithm
+         * </pre>
+         *
+         * <code>bytes hash = 1 [json_name = "hash"];</code>
+         * @param value The hash to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHash(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          hash_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * hash represents the hash of the data based on the specified digest_algorithm
+         * </pre>
+         *
+         * <code>bytes hash = 1 [json_name = "hash"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHash() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          hash_ = getDefaultInstance().getHash();
+          onChanged();
+          return this;
+        }
+
+        private int digestAlgorithm_ = 0;
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @return The enum numeric value on the wire for digestAlgorithm.
+         */
+        @java.lang.Override public int getDigestAlgorithmValue() {
+          return digestAlgorithm_;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @param value The enum numeric value on the wire for digestAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDigestAlgorithmValue(int value) {
+          digestAlgorithm_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @return The digestAlgorithm.
+         */
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.DigestAlgorithm getDigestAlgorithm() {
+          com.regen.data.v1alpha2.TypesProto.DigestAlgorithm result = com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.forNumber(digestAlgorithm_);
+          return result == null ? com.regen.data.v1alpha2.TypesProto.DigestAlgorithm.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @param value The digestAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDigestAlgorithm(com.regen.data.v1alpha2.TypesProto.DigestAlgorithm value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          digestAlgorithm_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * digest_algorithm represents the hash digest algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.DigestAlgorithm digest_algorithm = 2 [json_name = "digestAlgorithm"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDigestAlgorithm() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          digestAlgorithm_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int canonicalizationAlgorithm_ = 0;
+        /**
+         * <pre>
+         * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+         * @return The enum numeric value on the wire for canonicalizationAlgorithm.
+         */
+        @java.lang.Override public int getCanonicalizationAlgorithmValue() {
+          return canonicalizationAlgorithm_;
+        }
+        /**
+         * <pre>
+         * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+         * @param value The enum numeric value on the wire for canonicalizationAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCanonicalizationAlgorithmValue(int value) {
+          canonicalizationAlgorithm_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+         * @return The canonicalizationAlgorithm.
+         */
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm getCanonicalizationAlgorithm() {
+          com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm result = com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm.forNumber(canonicalizationAlgorithm_);
+          return result == null ? com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+         * @param value The canonicalizationAlgorithm to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCanonicalizationAlgorithm(com.regen.data.v1alpha2.TypesProto.GraphCanonicalizationAlgorithm value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000004;
+          canonicalizationAlgorithm_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * graph_canonicalization_algorithm represents the RDF graph canonicalization algorithm.
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphCanonicalizationAlgorithm canonicalization_algorithm = 3 [json_name = "canonicalizationAlgorithm"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCanonicalizationAlgorithm() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          canonicalizationAlgorithm_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int merkleTree_ = 0;
+        /**
+         * <pre>
+         * merkle_tree is the merkle tree type used for the graph hash, if any
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+         * @return The enum numeric value on the wire for merkleTree.
+         */
+        @java.lang.Override public int getMerkleTreeValue() {
+          return merkleTree_;
+        }
+        /**
+         * <pre>
+         * merkle_tree is the merkle tree type used for the graph hash, if any
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+         * @param value The enum numeric value on the wire for merkleTree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMerkleTreeValue(int value) {
+          merkleTree_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * merkle_tree is the merkle tree type used for the graph hash, if any
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+         * @return The merkleTree.
+         */
+        @java.lang.Override
+        public com.regen.data.v1alpha2.TypesProto.GraphMerkleTree getMerkleTree() {
+          com.regen.data.v1alpha2.TypesProto.GraphMerkleTree result = com.regen.data.v1alpha2.TypesProto.GraphMerkleTree.forNumber(merkleTree_);
+          return result == null ? com.regen.data.v1alpha2.TypesProto.GraphMerkleTree.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * merkle_tree is the merkle tree type used for the graph hash, if any
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+         * @param value The merkleTree to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMerkleTree(com.regen.data.v1alpha2.TypesProto.GraphMerkleTree value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000008;
+          merkleTree_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * merkle_tree is the merkle tree type used for the graph hash, if any
+         * </pre>
+         *
+         * <code>.regen.data.v1alpha2.GraphMerkleTree merkle_tree = 4 [json_name = "merkleTree"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMerkleTree() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          merkleTree_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.ContentHash.Graph)
+      }
+
+      // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.ContentHash.Graph)
+      private static final com.regen.data.v1alpha2.TypesProto.ContentHash.Graph DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TypesProto.ContentHash.Graph();
+      }
+
+      public static com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Graph>
+          PARSER = new com.google.protobuf.AbstractParser<Graph>() {
+        @java.lang.Override
+        public Graph parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Graph> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Graph> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int sumCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object sum_;
+    public enum SumCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      RAW(1),
+      GRAPH(2),
+      SUM_NOT_SET(0);
+      private final int value;
+      private SumCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SumCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SumCase forNumber(int value) {
+        switch (value) {
+          case 1: return RAW;
+          case 2: return GRAPH;
+          case 0: return SUM_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SumCase
+    getSumCase() {
+      return SumCase.forNumber(
+          sumCase_);
+    }
+
+    public static final int RAW_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+     * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+     * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+     * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+     * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+     * @return Whether the raw field is set.
+     */
+    @java.lang.Override
+    public boolean hasRaw() {
+      return sumCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+     * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+     * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+     * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+     * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+     * @return The raw.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw getRaw() {
+      if (sumCase_ == 1) {
+         return (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_;
+      }
+      return com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+     * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+     * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+     * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+     * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder getRawOrBuilder() {
+      if (sumCase_ == 1) {
+         return (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_;
+      }
+      return com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+    }
+
+    public static final int GRAPH_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Graph specifies graph data that conforms to the RDF data model.
+     * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+     * @return Whether the graph field is set.
+     */
+    @java.lang.Override
+    public boolean hasGraph() {
+      return sumCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Graph specifies graph data that conforms to the RDF data model.
+     * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+     * @return The graph.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getGraph() {
+      if (sumCase_ == 2) {
+         return (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_;
+      }
+      return com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Graph specifies graph data that conforms to the RDF data model.
+     * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder getGraphOrBuilder() {
+      if (sumCase_ == 2) {
+         return (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_;
+      }
+      return com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (sumCase_ == 1) {
+        output.writeMessage(1, (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_);
+      }
+      if (sumCase_ == 2) {
+        output.writeMessage(2, (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (sumCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_);
+      }
+      if (sumCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.TypesProto.ContentHash)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.TypesProto.ContentHash other = (com.regen.data.v1alpha2.TypesProto.ContentHash) obj;
+
+      if (!getSumCase().equals(other.getSumCase())) return false;
+      switch (sumCase_) {
+        case 1:
+          if (!getRaw()
+              .equals(other.getRaw())) return false;
+          break;
+        case 2:
+          if (!getGraph()
+              .equals(other.getGraph())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (sumCase_) {
+        case 1:
+          hash = (37 * hash) + RAW_FIELD_NUMBER;
+          hash = (53 * hash) + getRaw().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + GRAPH_FIELD_NUMBER;
+          hash = (53 * hash) + getGraph().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.TypesProto.ContentHash prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ContentHash specifies a hash based content identifier for a piece of data
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.ContentHash}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.ContentHash)
+        com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TypesProto.ContentHash.class, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.TypesProto.ContentHash.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rawBuilder_ != null) {
+          rawBuilder_.clear();
+        }
+        if (graphBuilder_ != null) {
+          graphBuilder_.clear();
+        }
+        sumCase_ = 0;
+        sum_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_ContentHash_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash build() {
+        com.regen.data.v1alpha2.TypesProto.ContentHash result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash buildPartial() {
+        com.regen.data.v1alpha2.TypesProto.ContentHash result = new com.regen.data.v1alpha2.TypesProto.ContentHash(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.TypesProto.ContentHash result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.regen.data.v1alpha2.TypesProto.ContentHash result) {
+        result.sumCase_ = sumCase_;
+        result.sum_ = this.sum_;
+        if (sumCase_ == 1 &&
+            rawBuilder_ != null) {
+          result.sum_ = rawBuilder_.build();
+        }
+        if (sumCase_ == 2 &&
+            graphBuilder_ != null) {
+          result.sum_ = graphBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.TypesProto.ContentHash) {
+          return mergeFrom((com.regen.data.v1alpha2.TypesProto.ContentHash)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.TypesProto.ContentHash other) {
+        if (other == com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance()) return this;
+        switch (other.getSumCase()) {
+          case RAW: {
+            mergeRaw(other.getRaw());
+            break;
+          }
+          case GRAPH: {
+            mergeGraph(other.getGraph());
+            break;
+          }
+          case SUM_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRawFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                sumCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getGraphFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                sumCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int sumCase_ = 0;
+      private java.lang.Object sum_;
+      public SumCase
+          getSumCase() {
+        return SumCase.forNumber(
+            sumCase_);
+      }
+
+      public Builder clearSum() {
+        sumCase_ = 0;
+        sum_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Raw, com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder> rawBuilder_;
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       * @return Whether the raw field is set.
+       */
+      @java.lang.Override
+      public boolean hasRaw() {
+        return sumCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       * @return The raw.
+       */
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw getRaw() {
+        if (rawBuilder_ == null) {
+          if (sumCase_ == 1) {
+            return (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_;
+          }
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+        } else {
+          if (sumCase_ == 1) {
+            return rawBuilder_.getMessage();
+          }
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      public Builder setRaw(com.regen.data.v1alpha2.TypesProto.ContentHash.Raw value) {
+        if (rawBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sum_ = value;
+          onChanged();
+        } else {
+          rawBuilder_.setMessage(value);
+        }
+        sumCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      public Builder setRaw(
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder builderForValue) {
+        if (rawBuilder_ == null) {
+          sum_ = builderForValue.build();
+          onChanged();
+        } else {
+          rawBuilder_.setMessage(builderForValue.build());
+        }
+        sumCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      public Builder mergeRaw(com.regen.data.v1alpha2.TypesProto.ContentHash.Raw value) {
+        if (rawBuilder_ == null) {
+          if (sumCase_ == 1 &&
+              sum_ != com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance()) {
+            sum_ = com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.newBuilder((com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sum_ = value;
+          }
+          onChanged();
+        } else {
+          if (sumCase_ == 1) {
+            rawBuilder_.mergeFrom(value);
+          } else {
+            rawBuilder_.setMessage(value);
+          }
+        }
+        sumCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      public Builder clearRaw() {
+        if (rawBuilder_ == null) {
+          if (sumCase_ == 1) {
+            sumCase_ = 0;
+            sum_ = null;
+            onChanged();
+          }
+        } else {
+          if (sumCase_ == 1) {
+            sumCase_ = 0;
+            sum_ = null;
+          }
+          rawBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder getRawBuilder() {
+        return getRawFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder getRawOrBuilder() {
+        if ((sumCase_ == 1) && (rawBuilder_ != null)) {
+          return rawBuilder_.getMessageOrBuilder();
+        } else {
+          if (sumCase_ == 1) {
+            return (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_;
+          }
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Raw specifies "raw" data which does not specify a deterministic, canonical encoding.
+       * Users of these hashes MUST maintain a copy of the hashed data which is preserved bit by bit.
+       * All other content encodings specify a deterministic, canonical encoding allowing implementations to
+       * choose from a variety of alternative formats for transport and encoding while maintaining the guarantee
+       * that the canonical hash will not change. The media type for "raw" data is defined by the MediaType enum.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Raw raw = 1 [json_name = "raw"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Raw, com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder> 
+          getRawFieldBuilder() {
+        if (rawBuilder_ == null) {
+          if (!(sumCase_ == 1)) {
+            sum_ = com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.getDefaultInstance();
+          }
+          rawBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.ContentHash.Raw, com.regen.data.v1alpha2.TypesProto.ContentHash.Raw.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.RawOrBuilder>(
+                  (com.regen.data.v1alpha2.TypesProto.ContentHash.Raw) sum_,
+                  getParentForChildren(),
+                  isClean());
+          sum_ = null;
+        }
+        sumCase_ = 1;
+        onChanged();
+        return rawBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder> graphBuilder_;
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       * @return Whether the graph field is set.
+       */
+      @java.lang.Override
+      public boolean hasGraph() {
+        return sumCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       * @return The graph.
+       */
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getGraph() {
+        if (graphBuilder_ == null) {
+          if (sumCase_ == 2) {
+            return (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_;
+          }
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+        } else {
+          if (sumCase_ == 2) {
+            return graphBuilder_.getMessage();
+          }
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      public Builder setGraph(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph value) {
+        if (graphBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sum_ = value;
+          onChanged();
+        } else {
+          graphBuilder_.setMessage(value);
+        }
+        sumCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      public Builder setGraph(
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder builderForValue) {
+        if (graphBuilder_ == null) {
+          sum_ = builderForValue.build();
+          onChanged();
+        } else {
+          graphBuilder_.setMessage(builderForValue.build());
+        }
+        sumCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      public Builder mergeGraph(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph value) {
+        if (graphBuilder_ == null) {
+          if (sumCase_ == 2 &&
+              sum_ != com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance()) {
+            sum_ = com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.newBuilder((com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sum_ = value;
+          }
+          onChanged();
+        } else {
+          if (sumCase_ == 2) {
+            graphBuilder_.mergeFrom(value);
+          } else {
+            graphBuilder_.setMessage(value);
+          }
+        }
+        sumCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      public Builder clearGraph() {
+        if (graphBuilder_ == null) {
+          if (sumCase_ == 2) {
+            sumCase_ = 0;
+            sum_ = null;
+            onChanged();
+          }
+        } else {
+          if (sumCase_ == 2) {
+            sumCase_ = 0;
+            sum_ = null;
+          }
+          graphBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder getGraphBuilder() {
+        return getGraphFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder getGraphOrBuilder() {
+        if ((sumCase_ == 2) && (graphBuilder_ != null)) {
+          return graphBuilder_.getMessageOrBuilder();
+        } else {
+          if (sumCase_ == 2) {
+            return (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_;
+          }
+          return com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Graph specifies graph data that conforms to the RDF data model.
+       * The canonicalization algorithm used for an RDF graph is specified by GraphCanonicalizationAlgorithm.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph graph = 2 [json_name = "graph"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder> 
+          getGraphFieldBuilder() {
+        if (graphBuilder_ == null) {
+          if (!(sumCase_ == 2)) {
+            sum_ = com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance();
+          }
+          graphBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.ContentHash.Graph, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder>(
+                  (com.regen.data.v1alpha2.TypesProto.ContentHash.Graph) sum_,
+                  getParentForChildren(),
+                  isClean());
+          sum_ = null;
+        }
+        sumCase_ = 2;
+        onChanged();
+        return graphBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.ContentHash)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.ContentHash)
+    private static final com.regen.data.v1alpha2.TypesProto.ContentHash DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TypesProto.ContentHash();
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.ContentHash getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContentHash>
+        PARSER = new com.google.protobuf.AbstractParser<ContentHash>() {
+      @java.lang.Override
+      public ContentHash parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContentHash> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContentHash> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SignerEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.SignerEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * signer is the address of the signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * signer is the address of the signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * timestamp is the time at which the data was signed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * timestamp is the time at which the data was signed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * timestamp is the time at which the data was signed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+  }
+  /**
+   * <pre>
+   * SignerEntry is a signer entry wrapping a signer address and timestamp
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.SignerEntry}
+   */
+  public static final class SignerEntry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.SignerEntry)
+      SignerEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SignerEntry.newBuilder() to construct.
+    private SignerEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SignerEntry() {
+      signer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SignerEntry();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_SignerEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_SignerEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.TypesProto.SignerEntry.class, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * signer is the address of the signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * signer is the address of the signer
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * timestamp is the time at which the data was signed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * timestamp is the time at which the data was signed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * timestamp is the time at which the data was signed
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(2, getTimestamp());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTimestamp());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.TypesProto.SignerEntry)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.TypesProto.SignerEntry other = (com.regen.data.v1alpha2.TypesProto.SignerEntry) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.TypesProto.SignerEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SignerEntry is a signer entry wrapping a signer address and timestamp
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.SignerEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.SignerEntry)
+        com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_SignerEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_SignerEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TypesProto.SignerEntry.class, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.TypesProto.SignerEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.TypesProto.internal_static_regen_data_v1alpha2_SignerEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.TypesProto.SignerEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry build() {
+        com.regen.data.v1alpha2.TypesProto.SignerEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry buildPartial() {
+        com.regen.data.v1alpha2.TypesProto.SignerEntry result = new com.regen.data.v1alpha2.TypesProto.SignerEntry(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.TypesProto.SignerEntry result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timestamp_ = timestampBuilder_ == null
+              ? timestamp_
+              : timestampBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.TypesProto.SignerEntry) {
+          return mergeFrom((com.regen.data.v1alpha2.TypesProto.SignerEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.TypesProto.SignerEntry other) {
+        if (other == com.regen.data.v1alpha2.TypesProto.SignerEntry.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * signer is the address of the signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer is the address of the signer
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            timestamp_ != null &&
+            timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimestampBuilder().mergeFrom(value);
+          } else {
+            timestamp_ = value;
+          }
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the time at which the data was signed
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.SignerEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.SignerEntry)
+    private static final com.regen.data.v1alpha2.TypesProto.SignerEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TypesProto.SignerEntry();
+    }
+
+    public static com.regen.data.v1alpha2.TypesProto.SignerEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SignerEntry>
+        PARSER = new com.google.protobuf.AbstractParser<SignerEntry>() {
+      @java.lang.Override
+      public SignerEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SignerEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignerEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.SignerEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_ContentHash_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_ContentHash_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_ContentHash_Raw_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_ContentHash_Raw_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_ContentHash_Graph_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_ContentHash_Graph_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_SignerEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_SignerEntry_fieldAccessorTable;
 
@@ -80,12 +4544,12 @@ public final class TypesProto {
       "*9\n\017GraphMerkleTree\022&\n\"GRAPH_MERKLE_TREE" +
       "_NONE_UNSPECIFIED\020\000*U\n\017DigestAlgorithm\022 " +
       "\n\034DIGEST_ALGORITHM_UNSPECIFIED\020\000\022 \n\034DIGE" +
-      "ST_ALGORITHM_BLAKE2B_256\020\001B\301\001\n\027com.regen" +
-      ".data.v1alpha2B\nTypesProtoP\001Z,github.com" +
-      "/regen-network/regen-ledger/x/data\242\002\003RDX" +
-      "\252\002\023Regen.Data.V1alpha2\312\002\023Regen\\Data\\V1al" +
-      "pha2\342\002\037Regen\\Data\\V1alpha2\\GPBMetadata\352\002" +
-      "\025Regen::Data::V1alpha2b\006proto3"
+      "ST_ALGORITHM_BLAKE2B_256\020\001B\277\001\n\027com.regen" +
+      ".data.v1alpha2B\nTypesProtoZ,github.com/r" +
+      "egen-network/regen-ledger/x/data\242\002\003RDX\252\002" +
+      "\023Regen.Data.V1alpha2\312\002\023Regen\\Data\\V1alph" +
+      "a2\342\002\037Regen\\Data\\V1alpha2\\GPBMetadata\352\002\025R" +
+      "egen::Data::V1alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

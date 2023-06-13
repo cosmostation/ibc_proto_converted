@@ -14,49 +14,10231 @@ public final class ProposalsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RegisterZoneProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.RegisterZoneProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    java.lang.String getBaseDenom();
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    com.google.protobuf.ByteString
+        getBaseDenomBytes();
+
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The localDenom.
+     */
+    java.lang.String getLocalDenom();
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The bytes for localDenom.
+     */
+    com.google.protobuf.ByteString
+        getLocalDenomBytes();
+
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The accountPrefix.
+     */
+    java.lang.String getAccountPrefix();
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The bytes for accountPrefix.
+     */
+    com.google.protobuf.ByteString
+        getAccountPrefixBytes();
+
+    /**
+     * <pre>
+     * deprecated
+     * </pre>
+     *
+     * <code>bool multi_send = 7 [json_name = "multiSend"];</code>
+     * @return The multiSend.
+     */
+    boolean getMultiSend();
+
+    /**
+     * <code>bool liquidity_module = 8 [json_name = "liquidityModule"];</code>
+     * @return The liquidityModule.
+     */
+    boolean getLiquidityModule();
+
+    /**
+     * <code>int64 messages_per_tx = 9 [json_name = "messagesPerTx"];</code>
+     * @return The messagesPerTx.
+     */
+    long getMessagesPerTx();
+
+    /**
+     * <code>bool return_to_sender = 10 [json_name = "returnToSender"];</code>
+     * @return The returnToSender.
+     */
+    boolean getReturnToSender();
+
+    /**
+     * <code>bool deposits_enabled = 11 [json_name = "depositsEnabled"];</code>
+     * @return The depositsEnabled.
+     */
+    boolean getDepositsEnabled();
+
+    /**
+     * <code>bool unbonding_enabled = 12 [json_name = "unbondingEnabled"];</code>
+     * @return The unbondingEnabled.
+     */
+    boolean getUnbondingEnabled();
+
+    /**
+     * <code>int64 decimals = 13 [json_name = "decimals"];</code>
+     * @return The decimals.
+     */
+    long getDecimals();
+  }
+  /**
+   * Protobuf type {@code quicksilver.interchainstaking.v1.RegisterZoneProposal}
+   */
+  public static final class RegisterZoneProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.RegisterZoneProposal)
+      RegisterZoneProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterZoneProposal.newBuilder() to construct.
+    private RegisterZoneProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterZoneProposal() {
+      title_ = "";
+      description_ = "";
+      connectionId_ = "";
+      baseDenom_ = "";
+      localDenom_ = "";
+      accountPrefix_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterZoneProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.class, com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseDenom_ = "";
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseDenom() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseDenomBytes() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object localDenom_ = "";
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The localDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalDenom() {
+      java.lang.Object ref = localDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The bytes for localDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalDenomBytes() {
+      java.lang.Object ref = localDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_PREFIX_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accountPrefix_ = "";
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The accountPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountPrefix() {
+      java.lang.Object ref = accountPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accountPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The bytes for accountPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountPrefixBytes() {
+      java.lang.Object ref = accountPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MULTI_SEND_FIELD_NUMBER = 7;
+    private boolean multiSend_ = false;
+    /**
+     * <pre>
+     * deprecated
+     * </pre>
+     *
+     * <code>bool multi_send = 7 [json_name = "multiSend"];</code>
+     * @return The multiSend.
+     */
+    @java.lang.Override
+    public boolean getMultiSend() {
+      return multiSend_;
+    }
+
+    public static final int LIQUIDITY_MODULE_FIELD_NUMBER = 8;
+    private boolean liquidityModule_ = false;
+    /**
+     * <code>bool liquidity_module = 8 [json_name = "liquidityModule"];</code>
+     * @return The liquidityModule.
+     */
+    @java.lang.Override
+    public boolean getLiquidityModule() {
+      return liquidityModule_;
+    }
+
+    public static final int MESSAGES_PER_TX_FIELD_NUMBER = 9;
+    private long messagesPerTx_ = 0L;
+    /**
+     * <code>int64 messages_per_tx = 9 [json_name = "messagesPerTx"];</code>
+     * @return The messagesPerTx.
+     */
+    @java.lang.Override
+    public long getMessagesPerTx() {
+      return messagesPerTx_;
+    }
+
+    public static final int RETURN_TO_SENDER_FIELD_NUMBER = 10;
+    private boolean returnToSender_ = false;
+    /**
+     * <code>bool return_to_sender = 10 [json_name = "returnToSender"];</code>
+     * @return The returnToSender.
+     */
+    @java.lang.Override
+    public boolean getReturnToSender() {
+      return returnToSender_;
+    }
+
+    public static final int DEPOSITS_ENABLED_FIELD_NUMBER = 11;
+    private boolean depositsEnabled_ = false;
+    /**
+     * <code>bool deposits_enabled = 11 [json_name = "depositsEnabled"];</code>
+     * @return The depositsEnabled.
+     */
+    @java.lang.Override
+    public boolean getDepositsEnabled() {
+      return depositsEnabled_;
+    }
+
+    public static final int UNBONDING_ENABLED_FIELD_NUMBER = 12;
+    private boolean unbondingEnabled_ = false;
+    /**
+     * <code>bool unbonding_enabled = 12 [json_name = "unbondingEnabled"];</code>
+     * @return The unbondingEnabled.
+     */
+    @java.lang.Override
+    public boolean getUnbondingEnabled() {
+      return unbondingEnabled_;
+    }
+
+    public static final int DECIMALS_FIELD_NUMBER = 13;
+    private long decimals_ = 0L;
+    /**
+     * <code>int64 decimals = 13 [json_name = "decimals"];</code>
+     * @return The decimals.
+     */
+    @java.lang.Override
+    public long getDecimals() {
+      return decimals_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, localDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, accountPrefix_);
+      }
+      if (multiSend_ != false) {
+        output.writeBool(7, multiSend_);
+      }
+      if (liquidityModule_ != false) {
+        output.writeBool(8, liquidityModule_);
+      }
+      if (messagesPerTx_ != 0L) {
+        output.writeInt64(9, messagesPerTx_);
+      }
+      if (returnToSender_ != false) {
+        output.writeBool(10, returnToSender_);
+      }
+      if (depositsEnabled_ != false) {
+        output.writeBool(11, depositsEnabled_);
+      }
+      if (unbondingEnabled_ != false) {
+        output.writeBool(12, unbondingEnabled_);
+      }
+      if (decimals_ != 0L) {
+        output.writeInt64(13, decimals_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, localDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, accountPrefix_);
+      }
+      if (multiSend_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, multiSend_);
+      }
+      if (liquidityModule_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, liquidityModule_);
+      }
+      if (messagesPerTx_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, messagesPerTx_);
+      }
+      if (returnToSender_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, returnToSender_);
+      }
+      if (depositsEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, depositsEnabled_);
+      }
+      if (unbondingEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, unbondingEnabled_);
+      }
+      if (decimals_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(13, decimals_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal other = (com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getBaseDenom()
+          .equals(other.getBaseDenom())) return false;
+      if (!getLocalDenom()
+          .equals(other.getLocalDenom())) return false;
+      if (!getAccountPrefix()
+          .equals(other.getAccountPrefix())) return false;
+      if (getMultiSend()
+          != other.getMultiSend()) return false;
+      if (getLiquidityModule()
+          != other.getLiquidityModule()) return false;
+      if (getMessagesPerTx()
+          != other.getMessagesPerTx()) return false;
+      if (getReturnToSender()
+          != other.getReturnToSender()) return false;
+      if (getDepositsEnabled()
+          != other.getDepositsEnabled()) return false;
+      if (getUnbondingEnabled()
+          != other.getUnbondingEnabled()) return false;
+      if (getDecimals()
+          != other.getDecimals()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + BASE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseDenom().hashCode();
+      hash = (37 * hash) + LOCAL_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalDenom().hashCode();
+      hash = (37 * hash) + ACCOUNT_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountPrefix().hashCode();
+      hash = (37 * hash) + MULTI_SEND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMultiSend());
+      hash = (37 * hash) + LIQUIDITY_MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLiquidityModule());
+      hash = (37 * hash) + MESSAGES_PER_TX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMessagesPerTx());
+      hash = (37 * hash) + RETURN_TO_SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getReturnToSender());
+      hash = (37 * hash) + DEPOSITS_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDepositsEnabled());
+      hash = (37 * hash) + UNBONDING_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnbondingEnabled());
+      hash = (37 * hash) + DECIMALS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecimals());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.interchainstaking.v1.RegisterZoneProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.RegisterZoneProposal)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.class, com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        connectionId_ = "";
+        baseDenom_ = "";
+        localDenom_ = "";
+        accountPrefix_ = "";
+        multiSend_ = false;
+        liquidityModule_ = false;
+        messagesPerTx_ = 0L;
+        returnToSender_ = false;
+        depositsEnabled_ = false;
+        unbondingEnabled_ = false;
+        decimals_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal result = new com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.baseDenom_ = baseDenom_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localDenom_ = localDenom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.accountPrefix_ = accountPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.multiSend_ = multiSend_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.liquidityModule_ = liquidityModule_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.messagesPerTx_ = messagesPerTx_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.returnToSender_ = returnToSender_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.depositsEnabled_ = depositsEnabled_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.unbondingEnabled_ = unbondingEnabled_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.decimals_ = decimals_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBaseDenom().isEmpty()) {
+          baseDenom_ = other.baseDenom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getLocalDenom().isEmpty()) {
+          localDenom_ = other.localDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getAccountPrefix().isEmpty()) {
+          accountPrefix_ = other.accountPrefix_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getMultiSend() != false) {
+          setMultiSend(other.getMultiSend());
+        }
+        if (other.getLiquidityModule() != false) {
+          setLiquidityModule(other.getLiquidityModule());
+        }
+        if (other.getMessagesPerTx() != 0L) {
+          setMessagesPerTx(other.getMessagesPerTx());
+        }
+        if (other.getReturnToSender() != false) {
+          setReturnToSender(other.getReturnToSender());
+        }
+        if (other.getDepositsEnabled() != false) {
+          setDepositsEnabled(other.getDepositsEnabled());
+        }
+        if (other.getUnbondingEnabled() != false) {
+          setUnbondingEnabled(other.getUnbondingEnabled());
+        }
+        if (other.getDecimals() != 0L) {
+          setDecimals(other.getDecimals());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                baseDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                localDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                accountPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                multiSend_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                liquidityModule_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                messagesPerTx_ = input.readInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                returnToSender_ = input.readBool();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                depositsEnabled_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                unbondingEnabled_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                decimals_ = input.readInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseDenom_ = "";
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The baseDenom.
+       */
+      public java.lang.String getBaseDenom() {
+        java.lang.Object ref = baseDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The bytes for baseDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBaseDenomBytes() {
+        java.lang.Object ref = baseDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseDenom() {
+        baseDenom_ = getDefaultInstance().getBaseDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The bytes for baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localDenom_ = "";
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @return The localDenom.
+       */
+      public java.lang.String getLocalDenom() {
+        java.lang.Object ref = localDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @return The bytes for localDenom.
+       */
+      public com.google.protobuf.ByteString
+          getLocalDenomBytes() {
+        java.lang.Object ref = localDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @param value The localDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        localDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalDenom() {
+        localDenom_ = getDefaultInstance().getLocalDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @param value The bytes for localDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        localDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accountPrefix_ = "";
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @return The accountPrefix.
+       */
+      public java.lang.String getAccountPrefix() {
+        java.lang.Object ref = accountPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accountPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @return The bytes for accountPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getAccountPrefixBytes() {
+        java.lang.Object ref = accountPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @param value The accountPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        accountPrefix_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountPrefix() {
+        accountPrefix_ = getDefaultInstance().getAccountPrefix();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @param value The bytes for accountPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        accountPrefix_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private boolean multiSend_ ;
+      /**
+       * <pre>
+       * deprecated
+       * </pre>
+       *
+       * <code>bool multi_send = 7 [json_name = "multiSend"];</code>
+       * @return The multiSend.
+       */
+      @java.lang.Override
+      public boolean getMultiSend() {
+        return multiSend_;
+      }
+      /**
+       * <pre>
+       * deprecated
+       * </pre>
+       *
+       * <code>bool multi_send = 7 [json_name = "multiSend"];</code>
+       * @param value The multiSend to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMultiSend(boolean value) {
+
+        multiSend_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deprecated
+       * </pre>
+       *
+       * <code>bool multi_send = 7 [json_name = "multiSend"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMultiSend() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        multiSend_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean liquidityModule_ ;
+      /**
+       * <code>bool liquidity_module = 8 [json_name = "liquidityModule"];</code>
+       * @return The liquidityModule.
+       */
+      @java.lang.Override
+      public boolean getLiquidityModule() {
+        return liquidityModule_;
+      }
+      /**
+       * <code>bool liquidity_module = 8 [json_name = "liquidityModule"];</code>
+       * @param value The liquidityModule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidityModule(boolean value) {
+
+        liquidityModule_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool liquidity_module = 8 [json_name = "liquidityModule"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidityModule() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        liquidityModule_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long messagesPerTx_ ;
+      /**
+       * <code>int64 messages_per_tx = 9 [json_name = "messagesPerTx"];</code>
+       * @return The messagesPerTx.
+       */
+      @java.lang.Override
+      public long getMessagesPerTx() {
+        return messagesPerTx_;
+      }
+      /**
+       * <code>int64 messages_per_tx = 9 [json_name = "messagesPerTx"];</code>
+       * @param value The messagesPerTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessagesPerTx(long value) {
+
+        messagesPerTx_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 messages_per_tx = 9 [json_name = "messagesPerTx"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessagesPerTx() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        messagesPerTx_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean returnToSender_ ;
+      /**
+       * <code>bool return_to_sender = 10 [json_name = "returnToSender"];</code>
+       * @return The returnToSender.
+       */
+      @java.lang.Override
+      public boolean getReturnToSender() {
+        return returnToSender_;
+      }
+      /**
+       * <code>bool return_to_sender = 10 [json_name = "returnToSender"];</code>
+       * @param value The returnToSender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnToSender(boolean value) {
+
+        returnToSender_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool return_to_sender = 10 [json_name = "returnToSender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnToSender() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        returnToSender_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean depositsEnabled_ ;
+      /**
+       * <code>bool deposits_enabled = 11 [json_name = "depositsEnabled"];</code>
+       * @return The depositsEnabled.
+       */
+      @java.lang.Override
+      public boolean getDepositsEnabled() {
+        return depositsEnabled_;
+      }
+      /**
+       * <code>bool deposits_enabled = 11 [json_name = "depositsEnabled"];</code>
+       * @param value The depositsEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositsEnabled(boolean value) {
+
+        depositsEnabled_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool deposits_enabled = 11 [json_name = "depositsEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositsEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        depositsEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unbondingEnabled_ ;
+      /**
+       * <code>bool unbonding_enabled = 12 [json_name = "unbondingEnabled"];</code>
+       * @return The unbondingEnabled.
+       */
+      @java.lang.Override
+      public boolean getUnbondingEnabled() {
+        return unbondingEnabled_;
+      }
+      /**
+       * <code>bool unbonding_enabled = 12 [json_name = "unbondingEnabled"];</code>
+       * @param value The unbondingEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingEnabled(boolean value) {
+
+        unbondingEnabled_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool unbonding_enabled = 12 [json_name = "unbondingEnabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondingEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        unbondingEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long decimals_ ;
+      /**
+       * <code>int64 decimals = 13 [json_name = "decimals"];</code>
+       * @return The decimals.
+       */
+      @java.lang.Override
+      public long getDecimals() {
+        return decimals_;
+      }
+      /**
+       * <code>int64 decimals = 13 [json_name = "decimals"];</code>
+       * @param value The decimals to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecimals(long value) {
+
+        decimals_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 decimals = 13 [json_name = "decimals"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecimals() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        decimals_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.RegisterZoneProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.RegisterZoneProposal)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterZoneProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterZoneProposal>() {
+      @java.lang.Override
+      public RegisterZoneProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterZoneProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterZoneProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterZoneProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    java.lang.String getBaseDenom();
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    com.google.protobuf.ByteString
+        getBaseDenomBytes();
+
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The localDenom.
+     */
+    java.lang.String getLocalDenom();
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The bytes for localDenom.
+     */
+    com.google.protobuf.ByteString
+        getLocalDenomBytes();
+
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The accountPrefix.
+     */
+    java.lang.String getAccountPrefix();
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The bytes for accountPrefix.
+     */
+    com.google.protobuf.ByteString
+        getAccountPrefixBytes();
+
+    /**
+     * <code>bool multi_send = 7 [json_name = "multiSend", (.gogoproto.moretags) = "yaml:&#92;"multi_send&#92;""];</code>
+     * @return The multiSend.
+     */
+    boolean getMultiSend();
+
+    /**
+     * <code>bool liquidity_module = 8 [json_name = "liquidityModule", (.gogoproto.moretags) = "yaml:&#92;"liquidity_module&#92;""];</code>
+     * @return The liquidityModule.
+     */
+    boolean getLiquidityModule();
+
+    /**
+     * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+
+    /**
+     * <code>int64 messages_per_tx = 10 [json_name = "messagesPerTx"];</code>
+     * @return The messagesPerTx.
+     */
+    long getMessagesPerTx();
+
+    /**
+     * <code>bool return_to_sender = 11 [json_name = "returnToSender", (.gogoproto.moretags) = "yaml:&#92;"return_to_sender&#92;""];</code>
+     * @return The returnToSender.
+     */
+    boolean getReturnToSender();
+
+    /**
+     * <code>bool deposits_enabled = 12 [json_name = "depositsEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+     * @return The depositsEnabled.
+     */
+    boolean getDepositsEnabled();
+
+    /**
+     * <code>bool unbonding_enabled = 13 [json_name = "unbondingEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+     * @return The unbondingEnabled.
+     */
+    boolean getUnbondingEnabled();
+
+    /**
+     * <code>int64 decimals = 14 [json_name = "decimals", (.gogoproto.moretags) = "yaml:&#92;"decimals&#92;""];</code>
+     * @return The decimals.
+     */
+    long getDecimals();
+  }
+  /**
+   * Protobuf type {@code quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit}
+   */
+  public static final class RegisterZoneProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit)
+      RegisterZoneProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterZoneProposalWithDeposit.newBuilder() to construct.
+    private RegisterZoneProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterZoneProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      connectionId_ = "";
+      baseDenom_ = "";
+      localDenom_ = "";
+      accountPrefix_ = "";
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterZoneProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.class, com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseDenom_ = "";
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseDenom() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseDenomBytes() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCAL_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object localDenom_ = "";
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The localDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getLocalDenom() {
+      java.lang.Object ref = localDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        localDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+     * @return The bytes for localDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocalDenomBytes() {
+      java.lang.Object ref = localDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        localDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_PREFIX_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accountPrefix_ = "";
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The accountPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountPrefix() {
+      java.lang.Object ref = accountPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accountPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+     * @return The bytes for accountPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountPrefixBytes() {
+      java.lang.Object ref = accountPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MULTI_SEND_FIELD_NUMBER = 7;
+    private boolean multiSend_ = false;
+    /**
+     * <code>bool multi_send = 7 [json_name = "multiSend", (.gogoproto.moretags) = "yaml:&#92;"multi_send&#92;""];</code>
+     * @return The multiSend.
+     */
+    @java.lang.Override
+    public boolean getMultiSend() {
+      return multiSend_;
+    }
+
+    public static final int LIQUIDITY_MODULE_FIELD_NUMBER = 8;
+    private boolean liquidityModule_ = false;
+    /**
+     * <code>bool liquidity_module = 8 [json_name = "liquidityModule", (.gogoproto.moretags) = "yaml:&#92;"liquidity_module&#92;""];</code>
+     * @return The liquidityModule.
+     */
+    @java.lang.Override
+    public boolean getLiquidityModule() {
+      return liquidityModule_;
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGES_PER_TX_FIELD_NUMBER = 10;
+    private long messagesPerTx_ = 0L;
+    /**
+     * <code>int64 messages_per_tx = 10 [json_name = "messagesPerTx"];</code>
+     * @return The messagesPerTx.
+     */
+    @java.lang.Override
+    public long getMessagesPerTx() {
+      return messagesPerTx_;
+    }
+
+    public static final int RETURN_TO_SENDER_FIELD_NUMBER = 11;
+    private boolean returnToSender_ = false;
+    /**
+     * <code>bool return_to_sender = 11 [json_name = "returnToSender", (.gogoproto.moretags) = "yaml:&#92;"return_to_sender&#92;""];</code>
+     * @return The returnToSender.
+     */
+    @java.lang.Override
+    public boolean getReturnToSender() {
+      return returnToSender_;
+    }
+
+    public static final int DEPOSITS_ENABLED_FIELD_NUMBER = 12;
+    private boolean depositsEnabled_ = false;
+    /**
+     * <code>bool deposits_enabled = 12 [json_name = "depositsEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+     * @return The depositsEnabled.
+     */
+    @java.lang.Override
+    public boolean getDepositsEnabled() {
+      return depositsEnabled_;
+    }
+
+    public static final int UNBONDING_ENABLED_FIELD_NUMBER = 13;
+    private boolean unbondingEnabled_ = false;
+    /**
+     * <code>bool unbonding_enabled = 13 [json_name = "unbondingEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+     * @return The unbondingEnabled.
+     */
+    @java.lang.Override
+    public boolean getUnbondingEnabled() {
+      return unbondingEnabled_;
+    }
+
+    public static final int DECIMALS_FIELD_NUMBER = 14;
+    private long decimals_ = 0L;
+    /**
+     * <code>int64 decimals = 14 [json_name = "decimals", (.gogoproto.moretags) = "yaml:&#92;"decimals&#92;""];</code>
+     * @return The decimals.
+     */
+    @java.lang.Override
+    public long getDecimals() {
+      return decimals_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, localDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, accountPrefix_);
+      }
+      if (multiSend_ != false) {
+        output.writeBool(7, multiSend_);
+      }
+      if (liquidityModule_ != false) {
+        output.writeBool(8, liquidityModule_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, deposit_);
+      }
+      if (messagesPerTx_ != 0L) {
+        output.writeInt64(10, messagesPerTx_);
+      }
+      if (returnToSender_ != false) {
+        output.writeBool(11, returnToSender_);
+      }
+      if (depositsEnabled_ != false) {
+        output.writeBool(12, depositsEnabled_);
+      }
+      if (unbondingEnabled_ != false) {
+        output.writeBool(13, unbondingEnabled_);
+      }
+      if (decimals_ != 0L) {
+        output.writeInt64(14, decimals_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, localDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, accountPrefix_);
+      }
+      if (multiSend_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, multiSend_);
+      }
+      if (liquidityModule_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, liquidityModule_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, deposit_);
+      }
+      if (messagesPerTx_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, messagesPerTx_);
+      }
+      if (returnToSender_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, returnToSender_);
+      }
+      if (depositsEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, depositsEnabled_);
+      }
+      if (unbondingEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, unbondingEnabled_);
+      }
+      if (decimals_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(14, decimals_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit other = (com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getBaseDenom()
+          .equals(other.getBaseDenom())) return false;
+      if (!getLocalDenom()
+          .equals(other.getLocalDenom())) return false;
+      if (!getAccountPrefix()
+          .equals(other.getAccountPrefix())) return false;
+      if (getMultiSend()
+          != other.getMultiSend()) return false;
+      if (getLiquidityModule()
+          != other.getLiquidityModule()) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (getMessagesPerTx()
+          != other.getMessagesPerTx()) return false;
+      if (getReturnToSender()
+          != other.getReturnToSender()) return false;
+      if (getDepositsEnabled()
+          != other.getDepositsEnabled()) return false;
+      if (getUnbondingEnabled()
+          != other.getUnbondingEnabled()) return false;
+      if (getDecimals()
+          != other.getDecimals()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + BASE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseDenom().hashCode();
+      hash = (37 * hash) + LOCAL_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalDenom().hashCode();
+      hash = (37 * hash) + ACCOUNT_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountPrefix().hashCode();
+      hash = (37 * hash) + MULTI_SEND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMultiSend());
+      hash = (37 * hash) + LIQUIDITY_MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLiquidityModule());
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (37 * hash) + MESSAGES_PER_TX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMessagesPerTx());
+      hash = (37 * hash) + RETURN_TO_SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getReturnToSender());
+      hash = (37 * hash) + DEPOSITS_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDepositsEnabled());
+      hash = (37 * hash) + UNBONDING_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnbondingEnabled());
+      hash = (37 * hash) + DECIMALS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDecimals());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.class, com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        connectionId_ = "";
+        baseDenom_ = "";
+        localDenom_ = "";
+        accountPrefix_ = "";
+        multiSend_ = false;
+        liquidityModule_ = false;
+        deposit_ = "";
+        messagesPerTx_ = 0L;
+        returnToSender_ = false;
+        depositsEnabled_ = false;
+        unbondingEnabled_ = false;
+        decimals_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit result = new com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.baseDenom_ = baseDenom_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localDenom_ = localDenom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.accountPrefix_ = accountPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.multiSend_ = multiSend_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.liquidityModule_ = liquidityModule_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.deposit_ = deposit_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.messagesPerTx_ = messagesPerTx_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.returnToSender_ = returnToSender_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.depositsEnabled_ = depositsEnabled_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.unbondingEnabled_ = unbondingEnabled_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.decimals_ = decimals_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBaseDenom().isEmpty()) {
+          baseDenom_ = other.baseDenom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getLocalDenom().isEmpty()) {
+          localDenom_ = other.localDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getAccountPrefix().isEmpty()) {
+          accountPrefix_ = other.accountPrefix_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getMultiSend() != false) {
+          setMultiSend(other.getMultiSend());
+        }
+        if (other.getLiquidityModule() != false) {
+          setLiquidityModule(other.getLiquidityModule());
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (other.getMessagesPerTx() != 0L) {
+          setMessagesPerTx(other.getMessagesPerTx());
+        }
+        if (other.getReturnToSender() != false) {
+          setReturnToSender(other.getReturnToSender());
+        }
+        if (other.getDepositsEnabled() != false) {
+          setDepositsEnabled(other.getDepositsEnabled());
+        }
+        if (other.getUnbondingEnabled() != false) {
+          setUnbondingEnabled(other.getUnbondingEnabled());
+        }
+        if (other.getDecimals() != 0L) {
+          setDecimals(other.getDecimals());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                baseDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                localDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                accountPrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                multiSend_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                liquidityModule_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 80: {
+                messagesPerTx_ = input.readInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                returnToSender_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                depositsEnabled_ = input.readBool();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                unbondingEnabled_ = input.readBool();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              case 112: {
+                decimals_ = input.readInt64();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseDenom_ = "";
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The baseDenom.
+       */
+      public java.lang.String getBaseDenom() {
+        java.lang.Object ref = baseDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The bytes for baseDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBaseDenomBytes() {
+        java.lang.Object ref = baseDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseDenom() {
+        baseDenom_ = getDefaultInstance().getBaseDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_denom = 4 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The bytes for baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object localDenom_ = "";
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @return The localDenom.
+       */
+      public java.lang.String getLocalDenom() {
+        java.lang.Object ref = localDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          localDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @return The bytes for localDenom.
+       */
+      public com.google.protobuf.ByteString
+          getLocalDenomBytes() {
+        java.lang.Object ref = localDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          localDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @param value The localDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        localDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalDenom() {
+        localDenom_ = getDefaultInstance().getLocalDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_denom = 5 [json_name = "localDenom", (.gogoproto.moretags) = "yaml:&#92;"local_denom&#92;""];</code>
+       * @param value The bytes for localDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        localDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accountPrefix_ = "";
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @return The accountPrefix.
+       */
+      public java.lang.String getAccountPrefix() {
+        java.lang.Object ref = accountPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accountPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @return The bytes for accountPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getAccountPrefixBytes() {
+        java.lang.Object ref = accountPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @param value The accountPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        accountPrefix_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountPrefix() {
+        accountPrefix_ = getDefaultInstance().getAccountPrefix();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account_prefix = 6 [json_name = "accountPrefix", (.gogoproto.moretags) = "yaml:&#92;"account_prefix&#92;""];</code>
+       * @param value The bytes for accountPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        accountPrefix_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private boolean multiSend_ ;
+      /**
+       * <code>bool multi_send = 7 [json_name = "multiSend", (.gogoproto.moretags) = "yaml:&#92;"multi_send&#92;""];</code>
+       * @return The multiSend.
+       */
+      @java.lang.Override
+      public boolean getMultiSend() {
+        return multiSend_;
+      }
+      /**
+       * <code>bool multi_send = 7 [json_name = "multiSend", (.gogoproto.moretags) = "yaml:&#92;"multi_send&#92;""];</code>
+       * @param value The multiSend to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMultiSend(boolean value) {
+
+        multiSend_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool multi_send = 7 [json_name = "multiSend", (.gogoproto.moretags) = "yaml:&#92;"multi_send&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMultiSend() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        multiSend_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean liquidityModule_ ;
+      /**
+       * <code>bool liquidity_module = 8 [json_name = "liquidityModule", (.gogoproto.moretags) = "yaml:&#92;"liquidity_module&#92;""];</code>
+       * @return The liquidityModule.
+       */
+      @java.lang.Override
+      public boolean getLiquidityModule() {
+        return liquidityModule_;
+      }
+      /**
+       * <code>bool liquidity_module = 8 [json_name = "liquidityModule", (.gogoproto.moretags) = "yaml:&#92;"liquidity_module&#92;""];</code>
+       * @param value The liquidityModule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidityModule(boolean value) {
+
+        liquidityModule_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool liquidity_module = 8 [json_name = "liquidityModule", (.gogoproto.moretags) = "yaml:&#92;"liquidity_module&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidityModule() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        liquidityModule_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 9 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private long messagesPerTx_ ;
+      /**
+       * <code>int64 messages_per_tx = 10 [json_name = "messagesPerTx"];</code>
+       * @return The messagesPerTx.
+       */
+      @java.lang.Override
+      public long getMessagesPerTx() {
+        return messagesPerTx_;
+      }
+      /**
+       * <code>int64 messages_per_tx = 10 [json_name = "messagesPerTx"];</code>
+       * @param value The messagesPerTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessagesPerTx(long value) {
+
+        messagesPerTx_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 messages_per_tx = 10 [json_name = "messagesPerTx"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessagesPerTx() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        messagesPerTx_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean returnToSender_ ;
+      /**
+       * <code>bool return_to_sender = 11 [json_name = "returnToSender", (.gogoproto.moretags) = "yaml:&#92;"return_to_sender&#92;""];</code>
+       * @return The returnToSender.
+       */
+      @java.lang.Override
+      public boolean getReturnToSender() {
+        return returnToSender_;
+      }
+      /**
+       * <code>bool return_to_sender = 11 [json_name = "returnToSender", (.gogoproto.moretags) = "yaml:&#92;"return_to_sender&#92;""];</code>
+       * @param value The returnToSender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnToSender(boolean value) {
+
+        returnToSender_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool return_to_sender = 11 [json_name = "returnToSender", (.gogoproto.moretags) = "yaml:&#92;"return_to_sender&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnToSender() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        returnToSender_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean depositsEnabled_ ;
+      /**
+       * <code>bool deposits_enabled = 12 [json_name = "depositsEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+       * @return The depositsEnabled.
+       */
+      @java.lang.Override
+      public boolean getDepositsEnabled() {
+        return depositsEnabled_;
+      }
+      /**
+       * <code>bool deposits_enabled = 12 [json_name = "depositsEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+       * @param value The depositsEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositsEnabled(boolean value) {
+
+        depositsEnabled_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool deposits_enabled = 12 [json_name = "depositsEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositsEnabled() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        depositsEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unbondingEnabled_ ;
+      /**
+       * <code>bool unbonding_enabled = 13 [json_name = "unbondingEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+       * @return The unbondingEnabled.
+       */
+      @java.lang.Override
+      public boolean getUnbondingEnabled() {
+        return unbondingEnabled_;
+      }
+      /**
+       * <code>bool unbonding_enabled = 13 [json_name = "unbondingEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+       * @param value The unbondingEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnbondingEnabled(boolean value) {
+
+        unbondingEnabled_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool unbonding_enabled = 13 [json_name = "unbondingEnabled", (.gogoproto.moretags) = "yaml:&#92;"deposits_enabled&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnbondingEnabled() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        unbondingEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long decimals_ ;
+      /**
+       * <code>int64 decimals = 14 [json_name = "decimals", (.gogoproto.moretags) = "yaml:&#92;"decimals&#92;""];</code>
+       * @return The decimals.
+       */
+      @java.lang.Override
+      public long getDecimals() {
+        return decimals_;
+      }
+      /**
+       * <code>int64 decimals = 14 [json_name = "decimals", (.gogoproto.moretags) = "yaml:&#92;"decimals&#92;""];</code>
+       * @param value The decimals to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDecimals(long value) {
+
+        decimals_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 decimals = 14 [json_name = "decimals", (.gogoproto.moretags) = "yaml:&#92;"decimals&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDecimals() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        decimals_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.RegisterZoneProposalWithDeposit)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterZoneProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterZoneProposalWithDeposit>() {
+      @java.lang.Override
+      public RegisterZoneProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterZoneProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterZoneProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.RegisterZoneProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateZoneProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.UpdateZoneProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> 
+        getChangesList();
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getChanges(int index);
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    int getChangesCount();
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    java.util.List<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+        getChangesOrBuilderList();
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder getChangesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code quicksilver.interchainstaking.v1.UpdateZoneProposal}
+   */
+  public static final class UpdateZoneProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.UpdateZoneProposal)
+      UpdateZoneProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateZoneProposal.newBuilder() to construct.
+    private UpdateZoneProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateZoneProposal() {
+      title_ = "";
+      description_ = "";
+      chainId_ = "";
+      changes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateZoneProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.class, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANGES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> changes_;
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> getChangesList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+        getChangesOrBuilderList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getChangesCount() {
+      return changes_.size();
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getChanges(int index) {
+      return changes_.get(index);
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder getChangesOrBuilder(
+        int index) {
+      return changes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, chainId_);
+      }
+      for (int i = 0; i < changes_.size(); i++) {
+        output.writeMessage(4, changes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, chainId_);
+      }
+      for (int i = 0; i < changes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, changes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal other = (com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getChangesList()
+          .equals(other.getChangesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      if (getChangesCount() > 0) {
+        hash = (37 * hash) + CHANGES_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.interchainstaking.v1.UpdateZoneProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.UpdateZoneProposal)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.class, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        chainId_ = "";
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+        } else {
+          changes_ = null;
+          changesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal result = new com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal result) {
+        if (changesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            changes_ = java.util.Collections.unmodifiableList(changes_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.changes_ = changes_;
+        } else {
+          result.changes_ = changesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chainId_ = chainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (changesBuilder_ == null) {
+          if (!other.changes_.isEmpty()) {
+            if (changes_.isEmpty()) {
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureChangesIsMutable();
+              changes_.addAll(other.changes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.changes_.isEmpty()) {
+            if (changesBuilder_.isEmpty()) {
+              changesBuilder_.dispose();
+              changesBuilder_ = null;
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              changesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChangesFieldBuilder() : null;
+            } else {
+              changesBuilder_.addAllMessages(other.changes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue m =
+                    input.readMessage(
+                        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.parser(),
+                        extensionRegistry);
+                if (changesBuilder_ == null) {
+                  ensureChangesIsMutable();
+                  changes_.add(m);
+                } else {
+                  changesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> changes_ =
+        java.util.Collections.emptyList();
+      private void ensureChangesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          changes_ = new java.util.ArrayList<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue>(changes_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> changesBuilder_;
+
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> getChangesList() {
+        if (changesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(changes_);
+        } else {
+          return changesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public int getChangesCount() {
+        if (changesBuilder_ == null) {
+          return changes_.size();
+        } else {
+          return changesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getChanges(int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);
+        } else {
+          return changesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder setChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.set(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder setChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(
+          com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addAllChanges(
+          java.lang.Iterable<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> values) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, changes_);
+          onChanged();
+        } else {
+          changesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder clearChanges() {
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          changesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder removeChanges(int index) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.remove(index);
+          onChanged();
+        } else {
+          changesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder getChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder getChangesOrBuilder(
+          int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);  } else {
+          return changesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public java.util.List<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+           getChangesOrBuilderList() {
+        if (changesBuilder_ != null) {
+          return changesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(changes_);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder addChangesBuilder() {
+        return getChangesFieldBuilder().addBuilder(
+            com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder addChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().addBuilder(
+            index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder> 
+           getChangesBuilderList() {
+        return getChangesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+          getChangesFieldBuilder() {
+        if (changesBuilder_ == null) {
+          changesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder>(
+                  changes_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          changes_ = null;
+        }
+        return changesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.UpdateZoneProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.UpdateZoneProposal)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateZoneProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateZoneProposal>() {
+      @java.lang.Override
+      public UpdateZoneProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateZoneProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateZoneProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateZoneProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> 
+        getChangesList();
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getChanges(int index);
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    int getChangesCount();
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    java.util.List<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+        getChangesOrBuilderList();
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder getChangesOrBuilder(
+        int index);
+
+    /**
+     * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit}
+   */
+  public static final class UpdateZoneProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit)
+      UpdateZoneProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateZoneProposalWithDeposit.newBuilder() to construct.
+    private UpdateZoneProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateZoneProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      chainId_ = "";
+      changes_ = java.util.Collections.emptyList();
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateZoneProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.class, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANGES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> changes_;
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> getChangesList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+        getChangesOrBuilderList() {
+      return changes_;
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getChangesCount() {
+      return changes_.size();
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getChanges(int index) {
+      return changes_.get(index);
+    }
+    /**
+     * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder getChangesOrBuilder(
+        int index) {
+      return changes_.get(index);
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, chainId_);
+      }
+      for (int i = 0; i < changes_.size(); i++) {
+        output.writeMessage(4, changes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, chainId_);
+      }
+      for (int i = 0; i < changes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, changes_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit other = (com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getChangesList()
+          .equals(other.getChangesList())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      if (getChangesCount() > 0) {
+        hash = (37 * hash) + CHANGES_FIELD_NUMBER;
+        hash = (53 * hash) + getChangesList().hashCode();
+      }
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.class, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        chainId_ = "";
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+        } else {
+          changes_ = null;
+          changesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit result = new com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit result) {
+        if (changesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            changes_ = java.util.Collections.unmodifiableList(changes_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.changes_ = changes_;
+        } else {
+          result.changes_ = changesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (changesBuilder_ == null) {
+          if (!other.changes_.isEmpty()) {
+            if (changes_.isEmpty()) {
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureChangesIsMutable();
+              changes_.addAll(other.changes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.changes_.isEmpty()) {
+            if (changesBuilder_.isEmpty()) {
+              changesBuilder_.dispose();
+              changesBuilder_ = null;
+              changes_ = other.changes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              changesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChangesFieldBuilder() : null;
+            } else {
+              changesBuilder_.addAllMessages(other.changes_);
+            }
+          }
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue m =
+                    input.readMessage(
+                        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.parser(),
+                        extensionRegistry);
+                if (changesBuilder_ == null) {
+                  ensureChangesIsMutable();
+                  changes_.add(m);
+                } else {
+                  changesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId", (.gogoproto.moretags) = "yaml:&#92;"chain_id&#92;""];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> changes_ =
+        java.util.Collections.emptyList();
+      private void ensureChangesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          changes_ = new java.util.ArrayList<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue>(changes_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> changesBuilder_;
+
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> getChangesList() {
+        if (changesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(changes_);
+        } else {
+          return changesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public int getChangesCount() {
+        if (changesBuilder_ == null) {
+          return changes_.size();
+        } else {
+          return changesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getChanges(int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);
+        } else {
+          return changesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder setChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.set(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder setChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue value) {
+        if (changesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChangesIsMutable();
+          changes_.add(index, value);
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(
+          com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addChanges(
+          int index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder builderForValue) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          changesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder addAllChanges(
+          java.lang.Iterable<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue> values) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, changes_);
+          onChanged();
+        } else {
+          changesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder clearChanges() {
+        if (changesBuilder_ == null) {
+          changes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          changesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public Builder removeChanges(int index) {
+        if (changesBuilder_ == null) {
+          ensureChangesIsMutable();
+          changes_.remove(index);
+          onChanged();
+        } else {
+          changesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder getChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder getChangesOrBuilder(
+          int index) {
+        if (changesBuilder_ == null) {
+          return changes_.get(index);  } else {
+          return changesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public java.util.List<? extends com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+           getChangesOrBuilderList() {
+        if (changesBuilder_ != null) {
+          return changesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(changes_);
+        }
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder addChangesBuilder() {
+        return getChangesFieldBuilder().addBuilder(
+            com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder addChangesBuilder(
+          int index) {
+        return getChangesFieldBuilder().addBuilder(
+            index, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .quicksilver.interchainstaking.v1.UpdateZoneValue changes = 4 [json_name = "changes", (.gogoproto.moretags) = "yaml:&#92;"changes&#92;""];</code>
+       */
+      public java.util.List<com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder> 
+           getChangesBuilderList() {
+        return getChangesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder> 
+          getChangesFieldBuilder() {
+        if (changesBuilder_ == null) {
+          changesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder>(
+                  changes_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          changes_ = null;
+        }
+        return changesBuilder_;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 5 [json_name = "deposit", (.gogoproto.moretags) = "yaml:&#92;"deposit&#92;""];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.UpdateZoneProposalWithDeposit)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateZoneProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateZoneProposalWithDeposit>() {
+      @java.lang.Override
+      public UpdateZoneProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateZoneProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateZoneProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateZoneValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.UpdateZoneValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * UpdateZoneValue defines an individual parameter change, for use in
+   * UpdateZoneProposal.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.UpdateZoneValue}
+   */
+  public static final class UpdateZoneValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.UpdateZoneValue)
+      UpdateZoneValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateZoneValue.newBuilder() to construct.
+    private UpdateZoneValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateZoneValue() {
+      key_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateZoneValue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.class, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue other = (com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * UpdateZoneValue defines an individual parameter change, for use in
+     * UpdateZoneProposal.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.UpdateZoneValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.UpdateZoneValue)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.class, com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = "";
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue result = new com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object key_ = "";
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key", (.gogoproto.moretags) = "yaml:&#92;"key&#92;""];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.UpdateZoneValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.UpdateZoneValue)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateZoneValue>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateZoneValue>() {
+      @java.lang.Override
+      public UpdateZoneValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateZoneValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateZoneValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.UpdateZoneValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGovReopenChannelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgGovReopenChannel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The portId.
+     */
+    java.lang.String getPortId();
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The bytes for portId.
+     */
+    com.google.protobuf.ByteString
+        getPortIdBytes();
+
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+  }
+  /**
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovReopenChannel}
+   */
+  public static final class MsgGovReopenChannel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgGovReopenChannel)
+      MsgGovReopenChannelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGovReopenChannel.newBuilder() to construct.
+    private MsgGovReopenChannel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGovReopenChannel() {
+      title_ = "";
+      description_ = "";
+      connectionId_ = "";
+      portId_ = "";
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGovReopenChannel();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object portId_ = "";
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The portId.
+     */
+    @java.lang.Override
+    public java.lang.String getPortId() {
+      java.lang.Object ref = portId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        portId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The bytes for portId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPortIdBytes() {
+      java.lang.Object ref = portId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        portId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, portId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, authority_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, portId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, authority_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel other = (com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getPortId()
+          .equals(other.getPortId())) return false;
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + PORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPortId().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovReopenChannel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgGovReopenChannel)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        connectionId_ = "";
+        portId_ = "";
+        authority_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel result = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.portId_ = portId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.authority_ = authority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPortId().isEmpty()) {
+          portId_ = other.portId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                portId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 3 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object portId_ = "";
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @return The portId.
+       */
+      public java.lang.String getPortId() {
+        java.lang.Object ref = portId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          portId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @return The bytes for portId.
+       */
+      public com.google.protobuf.ByteString
+          getPortIdBytes() {
+        java.lang.Object ref = portId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          portId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @param value The portId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        portId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPortId() {
+        portId_ = getDefaultInstance().getPortId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @param value The bytes for portId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        portId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgGovReopenChannel)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgGovReopenChannel)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGovReopenChannel>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGovReopenChannel>() {
+      @java.lang.Override
+      public MsgGovReopenChannel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGovReopenChannel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGovReopenChannel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGovReopenChannelResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgGovReopenChannelResponse defines the MsgGovReopenChannel response type.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse}
+   */
+  public static final class MsgGovReopenChannelResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse)
+      MsgGovReopenChannelResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGovReopenChannelResponse.newBuilder() to construct.
+    private MsgGovReopenChannelResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGovReopenChannelResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGovReopenChannelResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse other = (com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgGovReopenChannelResponse defines the MsgGovReopenChannel response type.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse result = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgGovReopenChannelResponse)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGovReopenChannelResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGovReopenChannelResponse>() {
+      @java.lang.Override
+      public MsgGovReopenChannelResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGovReopenChannelResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGovReopenChannelResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovReopenChannelResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGovCloseChannelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgGovCloseChannel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+     * @return The channelId.
+     */
+    java.lang.String getChannelId();
+    /**
+     * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+     * @return The bytes for channelId.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdBytes();
+
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The portId.
+     */
+    java.lang.String getPortId();
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The bytes for portId.
+     */
+    com.google.protobuf.ByteString
+        getPortIdBytes();
+
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    java.lang.String getAuthority();
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    com.google.protobuf.ByteString
+        getAuthorityBytes();
+  }
+  /**
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovCloseChannel}
+   */
+  public static final class MsgGovCloseChannel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgGovCloseChannel)
+      MsgGovCloseChannelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGovCloseChannel.newBuilder() to construct.
+    private MsgGovCloseChannel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGovCloseChannel() {
+      title_ = "";
+      description_ = "";
+      channelId_ = "";
+      portId_ = "";
+      authority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGovCloseChannel();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object channelId_ = "";
+    /**
+     * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+     * @return The channelId.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelId() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+     * @return The bytes for channelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelIdBytes() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object portId_ = "";
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The portId.
+     */
+    @java.lang.Override
+    public java.lang.String getPortId() {
+      java.lang.Object ref = portId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        portId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+     * @return The bytes for portId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPortIdBytes() {
+      java.lang.Object ref = portId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        portId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHORITY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object authority_ = "";
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The authority.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthority() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for authority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthorityBytes() {
+      java.lang.Object ref = authority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, channelId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, portId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, authority_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, channelId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, portId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, authority_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel other = (com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getChannelId()
+          .equals(other.getChannelId())) return false;
+      if (!getPortId()
+          .equals(other.getPortId())) return false;
+      if (!getAuthority()
+          .equals(other.getAuthority())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelId().hashCode();
+      hash = (37 * hash) + PORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPortId().hashCode();
+      hash = (37 * hash) + AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthority().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovCloseChannel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgGovCloseChannel)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        channelId_ = "";
+        portId_ = "";
+        authority_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel result = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.channelId_ = channelId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.portId_ = portId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.authority_ = authority_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getChannelId().isEmpty()) {
+          channelId_ = other.channelId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPortId().isEmpty()) {
+          portId_ = other.portId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getAuthority().isEmpty()) {
+          authority_ = other.authority_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                channelId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                portId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                authority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object channelId_ = "";
+      /**
+       * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+       * @return The channelId.
+       */
+      public java.lang.String getChannelId() {
+        java.lang.Object ref = channelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+       * @return The bytes for channelId.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdBytes() {
+        java.lang.Object ref = channelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+       * @param value The channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        channelId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelId() {
+        channelId_ = getDefaultInstance().getChannelId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string channel_id = 3 [json_name = "channelId", (.gogoproto.moretags) = "yaml:&#92;"channel_id&#92;""];</code>
+       * @param value The bytes for channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        channelId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object portId_ = "";
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @return The portId.
+       */
+      public java.lang.String getPortId() {
+        java.lang.Object ref = portId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          portId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @return The bytes for portId.
+       */
+      public com.google.protobuf.ByteString
+          getPortIdBytes() {
+        java.lang.Object ref = portId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          portId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @param value The portId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        portId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPortId() {
+        portId_ = getDefaultInstance().getPortId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string port_id = 4 [json_name = "portId", (.gogoproto.moretags) = "yaml:&#92;"port_id&#92;""];</code>
+       * @param value The bytes for portId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        portId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authority_ = "";
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The authority.
+       */
+      public java.lang.String getAuthority() {
+        java.lang.Object ref = authority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for authority.
+       */
+      public com.google.protobuf.ByteString
+          getAuthorityBytes() {
+        java.lang.Object ref = authority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        authority_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthority() {
+        authority_ = getDefaultInstance().getAuthority();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string authority = 5 [json_name = "authority", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for authority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        authority_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgGovCloseChannel)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgGovCloseChannel)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGovCloseChannel>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGovCloseChannel>() {
+      @java.lang.Override
+      public MsgGovCloseChannel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGovCloseChannel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGovCloseChannel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgGovCloseChannelResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgGovCloseChannelResponse defines the MsgGovCloseChannel response type.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse}
+   */
+  public static final class MsgGovCloseChannelResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse)
+      MsgGovCloseChannelResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgGovCloseChannelResponse.newBuilder() to construct.
+    private MsgGovCloseChannelResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgGovCloseChannelResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgGovCloseChannelResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse other = (com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgGovCloseChannelResponse defines the MsgGovCloseChannel response type.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse)
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.class, com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse getDefaultInstanceForType() {
+        return com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse build() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse buildPartial() {
+        com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse result = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse) {
+          return mergeFrom((com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse other) {
+        if (other == com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainstaking.v1.MsgGovCloseChannelResponse)
+    private static final com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse();
+    }
+
+    public static com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgGovCloseChannelResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgGovCloseChannelResponse>() {
+      @java.lang.Override
+      public MsgGovCloseChannelResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgGovCloseChannelResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgGovCloseChannelResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainstaking.v1.ProposalsProto.MsgGovCloseChannelResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_RegisterZoneProposalWithDeposit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_UpdateZoneProposalWithDeposit_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_UpdateZoneValue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannel_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgGovReopenChannelResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannel_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainstaking_v1_MsgGovCloseChannelResponse_fieldAccessorTable;
 
@@ -139,14 +10321,14 @@ public final class ProposalsProto {
       "nnelId\022+\n\007port_id\030\004 \001(\tB\022\362\336\037\016yaml:\"port_" +
       "id\"R\006portId\0226\n\tauthority\030\005 \001(\tB\030\322\264-\024cosm" +
       "os.AddressStringR\tauthority:\010\210\240\037\000\350\240\037\000\"\034\n" +
-      "\032MsgGovCloseChannelResponseB\232\002\n$com.quic" +
+      "\032MsgGovCloseChannelResponseB\230\002\n$com.quic" +
       "ksilver.interchainstaking.v1B\016ProposalsP" +
-      "rotoP\001Z@github.com/ingenuity-build/quick" +
-      "silver/x/interchainstaking/types\242\002\003QIX\252\002" +
-      " Quicksilver.Interchainstaking.V1\312\002 Quic" +
-      "ksilver\\Interchainstaking\\V1\342\002,Quicksilv" +
-      "er\\Interchainstaking\\V1\\GPBMetadata\352\002\"Qu" +
-      "icksilver::Interchainstaking::V1b\006proto3"
+      "rotoZ@github.com/ingenuity-build/quicksi" +
+      "lver/x/interchainstaking/types\242\002\003QIX\252\002 Q" +
+      "uicksilver.Interchainstaking.V1\312\002 Quicks" +
+      "ilver\\Interchainstaking\\V1\342\002,Quicksilver" +
+      "\\Interchainstaking\\V1\\GPBMetadata\352\002\"Quic" +
+      "ksilver::Interchainstaking::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,2480 @@ public final class IncentiveRecordProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IncentiveRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.concentratedliquidity.v1beta1.IncentiveRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * incentive_denom is the denom of the token being distributed as part of this
+     * incentive record
+     * </pre>
+     *
+     * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+     * @return The incentiveDenom.
+     */
+    java.lang.String getIncentiveDenom();
+    /**
+     * <pre>
+     * incentive_denom is the denom of the token being distributed as part of this
+     * incentive record
+     * </pre>
+     *
+     * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+     * @return The bytes for incentiveDenom.
+     */
+    com.google.protobuf.ByteString
+        getIncentiveDenomBytes();
+
+    /**
+     * <pre>
+     * incentiveCreator is the address that created the incentive record. This
+     * address does not have any special privileges – it is only kept to keep
+     * incentive records created by different addresses separate.
+     * </pre>
+     *
+     * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+     * @return The incentiveCreatorAddr.
+     */
+    java.lang.String getIncentiveCreatorAddr();
+    /**
+     * <pre>
+     * incentiveCreator is the address that created the incentive record. This
+     * address does not have any special privileges – it is only kept to keep
+     * incentive records created by different addresses separate.
+     * </pre>
+     *
+     * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+     * @return The bytes for incentiveCreatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getIncentiveCreatorAddrBytes();
+
+    /**
+     * <pre>
+     * incentive record body holds necessary
+     * </pre>
+     *
+     * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+     * @return Whether the incentiveRecordBody field is set.
+     */
+    boolean hasIncentiveRecordBody();
+    /**
+     * <pre>
+     * incentive record body holds necessary
+     * </pre>
+     *
+     * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+     * @return The incentiveRecordBody.
+     */
+    com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody getIncentiveRecordBody();
+    /**
+     * <pre>
+     * incentive record body holds necessary
+     * </pre>
+     *
+     * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+     */
+    com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder getIncentiveRecordBodyOrBuilder();
+
+    /**
+     * <pre>
+     * min_uptime is the minimum uptime required for liquidity to qualify for this
+     * incentive. It should be always be one of the supported uptimes in
+     * types.SupportedUptimes
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the minUptime field is set.
+     */
+    boolean hasMinUptime();
+    /**
+     * <pre>
+     * min_uptime is the minimum uptime required for liquidity to qualify for this
+     * incentive. It should be always be one of the supported uptimes in
+     * types.SupportedUptimes
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The minUptime.
+     */
+    com.google.protobuf.Duration getMinUptime();
+    /**
+     * <pre>
+     * min_uptime is the minimum uptime required for liquidity to qualify for this
+     * incentive. It should be always be one of the supported uptimes in
+     * types.SupportedUptimes
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMinUptimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * IncentiveRecord is the high-level struct we use to deal with an independent
+   * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
+   * are included in the key so we avoid storing them in state, hence the
+   * distinction between IncentiveRecord and IncentiveRecordBody.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.IncentiveRecord}
+   */
+  public static final class IncentiveRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.concentratedliquidity.v1beta1.IncentiveRecord)
+      IncentiveRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IncentiveRecord.newBuilder() to construct.
+    private IncentiveRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IncentiveRecord() {
+      incentiveDenom_ = "";
+      incentiveCreatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IncentiveRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.class, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int INCENTIVE_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object incentiveDenom_ = "";
+    /**
+     * <pre>
+     * incentive_denom is the denom of the token being distributed as part of this
+     * incentive record
+     * </pre>
+     *
+     * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+     * @return The incentiveDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getIncentiveDenom() {
+      java.lang.Object ref = incentiveDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        incentiveDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * incentive_denom is the denom of the token being distributed as part of this
+     * incentive record
+     * </pre>
+     *
+     * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+     * @return The bytes for incentiveDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIncentiveDenomBytes() {
+      java.lang.Object ref = incentiveDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        incentiveDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INCENTIVE_CREATOR_ADDR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object incentiveCreatorAddr_ = "";
+    /**
+     * <pre>
+     * incentiveCreator is the address that created the incentive record. This
+     * address does not have any special privileges – it is only kept to keep
+     * incentive records created by different addresses separate.
+     * </pre>
+     *
+     * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+     * @return The incentiveCreatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getIncentiveCreatorAddr() {
+      java.lang.Object ref = incentiveCreatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        incentiveCreatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * incentiveCreator is the address that created the incentive record. This
+     * address does not have any special privileges – it is only kept to keep
+     * incentive records created by different addresses separate.
+     * </pre>
+     *
+     * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+     * @return The bytes for incentiveCreatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIncentiveCreatorAddrBytes() {
+      java.lang.Object ref = incentiveCreatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        incentiveCreatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INCENTIVE_RECORD_BODY_FIELD_NUMBER = 4;
+    private com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody incentiveRecordBody_;
+    /**
+     * <pre>
+     * incentive record body holds necessary
+     * </pre>
+     *
+     * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+     * @return Whether the incentiveRecordBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasIncentiveRecordBody() {
+      return incentiveRecordBody_ != null;
+    }
+    /**
+     * <pre>
+     * incentive record body holds necessary
+     * </pre>
+     *
+     * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+     * @return The incentiveRecordBody.
+     */
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody getIncentiveRecordBody() {
+      return incentiveRecordBody_ == null ? com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance() : incentiveRecordBody_;
+    }
+    /**
+     * <pre>
+     * incentive record body holds necessary
+     * </pre>
+     *
+     * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder getIncentiveRecordBodyOrBuilder() {
+      return incentiveRecordBody_ == null ? com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance() : incentiveRecordBody_;
+    }
+
+    public static final int MIN_UPTIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Duration minUptime_;
+    /**
+     * <pre>
+     * min_uptime is the minimum uptime required for liquidity to qualify for this
+     * incentive. It should be always be one of the supported uptimes in
+     * types.SupportedUptimes
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the minUptime field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinUptime() {
+      return minUptime_ != null;
+    }
+    /**
+     * <pre>
+     * min_uptime is the minimum uptime required for liquidity to qualify for this
+     * incentive. It should be always be one of the supported uptimes in
+     * types.SupportedUptimes
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The minUptime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getMinUptime() {
+      return minUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minUptime_;
+    }
+    /**
+     * <pre>
+     * min_uptime is the minimum uptime required for liquidity to qualify for this
+     * incentive. It should be always be one of the supported uptimes in
+     * types.SupportedUptimes
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getMinUptimeOrBuilder() {
+      return minUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minUptime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentiveDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, incentiveDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentiveCreatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, incentiveCreatorAddr_);
+      }
+      if (incentiveRecordBody_ != null) {
+        output.writeMessage(4, getIncentiveRecordBody());
+      }
+      if (minUptime_ != null) {
+        output.writeMessage(5, getMinUptime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentiveDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, incentiveDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentiveCreatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, incentiveCreatorAddr_);
+      }
+      if (incentiveRecordBody_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getIncentiveRecordBody());
+      }
+      if (minUptime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getMinUptime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord)) {
+        return super.equals(obj);
+      }
+      com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord other = (com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getIncentiveDenom()
+          .equals(other.getIncentiveDenom())) return false;
+      if (!getIncentiveCreatorAddr()
+          .equals(other.getIncentiveCreatorAddr())) return false;
+      if (hasIncentiveRecordBody() != other.hasIncentiveRecordBody()) return false;
+      if (hasIncentiveRecordBody()) {
+        if (!getIncentiveRecordBody()
+            .equals(other.getIncentiveRecordBody())) return false;
+      }
+      if (hasMinUptime() != other.hasMinUptime()) return false;
+      if (hasMinUptime()) {
+        if (!getMinUptime()
+            .equals(other.getMinUptime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + INCENTIVE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getIncentiveDenom().hashCode();
+      hash = (37 * hash) + INCENTIVE_CREATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getIncentiveCreatorAddr().hashCode();
+      if (hasIncentiveRecordBody()) {
+        hash = (37 * hash) + INCENTIVE_RECORD_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getIncentiveRecordBody().hashCode();
+      }
+      if (hasMinUptime()) {
+        hash = (37 * hash) + MIN_UPTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getMinUptime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IncentiveRecord is the high-level struct we use to deal with an independent
+     * incentive being distributed on a pool. Note that PoolId, Denom, and MinUptime
+     * are included in the key so we avoid storing them in state, hence the
+     * distinction between IncentiveRecord and IncentiveRecordBody.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.IncentiveRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.concentratedliquidity.v1beta1.IncentiveRecord)
+        com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.class, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.Builder.class);
+      }
+
+      // Construct using com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        incentiveDenom_ = "";
+        incentiveCreatorAddr_ = "";
+        incentiveRecordBody_ = null;
+        if (incentiveRecordBodyBuilder_ != null) {
+          incentiveRecordBodyBuilder_.dispose();
+          incentiveRecordBodyBuilder_ = null;
+        }
+        minUptime_ = null;
+        if (minUptimeBuilder_ != null) {
+          minUptimeBuilder_.dispose();
+          minUptimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord getDefaultInstanceForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord build() {
+        com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord buildPartial() {
+        com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord result = new com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.incentiveDenom_ = incentiveDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.incentiveCreatorAddr_ = incentiveCreatorAddr_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.incentiveRecordBody_ = incentiveRecordBodyBuilder_ == null
+              ? incentiveRecordBody_
+              : incentiveRecordBodyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.minUptime_ = minUptimeBuilder_ == null
+              ? minUptime_
+              : minUptimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord) {
+          return mergeFrom((com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord other) {
+        if (other == com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getIncentiveDenom().isEmpty()) {
+          incentiveDenom_ = other.incentiveDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getIncentiveCreatorAddr().isEmpty()) {
+          incentiveCreatorAddr_ = other.incentiveCreatorAddr_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasIncentiveRecordBody()) {
+          mergeIncentiveRecordBody(other.getIncentiveRecordBody());
+        }
+        if (other.hasMinUptime()) {
+          mergeMinUptime(other.getMinUptime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                incentiveDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                incentiveCreatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getIncentiveRecordBodyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getMinUptimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object incentiveDenom_ = "";
+      /**
+       * <pre>
+       * incentive_denom is the denom of the token being distributed as part of this
+       * incentive record
+       * </pre>
+       *
+       * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+       * @return The incentiveDenom.
+       */
+      public java.lang.String getIncentiveDenom() {
+        java.lang.Object ref = incentiveDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          incentiveDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * incentive_denom is the denom of the token being distributed as part of this
+       * incentive record
+       * </pre>
+       *
+       * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+       * @return The bytes for incentiveDenom.
+       */
+      public com.google.protobuf.ByteString
+          getIncentiveDenomBytes() {
+        java.lang.Object ref = incentiveDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          incentiveDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * incentive_denom is the denom of the token being distributed as part of this
+       * incentive record
+       * </pre>
+       *
+       * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+       * @param value The incentiveDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentiveDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        incentiveDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive_denom is the denom of the token being distributed as part of this
+       * incentive record
+       * </pre>
+       *
+       * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncentiveDenom() {
+        incentiveDenom_ = getDefaultInstance().getIncentiveDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive_denom is the denom of the token being distributed as part of this
+       * incentive record
+       * </pre>
+       *
+       * <code>string incentive_denom = 2 [json_name = "incentiveDenom", (.gogoproto.moretags) = "yaml:&#92;"incentive_denom&#92;""];</code>
+       * @param value The bytes for incentiveDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentiveDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        incentiveDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object incentiveCreatorAddr_ = "";
+      /**
+       * <pre>
+       * incentiveCreator is the address that created the incentive record. This
+       * address does not have any special privileges – it is only kept to keep
+       * incentive records created by different addresses separate.
+       * </pre>
+       *
+       * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+       * @return The incentiveCreatorAddr.
+       */
+      public java.lang.String getIncentiveCreatorAddr() {
+        java.lang.Object ref = incentiveCreatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          incentiveCreatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * incentiveCreator is the address that created the incentive record. This
+       * address does not have any special privileges – it is only kept to keep
+       * incentive records created by different addresses separate.
+       * </pre>
+       *
+       * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+       * @return The bytes for incentiveCreatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getIncentiveCreatorAddrBytes() {
+        java.lang.Object ref = incentiveCreatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          incentiveCreatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * incentiveCreator is the address that created the incentive record. This
+       * address does not have any special privileges – it is only kept to keep
+       * incentive records created by different addresses separate.
+       * </pre>
+       *
+       * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+       * @param value The incentiveCreatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentiveCreatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        incentiveCreatorAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentiveCreator is the address that created the incentive record. This
+       * address does not have any special privileges – it is only kept to keep
+       * incentive records created by different addresses separate.
+       * </pre>
+       *
+       * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncentiveCreatorAddr() {
+        incentiveCreatorAddr_ = getDefaultInstance().getIncentiveCreatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentiveCreator is the address that created the incentive record. This
+       * address does not have any special privileges – it is only kept to keep
+       * incentive records created by different addresses separate.
+       * </pre>
+       *
+       * <code>string incentive_creator_addr = 3 [json_name = "incentiveCreatorAddr", (.gogoproto.moretags) = "yaml:&#92;"incentive_creator_addr&#92;""];</code>
+       * @param value The bytes for incentiveCreatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentiveCreatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        incentiveCreatorAddr_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody incentiveRecordBody_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder> incentiveRecordBodyBuilder_;
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       * @return Whether the incentiveRecordBody field is set.
+       */
+      public boolean hasIncentiveRecordBody() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       * @return The incentiveRecordBody.
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody getIncentiveRecordBody() {
+        if (incentiveRecordBodyBuilder_ == null) {
+          return incentiveRecordBody_ == null ? com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance() : incentiveRecordBody_;
+        } else {
+          return incentiveRecordBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      public Builder setIncentiveRecordBody(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody value) {
+        if (incentiveRecordBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          incentiveRecordBody_ = value;
+        } else {
+          incentiveRecordBodyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      public Builder setIncentiveRecordBody(
+          com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder builderForValue) {
+        if (incentiveRecordBodyBuilder_ == null) {
+          incentiveRecordBody_ = builderForValue.build();
+        } else {
+          incentiveRecordBodyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      public Builder mergeIncentiveRecordBody(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody value) {
+        if (incentiveRecordBodyBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            incentiveRecordBody_ != null &&
+            incentiveRecordBody_ != com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance()) {
+            getIncentiveRecordBodyBuilder().mergeFrom(value);
+          } else {
+            incentiveRecordBody_ = value;
+          }
+        } else {
+          incentiveRecordBodyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      public Builder clearIncentiveRecordBody() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        incentiveRecordBody_ = null;
+        if (incentiveRecordBodyBuilder_ != null) {
+          incentiveRecordBodyBuilder_.dispose();
+          incentiveRecordBodyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder getIncentiveRecordBodyBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getIncentiveRecordBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder getIncentiveRecordBodyOrBuilder() {
+        if (incentiveRecordBodyBuilder_ != null) {
+          return incentiveRecordBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return incentiveRecordBody_ == null ?
+              com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance() : incentiveRecordBody_;
+        }
+      }
+      /**
+       * <pre>
+       * incentive record body holds necessary
+       * </pre>
+       *
+       * <code>.osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody incentive_record_body = 4 [json_name = "incentiveRecordBody", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"incentive_record_body&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder> 
+          getIncentiveRecordBodyFieldBuilder() {
+        if (incentiveRecordBodyBuilder_ == null) {
+          incentiveRecordBodyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder>(
+                  getIncentiveRecordBody(),
+                  getParentForChildren(),
+                  isClean());
+          incentiveRecordBody_ = null;
+        }
+        return incentiveRecordBodyBuilder_;
+      }
+
+      private com.google.protobuf.Duration minUptime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> minUptimeBuilder_;
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the minUptime field is set.
+       */
+      public boolean hasMinUptime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The minUptime.
+       */
+      public com.google.protobuf.Duration getMinUptime() {
+        if (minUptimeBuilder_ == null) {
+          return minUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minUptime_;
+        } else {
+          return minUptimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMinUptime(com.google.protobuf.Duration value) {
+        if (minUptimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minUptime_ = value;
+        } else {
+          minUptimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMinUptime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (minUptimeBuilder_ == null) {
+          minUptime_ = builderForValue.build();
+        } else {
+          minUptimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeMinUptime(com.google.protobuf.Duration value) {
+        if (minUptimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            minUptime_ != null &&
+            minUptime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getMinUptimeBuilder().mergeFrom(value);
+          } else {
+            minUptime_ = value;
+          }
+        } else {
+          minUptimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearMinUptime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        minUptime_ = null;
+        if (minUptimeBuilder_ != null) {
+          minUptimeBuilder_.dispose();
+          minUptimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMinUptimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getMinUptimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMinUptimeOrBuilder() {
+        if (minUptimeBuilder_ != null) {
+          return minUptimeBuilder_.getMessageOrBuilder();
+        } else {
+          return minUptime_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : minUptime_;
+        }
+      }
+      /**
+       * <pre>
+       * min_uptime is the minimum uptime required for liquidity to qualify for this
+       * incentive. It should be always be one of the supported uptimes in
+       * types.SupportedUptimes
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration min_uptime = 5 [json_name = "minUptime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"min_uptime&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMinUptimeFieldBuilder() {
+        if (minUptimeBuilder_ == null) {
+          minUptimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMinUptime(),
+                  getParentForChildren(),
+                  isClean());
+          minUptime_ = null;
+        }
+        return minUptimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.concentratedliquidity.v1beta1.IncentiveRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.concentratedliquidity.v1beta1.IncentiveRecord)
+    private static final com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord();
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IncentiveRecord>
+        PARSER = new com.google.protobuf.AbstractParser<IncentiveRecord>() {
+      @java.lang.Override
+      public IncentiveRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IncentiveRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IncentiveRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IncentiveRecordBodyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * remaining_amount is the total amount of incentives to be distributed
+     * </pre>
+     *
+     * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+     * @return The remainingAmount.
+     */
+    java.lang.String getRemainingAmount();
+    /**
+     * <pre>
+     * remaining_amount is the total amount of incentives to be distributed
+     * </pre>
+     *
+     * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+     * @return The bytes for remainingAmount.
+     */
+    com.google.protobuf.ByteString
+        getRemainingAmountBytes();
+
+    /**
+     * <pre>
+     * emission_rate is the incentive emission rate per second
+     * </pre>
+     *
+     * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+     * @return The emissionRate.
+     */
+    java.lang.String getEmissionRate();
+    /**
+     * <pre>
+     * emission_rate is the incentive emission rate per second
+     * </pre>
+     *
+     * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+     * @return The bytes for emissionRate.
+     */
+    com.google.protobuf.ByteString
+        getEmissionRateBytes();
+
+    /**
+     * <pre>
+     * start_time is the time when the incentive starts distributing
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time is the time when the incentive starts distributing
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time is the time when the incentive starts distributing
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * IncentiveRecordBody represents the body stored in state for each individual
+   * record.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody}
+   */
+  public static final class IncentiveRecordBody extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody)
+      IncentiveRecordBodyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IncentiveRecordBody.newBuilder() to construct.
+    private IncentiveRecordBody(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IncentiveRecordBody() {
+      remainingAmount_ = "";
+      emissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IncentiveRecordBody();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.class, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder.class);
+    }
+
+    public static final int REMAINING_AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object remainingAmount_ = "";
+    /**
+     * <pre>
+     * remaining_amount is the total amount of incentives to be distributed
+     * </pre>
+     *
+     * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+     * @return The remainingAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getRemainingAmount() {
+      java.lang.Object ref = remainingAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        remainingAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * remaining_amount is the total amount of incentives to be distributed
+     * </pre>
+     *
+     * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+     * @return The bytes for remainingAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemainingAmountBytes() {
+      java.lang.Object ref = remainingAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        remainingAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMISSION_RATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object emissionRate_ = "";
+    /**
+     * <pre>
+     * emission_rate is the incentive emission rate per second
+     * </pre>
+     *
+     * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+     * @return The emissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getEmissionRate() {
+      java.lang.Object ref = emissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        emissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * emission_rate is the incentive emission rate per second
+     * </pre>
+     *
+     * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+     * @return The bytes for emissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmissionRateBytes() {
+      java.lang.Object ref = emissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        emissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time is the time when the incentive starts distributing
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time is the time when the incentive starts distributing
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time is the time when the incentive starts distributing
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remainingAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, remainingAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, emissionRate_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(3, getStartTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(remainingAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, remainingAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, emissionRate_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStartTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody)) {
+        return super.equals(obj);
+      }
+      com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody other = (com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody) obj;
+
+      if (!getRemainingAmount()
+          .equals(other.getRemainingAmount())) return false;
+      if (!getEmissionRate()
+          .equals(other.getEmissionRate())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REMAINING_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getRemainingAmount().hashCode();
+      hash = (37 * hash) + EMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getEmissionRate().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IncentiveRecordBody represents the body stored in state for each individual
+     * record.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody)
+        com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBodyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.class, com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.Builder.class);
+      }
+
+      // Construct using com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        remainingAmount_ = "";
+        emissionRate_ = "";
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody getDefaultInstanceForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody build() {
+        com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody buildPartial() {
+        com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody result = new com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.remainingAmount_ = remainingAmount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.emissionRate_ = emissionRate_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody) {
+          return mergeFrom((com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody other) {
+        if (other == com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody.getDefaultInstance()) return this;
+        if (!other.getRemainingAmount().isEmpty()) {
+          remainingAmount_ = other.remainingAmount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getEmissionRate().isEmpty()) {
+          emissionRate_ = other.emissionRate_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                remainingAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                emissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object remainingAmount_ = "";
+      /**
+       * <pre>
+       * remaining_amount is the total amount of incentives to be distributed
+       * </pre>
+       *
+       * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+       * @return The remainingAmount.
+       */
+      public java.lang.String getRemainingAmount() {
+        java.lang.Object ref = remainingAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          remainingAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * remaining_amount is the total amount of incentives to be distributed
+       * </pre>
+       *
+       * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+       * @return The bytes for remainingAmount.
+       */
+      public com.google.protobuf.ByteString
+          getRemainingAmountBytes() {
+        java.lang.Object ref = remainingAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          remainingAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * remaining_amount is the total amount of incentives to be distributed
+       * </pre>
+       *
+       * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+       * @param value The remainingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemainingAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        remainingAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_amount is the total amount of incentives to be distributed
+       * </pre>
+       *
+       * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemainingAmount() {
+        remainingAmount_ = getDefaultInstance().getRemainingAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_amount is the total amount of incentives to be distributed
+       * </pre>
+       *
+       * <code>string remaining_amount = 1 [json_name = "remainingAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"remaining_amount&#92;""];</code>
+       * @param value The bytes for remainingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemainingAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        remainingAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object emissionRate_ = "";
+      /**
+       * <pre>
+       * emission_rate is the incentive emission rate per second
+       * </pre>
+       *
+       * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+       * @return The emissionRate.
+       */
+      public java.lang.String getEmissionRate() {
+        java.lang.Object ref = emissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          emissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * emission_rate is the incentive emission rate per second
+       * </pre>
+       *
+       * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+       * @return The bytes for emissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getEmissionRateBytes() {
+        java.lang.Object ref = emissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          emissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * emission_rate is the incentive emission rate per second
+       * </pre>
+       *
+       * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+       * @param value The emissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        emissionRate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * emission_rate is the incentive emission rate per second
+       * </pre>
+       *
+       * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmissionRate() {
+        emissionRate_ = getDefaultInstance().getEmissionRate();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * emission_rate is the incentive emission rate per second
+       * </pre>
+       *
+       * <code>string emission_rate = 2 [json_name = "emissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"emission_rate&#92;""];</code>
+       * @param value The bytes for emissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        emissionRate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time is the time when the incentive starts distributing
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.concentratedliquidity.v1beta1.IncentiveRecordBody)
+    private static final com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody();
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IncentiveRecordBody>
+        PARSER = new com.google.protobuf.AbstractParser<IncentiveRecordBody>() {
+      @java.lang.Override
+      public IncentiveRecordBody parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IncentiveRecordBody> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IncentiveRecordBody> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.IncentiveRecordProto.IncentiveRecordBody getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_concentratedliquidity_v1beta1_IncentiveRecordBody_fieldAccessorTable;
 
@@ -57,15 +2523,15 @@ public final class IncentiveRecordProto {
       "mos/cosmos-sdk/types.Dec\362\336\037\024yaml:\"emissi" +
       "on_rate\"R\014emissionRate\022X\n\nstart_time\030\003 \001" +
       "(\0132\032.google.protobuf.TimestampB\035\310\336\037\000\362\336\037\021" +
-      "yaml:\"start_time\"\220\337\037\001R\tstartTimeB\273\002\n)com" +
+      "yaml:\"start_time\"\220\337\037\001R\tstartTimeB\271\002\n)com" +
       ".osmosis.concentratedliquidity.v1beta1B\024" +
-      "IncentiveRecordProtoP\001ZBgithub.com/osmos" +
-      "is-labs/osmosis/v15/x/concentrated-liqui" +
-      "dity/types\242\002\003OCX\252\002%Osmosis.Concentratedl" +
-      "iquidity.V1beta1\312\002%Osmosis\\Concentratedl" +
-      "iquidity\\V1beta1\342\0021Osmosis\\Concentratedl" +
-      "iquidity\\V1beta1\\GPBMetadata\352\002\'Osmosis::" +
-      "Concentratedliquidity::V1beta1b\006proto3"
+      "IncentiveRecordProtoZBgithub.com/osmosis" +
+      "-labs/osmosis/v15/x/concentrated-liquidi" +
+      "ty/types\242\002\003OCX\252\002%Osmosis.Concentratedliq" +
+      "uidity.V1beta1\312\002%Osmosis\\Concentratedliq" +
+      "uidity\\V1beta1\342\0021Osmosis\\Concentratedliq" +
+      "uidity\\V1beta1\\GPBMetadata\352\002\'Osmosis::Co" +
+      "ncentratedliquidity::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

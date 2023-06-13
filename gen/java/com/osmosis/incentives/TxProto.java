@@ -14,24 +14,3821 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateGaugeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.MsgCreateGauge)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * is_perpetual shows if it's a perpetual or non-perpetual gauge
+     * Non-perpetual gauges distribute their tokens equally per epoch while the
+     * gauge is in the active period. Perpetual gauges distribute all their tokens
+     * at a single time and only distribute their tokens again once the gauge is
+     * refilled
+     * </pre>
+     *
+     * <code>bool is_perpetual = 1 [json_name = "isPerpetual"];</code>
+     * @return The isPerpetual.
+     */
+    boolean getIsPerpetual();
+
+    /**
+     * <pre>
+     * owner is the address of gauge creator
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the address of gauge creator
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * distribute_to show which lock the gauge should distribute to by time
+     * duration or by timestamp
+     * </pre>
+     *
+     * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributeTo field is set.
+     */
+    boolean hasDistributeTo();
+    /**
+     * <pre>
+     * distribute_to show which lock the gauge should distribute to by time
+     * duration or by timestamp
+     * </pre>
+     *
+     * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+     * @return The distributeTo.
+     */
+    com.osmosis.lockup.LockProto.QueryCondition getDistributeTo();
+    /**
+     * <pre>
+     * distribute_to show which lock the gauge should distribute to by time
+     * duration or by timestamp
+     * </pre>
+     *
+     * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.lockup.LockProto.QueryConditionOrBuilder getDistributeToOrBuilder();
+
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * start_time is the distribution start time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time is the distribution start time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time is the distribution start time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * num_epochs_paid_over is the number of epochs distribution will be completed
+     * over
+     * </pre>
+     *
+     * <code>uint64 num_epochs_paid_over = 6 [json_name = "numEpochsPaidOver"];</code>
+     * @return The numEpochsPaidOver.
+     */
+    long getNumEpochsPaidOver();
+  }
+  /**
+   * <pre>
+   * MsgCreateGauge creates a gague to distribute rewards to users
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.incentives.MsgCreateGauge}
+   */
+  public static final class MsgCreateGauge extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.MsgCreateGauge)
+      MsgCreateGaugeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateGauge.newBuilder() to construct.
+    private MsgCreateGauge(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateGauge() {
+      owner_ = "";
+      coins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateGauge();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGauge_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGauge_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.TxProto.MsgCreateGauge.class, com.osmosis.incentives.TxProto.MsgCreateGauge.Builder.class);
+    }
+
+    public static final int IS_PERPETUAL_FIELD_NUMBER = 1;
+    private boolean isPerpetual_ = false;
+    /**
+     * <pre>
+     * is_perpetual shows if it's a perpetual or non-perpetual gauge
+     * Non-perpetual gauges distribute their tokens equally per epoch while the
+     * gauge is in the active period. Perpetual gauges distribute all their tokens
+     * at a single time and only distribute their tokens again once the gauge is
+     * refilled
+     * </pre>
+     *
+     * <code>bool is_perpetual = 1 [json_name = "isPerpetual"];</code>
+     * @return The isPerpetual.
+     */
+    @java.lang.Override
+    public boolean getIsPerpetual() {
+      return isPerpetual_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the address of gauge creator
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the address of gauge creator
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISTRIBUTE_TO_FIELD_NUMBER = 3;
+    private com.osmosis.lockup.LockProto.QueryCondition distributeTo_;
+    /**
+     * <pre>
+     * distribute_to show which lock the gauge should distribute to by time
+     * duration or by timestamp
+     * </pre>
+     *
+     * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributeTo field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributeTo() {
+      return distributeTo_ != null;
+    }
+    /**
+     * <pre>
+     * distribute_to show which lock the gauge should distribute to by time
+     * duration or by timestamp
+     * </pre>
+     *
+     * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+     * @return The distributeTo.
+     */
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.QueryCondition getDistributeTo() {
+      return distributeTo_ == null ? com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance() : distributeTo_;
+    }
+    /**
+     * <pre>
+     * distribute_to show which lock the gauge should distribute to by time
+     * duration or by timestamp
+     * </pre>
+     *
+     * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.QueryConditionOrBuilder getDistributeToOrBuilder() {
+      return distributeTo_ == null ? com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance() : distributeTo_;
+    }
+
+    public static final int COINS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * coins are coin(s) to be distributed by the gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time is the distribution start time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time is the distribution start time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time is the distribution start time
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int NUM_EPOCHS_PAID_OVER_FIELD_NUMBER = 6;
+    private long numEpochsPaidOver_ = 0L;
+    /**
+     * <pre>
+     * num_epochs_paid_over is the number of epochs distribution will be completed
+     * over
+     * </pre>
+     *
+     * <code>uint64 num_epochs_paid_over = 6 [json_name = "numEpochsPaidOver"];</code>
+     * @return The numEpochsPaidOver.
+     */
+    @java.lang.Override
+    public long getNumEpochsPaidOver() {
+      return numEpochsPaidOver_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isPerpetual_ != false) {
+        output.writeBool(1, isPerpetual_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (distributeTo_ != null) {
+        output.writeMessage(3, getDistributeTo());
+      }
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(4, coins_.get(i));
+      }
+      if (startTime_ != null) {
+        output.writeMessage(5, getStartTime());
+      }
+      if (numEpochsPaidOver_ != 0L) {
+        output.writeUInt64(6, numEpochsPaidOver_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isPerpetual_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isPerpetual_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (distributeTo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDistributeTo());
+      }
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, coins_.get(i));
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getStartTime());
+      }
+      if (numEpochsPaidOver_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, numEpochsPaidOver_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.TxProto.MsgCreateGauge)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.TxProto.MsgCreateGauge other = (com.osmosis.incentives.TxProto.MsgCreateGauge) obj;
+
+      if (getIsPerpetual()
+          != other.getIsPerpetual()) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (hasDistributeTo() != other.hasDistributeTo()) return false;
+      if (hasDistributeTo()) {
+        if (!getDistributeTo()
+            .equals(other.getDistributeTo())) return false;
+      }
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (getNumEpochsPaidOver()
+          != other.getNumEpochsPaidOver()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_PERPETUAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPerpetual());
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (hasDistributeTo()) {
+        hash = (37 * hash) + DISTRIBUTE_TO_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributeTo().hashCode();
+      }
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      hash = (37 * hash) + NUM_EPOCHS_PAID_OVER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumEpochsPaidOver());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.TxProto.MsgCreateGauge prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateGauge creates a gague to distribute rewards to users
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.incentives.MsgCreateGauge}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.MsgCreateGauge)
+        com.osmosis.incentives.TxProto.MsgCreateGaugeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGauge_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGauge_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.TxProto.MsgCreateGauge.class, com.osmosis.incentives.TxProto.MsgCreateGauge.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.TxProto.MsgCreateGauge.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isPerpetual_ = false;
+        owner_ = "";
+        distributeTo_ = null;
+        if (distributeToBuilder_ != null) {
+          distributeToBuilder_.dispose();
+          distributeToBuilder_ = null;
+        }
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        numEpochsPaidOver_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGauge_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGauge getDefaultInstanceForType() {
+        return com.osmosis.incentives.TxProto.MsgCreateGauge.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGauge build() {
+        com.osmosis.incentives.TxProto.MsgCreateGauge result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGauge buildPartial() {
+        com.osmosis.incentives.TxProto.MsgCreateGauge result = new com.osmosis.incentives.TxProto.MsgCreateGauge(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.TxProto.MsgCreateGauge result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.incentives.TxProto.MsgCreateGauge result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isPerpetual_ = isPerpetual_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.distributeTo_ = distributeToBuilder_ == null
+              ? distributeTo_
+              : distributeToBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.numEpochsPaidOver_ = numEpochsPaidOver_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.TxProto.MsgCreateGauge) {
+          return mergeFrom((com.osmosis.incentives.TxProto.MsgCreateGauge)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.TxProto.MsgCreateGauge other) {
+        if (other == com.osmosis.incentives.TxProto.MsgCreateGauge.getDefaultInstance()) return this;
+        if (other.getIsPerpetual() != false) {
+          setIsPerpetual(other.getIsPerpetual());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDistributeTo()) {
+          mergeDistributeTo(other.getDistributeTo());
+        }
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.getNumEpochsPaidOver() != 0L) {
+          setNumEpochsPaidOver(other.getNumEpochsPaidOver());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isPerpetual_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDistributeToFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                numEpochsPaidOver_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isPerpetual_ ;
+      /**
+       * <pre>
+       * is_perpetual shows if it's a perpetual or non-perpetual gauge
+       * Non-perpetual gauges distribute their tokens equally per epoch while the
+       * gauge is in the active period. Perpetual gauges distribute all their tokens
+       * at a single time and only distribute their tokens again once the gauge is
+       * refilled
+       * </pre>
+       *
+       * <code>bool is_perpetual = 1 [json_name = "isPerpetual"];</code>
+       * @return The isPerpetual.
+       */
+      @java.lang.Override
+      public boolean getIsPerpetual() {
+        return isPerpetual_;
+      }
+      /**
+       * <pre>
+       * is_perpetual shows if it's a perpetual or non-perpetual gauge
+       * Non-perpetual gauges distribute their tokens equally per epoch while the
+       * gauge is in the active period. Perpetual gauges distribute all their tokens
+       * at a single time and only distribute their tokens again once the gauge is
+       * refilled
+       * </pre>
+       *
+       * <code>bool is_perpetual = 1 [json_name = "isPerpetual"];</code>
+       * @param value The isPerpetual to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPerpetual(boolean value) {
+
+        isPerpetual_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is_perpetual shows if it's a perpetual or non-perpetual gauge
+       * Non-perpetual gauges distribute their tokens equally per epoch while the
+       * gauge is in the active period. Perpetual gauges distribute all their tokens
+       * at a single time and only distribute their tokens again once the gauge is
+       * refilled
+       * </pre>
+       *
+       * <code>bool is_perpetual = 1 [json_name = "isPerpetual"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPerpetual() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isPerpetual_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the address of gauge creator
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the address of gauge creator
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the address of gauge creator
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the address of gauge creator
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the address of gauge creator
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.lockup.LockProto.QueryCondition distributeTo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.lockup.LockProto.QueryCondition, com.osmosis.lockup.LockProto.QueryCondition.Builder, com.osmosis.lockup.LockProto.QueryConditionOrBuilder> distributeToBuilder_;
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributeTo field is set.
+       */
+      public boolean hasDistributeTo() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       * @return The distributeTo.
+       */
+      public com.osmosis.lockup.LockProto.QueryCondition getDistributeTo() {
+        if (distributeToBuilder_ == null) {
+          return distributeTo_ == null ? com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance() : distributeTo_;
+        } else {
+          return distributeToBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributeTo(com.osmosis.lockup.LockProto.QueryCondition value) {
+        if (distributeToBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributeTo_ = value;
+        } else {
+          distributeToBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributeTo(
+          com.osmosis.lockup.LockProto.QueryCondition.Builder builderForValue) {
+        if (distributeToBuilder_ == null) {
+          distributeTo_ = builderForValue.build();
+        } else {
+          distributeToBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributeTo(com.osmosis.lockup.LockProto.QueryCondition value) {
+        if (distributeToBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            distributeTo_ != null &&
+            distributeTo_ != com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance()) {
+            getDistributeToBuilder().mergeFrom(value);
+          } else {
+            distributeTo_ = value;
+          }
+        } else {
+          distributeToBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributeTo() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        distributeTo_ = null;
+        if (distributeToBuilder_ != null) {
+          distributeToBuilder_.dispose();
+          distributeToBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.lockup.LockProto.QueryCondition.Builder getDistributeToBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDistributeToFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.lockup.LockProto.QueryConditionOrBuilder getDistributeToOrBuilder() {
+        if (distributeToBuilder_ != null) {
+          return distributeToBuilder_.getMessageOrBuilder();
+        } else {
+          return distributeTo_ == null ?
+              com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance() : distributeTo_;
+        }
+      }
+      /**
+       * <pre>
+       * distribute_to show which lock the gauge should distribute to by time
+       * duration or by timestamp
+       * </pre>
+       *
+       * <code>.osmosis.lockup.QueryCondition distribute_to = 3 [json_name = "distributeTo", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.lockup.LockProto.QueryCondition, com.osmosis.lockup.LockProto.QueryCondition.Builder, com.osmosis.lockup.LockProto.QueryConditionOrBuilder> 
+          getDistributeToFieldBuilder() {
+        if (distributeToBuilder_ == null) {
+          distributeToBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.lockup.LockProto.QueryCondition, com.osmosis.lockup.LockProto.QueryCondition.Builder, com.osmosis.lockup.LockProto.QueryConditionOrBuilder>(
+                  getDistributeTo(),
+                  getParentForChildren(),
+                  isClean());
+          distributeTo_ = null;
+        }
+        return distributeToBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * coins are coin(s) to be distributed by the gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 4 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time is the distribution start time
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 5 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private long numEpochsPaidOver_ ;
+      /**
+       * <pre>
+       * num_epochs_paid_over is the number of epochs distribution will be completed
+       * over
+       * </pre>
+       *
+       * <code>uint64 num_epochs_paid_over = 6 [json_name = "numEpochsPaidOver"];</code>
+       * @return The numEpochsPaidOver.
+       */
+      @java.lang.Override
+      public long getNumEpochsPaidOver() {
+        return numEpochsPaidOver_;
+      }
+      /**
+       * <pre>
+       * num_epochs_paid_over is the number of epochs distribution will be completed
+       * over
+       * </pre>
+       *
+       * <code>uint64 num_epochs_paid_over = 6 [json_name = "numEpochsPaidOver"];</code>
+       * @param value The numEpochsPaidOver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumEpochsPaidOver(long value) {
+
+        numEpochsPaidOver_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * num_epochs_paid_over is the number of epochs distribution will be completed
+       * over
+       * </pre>
+       *
+       * <code>uint64 num_epochs_paid_over = 6 [json_name = "numEpochsPaidOver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumEpochsPaidOver() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        numEpochsPaidOver_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.MsgCreateGauge)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.MsgCreateGauge)
+    private static final com.osmosis.incentives.TxProto.MsgCreateGauge DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.TxProto.MsgCreateGauge();
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGauge getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateGauge>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateGauge>() {
+      @java.lang.Override
+      public MsgCreateGauge parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateGauge> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateGauge> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.TxProto.MsgCreateGauge getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateGaugeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.MsgCreateGaugeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.MsgCreateGaugeResponse}
+   */
+  public static final class MsgCreateGaugeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.MsgCreateGaugeResponse)
+      MsgCreateGaugeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateGaugeResponse.newBuilder() to construct.
+    private MsgCreateGaugeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateGaugeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateGaugeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGaugeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGaugeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.class, com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.TxProto.MsgCreateGaugeResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.TxProto.MsgCreateGaugeResponse other = (com.osmosis.incentives.TxProto.MsgCreateGaugeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.TxProto.MsgCreateGaugeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.MsgCreateGaugeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.MsgCreateGaugeResponse)
+        com.osmosis.incentives.TxProto.MsgCreateGaugeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGaugeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.class, com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgCreateGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGaugeResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGaugeResponse build() {
+        com.osmosis.incentives.TxProto.MsgCreateGaugeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgCreateGaugeResponse buildPartial() {
+        com.osmosis.incentives.TxProto.MsgCreateGaugeResponse result = new com.osmosis.incentives.TxProto.MsgCreateGaugeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.TxProto.MsgCreateGaugeResponse) {
+          return mergeFrom((com.osmosis.incentives.TxProto.MsgCreateGaugeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.TxProto.MsgCreateGaugeResponse other) {
+        if (other == com.osmosis.incentives.TxProto.MsgCreateGaugeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.MsgCreateGaugeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.MsgCreateGaugeResponse)
+    private static final com.osmosis.incentives.TxProto.MsgCreateGaugeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.TxProto.MsgCreateGaugeResponse();
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgCreateGaugeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateGaugeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateGaugeResponse>() {
+      @java.lang.Override
+      public MsgCreateGaugeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateGaugeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateGaugeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.TxProto.MsgCreateGaugeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddToGaugeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.MsgAddToGauge)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * owner is the gauge owner's address
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * owner is the gauge owner's address
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * gauge_id is the ID of gauge that rewards are getting added to
+     * </pre>
+     *
+     * <code>uint64 gauge_id = 2 [json_name = "gaugeId"];</code>
+     * @return The gaugeId.
+     */
+    long getGaugeId();
+
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getRewardsList();
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index);
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgAddToGauge adds coins to a previously created gauge
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.incentives.MsgAddToGauge}
+   */
+  public static final class MsgAddToGauge extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.MsgAddToGauge)
+      MsgAddToGaugeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddToGauge.newBuilder() to construct.
+    private MsgAddToGauge(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddToGauge() {
+      owner_ = "";
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddToGauge();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGauge_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGauge_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.TxProto.MsgAddToGauge.class, com.osmosis.incentives.TxProto.MsgAddToGauge.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * owner is the gauge owner's address
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner is the gauge owner's address
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GAUGE_ID_FIELD_NUMBER = 2;
+    private long gaugeId_ = 0L;
+    /**
+     * <pre>
+     * gauge_id is the ID of gauge that rewards are getting added to
+     * </pre>
+     *
+     * <code>uint64 gauge_id = 2 [json_name = "gaugeId"];</code>
+     * @return The gaugeId.
+     */
+    @java.lang.Override
+    public long getGaugeId() {
+      return gaugeId_;
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_;
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <pre>
+     * rewards are the coin(s) to add to gauge
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (gaugeId_ != 0L) {
+        output.writeUInt64(2, gaugeId_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(3, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (gaugeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, gaugeId_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.TxProto.MsgAddToGauge)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.TxProto.MsgAddToGauge other = (com.osmosis.incentives.TxProto.MsgAddToGauge) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (getGaugeId()
+          != other.getGaugeId()) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + GAUGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGaugeId());
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.TxProto.MsgAddToGauge prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddToGauge adds coins to a previously created gauge
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.incentives.MsgAddToGauge}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.MsgAddToGauge)
+        com.osmosis.incentives.TxProto.MsgAddToGaugeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGauge_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGauge_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.TxProto.MsgAddToGauge.class, com.osmosis.incentives.TxProto.MsgAddToGauge.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.TxProto.MsgAddToGauge.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        gaugeId_ = 0L;
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGauge_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgAddToGauge getDefaultInstanceForType() {
+        return com.osmosis.incentives.TxProto.MsgAddToGauge.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgAddToGauge build() {
+        com.osmosis.incentives.TxProto.MsgAddToGauge result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgAddToGauge buildPartial() {
+        com.osmosis.incentives.TxProto.MsgAddToGauge result = new com.osmosis.incentives.TxProto.MsgAddToGauge(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.incentives.TxProto.MsgAddToGauge result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.incentives.TxProto.MsgAddToGauge result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.gaugeId_ = gaugeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.TxProto.MsgAddToGauge) {
+          return mergeFrom((com.osmosis.incentives.TxProto.MsgAddToGauge)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.TxProto.MsgAddToGauge other) {
+        if (other == com.osmosis.incentives.TxProto.MsgAddToGauge.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getGaugeId() != 0L) {
+          setGaugeId(other.getGaugeId());
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                gaugeId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * owner is the gauge owner's address
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the gauge owner's address
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner is the gauge owner's address
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the gauge owner's address
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner is the gauge owner's address
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long gaugeId_ ;
+      /**
+       * <pre>
+       * gauge_id is the ID of gauge that rewards are getting added to
+       * </pre>
+       *
+       * <code>uint64 gauge_id = 2 [json_name = "gaugeId"];</code>
+       * @return The gaugeId.
+       */
+      @java.lang.Override
+      public long getGaugeId() {
+        return gaugeId_;
+      }
+      /**
+       * <pre>
+       * gauge_id is the ID of gauge that rewards are getting added to
+       * </pre>
+       *
+       * <code>uint64 gauge_id = 2 [json_name = "gaugeId"];</code>
+       * @param value The gaugeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGaugeId(long value) {
+
+        gaugeId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * gauge_id is the ID of gauge that rewards are getting added to
+       * </pre>
+       *
+       * <code>uint64 gauge_id = 2 [json_name = "gaugeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGaugeId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gaugeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(rewards_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * rewards are the coin(s) to add to gauge
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.MsgAddToGauge)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.MsgAddToGauge)
+    private static final com.osmosis.incentives.TxProto.MsgAddToGauge DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.TxProto.MsgAddToGauge();
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGauge getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddToGauge>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddToGauge>() {
+      @java.lang.Override
+      public MsgAddToGauge parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddToGauge> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddToGauge> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.TxProto.MsgAddToGauge getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddToGaugeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.incentives.MsgAddToGaugeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code osmosis.incentives.MsgAddToGaugeResponse}
+   */
+  public static final class MsgAddToGaugeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.incentives.MsgAddToGaugeResponse)
+      MsgAddToGaugeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddToGaugeResponse.newBuilder() to construct.
+    private MsgAddToGaugeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddToGaugeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddToGaugeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGaugeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGaugeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.class, com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.incentives.TxProto.MsgAddToGaugeResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.incentives.TxProto.MsgAddToGaugeResponse other = (com.osmosis.incentives.TxProto.MsgAddToGaugeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.incentives.TxProto.MsgAddToGaugeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.incentives.MsgAddToGaugeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.incentives.MsgAddToGaugeResponse)
+        com.osmosis.incentives.TxProto.MsgAddToGaugeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGaugeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.class, com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.incentives.TxProto.internal_static_osmosis_incentives_MsgAddToGaugeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgAddToGaugeResponse getDefaultInstanceForType() {
+        return com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgAddToGaugeResponse build() {
+        com.osmosis.incentives.TxProto.MsgAddToGaugeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.incentives.TxProto.MsgAddToGaugeResponse buildPartial() {
+        com.osmosis.incentives.TxProto.MsgAddToGaugeResponse result = new com.osmosis.incentives.TxProto.MsgAddToGaugeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.incentives.TxProto.MsgAddToGaugeResponse) {
+          return mergeFrom((com.osmosis.incentives.TxProto.MsgAddToGaugeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.incentives.TxProto.MsgAddToGaugeResponse other) {
+        if (other == com.osmosis.incentives.TxProto.MsgAddToGaugeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.incentives.MsgAddToGaugeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.incentives.MsgAddToGaugeResponse)
+    private static final com.osmosis.incentives.TxProto.MsgAddToGaugeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.incentives.TxProto.MsgAddToGaugeResponse();
+    }
+
+    public static com.osmosis.incentives.TxProto.MsgAddToGaugeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddToGaugeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddToGaugeResponse>() {
+      @java.lang.Override
+      public MsgAddToGaugeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddToGaugeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddToGaugeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.incentives.TxProto.MsgAddToGaugeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_incentives_MsgCreateGauge_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_incentives_MsgCreateGauge_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_incentives_MsgCreateGaugeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_incentives_MsgCreateGaugeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_incentives_MsgAddToGauge_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_incentives_MsgAddToGauge_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_incentives_MsgAddToGaugeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_incentives_MsgAddToGaugeResponse_fieldAccessorTable;
 
@@ -71,12 +3868,12 @@ public final class TxProto {
       "osis.incentives.MsgCreateGaugeResponse\022Z" +
       "\n\nAddToGauge\022!.osmosis.incentives.MsgAdd" +
       "ToGauge\032).osmosis.incentives.MsgAddToGau" +
-      "geResponseB\302\001\n\026com.osmosis.incentivesB\007T" +
-      "xProtoP\001Z6github.com/osmosis-labs/osmosi" +
-      "s/v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis" +
-      ".Incentives\312\002\022Osmosis\\Incentives\342\002\036Osmos" +
-      "is\\Incentives\\GPBMetadata\352\002\023Osmosis::Inc" +
-      "entivesb\006proto3"
+      "geResponseB\300\001\n\026com.osmosis.incentivesB\007T" +
+      "xProtoZ6github.com/osmosis-labs/osmosis/" +
+      "v15/x/incentives/types\242\002\003OIX\252\002\022Osmosis.I" +
+      "ncentives\312\002\022Osmosis\\Incentives\342\002\036Osmosis" +
+      "\\Incentives\\GPBMetadata\352\002\023Osmosis::Incen" +
+      "tivesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

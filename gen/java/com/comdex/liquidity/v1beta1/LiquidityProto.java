@@ -14,49 +14,14645 @@ public final class LiquidityProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * PoolType enumerates pool types.
+   * </pre>
+   *
+   * Protobuf enum {@code comdex.liquidity.v1beta1.PoolType}
+   */
+  public enum PoolType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * POOL_TYPE_UNSPECIFIED specifies unknown pool type
+     * </pre>
+     *
+     * <code>POOL_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "PoolTypeUnspecified"];</code>
+     */
+    POOL_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * POOL_TYPE_BASIC specifies the basic pool type
+     * </pre>
+     *
+     * <code>POOL_TYPE_BASIC = 1 [(.gogoproto.enumvalue_customname) = "PoolTypeBasic"];</code>
+     */
+    POOL_TYPE_BASIC(1),
+    /**
+     * <pre>
+     * POOL_TYPE_RANGED specifies the ranged pool type
+     * </pre>
+     *
+     * <code>POOL_TYPE_RANGED = 2 [(.gogoproto.enumvalue_customname) = "PoolTypeRanged"];</code>
+     */
+    POOL_TYPE_RANGED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * POOL_TYPE_UNSPECIFIED specifies unknown pool type
+     * </pre>
+     *
+     * <code>POOL_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "PoolTypeUnspecified"];</code>
+     */
+    public static final int POOL_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * POOL_TYPE_BASIC specifies the basic pool type
+     * </pre>
+     *
+     * <code>POOL_TYPE_BASIC = 1 [(.gogoproto.enumvalue_customname) = "PoolTypeBasic"];</code>
+     */
+    public static final int POOL_TYPE_BASIC_VALUE = 1;
+    /**
+     * <pre>
+     * POOL_TYPE_RANGED specifies the ranged pool type
+     * </pre>
+     *
+     * <code>POOL_TYPE_RANGED = 2 [(.gogoproto.enumvalue_customname) = "PoolTypeRanged"];</code>
+     */
+    public static final int POOL_TYPE_RANGED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PoolType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PoolType forNumber(int value) {
+      switch (value) {
+        case 0: return POOL_TYPE_UNSPECIFIED;
+        case 1: return POOL_TYPE_BASIC;
+        case 2: return POOL_TYPE_RANGED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PoolType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PoolType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PoolType>() {
+            public PoolType findValueByNumber(int number) {
+              return PoolType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PoolType[] VALUES = values();
+
+    public static PoolType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PoolType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:comdex.liquidity.v1beta1.PoolType)
+  }
+
+  /**
+   * <pre>
+   * OrderType enumerates order types.
+   * </pre>
+   *
+   * Protobuf enum {@code comdex.liquidity.v1beta1.OrderType}
+   */
+  public enum OrderType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * ORDER_TYPE_UNSPECIFIED specifies unknown order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "OrderTypeUnspecified"];</code>
+     */
+    ORDER_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ORDER_TYPE_LIMIT specifies limit order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_LIMIT = 1 [(.gogoproto.enumvalue_customname) = "OrderTypeLimit"];</code>
+     */
+    ORDER_TYPE_LIMIT(1),
+    /**
+     * <pre>
+     * ORDER_TYPE_MARKET specifies market order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_MARKET = 2 [(.gogoproto.enumvalue_customname) = "OrderTypeMarket"];</code>
+     */
+    ORDER_TYPE_MARKET(2),
+    /**
+     * <pre>
+     * ORDER_TYPE_MM specifies MM(market making) order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_MM = 3 [(.gogoproto.enumvalue_customname) = "OrderTypeMM"];</code>
+     */
+    ORDER_TYPE_MM(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * ORDER_TYPE_UNSPECIFIED specifies unknown order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "OrderTypeUnspecified"];</code>
+     */
+    public static final int ORDER_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ORDER_TYPE_LIMIT specifies limit order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_LIMIT = 1 [(.gogoproto.enumvalue_customname) = "OrderTypeLimit"];</code>
+     */
+    public static final int ORDER_TYPE_LIMIT_VALUE = 1;
+    /**
+     * <pre>
+     * ORDER_TYPE_MARKET specifies market order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_MARKET = 2 [(.gogoproto.enumvalue_customname) = "OrderTypeMarket"];</code>
+     */
+    public static final int ORDER_TYPE_MARKET_VALUE = 2;
+    /**
+     * <pre>
+     * ORDER_TYPE_MM specifies MM(market making) order type.
+     * </pre>
+     *
+     * <code>ORDER_TYPE_MM = 3 [(.gogoproto.enumvalue_customname) = "OrderTypeMM"];</code>
+     */
+    public static final int ORDER_TYPE_MM_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static OrderType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static OrderType forNumber(int value) {
+      switch (value) {
+        case 0: return ORDER_TYPE_UNSPECIFIED;
+        case 1: return ORDER_TYPE_LIMIT;
+        case 2: return ORDER_TYPE_MARKET;
+        case 3: return ORDER_TYPE_MM;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<OrderType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        OrderType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<OrderType>() {
+            public OrderType findValueByNumber(int number) {
+              return OrderType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final OrderType[] VALUES = values();
+
+    public static OrderType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private OrderType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:comdex.liquidity.v1beta1.OrderType)
+  }
+
+  /**
+   * <pre>
+   * OrderDirection enumerates order directions.
+   * </pre>
+   *
+   * Protobuf enum {@code comdex.liquidity.v1beta1.OrderDirection}
+   */
+  public enum OrderDirection
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * ORDER_DIRECTION_UNSPECIFIED specifies unknown order direction
+     * </pre>
+     *
+     * <code>ORDER_DIRECTION_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "OrderDirectionUnspecified"];</code>
+     */
+    ORDER_DIRECTION_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ORDER_DIRECTION_BUY specifies buy(swap quote coin to base coin) order direction
+     * </pre>
+     *
+     * <code>ORDER_DIRECTION_BUY = 1 [(.gogoproto.enumvalue_customname) = "OrderDirectionBuy"];</code>
+     */
+    ORDER_DIRECTION_BUY(1),
+    /**
+     * <pre>
+     * ORDER_DIRECTION_SELL specifies sell(swap base coin to quote coin) order direction
+     * </pre>
+     *
+     * <code>ORDER_DIRECTION_SELL = 2 [(.gogoproto.enumvalue_customname) = "OrderDirectionSell"];</code>
+     */
+    ORDER_DIRECTION_SELL(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * ORDER_DIRECTION_UNSPECIFIED specifies unknown order direction
+     * </pre>
+     *
+     * <code>ORDER_DIRECTION_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "OrderDirectionUnspecified"];</code>
+     */
+    public static final int ORDER_DIRECTION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ORDER_DIRECTION_BUY specifies buy(swap quote coin to base coin) order direction
+     * </pre>
+     *
+     * <code>ORDER_DIRECTION_BUY = 1 [(.gogoproto.enumvalue_customname) = "OrderDirectionBuy"];</code>
+     */
+    public static final int ORDER_DIRECTION_BUY_VALUE = 1;
+    /**
+     * <pre>
+     * ORDER_DIRECTION_SELL specifies sell(swap base coin to quote coin) order direction
+     * </pre>
+     *
+     * <code>ORDER_DIRECTION_SELL = 2 [(.gogoproto.enumvalue_customname) = "OrderDirectionSell"];</code>
+     */
+    public static final int ORDER_DIRECTION_SELL_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static OrderDirection valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static OrderDirection forNumber(int value) {
+      switch (value) {
+        case 0: return ORDER_DIRECTION_UNSPECIFIED;
+        case 1: return ORDER_DIRECTION_BUY;
+        case 2: return ORDER_DIRECTION_SELL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<OrderDirection>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        OrderDirection> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<OrderDirection>() {
+            public OrderDirection findValueByNumber(int number) {
+              return OrderDirection.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final OrderDirection[] VALUES = values();
+
+    public static OrderDirection valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private OrderDirection(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:comdex.liquidity.v1beta1.OrderDirection)
+  }
+
+  /**
+   * <pre>
+   * RequestStatus enumerates request statuses.
+   * </pre>
+   *
+   * Protobuf enum {@code comdex.liquidity.v1beta1.RequestStatus}
+   */
+  public enum RequestStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * REQUEST_STATUS_UNSPECIFIED specifies unknown request status
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "RequestStatusUnspecified"];</code>
+     */
+    REQUEST_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * REQUEST_STATUS_NOT_EXECUTED indicates the request is not executed yet
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_NOT_EXECUTED = 1 [(.gogoproto.enumvalue_customname) = "RequestStatusNotExecuted"];</code>
+     */
+    REQUEST_STATUS_NOT_EXECUTED(1),
+    /**
+     * <pre>
+     * REQUEST_STATUS_SUCCEEDED indicates the request has been succeeded
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_SUCCEEDED = 2 [(.gogoproto.enumvalue_customname) = "RequestStatusSucceeded"];</code>
+     */
+    REQUEST_STATUS_SUCCEEDED(2),
+    /**
+     * <pre>
+     * REQUEST_STATUS_FAILED indicates the request is failed
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_FAILED = 3 [(.gogoproto.enumvalue_customname) = "RequestStatusFailed"];</code>
+     */
+    REQUEST_STATUS_FAILED(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * REQUEST_STATUS_UNSPECIFIED specifies unknown request status
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "RequestStatusUnspecified"];</code>
+     */
+    public static final int REQUEST_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * REQUEST_STATUS_NOT_EXECUTED indicates the request is not executed yet
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_NOT_EXECUTED = 1 [(.gogoproto.enumvalue_customname) = "RequestStatusNotExecuted"];</code>
+     */
+    public static final int REQUEST_STATUS_NOT_EXECUTED_VALUE = 1;
+    /**
+     * <pre>
+     * REQUEST_STATUS_SUCCEEDED indicates the request has been succeeded
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_SUCCEEDED = 2 [(.gogoproto.enumvalue_customname) = "RequestStatusSucceeded"];</code>
+     */
+    public static final int REQUEST_STATUS_SUCCEEDED_VALUE = 2;
+    /**
+     * <pre>
+     * REQUEST_STATUS_FAILED indicates the request is failed
+     * </pre>
+     *
+     * <code>REQUEST_STATUS_FAILED = 3 [(.gogoproto.enumvalue_customname) = "RequestStatusFailed"];</code>
+     */
+    public static final int REQUEST_STATUS_FAILED_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RequestStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static RequestStatus forNumber(int value) {
+      switch (value) {
+        case 0: return REQUEST_STATUS_UNSPECIFIED;
+        case 1: return REQUEST_STATUS_NOT_EXECUTED;
+        case 2: return REQUEST_STATUS_SUCCEEDED;
+        case 3: return REQUEST_STATUS_FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RequestStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RequestStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RequestStatus>() {
+            public RequestStatus findValueByNumber(int number) {
+              return RequestStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final RequestStatus[] VALUES = values();
+
+    public static RequestStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RequestStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:comdex.liquidity.v1beta1.RequestStatus)
+  }
+
+  /**
+   * <pre>
+   * OrderStatus enumerates order statuses.
+   * </pre>
+   *
+   * Protobuf enum {@code comdex.liquidity.v1beta1.OrderStatus}
+   */
+  public enum OrderStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * ORDER_STATUS_UNSPECIFIED specifies unknown order status
+     * </pre>
+     *
+     * <code>ORDER_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "OrderStatusUnspecified"];</code>
+     */
+    ORDER_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ORDER_STATUS_NOT_EXECUTED indicates the order has not been executed yet
+     * </pre>
+     *
+     * <code>ORDER_STATUS_NOT_EXECUTED = 1 [(.gogoproto.enumvalue_customname) = "OrderStatusNotExecuted"];</code>
+     */
+    ORDER_STATUS_NOT_EXECUTED(1),
+    /**
+     * <pre>
+     * ORDER_STATUS_NOT_MATCHED indicates the order has been executed but has no match
+     * </pre>
+     *
+     * <code>ORDER_STATUS_NOT_MATCHED = 2 [(.gogoproto.enumvalue_customname) = "OrderStatusNotMatched"];</code>
+     */
+    ORDER_STATUS_NOT_MATCHED(2),
+    /**
+     * <pre>
+     * ORDER_STATUS_PARTIALLY_MATCHED indicates the order has been partially matched
+     * </pre>
+     *
+     * <code>ORDER_STATUS_PARTIALLY_MATCHED = 3 [(.gogoproto.enumvalue_customname) = "OrderStatusPartiallyMatched"];</code>
+     */
+    ORDER_STATUS_PARTIALLY_MATCHED(3),
+    /**
+     * <pre>
+     * ORDER_STATUS_COMPLETED indicates the order has been fully matched and completed
+     * </pre>
+     *
+     * <code>ORDER_STATUS_COMPLETED = 4 [(.gogoproto.enumvalue_customname) = "OrderStatusCompleted"];</code>
+     */
+    ORDER_STATUS_COMPLETED(4),
+    /**
+     * <pre>
+     * ORDER_STATUS_CANCELED indicates the order has been canceled
+     * </pre>
+     *
+     * <code>ORDER_STATUS_CANCELED = 5 [(.gogoproto.enumvalue_customname) = "OrderStatusCanceled"];</code>
+     */
+    ORDER_STATUS_CANCELED(5),
+    /**
+     * <pre>
+     * ORDER_STATUS_EXPIRED indicates the order has been expired
+     * </pre>
+     *
+     * <code>ORDER_STATUS_EXPIRED = 6 [(.gogoproto.enumvalue_customname) = "OrderStatusExpired"];</code>
+     */
+    ORDER_STATUS_EXPIRED(6),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * ORDER_STATUS_UNSPECIFIED specifies unknown order status
+     * </pre>
+     *
+     * <code>ORDER_STATUS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "OrderStatusUnspecified"];</code>
+     */
+    public static final int ORDER_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ORDER_STATUS_NOT_EXECUTED indicates the order has not been executed yet
+     * </pre>
+     *
+     * <code>ORDER_STATUS_NOT_EXECUTED = 1 [(.gogoproto.enumvalue_customname) = "OrderStatusNotExecuted"];</code>
+     */
+    public static final int ORDER_STATUS_NOT_EXECUTED_VALUE = 1;
+    /**
+     * <pre>
+     * ORDER_STATUS_NOT_MATCHED indicates the order has been executed but has no match
+     * </pre>
+     *
+     * <code>ORDER_STATUS_NOT_MATCHED = 2 [(.gogoproto.enumvalue_customname) = "OrderStatusNotMatched"];</code>
+     */
+    public static final int ORDER_STATUS_NOT_MATCHED_VALUE = 2;
+    /**
+     * <pre>
+     * ORDER_STATUS_PARTIALLY_MATCHED indicates the order has been partially matched
+     * </pre>
+     *
+     * <code>ORDER_STATUS_PARTIALLY_MATCHED = 3 [(.gogoproto.enumvalue_customname) = "OrderStatusPartiallyMatched"];</code>
+     */
+    public static final int ORDER_STATUS_PARTIALLY_MATCHED_VALUE = 3;
+    /**
+     * <pre>
+     * ORDER_STATUS_COMPLETED indicates the order has been fully matched and completed
+     * </pre>
+     *
+     * <code>ORDER_STATUS_COMPLETED = 4 [(.gogoproto.enumvalue_customname) = "OrderStatusCompleted"];</code>
+     */
+    public static final int ORDER_STATUS_COMPLETED_VALUE = 4;
+    /**
+     * <pre>
+     * ORDER_STATUS_CANCELED indicates the order has been canceled
+     * </pre>
+     *
+     * <code>ORDER_STATUS_CANCELED = 5 [(.gogoproto.enumvalue_customname) = "OrderStatusCanceled"];</code>
+     */
+    public static final int ORDER_STATUS_CANCELED_VALUE = 5;
+    /**
+     * <pre>
+     * ORDER_STATUS_EXPIRED indicates the order has been expired
+     * </pre>
+     *
+     * <code>ORDER_STATUS_EXPIRED = 6 [(.gogoproto.enumvalue_customname) = "OrderStatusExpired"];</code>
+     */
+    public static final int ORDER_STATUS_EXPIRED_VALUE = 6;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static OrderStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static OrderStatus forNumber(int value) {
+      switch (value) {
+        case 0: return ORDER_STATUS_UNSPECIFIED;
+        case 1: return ORDER_STATUS_NOT_EXECUTED;
+        case 2: return ORDER_STATUS_NOT_MATCHED;
+        case 3: return ORDER_STATUS_PARTIALLY_MATCHED;
+        case 4: return ORDER_STATUS_COMPLETED;
+        case 5: return ORDER_STATUS_CANCELED;
+        case 6: return ORDER_STATUS_EXPIRED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<OrderStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        OrderStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<OrderStatus>() {
+            public OrderStatus findValueByNumber(int number) {
+              return OrderStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final OrderStatus[] VALUES = values();
+
+    public static OrderStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private OrderStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:comdex.liquidity.v1beta1.OrderStatus)
+  }
+
+  /**
+   * <pre>
+   * AddressType enumerates the available types of a address.
+   * </pre>
+   *
+   * Protobuf enum {@code comdex.liquidity.v1beta1.AddressType}
+   */
+  public enum AddressType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * the 32 bytes length address type of ADR 028.
+     * </pre>
+     *
+     * <code>ADDRESS_TYPE_32_BYTES = 0 [(.gogoproto.enumvalue_customname) = "AddressType32Bytes"];</code>
+     */
+    ADDRESS_TYPE_32_BYTES(0),
+    /**
+     * <pre>
+     * the default 20 bytes length address type.
+     * </pre>
+     *
+     * <code>ADDRESS_TYPE_20_BYTES = 1 [(.gogoproto.enumvalue_customname) = "AddressType20Bytes"];</code>
+     */
+    ADDRESS_TYPE_20_BYTES(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * the 32 bytes length address type of ADR 028.
+     * </pre>
+     *
+     * <code>ADDRESS_TYPE_32_BYTES = 0 [(.gogoproto.enumvalue_customname) = "AddressType32Bytes"];</code>
+     */
+    public static final int ADDRESS_TYPE_32_BYTES_VALUE = 0;
+    /**
+     * <pre>
+     * the default 20 bytes length address type.
+     * </pre>
+     *
+     * <code>ADDRESS_TYPE_20_BYTES = 1 [(.gogoproto.enumvalue_customname) = "AddressType20Bytes"];</code>
+     */
+    public static final int ADDRESS_TYPE_20_BYTES_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AddressType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AddressType forNumber(int value) {
+      switch (value) {
+        case 0: return ADDRESS_TYPE_32_BYTES;
+        case 1: return ADDRESS_TYPE_20_BYTES;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AddressType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AddressType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AddressType>() {
+            public AddressType findValueByNumber(int number) {
+              return AddressType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final AddressType[] VALUES = values();
+
+    public static AddressType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AddressType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:comdex.liquidity.v1beta1.AddressType)
+  }
+
+  public interface PairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.Pair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+     * @return The baseCoinDenom.
+     */
+    java.lang.String getBaseCoinDenom();
+    /**
+     * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+     * @return The bytes for baseCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getBaseCoinDenomBytes();
+
+    /**
+     * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+     * @return The quoteCoinDenom.
+     */
+    java.lang.String getQuoteCoinDenom();
+    /**
+     * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+     * @return The bytes for quoteCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getQuoteCoinDenomBytes();
+
+    /**
+     * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+     * @return The escrowAddress.
+     */
+    java.lang.String getEscrowAddress();
+    /**
+     * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+     * @return The bytes for escrowAddress.
+     */
+    com.google.protobuf.ByteString
+        getEscrowAddressBytes();
+
+    /**
+     * <code>uint64 last_order_id = 5 [json_name = "lastOrderId"];</code>
+     * @return The lastOrderId.
+     */
+    long getLastOrderId();
+
+    /**
+     * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The lastPrice.
+     */
+    java.lang.String getLastPrice();
+    /**
+     * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for lastPrice.
+     */
+    com.google.protobuf.ByteString
+        getLastPriceBytes();
+
+    /**
+     * <code>uint64 current_batch_id = 7 [json_name = "currentBatchId"];</code>
+     * @return The currentBatchId.
+     */
+    long getCurrentBatchId();
+
+    /**
+     * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+     * @return The swapFeeCollectorAddress.
+     */
+    java.lang.String getSwapFeeCollectorAddress();
+    /**
+     * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+     * @return The bytes for swapFeeCollectorAddress.
+     */
+    com.google.protobuf.ByteString
+        getSwapFeeCollectorAddressBytes();
+
+    /**
+     * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+  }
+  /**
+   * <pre>
+   * Pair defines a coin pair.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.liquidity.v1beta1.Pair}
+   */
+  public static final class Pair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.Pair)
+      PairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Pair.newBuilder() to construct.
+    private Pair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Pair() {
+      baseCoinDenom_ = "";
+      quoteCoinDenom_ = "";
+      escrowAddress_ = "";
+      lastPrice_ = "";
+      swapFeeCollectorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Pair();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.Pair.class, com.comdex.liquidity.v1beta1.LiquidityProto.Pair.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int BASE_COIN_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseCoinDenom_ = "";
+    /**
+     * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+     * @return The baseCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseCoinDenom() {
+      java.lang.Object ref = baseCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+     * @return The bytes for baseCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseCoinDenomBytes() {
+      java.lang.Object ref = baseCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTE_COIN_DENOM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quoteCoinDenom_ = "";
+    /**
+     * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+     * @return The quoteCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getQuoteCoinDenom() {
+      java.lang.Object ref = quoteCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quoteCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+     * @return The bytes for quoteCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuoteCoinDenomBytes() {
+      java.lang.Object ref = quoteCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quoteCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCROW_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object escrowAddress_ = "";
+    /**
+     * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+     * @return The escrowAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getEscrowAddress() {
+      java.lang.Object ref = escrowAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        escrowAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+     * @return The bytes for escrowAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEscrowAddressBytes() {
+      java.lang.Object ref = escrowAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        escrowAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAST_ORDER_ID_FIELD_NUMBER = 5;
+    private long lastOrderId_ = 0L;
+    /**
+     * <code>uint64 last_order_id = 5 [json_name = "lastOrderId"];</code>
+     * @return The lastOrderId.
+     */
+    @java.lang.Override
+    public long getLastOrderId() {
+      return lastOrderId_;
+    }
+
+    public static final int LAST_PRICE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lastPrice_ = "";
+    /**
+     * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The lastPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getLastPrice() {
+      java.lang.Object ref = lastPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for lastPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastPriceBytes() {
+      java.lang.Object ref = lastPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURRENT_BATCH_ID_FIELD_NUMBER = 7;
+    private long currentBatchId_ = 0L;
+    /**
+     * <code>uint64 current_batch_id = 7 [json_name = "currentBatchId"];</code>
+     * @return The currentBatchId.
+     */
+    @java.lang.Override
+    public long getCurrentBatchId() {
+      return currentBatchId_;
+    }
+
+    public static final int SWAP_FEE_COLLECTOR_ADDRESS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object swapFeeCollectorAddress_ = "";
+    /**
+     * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+     * @return The swapFeeCollectorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSwapFeeCollectorAddress() {
+      java.lang.Object ref = swapFeeCollectorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        swapFeeCollectorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+     * @return The bytes for swapFeeCollectorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSwapFeeCollectorAddressBytes() {
+      java.lang.Object ref = swapFeeCollectorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        swapFeeCollectorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 9;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, baseCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quoteCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, quoteCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, escrowAddress_);
+      }
+      if (lastOrderId_ != 0L) {
+        output.writeUInt64(5, lastOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lastPrice_);
+      }
+      if (currentBatchId_ != 0L) {
+        output.writeUInt64(7, currentBatchId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFeeCollectorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, swapFeeCollectorAddress_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(9, appId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, baseCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(quoteCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, quoteCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, escrowAddress_);
+      }
+      if (lastOrderId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, lastOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lastPrice_);
+      }
+      if (currentBatchId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, currentBatchId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swapFeeCollectorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, swapFeeCollectorAddress_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, appId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.Pair)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.Pair other = (com.comdex.liquidity.v1beta1.LiquidityProto.Pair) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getBaseCoinDenom()
+          .equals(other.getBaseCoinDenom())) return false;
+      if (!getQuoteCoinDenom()
+          .equals(other.getQuoteCoinDenom())) return false;
+      if (!getEscrowAddress()
+          .equals(other.getEscrowAddress())) return false;
+      if (getLastOrderId()
+          != other.getLastOrderId()) return false;
+      if (!getLastPrice()
+          .equals(other.getLastPrice())) return false;
+      if (getCurrentBatchId()
+          != other.getCurrentBatchId()) return false;
+      if (!getSwapFeeCollectorAddress()
+          .equals(other.getSwapFeeCollectorAddress())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + BASE_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseCoinDenom().hashCode();
+      hash = (37 * hash) + QUOTE_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getQuoteCoinDenom().hashCode();
+      hash = (37 * hash) + ESCROW_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getEscrowAddress().hashCode();
+      hash = (37 * hash) + LAST_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastOrderId());
+      hash = (37 * hash) + LAST_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getLastPrice().hashCode();
+      hash = (37 * hash) + CURRENT_BATCH_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentBatchId());
+      hash = (37 * hash) + SWAP_FEE_COLLECTOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSwapFeeCollectorAddress().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.Pair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Pair defines a coin pair.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.liquidity.v1beta1.Pair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.Pair)
+        com.comdex.liquidity.v1beta1.LiquidityProto.PairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.Pair.class, com.comdex.liquidity.v1beta1.LiquidityProto.Pair.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.Pair.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        baseCoinDenom_ = "";
+        quoteCoinDenom_ = "";
+        escrowAddress_ = "";
+        lastOrderId_ = 0L;
+        lastPrice_ = "";
+        currentBatchId_ = 0L;
+        swapFeeCollectorAddress_ = "";
+        appId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pair_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Pair getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.Pair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Pair build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.Pair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Pair buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.Pair result = new com.comdex.liquidity.v1beta1.LiquidityProto.Pair(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.Pair result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.baseCoinDenom_ = baseCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.quoteCoinDenom_ = quoteCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.escrowAddress_ = escrowAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.lastOrderId_ = lastOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lastPrice_ = lastPrice_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.currentBatchId_ = currentBatchId_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.swapFeeCollectorAddress_ = swapFeeCollectorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.appId_ = appId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.Pair) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.Pair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.Pair other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.Pair.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getBaseCoinDenom().isEmpty()) {
+          baseCoinDenom_ = other.baseCoinDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getQuoteCoinDenom().isEmpty()) {
+          quoteCoinDenom_ = other.quoteCoinDenom_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getEscrowAddress().isEmpty()) {
+          escrowAddress_ = other.escrowAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getLastOrderId() != 0L) {
+          setLastOrderId(other.getLastOrderId());
+        }
+        if (!other.getLastPrice().isEmpty()) {
+          lastPrice_ = other.lastPrice_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getCurrentBatchId() != 0L) {
+          setCurrentBatchId(other.getCurrentBatchId());
+        }
+        if (!other.getSwapFeeCollectorAddress().isEmpty()) {
+          swapFeeCollectorAddress_ = other.swapFeeCollectorAddress_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                baseCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                quoteCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                escrowAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                lastOrderId_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                lastPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                currentBatchId_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                swapFeeCollectorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 72: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseCoinDenom_ = "";
+      /**
+       * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+       * @return The baseCoinDenom.
+       */
+      public java.lang.String getBaseCoinDenom() {
+        java.lang.Object ref = baseCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+       * @return The bytes for baseCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBaseCoinDenomBytes() {
+        java.lang.Object ref = baseCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+       * @param value The baseCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseCoinDenom() {
+        baseCoinDenom_ = getDefaultInstance().getBaseCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_coin_denom = 2 [json_name = "baseCoinDenom"];</code>
+       * @param value The bytes for baseCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseCoinDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quoteCoinDenom_ = "";
+      /**
+       * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+       * @return The quoteCoinDenom.
+       */
+      public java.lang.String getQuoteCoinDenom() {
+        java.lang.Object ref = quoteCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quoteCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+       * @return The bytes for quoteCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getQuoteCoinDenomBytes() {
+        java.lang.Object ref = quoteCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quoteCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+       * @param value The quoteCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quoteCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuoteCoinDenom() {
+        quoteCoinDenom_ = getDefaultInstance().getQuoteCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string quote_coin_denom = 3 [json_name = "quoteCoinDenom"];</code>
+       * @param value The bytes for quoteCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quoteCoinDenom_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object escrowAddress_ = "";
+      /**
+       * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+       * @return The escrowAddress.
+       */
+      public java.lang.String getEscrowAddress() {
+        java.lang.Object ref = escrowAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          escrowAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+       * @return The bytes for escrowAddress.
+       */
+      public com.google.protobuf.ByteString
+          getEscrowAddressBytes() {
+        java.lang.Object ref = escrowAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          escrowAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+       * @param value The escrowAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscrowAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        escrowAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEscrowAddress() {
+        escrowAddress_ = getDefaultInstance().getEscrowAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string escrow_address = 4 [json_name = "escrowAddress"];</code>
+       * @param value The bytes for escrowAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscrowAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        escrowAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long lastOrderId_ ;
+      /**
+       * <code>uint64 last_order_id = 5 [json_name = "lastOrderId"];</code>
+       * @return The lastOrderId.
+       */
+      @java.lang.Override
+      public long getLastOrderId() {
+        return lastOrderId_;
+      }
+      /**
+       * <code>uint64 last_order_id = 5 [json_name = "lastOrderId"];</code>
+       * @param value The lastOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastOrderId(long value) {
+
+        lastOrderId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_order_id = 5 [json_name = "lastOrderId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastOrderId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lastOrderId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object lastPrice_ = "";
+      /**
+       * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The lastPrice.
+       */
+      public java.lang.String getLastPrice() {
+        java.lang.Object ref = lastPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for lastPrice.
+       */
+      public com.google.protobuf.ByteString
+          getLastPriceBytes() {
+        java.lang.Object ref = lastPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The lastPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastPrice_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastPrice() {
+        lastPrice_ = getDefaultInstance().getLastPrice();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_price = 6 [json_name = "lastPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for lastPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lastPrice_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private long currentBatchId_ ;
+      /**
+       * <code>uint64 current_batch_id = 7 [json_name = "currentBatchId"];</code>
+       * @return The currentBatchId.
+       */
+      @java.lang.Override
+      public long getCurrentBatchId() {
+        return currentBatchId_;
+      }
+      /**
+       * <code>uint64 current_batch_id = 7 [json_name = "currentBatchId"];</code>
+       * @param value The currentBatchId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentBatchId(long value) {
+
+        currentBatchId_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 current_batch_id = 7 [json_name = "currentBatchId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentBatchId() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        currentBatchId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object swapFeeCollectorAddress_ = "";
+      /**
+       * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+       * @return The swapFeeCollectorAddress.
+       */
+      public java.lang.String getSwapFeeCollectorAddress() {
+        java.lang.Object ref = swapFeeCollectorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          swapFeeCollectorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+       * @return The bytes for swapFeeCollectorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSwapFeeCollectorAddressBytes() {
+        java.lang.Object ref = swapFeeCollectorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          swapFeeCollectorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+       * @param value The swapFeeCollectorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapFeeCollectorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        swapFeeCollectorAddress_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSwapFeeCollectorAddress() {
+        swapFeeCollectorAddress_ = getDefaultInstance().getSwapFeeCollectorAddress();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string swap_fee_collector_address = 8 [json_name = "swapFeeCollectorAddress"];</code>
+       * @param value The bytes for swapFeeCollectorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSwapFeeCollectorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        swapFeeCollectorAddress_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.Pair)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.Pair)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.Pair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.Pair();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Pair>
+        PARSER = new com.google.protobuf.AbstractParser<Pair>() {
+      @java.lang.Override
+      public Pair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Pair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Pair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.Pair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.Pool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    long getPairId();
+
+    /**
+     * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+     * @return The reserveAddress.
+     */
+    java.lang.String getReserveAddress();
+    /**
+     * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+     * @return The bytes for reserveAddress.
+     */
+    com.google.protobuf.ByteString
+        getReserveAddressBytes();
+
+    /**
+     * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+     * @return The poolCoinDenom.
+     */
+    java.lang.String getPoolCoinDenom();
+    /**
+     * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+     * @return The bytes for poolCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getPoolCoinDenomBytes();
+
+    /**
+     * <code>uint64 last_deposit_request_id = 5 [json_name = "lastDepositRequestId"];</code>
+     * @return The lastDepositRequestId.
+     */
+    long getLastDepositRequestId();
+
+    /**
+     * <code>uint64 last_withdraw_request_id = 6 [json_name = "lastWithdrawRequestId"];</code>
+     * @return The lastWithdrawRequestId.
+     */
+    long getLastWithdrawRequestId();
+
+    /**
+     * <code>bool disabled = 7 [json_name = "disabled"];</code>
+     * @return The disabled.
+     */
+    boolean getDisabled();
+
+    /**
+     * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.PoolType getType();
+
+    /**
+     * <code>string creator = 10 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 10 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The minPrice.
+     */
+    java.lang.String getMinPrice();
+    /**
+     * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for minPrice.
+     */
+    com.google.protobuf.ByteString
+        getMinPriceBytes();
+
+    /**
+     * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The maxPrice.
+     */
+    java.lang.String getMaxPrice();
+    /**
+     * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for maxPrice.
+     */
+    com.google.protobuf.ByteString
+        getMaxPriceBytes();
+  }
+  /**
+   * <pre>
+   * Pool defines a basic liquidity pool with no min-price and max-price.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.liquidity.v1beta1.Pool}
+   */
+  public static final class Pool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.Pool)
+      PoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Pool.newBuilder() to construct.
+    private Pool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Pool() {
+      reserveAddress_ = "";
+      poolCoinDenom_ = "";
+      type_ = 0;
+      creator_ = "";
+      minPrice_ = "";
+      maxPrice_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Pool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.Pool.class, com.comdex.liquidity.v1beta1.LiquidityProto.Pool.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int PAIR_ID_FIELD_NUMBER = 2;
+    private long pairId_ = 0L;
+    /**
+     * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    @java.lang.Override
+    public long getPairId() {
+      return pairId_;
+    }
+
+    public static final int RESERVE_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reserveAddress_ = "";
+    /**
+     * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+     * @return The reserveAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getReserveAddress() {
+      java.lang.Object ref = reserveAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reserveAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+     * @return The bytes for reserveAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReserveAddressBytes() {
+      java.lang.Object ref = reserveAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reserveAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_COIN_DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolCoinDenom_ = "";
+    /**
+     * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+     * @return The poolCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolCoinDenom() {
+      java.lang.Object ref = poolCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+     * @return The bytes for poolCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolCoinDenomBytes() {
+      java.lang.Object ref = poolCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAST_DEPOSIT_REQUEST_ID_FIELD_NUMBER = 5;
+    private long lastDepositRequestId_ = 0L;
+    /**
+     * <code>uint64 last_deposit_request_id = 5 [json_name = "lastDepositRequestId"];</code>
+     * @return The lastDepositRequestId.
+     */
+    @java.lang.Override
+    public long getLastDepositRequestId() {
+      return lastDepositRequestId_;
+    }
+
+    public static final int LAST_WITHDRAW_REQUEST_ID_FIELD_NUMBER = 6;
+    private long lastWithdrawRequestId_ = 0L;
+    /**
+     * <code>uint64 last_withdraw_request_id = 6 [json_name = "lastWithdrawRequestId"];</code>
+     * @return The lastWithdrawRequestId.
+     */
+    @java.lang.Override
+    public long getLastWithdrawRequestId() {
+      return lastWithdrawRequestId_;
+    }
+
+    public static final int DISABLED_FIELD_NUMBER = 7;
+    private boolean disabled_ = false;
+    /**
+     * <code>bool disabled = 7 [json_name = "disabled"];</code>
+     * @return The disabled.
+     */
+    @java.lang.Override
+    public boolean getDisabled() {
+      return disabled_;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 8;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 9;
+    private int type_ = 0;
+    /**
+     * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.comdex.liquidity.v1beta1.LiquidityProto.PoolType getType() {
+      com.comdex.liquidity.v1beta1.LiquidityProto.PoolType result = com.comdex.liquidity.v1beta1.LiquidityProto.PoolType.forNumber(type_);
+      return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.PoolType.UNRECOGNIZED : result;
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 10 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 10 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_PRICE_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minPrice_ = "";
+    /**
+     * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The minPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getMinPrice() {
+      java.lang.Object ref = minPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for minPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinPriceBytes() {
+      java.lang.Object ref = minPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_PRICE_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxPrice_ = "";
+    /**
+     * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The maxPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxPrice() {
+      java.lang.Object ref = maxPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for maxPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxPriceBytes() {
+      java.lang.Object ref = maxPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (pairId_ != 0L) {
+        output.writeUInt64(2, pairId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reserveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, poolCoinDenom_);
+      }
+      if (lastDepositRequestId_ != 0L) {
+        output.writeUInt64(5, lastDepositRequestId_);
+      }
+      if (lastWithdrawRequestId_ != 0L) {
+        output.writeUInt64(6, lastWithdrawRequestId_);
+      }
+      if (disabled_ != false) {
+        output.writeBool(7, disabled_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(8, appId_);
+      }
+      if (type_ != com.comdex.liquidity.v1beta1.LiquidityProto.PoolType.POOL_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, minPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, maxPrice_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (pairId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, pairId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reserveAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reserveAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, poolCoinDenom_);
+      }
+      if (lastDepositRequestId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, lastDepositRequestId_);
+      }
+      if (lastWithdrawRequestId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, lastWithdrawRequestId_);
+      }
+      if (disabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, disabled_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, appId_);
+      }
+      if (type_ != com.comdex.liquidity.v1beta1.LiquidityProto.PoolType.POOL_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, minPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, maxPrice_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.Pool)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.Pool other = (com.comdex.liquidity.v1beta1.LiquidityProto.Pool) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getPairId()
+          != other.getPairId()) return false;
+      if (!getReserveAddress()
+          .equals(other.getReserveAddress())) return false;
+      if (!getPoolCoinDenom()
+          .equals(other.getPoolCoinDenom())) return false;
+      if (getLastDepositRequestId()
+          != other.getLastDepositRequestId()) return false;
+      if (getLastWithdrawRequestId()
+          != other.getLastWithdrawRequestId()) return false;
+      if (getDisabled()
+          != other.getDisabled()) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (type_ != other.type_) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getMinPrice()
+          .equals(other.getMinPrice())) return false;
+      if (!getMaxPrice()
+          .equals(other.getMaxPrice())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + PAIR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPairId());
+      hash = (37 * hash) + RESERVE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getReserveAddress().hashCode();
+      hash = (37 * hash) + POOL_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolCoinDenom().hashCode();
+      hash = (37 * hash) + LAST_DEPOSIT_REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastDepositRequestId());
+      hash = (37 * hash) + LAST_WITHDRAW_REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastWithdrawRequestId());
+      hash = (37 * hash) + DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisabled());
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + MIN_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinPrice().hashCode();
+      hash = (37 * hash) + MAX_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxPrice().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.Pool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Pool defines a basic liquidity pool with no min-price and max-price.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.liquidity.v1beta1.Pool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.Pool)
+        com.comdex.liquidity.v1beta1.LiquidityProto.PoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.Pool.class, com.comdex.liquidity.v1beta1.LiquidityProto.Pool.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.Pool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        pairId_ = 0L;
+        reserveAddress_ = "";
+        poolCoinDenom_ = "";
+        lastDepositRequestId_ = 0L;
+        lastWithdrawRequestId_ = 0L;
+        disabled_ = false;
+        appId_ = 0L;
+        type_ = 0;
+        creator_ = "";
+        minPrice_ = "";
+        maxPrice_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Pool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Pool getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.Pool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Pool build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.Pool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Pool buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.Pool result = new com.comdex.liquidity.v1beta1.LiquidityProto.Pool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.Pool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pairId_ = pairId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reserveAddress_ = reserveAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.poolCoinDenom_ = poolCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.lastDepositRequestId_ = lastDepositRequestId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lastWithdrawRequestId_ = lastWithdrawRequestId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.disabled_ = disabled_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.minPrice_ = minPrice_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.maxPrice_ = maxPrice_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.Pool) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.Pool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.Pool other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.Pool.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getPairId() != 0L) {
+          setPairId(other.getPairId());
+        }
+        if (!other.getReserveAddress().isEmpty()) {
+          reserveAddress_ = other.reserveAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getPoolCoinDenom().isEmpty()) {
+          poolCoinDenom_ = other.poolCoinDenom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getLastDepositRequestId() != 0L) {
+          setLastDepositRequestId(other.getLastDepositRequestId());
+        }
+        if (other.getLastWithdrawRequestId() != 0L) {
+          setLastWithdrawRequestId(other.getLastWithdrawRequestId());
+        }
+        if (other.getDisabled() != false) {
+          setDisabled(other.getDisabled());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getMinPrice().isEmpty()) {
+          minPrice_ = other.minPrice_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getMaxPrice().isEmpty()) {
+          maxPrice_ = other.maxPrice_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                pairId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                reserveAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                poolCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                lastDepositRequestId_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                lastWithdrawRequestId_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                disabled_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 82: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                minPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                maxPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long pairId_ ;
+      /**
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @return The pairId.
+       */
+      @java.lang.Override
+      public long getPairId() {
+        return pairId_;
+      }
+      /**
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @param value The pairId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPairId(long value) {
+
+        pairId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPairId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pairId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reserveAddress_ = "";
+      /**
+       * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+       * @return The reserveAddress.
+       */
+      public java.lang.String getReserveAddress() {
+        java.lang.Object ref = reserveAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reserveAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+       * @return The bytes for reserveAddress.
+       */
+      public com.google.protobuf.ByteString
+          getReserveAddressBytes() {
+        java.lang.Object ref = reserveAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reserveAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+       * @param value The reserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reserveAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReserveAddress() {
+        reserveAddress_ = getDefaultInstance().getReserveAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reserve_address = 3 [json_name = "reserveAddress"];</code>
+       * @param value The bytes for reserveAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReserveAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reserveAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolCoinDenom_ = "";
+      /**
+       * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+       * @return The poolCoinDenom.
+       */
+      public java.lang.String getPoolCoinDenom() {
+        java.lang.Object ref = poolCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+       * @return The bytes for poolCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getPoolCoinDenomBytes() {
+        java.lang.Object ref = poolCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+       * @param value The poolCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolCoinDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolCoinDenom() {
+        poolCoinDenom_ = getDefaultInstance().getPoolCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_coin_denom = 4 [json_name = "poolCoinDenom"];</code>
+       * @param value The bytes for poolCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolCoinDenom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long lastDepositRequestId_ ;
+      /**
+       * <code>uint64 last_deposit_request_id = 5 [json_name = "lastDepositRequestId"];</code>
+       * @return The lastDepositRequestId.
+       */
+      @java.lang.Override
+      public long getLastDepositRequestId() {
+        return lastDepositRequestId_;
+      }
+      /**
+       * <code>uint64 last_deposit_request_id = 5 [json_name = "lastDepositRequestId"];</code>
+       * @param value The lastDepositRequestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastDepositRequestId(long value) {
+
+        lastDepositRequestId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_deposit_request_id = 5 [json_name = "lastDepositRequestId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastDepositRequestId() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lastDepositRequestId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lastWithdrawRequestId_ ;
+      /**
+       * <code>uint64 last_withdraw_request_id = 6 [json_name = "lastWithdrawRequestId"];</code>
+       * @return The lastWithdrawRequestId.
+       */
+      @java.lang.Override
+      public long getLastWithdrawRequestId() {
+        return lastWithdrawRequestId_;
+      }
+      /**
+       * <code>uint64 last_withdraw_request_id = 6 [json_name = "lastWithdrawRequestId"];</code>
+       * @param value The lastWithdrawRequestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastWithdrawRequestId(long value) {
+
+        lastWithdrawRequestId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 last_withdraw_request_id = 6 [json_name = "lastWithdrawRequestId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastWithdrawRequestId() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        lastWithdrawRequestId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean disabled_ ;
+      /**
+       * <code>bool disabled = 7 [json_name = "disabled"];</code>
+       * @return The disabled.
+       */
+      @java.lang.Override
+      public boolean getDisabled() {
+        return disabled_;
+      }
+      /**
+       * <code>bool disabled = 7 [json_name = "disabled"];</code>
+       * @param value The disabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisabled(boolean value) {
+
+        disabled_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool disabled = 7 [json_name = "disabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisabled() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        disabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.PoolType getType() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.PoolType result = com.comdex.liquidity.v1beta1.LiquidityProto.PoolType.forNumber(type_);
+        return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.PoolType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.comdex.liquidity.v1beta1.LiquidityProto.PoolType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000100;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.PoolType type = 9 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 10 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 10 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 10 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 10 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 10 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minPrice_ = "";
+      /**
+       * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The minPrice.
+       */
+      public java.lang.String getMinPrice() {
+        java.lang.Object ref = minPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for minPrice.
+       */
+      public com.google.protobuf.ByteString
+          getMinPriceBytes() {
+        java.lang.Object ref = minPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The minPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minPrice_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinPrice() {
+        minPrice_ = getDefaultInstance().getMinPrice();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_price = 11 [json_name = "minPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for minPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minPrice_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxPrice_ = "";
+      /**
+       * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The maxPrice.
+       */
+      public java.lang.String getMaxPrice() {
+        java.lang.Object ref = maxPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for maxPrice.
+       */
+      public com.google.protobuf.ByteString
+          getMaxPriceBytes() {
+        java.lang.Object ref = maxPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The maxPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxPrice_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPrice() {
+        maxPrice_ = getDefaultInstance().getMaxPrice();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_price = 12 [json_name = "maxPrice", (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for maxPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxPrice_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.Pool)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.Pool)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.Pool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.Pool();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Pool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Pool>
+        PARSER = new com.google.protobuf.AbstractParser<Pool>() {
+      @java.lang.Override
+      public Pool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Pool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Pool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.Pool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DepositRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.DepositRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id specifies the id for the request
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * pool_id specifies the pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * msg_height specifies the block height when the request is stored for the batch execution
+     * </pre>
+     *
+     * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+     * @return The msgHeight.
+     */
+    long getMsgHeight();
+
+    /**
+     * <pre>
+     * depositor specifies the bech32-encoded address that makes a deposit to the pool
+     * </pre>
+     *
+     * <code>string depositor = 4 [json_name = "depositor"];</code>
+     * @return The depositor.
+     */
+    java.lang.String getDepositor();
+    /**
+     * <pre>
+     * depositor specifies the bech32-encoded address that makes a deposit to the pool
+     * </pre>
+     *
+     * <code>string depositor = 4 [json_name = "depositor"];</code>
+     * @return The bytes for depositor.
+     */
+    com.google.protobuf.ByteString
+        getDepositorBytes();
+
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getDepositCoinsList();
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDepositCoins(int index);
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getDepositCoinsCount();
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getDepositCoinsOrBuilderList();
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAcceptedCoinsList();
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAcceptedCoins(int index);
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAcceptedCoinsCount();
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAcceptedCoinsOrBuilderList();
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAcceptedCoinsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the mintedPoolCoin field is set.
+     */
+    boolean hasMintedPoolCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+     * @return The mintedPoolCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getMintedPoolCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMintedPoolCoinOrBuilder();
+
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus getStatus();
+
+    /**
+     * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+  }
+  /**
+   * <pre>
+   * DepositRequest defines a deposit request.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.liquidity.v1beta1.DepositRequest}
+   */
+  public static final class DepositRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.DepositRequest)
+      DepositRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DepositRequest.newBuilder() to construct.
+    private DepositRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DepositRequest() {
+      depositor_ = "";
+      depositCoins_ = java.util.Collections.emptyList();
+      acceptedCoins_ = java.util.Collections.emptyList();
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DepositRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_DepositRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_DepositRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.class, com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id specifies the id for the request
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id specifies the pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int MSG_HEIGHT_FIELD_NUMBER = 3;
+    private long msgHeight_ = 0L;
+    /**
+     * <pre>
+     * msg_height specifies the block height when the request is stored for the batch execution
+     * </pre>
+     *
+     * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+     * @return The msgHeight.
+     */
+    @java.lang.Override
+    public long getMsgHeight() {
+      return msgHeight_;
+    }
+
+    public static final int DEPOSITOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object depositor_ = "";
+    /**
+     * <pre>
+     * depositor specifies the bech32-encoded address that makes a deposit to the pool
+     * </pre>
+     *
+     * <code>string depositor = 4 [json_name = "depositor"];</code>
+     * @return The depositor.
+     */
+    @java.lang.Override
+    public java.lang.String getDepositor() {
+      java.lang.Object ref = depositor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        depositor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * depositor specifies the bech32-encoded address that makes a deposit to the pool
+     * </pre>
+     *
+     * <code>string depositor = 4 [json_name = "depositor"];</code>
+     * @return The bytes for depositor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositorBytes() {
+      java.lang.Object ref = depositor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        depositor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_COINS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> depositCoins_;
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getDepositCoinsList() {
+      return depositCoins_;
+    }
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getDepositCoinsOrBuilderList() {
+      return depositCoins_;
+    }
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getDepositCoinsCount() {
+      return depositCoins_.size();
+    }
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDepositCoins(int index) {
+      return depositCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * deposit_coins specifies the amount of coins to deposit.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositCoinsOrBuilder(
+        int index) {
+      return depositCoins_.get(index);
+    }
+
+    public static final int ACCEPTED_COINS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> acceptedCoins_;
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAcceptedCoinsList() {
+      return acceptedCoins_;
+    }
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAcceptedCoinsOrBuilderList() {
+      return acceptedCoins_;
+    }
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAcceptedCoinsCount() {
+      return acceptedCoins_.size();
+    }
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAcceptedCoins(int index) {
+      return acceptedCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * accepted_coins specifies the amount of coins that are accepted.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAcceptedCoinsOrBuilder(
+        int index) {
+      return acceptedCoins_.get(index);
+    }
+
+    public static final int MINTED_POOL_COIN_FIELD_NUMBER = 7;
+    private com.cosmos.base.v1beta1.CoinProto.Coin mintedPoolCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the mintedPoolCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasMintedPoolCoin() {
+      return mintedPoolCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+     * @return The mintedPoolCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getMintedPoolCoin() {
+      return mintedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintedPoolCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMintedPoolCoinOrBuilder() {
+      return mintedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintedPoolCoin_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 8;
+    private int status_ = 0;
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus getStatus() {
+      com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus result = com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.forNumber(status_);
+      return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 9;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (msgHeight_ != 0L) {
+        output.writeInt64(3, msgHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, depositor_);
+      }
+      for (int i = 0; i < depositCoins_.size(); i++) {
+        output.writeMessage(5, depositCoins_.get(i));
+      }
+      for (int i = 0; i < acceptedCoins_.size(); i++) {
+        output.writeMessage(6, acceptedCoins_.get(i));
+      }
+      if (mintedPoolCoin_ != null) {
+        output.writeMessage(7, getMintedPoolCoin());
+      }
+      if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.REQUEST_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, status_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(9, appId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (msgHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, msgHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(depositor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, depositor_);
+      }
+      for (int i = 0; i < depositCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, depositCoins_.get(i));
+      }
+      for (int i = 0; i < acceptedCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, acceptedCoins_.get(i));
+      }
+      if (mintedPoolCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMintedPoolCoin());
+      }
+      if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.REQUEST_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, status_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, appId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest other = (com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getMsgHeight()
+          != other.getMsgHeight()) return false;
+      if (!getDepositor()
+          .equals(other.getDepositor())) return false;
+      if (!getDepositCoinsList()
+          .equals(other.getDepositCoinsList())) return false;
+      if (!getAcceptedCoinsList()
+          .equals(other.getAcceptedCoinsList())) return false;
+      if (hasMintedPoolCoin() != other.hasMintedPoolCoin()) return false;
+      if (hasMintedPoolCoin()) {
+        if (!getMintedPoolCoin()
+            .equals(other.getMintedPoolCoin())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + MSG_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMsgHeight());
+      hash = (37 * hash) + DEPOSITOR_FIELD_NUMBER;
+      hash = (53 * hash) + getDepositor().hashCode();
+      if (getDepositCoinsCount() > 0) {
+        hash = (37 * hash) + DEPOSIT_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositCoinsList().hashCode();
+      }
+      if (getAcceptedCoinsCount() > 0) {
+        hash = (37 * hash) + ACCEPTED_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getAcceptedCoinsList().hashCode();
+      }
+      if (hasMintedPoolCoin()) {
+        hash = (37 * hash) + MINTED_POOL_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getMintedPoolCoin().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DepositRequest defines a deposit request.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.liquidity.v1beta1.DepositRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.DepositRequest)
+        com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_DepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_DepositRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.class, com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        poolId_ = 0L;
+        msgHeight_ = 0L;
+        depositor_ = "";
+        if (depositCoinsBuilder_ == null) {
+          depositCoins_ = java.util.Collections.emptyList();
+        } else {
+          depositCoins_ = null;
+          depositCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (acceptedCoinsBuilder_ == null) {
+          acceptedCoins_ = java.util.Collections.emptyList();
+        } else {
+          acceptedCoins_ = null;
+          acceptedCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        mintedPoolCoin_ = null;
+        if (mintedPoolCoinBuilder_ != null) {
+          mintedPoolCoinBuilder_.dispose();
+          mintedPoolCoinBuilder_ = null;
+        }
+        status_ = 0;
+        appId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_DepositRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest result = new com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest result) {
+        if (depositCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            depositCoins_ = java.util.Collections.unmodifiableList(depositCoins_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.depositCoins_ = depositCoins_;
+        } else {
+          result.depositCoins_ = depositCoinsBuilder_.build();
+        }
+        if (acceptedCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            acceptedCoins_ = java.util.Collections.unmodifiableList(acceptedCoins_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.acceptedCoins_ = acceptedCoins_;
+        } else {
+          result.acceptedCoins_ = acceptedCoinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.msgHeight_ = msgHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.depositor_ = depositor_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.mintedPoolCoin_ = mintedPoolCoinBuilder_ == null
+              ? mintedPoolCoin_
+              : mintedPoolCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.appId_ = appId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getMsgHeight() != 0L) {
+          setMsgHeight(other.getMsgHeight());
+        }
+        if (!other.getDepositor().isEmpty()) {
+          depositor_ = other.depositor_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (depositCoinsBuilder_ == null) {
+          if (!other.depositCoins_.isEmpty()) {
+            if (depositCoins_.isEmpty()) {
+              depositCoins_ = other.depositCoins_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureDepositCoinsIsMutable();
+              depositCoins_.addAll(other.depositCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.depositCoins_.isEmpty()) {
+            if (depositCoinsBuilder_.isEmpty()) {
+              depositCoinsBuilder_.dispose();
+              depositCoinsBuilder_ = null;
+              depositCoins_ = other.depositCoins_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              depositCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositCoinsFieldBuilder() : null;
+            } else {
+              depositCoinsBuilder_.addAllMessages(other.depositCoins_);
+            }
+          }
+        }
+        if (acceptedCoinsBuilder_ == null) {
+          if (!other.acceptedCoins_.isEmpty()) {
+            if (acceptedCoins_.isEmpty()) {
+              acceptedCoins_ = other.acceptedCoins_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureAcceptedCoinsIsMutable();
+              acceptedCoins_.addAll(other.acceptedCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.acceptedCoins_.isEmpty()) {
+            if (acceptedCoinsBuilder_.isEmpty()) {
+              acceptedCoinsBuilder_.dispose();
+              acceptedCoinsBuilder_ = null;
+              acceptedCoins_ = other.acceptedCoins_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              acceptedCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAcceptedCoinsFieldBuilder() : null;
+            } else {
+              acceptedCoinsBuilder_.addAllMessages(other.acceptedCoins_);
+            }
+          }
+        }
+        if (other.hasMintedPoolCoin()) {
+          mergeMintedPoolCoin(other.getMintedPoolCoin());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                msgHeight_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                depositor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (depositCoinsBuilder_ == null) {
+                  ensureDepositCoinsIsMutable();
+                  depositCoins_.add(m);
+                } else {
+                  depositCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (acceptedCoinsBuilder_ == null) {
+                  ensureAcceptedCoinsIsMutable();
+                  acceptedCoins_.add(m);
+                } else {
+                  acceptedCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getMintedPoolCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long msgHeight_ ;
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @return The msgHeight.
+       */
+      @java.lang.Override
+      public long getMsgHeight() {
+        return msgHeight_;
+      }
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @param value The msgHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgHeight(long value) {
+
+        msgHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsgHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        msgHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object depositor_ = "";
+      /**
+       * <pre>
+       * depositor specifies the bech32-encoded address that makes a deposit to the pool
+       * </pre>
+       *
+       * <code>string depositor = 4 [json_name = "depositor"];</code>
+       * @return The depositor.
+       */
+      public java.lang.String getDepositor() {
+        java.lang.Object ref = depositor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          depositor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * depositor specifies the bech32-encoded address that makes a deposit to the pool
+       * </pre>
+       *
+       * <code>string depositor = 4 [json_name = "depositor"];</code>
+       * @return The bytes for depositor.
+       */
+      public com.google.protobuf.ByteString
+          getDepositorBytes() {
+        java.lang.Object ref = depositor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          depositor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * depositor specifies the bech32-encoded address that makes a deposit to the pool
+       * </pre>
+       *
+       * <code>string depositor = 4 [json_name = "depositor"];</code>
+       * @param value The depositor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        depositor_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * depositor specifies the bech32-encoded address that makes a deposit to the pool
+       * </pre>
+       *
+       * <code>string depositor = 4 [json_name = "depositor"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositor() {
+        depositor_ = getDefaultInstance().getDepositor();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * depositor specifies the bech32-encoded address that makes a deposit to the pool
+       * </pre>
+       *
+       * <code>string depositor = 4 [json_name = "depositor"];</code>
+       * @param value The bytes for depositor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        depositor_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> depositCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          depositCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(depositCoins_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> depositCoinsBuilder_;
+
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getDepositCoinsList() {
+        if (depositCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(depositCoins_);
+        } else {
+          return depositCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getDepositCoinsCount() {
+        if (depositCoinsBuilder_ == null) {
+          return depositCoins_.size();
+        } else {
+          return depositCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDepositCoins(int index) {
+        if (depositCoinsBuilder_ == null) {
+          return depositCoins_.get(index);
+        } else {
+          return depositCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setDepositCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositCoinsIsMutable();
+          depositCoins_.set(index, value);
+          onChanged();
+        } else {
+          depositCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setDepositCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (depositCoinsBuilder_ == null) {
+          ensureDepositCoinsIsMutable();
+          depositCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDepositCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositCoinsIsMutable();
+          depositCoins_.add(value);
+          onChanged();
+        } else {
+          depositCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDepositCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositCoinsIsMutable();
+          depositCoins_.add(index, value);
+          onChanged();
+        } else {
+          depositCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDepositCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (depositCoinsBuilder_ == null) {
+          ensureDepositCoinsIsMutable();
+          depositCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addDepositCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (depositCoinsBuilder_ == null) {
+          ensureDepositCoinsIsMutable();
+          depositCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllDepositCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (depositCoinsBuilder_ == null) {
+          ensureDepositCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, depositCoins_);
+          onChanged();
+        } else {
+          depositCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearDepositCoins() {
+        if (depositCoinsBuilder_ == null) {
+          depositCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          depositCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeDepositCoins(int index) {
+        if (depositCoinsBuilder_ == null) {
+          ensureDepositCoinsIsMutable();
+          depositCoins_.remove(index);
+          onChanged();
+        } else {
+          depositCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDepositCoinsBuilder(
+          int index) {
+        return getDepositCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositCoinsOrBuilder(
+          int index) {
+        if (depositCoinsBuilder_ == null) {
+          return depositCoins_.get(index);  } else {
+          return depositCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getDepositCoinsOrBuilderList() {
+        if (depositCoinsBuilder_ != null) {
+          return depositCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(depositCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addDepositCoinsBuilder() {
+        return getDepositCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addDepositCoinsBuilder(
+          int index) {
+        return getDepositCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * deposit_coins specifies the amount of coins to deposit.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin deposit_coins = 5 [json_name = "depositCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getDepositCoinsBuilderList() {
+        return getDepositCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDepositCoinsFieldBuilder() {
+        if (depositCoinsBuilder_ == null) {
+          depositCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  depositCoins_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          depositCoins_ = null;
+        }
+        return depositCoinsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> acceptedCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureAcceptedCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          acceptedCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(acceptedCoins_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> acceptedCoinsBuilder_;
+
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAcceptedCoinsList() {
+        if (acceptedCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(acceptedCoins_);
+        } else {
+          return acceptedCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAcceptedCoinsCount() {
+        if (acceptedCoinsBuilder_ == null) {
+          return acceptedCoins_.size();
+        } else {
+          return acceptedCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAcceptedCoins(int index) {
+        if (acceptedCoinsBuilder_ == null) {
+          return acceptedCoins_.get(index);
+        } else {
+          return acceptedCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAcceptedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (acceptedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.set(index, value);
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAcceptedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (acceptedCoinsBuilder_ == null) {
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAcceptedCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (acceptedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.add(value);
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAcceptedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (acceptedCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.add(index, value);
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAcceptedCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (acceptedCoinsBuilder_ == null) {
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAcceptedCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (acceptedCoinsBuilder_ == null) {
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAcceptedCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (acceptedCoinsBuilder_ == null) {
+          ensureAcceptedCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, acceptedCoins_);
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAcceptedCoins() {
+        if (acceptedCoinsBuilder_ == null) {
+          acceptedCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAcceptedCoins(int index) {
+        if (acceptedCoinsBuilder_ == null) {
+          ensureAcceptedCoinsIsMutable();
+          acceptedCoins_.remove(index);
+          onChanged();
+        } else {
+          acceptedCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAcceptedCoinsBuilder(
+          int index) {
+        return getAcceptedCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAcceptedCoinsOrBuilder(
+          int index) {
+        if (acceptedCoinsBuilder_ == null) {
+          return acceptedCoins_.get(index);  } else {
+          return acceptedCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAcceptedCoinsOrBuilderList() {
+        if (acceptedCoinsBuilder_ != null) {
+          return acceptedCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(acceptedCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAcceptedCoinsBuilder() {
+        return getAcceptedCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAcceptedCoinsBuilder(
+          int index) {
+        return getAcceptedCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * accepted_coins specifies the amount of coins that are accepted.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin accepted_coins = 6 [json_name = "acceptedCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAcceptedCoinsBuilderList() {
+        return getAcceptedCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAcceptedCoinsFieldBuilder() {
+        if (acceptedCoinsBuilder_ == null) {
+          acceptedCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  acceptedCoins_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          acceptedCoins_ = null;
+        }
+        return acceptedCoinsBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin mintedPoolCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> mintedPoolCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the mintedPoolCoin field is set.
+       */
+      public boolean hasMintedPoolCoin() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       * @return The mintedPoolCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getMintedPoolCoin() {
+        if (mintedPoolCoinBuilder_ == null) {
+          return mintedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintedPoolCoin_;
+        } else {
+          return mintedPoolCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintedPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (mintedPoolCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mintedPoolCoin_ = value;
+        } else {
+          mintedPoolCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMintedPoolCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (mintedPoolCoinBuilder_ == null) {
+          mintedPoolCoin_ = builderForValue.build();
+        } else {
+          mintedPoolCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMintedPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (mintedPoolCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            mintedPoolCoin_ != null &&
+            mintedPoolCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getMintedPoolCoinBuilder().mergeFrom(value);
+          } else {
+            mintedPoolCoin_ = value;
+          }
+        } else {
+          mintedPoolCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMintedPoolCoin() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        mintedPoolCoin_ = null;
+        if (mintedPoolCoinBuilder_ != null) {
+          mintedPoolCoinBuilder_.dispose();
+          mintedPoolCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMintedPoolCoinBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getMintedPoolCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMintedPoolCoinOrBuilder() {
+        if (mintedPoolCoinBuilder_ != null) {
+          return mintedPoolCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return mintedPoolCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintedPoolCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin minted_pool_coin = 7 [json_name = "mintedPoolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getMintedPoolCoinFieldBuilder() {
+        if (mintedPoolCoinBuilder_ == null) {
+          mintedPoolCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getMintedPoolCoin(),
+                  getParentForChildren(),
+                  isClean());
+          mintedPoolCoin_ = null;
+        }
+        return mintedPoolCoinBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus getStatus() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus result = com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.forNumber(status_);
+        return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000080;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 8 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 9 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.DepositRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.DepositRequest)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DepositRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DepositRequest>() {
+      @java.lang.Override
+      public DepositRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DepositRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DepositRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.DepositRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WithdrawRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.WithdrawRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id specifies the id for the request
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * pool_id specifies the pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * msg_height specifies the block height when the request is stored for the batch execution
+     * </pre>
+     *
+     * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+     * @return The msgHeight.
+     */
+    long getMsgHeight();
+
+    /**
+     * <pre>
+     * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+     * </pre>
+     *
+     * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+     * @return The withdrawer.
+     */
+    java.lang.String getWithdrawer();
+    /**
+     * <pre>
+     * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+     * </pre>
+     *
+     * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+     * @return The bytes for withdrawer.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawerBytes();
+
+    /**
+     * <pre>
+     * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the poolCoin field is set.
+     */
+    boolean hasPoolCoin();
+    /**
+     * <pre>
+     * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+     * @return The poolCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPoolCoin();
+    /**
+     * <pre>
+     * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCoinOrBuilder();
+
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getWithdrawnCoinsList();
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index);
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getWithdrawnCoinsCount();
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getWithdrawnCoinsOrBuilderList();
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnCoinsOrBuilder(
+        int index);
+
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus getStatus();
+
+    /**
+     * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+  }
+  /**
+   * <pre>
+   * WithdrawRequest defines a withdraw request.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.liquidity.v1beta1.WithdrawRequest}
+   */
+  public static final class WithdrawRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.WithdrawRequest)
+      WithdrawRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WithdrawRequest.newBuilder() to construct.
+    private WithdrawRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WithdrawRequest() {
+      withdrawer_ = "";
+      withdrawnCoins_ = java.util.Collections.emptyList();
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WithdrawRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_WithdrawRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_WithdrawRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.class, com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id specifies the id for the request
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id specifies the pool id
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int MSG_HEIGHT_FIELD_NUMBER = 3;
+    private long msgHeight_ = 0L;
+    /**
+     * <pre>
+     * msg_height specifies the block height when the request is stored for the batch execution
+     * </pre>
+     *
+     * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+     * @return The msgHeight.
+     */
+    @java.lang.Override
+    public long getMsgHeight() {
+      return msgHeight_;
+    }
+
+    public static final int WITHDRAWER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawer_ = "";
+    /**
+     * <pre>
+     * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+     * </pre>
+     *
+     * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+     * @return The withdrawer.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawer() {
+      java.lang.Object ref = withdrawer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+     * </pre>
+     *
+     * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+     * @return The bytes for withdrawer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawerBytes() {
+      java.lang.Object ref = withdrawer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_COIN_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin poolCoin_;
+    /**
+     * <pre>
+     * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the poolCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolCoin() {
+      return poolCoin_ != null;
+    }
+    /**
+     * <pre>
+     * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+     * @return The poolCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPoolCoin() {
+      return poolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : poolCoin_;
+    }
+    /**
+     * <pre>
+     * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCoinOrBuilder() {
+      return poolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : poolCoin_;
+    }
+
+    public static final int WITHDRAWN_COINS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> withdrawnCoins_;
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getWithdrawnCoinsList() {
+      return withdrawnCoins_;
+    }
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getWithdrawnCoinsOrBuilderList() {
+      return withdrawnCoins_;
+    }
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getWithdrawnCoinsCount() {
+      return withdrawnCoins_.size();
+    }
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index) {
+      return withdrawnCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * withdrawn_coins specifies the amount of coins that are withdrawn.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnCoinsOrBuilder(
+        int index) {
+      return withdrawnCoins_.get(index);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 7;
+    private int status_ = 0;
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus getStatus() {
+      com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus result = com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.forNumber(status_);
+      return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 8;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (msgHeight_ != 0L) {
+        output.writeInt64(3, msgHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, withdrawer_);
+      }
+      if (poolCoin_ != null) {
+        output.writeMessage(5, getPoolCoin());
+      }
+      for (int i = 0; i < withdrawnCoins_.size(); i++) {
+        output.writeMessage(6, withdrawnCoins_.get(i));
+      }
+      if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.REQUEST_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, status_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(8, appId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (msgHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, msgHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, withdrawer_);
+      }
+      if (poolCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPoolCoin());
+      }
+      for (int i = 0; i < withdrawnCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, withdrawnCoins_.get(i));
+      }
+      if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.REQUEST_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, status_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, appId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest other = (com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getMsgHeight()
+          != other.getMsgHeight()) return false;
+      if (!getWithdrawer()
+          .equals(other.getWithdrawer())) return false;
+      if (hasPoolCoin() != other.hasPoolCoin()) return false;
+      if (hasPoolCoin()) {
+        if (!getPoolCoin()
+            .equals(other.getPoolCoin())) return false;
+      }
+      if (!getWithdrawnCoinsList()
+          .equals(other.getWithdrawnCoinsList())) return false;
+      if (status_ != other.status_) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + MSG_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMsgHeight());
+      hash = (37 * hash) + WITHDRAWER_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawer().hashCode();
+      if (hasPoolCoin()) {
+        hash = (37 * hash) + POOL_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolCoin().hashCode();
+      }
+      if (getWithdrawnCoinsCount() > 0) {
+        hash = (37 * hash) + WITHDRAWN_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawnCoinsList().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WithdrawRequest defines a withdraw request.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.liquidity.v1beta1.WithdrawRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.WithdrawRequest)
+        com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_WithdrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_WithdrawRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.class, com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        poolId_ = 0L;
+        msgHeight_ = 0L;
+        withdrawer_ = "";
+        poolCoin_ = null;
+        if (poolCoinBuilder_ != null) {
+          poolCoinBuilder_.dispose();
+          poolCoinBuilder_ = null;
+        }
+        if (withdrawnCoinsBuilder_ == null) {
+          withdrawnCoins_ = java.util.Collections.emptyList();
+        } else {
+          withdrawnCoins_ = null;
+          withdrawnCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        status_ = 0;
+        appId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_WithdrawRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest result = new com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest result) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            withdrawnCoins_ = java.util.Collections.unmodifiableList(withdrawnCoins_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.withdrawnCoins_ = withdrawnCoins_;
+        } else {
+          result.withdrawnCoins_ = withdrawnCoinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.msgHeight_ = msgHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.withdrawer_ = withdrawer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.poolCoin_ = poolCoinBuilder_ == null
+              ? poolCoin_
+              : poolCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.appId_ = appId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getMsgHeight() != 0L) {
+          setMsgHeight(other.getMsgHeight());
+        }
+        if (!other.getWithdrawer().isEmpty()) {
+          withdrawer_ = other.withdrawer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasPoolCoin()) {
+          mergePoolCoin(other.getPoolCoin());
+        }
+        if (withdrawnCoinsBuilder_ == null) {
+          if (!other.withdrawnCoins_.isEmpty()) {
+            if (withdrawnCoins_.isEmpty()) {
+              withdrawnCoins_ = other.withdrawnCoins_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureWithdrawnCoinsIsMutable();
+              withdrawnCoins_.addAll(other.withdrawnCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.withdrawnCoins_.isEmpty()) {
+            if (withdrawnCoinsBuilder_.isEmpty()) {
+              withdrawnCoinsBuilder_.dispose();
+              withdrawnCoinsBuilder_ = null;
+              withdrawnCoins_ = other.withdrawnCoins_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              withdrawnCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWithdrawnCoinsFieldBuilder() : null;
+            } else {
+              withdrawnCoinsBuilder_.addAllMessages(other.withdrawnCoins_);
+            }
+          }
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                msgHeight_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                withdrawer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getPoolCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (withdrawnCoinsBuilder_ == null) {
+                  ensureWithdrawnCoinsIsMutable();
+                  withdrawnCoins_.add(m);
+                } else {
+                  withdrawnCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 56: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id specifies the pool id
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long msgHeight_ ;
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @return The msgHeight.
+       */
+      @java.lang.Override
+      public long getMsgHeight() {
+        return msgHeight_;
+      }
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @param value The msgHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgHeight(long value) {
+
+        msgHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsgHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        msgHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object withdrawer_ = "";
+      /**
+       * <pre>
+       * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+       * </pre>
+       *
+       * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+       * @return The withdrawer.
+       */
+      public java.lang.String getWithdrawer() {
+        java.lang.Object ref = withdrawer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+       * </pre>
+       *
+       * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+       * @return The bytes for withdrawer.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawerBytes() {
+        java.lang.Object ref = withdrawer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+       * </pre>
+       *
+       * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+       * @param value The withdrawer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+       * </pre>
+       *
+       * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawer() {
+        withdrawer_ = getDefaultInstance().getWithdrawer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer specifies the bech32-encoded address that withdraws pool coin from the pool
+       * </pre>
+       *
+       * <code>string withdrawer = 4 [json_name = "withdrawer"];</code>
+       * @param value The bytes for withdrawer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin poolCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> poolCoinBuilder_;
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the poolCoin field is set.
+       */
+      public boolean hasPoolCoin() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       * @return The poolCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPoolCoin() {
+        if (poolCoinBuilder_ == null) {
+          return poolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : poolCoin_;
+        } else {
+          return poolCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolCoin_ = value;
+        } else {
+          poolCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPoolCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolCoinBuilder_ == null) {
+          poolCoin_ = builderForValue.build();
+        } else {
+          poolCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            poolCoin_ != null &&
+            poolCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getPoolCoinBuilder().mergeFrom(value);
+          } else {
+            poolCoin_ = value;
+          }
+        } else {
+          poolCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPoolCoin() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        poolCoin_ = null;
+        if (poolCoinBuilder_ != null) {
+          poolCoinBuilder_.dispose();
+          poolCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPoolCoinBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPoolCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCoinOrBuilder() {
+        if (poolCoinBuilder_ != null) {
+          return poolCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return poolCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : poolCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * pool_coin specifies the pool coin that is a proof of liquidity provider for the pool
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin pool_coin = 5 [json_name = "poolCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPoolCoinFieldBuilder() {
+        if (poolCoinBuilder_ == null) {
+          poolCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getPoolCoin(),
+                  getParentForChildren(),
+                  isClean());
+          poolCoin_ = null;
+        }
+        return poolCoinBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> withdrawnCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureWithdrawnCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          withdrawnCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(withdrawnCoins_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> withdrawnCoinsBuilder_;
+
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getWithdrawnCoinsList() {
+        if (withdrawnCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(withdrawnCoins_);
+        } else {
+          return withdrawnCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getWithdrawnCoinsCount() {
+        if (withdrawnCoinsBuilder_ == null) {
+          return withdrawnCoins_.size();
+        } else {
+          return withdrawnCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getWithdrawnCoins(int index) {
+        if (withdrawnCoinsBuilder_ == null) {
+          return withdrawnCoins_.get(index);
+        } else {
+          return withdrawnCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.set(index, value);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(value);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (withdrawnCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(index, value);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addWithdrawnCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllWithdrawnCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, withdrawnCoins_);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearWithdrawnCoins() {
+        if (withdrawnCoinsBuilder_ == null) {
+          withdrawnCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeWithdrawnCoins(int index) {
+        if (withdrawnCoinsBuilder_ == null) {
+          ensureWithdrawnCoinsIsMutable();
+          withdrawnCoins_.remove(index);
+          onChanged();
+        } else {
+          withdrawnCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getWithdrawnCoinsBuilder(
+          int index) {
+        return getWithdrawnCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getWithdrawnCoinsOrBuilder(
+          int index) {
+        if (withdrawnCoinsBuilder_ == null) {
+          return withdrawnCoins_.get(index);  } else {
+          return withdrawnCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getWithdrawnCoinsOrBuilderList() {
+        if (withdrawnCoinsBuilder_ != null) {
+          return withdrawnCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(withdrawnCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addWithdrawnCoinsBuilder() {
+        return getWithdrawnCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addWithdrawnCoinsBuilder(
+          int index) {
+        return getWithdrawnCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * withdrawn_coins specifies the amount of coins that are withdrawn.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin withdrawn_coins = 6 [json_name = "withdrawnCoins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getWithdrawnCoinsBuilderList() {
+        return getWithdrawnCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getWithdrawnCoinsFieldBuilder() {
+        if (withdrawnCoinsBuilder_ == null) {
+          withdrawnCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  withdrawnCoins_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          withdrawnCoins_ = null;
+        }
+        return withdrawnCoinsBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus getStatus() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus result = com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.forNumber(status_);
+        return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.comdex.liquidity.v1beta1.LiquidityProto.RequestStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.RequestStatus status = 7 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 8 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.WithdrawRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.WithdrawRequest)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WithdrawRequest>
+        PARSER = new com.google.protobuf.AbstractParser<WithdrawRequest>() {
+      @java.lang.Override
+      public WithdrawRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<WithdrawRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WithdrawRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.WithdrawRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.Order)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id specifies the id for the request
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * pair_id specifies the pair id
+     * </pre>
+     *
+     * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    long getPairId();
+
+    /**
+     * <pre>
+     * msg_height specifies the block height when the request is stored for the batch execution
+     * </pre>
+     *
+     * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+     * @return The msgHeight.
+     */
+    long getMsgHeight();
+
+    /**
+     * <pre>
+     * orderer specifies the bech32-encoded address that makes an order
+     * </pre>
+     *
+     * <code>string orderer = 4 [json_name = "orderer"];</code>
+     * @return The orderer.
+     */
+    java.lang.String getOrderer();
+    /**
+     * <pre>
+     * orderer specifies the bech32-encoded address that makes an order
+     * </pre>
+     *
+     * <code>string orderer = 4 [json_name = "orderer"];</code>
+     * @return The bytes for orderer.
+     */
+    com.google.protobuf.ByteString
+        getOrdererBytes();
+
+    /**
+     * <pre>
+     * direction specifies the order direction; either buy or sell
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+     * @return The enum numeric value on the wire for direction.
+     */
+    int getDirectionValue();
+    /**
+     * <pre>
+     * direction specifies the order direction; either buy or sell
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+     * @return The direction.
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection getDirection();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the offerCoin field is set.
+     */
+    boolean hasOfferCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+     * @return The offerCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getOfferCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOfferCoinOrBuilder();
+
+    /**
+     * <pre>
+     * remaining_offer_coin specifies the remaining offer coin
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the remainingOfferCoin field is set.
+     */
+    boolean hasRemainingOfferCoin();
+    /**
+     * <pre>
+     * remaining_offer_coin specifies the remaining offer coin
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+     * @return The remainingOfferCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getRemainingOfferCoin();
+    /**
+     * <pre>
+     * remaining_offer_coin specifies the remaining offer coin
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRemainingOfferCoinOrBuilder();
+
+    /**
+     * <pre>
+     * received_coin specifies the received coin after the swap
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the receivedCoin field is set.
+     */
+    boolean hasReceivedCoin();
+    /**
+     * <pre>
+     * received_coin specifies the received coin after the swap
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+     * @return The receivedCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getReceivedCoin();
+    /**
+     * <pre>
+     * received_coin specifies the received coin after the swap
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReceivedCoinOrBuilder();
+
+    /**
+     * <pre>
+     * price specifies the price that an orderer is willing to swap
+     * </pre>
+     *
+     * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The price.
+     */
+    java.lang.String getPrice();
+    /**
+     * <pre>
+     * price specifies the price that an orderer is willing to swap
+     * </pre>
+     *
+     * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for price.
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
+
+    /**
+     * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The openAmount.
+     */
+    java.lang.String getOpenAmount();
+    /**
+     * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for openAmount.
+     */
+    com.google.protobuf.ByteString
+        getOpenAmountBytes();
+
+    /**
+     * <pre>
+     * batch_id specifies the pair's batch id when the request is stored
+     * </pre>
+     *
+     * <code>uint64 batch_id = 12 [json_name = "batchId"];</code>
+     * @return The batchId.
+     */
+    long getBatchId();
+
+    /**
+     * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the expireAt field is set.
+     */
+    boolean hasExpireAt();
+    /**
+     * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The expireAt.
+     */
+    com.google.protobuf.Timestamp getExpireAt();
+    /**
+     * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExpireAtOrBuilder();
+
+    /**
+     * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus getStatus();
+
+    /**
+     * <code>uint64 app_id = 15 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <pre>
+     * type specifies the typo of the order
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * type specifies the typo of the order
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.OrderType getType();
+  }
+  /**
+   * <pre>
+   * Order defines an order.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.liquidity.v1beta1.Order}
+   */
+  public static final class Order extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.Order)
+      OrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Order.newBuilder() to construct.
+    private Order(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Order() {
+      orderer_ = "";
+      direction_ = 0;
+      price_ = "";
+      amount_ = "";
+      openAmount_ = "";
+      status_ = 0;
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Order();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Order_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Order_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.Order.class, com.comdex.liquidity.v1beta1.LiquidityProto.Order.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id specifies the id for the request
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int PAIR_ID_FIELD_NUMBER = 2;
+    private long pairId_ = 0L;
+    /**
+     * <pre>
+     * pair_id specifies the pair id
+     * </pre>
+     *
+     * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    @java.lang.Override
+    public long getPairId() {
+      return pairId_;
+    }
+
+    public static final int MSG_HEIGHT_FIELD_NUMBER = 3;
+    private long msgHeight_ = 0L;
+    /**
+     * <pre>
+     * msg_height specifies the block height when the request is stored for the batch execution
+     * </pre>
+     *
+     * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+     * @return The msgHeight.
+     */
+    @java.lang.Override
+    public long getMsgHeight() {
+      return msgHeight_;
+    }
+
+    public static final int ORDERER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderer_ = "";
+    /**
+     * <pre>
+     * orderer specifies the bech32-encoded address that makes an order
+     * </pre>
+     *
+     * <code>string orderer = 4 [json_name = "orderer"];</code>
+     * @return The orderer.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderer() {
+      java.lang.Object ref = orderer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * orderer specifies the bech32-encoded address that makes an order
+     * </pre>
+     *
+     * <code>string orderer = 4 [json_name = "orderer"];</code>
+     * @return The bytes for orderer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrdererBytes() {
+      java.lang.Object ref = orderer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIRECTION_FIELD_NUMBER = 5;
+    private int direction_ = 0;
+    /**
+     * <pre>
+     * direction specifies the order direction; either buy or sell
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+     * @return The enum numeric value on the wire for direction.
+     */
+    @java.lang.Override public int getDirectionValue() {
+      return direction_;
+    }
+    /**
+     * <pre>
+     * direction specifies the order direction; either buy or sell
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+     * @return The direction.
+     */
+    @java.lang.Override public com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection getDirection() {
+      com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection result = com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.forNumber(direction_);
+      return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.UNRECOGNIZED : result;
+    }
+
+    public static final int OFFER_COIN_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin offerCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the offerCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasOfferCoin() {
+      return offerCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+     * @return The offerCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getOfferCoin() {
+      return offerCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : offerCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOfferCoinOrBuilder() {
+      return offerCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : offerCoin_;
+    }
+
+    public static final int REMAINING_OFFER_COIN_FIELD_NUMBER = 7;
+    private com.cosmos.base.v1beta1.CoinProto.Coin remainingOfferCoin_;
+    /**
+     * <pre>
+     * remaining_offer_coin specifies the remaining offer coin
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the remainingOfferCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemainingOfferCoin() {
+      return remainingOfferCoin_ != null;
+    }
+    /**
+     * <pre>
+     * remaining_offer_coin specifies the remaining offer coin
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+     * @return The remainingOfferCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getRemainingOfferCoin() {
+      return remainingOfferCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingOfferCoin_;
+    }
+    /**
+     * <pre>
+     * remaining_offer_coin specifies the remaining offer coin
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRemainingOfferCoinOrBuilder() {
+      return remainingOfferCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingOfferCoin_;
+    }
+
+    public static final int RECEIVED_COIN_FIELD_NUMBER = 8;
+    private com.cosmos.base.v1beta1.CoinProto.Coin receivedCoin_;
+    /**
+     * <pre>
+     * received_coin specifies the received coin after the swap
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the receivedCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasReceivedCoin() {
+      return receivedCoin_ != null;
+    }
+    /**
+     * <pre>
+     * received_coin specifies the received coin after the swap
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+     * @return The receivedCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getReceivedCoin() {
+      return receivedCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : receivedCoin_;
+    }
+    /**
+     * <pre>
+     * received_coin specifies the received coin after the swap
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReceivedCoinOrBuilder() {
+      return receivedCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : receivedCoin_;
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object price_ = "";
+    /**
+     * <pre>
+     * price specifies the price that an orderer is willing to swap
+     * </pre>
+     *
+     * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public java.lang.String getPrice() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        price_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * price specifies the price that an orderer is willing to swap
+     * </pre>
+     *
+     * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for price.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        price_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPEN_AMOUNT_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object openAmount_ = "";
+    /**
+     * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The openAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getOpenAmount() {
+      java.lang.Object ref = openAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        openAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for openAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOpenAmountBytes() {
+      java.lang.Object ref = openAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        openAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_ID_FIELD_NUMBER = 12;
+    private long batchId_ = 0L;
+    /**
+     * <pre>
+     * batch_id specifies the pair's batch id when the request is stored
+     * </pre>
+     *
+     * <code>uint64 batch_id = 12 [json_name = "batchId"];</code>
+     * @return The batchId.
+     */
+    @java.lang.Override
+    public long getBatchId() {
+      return batchId_;
+    }
+
+    public static final int EXPIRE_AT_FIELD_NUMBER = 13;
+    private com.google.protobuf.Timestamp expireAt_;
+    /**
+     * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the expireAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpireAt() {
+      return expireAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The expireAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpireAt() {
+      return expireAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expireAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getExpireAtOrBuilder() {
+      return expireAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expireAt_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 14;
+    private int status_ = 0;
+    /**
+     * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus getStatus() {
+      com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus result = com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.forNumber(status_);
+      return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 15;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 15 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 16;
+    private int type_ = 0;
+    /**
+     * <pre>
+     * type specifies the typo of the order
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * type specifies the typo of the order
+     * </pre>
+     *
+     * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.comdex.liquidity.v1beta1.LiquidityProto.OrderType getType() {
+      com.comdex.liquidity.v1beta1.LiquidityProto.OrderType result = com.comdex.liquidity.v1beta1.LiquidityProto.OrderType.forNumber(type_);
+      return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.OrderType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (pairId_ != 0L) {
+        output.writeUInt64(2, pairId_);
+      }
+      if (msgHeight_ != 0L) {
+        output.writeInt64(3, msgHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orderer_);
+      }
+      if (direction_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.ORDER_DIRECTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, direction_);
+      }
+      if (offerCoin_ != null) {
+        output.writeMessage(6, getOfferCoin());
+      }
+      if (remainingOfferCoin_ != null) {
+        output.writeMessage(7, getRemainingOfferCoin());
+      }
+      if (receivedCoin_ != null) {
+        output.writeMessage(8, getReceivedCoin());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, price_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, openAmount_);
+      }
+      if (batchId_ != 0L) {
+        output.writeUInt64(12, batchId_);
+      }
+      if (expireAt_ != null) {
+        output.writeMessage(13, getExpireAt());
+      }
+      if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(14, status_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(15, appId_);
+      }
+      if (type_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderType.ORDER_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(16, type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (pairId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, pairId_);
+      }
+      if (msgHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, msgHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orderer_);
+      }
+      if (direction_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.ORDER_DIRECTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, direction_);
+      }
+      if (offerCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getOfferCoin());
+      }
+      if (remainingOfferCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRemainingOfferCoin());
+      }
+      if (receivedCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getReceivedCoin());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, price_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, openAmount_);
+      }
+      if (batchId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, batchId_);
+      }
+      if (expireAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getExpireAt());
+      }
+      if (status_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, status_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, appId_);
+      }
+      if (type_ != com.comdex.liquidity.v1beta1.LiquidityProto.OrderType.ORDER_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(16, type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.Order)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.Order other = (com.comdex.liquidity.v1beta1.LiquidityProto.Order) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getPairId()
+          != other.getPairId()) return false;
+      if (getMsgHeight()
+          != other.getMsgHeight()) return false;
+      if (!getOrderer()
+          .equals(other.getOrderer())) return false;
+      if (direction_ != other.direction_) return false;
+      if (hasOfferCoin() != other.hasOfferCoin()) return false;
+      if (hasOfferCoin()) {
+        if (!getOfferCoin()
+            .equals(other.getOfferCoin())) return false;
+      }
+      if (hasRemainingOfferCoin() != other.hasRemainingOfferCoin()) return false;
+      if (hasRemainingOfferCoin()) {
+        if (!getRemainingOfferCoin()
+            .equals(other.getRemainingOfferCoin())) return false;
+      }
+      if (hasReceivedCoin() != other.hasReceivedCoin()) return false;
+      if (hasReceivedCoin()) {
+        if (!getReceivedCoin()
+            .equals(other.getReceivedCoin())) return false;
+      }
+      if (!getPrice()
+          .equals(other.getPrice())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getOpenAmount()
+          .equals(other.getOpenAmount())) return false;
+      if (getBatchId()
+          != other.getBatchId()) return false;
+      if (hasExpireAt() != other.hasExpireAt()) return false;
+      if (hasExpireAt()) {
+        if (!getExpireAt()
+            .equals(other.getExpireAt())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (type_ != other.type_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + PAIR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPairId());
+      hash = (37 * hash) + MSG_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMsgHeight());
+      hash = (37 * hash) + ORDERER_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderer().hashCode();
+      hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
+      hash = (53 * hash) + direction_;
+      if (hasOfferCoin()) {
+        hash = (37 * hash) + OFFER_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getOfferCoin().hashCode();
+      }
+      if (hasRemainingOfferCoin()) {
+        hash = (37 * hash) + REMAINING_OFFER_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getRemainingOfferCoin().hashCode();
+      }
+      if (hasReceivedCoin()) {
+        hash = (37 * hash) + RECEIVED_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getReceivedCoin().hashCode();
+      }
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrice().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + OPEN_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getOpenAmount().hashCode();
+      hash = (37 * hash) + BATCH_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBatchId());
+      if (hasExpireAt()) {
+        hash = (37 * hash) + EXPIRE_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getExpireAt().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.Order prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Order defines an order.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.liquidity.v1beta1.Order}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.Order)
+        com.comdex.liquidity.v1beta1.LiquidityProto.OrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Order_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Order_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.Order.class, com.comdex.liquidity.v1beta1.LiquidityProto.Order.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.Order.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        pairId_ = 0L;
+        msgHeight_ = 0L;
+        orderer_ = "";
+        direction_ = 0;
+        offerCoin_ = null;
+        if (offerCoinBuilder_ != null) {
+          offerCoinBuilder_.dispose();
+          offerCoinBuilder_ = null;
+        }
+        remainingOfferCoin_ = null;
+        if (remainingOfferCoinBuilder_ != null) {
+          remainingOfferCoinBuilder_.dispose();
+          remainingOfferCoinBuilder_ = null;
+        }
+        receivedCoin_ = null;
+        if (receivedCoinBuilder_ != null) {
+          receivedCoinBuilder_.dispose();
+          receivedCoinBuilder_ = null;
+        }
+        price_ = "";
+        amount_ = "";
+        openAmount_ = "";
+        batchId_ = 0L;
+        expireAt_ = null;
+        if (expireAtBuilder_ != null) {
+          expireAtBuilder_.dispose();
+          expireAtBuilder_ = null;
+        }
+        status_ = 0;
+        appId_ = 0L;
+        type_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_Order_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Order getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.Order.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Order build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.Order result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.Order buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.Order result = new com.comdex.liquidity.v1beta1.LiquidityProto.Order(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.Order result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pairId_ = pairId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.msgHeight_ = msgHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.orderer_ = orderer_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.direction_ = direction_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.offerCoin_ = offerCoinBuilder_ == null
+              ? offerCoin_
+              : offerCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.remainingOfferCoin_ = remainingOfferCoinBuilder_ == null
+              ? remainingOfferCoin_
+              : remainingOfferCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.receivedCoin_ = receivedCoinBuilder_ == null
+              ? receivedCoin_
+              : receivedCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.price_ = price_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.openAmount_ = openAmount_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.batchId_ = batchId_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.expireAt_ = expireAtBuilder_ == null
+              ? expireAt_
+              : expireAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.type_ = type_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.Order) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.Order)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.Order other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.Order.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getPairId() != 0L) {
+          setPairId(other.getPairId());
+        }
+        if (other.getMsgHeight() != 0L) {
+          setMsgHeight(other.getMsgHeight());
+        }
+        if (!other.getOrderer().isEmpty()) {
+          orderer_ = other.orderer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.direction_ != 0) {
+          setDirectionValue(other.getDirectionValue());
+        }
+        if (other.hasOfferCoin()) {
+          mergeOfferCoin(other.getOfferCoin());
+        }
+        if (other.hasRemainingOfferCoin()) {
+          mergeRemainingOfferCoin(other.getRemainingOfferCoin());
+        }
+        if (other.hasReceivedCoin()) {
+          mergeReceivedCoin(other.getReceivedCoin());
+        }
+        if (!other.getPrice().isEmpty()) {
+          price_ = other.price_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getOpenAmount().isEmpty()) {
+          openAmount_ = other.openAmount_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (other.getBatchId() != 0L) {
+          setBatchId(other.getBatchId());
+        }
+        if (other.hasExpireAt()) {
+          mergeExpireAt(other.getExpireAt());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                pairId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                msgHeight_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                orderer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                direction_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getOfferCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getRemainingOfferCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getReceivedCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                price_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                openAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 96: {
+                batchId_ = input.readUInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 106: {
+                input.readMessage(
+                    getExpireAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 112: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              case 120: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 128: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 128
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id specifies the id for the request
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long pairId_ ;
+      /**
+       * <pre>
+       * pair_id specifies the pair id
+       * </pre>
+       *
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @return The pairId.
+       */
+      @java.lang.Override
+      public long getPairId() {
+        return pairId_;
+      }
+      /**
+       * <pre>
+       * pair_id specifies the pair id
+       * </pre>
+       *
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @param value The pairId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPairId(long value) {
+
+        pairId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pair_id specifies the pair id
+       * </pre>
+       *
+       * <code>uint64 pair_id = 2 [json_name = "pairId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPairId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pairId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long msgHeight_ ;
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @return The msgHeight.
+       */
+      @java.lang.Override
+      public long getMsgHeight() {
+        return msgHeight_;
+      }
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @param value The msgHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsgHeight(long value) {
+
+        msgHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * msg_height specifies the block height when the request is stored for the batch execution
+       * </pre>
+       *
+       * <code>int64 msg_height = 3 [json_name = "msgHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsgHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        msgHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderer_ = "";
+      /**
+       * <pre>
+       * orderer specifies the bech32-encoded address that makes an order
+       * </pre>
+       *
+       * <code>string orderer = 4 [json_name = "orderer"];</code>
+       * @return The orderer.
+       */
+      public java.lang.String getOrderer() {
+        java.lang.Object ref = orderer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * orderer specifies the bech32-encoded address that makes an order
+       * </pre>
+       *
+       * <code>string orderer = 4 [json_name = "orderer"];</code>
+       * @return The bytes for orderer.
+       */
+      public com.google.protobuf.ByteString
+          getOrdererBytes() {
+        java.lang.Object ref = orderer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * orderer specifies the bech32-encoded address that makes an order
+       * </pre>
+       *
+       * <code>string orderer = 4 [json_name = "orderer"];</code>
+       * @param value The orderer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        orderer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * orderer specifies the bech32-encoded address that makes an order
+       * </pre>
+       *
+       * <code>string orderer = 4 [json_name = "orderer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderer() {
+        orderer_ = getDefaultInstance().getOrderer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * orderer specifies the bech32-encoded address that makes an order
+       * </pre>
+       *
+       * <code>string orderer = 4 [json_name = "orderer"];</code>
+       * @param value The bytes for orderer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrdererBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        orderer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private int direction_ = 0;
+      /**
+       * <pre>
+       * direction specifies the order direction; either buy or sell
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+       * @return The enum numeric value on the wire for direction.
+       */
+      @java.lang.Override public int getDirectionValue() {
+        return direction_;
+      }
+      /**
+       * <pre>
+       * direction specifies the order direction; either buy or sell
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+       * @param value The enum numeric value on the wire for direction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirectionValue(int value) {
+        direction_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * direction specifies the order direction; either buy or sell
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+       * @return The direction.
+       */
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection getDirection() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection result = com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.forNumber(direction_);
+        return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * direction specifies the order direction; either buy or sell
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+       * @param value The direction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDirection(com.comdex.liquidity.v1beta1.LiquidityProto.OrderDirection value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        direction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * direction specifies the order direction; either buy or sell
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderDirection direction = 5 [json_name = "direction"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDirection() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        direction_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin offerCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> offerCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the offerCoin field is set.
+       */
+      public boolean hasOfferCoin() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       * @return The offerCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getOfferCoin() {
+        if (offerCoinBuilder_ == null) {
+          return offerCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : offerCoin_;
+        } else {
+          return offerCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOfferCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (offerCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          offerCoin_ = value;
+        } else {
+          offerCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOfferCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (offerCoinBuilder_ == null) {
+          offerCoin_ = builderForValue.build();
+        } else {
+          offerCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOfferCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (offerCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            offerCoin_ != null &&
+            offerCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getOfferCoinBuilder().mergeFrom(value);
+          } else {
+            offerCoin_ = value;
+          }
+        } else {
+          offerCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOfferCoin() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        offerCoin_ = null;
+        if (offerCoinBuilder_ != null) {
+          offerCoinBuilder_.dispose();
+          offerCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getOfferCoinBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getOfferCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getOfferCoinOrBuilder() {
+        if (offerCoinBuilder_ != null) {
+          return offerCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return offerCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : offerCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin offer_coin = 6 [json_name = "offerCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getOfferCoinFieldBuilder() {
+        if (offerCoinBuilder_ == null) {
+          offerCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getOfferCoin(),
+                  getParentForChildren(),
+                  isClean());
+          offerCoin_ = null;
+        }
+        return offerCoinBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin remainingOfferCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> remainingOfferCoinBuilder_;
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the remainingOfferCoin field is set.
+       */
+      public boolean hasRemainingOfferCoin() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       * @return The remainingOfferCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getRemainingOfferCoin() {
+        if (remainingOfferCoinBuilder_ == null) {
+          return remainingOfferCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingOfferCoin_;
+        } else {
+          return remainingOfferCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRemainingOfferCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (remainingOfferCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          remainingOfferCoin_ = value;
+        } else {
+          remainingOfferCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRemainingOfferCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (remainingOfferCoinBuilder_ == null) {
+          remainingOfferCoin_ = builderForValue.build();
+        } else {
+          remainingOfferCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRemainingOfferCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (remainingOfferCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            remainingOfferCoin_ != null &&
+            remainingOfferCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getRemainingOfferCoinBuilder().mergeFrom(value);
+          } else {
+            remainingOfferCoin_ = value;
+          }
+        } else {
+          remainingOfferCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRemainingOfferCoin() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        remainingOfferCoin_ = null;
+        if (remainingOfferCoinBuilder_ != null) {
+          remainingOfferCoinBuilder_.dispose();
+          remainingOfferCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getRemainingOfferCoinBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getRemainingOfferCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getRemainingOfferCoinOrBuilder() {
+        if (remainingOfferCoinBuilder_ != null) {
+          return remainingOfferCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return remainingOfferCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : remainingOfferCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * remaining_offer_coin specifies the remaining offer coin
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin remaining_offer_coin = 7 [json_name = "remainingOfferCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getRemainingOfferCoinFieldBuilder() {
+        if (remainingOfferCoinBuilder_ == null) {
+          remainingOfferCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getRemainingOfferCoin(),
+                  getParentForChildren(),
+                  isClean());
+          remainingOfferCoin_ = null;
+        }
+        return remainingOfferCoinBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin receivedCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> receivedCoinBuilder_;
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the receivedCoin field is set.
+       */
+      public boolean hasReceivedCoin() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       * @return The receivedCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getReceivedCoin() {
+        if (receivedCoinBuilder_ == null) {
+          return receivedCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : receivedCoin_;
+        } else {
+          return receivedCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReceivedCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (receivedCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          receivedCoin_ = value;
+        } else {
+          receivedCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setReceivedCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (receivedCoinBuilder_ == null) {
+          receivedCoin_ = builderForValue.build();
+        } else {
+          receivedCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeReceivedCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (receivedCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            receivedCoin_ != null &&
+            receivedCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getReceivedCoinBuilder().mergeFrom(value);
+          } else {
+            receivedCoin_ = value;
+          }
+        } else {
+          receivedCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearReceivedCoin() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        receivedCoin_ = null;
+        if (receivedCoinBuilder_ != null) {
+          receivedCoinBuilder_.dispose();
+          receivedCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getReceivedCoinBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getReceivedCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getReceivedCoinOrBuilder() {
+        if (receivedCoinBuilder_ != null) {
+          return receivedCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return receivedCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : receivedCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * received_coin specifies the received coin after the swap
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin received_coin = 8 [json_name = "receivedCoin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getReceivedCoinFieldBuilder() {
+        if (receivedCoinBuilder_ == null) {
+          receivedCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getReceivedCoin(),
+                  getParentForChildren(),
+                  isClean());
+          receivedCoin_ = null;
+        }
+        return receivedCoinBuilder_;
+      }
+
+      private java.lang.Object price_ = "";
+      /**
+       * <pre>
+       * price specifies the price that an orderer is willing to swap
+       * </pre>
+       *
+       * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The price.
+       */
+      public java.lang.String getPrice() {
+        java.lang.Object ref = price_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          price_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * price specifies the price that an orderer is willing to swap
+       * </pre>
+       *
+       * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for price.
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * price specifies the price that an orderer is willing to swap
+       * </pre>
+       *
+       * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        price_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * price specifies the price that an orderer is willing to swap
+       * </pre>
+       *
+       * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+        price_ = getDefaultInstance().getPrice();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * price specifies the price that an orderer is willing to swap
+       * </pre>
+       *
+       * <code>string price = 9 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        price_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string amount = 10 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object openAmount_ = "";
+      /**
+       * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The openAmount.
+       */
+      public java.lang.String getOpenAmount() {
+        java.lang.Object ref = openAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          openAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for openAmount.
+       */
+      public com.google.protobuf.ByteString
+          getOpenAmountBytes() {
+        java.lang.Object ref = openAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          openAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The openAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpenAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        openAmount_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOpenAmount() {
+        openAmount_ = getDefaultInstance().getOpenAmount();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string open_amount = 11 [json_name = "openAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for openAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpenAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        openAmount_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private long batchId_ ;
+      /**
+       * <pre>
+       * batch_id specifies the pair's batch id when the request is stored
+       * </pre>
+       *
+       * <code>uint64 batch_id = 12 [json_name = "batchId"];</code>
+       * @return The batchId.
+       */
+      @java.lang.Override
+      public long getBatchId() {
+        return batchId_;
+      }
+      /**
+       * <pre>
+       * batch_id specifies the pair's batch id when the request is stored
+       * </pre>
+       *
+       * <code>uint64 batch_id = 12 [json_name = "batchId"];</code>
+       * @param value The batchId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchId(long value) {
+
+        batchId_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * batch_id specifies the pair's batch id when the request is stored
+       * </pre>
+       *
+       * <code>uint64 batch_id = 12 [json_name = "batchId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchId() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        batchId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp expireAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expireAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the expireAt field is set.
+       */
+      public boolean hasExpireAt() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The expireAt.
+       */
+      public com.google.protobuf.Timestamp getExpireAt() {
+        if (expireAtBuilder_ == null) {
+          return expireAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expireAt_;
+        } else {
+          return expireAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setExpireAt(com.google.protobuf.Timestamp value) {
+        if (expireAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expireAt_ = value;
+        } else {
+          expireAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setExpireAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (expireAtBuilder_ == null) {
+          expireAt_ = builderForValue.build();
+        } else {
+          expireAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeExpireAt(com.google.protobuf.Timestamp value) {
+        if (expireAtBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            expireAt_ != null &&
+            expireAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpireAtBuilder().mergeFrom(value);
+          } else {
+            expireAt_ = value;
+          }
+        } else {
+          expireAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearExpireAt() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        expireAt_ = null;
+        if (expireAtBuilder_ != null) {
+          expireAtBuilder_.dispose();
+          expireAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExpireAtBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getExpireAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExpireAtOrBuilder() {
+        if (expireAtBuilder_ != null) {
+          return expireAtBuilder_.getMessageOrBuilder();
+        } else {
+          return expireAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : expireAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expire_at = 13 [json_name = "expireAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getExpireAtFieldBuilder() {
+        if (expireAtBuilder_ == null) {
+          expireAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExpireAt(),
+                  getParentForChildren(),
+                  isClean());
+          expireAt_ = null;
+        }
+        return expireAtBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus getStatus() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus result = com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.forNumber(status_);
+        return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.comdex.liquidity.v1beta1.LiquidityProto.OrderStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00002000;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.liquidity.v1beta1.OrderStatus status = 14 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 15 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 15 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 15 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * type specifies the typo of the order
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * type specifies the typo of the order
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type specifies the typo of the order
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.OrderType getType() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.OrderType result = com.comdex.liquidity.v1beta1.LiquidityProto.OrderType.forNumber(type_);
+        return result == null ? com.comdex.liquidity.v1beta1.LiquidityProto.OrderType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * type specifies the typo of the order
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.comdex.liquidity.v1beta1.LiquidityProto.OrderType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00008000;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type specifies the typo of the order
+       * </pre>
+       *
+       * <code>.comdex.liquidity.v1beta1.OrderType type = 16 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.Order)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.Order)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.Order DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.Order();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.Order getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Order>
+        PARSER = new com.google.protobuf.AbstractParser<Order>() {
+      @java.lang.Override
+      public Order parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Order> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Order> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.Order getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MMOrderIndexOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.MMOrderIndex)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The orderer.
+     */
+    java.lang.String getOrderer();
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The bytes for orderer.
+     */
+    com.google.protobuf.ByteString
+        getOrdererBytes();
+
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 pair_id = 3 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    long getPairId();
+
+    /**
+     * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+     * @return A list containing the orderIds.
+     */
+    java.util.List<java.lang.Long> getOrderIdsList();
+    /**
+     * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+     * @return The count of orderIds.
+     */
+    int getOrderIdsCount();
+    /**
+     * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+     * @param index The index of the element to return.
+     * @return The orderIds at the given index.
+     */
+    long getOrderIds(int index);
+  }
+  /**
+   * <pre>
+   * MMOrderIndex defines an index type to quickly find market making orders
+   * from an orderer.
+   * </pre>
+   *
+   * Protobuf type {@code comdex.liquidity.v1beta1.MMOrderIndex}
+   */
+  public static final class MMOrderIndex extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.MMOrderIndex)
+      MMOrderIndexOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MMOrderIndex.newBuilder() to construct.
+    private MMOrderIndex(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MMOrderIndex() {
+      orderer_ = "";
+      orderIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MMOrderIndex();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_MMOrderIndex_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_MMOrderIndex_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.class, com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.Builder.class);
+    }
+
+    public static final int ORDERER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderer_ = "";
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The orderer.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderer() {
+      java.lang.Object ref = orderer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string orderer = 1 [json_name = "orderer"];</code>
+     * @return The bytes for orderer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrdererBytes() {
+      java.lang.Object ref = orderer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int PAIR_ID_FIELD_NUMBER = 3;
+    private long pairId_ = 0L;
+    /**
+     * <code>uint64 pair_id = 3 [json_name = "pairId"];</code>
+     * @return The pairId.
+     */
+    @java.lang.Override
+    public long getPairId() {
+      return pairId_;
+    }
+
+    public static final int ORDER_IDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList orderIds_;
+    /**
+     * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+     * @return A list containing the orderIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getOrderIdsList() {
+      return orderIds_;
+    }
+    /**
+     * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+     * @return The count of orderIds.
+     */
+    public int getOrderIdsCount() {
+      return orderIds_.size();
+    }
+    /**
+     * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+     * @param index The index of the element to return.
+     * @return The orderIds at the given index.
+     */
+    public long getOrderIds(int index) {
+      return orderIds_.getLong(index);
+    }
+    private int orderIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderer_);
+      }
+      if (appId_ != 0L) {
+        output.writeUInt64(2, appId_);
+      }
+      if (pairId_ != 0L) {
+        output.writeUInt64(3, pairId_);
+      }
+      if (getOrderIdsList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(orderIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < orderIds_.size(); i++) {
+        output.writeUInt64NoTag(orderIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderer_);
+      }
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, appId_);
+      }
+      if (pairId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, pairId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < orderIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(orderIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getOrderIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        orderIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex other = (com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex) obj;
+
+      if (!getOrderer()
+          .equals(other.getOrderer())) return false;
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getPairId()
+          != other.getPairId()) return false;
+      if (!getOrderIdsList()
+          .equals(other.getOrderIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORDERER_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderer().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + PAIR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPairId());
+      if (getOrderIdsCount() > 0) {
+        hash = (37 * hash) + ORDER_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MMOrderIndex defines an index type to quickly find market making orders
+     * from an orderer.
+     * </pre>
+     *
+     * Protobuf type {@code comdex.liquidity.v1beta1.MMOrderIndex}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.MMOrderIndex)
+        com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndexOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_MMOrderIndex_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_MMOrderIndex_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.class, com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        orderer_ = "";
+        appId_ = 0L;
+        pairId_ = 0L;
+        orderIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_MMOrderIndex_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result = new com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          orderIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.orderIds_ = orderIds_;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.orderer_ = orderer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pairId_ = pairId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex.getDefaultInstance()) return this;
+        if (!other.getOrderer().isEmpty()) {
+          orderer_ = other.orderer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getPairId() != 0L) {
+          setPairId(other.getPairId());
+        }
+        if (!other.orderIds_.isEmpty()) {
+          if (orderIds_.isEmpty()) {
+            orderIds_ = other.orderIds_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureOrderIdsIsMutable();
+            orderIds_.addAll(other.orderIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                orderer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                pairId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                long v = input.readUInt64();
+                ensureOrderIdsIsMutable();
+                orderIds_.addLong(v);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureOrderIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  orderIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object orderer_ = "";
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @return The orderer.
+       */
+      public java.lang.String getOrderer() {
+        java.lang.Object ref = orderer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @return The bytes for orderer.
+       */
+      public com.google.protobuf.ByteString
+          getOrdererBytes() {
+        java.lang.Object ref = orderer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @param value The orderer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        orderer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderer() {
+        orderer_ = getDefaultInstance().getOrderer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string orderer = 1 [json_name = "orderer"];</code>
+       * @param value The bytes for orderer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrdererBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        orderer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 2 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long pairId_ ;
+      /**
+       * <code>uint64 pair_id = 3 [json_name = "pairId"];</code>
+       * @return The pairId.
+       */
+      @java.lang.Override
+      public long getPairId() {
+        return pairId_;
+      }
+      /**
+       * <code>uint64 pair_id = 3 [json_name = "pairId"];</code>
+       * @param value The pairId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPairId(long value) {
+
+        pairId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pair_id = 3 [json_name = "pairId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPairId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pairId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList orderIds_ = emptyLongList();
+      private void ensureOrderIdsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          orderIds_ = mutableCopy(orderIds_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @return A list containing the orderIds.
+       */
+      public java.util.List<java.lang.Long>
+          getOrderIdsList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(orderIds_) : orderIds_;
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @return The count of orderIds.
+       */
+      public int getOrderIdsCount() {
+        return orderIds_.size();
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @param index The index of the element to return.
+       * @return The orderIds at the given index.
+       */
+      public long getOrderIds(int index) {
+        return orderIds_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The orderIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderIds(
+          int index, long value) {
+
+        ensureOrderIdsIsMutable();
+        orderIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @param value The orderIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOrderIds(long value) {
+
+        ensureOrderIdsIsMutable();
+        orderIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @param values The orderIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOrderIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureOrderIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, orderIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 order_ids = 4 [json_name = "orderIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderIds() {
+        orderIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.MMOrderIndex)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.MMOrderIndex)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MMOrderIndex>
+        PARSER = new com.google.protobuf.AbstractParser<MMOrderIndex>() {
+      @java.lang.Override
+      public MMOrderIndex parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MMOrderIndex> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MMOrderIndex> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.MMOrderIndex getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ActiveFarmerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.ActiveFarmer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the farmedPoolCoin field is set.
+     */
+    boolean hasFarmedPoolCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The farmedPoolCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFarmedPoolCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmedPoolCoinOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.liquidity.v1beta1.ActiveFarmer}
+   */
+  public static final class ActiveFarmer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.ActiveFarmer)
+      ActiveFarmerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ActiveFarmer.newBuilder() to construct.
+    private ActiveFarmer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ActiveFarmer() {
+      farmer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ActiveFarmer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_ActiveFarmer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_ActiveFarmer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.class, com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FARMED_POOL_COIN_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin farmedPoolCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the farmedPoolCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasFarmedPoolCoin() {
+      return farmedPoolCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The farmedPoolCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFarmedPoolCoin() {
+      return farmedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmedPoolCoinOrBuilder() {
+      return farmedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, farmer_);
+      }
+      if (farmedPoolCoin_ != null) {
+        output.writeMessage(4, getFarmedPoolCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, farmer_);
+      }
+      if (farmedPoolCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFarmedPoolCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer other = (com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (hasFarmedPoolCoin() != other.hasFarmedPoolCoin()) return false;
+      if (hasFarmedPoolCoin()) {
+        if (!getFarmedPoolCoin()
+            .equals(other.getFarmedPoolCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (hasFarmedPoolCoin()) {
+        hash = (37 * hash) + FARMED_POOL_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getFarmedPoolCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.liquidity.v1beta1.ActiveFarmer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.ActiveFarmer)
+        com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_ActiveFarmer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_ActiveFarmer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.class, com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        poolId_ = 0L;
+        farmer_ = "";
+        farmedPoolCoin_ = null;
+        if (farmedPoolCoinBuilder_ != null) {
+          farmedPoolCoinBuilder_.dispose();
+          farmedPoolCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_ActiveFarmer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer result = new com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.farmedPoolCoin_ = farmedPoolCoinBuilder_ == null
+              ? farmedPoolCoin_
+              : farmedPoolCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasFarmedPoolCoin()) {
+          mergeFarmedPoolCoin(other.getFarmedPoolCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getFarmedPoolCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin farmedPoolCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> farmedPoolCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the farmedPoolCoin field is set.
+       */
+      public boolean hasFarmedPoolCoin() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The farmedPoolCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFarmedPoolCoin() {
+        if (farmedPoolCoinBuilder_ == null) {
+          return farmedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+        } else {
+          return farmedPoolCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setFarmedPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (farmedPoolCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          farmedPoolCoin_ = value;
+        } else {
+          farmedPoolCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setFarmedPoolCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (farmedPoolCoinBuilder_ == null) {
+          farmedPoolCoin_ = builderForValue.build();
+        } else {
+          farmedPoolCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeFarmedPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (farmedPoolCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            farmedPoolCoin_ != null &&
+            farmedPoolCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getFarmedPoolCoinBuilder().mergeFrom(value);
+          } else {
+            farmedPoolCoin_ = value;
+          }
+        } else {
+          farmedPoolCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearFarmedPoolCoin() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        farmedPoolCoin_ = null;
+        if (farmedPoolCoinBuilder_ != null) {
+          farmedPoolCoinBuilder_.dispose();
+          farmedPoolCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFarmedPoolCoinBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getFarmedPoolCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmedPoolCoinOrBuilder() {
+        if (farmedPoolCoinBuilder_ != null) {
+          return farmedPoolCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return farmedPoolCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 4 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFarmedPoolCoinFieldBuilder() {
+        if (farmedPoolCoinBuilder_ == null) {
+          farmedPoolCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getFarmedPoolCoin(),
+                  getParentForChildren(),
+                  isClean());
+          farmedPoolCoin_ = null;
+        }
+        return farmedPoolCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.ActiveFarmer)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.ActiveFarmer)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ActiveFarmer>
+        PARSER = new com.google.protobuf.AbstractParser<ActiveFarmer>() {
+      @java.lang.Override
+      public ActiveFarmer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ActiveFarmer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ActiveFarmer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.ActiveFarmer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueuedCoinOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.QueuedCoin)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the farmedPoolCoin field is set.
+     */
+    boolean hasFarmedPoolCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The farmedPoolCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFarmedPoolCoin();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmedPoolCoinOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.liquidity.v1beta1.QueuedCoin}
+   */
+  public static final class QueuedCoin extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.QueuedCoin)
+      QueuedCoinOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueuedCoin.newBuilder() to construct.
+    private QueuedCoin(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueuedCoin() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueuedCoin();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedCoin_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedCoin_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.class, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder.class);
+    }
+
+    public static final int FARMED_POOL_COIN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin farmedPoolCoin_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the farmedPoolCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasFarmedPoolCoin() {
+      return farmedPoolCoin_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The farmedPoolCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFarmedPoolCoin() {
+      return farmedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmedPoolCoinOrBuilder() {
+      return farmedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (farmedPoolCoin_ != null) {
+        output.writeMessage(1, getFarmedPoolCoin());
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(2, getCreatedAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (farmedPoolCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFarmedPoolCoin());
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCreatedAt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin other = (com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin) obj;
+
+      if (hasFarmedPoolCoin() != other.hasFarmedPoolCoin()) return false;
+      if (hasFarmedPoolCoin()) {
+        if (!getFarmedPoolCoin()
+            .equals(other.getFarmedPoolCoin())) return false;
+      }
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFarmedPoolCoin()) {
+        hash = (37 * hash) + FARMED_POOL_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getFarmedPoolCoin().hashCode();
+      }
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.liquidity.v1beta1.QueuedCoin}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.QueuedCoin)
+        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedCoin_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedCoin_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.class, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmedPoolCoin_ = null;
+        if (farmedPoolCoinBuilder_ != null) {
+          farmedPoolCoinBuilder_.dispose();
+          farmedPoolCoinBuilder_ = null;
+        }
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedCoin_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin result = new com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmedPoolCoin_ = farmedPoolCoinBuilder_ == null
+              ? farmedPoolCoin_
+              : farmedPoolCoinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.getDefaultInstance()) return this;
+        if (other.hasFarmedPoolCoin()) {
+          mergeFarmedPoolCoin(other.getFarmedPoolCoin());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFarmedPoolCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin farmedPoolCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> farmedPoolCoinBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the farmedPoolCoin field is set.
+       */
+      public boolean hasFarmedPoolCoin() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The farmedPoolCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFarmedPoolCoin() {
+        if (farmedPoolCoinBuilder_ == null) {
+          return farmedPoolCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+        } else {
+          return farmedPoolCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setFarmedPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (farmedPoolCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          farmedPoolCoin_ = value;
+        } else {
+          farmedPoolCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setFarmedPoolCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (farmedPoolCoinBuilder_ == null) {
+          farmedPoolCoin_ = builderForValue.build();
+        } else {
+          farmedPoolCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeFarmedPoolCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (farmedPoolCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            farmedPoolCoin_ != null &&
+            farmedPoolCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getFarmedPoolCoinBuilder().mergeFrom(value);
+          } else {
+            farmedPoolCoin_ = value;
+          }
+        } else {
+          farmedPoolCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearFarmedPoolCoin() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        farmedPoolCoin_ = null;
+        if (farmedPoolCoinBuilder_ != null) {
+          farmedPoolCoinBuilder_.dispose();
+          farmedPoolCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFarmedPoolCoinBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFarmedPoolCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFarmedPoolCoinOrBuilder() {
+        if (farmedPoolCoinBuilder_ != null) {
+          return farmedPoolCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return farmedPoolCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : farmedPoolCoin_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin farmed_pool_coin = 1 [json_name = "farmedPoolCoin", (.gogoproto.nullable) = false, (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFarmedPoolCoinFieldBuilder() {
+        if (farmedPoolCoinBuilder_ == null) {
+          farmedPoolCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getFarmedPoolCoin(),
+                  getParentForChildren(),
+                  isClean());
+          farmedPoolCoin_ = null;
+        }
+        return farmedPoolCoinBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
+          } else {
+            createdAt_ = value;
+          }
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"created_at&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.QueuedCoin)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.QueuedCoin)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueuedCoin>
+        PARSER = new com.google.protobuf.AbstractParser<QueuedCoin>() {
+      @java.lang.Override
+      public QueuedCoin parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueuedCoin> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueuedCoin> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueuedFarmerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.liquidity.v1beta1.QueuedFarmer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    java.util.List<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin> 
+        getQueudCoinsList();
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin getQueudCoins(int index);
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    int getQueudCoinsCount();
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    java.util.List<? extends com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder> 
+        getQueudCoinsOrBuilderList();
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder getQueudCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.liquidity.v1beta1.QueuedFarmer}
+   */
+  public static final class QueuedFarmer extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.liquidity.v1beta1.QueuedFarmer)
+      QueuedFarmerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueuedFarmer.newBuilder() to construct.
+    private QueuedFarmer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueuedFarmer() {
+      farmer_ = "";
+      queudCoins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueuedFarmer();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedFarmer_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedFarmer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.class, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string farmer = 3 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUEUD_COINS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin> queudCoins_;
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin> getQueudCoinsList() {
+      return queudCoins_;
+    }
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder> 
+        getQueudCoinsOrBuilderList() {
+      return queudCoins_;
+    }
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    @java.lang.Override
+    public int getQueudCoinsCount() {
+      return queudCoins_.size();
+    }
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin getQueudCoins(int index) {
+      return queudCoins_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+     */
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder getQueudCoinsOrBuilder(
+        int index) {
+      return queudCoins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, farmer_);
+      }
+      for (int i = 0; i < queudCoins_.size(); i++) {
+        output.writeMessage(4, queudCoins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, farmer_);
+      }
+      for (int i = 0; i < queudCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, queudCoins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer)) {
+        return super.equals(obj);
+      }
+      com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer other = (com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getQueudCoinsList()
+          .equals(other.getQueudCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (getQueudCoinsCount() > 0) {
+        hash = (37 * hash) + QUEUD_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getQueudCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.liquidity.v1beta1.QueuedFarmer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.liquidity.v1beta1.QueuedFarmer)
+        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedFarmer_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedFarmer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.class, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.Builder.class);
+      }
+
+      // Construct using com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        poolId_ = 0L;
+        farmer_ = "";
+        if (queudCoinsBuilder_ == null) {
+          queudCoins_ = java.util.Collections.emptyList();
+        } else {
+          queudCoins_ = null;
+          queudCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.internal_static_comdex_liquidity_v1beta1_QueuedFarmer_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer getDefaultInstanceForType() {
+        return com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer build() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer buildPartial() {
+        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer result = new com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer result) {
+        if (queudCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            queudCoins_ = java.util.Collections.unmodifiableList(queudCoins_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.queudCoins_ = queudCoins_;
+        } else {
+          result.queudCoins_ = queudCoinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.farmer_ = farmer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer) {
+          return mergeFrom((com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer other) {
+        if (other == com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (queudCoinsBuilder_ == null) {
+          if (!other.queudCoins_.isEmpty()) {
+            if (queudCoins_.isEmpty()) {
+              queudCoins_ = other.queudCoins_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureQueudCoinsIsMutable();
+              queudCoins_.addAll(other.queudCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queudCoins_.isEmpty()) {
+            if (queudCoinsBuilder_.isEmpty()) {
+              queudCoinsBuilder_.dispose();
+              queudCoinsBuilder_ = null;
+              queudCoins_ = other.queudCoins_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              queudCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueudCoinsFieldBuilder() : null;
+            } else {
+              queudCoinsBuilder_.addAllMessages(other.queudCoins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin m =
+                    input.readMessage(
+                        com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.parser(),
+                        extensionRegistry);
+                if (queudCoinsBuilder_ == null) {
+                  ensureQueudCoinsIsMutable();
+                  queudCoins_.add(m);
+                } else {
+                  queudCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string farmer = 3 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin> queudCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureQueudCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          queudCoins_ = new java.util.ArrayList<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin>(queudCoins_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder> queudCoinsBuilder_;
+
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public java.util.List<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin> getQueudCoinsList() {
+        if (queudCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queudCoins_);
+        } else {
+          return queudCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public int getQueudCoinsCount() {
+        if (queudCoinsBuilder_ == null) {
+          return queudCoins_.size();
+        } else {
+          return queudCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin getQueudCoins(int index) {
+        if (queudCoinsBuilder_ == null) {
+          return queudCoins_.get(index);
+        } else {
+          return queudCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder setQueudCoins(
+          int index, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin value) {
+        if (queudCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueudCoinsIsMutable();
+          queudCoins_.set(index, value);
+          onChanged();
+        } else {
+          queudCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder setQueudCoins(
+          int index, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder builderForValue) {
+        if (queudCoinsBuilder_ == null) {
+          ensureQueudCoinsIsMutable();
+          queudCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queudCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder addQueudCoins(com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin value) {
+        if (queudCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueudCoinsIsMutable();
+          queudCoins_.add(value);
+          onChanged();
+        } else {
+          queudCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder addQueudCoins(
+          int index, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin value) {
+        if (queudCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueudCoinsIsMutable();
+          queudCoins_.add(index, value);
+          onChanged();
+        } else {
+          queudCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder addQueudCoins(
+          com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder builderForValue) {
+        if (queudCoinsBuilder_ == null) {
+          ensureQueudCoinsIsMutable();
+          queudCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queudCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder addQueudCoins(
+          int index, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder builderForValue) {
+        if (queudCoinsBuilder_ == null) {
+          ensureQueudCoinsIsMutable();
+          queudCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queudCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder addAllQueudCoins(
+          java.lang.Iterable<? extends com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin> values) {
+        if (queudCoinsBuilder_ == null) {
+          ensureQueudCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queudCoins_);
+          onChanged();
+        } else {
+          queudCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder clearQueudCoins() {
+        if (queudCoinsBuilder_ == null) {
+          queudCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          queudCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public Builder removeQueudCoins(int index) {
+        if (queudCoinsBuilder_ == null) {
+          ensureQueudCoinsIsMutable();
+          queudCoins_.remove(index);
+          onChanged();
+        } else {
+          queudCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder getQueudCoinsBuilder(
+          int index) {
+        return getQueudCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder getQueudCoinsOrBuilder(
+          int index) {
+        if (queudCoinsBuilder_ == null) {
+          return queudCoins_.get(index);  } else {
+          return queudCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public java.util.List<? extends com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder> 
+           getQueudCoinsOrBuilderList() {
+        if (queudCoinsBuilder_ != null) {
+          return queudCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queudCoins_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder addQueudCoinsBuilder() {
+        return getQueudCoinsFieldBuilder().addBuilder(
+            com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder addQueudCoinsBuilder(
+          int index) {
+        return getQueudCoinsFieldBuilder().addBuilder(
+            index, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.liquidity.v1beta1.QueuedCoin queud_coins = 4 [json_name = "queudCoins"];</code>
+       */
+      public java.util.List<com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder> 
+           getQueudCoinsBuilderList() {
+        return getQueudCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder> 
+          getQueudCoinsFieldBuilder() {
+        if (queudCoinsBuilder_ == null) {
+          queudCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoin.Builder, com.comdex.liquidity.v1beta1.LiquidityProto.QueuedCoinOrBuilder>(
+                  queudCoins_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queudCoins_ = null;
+        }
+        return queudCoinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.liquidity.v1beta1.QueuedFarmer)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.liquidity.v1beta1.QueuedFarmer)
+    private static final com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer();
+    }
+
+    public static com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueuedFarmer>
+        PARSER = new com.google.protobuf.AbstractParser<QueuedFarmer>() {
+      @java.lang.Override
+      public QueuedFarmer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueuedFarmer> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueuedFarmer> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.liquidity.v1beta1.LiquidityProto.QueuedFarmer getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_Pair_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_Pair_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_Pool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_Pool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_DepositRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_DepositRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_WithdrawRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_WithdrawRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_Order_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_Order_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_MMOrderIndex_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_MMOrderIndex_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_ActiveFarmer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_ActiveFarmer_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_QueuedCoin_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_QueuedCoin_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_liquidity_v1beta1_QueuedFarmer_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_liquidity_v1beta1_QueuedFarmer_fieldAccessorTable;
 
@@ -189,13 +14785,13 @@ public final class LiquidityProto {
       "\212\235 \022OrderStatusExpired\032\004\210\243\036\000*y\n\013AddressT" +
       "ype\0221\n\025ADDRESS_TYPE_32_BYTES\020\000\032\026\212\235 \022Addr" +
       "essType32Bytes\0221\n\025ADDRESS_TYPE_20_BYTES\020" +
-      "\001\032\026\212\235 \022AddressType20Bytes\032\004\210\243\036\000B\351\001\n\034com." +
+      "\001\032\026\212\235 \022AddressType20Bytes\032\004\210\243\036\000B\347\001\n\034com." +
       "comdex.liquidity.v1beta1B\016LiquidityProto" +
-      "P\001Z3github.com/comdex-official/comdex/x/" +
-      "liquidity/types\242\002\003CLX\252\002\030Comdex.Liquidity" +
-      ".V1beta1\312\002\030Comdex\\Liquidity\\V1beta1\342\002$Co" +
-      "mdex\\Liquidity\\V1beta1\\GPBMetadata\352\002\032Com" +
-      "dex::Liquidity::V1beta1\310\341\036\000b\006proto3"
+      "Z3github.com/comdex-official/comdex/x/li" +
+      "quidity/types\242\002\003CLX\252\002\030Comdex.Liquidity.V" +
+      "1beta1\312\002\030Comdex\\Liquidity\\V1beta1\342\002$Comd" +
+      "ex\\Liquidity\\V1beta1\\GPBMetadata\352\002\032Comde" +
+      "x::Liquidity::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

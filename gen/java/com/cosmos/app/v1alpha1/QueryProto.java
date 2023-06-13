@@ -14,14 +14,1087 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryConfigRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cosmos.app.v1alpha1.QueryConfigRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryConfigRequest is the Query/Config request type.
+   * </pre>
+   *
+   * Protobuf type {@code cosmos.app.v1alpha1.QueryConfigRequest}
+   */
+  public static final class QueryConfigRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cosmos.app.v1alpha1.QueryConfigRequest)
+      QueryConfigRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryConfigRequest.newBuilder() to construct.
+    private QueryConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryConfigRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryConfigRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.class, com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest)) {
+        return super.equals(obj);
+      }
+      com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest other = (com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryConfigRequest is the Query/Config request type.
+     * </pre>
+     *
+     * Protobuf type {@code cosmos.app.v1alpha1.QueryConfigRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cosmos.app.v1alpha1.QueryConfigRequest)
+        com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.class, com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.Builder.class);
+      }
+
+      // Construct using com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest getDefaultInstanceForType() {
+        return com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest build() {
+        com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest buildPartial() {
+        com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest result = new com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest) {
+          return mergeFrom((com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest other) {
+        if (other == com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cosmos.app.v1alpha1.QueryConfigRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cosmos.app.v1alpha1.QueryConfigRequest)
+    private static final com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest();
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryConfigRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryConfigRequest>() {
+      @java.lang.Override
+      public QueryConfigRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryConfigRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryConfigRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cosmos.app.v1alpha1.QueryProto.QueryConfigRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryConfigResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cosmos.app.v1alpha1.QueryConfigResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * config is the current app config.
+     * </pre>
+     *
+     * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <pre>
+     * config is the current app config.
+     * </pre>
+     *
+     * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+     * @return The config.
+     */
+    com.cosmos.app.v1alpha1.ConfigProto.Config getConfig();
+    /**
+     * <pre>
+     * config is the current app config.
+     * </pre>
+     *
+     * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+     */
+    com.cosmos.app.v1alpha1.ConfigProto.ConfigOrBuilder getConfigOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryConfigRequest is the Query/Config response type.
+   * </pre>
+   *
+   * Protobuf type {@code cosmos.app.v1alpha1.QueryConfigResponse}
+   */
+  public static final class QueryConfigResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cosmos.app.v1alpha1.QueryConfigResponse)
+      QueryConfigResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryConfigResponse.newBuilder() to construct.
+    private QueryConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryConfigResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryConfigResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.class, com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.Builder.class);
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 1;
+    private com.cosmos.app.v1alpha1.ConfigProto.Config config_;
+    /**
+     * <pre>
+     * config is the current app config.
+     * </pre>
+     *
+     * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+     * @return Whether the config field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return config_ != null;
+    }
+    /**
+     * <pre>
+     * config is the current app config.
+     * </pre>
+     *
+     * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+     * @return The config.
+     */
+    @java.lang.Override
+    public com.cosmos.app.v1alpha1.ConfigProto.Config getConfig() {
+      return config_ == null ? com.cosmos.app.v1alpha1.ConfigProto.Config.getDefaultInstance() : config_;
+    }
+    /**
+     * <pre>
+     * config is the current app config.
+     * </pre>
+     *
+     * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.app.v1alpha1.ConfigProto.ConfigOrBuilder getConfigOrBuilder() {
+      return config_ == null ? com.cosmos.app.v1alpha1.ConfigProto.Config.getDefaultInstance() : config_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (config_ != null) {
+        output.writeMessage(1, getConfig());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (config_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConfig());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse)) {
+        return super.equals(obj);
+      }
+      com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse other = (com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse) obj;
+
+      if (hasConfig() != other.hasConfig()) return false;
+      if (hasConfig()) {
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConfig()) {
+        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getConfig().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryConfigRequest is the Query/Config response type.
+     * </pre>
+     *
+     * Protobuf type {@code cosmos.app.v1alpha1.QueryConfigResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cosmos.app.v1alpha1.QueryConfigResponse)
+        com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.class, com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.Builder.class);
+      }
+
+      // Construct using com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cosmos.app.v1alpha1.QueryProto.internal_static_cosmos_app_v1alpha1_QueryConfigResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse getDefaultInstanceForType() {
+        return com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse build() {
+        com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse buildPartial() {
+        com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse result = new com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse) {
+          return mergeFrom((com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse other) {
+        if (other == com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse.getDefaultInstance()) return this;
+        if (other.hasConfig()) {
+          mergeConfig(other.getConfig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.app.v1alpha1.ConfigProto.Config config_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.app.v1alpha1.ConfigProto.Config, com.cosmos.app.v1alpha1.ConfigProto.Config.Builder, com.cosmos.app.v1alpha1.ConfigProto.ConfigOrBuilder> configBuilder_;
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       * @return Whether the config field is set.
+       */
+      public boolean hasConfig() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       * @return The config.
+       */
+      public com.cosmos.app.v1alpha1.ConfigProto.Config getConfig() {
+        if (configBuilder_ == null) {
+          return config_ == null ? com.cosmos.app.v1alpha1.ConfigProto.Config.getDefaultInstance() : config_;
+        } else {
+          return configBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      public Builder setConfig(com.cosmos.app.v1alpha1.ConfigProto.Config value) {
+        if (configBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          config_ = value;
+        } else {
+          configBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      public Builder setConfig(
+          com.cosmos.app.v1alpha1.ConfigProto.Config.Builder builderForValue) {
+        if (configBuilder_ == null) {
+          config_ = builderForValue.build();
+        } else {
+          configBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      public Builder mergeConfig(com.cosmos.app.v1alpha1.ConfigProto.Config value) {
+        if (configBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            config_ != null &&
+            config_ != com.cosmos.app.v1alpha1.ConfigProto.Config.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
+          } else {
+            config_ = value;
+          }
+        } else {
+          configBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      public Builder clearConfig() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      public com.cosmos.app.v1alpha1.ConfigProto.Config.Builder getConfigBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      public com.cosmos.app.v1alpha1.ConfigProto.ConfigOrBuilder getConfigOrBuilder() {
+        if (configBuilder_ != null) {
+          return configBuilder_.getMessageOrBuilder();
+        } else {
+          return config_ == null ?
+              com.cosmos.app.v1alpha1.ConfigProto.Config.getDefaultInstance() : config_;
+        }
+      }
+      /**
+       * <pre>
+       * config is the current app config.
+       * </pre>
+       *
+       * <code>.cosmos.app.v1alpha1.Config config = 1 [json_name = "config"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.app.v1alpha1.ConfigProto.Config, com.cosmos.app.v1alpha1.ConfigProto.Config.Builder, com.cosmos.app.v1alpha1.ConfigProto.ConfigOrBuilder> 
+          getConfigFieldBuilder() {
+        if (configBuilder_ == null) {
+          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.app.v1alpha1.ConfigProto.Config, com.cosmos.app.v1alpha1.ConfigProto.Config.Builder, com.cosmos.app.v1alpha1.ConfigProto.ConfigOrBuilder>(
+                  getConfig(),
+                  getParentForChildren(),
+                  isClean());
+          config_ = null;
+        }
+        return configBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cosmos.app.v1alpha1.QueryConfigResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cosmos.app.v1alpha1.QueryConfigResponse)
+    private static final com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse();
+    }
+
+    public static com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryConfigResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryConfigResponse>() {
+      @java.lang.Override
+      public QueryConfigResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryConfigResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryConfigResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cosmos.app.v1alpha1.QueryProto.QueryConfigResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cosmos_app_v1alpha1_QueryConfigRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cosmos_app_v1alpha1_QueryConfigRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cosmos_app_v1alpha1_QueryConfigResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cosmos_app_v1alpha1_QueryConfigResponse_fieldAccessorTable;
 
@@ -40,11 +1113,11 @@ public final class QueryProto {
       "pp.v1alpha1.ConfigR\006config2f\n\005Query\022]\n\006C" +
       "onfig\022\'.cosmos.app.v1alpha1.QueryConfigR" +
       "equest\032(.cosmos.app.v1alpha1.QueryConfig" +
-      "Response\"\000B\223\001\n\027com.cosmos.app.v1alpha1B\n" +
-      "QueryProtoP\001\242\002\003CAX\252\002\023Cosmos.App.V1alpha1" +
-      "\312\002\023Cosmos\\App\\V1alpha1\342\002\037Cosmos\\App\\V1al" +
-      "pha1\\GPBMetadata\352\002\025Cosmos::App::V1alpha1" +
-      "b\006proto3"
+      "Response\"\000B\221\001\n\027com.cosmos.app.v1alpha1B\n" +
+      "QueryProto\242\002\003CAX\252\002\023Cosmos.App.V1alpha1\312\002" +
+      "\023Cosmos\\App\\V1alpha1\342\002\037Cosmos\\App\\V1alph" +
+      "a1\\GPBMetadata\352\002\025Cosmos::App::V1alpha1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

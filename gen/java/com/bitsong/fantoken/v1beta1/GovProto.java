@@ -14,14 +14,2594 @@ public final class GovProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface UpdateFeesProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.fantoken.v1beta1.UpdateFeesProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return Whether the issueFee field is set.
+     */
+    boolean hasIssueFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return The issueFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getIssueFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueFeeOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+     * @return Whether the mintFee field is set.
+     */
+    boolean hasMintFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+     * @return The mintFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getMintFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMintFeeOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+     * @return Whether the burnFee field is set.
+     */
+    boolean hasBurnFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+     * @return The burnFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getBurnFee();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBurnFeeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code bitsong.fantoken.v1beta1.UpdateFeesProposal}
+   */
+  public static final class UpdateFeesProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.fantoken.v1beta1.UpdateFeesProposal)
+      UpdateFeesProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateFeesProposal.newBuilder() to construct.
+    private UpdateFeesProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateFeesProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFeesProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.class, com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUE_FEE_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin issueFee_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return Whether the issueFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasIssueFee() {
+      return issueFee_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return The issueFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getIssueFee() {
+      return issueFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueFeeOrBuilder() {
+      return issueFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+    }
+
+    public static final int MINT_FEE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin mintFee_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+     * @return Whether the mintFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasMintFee() {
+      return mintFee_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+     * @return The mintFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getMintFee() {
+      return mintFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintFee_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMintFeeOrBuilder() {
+      return mintFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintFee_;
+    }
+
+    public static final int BURN_FEE_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin burnFee_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+     * @return Whether the burnFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasBurnFee() {
+      return burnFee_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+     * @return The burnFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getBurnFee() {
+      return burnFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : burnFee_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBurnFeeOrBuilder() {
+      return burnFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : burnFee_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (issueFee_ != null) {
+        output.writeMessage(3, getIssueFee());
+      }
+      if (mintFee_ != null) {
+        output.writeMessage(4, getMintFee());
+      }
+      if (burnFee_ != null) {
+        output.writeMessage(5, getBurnFee());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (issueFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getIssueFee());
+      }
+      if (mintFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMintFee());
+      }
+      if (burnFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getBurnFee());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal)) {
+        return super.equals(obj);
+      }
+      com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal other = (com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasIssueFee() != other.hasIssueFee()) return false;
+      if (hasIssueFee()) {
+        if (!getIssueFee()
+            .equals(other.getIssueFee())) return false;
+      }
+      if (hasMintFee() != other.hasMintFee()) return false;
+      if (hasMintFee()) {
+        if (!getMintFee()
+            .equals(other.getMintFee())) return false;
+      }
+      if (hasBurnFee() != other.hasBurnFee()) return false;
+      if (hasBurnFee()) {
+        if (!getBurnFee()
+            .equals(other.getBurnFee())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasIssueFee()) {
+        hash = (37 * hash) + ISSUE_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getIssueFee().hashCode();
+      }
+      if (hasMintFee()) {
+        hash = (37 * hash) + MINT_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getMintFee().hashCode();
+      }
+      if (hasBurnFee()) {
+        hash = (37 * hash) + BURN_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getBurnFee().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.fantoken.v1beta1.UpdateFeesProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.fantoken.v1beta1.UpdateFeesProposal)
+        com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.class, com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.Builder.class);
+      }
+
+      // Construct using com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        issueFee_ = null;
+        if (issueFeeBuilder_ != null) {
+          issueFeeBuilder_.dispose();
+          issueFeeBuilder_ = null;
+        }
+        mintFee_ = null;
+        if (mintFeeBuilder_ != null) {
+          mintFeeBuilder_.dispose();
+          mintFeeBuilder_ = null;
+        }
+        burnFee_ = null;
+        if (burnFeeBuilder_ != null) {
+          burnFeeBuilder_.dispose();
+          burnFeeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal getDefaultInstanceForType() {
+        return com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal build() {
+        com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal buildPartial() {
+        com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal result = new com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.issueFee_ = issueFeeBuilder_ == null
+              ? issueFee_
+              : issueFeeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.mintFee_ = mintFeeBuilder_ == null
+              ? mintFee_
+              : mintFeeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.burnFee_ = burnFeeBuilder_ == null
+              ? burnFee_
+              : burnFeeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal) {
+          return mergeFrom((com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal other) {
+        if (other == com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasIssueFee()) {
+          mergeIssueFee(other.getIssueFee());
+        }
+        if (other.hasMintFee()) {
+          mergeMintFee(other.getMintFee());
+        }
+        if (other.hasBurnFee()) {
+          mergeBurnFee(other.getBurnFee());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getIssueFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMintFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getBurnFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin issueFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> issueFeeBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       * @return Whether the issueFee field is set.
+       */
+      public boolean hasIssueFee() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       * @return The issueFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getIssueFee() {
+        if (issueFeeBuilder_ == null) {
+          return issueFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+        } else {
+          return issueFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder setIssueFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (issueFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          issueFee_ = value;
+        } else {
+          issueFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder setIssueFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (issueFeeBuilder_ == null) {
+          issueFee_ = builderForValue.build();
+        } else {
+          issueFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder mergeIssueFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (issueFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            issueFee_ != null &&
+            issueFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getIssueFeeBuilder().mergeFrom(value);
+          } else {
+            issueFee_ = value;
+          }
+        } else {
+          issueFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder clearIssueFee() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        issueFee_ = null;
+        if (issueFeeBuilder_ != null) {
+          issueFeeBuilder_.dispose();
+          issueFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getIssueFeeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getIssueFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueFeeOrBuilder() {
+        if (issueFeeBuilder_ != null) {
+          return issueFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return issueFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 3 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getIssueFeeFieldBuilder() {
+        if (issueFeeBuilder_ == null) {
+          issueFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getIssueFee(),
+                  getParentForChildren(),
+                  isClean());
+          issueFee_ = null;
+        }
+        return issueFeeBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin mintFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> mintFeeBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       * @return Whether the mintFee field is set.
+       */
+      public boolean hasMintFee() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       * @return The mintFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getMintFee() {
+        if (mintFeeBuilder_ == null) {
+          return mintFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintFee_;
+        } else {
+          return mintFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      public Builder setMintFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (mintFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mintFee_ = value;
+        } else {
+          mintFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      public Builder setMintFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (mintFeeBuilder_ == null) {
+          mintFee_ = builderForValue.build();
+        } else {
+          mintFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      public Builder mergeMintFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (mintFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            mintFee_ != null &&
+            mintFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getMintFeeBuilder().mergeFrom(value);
+          } else {
+            mintFee_ = value;
+          }
+        } else {
+          mintFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      public Builder clearMintFee() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        mintFee_ = null;
+        if (mintFeeBuilder_ != null) {
+          mintFeeBuilder_.dispose();
+          mintFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMintFeeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMintFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMintFeeOrBuilder() {
+        if (mintFeeBuilder_ != null) {
+          return mintFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return mintFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : mintFee_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin mint_fee = 4 [json_name = "mintFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"mint_fee&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getMintFeeFieldBuilder() {
+        if (mintFeeBuilder_ == null) {
+          mintFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getMintFee(),
+                  getParentForChildren(),
+                  isClean());
+          mintFee_ = null;
+        }
+        return mintFeeBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin burnFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> burnFeeBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       * @return Whether the burnFee field is set.
+       */
+      public boolean hasBurnFee() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       * @return The burnFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getBurnFee() {
+        if (burnFeeBuilder_ == null) {
+          return burnFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : burnFee_;
+        } else {
+          return burnFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      public Builder setBurnFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (burnFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          burnFee_ = value;
+        } else {
+          burnFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      public Builder setBurnFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (burnFeeBuilder_ == null) {
+          burnFee_ = builderForValue.build();
+        } else {
+          burnFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      public Builder mergeBurnFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (burnFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            burnFee_ != null &&
+            burnFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getBurnFeeBuilder().mergeFrom(value);
+          } else {
+            burnFee_ = value;
+          }
+        } else {
+          burnFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      public Builder clearBurnFee() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        burnFee_ = null;
+        if (burnFeeBuilder_ != null) {
+          burnFeeBuilder_.dispose();
+          burnFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getBurnFeeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getBurnFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getBurnFeeOrBuilder() {
+        if (burnFeeBuilder_ != null) {
+          return burnFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return burnFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : burnFee_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin burn_fee = 5 [json_name = "burnFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"burn_fee&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getBurnFeeFieldBuilder() {
+        if (burnFeeBuilder_ == null) {
+          burnFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getBurnFee(),
+                  getParentForChildren(),
+                  isClean());
+          burnFee_ = null;
+        }
+        return burnFeeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.fantoken.v1beta1.UpdateFeesProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.fantoken.v1beta1.UpdateFeesProposal)
+    private static final com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal();
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateFeesProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateFeesProposal>() {
+      @java.lang.Override
+      public UpdateFeesProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateFeesProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateFeesProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateFeesProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+     * @return The issueFee.
+     */
+    java.lang.String getIssueFee();
+    /**
+     * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+     * @return The bytes for issueFee.
+     */
+    com.google.protobuf.ByteString
+        getIssueFeeBytes();
+
+    /**
+     * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+     * @return The mintFee.
+     */
+    java.lang.String getMintFee();
+    /**
+     * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+     * @return The bytes for mintFee.
+     */
+    com.google.protobuf.ByteString
+        getMintFeeBytes();
+
+    /**
+     * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+     * @return The burnFee.
+     */
+    java.lang.String getBurnFee();
+    /**
+     * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+     * @return The bytes for burnFee.
+     */
+    com.google.protobuf.ByteString
+        getBurnFeeBytes();
+
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit}
+   */
+  public static final class UpdateFeesProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit)
+      UpdateFeesProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateFeesProposalWithDeposit.newBuilder() to construct.
+    private UpdateFeesProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateFeesProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      issueFee_ = "";
+      mintFee_ = "";
+      burnFee_ = "";
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateFeesProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.class, com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISSUE_FEE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issueFee_ = "";
+    /**
+     * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+     * @return The issueFee.
+     */
+    @java.lang.Override
+    public java.lang.String getIssueFee() {
+      java.lang.Object ref = issueFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issueFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+     * @return The bytes for issueFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssueFeeBytes() {
+      java.lang.Object ref = issueFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issueFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINT_FEE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintFee_ = "";
+    /**
+     * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+     * @return The mintFee.
+     */
+    @java.lang.Override
+    public java.lang.String getMintFee() {
+      java.lang.Object ref = mintFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+     * @return The bytes for mintFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintFeeBytes() {
+      java.lang.Object ref = mintFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BURN_FEE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnFee_ = "";
+    /**
+     * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+     * @return The burnFee.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnFee() {
+      java.lang.Object ref = burnFee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnFee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+     * @return The bytes for burnFee.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnFeeBytes() {
+      java.lang.Object ref = burnFee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnFee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 7 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issueFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, issueFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mintFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnFee_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, burnFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issueFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, issueFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, mintFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnFee_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, burnFee_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit other = (com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getIssueFee()
+          .equals(other.getIssueFee())) return false;
+      if (!getMintFee()
+          .equals(other.getMintFee())) return false;
+      if (!getBurnFee()
+          .equals(other.getBurnFee())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + ISSUE_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getIssueFee().hashCode();
+      hash = (37 * hash) + MINT_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getMintFee().hashCode();
+      hash = (37 * hash) + BURN_FEE_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnFee().hashCode();
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit)
+        com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.class, com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        issueFee_ = "";
+        mintFee_ = "";
+        burnFee_ = "";
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.fantoken.v1beta1.GovProto.internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit getDefaultInstanceForType() {
+        return com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit build() {
+        com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit buildPartial() {
+        com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit result = new com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.issueFee_ = issueFee_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.mintFee_ = mintFee_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.burnFee_ = burnFee_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit) {
+          return mergeFrom((com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit other) {
+        if (other == com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getIssueFee().isEmpty()) {
+          issueFee_ = other.issueFee_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMintFee().isEmpty()) {
+          mintFee_ = other.mintFee_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getBurnFee().isEmpty()) {
+          burnFee_ = other.burnFee_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                issueFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                mintFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                burnFee_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 58: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object issueFee_ = "";
+      /**
+       * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+       * @return The issueFee.
+       */
+      public java.lang.String getIssueFee() {
+        java.lang.Object ref = issueFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issueFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+       * @return The bytes for issueFee.
+       */
+      public com.google.protobuf.ByteString
+          getIssueFeeBytes() {
+        java.lang.Object ref = issueFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issueFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+       * @param value The issueFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssueFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        issueFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssueFee() {
+        issueFee_ = getDefaultInstance().getIssueFee();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string issue_fee = 3 [json_name = "issueFee"];</code>
+       * @param value The bytes for issueFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssueFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issueFee_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mintFee_ = "";
+      /**
+       * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+       * @return The mintFee.
+       */
+      public java.lang.String getMintFee() {
+        java.lang.Object ref = mintFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+       * @return The bytes for mintFee.
+       */
+      public com.google.protobuf.ByteString
+          getMintFeeBytes() {
+        java.lang.Object ref = mintFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+       * @param value The mintFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintFee_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintFee() {
+        mintFee_ = getDefaultInstance().getMintFee();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string mint_fee = 4 [json_name = "mintFee"];</code>
+       * @param value The bytes for mintFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintFee_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object burnFee_ = "";
+      /**
+       * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+       * @return The burnFee.
+       */
+      public java.lang.String getBurnFee() {
+        java.lang.Object ref = burnFee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnFee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+       * @return The bytes for burnFee.
+       */
+      public com.google.protobuf.ByteString
+          getBurnFeeBytes() {
+        java.lang.Object ref = burnFee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnFee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+       * @param value The burnFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnFee(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnFee_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnFee() {
+        burnFee_ = getDefaultInstance().getBurnFee();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string burn_fee = 5 [json_name = "burnFee"];</code>
+       * @param value The bytes for burnFee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnFeeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnFee_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 7 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.fantoken.v1beta1.UpdateFeesProposalWithDeposit)
+    private static final com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit();
+    }
+
+    public static com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateFeesProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateFeesProposalWithDeposit>() {
+      @java.lang.Override
+      public UpdateFeesProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateFeesProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateFeesProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.fantoken.v1beta1.GovProto.UpdateFeesProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_fantoken_v1beta1_UpdateFeesProposalWithDeposit_fieldAccessorTable;
 
@@ -49,13 +2629,13 @@ public final class GovProto {
       "(\tR\013description\022\033\n\tissue_fee\030\003 \001(\tR\010issu" +
       "eFee\022\031\n\010mint_fee\030\004 \001(\tR\007mintFee\022\031\n\010burn_" +
       "fee\030\005 \001(\tR\007burnFee\022\030\n\007deposit\030\007 \001(\tR\007dep" +
-      "osit:\004\230\240\037\001B\346\001\n\034com.bitsong.fantoken.v1be" +
-      "ta1B\010GovProtoP\001Z6github.com/bitsongoffic" +
-      "ial/go-bitsong/x/fantoken/types\242\002\003BFX\252\002\030" +
-      "Bitsong.Fantoken.V1beta1\312\002\030Bitsong\\Fanto" +
-      "ken\\V1beta1\342\002$Bitsong\\Fantoken\\V1beta1\\G" +
-      "PBMetadata\352\002\032Bitsong::Fantoken::V1beta1\310" +
-      "\341\036\000b\006proto3"
+      "osit:\004\230\240\037\001B\344\001\n\034com.bitsong.fantoken.v1be" +
+      "ta1B\010GovProtoZ6github.com/bitsongofficia" +
+      "l/go-bitsong/x/fantoken/types\242\002\003BFX\252\002\030Bi" +
+      "tsong.Fantoken.V1beta1\312\002\030Bitsong\\Fantoke" +
+      "n\\V1beta1\342\002$Bitsong\\Fantoken\\V1beta1\\GPB" +
+      "Metadata\352\002\032Bitsong::Fantoken::V1beta1\310\341\036" +
+      "\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

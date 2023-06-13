@@ -14,19 +14,2218 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventStartOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.EventStart)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+     * @return The subscriptionId.
+     */
+    long getSubscriptionId();
+
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The nodeAddress.
+     */
+    java.lang.String getNodeAddress();
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The bytes for nodeAddress.
+     */
+    com.google.protobuf.ByteString
+        getNodeAddressBytes();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.EventStart}
+   */
+  public static final class EventStart extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.EventStart)
+      EventStartOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventStart.newBuilder() to construct.
+    private EventStart(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventStart() {
+      nodeAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventStart();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventStart_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventStart_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.EventsProto.EventStart.class, com.sentinel.session.v2.EventsProto.EventStart.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 2;
+    private long subscriptionId_ = 0L;
+    /**
+     * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public long getSubscriptionId() {
+      return subscriptionId_;
+    }
+
+    public static final int NODE_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nodeAddress_ = "";
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The nodeAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeAddress() {
+      java.lang.Object ref = nodeAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The bytes for nodeAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeAddressBytes() {
+      java.lang.Object ref = nodeAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (subscriptionId_ != 0L) {
+        output.writeUInt64(2, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nodeAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (subscriptionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nodeAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.EventsProto.EventStart)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.EventsProto.EventStart other = (com.sentinel.session.v2.EventsProto.EventStart) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getSubscriptionId()
+          != other.getSubscriptionId()) return false;
+      if (!getNodeAddress()
+          .equals(other.getNodeAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSubscriptionId());
+      hash = (37 * hash) + NODE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventStart parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventStart parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventStart parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.EventsProto.EventStart prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.EventStart}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.EventStart)
+        com.sentinel.session.v2.EventsProto.EventStartOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventStart_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventStart_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.EventsProto.EventStart.class, com.sentinel.session.v2.EventsProto.EventStart.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.EventsProto.EventStart.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        subscriptionId_ = 0L;
+        nodeAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventStart_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventStart getDefaultInstanceForType() {
+        return com.sentinel.session.v2.EventsProto.EventStart.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventStart build() {
+        com.sentinel.session.v2.EventsProto.EventStart result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventStart buildPartial() {
+        com.sentinel.session.v2.EventsProto.EventStart result = new com.sentinel.session.v2.EventsProto.EventStart(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.EventsProto.EventStart result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nodeAddress_ = nodeAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.EventsProto.EventStart) {
+          return mergeFrom((com.sentinel.session.v2.EventsProto.EventStart)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.EventsProto.EventStart other) {
+        if (other == com.sentinel.session.v2.EventsProto.EventStart.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getSubscriptionId() != 0L) {
+          setSubscriptionId(other.getSubscriptionId());
+        }
+        if (!other.getNodeAddress().isEmpty()) {
+          nodeAddress_ = other.nodeAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                subscriptionId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                nodeAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long subscriptionId_ ;
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @return The subscriptionId.
+       */
+      @java.lang.Override
+      public long getSubscriptionId() {
+        return subscriptionId_;
+      }
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(long value) {
+
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        subscriptionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nodeAddress_ = "";
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return The nodeAddress.
+       */
+      public java.lang.String getNodeAddress() {
+        java.lang.Object ref = nodeAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return The bytes for nodeAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNodeAddressBytes() {
+        java.lang.Object ref = nodeAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @param value The nodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nodeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeAddress() {
+        nodeAddress_ = getDefaultInstance().getNodeAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @param value The bytes for nodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nodeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.EventStart)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.EventStart)
+    private static final com.sentinel.session.v2.EventsProto.EventStart DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.EventsProto.EventStart();
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventStart getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventStart>
+        PARSER = new com.google.protobuf.AbstractParser<EventStart>() {
+      @java.lang.Override
+      public EventStart parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventStart> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventStart> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.EventsProto.EventStart getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.EventUpdateDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+     * @return The subscriptionId.
+     */
+    long getSubscriptionId();
+
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The nodeAddress.
+     */
+    java.lang.String getNodeAddress();
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The bytes for nodeAddress.
+     */
+    com.google.protobuf.ByteString
+        getNodeAddressBytes();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.EventUpdateDetails}
+   */
+  public static final class EventUpdateDetails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.EventUpdateDetails)
+      EventUpdateDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateDetails.newBuilder() to construct.
+    private EventUpdateDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateDetails() {
+      nodeAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateDetails();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.EventsProto.EventUpdateDetails.class, com.sentinel.session.v2.EventsProto.EventUpdateDetails.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 2;
+    private long subscriptionId_ = 0L;
+    /**
+     * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public long getSubscriptionId() {
+      return subscriptionId_;
+    }
+
+    public static final int NODE_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nodeAddress_ = "";
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The nodeAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeAddress() {
+      java.lang.Object ref = nodeAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The bytes for nodeAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeAddressBytes() {
+      java.lang.Object ref = nodeAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (subscriptionId_ != 0L) {
+        output.writeUInt64(2, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nodeAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (subscriptionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nodeAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.EventsProto.EventUpdateDetails)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.EventsProto.EventUpdateDetails other = (com.sentinel.session.v2.EventsProto.EventUpdateDetails) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getSubscriptionId()
+          != other.getSubscriptionId()) return false;
+      if (!getNodeAddress()
+          .equals(other.getNodeAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSubscriptionId());
+      hash = (37 * hash) + NODE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.EventsProto.EventUpdateDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.EventUpdateDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.EventUpdateDetails)
+        com.sentinel.session.v2.EventsProto.EventUpdateDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.EventsProto.EventUpdateDetails.class, com.sentinel.session.v2.EventsProto.EventUpdateDetails.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.EventsProto.EventUpdateDetails.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        subscriptionId_ = 0L;
+        nodeAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventUpdateDetails getDefaultInstanceForType() {
+        return com.sentinel.session.v2.EventsProto.EventUpdateDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventUpdateDetails build() {
+        com.sentinel.session.v2.EventsProto.EventUpdateDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventUpdateDetails buildPartial() {
+        com.sentinel.session.v2.EventsProto.EventUpdateDetails result = new com.sentinel.session.v2.EventsProto.EventUpdateDetails(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.EventsProto.EventUpdateDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nodeAddress_ = nodeAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.EventsProto.EventUpdateDetails) {
+          return mergeFrom((com.sentinel.session.v2.EventsProto.EventUpdateDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.EventsProto.EventUpdateDetails other) {
+        if (other == com.sentinel.session.v2.EventsProto.EventUpdateDetails.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getSubscriptionId() != 0L) {
+          setSubscriptionId(other.getSubscriptionId());
+        }
+        if (!other.getNodeAddress().isEmpty()) {
+          nodeAddress_ = other.nodeAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                subscriptionId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                nodeAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long subscriptionId_ ;
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @return The subscriptionId.
+       */
+      @java.lang.Override
+      public long getSubscriptionId() {
+        return subscriptionId_;
+      }
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(long value) {
+
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        subscriptionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nodeAddress_ = "";
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return The nodeAddress.
+       */
+      public java.lang.String getNodeAddress() {
+        java.lang.Object ref = nodeAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return The bytes for nodeAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNodeAddressBytes() {
+        java.lang.Object ref = nodeAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @param value The nodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nodeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeAddress() {
+        nodeAddress_ = getDefaultInstance().getNodeAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @param value The bytes for nodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nodeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.EventUpdateDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.EventUpdateDetails)
+    private static final com.sentinel.session.v2.EventsProto.EventUpdateDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.EventsProto.EventUpdateDetails();
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateDetails>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateDetails>() {
+      @java.lang.Override
+      public EventUpdateDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.EventsProto.EventUpdateDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:sentinel.session.v2.EventUpdateStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+     * @return The subscriptionId.
+     */
+    long getSubscriptionId();
+
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The nodeAddress.
+     */
+    java.lang.String getNodeAddress();
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The bytes for nodeAddress.
+     */
+    com.google.protobuf.ByteString
+        getNodeAddressBytes();
+
+    /**
+     * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+     * @return The status.
+     */
+    com.sentinel.types.v1.StatusProto.Status getStatus();
+  }
+  /**
+   * Protobuf type {@code sentinel.session.v2.EventUpdateStatus}
+   */
+  public static final class EventUpdateStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:sentinel.session.v2.EventUpdateStatus)
+      EventUpdateStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateStatus.newBuilder() to construct.
+    private EventUpdateStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateStatus() {
+      nodeAddress_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateStatus();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sentinel.session.v2.EventsProto.EventUpdateStatus.class, com.sentinel.session.v2.EventsProto.EventUpdateStatus.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 2;
+    private long subscriptionId_ = 0L;
+    /**
+     * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public long getSubscriptionId() {
+      return subscriptionId_;
+    }
+
+    public static final int NODE_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nodeAddress_ = "";
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The nodeAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNodeAddress() {
+      java.lang.Object ref = nodeAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nodeAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+     * @return The bytes for nodeAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNodeAddressBytes() {
+      java.lang.Object ref = nodeAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nodeAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private int status_ = 0;
+    /**
+     * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.sentinel.types.v1.StatusProto.Status getStatus() {
+      com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+      return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (subscriptionId_ != 0L) {
+        output.writeUInt64(2, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nodeAddress_);
+      }
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, status_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (subscriptionId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, subscriptionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nodeAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nodeAddress_);
+      }
+      if (status_ != com.sentinel.types.v1.StatusProto.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, status_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sentinel.session.v2.EventsProto.EventUpdateStatus)) {
+        return super.equals(obj);
+      }
+      com.sentinel.session.v2.EventsProto.EventUpdateStatus other = (com.sentinel.session.v2.EventsProto.EventUpdateStatus) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getSubscriptionId()
+          != other.getSubscriptionId()) return false;
+      if (!getNodeAddress()
+          .equals(other.getNodeAddress())) return false;
+      if (status_ != other.status_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSubscriptionId());
+      hash = (37 * hash) + NODE_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNodeAddress().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sentinel.session.v2.EventsProto.EventUpdateStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code sentinel.session.v2.EventUpdateStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:sentinel.session.v2.EventUpdateStatus)
+        com.sentinel.session.v2.EventsProto.EventUpdateStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sentinel.session.v2.EventsProto.EventUpdateStatus.class, com.sentinel.session.v2.EventsProto.EventUpdateStatus.Builder.class);
+      }
+
+      // Construct using com.sentinel.session.v2.EventsProto.EventUpdateStatus.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        subscriptionId_ = 0L;
+        nodeAddress_ = "";
+        status_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sentinel.session.v2.EventsProto.internal_static_sentinel_session_v2_EventUpdateStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventUpdateStatus getDefaultInstanceForType() {
+        return com.sentinel.session.v2.EventsProto.EventUpdateStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventUpdateStatus build() {
+        com.sentinel.session.v2.EventsProto.EventUpdateStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sentinel.session.v2.EventsProto.EventUpdateStatus buildPartial() {
+        com.sentinel.session.v2.EventsProto.EventUpdateStatus result = new com.sentinel.session.v2.EventsProto.EventUpdateStatus(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.sentinel.session.v2.EventsProto.EventUpdateStatus result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nodeAddress_ = nodeAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.status_ = status_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sentinel.session.v2.EventsProto.EventUpdateStatus) {
+          return mergeFrom((com.sentinel.session.v2.EventsProto.EventUpdateStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sentinel.session.v2.EventsProto.EventUpdateStatus other) {
+        if (other == com.sentinel.session.v2.EventsProto.EventUpdateStatus.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getSubscriptionId() != 0L) {
+          setSubscriptionId(other.getSubscriptionId());
+        }
+        if (!other.getNodeAddress().isEmpty()) {
+          nodeAddress_ = other.nodeAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                subscriptionId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                nodeAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id", (.gogoproto.customname) = "ID", (.gogoproto.moretags) = "yaml:&#92;"id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long subscriptionId_ ;
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @return The subscriptionId.
+       */
+      @java.lang.Override
+      public long getSubscriptionId() {
+        return subscriptionId_;
+      }
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(long value) {
+
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 subscription_id = 2 [json_name = "subscriptionId", (.gogoproto.customname) = "SubscriptionID", (.gogoproto.moretags) = "yaml:&#92;"subscription_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        subscriptionId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nodeAddress_ = "";
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return The nodeAddress.
+       */
+      public java.lang.String getNodeAddress() {
+        java.lang.Object ref = nodeAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nodeAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return The bytes for nodeAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNodeAddressBytes() {
+        java.lang.Object ref = nodeAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nodeAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @param value The nodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nodeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNodeAddress() {
+        nodeAddress_ = getDefaultInstance().getNodeAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string node_address = 3 [json_name = "nodeAddress", (.gogoproto.moretags) = "yaml:&#92;"node_address&#92;""];</code>
+       * @param value The bytes for nodeAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNodeAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nodeAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.sentinel.types.v1.StatusProto.Status getStatus() {
+        com.sentinel.types.v1.StatusProto.Status result = com.sentinel.types.v1.StatusProto.Status.forNumber(status_);
+        return result == null ? com.sentinel.types.v1.StatusProto.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.sentinel.types.v1.StatusProto.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.sentinel.types.v1.Status status = 4 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:sentinel.session.v2.EventUpdateStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:sentinel.session.v2.EventUpdateStatus)
+    private static final com.sentinel.session.v2.EventsProto.EventUpdateStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sentinel.session.v2.EventsProto.EventUpdateStatus();
+    }
+
+    public static com.sentinel.session.v2.EventsProto.EventUpdateStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateStatus>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateStatus>() {
+      @java.lang.Override
+      public EventUpdateStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sentinel.session.v2.EventsProto.EventUpdateStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_EventStart_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_EventStart_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_EventUpdateDetails_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_EventUpdateDetails_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_sentinel_session_v2_EventUpdateStatus_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_sentinel_session_v2_EventUpdateStatus_fieldAccessorTable;
 
@@ -57,13 +2256,13 @@ public final class EventsProto {
       "n_id\"R\016subscriptionId\022:\n\014node_address\030\003 " +
       "\001(\tB\027\362\336\037\023yaml:\"node_address\"R\013nodeAddres" +
       "s\022D\n\006status\030\004 \001(\0162\031.sentinel.types.v1.St" +
-      "atusB\021\362\336\037\ryaml:\"status\"R\006statusB\316\001\n\027com." +
-      "sentinel.session.v2B\013EventsProtoP\001Z0gith" +
-      "ub.com/sentinel-official/hub/x/session/t" +
-      "ypes\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Senti" +
-      "nel\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPB" +
-      "Metadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000" +
-      "b\006proto3"
+      "atusB\021\362\336\037\ryaml:\"status\"R\006statusB\314\001\n\027com." +
+      "sentinel.session.v2B\013EventsProtoZ0github" +
+      ".com/sentinel-official/hub/x/session/typ" +
+      "es\242\002\003SSX\252\002\023Sentinel.Session.V2\312\002\023Sentine" +
+      "l\\Session\\V2\342\002\037Sentinel\\Session\\V2\\GPBMe" +
+      "tadata\352\002\025Sentinel::Session::V2\310\341\036\000\250\342\036\000b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

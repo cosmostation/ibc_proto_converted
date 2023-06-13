@@ -14,9 +14,1195 @@ public final class ProposalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * ProposalStatus enumerates the valid statuses of a proposal.
+   * </pre>
+   *
+   * Protobuf enum {@code stafihub.stafihub.rvote.ProposalStatus}
+   */
+  public enum ProposalStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PROPOSAL_STATUS_INITIATED = 0 [(.gogoproto.enumvalue_customname) = "StatusInitiated"];</code>
+     */
+    PROPOSAL_STATUS_INITIATED(0),
+    /**
+     * <code>PROPOSAL_STATUS_APPROVED = 1 [(.gogoproto.enumvalue_customname) = "StatusApproved"];</code>
+     */
+    PROPOSAL_STATUS_APPROVED(1),
+    /**
+     * <code>PROPOSAL_STATUS_EXPIRED = 2 [(.gogoproto.enumvalue_customname) = "StatusExpired"];</code>
+     */
+    PROPOSAL_STATUS_EXPIRED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PROPOSAL_STATUS_INITIATED = 0 [(.gogoproto.enumvalue_customname) = "StatusInitiated"];</code>
+     */
+    public static final int PROPOSAL_STATUS_INITIATED_VALUE = 0;
+    /**
+     * <code>PROPOSAL_STATUS_APPROVED = 1 [(.gogoproto.enumvalue_customname) = "StatusApproved"];</code>
+     */
+    public static final int PROPOSAL_STATUS_APPROVED_VALUE = 1;
+    /**
+     * <code>PROPOSAL_STATUS_EXPIRED = 2 [(.gogoproto.enumvalue_customname) = "StatusExpired"];</code>
+     */
+    public static final int PROPOSAL_STATUS_EXPIRED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ProposalStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ProposalStatus forNumber(int value) {
+      switch (value) {
+        case 0: return PROPOSAL_STATUS_INITIATED;
+        case 1: return PROPOSAL_STATUS_APPROVED;
+        case 2: return PROPOSAL_STATUS_EXPIRED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProposalStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ProposalStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProposalStatus>() {
+            public ProposalStatus findValueByNumber(int number) {
+              return ProposalStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvote.ProposalProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ProposalStatus[] VALUES = values();
+
+    public static ProposalStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ProposalStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:stafihub.stafihub.rvote.ProposalStatus)
+  }
+
+  public interface ProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvote.Proposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return The content.
+     */
+    com.google.protobuf.Any getContent();
+    /**
+     * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getContentOrBuilder();
+
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+     * @return The status.
+     */
+    com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus getStatus();
+
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @return A list containing the voted.
+     */
+    java.util.List<java.lang.String>
+        getVotedList();
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @return The count of voted.
+     */
+    int getVotedCount();
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The voted at the given index.
+     */
+    java.lang.String getVoted(int index);
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the voted at the given index.
+     */
+    com.google.protobuf.ByteString
+        getVotedBytes(int index);
+
+    /**
+     * <code>int64 startBlock = 4 [json_name = "startBlock", (.gogoproto.moretags) = "yaml:&#92;"start_block&#92;""];</code>
+     * @return The startBlock.
+     */
+    long getStartBlock();
+
+    /**
+     * <code>int64 expireBlock = 5 [json_name = "expireBlock", (.gogoproto.moretags) = "yaml:&#92;"expire_block&#92;""];</code>
+     * @return The expireBlock.
+     */
+    long getExpireBlock();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvote.Proposal}
+   */
+  public static final class Proposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvote.Proposal)
+      ProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Proposal.newBuilder() to construct.
+    private Proposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Proposal() {
+      status_ = 0;
+      voted_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Proposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvote.ProposalProto.internal_static_stafihub_stafihub_rvote_Proposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvote.ProposalProto.internal_static_stafihub_stafihub_rvote_Proposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvote.ProposalProto.Proposal.class, com.stafihub.stafihub.rvote.ProposalProto.Proposal.Builder.class);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Any content_;
+    /**
+     * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return Whether the content field is set.
+     */
+    @java.lang.Override
+    public boolean hasContent() {
+      return content_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getContent() {
+      return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+    }
+    /**
+     * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
+      return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus getStatus() {
+      com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus result = com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.forNumber(status_);
+      return result == null ? com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int VOTED_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList voted_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @return A list containing the voted.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getVotedList() {
+      return voted_;
+    }
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @return The count of voted.
+     */
+    public int getVotedCount() {
+      return voted_.size();
+    }
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The voted at the given index.
+     */
+    public java.lang.String getVoted(int index) {
+      return voted_.get(index);
+    }
+    /**
+     * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the voted at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getVotedBytes(int index) {
+      return voted_.getByteString(index);
+    }
+
+    public static final int STARTBLOCK_FIELD_NUMBER = 4;
+    private long startBlock_ = 0L;
+    /**
+     * <code>int64 startBlock = 4 [json_name = "startBlock", (.gogoproto.moretags) = "yaml:&#92;"start_block&#92;""];</code>
+     * @return The startBlock.
+     */
+    @java.lang.Override
+    public long getStartBlock() {
+      return startBlock_;
+    }
+
+    public static final int EXPIREBLOCK_FIELD_NUMBER = 5;
+    private long expireBlock_ = 0L;
+    /**
+     * <code>int64 expireBlock = 5 [json_name = "expireBlock", (.gogoproto.moretags) = "yaml:&#92;"expire_block&#92;""];</code>
+     * @return The expireBlock.
+     */
+    @java.lang.Override
+    public long getExpireBlock() {
+      return expireBlock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (content_ != null) {
+        output.writeMessage(1, getContent());
+      }
+      if (status_ != com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.PROPOSAL_STATUS_INITIATED.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      for (int i = 0; i < voted_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, voted_.getRaw(i));
+      }
+      if (startBlock_ != 0L) {
+        output.writeInt64(4, startBlock_);
+      }
+      if (expireBlock_ != 0L) {
+        output.writeInt64(5, expireBlock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (content_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getContent());
+      }
+      if (status_ != com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.PROPOSAL_STATUS_INITIATED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < voted_.size(); i++) {
+          dataSize += computeStringSizeNoTag(voted_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getVotedList().size();
+      }
+      if (startBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, startBlock_);
+      }
+      if (expireBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, expireBlock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvote.ProposalProto.Proposal)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvote.ProposalProto.Proposal other = (com.stafihub.stafihub.rvote.ProposalProto.Proposal) obj;
+
+      if (hasContent() != other.hasContent()) return false;
+      if (hasContent()) {
+        if (!getContent()
+            .equals(other.getContent())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (!getVotedList()
+          .equals(other.getVotedList())) return false;
+      if (getStartBlock()
+          != other.getStartBlock()) return false;
+      if (getExpireBlock()
+          != other.getExpireBlock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasContent()) {
+        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getContent().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (getVotedCount() > 0) {
+        hash = (37 * hash) + VOTED_FIELD_NUMBER;
+        hash = (53 * hash) + getVotedList().hashCode();
+      }
+      hash = (37 * hash) + STARTBLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartBlock());
+      hash = (37 * hash) + EXPIREBLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExpireBlock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvote.ProposalProto.Proposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvote.Proposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvote.Proposal)
+        com.stafihub.stafihub.rvote.ProposalProto.ProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvote.ProposalProto.internal_static_stafihub_stafihub_rvote_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvote.ProposalProto.internal_static_stafihub_stafihub_rvote_Proposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvote.ProposalProto.Proposal.class, com.stafihub.stafihub.rvote.ProposalProto.Proposal.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvote.ProposalProto.Proposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        content_ = null;
+        if (contentBuilder_ != null) {
+          contentBuilder_.dispose();
+          contentBuilder_ = null;
+        }
+        status_ = 0;
+        voted_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        startBlock_ = 0L;
+        expireBlock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvote.ProposalProto.internal_static_stafihub_stafihub_rvote_Proposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.ProposalProto.Proposal getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvote.ProposalProto.Proposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.ProposalProto.Proposal build() {
+        com.stafihub.stafihub.rvote.ProposalProto.Proposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.ProposalProto.Proposal buildPartial() {
+        com.stafihub.stafihub.rvote.ProposalProto.Proposal result = new com.stafihub.stafihub.rvote.ProposalProto.Proposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvote.ProposalProto.Proposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.content_ = contentBuilder_ == null
+              ? content_
+              : contentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          voted_.makeImmutable();
+          result.voted_ = voted_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startBlock_ = startBlock_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.expireBlock_ = expireBlock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvote.ProposalProto.Proposal) {
+          return mergeFrom((com.stafihub.stafihub.rvote.ProposalProto.Proposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvote.ProposalProto.Proposal other) {
+        if (other == com.stafihub.stafihub.rvote.ProposalProto.Proposal.getDefaultInstance()) return this;
+        if (other.hasContent()) {
+          mergeContent(other.getContent());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.voted_.isEmpty()) {
+          if (voted_.isEmpty()) {
+            voted_ = other.voted_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureVotedIsMutable();
+            voted_.addAll(other.voted_);
+          }
+          onChanged();
+        }
+        if (other.getStartBlock() != 0L) {
+          setStartBlock(other.getStartBlock());
+        }
+        if (other.getExpireBlock() != 0L) {
+          setExpireBlock(other.getExpireBlock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getContentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureVotedIsMutable();
+                voted_.add(s);
+                break;
+              } // case 26
+              case 32: {
+                startBlock_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                expireBlock_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Any content_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> contentBuilder_;
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       * @return The content.
+       */
+      public com.google.protobuf.Any getContent() {
+        if (contentBuilder_ == null) {
+          return content_ == null ? com.google.protobuf.Any.getDefaultInstance() : content_;
+        } else {
+          return contentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder setContent(com.google.protobuf.Any value) {
+        if (contentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          content_ = value;
+        } else {
+          contentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder setContent(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (contentBuilder_ == null) {
+          content_ = builderForValue.build();
+        } else {
+          contentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder mergeContent(com.google.protobuf.Any value) {
+        if (contentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            content_ != null &&
+            content_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getContentBuilder().mergeFrom(value);
+          } else {
+            content_ = value;
+          }
+        } else {
+          contentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public Builder clearContent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        content_ = null;
+        if (contentBuilder_ != null) {
+          contentBuilder_.dispose();
+          contentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public com.google.protobuf.Any.Builder getContentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getContentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getContentOrBuilder() {
+        if (contentBuilder_ != null) {
+          return contentBuilder_.getMessageOrBuilder();
+        } else {
+          return content_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : content_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any content = 1 [json_name = "content", (.cosmos_proto.accepts_interface) = "Content"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getContentFieldBuilder() {
+        if (contentBuilder_ == null) {
+          contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getContent(),
+                  getParentForChildren(),
+                  isClean());
+          content_ = null;
+        }
+        return contentBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus getStatus() {
+        com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus result = com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.forNumber(status_);
+        return result == null ? com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.stafihub.stafihub.rvote.ProposalProto.ProposalStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvote.ProposalStatus status = 2 [json_name = "status", (.gogoproto.moretags) = "yaml:&#92;"prop_status&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList voted_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureVotedIsMutable() {
+        if (!voted_.isModifiable()) {
+          voted_ = new com.google.protobuf.LazyStringArrayList(voted_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @return A list containing the voted.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getVotedList() {
+        voted_.makeImmutable();
+        return voted_;
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @return The count of voted.
+       */
+      public int getVotedCount() {
+        return voted_.size();
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The voted at the given index.
+       */
+      public java.lang.String getVoted(int index) {
+        return voted_.get(index);
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the voted at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getVotedBytes(int index) {
+        return voted_.getByteString(index);
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The voted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoted(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureVotedIsMutable();
+        voted_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @param value The voted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addVoted(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureVotedIsMutable();
+        voted_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @param values The voted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllVoted(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureVotedIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, voted_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoted() {
+        voted_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string voted = 3 [json_name = "voted", (.gogoproto.moretags) = "yaml:&#92;"voted&#92;""];</code>
+       * @param value The bytes of the voted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addVotedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureVotedIsMutable();
+        voted_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long startBlock_ ;
+      /**
+       * <code>int64 startBlock = 4 [json_name = "startBlock", (.gogoproto.moretags) = "yaml:&#92;"start_block&#92;""];</code>
+       * @return The startBlock.
+       */
+      @java.lang.Override
+      public long getStartBlock() {
+        return startBlock_;
+      }
+      /**
+       * <code>int64 startBlock = 4 [json_name = "startBlock", (.gogoproto.moretags) = "yaml:&#92;"start_block&#92;""];</code>
+       * @param value The startBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartBlock(long value) {
+
+        startBlock_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 startBlock = 4 [json_name = "startBlock", (.gogoproto.moretags) = "yaml:&#92;"start_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartBlock() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long expireBlock_ ;
+      /**
+       * <code>int64 expireBlock = 5 [json_name = "expireBlock", (.gogoproto.moretags) = "yaml:&#92;"expire_block&#92;""];</code>
+       * @return The expireBlock.
+       */
+      @java.lang.Override
+      public long getExpireBlock() {
+        return expireBlock_;
+      }
+      /**
+       * <code>int64 expireBlock = 5 [json_name = "expireBlock", (.gogoproto.moretags) = "yaml:&#92;"expire_block&#92;""];</code>
+       * @param value The expireBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpireBlock(long value) {
+
+        expireBlock_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 expireBlock = 5 [json_name = "expireBlock", (.gogoproto.moretags) = "yaml:&#92;"expire_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpireBlock() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        expireBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvote.Proposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvote.Proposal)
+    private static final com.stafihub.stafihub.rvote.ProposalProto.Proposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvote.ProposalProto.Proposal();
+    }
+
+    public static com.stafihub.stafihub.rvote.ProposalProto.Proposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Proposal>
+        PARSER = new com.google.protobuf.AbstractParser<Proposal>() {
+      @java.lang.Override
+      public Proposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Proposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Proposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvote.ProposalProto.Proposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvote_Proposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvote_Proposal_fieldAccessorTable;
 
@@ -43,13 +1229,13 @@ public final class ProposalProto {
       "ROPOSAL_STATUS_INITIATED\020\000\032\023\212\235 \017StatusIn" +
       "itiated\0220\n\030PROPOSAL_STATUS_APPROVED\020\001\032\022\212" +
       "\235 \016StatusApproved\022.\n\027PROPOSAL_STATUS_EXP" +
-      "IRED\020\002\032\021\212\235 \rStatusExpired\032\004\210\243\036\000B\342\001\n\033com." +
-      "stafihub.stafihub.rvoteB\rProposalProtoP\001" +
-      "Z*github.com/stafihub/stafihub/x/rvote/t" +
-      "ypes\242\002\003SSR\252\002\027Stafihub.Stafihub.Rvote\312\002\027S" +
-      "tafihub\\Stafihub\\Rvote\342\002#Stafihub\\Stafih" +
-      "ub\\Rvote\\GPBMetadata\352\002\031Stafihub::Stafihu" +
-      "b::Rvote\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
+      "IRED\020\002\032\021\212\235 \rStatusExpired\032\004\210\243\036\000B\340\001\n\033com." +
+      "stafihub.stafihub.rvoteB\rProposalProtoZ*" +
+      "github.com/stafihub/stafihub/x/rvote/typ" +
+      "es\242\002\003SSR\252\002\027Stafihub.Stafihub.Rvote\312\002\027Sta" +
+      "fihub\\Stafihub\\Rvote\342\002#Stafihub\\Stafihub" +
+      "\\Rvote\\GPBMetadata\352\002\031Stafihub::Stafihub:" +
+      ":Rvote\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,44 +14,4908 @@ public final class EventProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CollectionCreatedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.CollectionCreatedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return Whether the collection field is set.
+     */
+    boolean hasCollection();
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.Collection getCollection();
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder getCollectionOrBuilder();
+  }
+  /**
+   * <pre>
+   * CollectionCreatedEvent is an event triggered on a Collection creation
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.CollectionCreatedEvent}
+   */
+  public static final class CollectionCreatedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.CollectionCreatedEvent)
+      CollectionCreatedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CollectionCreatedEvent.newBuilder() to construct.
+    private CollectionCreatedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CollectionCreatedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CollectionCreatedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.class, com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.Builder.class);
+    }
+
+    public static final int COLLECTION_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.ClaimsProto.Collection collection_;
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return Whether the collection field is set.
+     */
+    @java.lang.Override
+    public boolean hasCollection() {
+      return collection_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.Collection getCollection() {
+      return collection_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder getCollectionOrBuilder() {
+      return collection_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (collection_ != null) {
+        output.writeMessage(1, getCollection());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (collection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCollection());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent other = (com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent) obj;
+
+      if (hasCollection() != other.hasCollection()) return false;
+      if (hasCollection()) {
+        if (!getCollection()
+            .equals(other.getCollection())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCollection()) {
+        hash = (37 * hash) + COLLECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getCollection().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CollectionCreatedEvent is an event triggered on a Collection creation
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.CollectionCreatedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.CollectionCreatedEvent)
+        com.ixo.claims.v1beta1.EventProto.CollectionCreatedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.class, com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        collection_ = null;
+        if (collectionBuilder_ != null) {
+          collectionBuilder_.dispose();
+          collectionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent result = new com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collection_ = collectionBuilder_ == null
+              ? collection_
+              : collectionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent.getDefaultInstance()) return this;
+        if (other.hasCollection()) {
+          mergeCollection(other.getCollection());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCollectionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.ClaimsProto.Collection collection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Collection, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder, com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder> collectionBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       * @return Whether the collection field is set.
+       */
+      public boolean hasCollection() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       * @return The collection.
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Collection getCollection() {
+        if (collectionBuilder_ == null) {
+          return collection_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+        } else {
+          return collectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder setCollection(com.ixo.claims.v1beta1.ClaimsProto.Collection value) {
+        if (collectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collection_ = value;
+        } else {
+          collectionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder setCollection(
+          com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder builderForValue) {
+        if (collectionBuilder_ == null) {
+          collection_ = builderForValue.build();
+        } else {
+          collectionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder mergeCollection(com.ixo.claims.v1beta1.ClaimsProto.Collection value) {
+        if (collectionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            collection_ != null &&
+            collection_ != com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance()) {
+            getCollectionBuilder().mergeFrom(value);
+          } else {
+            collection_ = value;
+          }
+        } else {
+          collectionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder clearCollection() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        collection_ = null;
+        if (collectionBuilder_ != null) {
+          collectionBuilder_.dispose();
+          collectionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder getCollectionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCollectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder getCollectionOrBuilder() {
+        if (collectionBuilder_ != null) {
+          return collectionBuilder_.getMessageOrBuilder();
+        } else {
+          return collection_ == null ?
+              com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Collection, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder, com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder> 
+          getCollectionFieldBuilder() {
+        if (collectionBuilder_ == null) {
+          collectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.ClaimsProto.Collection, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder, com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder>(
+                  getCollection(),
+                  getParentForChildren(),
+                  isClean());
+          collection_ = null;
+        }
+        return collectionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.CollectionCreatedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.CollectionCreatedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CollectionCreatedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<CollectionCreatedEvent>() {
+      @java.lang.Override
+      public CollectionCreatedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CollectionCreatedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CollectionCreatedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.CollectionCreatedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CollectionUpdatedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.CollectionUpdatedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return Whether the collection field is set.
+     */
+    boolean hasCollection();
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.Collection getCollection();
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder getCollectionOrBuilder();
+  }
+  /**
+   * <pre>
+   * CollectionUpdatedEvent is an event triggered on a Collection update
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.CollectionUpdatedEvent}
+   */
+  public static final class CollectionUpdatedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.CollectionUpdatedEvent)
+      CollectionUpdatedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CollectionUpdatedEvent.newBuilder() to construct.
+    private CollectionUpdatedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CollectionUpdatedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CollectionUpdatedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.class, com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.Builder.class);
+    }
+
+    public static final int COLLECTION_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.ClaimsProto.Collection collection_;
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return Whether the collection field is set.
+     */
+    @java.lang.Override
+    public boolean hasCollection() {
+      return collection_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.Collection getCollection() {
+      return collection_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder getCollectionOrBuilder() {
+      return collection_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (collection_ != null) {
+        output.writeMessage(1, getCollection());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (collection_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCollection());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent other = (com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent) obj;
+
+      if (hasCollection() != other.hasCollection()) return false;
+      if (hasCollection()) {
+        if (!getCollection()
+            .equals(other.getCollection())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCollection()) {
+        hash = (37 * hash) + COLLECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getCollection().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CollectionUpdatedEvent is an event triggered on a Collection update
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.CollectionUpdatedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.CollectionUpdatedEvent)
+        com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.class, com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        collection_ = null;
+        if (collectionBuilder_ != null) {
+          collectionBuilder_.dispose();
+          collectionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent result = new com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.collection_ = collectionBuilder_ == null
+              ? collection_
+              : collectionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent.getDefaultInstance()) return this;
+        if (other.hasCollection()) {
+          mergeCollection(other.getCollection());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCollectionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.ClaimsProto.Collection collection_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Collection, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder, com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder> collectionBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       * @return Whether the collection field is set.
+       */
+      public boolean hasCollection() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       * @return The collection.
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Collection getCollection() {
+        if (collectionBuilder_ == null) {
+          return collection_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+        } else {
+          return collectionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder setCollection(com.ixo.claims.v1beta1.ClaimsProto.Collection value) {
+        if (collectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collection_ = value;
+        } else {
+          collectionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder setCollection(
+          com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder builderForValue) {
+        if (collectionBuilder_ == null) {
+          collection_ = builderForValue.build();
+        } else {
+          collectionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder mergeCollection(com.ixo.claims.v1beta1.ClaimsProto.Collection value) {
+        if (collectionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            collection_ != null &&
+            collection_ != com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance()) {
+            getCollectionBuilder().mergeFrom(value);
+          } else {
+            collection_ = value;
+          }
+        } else {
+          collectionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public Builder clearCollection() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        collection_ = null;
+        if (collectionBuilder_ != null) {
+          collectionBuilder_.dispose();
+          collectionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder getCollectionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCollectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder getCollectionOrBuilder() {
+        if (collectionBuilder_ != null) {
+          return collectionBuilder_.getMessageOrBuilder();
+        } else {
+          return collection_ == null ?
+              com.ixo.claims.v1beta1.ClaimsProto.Collection.getDefaultInstance() : collection_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Collection collection = 1 [json_name = "collection"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Collection, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder, com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder> 
+          getCollectionFieldBuilder() {
+        if (collectionBuilder_ == null) {
+          collectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.ClaimsProto.Collection, com.ixo.claims.v1beta1.ClaimsProto.Collection.Builder, com.ixo.claims.v1beta1.ClaimsProto.CollectionOrBuilder>(
+                  getCollection(),
+                  getParentForChildren(),
+                  isClean());
+          collection_ = null;
+        }
+        return collectionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.CollectionUpdatedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.CollectionUpdatedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CollectionUpdatedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<CollectionUpdatedEvent>() {
+      @java.lang.Override
+      public CollectionUpdatedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CollectionUpdatedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CollectionUpdatedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.CollectionUpdatedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimSubmittedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.ClaimSubmittedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return Whether the claim field is set.
+     */
+    boolean hasClaim();
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return The claim.
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.Claim getClaim();
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder getClaimOrBuilder();
+  }
+  /**
+   * <pre>
+   * CollectionCreatedEvent is an event triggered on a Claim submission
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.ClaimSubmittedEvent}
+   */
+  public static final class ClaimSubmittedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.ClaimSubmittedEvent)
+      ClaimSubmittedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimSubmittedEvent.newBuilder() to construct.
+    private ClaimSubmittedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimSubmittedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimSubmittedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.Builder.class);
+    }
+
+    public static final int CLAIM_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.ClaimsProto.Claim claim_;
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return Whether the claim field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaim() {
+      return claim_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return The claim.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.Claim getClaim() {
+      return claim_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder getClaimOrBuilder() {
+      return claim_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claim_ != null) {
+        output.writeMessage(1, getClaim());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claim_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getClaim());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent other = (com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent) obj;
+
+      if (hasClaim() != other.hasClaim()) return false;
+      if (hasClaim()) {
+        if (!getClaim()
+            .equals(other.getClaim())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaim()) {
+        hash = (37 * hash) + CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getClaim().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CollectionCreatedEvent is an event triggered on a Claim submission
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.ClaimSubmittedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.ClaimSubmittedEvent)
+        com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claim_ = null;
+        if (claimBuilder_ != null) {
+          claimBuilder_.dispose();
+          claimBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent result = new com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claim_ = claimBuilder_ == null
+              ? claim_
+              : claimBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent.getDefaultInstance()) return this;
+        if (other.hasClaim()) {
+          mergeClaim(other.getClaim());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getClaimFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.ClaimsProto.Claim claim_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Claim, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder, com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder> claimBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       * @return Whether the claim field is set.
+       */
+      public boolean hasClaim() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       * @return The claim.
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Claim getClaim() {
+        if (claimBuilder_ == null) {
+          return claim_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+        } else {
+          return claimBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder setClaim(com.ixo.claims.v1beta1.ClaimsProto.Claim value) {
+        if (claimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claim_ = value;
+        } else {
+          claimBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder setClaim(
+          com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder builderForValue) {
+        if (claimBuilder_ == null) {
+          claim_ = builderForValue.build();
+        } else {
+          claimBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder mergeClaim(com.ixo.claims.v1beta1.ClaimsProto.Claim value) {
+        if (claimBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claim_ != null &&
+            claim_ != com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance()) {
+            getClaimBuilder().mergeFrom(value);
+          } else {
+            claim_ = value;
+          }
+        } else {
+          claimBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder clearClaim() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claim_ = null;
+        if (claimBuilder_ != null) {
+          claimBuilder_.dispose();
+          claimBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder getClaimBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getClaimFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder getClaimOrBuilder() {
+        if (claimBuilder_ != null) {
+          return claimBuilder_.getMessageOrBuilder();
+        } else {
+          return claim_ == null ?
+              com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Claim, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder, com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder> 
+          getClaimFieldBuilder() {
+        if (claimBuilder_ == null) {
+          claimBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.ClaimsProto.Claim, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder, com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder>(
+                  getClaim(),
+                  getParentForChildren(),
+                  isClean());
+          claim_ = null;
+        }
+        return claimBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.ClaimSubmittedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.ClaimSubmittedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimSubmittedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimSubmittedEvent>() {
+      @java.lang.Override
+      public ClaimSubmittedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimSubmittedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimSubmittedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.ClaimSubmittedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimUpdatedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.ClaimUpdatedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return Whether the claim field is set.
+     */
+    boolean hasClaim();
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return The claim.
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.Claim getClaim();
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder getClaimOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClaimUpdatedEvent is an event triggered on a Claim update
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.ClaimUpdatedEvent}
+   */
+  public static final class ClaimUpdatedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.ClaimUpdatedEvent)
+      ClaimUpdatedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimUpdatedEvent.newBuilder() to construct.
+    private ClaimUpdatedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimUpdatedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimUpdatedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.Builder.class);
+    }
+
+    public static final int CLAIM_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.ClaimsProto.Claim claim_;
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return Whether the claim field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaim() {
+      return claim_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     * @return The claim.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.Claim getClaim() {
+      return claim_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder getClaimOrBuilder() {
+      return claim_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claim_ != null) {
+        output.writeMessage(1, getClaim());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claim_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getClaim());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent other = (com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent) obj;
+
+      if (hasClaim() != other.hasClaim()) return false;
+      if (hasClaim()) {
+        if (!getClaim()
+            .equals(other.getClaim())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaim()) {
+        hash = (37 * hash) + CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getClaim().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimUpdatedEvent is an event triggered on a Claim update
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.ClaimUpdatedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.ClaimUpdatedEvent)
+        com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claim_ = null;
+        if (claimBuilder_ != null) {
+          claimBuilder_.dispose();
+          claimBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent result = new com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claim_ = claimBuilder_ == null
+              ? claim_
+              : claimBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent.getDefaultInstance()) return this;
+        if (other.hasClaim()) {
+          mergeClaim(other.getClaim());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getClaimFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.ClaimsProto.Claim claim_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Claim, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder, com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder> claimBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       * @return Whether the claim field is set.
+       */
+      public boolean hasClaim() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       * @return The claim.
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Claim getClaim() {
+        if (claimBuilder_ == null) {
+          return claim_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+        } else {
+          return claimBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder setClaim(com.ixo.claims.v1beta1.ClaimsProto.Claim value) {
+        if (claimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claim_ = value;
+        } else {
+          claimBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder setClaim(
+          com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder builderForValue) {
+        if (claimBuilder_ == null) {
+          claim_ = builderForValue.build();
+        } else {
+          claimBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder mergeClaim(com.ixo.claims.v1beta1.ClaimsProto.Claim value) {
+        if (claimBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claim_ != null &&
+            claim_ != com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance()) {
+            getClaimBuilder().mergeFrom(value);
+          } else {
+            claim_ = value;
+          }
+        } else {
+          claimBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public Builder clearClaim() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claim_ = null;
+        if (claimBuilder_ != null) {
+          claimBuilder_.dispose();
+          claimBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder getClaimBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getClaimFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder getClaimOrBuilder() {
+        if (claimBuilder_ != null) {
+          return claimBuilder_.getMessageOrBuilder();
+        } else {
+          return claim_ == null ?
+              com.ixo.claims.v1beta1.ClaimsProto.Claim.getDefaultInstance() : claim_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Claim claim = 1 [json_name = "claim"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Claim, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder, com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder> 
+          getClaimFieldBuilder() {
+        if (claimBuilder_ == null) {
+          claimBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.ClaimsProto.Claim, com.ixo.claims.v1beta1.ClaimsProto.Claim.Builder, com.ixo.claims.v1beta1.ClaimsProto.ClaimOrBuilder>(
+                  getClaim(),
+                  getParentForChildren(),
+                  isClean());
+          claim_ = null;
+        }
+        return claimBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.ClaimUpdatedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.ClaimUpdatedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimUpdatedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimUpdatedEvent>() {
+      @java.lang.Override
+      public ClaimUpdatedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimUpdatedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimUpdatedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.ClaimUpdatedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimEvaluatedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.ClaimEvaluatedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+     * @return Whether the evaluation field is set.
+     */
+    boolean hasEvaluation();
+    /**
+     * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+     * @return The evaluation.
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.Evaluation getEvaluation();
+    /**
+     * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.EvaluationOrBuilder getEvaluationOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClaimEvaluatedEvent is an event triggered on a Claim evaluation
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.ClaimEvaluatedEvent}
+   */
+  public static final class ClaimEvaluatedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.ClaimEvaluatedEvent)
+      ClaimEvaluatedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimEvaluatedEvent.newBuilder() to construct.
+    private ClaimEvaluatedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimEvaluatedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimEvaluatedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.Builder.class);
+    }
+
+    public static final int EVALUATION_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.ClaimsProto.Evaluation evaluation_;
+    /**
+     * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+     * @return Whether the evaluation field is set.
+     */
+    @java.lang.Override
+    public boolean hasEvaluation() {
+      return evaluation_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+     * @return The evaluation.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.Evaluation getEvaluation() {
+      return evaluation_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Evaluation.getDefaultInstance() : evaluation_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.EvaluationOrBuilder getEvaluationOrBuilder() {
+      return evaluation_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Evaluation.getDefaultInstance() : evaluation_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (evaluation_ != null) {
+        output.writeMessage(1, getEvaluation());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (evaluation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEvaluation());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent other = (com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent) obj;
+
+      if (hasEvaluation() != other.hasEvaluation()) return false;
+      if (hasEvaluation()) {
+        if (!getEvaluation()
+            .equals(other.getEvaluation())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEvaluation()) {
+        hash = (37 * hash) + EVALUATION_FIELD_NUMBER;
+        hash = (53 * hash) + getEvaluation().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimEvaluatedEvent is an event triggered on a Claim evaluation
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.ClaimEvaluatedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.ClaimEvaluatedEvent)
+        com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        evaluation_ = null;
+        if (evaluationBuilder_ != null) {
+          evaluationBuilder_.dispose();
+          evaluationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent result = new com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.evaluation_ = evaluationBuilder_ == null
+              ? evaluation_
+              : evaluationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent.getDefaultInstance()) return this;
+        if (other.hasEvaluation()) {
+          mergeEvaluation(other.getEvaluation());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getEvaluationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.ClaimsProto.Evaluation evaluation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Evaluation, com.ixo.claims.v1beta1.ClaimsProto.Evaluation.Builder, com.ixo.claims.v1beta1.ClaimsProto.EvaluationOrBuilder> evaluationBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       * @return Whether the evaluation field is set.
+       */
+      public boolean hasEvaluation() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       * @return The evaluation.
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Evaluation getEvaluation() {
+        if (evaluationBuilder_ == null) {
+          return evaluation_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Evaluation.getDefaultInstance() : evaluation_;
+        } else {
+          return evaluationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      public Builder setEvaluation(com.ixo.claims.v1beta1.ClaimsProto.Evaluation value) {
+        if (evaluationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          evaluation_ = value;
+        } else {
+          evaluationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      public Builder setEvaluation(
+          com.ixo.claims.v1beta1.ClaimsProto.Evaluation.Builder builderForValue) {
+        if (evaluationBuilder_ == null) {
+          evaluation_ = builderForValue.build();
+        } else {
+          evaluationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      public Builder mergeEvaluation(com.ixo.claims.v1beta1.ClaimsProto.Evaluation value) {
+        if (evaluationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            evaluation_ != null &&
+            evaluation_ != com.ixo.claims.v1beta1.ClaimsProto.Evaluation.getDefaultInstance()) {
+            getEvaluationBuilder().mergeFrom(value);
+          } else {
+            evaluation_ = value;
+          }
+        } else {
+          evaluationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      public Builder clearEvaluation() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        evaluation_ = null;
+        if (evaluationBuilder_ != null) {
+          evaluationBuilder_.dispose();
+          evaluationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Evaluation.Builder getEvaluationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getEvaluationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.EvaluationOrBuilder getEvaluationOrBuilder() {
+        if (evaluationBuilder_ != null) {
+          return evaluationBuilder_.getMessageOrBuilder();
+        } else {
+          return evaluation_ == null ?
+              com.ixo.claims.v1beta1.ClaimsProto.Evaluation.getDefaultInstance() : evaluation_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Evaluation evaluation = 1 [json_name = "evaluation"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Evaluation, com.ixo.claims.v1beta1.ClaimsProto.Evaluation.Builder, com.ixo.claims.v1beta1.ClaimsProto.EvaluationOrBuilder> 
+          getEvaluationFieldBuilder() {
+        if (evaluationBuilder_ == null) {
+          evaluationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.ClaimsProto.Evaluation, com.ixo.claims.v1beta1.ClaimsProto.Evaluation.Builder, com.ixo.claims.v1beta1.ClaimsProto.EvaluationOrBuilder>(
+                  getEvaluation(),
+                  getParentForChildren(),
+                  isClean());
+          evaluation_ = null;
+        }
+        return evaluationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.ClaimEvaluatedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.ClaimEvaluatedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimEvaluatedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimEvaluatedEvent>() {
+      @java.lang.Override
+      public ClaimEvaluatedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimEvaluatedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimEvaluatedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.ClaimEvaluatedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimDisputedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.ClaimDisputedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+     * @return Whether the dispute field is set.
+     */
+    boolean hasDispute();
+    /**
+     * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+     * @return The dispute.
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.Dispute getDispute();
+    /**
+     * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+     */
+    com.ixo.claims.v1beta1.ClaimsProto.DisputeOrBuilder getDisputeOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClaimDisputedEvent is an event triggered on a Claim dispute
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.ClaimDisputedEvent}
+   */
+  public static final class ClaimDisputedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.ClaimDisputedEvent)
+      ClaimDisputedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimDisputedEvent.newBuilder() to construct.
+    private ClaimDisputedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimDisputedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimDisputedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.Builder.class);
+    }
+
+    public static final int DISPUTE_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.ClaimsProto.Dispute dispute_;
+    /**
+     * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+     * @return Whether the dispute field is set.
+     */
+    @java.lang.Override
+    public boolean hasDispute() {
+      return dispute_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+     * @return The dispute.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.Dispute getDispute() {
+      return dispute_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Dispute.getDefaultInstance() : dispute_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.ClaimsProto.DisputeOrBuilder getDisputeOrBuilder() {
+      return dispute_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Dispute.getDefaultInstance() : dispute_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dispute_ != null) {
+        output.writeMessage(1, getDispute());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dispute_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDispute());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent other = (com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent) obj;
+
+      if (hasDispute() != other.hasDispute()) return false;
+      if (hasDispute()) {
+        if (!getDispute()
+            .equals(other.getDispute())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDispute()) {
+        hash = (37 * hash) + DISPUTE_FIELD_NUMBER;
+        hash = (53 * hash) + getDispute().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimDisputedEvent is an event triggered on a Claim dispute
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.ClaimDisputedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.ClaimDisputedEvent)
+        com.ixo.claims.v1beta1.EventProto.ClaimDisputedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.class, com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dispute_ = null;
+        if (disputeBuilder_ != null) {
+          disputeBuilder_.dispose();
+          disputeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent result = new com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dispute_ = disputeBuilder_ == null
+              ? dispute_
+              : disputeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent.getDefaultInstance()) return this;
+        if (other.hasDispute()) {
+          mergeDispute(other.getDispute());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDisputeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.ClaimsProto.Dispute dispute_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Dispute, com.ixo.claims.v1beta1.ClaimsProto.Dispute.Builder, com.ixo.claims.v1beta1.ClaimsProto.DisputeOrBuilder> disputeBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       * @return Whether the dispute field is set.
+       */
+      public boolean hasDispute() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       * @return The dispute.
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Dispute getDispute() {
+        if (disputeBuilder_ == null) {
+          return dispute_ == null ? com.ixo.claims.v1beta1.ClaimsProto.Dispute.getDefaultInstance() : dispute_;
+        } else {
+          return disputeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      public Builder setDispute(com.ixo.claims.v1beta1.ClaimsProto.Dispute value) {
+        if (disputeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dispute_ = value;
+        } else {
+          disputeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      public Builder setDispute(
+          com.ixo.claims.v1beta1.ClaimsProto.Dispute.Builder builderForValue) {
+        if (disputeBuilder_ == null) {
+          dispute_ = builderForValue.build();
+        } else {
+          disputeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      public Builder mergeDispute(com.ixo.claims.v1beta1.ClaimsProto.Dispute value) {
+        if (disputeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            dispute_ != null &&
+            dispute_ != com.ixo.claims.v1beta1.ClaimsProto.Dispute.getDefaultInstance()) {
+            getDisputeBuilder().mergeFrom(value);
+          } else {
+            dispute_ = value;
+          }
+        } else {
+          disputeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      public Builder clearDispute() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dispute_ = null;
+        if (disputeBuilder_ != null) {
+          disputeBuilder_.dispose();
+          disputeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.Dispute.Builder getDisputeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDisputeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      public com.ixo.claims.v1beta1.ClaimsProto.DisputeOrBuilder getDisputeOrBuilder() {
+        if (disputeBuilder_ != null) {
+          return disputeBuilder_.getMessageOrBuilder();
+        } else {
+          return dispute_ == null ?
+              com.ixo.claims.v1beta1.ClaimsProto.Dispute.getDefaultInstance() : dispute_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.Dispute dispute = 1 [json_name = "dispute"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.ClaimsProto.Dispute, com.ixo.claims.v1beta1.ClaimsProto.Dispute.Builder, com.ixo.claims.v1beta1.ClaimsProto.DisputeOrBuilder> 
+          getDisputeFieldBuilder() {
+        if (disputeBuilder_ == null) {
+          disputeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.ClaimsProto.Dispute, com.ixo.claims.v1beta1.ClaimsProto.Dispute.Builder, com.ixo.claims.v1beta1.ClaimsProto.DisputeOrBuilder>(
+                  getDispute(),
+                  getParentForChildren(),
+                  isClean());
+          dispute_ = null;
+        }
+        return disputeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.ClaimDisputedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.ClaimDisputedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimDisputedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimDisputedEvent>() {
+      @java.lang.Override
+      public ClaimDisputedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimDisputedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimDisputedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.ClaimDisputedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentWithdrawnEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.PaymentWithdrawnEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return Whether the withdraw field is set.
+     */
+    boolean hasWithdraw();
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return The withdraw.
+     */
+    com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints getWithdraw();
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     */
+    com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder getWithdrawOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClaimDisputedEvent is an event triggered on a Claim dispute
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.PaymentWithdrawnEvent}
+   */
+  public static final class PaymentWithdrawnEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.PaymentWithdrawnEvent)
+      PaymentWithdrawnEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentWithdrawnEvent.newBuilder() to construct.
+    private PaymentWithdrawnEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentWithdrawnEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentWithdrawnEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.class, com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.Builder.class);
+    }
+
+    public static final int WITHDRAW_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints withdraw_;
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return Whether the withdraw field is set.
+     */
+    @java.lang.Override
+    public boolean hasWithdraw() {
+      return withdraw_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return The withdraw.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints getWithdraw() {
+      return withdraw_ == null ? com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder getWithdrawOrBuilder() {
+      return withdraw_ == null ? com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (withdraw_ != null) {
+        output.writeMessage(1, getWithdraw());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (withdraw_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getWithdraw());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent other = (com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent) obj;
+
+      if (hasWithdraw() != other.hasWithdraw()) return false;
+      if (hasWithdraw()) {
+        if (!getWithdraw()
+            .equals(other.getWithdraw())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWithdraw()) {
+        hash = (37 * hash) + WITHDRAW_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdraw().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimDisputedEvent is an event triggered on a Claim dispute
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.PaymentWithdrawnEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.PaymentWithdrawnEvent)
+        com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.class, com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        withdraw_ = null;
+        if (withdrawBuilder_ != null) {
+          withdrawBuilder_.dispose();
+          withdrawBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent build() {
+        com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent result = new com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.withdraw_ = withdrawBuilder_ == null
+              ? withdraw_
+              : withdrawBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent.getDefaultInstance()) return this;
+        if (other.hasWithdraw()) {
+          mergeWithdraw(other.getWithdraw());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getWithdrawFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints withdraw_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder> withdrawBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       * @return Whether the withdraw field is set.
+       */
+      public boolean hasWithdraw() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       * @return The withdraw.
+       */
+      public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints getWithdraw() {
+        if (withdrawBuilder_ == null) {
+          return withdraw_ == null ? com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+        } else {
+          return withdrawBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder setWithdraw(com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints value) {
+        if (withdrawBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          withdraw_ = value;
+        } else {
+          withdrawBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder setWithdraw(
+          com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder builderForValue) {
+        if (withdrawBuilder_ == null) {
+          withdraw_ = builderForValue.build();
+        } else {
+          withdrawBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder mergeWithdraw(com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints value) {
+        if (withdrawBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            withdraw_ != null &&
+            withdraw_ != com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance()) {
+            getWithdrawBuilder().mergeFrom(value);
+          } else {
+            withdraw_ = value;
+          }
+        } else {
+          withdrawBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder clearWithdraw() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        withdraw_ = null;
+        if (withdrawBuilder_ != null) {
+          withdrawBuilder_.dispose();
+          withdrawBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder getWithdrawBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getWithdrawFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder getWithdrawOrBuilder() {
+        if (withdrawBuilder_ != null) {
+          return withdrawBuilder_.getMessageOrBuilder();
+        } else {
+          return withdraw_ == null ?
+              com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder> 
+          getWithdrawFieldBuilder() {
+        if (withdrawBuilder_ == null) {
+          withdrawBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder>(
+                  getWithdraw(),
+                  getParentForChildren(),
+                  isClean());
+          withdraw_ = null;
+        }
+        return withdrawBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.PaymentWithdrawnEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.PaymentWithdrawnEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentWithdrawnEvent>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentWithdrawnEvent>() {
+      @java.lang.Override
+      public PaymentWithdrawnEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentWithdrawnEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentWithdrawnEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawnEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PaymentWithdrawCreatedEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.claims.v1beta1.PaymentWithdrawCreatedEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return Whether the withdraw field is set.
+     */
+    boolean hasWithdraw();
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return The withdraw.
+     */
+    com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints getWithdraw();
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     */
+    com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder getWithdrawOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClaimDisputedEvent is an event triggered on a Claim dispute
+   * </pre>
+   *
+   * Protobuf type {@code ixo.claims.v1beta1.PaymentWithdrawCreatedEvent}
+   */
+  public static final class PaymentWithdrawCreatedEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.claims.v1beta1.PaymentWithdrawCreatedEvent)
+      PaymentWithdrawCreatedEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PaymentWithdrawCreatedEvent.newBuilder() to construct.
+    private PaymentWithdrawCreatedEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PaymentWithdrawCreatedEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PaymentWithdrawCreatedEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.class, com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.Builder.class);
+    }
+
+    public static final int WITHDRAW_FIELD_NUMBER = 1;
+    private com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints withdraw_;
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return Whether the withdraw field is set.
+     */
+    @java.lang.Override
+    public boolean hasWithdraw() {
+      return withdraw_ != null;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     * @return The withdraw.
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints getWithdraw() {
+      return withdraw_ == null ? com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+    }
+    /**
+     * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder getWithdrawOrBuilder() {
+      return withdraw_ == null ? com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (withdraw_ != null) {
+        output.writeMessage(1, getWithdraw());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (withdraw_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getWithdraw());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent)) {
+        return super.equals(obj);
+      }
+      com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent other = (com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent) obj;
+
+      if (hasWithdraw() != other.hasWithdraw()) return false;
+      if (hasWithdraw()) {
+        if (!getWithdraw()
+            .equals(other.getWithdraw())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWithdraw()) {
+        hash = (37 * hash) + WITHDRAW_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdraw().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimDisputedEvent is an event triggered on a Claim dispute
+     * </pre>
+     *
+     * Protobuf type {@code ixo.claims.v1beta1.PaymentWithdrawCreatedEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.claims.v1beta1.PaymentWithdrawCreatedEvent)
+        com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.class, com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.Builder.class);
+      }
+
+      // Construct using com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        withdraw_ = null;
+        if (withdrawBuilder_ != null) {
+          withdrawBuilder_.dispose();
+          withdrawBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.claims.v1beta1.EventProto.internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent getDefaultInstanceForType() {
+        return com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent build() {
+        com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent buildPartial() {
+        com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent result = new com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.withdraw_ = withdrawBuilder_ == null
+              ? withdraw_
+              : withdrawBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent) {
+          return mergeFrom((com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent other) {
+        if (other == com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent.getDefaultInstance()) return this;
+        if (other.hasWithdraw()) {
+          mergeWithdraw(other.getWithdraw());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getWithdrawFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints withdraw_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder> withdrawBuilder_;
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       * @return Whether the withdraw field is set.
+       */
+      public boolean hasWithdraw() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       * @return The withdraw.
+       */
+      public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints getWithdraw() {
+        if (withdrawBuilder_ == null) {
+          return withdraw_ == null ? com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+        } else {
+          return withdrawBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder setWithdraw(com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints value) {
+        if (withdrawBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          withdraw_ = value;
+        } else {
+          withdrawBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder setWithdraw(
+          com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder builderForValue) {
+        if (withdrawBuilder_ == null) {
+          withdraw_ = builderForValue.build();
+        } else {
+          withdrawBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder mergeWithdraw(com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints value) {
+        if (withdrawBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            withdraw_ != null &&
+            withdraw_ != com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance()) {
+            getWithdrawBuilder().mergeFrom(value);
+          } else {
+            withdraw_ = value;
+          }
+        } else {
+          withdrawBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public Builder clearWithdraw() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        withdraw_ = null;
+        if (withdrawBuilder_ != null) {
+          withdrawBuilder_.dispose();
+          withdrawBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder getWithdrawBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getWithdrawFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      public com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder getWithdrawOrBuilder() {
+        if (withdrawBuilder_ != null) {
+          return withdrawBuilder_.getMessageOrBuilder();
+        } else {
+          return withdraw_ == null ?
+              com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.getDefaultInstance() : withdraw_;
+        }
+      }
+      /**
+       * <code>.ixo.claims.v1beta1.WithdrawPaymentConstraints withdraw = 1 [json_name = "withdraw"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder> 
+          getWithdrawFieldBuilder() {
+        if (withdrawBuilder_ == null) {
+          withdrawBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraints.Builder, com.ixo.claims.v1beta1.AuthzProto.WithdrawPaymentConstraintsOrBuilder>(
+                  getWithdraw(),
+                  getParentForChildren(),
+                  isClean());
+          withdraw_ = null;
+        }
+        return withdrawBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.claims.v1beta1.PaymentWithdrawCreatedEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.claims.v1beta1.PaymentWithdrawCreatedEvent)
+    private static final com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent();
+    }
+
+    public static com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PaymentWithdrawCreatedEvent>
+        PARSER = new com.google.protobuf.AbstractParser<PaymentWithdrawCreatedEvent>() {
+      @java.lang.Override
+      public PaymentWithdrawCreatedEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PaymentWithdrawCreatedEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PaymentWithdrawCreatedEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.claims.v1beta1.EventProto.PaymentWithdrawCreatedEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_CollectionCreatedEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_CollectionUpdatedEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_ClaimSubmittedEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_ClaimUpdatedEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_ClaimEvaluatedEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_ClaimDisputedEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_PaymentWithdrawnEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_claims_v1beta1_PaymentWithdrawCreatedEvent_fieldAccessorTable;
 
@@ -83,13 +4947,12 @@ public final class EventProto {
       "s.v1beta1.WithdrawPaymentConstraintsR\010wi" +
       "thdraw\"i\n\033PaymentWithdrawCreatedEvent\022J\n" +
       "\010withdraw\030\001 \001(\0132..ixo.claims.v1beta1.Wit" +
-      "hdrawPaymentConstraintsR\010withdrawB\306\001\n\026co" +
-      "m.ixo.claims.v1beta1B\nEventProtoP\001Z6gith" +
-      "ub.com/ixofoundation/ixo-blockchain/x/cl" +
-      "aims/types\242\002\003ICX\252\002\022Ixo.Claims.V1beta1\312\002\022" +
-      "Ixo\\Claims\\V1beta1\342\002\036Ixo\\Claims\\V1beta1\\" +
-      "GPBMetadata\352\002\024Ixo::Claims::V1beta1b\006prot" +
-      "o3"
+      "hdrawPaymentConstraintsR\010withdrawB\304\001\n\026co" +
+      "m.ixo.claims.v1beta1B\nEventProtoZ6github" +
+      ".com/ixofoundation/ixo-blockchain/x/clai" +
+      "ms/types\242\002\003ICX\252\002\022Ixo.Claims.V1beta1\312\002\022Ix" +
+      "o\\Claims\\V1beta1\342\002\036Ixo\\Claims\\V1beta1\\GP" +
+      "BMetadata\352\002\024Ixo::Claims::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

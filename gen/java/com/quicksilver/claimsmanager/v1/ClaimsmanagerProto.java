@@ -14,19 +14,2576 @@ public final class ClaimsmanagerProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code quicksilver.claimsmanager.v1.ClaimType}
+   */
+  public enum ClaimType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Undefined action (per protobuf spec)
+     * </pre>
+     *
+     * <code>ClaimTypeUndefined = 0;</code>
+     */
+    ClaimTypeUndefined(0),
+    /**
+     * <code>ClaimTypeLiquidToken = 1;</code>
+     */
+    ClaimTypeLiquidToken(1),
+    /**
+     * <code>ClaimTypeOsmosisPool = 2;</code>
+     */
+    ClaimTypeOsmosisPool(2),
+    /**
+     * <code>ClaimTypeCrescentPool = 3;</code>
+     */
+    ClaimTypeCrescentPool(3),
+    /**
+     * <code>ClaimTypeSifchainPool = 4;</code>
+     */
+    ClaimTypeSifchainPool(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Undefined action (per protobuf spec)
+     * </pre>
+     *
+     * <code>ClaimTypeUndefined = 0;</code>
+     */
+    public static final int ClaimTypeUndefined_VALUE = 0;
+    /**
+     * <code>ClaimTypeLiquidToken = 1;</code>
+     */
+    public static final int ClaimTypeLiquidToken_VALUE = 1;
+    /**
+     * <code>ClaimTypeOsmosisPool = 2;</code>
+     */
+    public static final int ClaimTypeOsmosisPool_VALUE = 2;
+    /**
+     * <code>ClaimTypeCrescentPool = 3;</code>
+     */
+    public static final int ClaimTypeCrescentPool_VALUE = 3;
+    /**
+     * <code>ClaimTypeSifchainPool = 4;</code>
+     */
+    public static final int ClaimTypeSifchainPool_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ClaimType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ClaimType forNumber(int value) {
+      switch (value) {
+        case 0: return ClaimTypeUndefined;
+        case 1: return ClaimTypeLiquidToken;
+        case 2: return ClaimTypeOsmosisPool;
+        case 3: return ClaimTypeCrescentPool;
+        case 4: return ClaimTypeSifchainPool;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ClaimType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ClaimType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ClaimType>() {
+            public ClaimType findValueByNumber(int number) {
+              return ClaimType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ClaimType[] VALUES = values();
+
+    public static ClaimType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ClaimType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:quicksilver.claimsmanager.v1.ClaimType)
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.claimsmanager.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the claimsmanager module.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.claimsmanager.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.claimsmanager.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.class, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params other = (com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the claimsmanager module.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.claimsmanager.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.claimsmanager.v1.Params)
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.class, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.Builder.class);
+      }
+
+      // Construct using com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params getDefaultInstanceForType() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params build() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params buildPartial() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params result = new com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params) {
+          return mergeFrom((com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params other) {
+        if (other == com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.claimsmanager.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.claimsmanager.v1.Params)
+    private static final com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params();
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.claimsmanager.v1.Claim)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The userAddress.
+     */
+    java.lang.String getUserAddress();
+    /**
+     * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for userAddress.
+     */
+    com.google.protobuf.ByteString
+        getUserAddressBytes();
+
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+     * @return The enum numeric value on the wire for module.
+     */
+    int getModuleValue();
+    /**
+     * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+     * @return The module.
+     */
+    com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType getModule();
+
+    /**
+     * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+     * @return The sourceChainId.
+     */
+    java.lang.String getSourceChainId();
+    /**
+     * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+     * @return The bytes for sourceChainId.
+     */
+    com.google.protobuf.ByteString
+        getSourceChainIdBytes();
+
+    /**
+     * <code>uint64 amount = 5 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * Claim define the users claim for holding assets within a given zone.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.claimsmanager.v1.Claim}
+   */
+  public static final class Claim extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.claimsmanager.v1.Claim)
+      ClaimOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Claim.newBuilder() to construct.
+    private Claim(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Claim() {
+      userAddress_ = "";
+      chainId_ = "";
+      module_ = 0;
+      sourceChainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Claim();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Claim_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Claim_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.class, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder.class);
+    }
+
+    public static final int USER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userAddress_ = "";
+    /**
+     * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The userAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getUserAddress() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for userAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserAddressBytes() {
+      java.lang.Object ref = userAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 3;
+    private int module_ = 0;
+    /**
+     * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+     * @return The enum numeric value on the wire for module.
+     */
+    @java.lang.Override public int getModuleValue() {
+      return module_;
+    }
+    /**
+     * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType getModule() {
+      com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType result = com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType.forNumber(module_);
+      return result == null ? com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCE_CHAIN_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sourceChainId_ = "";
+    /**
+     * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+     * @return The sourceChainId.
+     */
+    @java.lang.Override
+    public java.lang.String getSourceChainId() {
+      java.lang.Object ref = sourceChainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceChainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+     * @return The bytes for sourceChainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceChainIdBytes() {
+      java.lang.Object ref = sourceChainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceChainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    private long amount_ = 0L;
+    /**
+     * <code>uint64 amount = 5 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
+      }
+      if (module_ != com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType.ClaimTypeUndefined.getNumber()) {
+        output.writeEnum(3, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceChainId_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(5, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
+      }
+      if (module_ != com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType.ClaimTypeUndefined.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceChainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sourceChainId_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim other = (com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim) obj;
+
+      if (!getUserAddress()
+          .equals(other.getUserAddress())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (module_ != other.module_) return false;
+      if (!getSourceChainId()
+          .equals(other.getSourceChainId())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getUserAddress().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + module_;
+      hash = (37 * hash) + SOURCE_CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSourceChainId().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Claim define the users claim for holding assets within a given zone.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.claimsmanager.v1.Claim}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.claimsmanager.v1.Claim)
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Claim_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Claim_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.class, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.Builder.class);
+      }
+
+      // Construct using com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        userAddress_ = "";
+        chainId_ = "";
+        module_ = 0;
+        sourceChainId_ = "";
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Claim_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim getDefaultInstanceForType() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim build() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim buildPartial() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim result = new com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userAddress_ = userAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sourceChainId_ = sourceChainId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim) {
+          return mergeFrom((com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim other) {
+        if (other == com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim.getDefaultInstance()) return this;
+        if (!other.getUserAddress().isEmpty()) {
+          userAddress_ = other.userAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.module_ != 0) {
+          setModuleValue(other.getModuleValue());
+        }
+        if (!other.getSourceChainId().isEmpty()) {
+          sourceChainId_ = other.sourceChainId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                userAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                module_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                sourceChainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userAddress_ = "";
+      /**
+       * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The userAddress.
+       */
+      public java.lang.String getUserAddress() {
+        java.lang.Object ref = userAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for userAddress.
+       */
+      public com.google.protobuf.ByteString
+          getUserAddressBytes() {
+        java.lang.Object ref = userAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserAddress() {
+        userAddress_ = getDefaultInstance().getUserAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_address = 1 [json_name = "userAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for userAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int module_ = 0;
+      /**
+       * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+       * @return The enum numeric value on the wire for module.
+       */
+      @java.lang.Override public int getModuleValue() {
+        return module_;
+      }
+      /**
+       * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+       * @param value The enum numeric value on the wire for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleValue(int value) {
+        module_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+       * @return The module.
+       */
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType getModule() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType result = com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType.forNumber(module_);
+        return result == null ? com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ClaimType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        module_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.claimsmanager.v1.ClaimType module = 3 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        module_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sourceChainId_ = "";
+      /**
+       * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+       * @return The sourceChainId.
+       */
+      public java.lang.String getSourceChainId() {
+        java.lang.Object ref = sourceChainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sourceChainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+       * @return The bytes for sourceChainId.
+       */
+      public com.google.protobuf.ByteString
+          getSourceChainIdBytes() {
+        java.lang.Object ref = sourceChainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sourceChainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+       * @param value The sourceChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sourceChainId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceChainId() {
+        sourceChainId_ = getDefaultInstance().getSourceChainId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source_chain_id = 4 [json_name = "sourceChainId"];</code>
+       * @param value The bytes for sourceChainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sourceChainId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <code>uint64 amount = 5 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>uint64 amount = 5 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 amount = 5 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.claimsmanager.v1.Claim)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.claimsmanager.v1.Claim)
+    private static final com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim();
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Claim>
+        PARSER = new com.google.protobuf.AbstractParser<Claim>() {
+      @java.lang.Override
+      public Claim parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Claim> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Claim> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Claim getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.claimsmanager.v1.Proof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    com.google.protobuf.ByteString getKey();
+
+    /**
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+     * @return Whether the proofOps field is set.
+     */
+    boolean hasProofOps();
+    /**
+     * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+     * @return The proofOps.
+     */
+    com.tendermint.crypto.ProofProto.ProofOps getProofOps();
+    /**
+     * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+     */
+    com.tendermint.crypto.ProofProto.ProofOpsOrBuilder getProofOpsOrBuilder();
+
+    /**
+     * <code>int64 height = 4 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+     * @return The proofType.
+     */
+    java.lang.String getProofType();
+    /**
+     * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+     * @return The bytes for proofType.
+     */
+    com.google.protobuf.ByteString
+        getProofTypeBytes();
+  }
+  /**
+   * <pre>
+   * Proof defines a type used to cryptographically prove a claim.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.claimsmanager.v1.Proof}
+   */
+  public static final class Proof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.claimsmanager.v1.Proof)
+      ProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Proof.newBuilder() to construct.
+    private Proof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Proof() {
+      key_ = com.google.protobuf.ByteString.EMPTY;
+      data_ = com.google.protobuf.ByteString.EMPTY;
+      proofType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Proof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Proof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Proof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.class, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getKey() {
+      return key_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    public static final int PROOF_OPS_FIELD_NUMBER = 3;
+    private com.tendermint.crypto.ProofProto.ProofOps proofOps_;
+    /**
+     * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+     * @return Whether the proofOps field is set.
+     */
+    @java.lang.Override
+    public boolean hasProofOps() {
+      return proofOps_ != null;
+    }
+    /**
+     * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+     * @return The proofOps.
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.ProofOps getProofOps() {
+      return proofOps_ == null ? com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proofOps_;
+    }
+    /**
+     * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.ProofOpsOrBuilder getProofOpsOrBuilder() {
+      return proofOps_ == null ? com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proofOps_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 4;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 4 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int PROOF_TYPE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proofType_ = "";
+    /**
+     * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+     * @return The proofType.
+     */
+    @java.lang.Override
+    public java.lang.String getProofType() {
+      java.lang.Object ref = proofType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proofType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+     * @return The bytes for proofType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProofTypeBytes() {
+      java.lang.Object ref = proofType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proofType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!key_.isEmpty()) {
+        output.writeBytes(1, key_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      if (proofOps_ != null) {
+        output.writeMessage(3, getProofOps());
+      }
+      if (height_ != 0L) {
+        output.writeInt64(4, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proofType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, proofType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!key_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, key_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      if (proofOps_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getProofOps());
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proofType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, proofType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof other = (com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (hasProofOps() != other.hasProofOps()) return false;
+      if (hasProofOps()) {
+        if (!getProofOps()
+            .equals(other.getProofOps())) return false;
+      }
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getProofType()
+          .equals(other.getProofType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      if (hasProofOps()) {
+        hash = (37 * hash) + PROOF_OPS_FIELD_NUMBER;
+        hash = (53 * hash) + getProofOps().hashCode();
+      }
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + PROOF_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getProofType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Proof defines a type used to cryptographically prove a claim.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.claimsmanager.v1.Proof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.claimsmanager.v1.Proof)
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.ProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Proof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Proof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.class, com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.Builder.class);
+      }
+
+      // Construct using com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = com.google.protobuf.ByteString.EMPTY;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        proofOps_ = null;
+        if (proofOpsBuilder_ != null) {
+          proofOpsBuilder_.dispose();
+          proofOpsBuilder_ = null;
+        }
+        height_ = 0L;
+        proofType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.internal_static_quicksilver_claimsmanager_v1_Proof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof getDefaultInstanceForType() {
+        return com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof build() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof buildPartial() {
+        com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof result = new com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.proofOps_ = proofOpsBuilder_ == null
+              ? proofOps_
+              : proofOpsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.proofType_ = proofType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof) {
+          return mergeFrom((com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof other) {
+        if (other == com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof.getDefaultInstance()) return this;
+        if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
+          setKey(other.getKey());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        if (other.hasProofOps()) {
+          mergeProofOps(other.getProofOps());
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (!other.getProofType().isEmpty()) {
+          proofType_ = other.proofType_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getProofOpsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                proofType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getKey() {
+        return key_;
+      }
+      /**
+       * <code>bytes key = 1 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes key = 1 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private com.tendermint.crypto.ProofProto.ProofOps proofOps_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.ProofOps, com.tendermint.crypto.ProofProto.ProofOps.Builder, com.tendermint.crypto.ProofProto.ProofOpsOrBuilder> proofOpsBuilder_;
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       * @return Whether the proofOps field is set.
+       */
+      public boolean hasProofOps() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       * @return The proofOps.
+       */
+      public com.tendermint.crypto.ProofProto.ProofOps getProofOps() {
+        if (proofOpsBuilder_ == null) {
+          return proofOps_ == null ? com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proofOps_;
+        } else {
+          return proofOpsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      public Builder setProofOps(com.tendermint.crypto.ProofProto.ProofOps value) {
+        if (proofOpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proofOps_ = value;
+        } else {
+          proofOpsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      public Builder setProofOps(
+          com.tendermint.crypto.ProofProto.ProofOps.Builder builderForValue) {
+        if (proofOpsBuilder_ == null) {
+          proofOps_ = builderForValue.build();
+        } else {
+          proofOpsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      public Builder mergeProofOps(com.tendermint.crypto.ProofProto.ProofOps value) {
+        if (proofOpsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            proofOps_ != null &&
+            proofOps_ != com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance()) {
+            getProofOpsBuilder().mergeFrom(value);
+          } else {
+            proofOps_ = value;
+          }
+        } else {
+          proofOpsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      public Builder clearProofOps() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        proofOps_ = null;
+        if (proofOpsBuilder_ != null) {
+          proofOpsBuilder_.dispose();
+          proofOpsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.ProofOps.Builder getProofOpsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getProofOpsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.ProofOpsOrBuilder getProofOpsOrBuilder() {
+        if (proofOpsBuilder_ != null) {
+          return proofOpsBuilder_.getMessageOrBuilder();
+        } else {
+          return proofOps_ == null ?
+              com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proofOps_;
+        }
+      }
+      /**
+       * <code>.tendermint.crypto.ProofOps proof_ops = 3 [json_name = "proof_ops"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.ProofOps, com.tendermint.crypto.ProofProto.ProofOps.Builder, com.tendermint.crypto.ProofProto.ProofOpsOrBuilder> 
+          getProofOpsFieldBuilder() {
+        if (proofOpsBuilder_ == null) {
+          proofOpsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tendermint.crypto.ProofProto.ProofOps, com.tendermint.crypto.ProofProto.ProofOps.Builder, com.tendermint.crypto.ProofProto.ProofOpsOrBuilder>(
+                  getProofOps(),
+                  getParentForChildren(),
+                  isClean());
+          proofOps_ = null;
+        }
+        return proofOpsBuilder_;
+      }
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 4 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 4 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 4 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proofType_ = "";
+      /**
+       * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+       * @return The proofType.
+       */
+      public java.lang.String getProofType() {
+        java.lang.Object ref = proofType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proofType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+       * @return The bytes for proofType.
+       */
+      public com.google.protobuf.ByteString
+          getProofTypeBytes() {
+        java.lang.Object ref = proofType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proofType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+       * @param value The proofType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proofType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProofType() {
+        proofType_ = getDefaultInstance().getProofType();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string proof_type = 5 [json_name = "proof_type"];</code>
+       * @param value The bytes for proofType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProofTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proofType_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.claimsmanager.v1.Proof)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.claimsmanager.v1.Proof)
+    private static final com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof();
+    }
+
+    public static com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Proof>
+        PARSER = new com.google.protobuf.AbstractParser<Proof>() {
+      @java.lang.Override
+      public Proof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Proof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Proof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.claimsmanager.v1.ClaimsmanagerProto.Proof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_claimsmanager_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_claimsmanager_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_claimsmanager_v1_Claim_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_claimsmanager_v1_Claim_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_claimsmanager_v1_Proof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_claimsmanager_v1_Proof_fieldAccessorTable;
 
@@ -56,14 +2613,14 @@ public final class ClaimsmanagerProto {
       "\022\026\n\022ClaimTypeUndefined\020\000\022\030\n\024ClaimTypeLiq" +
       "uidToken\020\001\022\030\n\024ClaimTypeOsmosisPool\020\002\022\031\n\025" +
       "ClaimTypeCrescentPool\020\003\022\031\n\025ClaimTypeSifc" +
-      "hainPool\020\004\032\004\210\243\036\000B\206\002\n com.quicksilver.cla" +
-      "imsmanager.v1B\022ClaimsmanagerProtoP\001Z<git" +
-      "hub.com/ingenuity-build/quicksilver/x/cl" +
-      "aimsmanager/types\242\002\003QCX\252\002\034Quicksilver.Cl" +
-      "aimsmanager.V1\312\002\034Quicksilver\\Claimsmanag" +
-      "er\\V1\342\002(Quicksilver\\Claimsmanager\\V1\\GPB" +
-      "Metadata\352\002\036Quicksilver::Claimsmanager::V" +
-      "1b\006proto3"
+      "hainPool\020\004\032\004\210\243\036\000B\204\002\n com.quicksilver.cla" +
+      "imsmanager.v1B\022ClaimsmanagerProtoZ<githu" +
+      "b.com/ingenuity-build/quicksilver/x/clai" +
+      "msmanager/types\242\002\003QCX\252\002\034Quicksilver.Clai" +
+      "msmanager.V1\312\002\034Quicksilver\\Claimsmanager" +
+      "\\V1\342\002(Quicksilver\\Claimsmanager\\V1\\GPBMe" +
+      "tadata\352\002\036Quicksilver::Claimsmanager::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

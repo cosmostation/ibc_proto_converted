@@ -14,24 +14,2385 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryPrivilegedContractsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.QueryPrivilegedContractsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryPrivilegedContractsResponse is the request type for the
+   * Query/PrivilegedContracts RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.QueryPrivilegedContractsRequest}
+   */
+  public static final class QueryPrivilegedContractsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.QueryPrivilegedContractsRequest)
+      QueryPrivilegedContractsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPrivilegedContractsRequest.newBuilder() to construct.
+    private QueryPrivilegedContractsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPrivilegedContractsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPrivilegedContractsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.class, com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest other = (com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPrivilegedContractsResponse is the request type for the
+     * Query/PrivilegedContracts RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.QueryPrivilegedContractsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.QueryPrivilegedContractsRequest)
+        com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.class, com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest build() {
+        com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest buildPartial() {
+        com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest result = new com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest) {
+          return mergeFrom((com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest other) {
+        if (other == com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.QueryPrivilegedContractsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.QueryPrivilegedContractsRequest)
+    private static final com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest();
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPrivilegedContractsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPrivilegedContractsRequest>() {
+      @java.lang.Override
+      public QueryPrivilegedContractsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPrivilegedContractsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPrivilegedContractsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPrivilegedContractsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.QueryPrivilegedContractsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return A list containing the contracts.
+     */
+    java.util.List<java.lang.String>
+        getContractsList();
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return The count of contracts.
+     */
+    int getContractsCount();
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the element to return.
+     * @return The contracts at the given index.
+     */
+    java.lang.String getContracts(int index);
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contracts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getContractsBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryPrivilegedContractsResponse is the response type for the
+   * Query/PrivilegedContracts RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.QueryPrivilegedContractsResponse}
+   */
+  public static final class QueryPrivilegedContractsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.QueryPrivilegedContractsResponse)
+      QueryPrivilegedContractsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPrivilegedContractsResponse.newBuilder() to construct.
+    private QueryPrivilegedContractsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPrivilegedContractsResponse() {
+      contracts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPrivilegedContractsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.class, com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.Builder.class);
+    }
+
+    public static final int CONTRACTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList contracts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return A list containing the contracts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getContractsList() {
+      return contracts_;
+    }
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return The count of contracts.
+     */
+    public int getContractsCount() {
+      return contracts_.size();
+    }
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the element to return.
+     * @return The contracts at the given index.
+     */
+    public java.lang.String getContracts(int index) {
+      return contracts_.get(index);
+    }
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contracts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getContractsBytes(int index) {
+      return contracts_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contracts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contracts_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contracts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(contracts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getContractsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse other = (com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse) obj;
+
+      if (!getContractsList()
+          .equals(other.getContractsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContractsCount() > 0) {
+        hash = (37 * hash) + CONTRACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryPrivilegedContractsResponse is the response type for the
+     * Query/PrivilegedContracts RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.QueryPrivilegedContractsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.QueryPrivilegedContractsResponse)
+        com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.class, com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contracts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse build() {
+        com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse buildPartial() {
+        com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse result = new com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          contracts_.makeImmutable();
+          result.contracts_ = contracts_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse) {
+          return mergeFrom((com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse other) {
+        if (other == com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse.getDefaultInstance()) return this;
+        if (!other.contracts_.isEmpty()) {
+          if (contracts_.isEmpty()) {
+            contracts_ = other.contracts_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureContractsIsMutable();
+            contracts_.addAll(other.contracts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureContractsIsMutable();
+                contracts_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList contracts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureContractsIsMutable() {
+        if (!contracts_.isModifiable()) {
+          contracts_ = new com.google.protobuf.LazyStringArrayList(contracts_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @return A list containing the contracts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getContractsList() {
+        contracts_.makeImmutable();
+        return contracts_;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @return The count of contracts.
+       */
+      public int getContractsCount() {
+        return contracts_.size();
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param index The index of the element to return.
+       * @return The contracts at the given index.
+       */
+      public java.lang.String getContracts(int index) {
+        return contracts_.get(index);
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the contracts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getContractsBytes(int index) {
+        return contracts_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param index The index to set the value at.
+       * @param value The contracts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContracts(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractsIsMutable();
+        contracts_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param value The contracts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContracts(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractsIsMutable();
+        contracts_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param values The contracts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContracts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureContractsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contracts_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContracts() {
+        contracts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param value The bytes of the contracts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContractsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureContractsIsMutable();
+        contracts_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.QueryPrivilegedContractsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.QueryPrivilegedContractsResponse)
+    private static final com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse();
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPrivilegedContractsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPrivilegedContractsResponse>() {
+      @java.lang.Override
+      public QueryPrivilegedContractsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPrivilegedContractsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPrivilegedContractsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.QueryProto.QueryPrivilegedContractsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryContractsByPrivilegeTypeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+     * @return The privilegeType.
+     */
+    java.lang.String getPrivilegeType();
+    /**
+     * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+     * @return The bytes for privilegeType.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegeTypeBytes();
+  }
+  /**
+   * <pre>
+   * QueryContractsByPrivilegeTypeRequest is the request type for the
+   * Query/ContractsByPrivilegeType RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest}
+   */
+  public static final class QueryContractsByPrivilegeTypeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest)
+      QueryContractsByPrivilegeTypeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryContractsByPrivilegeTypeRequest.newBuilder() to construct.
+    private QueryContractsByPrivilegeTypeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryContractsByPrivilegeTypeRequest() {
+      privilegeType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryContractsByPrivilegeTypeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.class, com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.Builder.class);
+    }
+
+    public static final int PRIVILEGE_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privilegeType_ = "";
+    /**
+     * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+     * @return The privilegeType.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivilegeType() {
+      java.lang.Object ref = privilegeType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privilegeType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+     * @return The bytes for privilegeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivilegeTypeBytes() {
+      java.lang.Object ref = privilegeType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privilegeType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegeType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privilegeType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegeType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privilegeType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest other = (com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest) obj;
+
+      if (!getPrivilegeType()
+          .equals(other.getPrivilegeType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVILEGE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivilegeType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryContractsByPrivilegeTypeRequest is the request type for the
+     * Query/ContractsByPrivilegeType RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest)
+        com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.class, com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        privilegeType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest build() {
+        com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest buildPartial() {
+        com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest result = new com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.privilegeType_ = privilegeType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest) {
+          return mergeFrom((com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest other) {
+        if (other == com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest.getDefaultInstance()) return this;
+        if (!other.getPrivilegeType().isEmpty()) {
+          privilegeType_ = other.privilegeType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                privilegeType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object privilegeType_ = "";
+      /**
+       * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+       * @return The privilegeType.
+       */
+      public java.lang.String getPrivilegeType() {
+        java.lang.Object ref = privilegeType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privilegeType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+       * @return The bytes for privilegeType.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegeTypeBytes() {
+        java.lang.Object ref = privilegeType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privilegeType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+       * @param value The privilegeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        privilegeType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegeType() {
+        privilegeType_ = getDefaultInstance().getPrivilegeType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string privilege_type = 1 [json_name = "privilegeType"];</code>
+       * @param value The bytes for privilegeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        privilegeType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeRequest)
+    private static final com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest();
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryContractsByPrivilegeTypeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryContractsByPrivilegeTypeRequest>() {
+      @java.lang.Override
+      public QueryContractsByPrivilegeTypeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryContractsByPrivilegeTypeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryContractsByPrivilegeTypeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryContractsByPrivilegeTypeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return A list containing the contracts.
+     */
+    java.util.List<java.lang.String>
+        getContractsList();
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return The count of contracts.
+     */
+    int getContractsCount();
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the element to return.
+     * @return The contracts at the given index.
+     */
+    java.lang.String getContracts(int index);
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contracts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getContractsBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryContractsByPrivilegeTypeResponse is the response type for the
+   * Query/ContractsByPrivilegeType RPC method
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse}
+   */
+  public static final class QueryContractsByPrivilegeTypeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse)
+      QueryContractsByPrivilegeTypeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryContractsByPrivilegeTypeResponse.newBuilder() to construct.
+    private QueryContractsByPrivilegeTypeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryContractsByPrivilegeTypeResponse() {
+      contracts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryContractsByPrivilegeTypeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.class, com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.Builder.class);
+    }
+
+    public static final int CONTRACTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList contracts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return A list containing the contracts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getContractsList() {
+      return contracts_;
+    }
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @return The count of contracts.
+     */
+    public int getContractsCount() {
+      return contracts_.size();
+    }
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the element to return.
+     * @return The contracts at the given index.
+     */
+    public java.lang.String getContracts(int index) {
+      return contracts_.get(index);
+    }
+    /**
+     * <pre>
+     * contracts are a set of contract addresses
+     * </pre>
+     *
+     * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contracts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getContractsBytes(int index) {
+      return contracts_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contracts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contracts_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contracts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(contracts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getContractsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse other = (com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse) obj;
+
+      if (!getContractsList()
+          .equals(other.getContractsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContractsCount() > 0) {
+        hash = (37 * hash) + CONTRACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryContractsByPrivilegeTypeResponse is the response type for the
+     * Query/ContractsByPrivilegeType RPC method
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse)
+        com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.class, com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contracts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.QueryProto.internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse build() {
+        com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse buildPartial() {
+        com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse result = new com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          contracts_.makeImmutable();
+          result.contracts_ = contracts_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse) {
+          return mergeFrom((com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse other) {
+        if (other == com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse.getDefaultInstance()) return this;
+        if (!other.contracts_.isEmpty()) {
+          if (contracts_.isEmpty()) {
+            contracts_ = other.contracts_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureContractsIsMutable();
+            contracts_.addAll(other.contracts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureContractsIsMutable();
+                contracts_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList contracts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureContractsIsMutable() {
+        if (!contracts_.isModifiable()) {
+          contracts_ = new com.google.protobuf.LazyStringArrayList(contracts_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @return A list containing the contracts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getContractsList() {
+        contracts_.makeImmutable();
+        return contracts_;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @return The count of contracts.
+       */
+      public int getContractsCount() {
+        return contracts_.size();
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param index The index of the element to return.
+       * @return The contracts at the given index.
+       */
+      public java.lang.String getContracts(int index) {
+        return contracts_.get(index);
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the contracts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getContractsBytes(int index) {
+        return contracts_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param index The index to set the value at.
+       * @param value The contracts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContracts(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractsIsMutable();
+        contracts_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param value The contracts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContracts(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractsIsMutable();
+        contracts_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param values The contracts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContracts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureContractsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contracts_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContracts() {
+        contracts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contracts are a set of contract addresses
+       * </pre>
+       *
+       * <code>repeated string contracts = 1 [json_name = "contracts"];</code>
+       * @param value The bytes of the contracts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContractsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureContractsIsMutable();
+        contracts_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.QueryContractsByPrivilegeTypeResponse)
+    private static final com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse();
+    }
+
+    public static com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryContractsByPrivilegeTypeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryContractsByPrivilegeTypeResponse>() {
+      @java.lang.Override
+      public QueryContractsByPrivilegeTypeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryContractsByPrivilegeTypeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryContractsByPrivilegeTypeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.QueryProto.QueryContractsByPrivilegeTypeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_QueryPrivilegedContractsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_QueryContractsByPrivilegeTypeResponse_fieldAccessorTable;
 
@@ -64,12 +2425,12 @@ public final class QueryProto {
       ";.confio.twasm.v1beta1.QueryContractsByP" +
       "rivilegeTypeResponse\"B\202\323\344\223\002<\022:/tgrade/tw" +
       "asm/v1beta1/contracts/privilege/{privile" +
-      "ge_type}B\300\001\n\030com.confio.twasm.v1beta1B\nQ" +
-      "ueryProtoP\001Z&github.com/confio/tgrade/x/" +
-      "twasm/types\242\002\003CTX\252\002\024Confio.Twasm.V1beta1" +
-      "\312\002\024Confio\\Twasm\\V1beta1\342\002 Confio\\Twasm\\V" +
-      "1beta1\\GPBMetadata\352\002\026Confio::Twasm::V1be" +
-      "ta1b\006proto3"
+      "ge_type}B\276\001\n\030com.confio.twasm.v1beta1B\nQ" +
+      "ueryProtoZ&github.com/confio/tgrade/x/tw" +
+      "asm/types\242\002\003CTX\252\002\024Confio.Twasm.V1beta1\312\002" +
+      "\024Confio\\Twasm\\V1beta1\342\002 Confio\\Twasm\\V1b" +
+      "eta1\\GPBMetadata\352\002\026Confio::Twasm::V1beta" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

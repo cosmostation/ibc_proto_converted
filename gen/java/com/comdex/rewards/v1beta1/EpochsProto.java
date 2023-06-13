@@ -14,9 +14,1147 @@ public final class EpochsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EpochInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.rewards.v1beta1.EpochInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+     * @return The currentEpoch.
+     */
+    long getCurrentEpoch();
+
+    /**
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the currentEpochStartTime field is set.
+     */
+    boolean hasCurrentEpochStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The currentEpochStartTime.
+     */
+    com.google.protobuf.Timestamp getCurrentEpochStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCurrentEpochStartTimeOrBuilder();
+
+    /**
+     * <code>int64 current_epoch_start_height = 6 [json_name = "currentEpochStartHeight"];</code>
+     * @return The currentEpochStartHeight.
+     */
+    long getCurrentEpochStartHeight();
+  }
+  /**
+   * Protobuf type {@code comdex.rewards.v1beta1.EpochInfo}
+   */
+  public static final class EpochInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.rewards.v1beta1.EpochInfo)
+      EpochInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EpochInfo.newBuilder() to construct.
+    private EpochInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EpochInfo() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EpochInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.rewards.v1beta1.EpochsProto.internal_static_comdex_rewards_v1beta1_EpochInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.rewards.v1beta1.EpochsProto.internal_static_comdex_rewards_v1beta1_EpochInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.class, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder.class);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int CURRENT_EPOCH_FIELD_NUMBER = 4;
+    private long currentEpoch_ = 0L;
+    /**
+     * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+     * @return The currentEpoch.
+     */
+    @java.lang.Override
+    public long getCurrentEpoch() {
+      return currentEpoch_;
+    }
+
+    public static final int CURRENT_EPOCH_START_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp currentEpochStartTime_;
+    /**
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the currentEpochStartTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasCurrentEpochStartTime() {
+      return currentEpochStartTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The currentEpochStartTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCurrentEpochStartTime() {
+      return currentEpochStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCurrentEpochStartTimeOrBuilder() {
+      return currentEpochStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+    }
+
+    public static final int CURRENT_EPOCH_START_HEIGHT_FIELD_NUMBER = 6;
+    private long currentEpochStartHeight_ = 0L;
+    /**
+     * <code>int64 current_epoch_start_height = 6 [json_name = "currentEpochStartHeight"];</code>
+     * @return The currentEpochStartHeight.
+     */
+    @java.lang.Override
+    public long getCurrentEpochStartHeight() {
+      return currentEpochStartHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startTime_ != null) {
+        output.writeMessage(2, getStartTime());
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      if (currentEpoch_ != 0L) {
+        output.writeInt64(4, currentEpoch_);
+      }
+      if (currentEpochStartTime_ != null) {
+        output.writeMessage(5, getCurrentEpochStartTime());
+      }
+      if (currentEpochStartHeight_ != 0L) {
+        output.writeInt64(6, currentEpochStartHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStartTime());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      if (currentEpoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, currentEpoch_);
+      }
+      if (currentEpochStartTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCurrentEpochStartTime());
+      }
+      if (currentEpochStartHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, currentEpochStartHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.rewards.v1beta1.EpochsProto.EpochInfo)) {
+        return super.equals(obj);
+      }
+      com.comdex.rewards.v1beta1.EpochsProto.EpochInfo other = (com.comdex.rewards.v1beta1.EpochsProto.EpochInfo) obj;
+
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (getCurrentEpoch()
+          != other.getCurrentEpoch()) return false;
+      if (hasCurrentEpochStartTime() != other.hasCurrentEpochStartTime()) return false;
+      if (hasCurrentEpochStartTime()) {
+        if (!getCurrentEpochStartTime()
+            .equals(other.getCurrentEpochStartTime())) return false;
+      }
+      if (getCurrentEpochStartHeight()
+          != other.getCurrentEpochStartHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (37 * hash) + CURRENT_EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentEpoch());
+      if (hasCurrentEpochStartTime()) {
+        hash = (37 * hash) + CURRENT_EPOCH_START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentEpochStartTime().hashCode();
+      }
+      hash = (37 * hash) + CURRENT_EPOCH_START_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentEpochStartHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.rewards.v1beta1.EpochInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.rewards.v1beta1.EpochInfo)
+        com.comdex.rewards.v1beta1.EpochsProto.EpochInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.rewards.v1beta1.EpochsProto.internal_static_comdex_rewards_v1beta1_EpochInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.rewards.v1beta1.EpochsProto.internal_static_comdex_rewards_v1beta1_EpochInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.class, com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.Builder.class);
+      }
+
+      // Construct using com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        currentEpoch_ = 0L;
+        currentEpochStartTime_ = null;
+        if (currentEpochStartTimeBuilder_ != null) {
+          currentEpochStartTimeBuilder_.dispose();
+          currentEpochStartTimeBuilder_ = null;
+        }
+        currentEpochStartHeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.rewards.v1beta1.EpochsProto.internal_static_comdex_rewards_v1beta1_EpochInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getDefaultInstanceForType() {
+        return com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo build() {
+        com.comdex.rewards.v1beta1.EpochsProto.EpochInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo buildPartial() {
+        com.comdex.rewards.v1beta1.EpochsProto.EpochInfo result = new com.comdex.rewards.v1beta1.EpochsProto.EpochInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.currentEpoch_ = currentEpoch_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.currentEpochStartTime_ = currentEpochStartTimeBuilder_ == null
+              ? currentEpochStartTime_
+              : currentEpochStartTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.currentEpochStartHeight_ = currentEpochStartHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.rewards.v1beta1.EpochsProto.EpochInfo) {
+          return mergeFrom((com.comdex.rewards.v1beta1.EpochsProto.EpochInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.rewards.v1beta1.EpochsProto.EpochInfo other) {
+        if (other == com.comdex.rewards.v1beta1.EpochsProto.EpochInfo.getDefaultInstance()) return this;
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.getCurrentEpoch() != 0L) {
+          setCurrentEpoch(other.getCurrentEpoch());
+        }
+        if (other.hasCurrentEpochStartTime()) {
+          mergeCurrentEpochStartTime(other.getCurrentEpochStartTime());
+        }
+        if (other.getCurrentEpochStartHeight() != 0L) {
+          setCurrentEpochStartHeight(other.getCurrentEpochStartHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              case 32: {
+                currentEpoch_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getCurrentEpochStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              case 48: {
+                currentEpochStartHeight_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private long currentEpoch_ ;
+      /**
+       * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+       * @return The currentEpoch.
+       */
+      @java.lang.Override
+      public long getCurrentEpoch() {
+        return currentEpoch_;
+      }
+      /**
+       * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+       * @param value The currentEpoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentEpoch(long value) {
+
+        currentEpoch_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 current_epoch = 4 [json_name = "currentEpoch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        currentEpoch_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp currentEpochStartTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> currentEpochStartTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the currentEpochStartTime field is set.
+       */
+      public boolean hasCurrentEpochStartTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The currentEpochStartTime.
+       */
+      public com.google.protobuf.Timestamp getCurrentEpochStartTime() {
+        if (currentEpochStartTimeBuilder_ == null) {
+          return currentEpochStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+        } else {
+          return currentEpochStartTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCurrentEpochStartTime(com.google.protobuf.Timestamp value) {
+        if (currentEpochStartTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          currentEpochStartTime_ = value;
+        } else {
+          currentEpochStartTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCurrentEpochStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (currentEpochStartTimeBuilder_ == null) {
+          currentEpochStartTime_ = builderForValue.build();
+        } else {
+          currentEpochStartTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCurrentEpochStartTime(com.google.protobuf.Timestamp value) {
+        if (currentEpochStartTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            currentEpochStartTime_ != null &&
+            currentEpochStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCurrentEpochStartTimeBuilder().mergeFrom(value);
+          } else {
+            currentEpochStartTime_ = value;
+          }
+        } else {
+          currentEpochStartTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCurrentEpochStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currentEpochStartTime_ = null;
+        if (currentEpochStartTimeBuilder_ != null) {
+          currentEpochStartTimeBuilder_.dispose();
+          currentEpochStartTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCurrentEpochStartTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCurrentEpochStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCurrentEpochStartTimeOrBuilder() {
+        if (currentEpochStartTimeBuilder_ != null) {
+          return currentEpochStartTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return currentEpochStartTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : currentEpochStartTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp current_epoch_start_time = 5 [json_name = "currentEpochStartTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"current_epoch_start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCurrentEpochStartTimeFieldBuilder() {
+        if (currentEpochStartTimeBuilder_ == null) {
+          currentEpochStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCurrentEpochStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          currentEpochStartTime_ = null;
+        }
+        return currentEpochStartTimeBuilder_;
+      }
+
+      private long currentEpochStartHeight_ ;
+      /**
+       * <code>int64 current_epoch_start_height = 6 [json_name = "currentEpochStartHeight"];</code>
+       * @return The currentEpochStartHeight.
+       */
+      @java.lang.Override
+      public long getCurrentEpochStartHeight() {
+        return currentEpochStartHeight_;
+      }
+      /**
+       * <code>int64 current_epoch_start_height = 6 [json_name = "currentEpochStartHeight"];</code>
+       * @param value The currentEpochStartHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentEpochStartHeight(long value) {
+
+        currentEpochStartHeight_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 current_epoch_start_height = 6 [json_name = "currentEpochStartHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentEpochStartHeight() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        currentEpochStartHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.rewards.v1beta1.EpochInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.rewards.v1beta1.EpochInfo)
+    private static final com.comdex.rewards.v1beta1.EpochsProto.EpochInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.rewards.v1beta1.EpochsProto.EpochInfo();
+    }
+
+    public static com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EpochInfo>
+        PARSER = new com.google.protobuf.AbstractParser<EpochInfo>() {
+      @java.lang.Override
+      public EpochInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EpochInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EpochInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.rewards.v1beta1.EpochsProto.EpochInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_rewards_v1beta1_EpochInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_rewards_v1beta1_EpochInfo_fieldAccessorTable;
 
@@ -42,13 +1180,13 @@ public final class EpochsProto {
       "protobuf.TimestampB+\310\336\037\000\362\336\037\037yaml:\"curren" +
       "t_epoch_start_time\"\220\337\037\001R\025currentEpochSta" +
       "rtTime\022;\n\032current_epoch_start_height\030\006 \001" +
-      "(\003R\027currentEpochStartHeightB\326\001\n\032com.comd" +
-      "ex.rewards.v1beta1B\013EpochsProtoP\001Z1githu" +
-      "b.com/comdex-official/comdex/x/rewards/t" +
-      "ypes\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026Co" +
-      "mdex\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\V1" +
-      "beta1\\GPBMetadata\352\002\030Comdex::Rewards::V1b" +
-      "eta1b\006proto3"
+      "(\003R\027currentEpochStartHeightB\324\001\n\032com.comd" +
+      "ex.rewards.v1beta1B\013EpochsProtoZ1github." +
+      "com/comdex-official/comdex/x/rewards/typ" +
+      "es\242\002\003CRX\252\002\026Comdex.Rewards.V1beta1\312\002\026Comd" +
+      "ex\\Rewards\\V1beta1\342\002\"Comdex\\Rewards\\V1be" +
+      "ta1\\GPBMetadata\352\002\030Comdex::Rewards::V1bet" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

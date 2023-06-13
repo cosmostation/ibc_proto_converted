@@ -14,9 +14,3137 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.stakers.v1beta1.StakersProto.Staker> 
+        getStakerListList();
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.Staker getStakerList(int index);
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    int getStakerListCount();
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder> 
+        getStakerListOrBuilderList();
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder getStakerListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.stakers.v1beta1.StakersProto.Valaccount> 
+        getValaccountListList();
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.Valaccount getValaccountList(int index);
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    int getValaccountListCount();
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder> 
+        getValaccountListOrBuilderList();
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder getValaccountListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry> 
+        getCommissionChangeEntriesList();
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry getCommissionChangeEntries(int index);
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    int getCommissionChangeEntriesCount();
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder> 
+        getCommissionChangeEntriesOrBuilderList();
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder getCommissionChangeEntriesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * queue_state_commission ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+     * @return Whether the queueStateCommission field is set.
+     */
+    boolean hasQueueStateCommission();
+    /**
+     * <pre>
+     * queue_state_commission ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+     * @return The queueStateCommission.
+     */
+    com.kyve.stakers.v1beta1.StakersProto.QueueState getQueueStateCommission();
+    /**
+     * <pre>
+     * queue_state_commission ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder getQueueStateCommissionOrBuilder();
+
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry> 
+        getLeavePoolEntriesList();
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry getLeavePoolEntries(int index);
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    int getLeavePoolEntriesCount();
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder> 
+        getLeavePoolEntriesOrBuilderList();
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder getLeavePoolEntriesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * queue_state_leave ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+     * @return Whether the queueStateLeave field is set.
+     */
+    boolean hasQueueStateLeave();
+    /**
+     * <pre>
+     * queue_state_leave ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+     * @return The queueStateLeave.
+     */
+    com.kyve.stakers.v1beta1.StakersProto.QueueState getQueueStateLeave();
+    /**
+     * <pre>
+     * queue_state_leave ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder getQueueStateLeaveOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the stakers module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      stakerList_ = java.util.Collections.emptyList();
+      valaccountList_ = java.util.Collections.emptyList();
+      commissionChangeEntries_ = java.util.Collections.emptyList();
+      leavePoolEntries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.GenesisProto.internal_static_kyve_stakers_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.GenesisProto.internal_static_kyve_stakers_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.GenesisProto.GenesisState.class, com.kyve.stakers.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.kyve.stakers.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int STAKER_LIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.stakers.v1beta1.StakersProto.Staker> stakerList_;
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.stakers.v1beta1.StakersProto.Staker> getStakerListList() {
+      return stakerList_;
+    }
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder> 
+        getStakerListOrBuilderList() {
+      return stakerList_;
+    }
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getStakerListCount() {
+      return stakerList_.size();
+    }
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.Staker getStakerList(int index) {
+      return stakerList_.get(index);
+    }
+    /**
+     * <pre>
+     * staker_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder getStakerListOrBuilder(
+        int index) {
+      return stakerList_.get(index);
+    }
+
+    public static final int VALACCOUNT_LIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.stakers.v1beta1.StakersProto.Valaccount> valaccountList_;
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.stakers.v1beta1.StakersProto.Valaccount> getValaccountListList() {
+      return valaccountList_;
+    }
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder> 
+        getValaccountListOrBuilderList() {
+      return valaccountList_;
+    }
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getValaccountListCount() {
+      return valaccountList_.size();
+    }
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.Valaccount getValaccountList(int index) {
+      return valaccountList_.get(index);
+    }
+    /**
+     * <pre>
+     * valaccount_list ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder getValaccountListOrBuilder(
+        int index) {
+      return valaccountList_.get(index);
+    }
+
+    public static final int COMMISSION_CHANGE_ENTRIES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry> commissionChangeEntries_;
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry> getCommissionChangeEntriesList() {
+      return commissionChangeEntries_;
+    }
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder> 
+        getCommissionChangeEntriesOrBuilderList() {
+      return commissionChangeEntries_;
+    }
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getCommissionChangeEntriesCount() {
+      return commissionChangeEntries_.size();
+    }
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry getCommissionChangeEntries(int index) {
+      return commissionChangeEntries_.get(index);
+    }
+    /**
+     * <pre>
+     * commission_change_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder getCommissionChangeEntriesOrBuilder(
+        int index) {
+      return commissionChangeEntries_.get(index);
+    }
+
+    public static final int QUEUE_STATE_COMMISSION_FIELD_NUMBER = 5;
+    private com.kyve.stakers.v1beta1.StakersProto.QueueState queueStateCommission_;
+    /**
+     * <pre>
+     * queue_state_commission ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+     * @return Whether the queueStateCommission field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueueStateCommission() {
+      return queueStateCommission_ != null;
+    }
+    /**
+     * <pre>
+     * queue_state_commission ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+     * @return The queueStateCommission.
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.QueueState getQueueStateCommission() {
+      return queueStateCommission_ == null ? com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateCommission_;
+    }
+    /**
+     * <pre>
+     * queue_state_commission ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder getQueueStateCommissionOrBuilder() {
+      return queueStateCommission_ == null ? com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateCommission_;
+    }
+
+    public static final int LEAVE_POOL_ENTRIES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry> leavePoolEntries_;
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry> getLeavePoolEntriesList() {
+      return leavePoolEntries_;
+    }
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder> 
+        getLeavePoolEntriesOrBuilderList() {
+      return leavePoolEntries_;
+    }
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLeavePoolEntriesCount() {
+      return leavePoolEntries_.size();
+    }
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry getLeavePoolEntries(int index) {
+      return leavePoolEntries_.get(index);
+    }
+    /**
+     * <pre>
+     * leave_pool_entries ...
+     * </pre>
+     *
+     * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder getLeavePoolEntriesOrBuilder(
+        int index) {
+      return leavePoolEntries_.get(index);
+    }
+
+    public static final int QUEUE_STATE_LEAVE_FIELD_NUMBER = 7;
+    private com.kyve.stakers.v1beta1.StakersProto.QueueState queueStateLeave_;
+    /**
+     * <pre>
+     * queue_state_leave ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+     * @return Whether the queueStateLeave field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueueStateLeave() {
+      return queueStateLeave_ != null;
+    }
+    /**
+     * <pre>
+     * queue_state_leave ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+     * @return The queueStateLeave.
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.QueueState getQueueStateLeave() {
+      return queueStateLeave_ == null ? com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateLeave_;
+    }
+    /**
+     * <pre>
+     * queue_state_leave ...
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder getQueueStateLeaveOrBuilder() {
+      return queueStateLeave_ == null ? com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateLeave_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < stakerList_.size(); i++) {
+        output.writeMessage(2, stakerList_.get(i));
+      }
+      for (int i = 0; i < valaccountList_.size(); i++) {
+        output.writeMessage(3, valaccountList_.get(i));
+      }
+      for (int i = 0; i < commissionChangeEntries_.size(); i++) {
+        output.writeMessage(4, commissionChangeEntries_.get(i));
+      }
+      if (queueStateCommission_ != null) {
+        output.writeMessage(5, getQueueStateCommission());
+      }
+      for (int i = 0; i < leavePoolEntries_.size(); i++) {
+        output.writeMessage(6, leavePoolEntries_.get(i));
+      }
+      if (queueStateLeave_ != null) {
+        output.writeMessage(7, getQueueStateLeave());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < stakerList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, stakerList_.get(i));
+      }
+      for (int i = 0; i < valaccountList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, valaccountList_.get(i));
+      }
+      for (int i = 0; i < commissionChangeEntries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, commissionChangeEntries_.get(i));
+      }
+      if (queueStateCommission_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getQueueStateCommission());
+      }
+      for (int i = 0; i < leavePoolEntries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, leavePoolEntries_.get(i));
+      }
+      if (queueStateLeave_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getQueueStateLeave());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.GenesisProto.GenesisState other = (com.kyve.stakers.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getStakerListList()
+          .equals(other.getStakerListList())) return false;
+      if (!getValaccountListList()
+          .equals(other.getValaccountListList())) return false;
+      if (!getCommissionChangeEntriesList()
+          .equals(other.getCommissionChangeEntriesList())) return false;
+      if (hasQueueStateCommission() != other.hasQueueStateCommission()) return false;
+      if (hasQueueStateCommission()) {
+        if (!getQueueStateCommission()
+            .equals(other.getQueueStateCommission())) return false;
+      }
+      if (!getLeavePoolEntriesList()
+          .equals(other.getLeavePoolEntriesList())) return false;
+      if (hasQueueStateLeave() != other.hasQueueStateLeave()) return false;
+      if (hasQueueStateLeave()) {
+        if (!getQueueStateLeave()
+            .equals(other.getQueueStateLeave())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getStakerListCount() > 0) {
+        hash = (37 * hash) + STAKER_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getStakerListList().hashCode();
+      }
+      if (getValaccountListCount() > 0) {
+        hash = (37 * hash) + VALACCOUNT_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getValaccountListList().hashCode();
+      }
+      if (getCommissionChangeEntriesCount() > 0) {
+        hash = (37 * hash) + COMMISSION_CHANGE_ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getCommissionChangeEntriesList().hashCode();
+      }
+      if (hasQueueStateCommission()) {
+        hash = (37 * hash) + QUEUE_STATE_COMMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getQueueStateCommission().hashCode();
+      }
+      if (getLeavePoolEntriesCount() > 0) {
+        hash = (37 * hash) + LEAVE_POOL_ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getLeavePoolEntriesList().hashCode();
+      }
+      if (hasQueueStateLeave()) {
+        hash = (37 * hash) + QUEUE_STATE_LEAVE_FIELD_NUMBER;
+        hash = (53 * hash) + getQueueStateLeave().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the stakers module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.GenesisState)
+        com.kyve.stakers.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.GenesisProto.internal_static_kyve_stakers_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.GenesisProto.internal_static_kyve_stakers_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.GenesisProto.GenesisState.class, com.kyve.stakers.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (stakerListBuilder_ == null) {
+          stakerList_ = java.util.Collections.emptyList();
+        } else {
+          stakerList_ = null;
+          stakerListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (valaccountListBuilder_ == null) {
+          valaccountList_ = java.util.Collections.emptyList();
+        } else {
+          valaccountList_ = null;
+          valaccountListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (commissionChangeEntriesBuilder_ == null) {
+          commissionChangeEntries_ = java.util.Collections.emptyList();
+        } else {
+          commissionChangeEntries_ = null;
+          commissionChangeEntriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        queueStateCommission_ = null;
+        if (queueStateCommissionBuilder_ != null) {
+          queueStateCommissionBuilder_.dispose();
+          queueStateCommissionBuilder_ = null;
+        }
+        if (leavePoolEntriesBuilder_ == null) {
+          leavePoolEntries_ = java.util.Collections.emptyList();
+        } else {
+          leavePoolEntries_ = null;
+          leavePoolEntriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        queueStateLeave_ = null;
+        if (queueStateLeaveBuilder_ != null) {
+          queueStateLeaveBuilder_.dispose();
+          queueStateLeaveBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.GenesisProto.internal_static_kyve_stakers_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.GenesisProto.GenesisState build() {
+        com.kyve.stakers.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.kyve.stakers.v1beta1.GenesisProto.GenesisState result = new com.kyve.stakers.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.stakers.v1beta1.GenesisProto.GenesisState result) {
+        if (stakerListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            stakerList_ = java.util.Collections.unmodifiableList(stakerList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.stakerList_ = stakerList_;
+        } else {
+          result.stakerList_ = stakerListBuilder_.build();
+        }
+        if (valaccountListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            valaccountList_ = java.util.Collections.unmodifiableList(valaccountList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.valaccountList_ = valaccountList_;
+        } else {
+          result.valaccountList_ = valaccountListBuilder_.build();
+        }
+        if (commissionChangeEntriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            commissionChangeEntries_ = java.util.Collections.unmodifiableList(commissionChangeEntries_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.commissionChangeEntries_ = commissionChangeEntries_;
+        } else {
+          result.commissionChangeEntries_ = commissionChangeEntriesBuilder_.build();
+        }
+        if (leavePoolEntriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            leavePoolEntries_ = java.util.Collections.unmodifiableList(leavePoolEntries_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.leavePoolEntries_ = leavePoolEntries_;
+        } else {
+          result.leavePoolEntries_ = leavePoolEntriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.queueStateCommission_ = queueStateCommissionBuilder_ == null
+              ? queueStateCommission_
+              : queueStateCommissionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.queueStateLeave_ = queueStateLeaveBuilder_ == null
+              ? queueStateLeave_
+              : queueStateLeaveBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.kyve.stakers.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.kyve.stakers.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (stakerListBuilder_ == null) {
+          if (!other.stakerList_.isEmpty()) {
+            if (stakerList_.isEmpty()) {
+              stakerList_ = other.stakerList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureStakerListIsMutable();
+              stakerList_.addAll(other.stakerList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakerList_.isEmpty()) {
+            if (stakerListBuilder_.isEmpty()) {
+              stakerListBuilder_.dispose();
+              stakerListBuilder_ = null;
+              stakerList_ = other.stakerList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              stakerListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakerListFieldBuilder() : null;
+            } else {
+              stakerListBuilder_.addAllMessages(other.stakerList_);
+            }
+          }
+        }
+        if (valaccountListBuilder_ == null) {
+          if (!other.valaccountList_.isEmpty()) {
+            if (valaccountList_.isEmpty()) {
+              valaccountList_ = other.valaccountList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureValaccountListIsMutable();
+              valaccountList_.addAll(other.valaccountList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.valaccountList_.isEmpty()) {
+            if (valaccountListBuilder_.isEmpty()) {
+              valaccountListBuilder_.dispose();
+              valaccountListBuilder_ = null;
+              valaccountList_ = other.valaccountList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              valaccountListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValaccountListFieldBuilder() : null;
+            } else {
+              valaccountListBuilder_.addAllMessages(other.valaccountList_);
+            }
+          }
+        }
+        if (commissionChangeEntriesBuilder_ == null) {
+          if (!other.commissionChangeEntries_.isEmpty()) {
+            if (commissionChangeEntries_.isEmpty()) {
+              commissionChangeEntries_ = other.commissionChangeEntries_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureCommissionChangeEntriesIsMutable();
+              commissionChangeEntries_.addAll(other.commissionChangeEntries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.commissionChangeEntries_.isEmpty()) {
+            if (commissionChangeEntriesBuilder_.isEmpty()) {
+              commissionChangeEntriesBuilder_.dispose();
+              commissionChangeEntriesBuilder_ = null;
+              commissionChangeEntries_ = other.commissionChangeEntries_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              commissionChangeEntriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCommissionChangeEntriesFieldBuilder() : null;
+            } else {
+              commissionChangeEntriesBuilder_.addAllMessages(other.commissionChangeEntries_);
+            }
+          }
+        }
+        if (other.hasQueueStateCommission()) {
+          mergeQueueStateCommission(other.getQueueStateCommission());
+        }
+        if (leavePoolEntriesBuilder_ == null) {
+          if (!other.leavePoolEntries_.isEmpty()) {
+            if (leavePoolEntries_.isEmpty()) {
+              leavePoolEntries_ = other.leavePoolEntries_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureLeavePoolEntriesIsMutable();
+              leavePoolEntries_.addAll(other.leavePoolEntries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.leavePoolEntries_.isEmpty()) {
+            if (leavePoolEntriesBuilder_.isEmpty()) {
+              leavePoolEntriesBuilder_.dispose();
+              leavePoolEntriesBuilder_ = null;
+              leavePoolEntries_ = other.leavePoolEntries_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              leavePoolEntriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLeavePoolEntriesFieldBuilder() : null;
+            } else {
+              leavePoolEntriesBuilder_.addAllMessages(other.leavePoolEntries_);
+            }
+          }
+        }
+        if (other.hasQueueStateLeave()) {
+          mergeQueueStateLeave(other.getQueueStateLeave());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.kyve.stakers.v1beta1.StakersProto.Staker m =
+                    input.readMessage(
+                        com.kyve.stakers.v1beta1.StakersProto.Staker.parser(),
+                        extensionRegistry);
+                if (stakerListBuilder_ == null) {
+                  ensureStakerListIsMutable();
+                  stakerList_.add(m);
+                } else {
+                  stakerListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.kyve.stakers.v1beta1.StakersProto.Valaccount m =
+                    input.readMessage(
+                        com.kyve.stakers.v1beta1.StakersProto.Valaccount.parser(),
+                        extensionRegistry);
+                if (valaccountListBuilder_ == null) {
+                  ensureValaccountListIsMutable();
+                  valaccountList_.add(m);
+                } else {
+                  valaccountListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry m =
+                    input.readMessage(
+                        com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.parser(),
+                        extensionRegistry);
+                if (commissionChangeEntriesBuilder_ == null) {
+                  ensureCommissionChangeEntriesIsMutable();
+                  commissionChangeEntries_.add(m);
+                } else {
+                  commissionChangeEntriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getQueueStateCommissionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry m =
+                    input.readMessage(
+                        com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.parser(),
+                        extensionRegistry);
+                if (leavePoolEntriesBuilder_ == null) {
+                  ensureLeavePoolEntriesIsMutable();
+                  leavePoolEntries_.add(m);
+                } else {
+                  leavePoolEntriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getQueueStateLeaveFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.stakers.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.kyve.stakers.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.kyve.stakers.v1beta1.StakersProto.Staker> stakerList_ =
+        java.util.Collections.emptyList();
+      private void ensureStakerListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          stakerList_ = new java.util.ArrayList<com.kyve.stakers.v1beta1.StakersProto.Staker>(stakerList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.Staker, com.kyve.stakers.v1beta1.StakersProto.Staker.Builder, com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder> stakerListBuilder_;
+
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.Staker> getStakerListList() {
+        if (stakerListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakerList_);
+        } else {
+          return stakerListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getStakerListCount() {
+        if (stakerListBuilder_ == null) {
+          return stakerList_.size();
+        } else {
+          return stakerListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Staker getStakerList(int index) {
+        if (stakerListBuilder_ == null) {
+          return stakerList_.get(index);
+        } else {
+          return stakerListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakerList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Staker value) {
+        if (stakerListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakerListIsMutable();
+          stakerList_.set(index, value);
+          onChanged();
+        } else {
+          stakerListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakerList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Staker.Builder builderForValue) {
+        if (stakerListBuilder_ == null) {
+          ensureStakerListIsMutable();
+          stakerList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakerListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakerList(com.kyve.stakers.v1beta1.StakersProto.Staker value) {
+        if (stakerListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakerListIsMutable();
+          stakerList_.add(value);
+          onChanged();
+        } else {
+          stakerListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakerList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Staker value) {
+        if (stakerListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakerListIsMutable();
+          stakerList_.add(index, value);
+          onChanged();
+        } else {
+          stakerListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakerList(
+          com.kyve.stakers.v1beta1.StakersProto.Staker.Builder builderForValue) {
+        if (stakerListBuilder_ == null) {
+          ensureStakerListIsMutable();
+          stakerList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakerListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakerList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Staker.Builder builderForValue) {
+        if (stakerListBuilder_ == null) {
+          ensureStakerListIsMutable();
+          stakerList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakerListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllStakerList(
+          java.lang.Iterable<? extends com.kyve.stakers.v1beta1.StakersProto.Staker> values) {
+        if (stakerListBuilder_ == null) {
+          ensureStakerListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakerList_);
+          onChanged();
+        } else {
+          stakerListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearStakerList() {
+        if (stakerListBuilder_ == null) {
+          stakerList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          stakerListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeStakerList(int index) {
+        if (stakerListBuilder_ == null) {
+          ensureStakerListIsMutable();
+          stakerList_.remove(index);
+          onChanged();
+        } else {
+          stakerListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Staker.Builder getStakerListBuilder(
+          int index) {
+        return getStakerListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder getStakerListOrBuilder(
+          int index) {
+        if (stakerListBuilder_ == null) {
+          return stakerList_.get(index);  } else {
+          return stakerListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder> 
+           getStakerListOrBuilderList() {
+        if (stakerListBuilder_ != null) {
+          return stakerListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakerList_);
+        }
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Staker.Builder addStakerListBuilder() {
+        return getStakerListFieldBuilder().addBuilder(
+            com.kyve.stakers.v1beta1.StakersProto.Staker.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Staker.Builder addStakerListBuilder(
+          int index) {
+        return getStakerListFieldBuilder().addBuilder(
+            index, com.kyve.stakers.v1beta1.StakersProto.Staker.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staker_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Staker staker_list = 2 [json_name = "stakerList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.Staker.Builder> 
+           getStakerListBuilderList() {
+        return getStakerListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.Staker, com.kyve.stakers.v1beta1.StakersProto.Staker.Builder, com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder> 
+          getStakerListFieldBuilder() {
+        if (stakerListBuilder_ == null) {
+          stakerListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.stakers.v1beta1.StakersProto.Staker, com.kyve.stakers.v1beta1.StakersProto.Staker.Builder, com.kyve.stakers.v1beta1.StakersProto.StakerOrBuilder>(
+                  stakerList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakerList_ = null;
+        }
+        return stakerListBuilder_;
+      }
+
+      private java.util.List<com.kyve.stakers.v1beta1.StakersProto.Valaccount> valaccountList_ =
+        java.util.Collections.emptyList();
+      private void ensureValaccountListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          valaccountList_ = new java.util.ArrayList<com.kyve.stakers.v1beta1.StakersProto.Valaccount>(valaccountList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.Valaccount, com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder, com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder> valaccountListBuilder_;
+
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.Valaccount> getValaccountListList() {
+        if (valaccountListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(valaccountList_);
+        } else {
+          return valaccountListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public int getValaccountListCount() {
+        if (valaccountListBuilder_ == null) {
+          return valaccountList_.size();
+        } else {
+          return valaccountListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Valaccount getValaccountList(int index) {
+        if (valaccountListBuilder_ == null) {
+          return valaccountList_.get(index);
+        } else {
+          return valaccountListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValaccountList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Valaccount value) {
+        if (valaccountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValaccountListIsMutable();
+          valaccountList_.set(index, value);
+          onChanged();
+        } else {
+          valaccountListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setValaccountList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder builderForValue) {
+        if (valaccountListBuilder_ == null) {
+          ensureValaccountListIsMutable();
+          valaccountList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valaccountListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValaccountList(com.kyve.stakers.v1beta1.StakersProto.Valaccount value) {
+        if (valaccountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValaccountListIsMutable();
+          valaccountList_.add(value);
+          onChanged();
+        } else {
+          valaccountListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValaccountList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Valaccount value) {
+        if (valaccountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValaccountListIsMutable();
+          valaccountList_.add(index, value);
+          onChanged();
+        } else {
+          valaccountListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValaccountList(
+          com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder builderForValue) {
+        if (valaccountListBuilder_ == null) {
+          ensureValaccountListIsMutable();
+          valaccountList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valaccountListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addValaccountList(
+          int index, com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder builderForValue) {
+        if (valaccountListBuilder_ == null) {
+          ensureValaccountListIsMutable();
+          valaccountList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valaccountListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllValaccountList(
+          java.lang.Iterable<? extends com.kyve.stakers.v1beta1.StakersProto.Valaccount> values) {
+        if (valaccountListBuilder_ == null) {
+          ensureValaccountListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, valaccountList_);
+          onChanged();
+        } else {
+          valaccountListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearValaccountList() {
+        if (valaccountListBuilder_ == null) {
+          valaccountList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          valaccountListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeValaccountList(int index) {
+        if (valaccountListBuilder_ == null) {
+          ensureValaccountListIsMutable();
+          valaccountList_.remove(index);
+          onChanged();
+        } else {
+          valaccountListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder getValaccountListBuilder(
+          int index) {
+        return getValaccountListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder getValaccountListOrBuilder(
+          int index) {
+        if (valaccountListBuilder_ == null) {
+          return valaccountList_.get(index);  } else {
+          return valaccountListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder> 
+           getValaccountListOrBuilderList() {
+        if (valaccountListBuilder_ != null) {
+          return valaccountListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(valaccountList_);
+        }
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder addValaccountListBuilder() {
+        return getValaccountListFieldBuilder().addBuilder(
+            com.kyve.stakers.v1beta1.StakersProto.Valaccount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder addValaccountListBuilder(
+          int index) {
+        return getValaccountListFieldBuilder().addBuilder(
+            index, com.kyve.stakers.v1beta1.StakersProto.Valaccount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * valaccount_list ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.Valaccount valaccount_list = 3 [json_name = "valaccountList", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder> 
+           getValaccountListBuilderList() {
+        return getValaccountListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.Valaccount, com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder, com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder> 
+          getValaccountListFieldBuilder() {
+        if (valaccountListBuilder_ == null) {
+          valaccountListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.stakers.v1beta1.StakersProto.Valaccount, com.kyve.stakers.v1beta1.StakersProto.Valaccount.Builder, com.kyve.stakers.v1beta1.StakersProto.ValaccountOrBuilder>(
+                  valaccountList_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          valaccountList_ = null;
+        }
+        return valaccountListBuilder_;
+      }
+
+      private java.util.List<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry> commissionChangeEntries_ =
+        java.util.Collections.emptyList();
+      private void ensureCommissionChangeEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          commissionChangeEntries_ = new java.util.ArrayList<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry>(commissionChangeEntries_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder> commissionChangeEntriesBuilder_;
+
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry> getCommissionChangeEntriesList() {
+        if (commissionChangeEntriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(commissionChangeEntries_);
+        } else {
+          return commissionChangeEntriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getCommissionChangeEntriesCount() {
+        if (commissionChangeEntriesBuilder_ == null) {
+          return commissionChangeEntries_.size();
+        } else {
+          return commissionChangeEntriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry getCommissionChangeEntries(int index) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          return commissionChangeEntries_.get(index);
+        } else {
+          return commissionChangeEntriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCommissionChangeEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry value) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.set(index, value);
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCommissionChangeEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder builderForValue) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCommissionChangeEntries(com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry value) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.add(value);
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCommissionChangeEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry value) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.add(index, value);
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCommissionChangeEntries(
+          com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder builderForValue) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCommissionChangeEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder builderForValue) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllCommissionChangeEntries(
+          java.lang.Iterable<? extends com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry> values) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          ensureCommissionChangeEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, commissionChangeEntries_);
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCommissionChangeEntries() {
+        if (commissionChangeEntriesBuilder_ == null) {
+          commissionChangeEntries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeCommissionChangeEntries(int index) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          ensureCommissionChangeEntriesIsMutable();
+          commissionChangeEntries_.remove(index);
+          onChanged();
+        } else {
+          commissionChangeEntriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder getCommissionChangeEntriesBuilder(
+          int index) {
+        return getCommissionChangeEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder getCommissionChangeEntriesOrBuilder(
+          int index) {
+        if (commissionChangeEntriesBuilder_ == null) {
+          return commissionChangeEntries_.get(index);  } else {
+          return commissionChangeEntriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder> 
+           getCommissionChangeEntriesOrBuilderList() {
+        if (commissionChangeEntriesBuilder_ != null) {
+          return commissionChangeEntriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(commissionChangeEntries_);
+        }
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder addCommissionChangeEntriesBuilder() {
+        return getCommissionChangeEntriesFieldBuilder().addBuilder(
+            com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder addCommissionChangeEntriesBuilder(
+          int index) {
+        return getCommissionChangeEntriesFieldBuilder().addBuilder(
+            index, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * commission_change_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.CommissionChangeEntry commission_change_entries = 4 [json_name = "commissionChangeEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder> 
+           getCommissionChangeEntriesBuilderList() {
+        return getCommissionChangeEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder> 
+          getCommissionChangeEntriesFieldBuilder() {
+        if (commissionChangeEntriesBuilder_ == null) {
+          commissionChangeEntriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntry.Builder, com.kyve.stakers.v1beta1.StakersProto.CommissionChangeEntryOrBuilder>(
+                  commissionChangeEntries_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          commissionChangeEntries_ = null;
+        }
+        return commissionChangeEntriesBuilder_;
+      }
+
+      private com.kyve.stakers.v1beta1.StakersProto.QueueState queueStateCommission_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.QueueState, com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder, com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder> queueStateCommissionBuilder_;
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       * @return Whether the queueStateCommission field is set.
+       */
+      public boolean hasQueueStateCommission() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       * @return The queueStateCommission.
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.QueueState getQueueStateCommission() {
+        if (queueStateCommissionBuilder_ == null) {
+          return queueStateCommission_ == null ? com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateCommission_;
+        } else {
+          return queueStateCommissionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueueStateCommission(com.kyve.stakers.v1beta1.StakersProto.QueueState value) {
+        if (queueStateCommissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queueStateCommission_ = value;
+        } else {
+          queueStateCommissionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueueStateCommission(
+          com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder builderForValue) {
+        if (queueStateCommissionBuilder_ == null) {
+          queueStateCommission_ = builderForValue.build();
+        } else {
+          queueStateCommissionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeQueueStateCommission(com.kyve.stakers.v1beta1.StakersProto.QueueState value) {
+        if (queueStateCommissionBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            queueStateCommission_ != null &&
+            queueStateCommission_ != com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance()) {
+            getQueueStateCommissionBuilder().mergeFrom(value);
+          } else {
+            queueStateCommission_ = value;
+          }
+        } else {
+          queueStateCommissionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQueueStateCommission() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        queueStateCommission_ = null;
+        if (queueStateCommissionBuilder_ != null) {
+          queueStateCommissionBuilder_.dispose();
+          queueStateCommissionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder getQueueStateCommissionBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getQueueStateCommissionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder getQueueStateCommissionOrBuilder() {
+        if (queueStateCommissionBuilder_ != null) {
+          return queueStateCommissionBuilder_.getMessageOrBuilder();
+        } else {
+          return queueStateCommission_ == null ?
+              com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateCommission_;
+        }
+      }
+      /**
+       * <pre>
+       * queue_state_commission ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_commission = 5 [json_name = "queueStateCommission", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.QueueState, com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder, com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder> 
+          getQueueStateCommissionFieldBuilder() {
+        if (queueStateCommissionBuilder_ == null) {
+          queueStateCommissionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.stakers.v1beta1.StakersProto.QueueState, com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder, com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder>(
+                  getQueueStateCommission(),
+                  getParentForChildren(),
+                  isClean());
+          queueStateCommission_ = null;
+        }
+        return queueStateCommissionBuilder_;
+      }
+
+      private java.util.List<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry> leavePoolEntries_ =
+        java.util.Collections.emptyList();
+      private void ensureLeavePoolEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          leavePoolEntries_ = new java.util.ArrayList<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry>(leavePoolEntries_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder> leavePoolEntriesBuilder_;
+
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry> getLeavePoolEntriesList() {
+        if (leavePoolEntriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(leavePoolEntries_);
+        } else {
+          return leavePoolEntriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLeavePoolEntriesCount() {
+        if (leavePoolEntriesBuilder_ == null) {
+          return leavePoolEntries_.size();
+        } else {
+          return leavePoolEntriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry getLeavePoolEntries(int index) {
+        if (leavePoolEntriesBuilder_ == null) {
+          return leavePoolEntries_.get(index);
+        } else {
+          return leavePoolEntriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLeavePoolEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry value) {
+        if (leavePoolEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.set(index, value);
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLeavePoolEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder builderForValue) {
+        if (leavePoolEntriesBuilder_ == null) {
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeavePoolEntries(com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry value) {
+        if (leavePoolEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.add(value);
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeavePoolEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry value) {
+        if (leavePoolEntriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.add(index, value);
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeavePoolEntries(
+          com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder builderForValue) {
+        if (leavePoolEntriesBuilder_ == null) {
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeavePoolEntries(
+          int index, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder builderForValue) {
+        if (leavePoolEntriesBuilder_ == null) {
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLeavePoolEntries(
+          java.lang.Iterable<? extends com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry> values) {
+        if (leavePoolEntriesBuilder_ == null) {
+          ensureLeavePoolEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, leavePoolEntries_);
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLeavePoolEntries() {
+        if (leavePoolEntriesBuilder_ == null) {
+          leavePoolEntries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLeavePoolEntries(int index) {
+        if (leavePoolEntriesBuilder_ == null) {
+          ensureLeavePoolEntriesIsMutable();
+          leavePoolEntries_.remove(index);
+          onChanged();
+        } else {
+          leavePoolEntriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder getLeavePoolEntriesBuilder(
+          int index) {
+        return getLeavePoolEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder getLeavePoolEntriesOrBuilder(
+          int index) {
+        if (leavePoolEntriesBuilder_ == null) {
+          return leavePoolEntries_.get(index);  } else {
+          return leavePoolEntriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder> 
+           getLeavePoolEntriesOrBuilderList() {
+        if (leavePoolEntriesBuilder_ != null) {
+          return leavePoolEntriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(leavePoolEntries_);
+        }
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder addLeavePoolEntriesBuilder() {
+        return getLeavePoolEntriesFieldBuilder().addBuilder(
+            com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder addLeavePoolEntriesBuilder(
+          int index) {
+        return getLeavePoolEntriesFieldBuilder().addBuilder(
+            index, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * leave_pool_entries ...
+       * </pre>
+       *
+       * <code>repeated .kyve.stakers.v1beta1.LeavePoolEntry leave_pool_entries = 6 [json_name = "leavePoolEntries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder> 
+           getLeavePoolEntriesBuilderList() {
+        return getLeavePoolEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder> 
+          getLeavePoolEntriesFieldBuilder() {
+        if (leavePoolEntriesBuilder_ == null) {
+          leavePoolEntriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntry.Builder, com.kyve.stakers.v1beta1.StakersProto.LeavePoolEntryOrBuilder>(
+                  leavePoolEntries_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          leavePoolEntries_ = null;
+        }
+        return leavePoolEntriesBuilder_;
+      }
+
+      private com.kyve.stakers.v1beta1.StakersProto.QueueState queueStateLeave_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.QueueState, com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder, com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder> queueStateLeaveBuilder_;
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       * @return Whether the queueStateLeave field is set.
+       */
+      public boolean hasQueueStateLeave() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       * @return The queueStateLeave.
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.QueueState getQueueStateLeave() {
+        if (queueStateLeaveBuilder_ == null) {
+          return queueStateLeave_ == null ? com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateLeave_;
+        } else {
+          return queueStateLeaveBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueueStateLeave(com.kyve.stakers.v1beta1.StakersProto.QueueState value) {
+        if (queueStateLeaveBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queueStateLeave_ = value;
+        } else {
+          queueStateLeaveBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueueStateLeave(
+          com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder builderForValue) {
+        if (queueStateLeaveBuilder_ == null) {
+          queueStateLeave_ = builderForValue.build();
+        } else {
+          queueStateLeaveBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeQueueStateLeave(com.kyve.stakers.v1beta1.StakersProto.QueueState value) {
+        if (queueStateLeaveBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            queueStateLeave_ != null &&
+            queueStateLeave_ != com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance()) {
+            getQueueStateLeaveBuilder().mergeFrom(value);
+          } else {
+            queueStateLeave_ = value;
+          }
+        } else {
+          queueStateLeaveBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQueueStateLeave() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        queueStateLeave_ = null;
+        if (queueStateLeaveBuilder_ != null) {
+          queueStateLeaveBuilder_.dispose();
+          queueStateLeaveBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder getQueueStateLeaveBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getQueueStateLeaveFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder getQueueStateLeaveOrBuilder() {
+        if (queueStateLeaveBuilder_ != null) {
+          return queueStateLeaveBuilder_.getMessageOrBuilder();
+        } else {
+          return queueStateLeave_ == null ?
+              com.kyve.stakers.v1beta1.StakersProto.QueueState.getDefaultInstance() : queueStateLeave_;
+        }
+      }
+      /**
+       * <pre>
+       * queue_state_leave ...
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.QueueState queue_state_leave = 7 [json_name = "queueStateLeave", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.StakersProto.QueueState, com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder, com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder> 
+          getQueueStateLeaveFieldBuilder() {
+        if (queueStateLeaveBuilder_ == null) {
+          queueStateLeaveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.stakers.v1beta1.StakersProto.QueueState, com.kyve.stakers.v1beta1.StakersProto.QueueState.Builder, com.kyve.stakers.v1beta1.StakersProto.QueueStateOrBuilder>(
+                  getQueueStateLeave(),
+                  getParentForChildren(),
+                  isClean());
+          queueStateLeave_ = null;
+        }
+        return queueStateLeaveBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.GenesisState)
+    private static final com.kyve.stakers.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.kyve.stakers.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -46,13 +3174,13 @@ public final class GenesisProto {
       "tries\030\006 \003(\0132$.kyve.stakers.v1beta1.Leave" +
       "PoolEntryB\004\310\336\037\000R\020leavePoolEntries\022R\n\021que" +
       "ue_state_leave\030\007 \001(\0132 .kyve.stakers.v1be" +
-      "ta1.QueueStateB\004\310\336\037\000R\017queueStateLeaveB\310\001" +
+      "ta1.QueueStateB\004\310\336\037\000R\017queueStateLeaveB\306\001" +
       "\n\030com.kyve.stakers.v1beta1B\014GenesisProto" +
-      "P\001Z,github.com/KYVENetwork/chain/x/stake" +
-      "rs/types\242\002\003KSX\252\002\024Kyve.Stakers.V1beta1\312\002\024" +
-      "Kyve\\Stakers\\V1beta1\342\002 Kyve\\Stakers\\V1be" +
-      "ta1\\GPBMetadata\352\002\026Kyve::Stakers::V1beta1" +
-      "b\006proto3"
+      "Z,github.com/KYVENetwork/chain/x/stakers" +
+      "/types\242\002\003KSX\252\002\024Kyve.Stakers.V1beta1\312\002\024Ky" +
+      "ve\\Stakers\\V1beta1\342\002 Kyve\\Stakers\\V1beta" +
+      "1\\GPBMetadata\352\002\026Kyve::Stakers::V1beta1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

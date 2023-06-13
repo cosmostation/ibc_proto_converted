@@ -14,14 +14,1624 @@ public final class MsgsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgUpdateConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.MsgUpdateConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Signer is the address of the entity who is doing the transaction
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * Signer is the address of the entity who is doing the transaction
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * NewConfiguration contains the new configuration data
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+     * @return Whether the newConfiguration field is set.
+     */
+    boolean hasNewConfiguration();
+    /**
+     * <pre>
+     * NewConfiguration contains the new configuration data
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+     * @return The newConfiguration.
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.Config getNewConfiguration();
+    /**
+     * <pre>
+     * NewConfiguration contains the new configuration data
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getNewConfigurationOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgUpdateConfig is used to update starname configuration
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.MsgUpdateConfig}
+   */
+  public static final class MsgUpdateConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.MsgUpdateConfig)
+      MsgUpdateConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateConfig.newBuilder() to construct.
+    private MsgUpdateConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateConfig() {
+      signer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.class, com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.Builder.class);
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * Signer is the address of the entity who is doing the transaction
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Signer is the address of the entity who is doing the transaction
+     * </pre>
+     *
+     * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_CONFIGURATION_FIELD_NUMBER = 2;
+    private com.starnamed.x.configuration.v1beta1.TypesProto.Config newConfiguration_;
+    /**
+     * <pre>
+     * NewConfiguration contains the new configuration data
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+     * @return Whether the newConfiguration field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewConfiguration() {
+      return newConfiguration_ != null;
+    }
+    /**
+     * <pre>
+     * NewConfiguration contains the new configuration data
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+     * @return The newConfiguration.
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Config getNewConfiguration() {
+      return newConfiguration_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : newConfiguration_;
+    }
+    /**
+     * <pre>
+     * NewConfiguration contains the new configuration data
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getNewConfigurationOrBuilder() {
+      return newConfiguration_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : newConfiguration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signer_);
+      }
+      if (newConfiguration_ != null) {
+        output.writeMessage(2, getNewConfiguration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, signer_);
+      }
+      if (newConfiguration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getNewConfiguration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig other = (com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig) obj;
+
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (hasNewConfiguration() != other.hasNewConfiguration()) return false;
+      if (hasNewConfiguration()) {
+        if (!getNewConfiguration()
+            .equals(other.getNewConfiguration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      if (hasNewConfiguration()) {
+        hash = (37 * hash) + NEW_CONFIGURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getNewConfiguration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateConfig is used to update starname configuration
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.MsgUpdateConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.MsgUpdateConfig)
+        com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.class, com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signer_ = "";
+        newConfiguration_ = null;
+        if (newConfigurationBuilder_ != null) {
+          newConfigurationBuilder_.dispose();
+          newConfigurationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig build() {
+        com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig buildPartial() {
+        com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig result = new com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signer_ = signer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newConfiguration_ = newConfigurationBuilder_ == null
+              ? newConfiguration_
+              : newConfigurationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig other) {
+        if (other == com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig.getDefaultInstance()) return this;
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasNewConfiguration()) {
+          mergeNewConfiguration(other.getNewConfiguration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getNewConfigurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * Signer is the address of the entity who is doing the transaction
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the address of the entity who is doing the transaction
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signer is the address of the entity who is doing the transaction
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the address of the entity who is doing the transaction
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signer is the address of the entity who is doing the transaction
+       * </pre>
+       *
+       * <code>string signer = 1 [json_name = "signer", (.gogoproto.moretags) = "yaml:&#92;"signer&#92;""];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.starnamed.x.configuration.v1beta1.TypesProto.Config newConfiguration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder> newConfigurationBuilder_;
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       * @return Whether the newConfiguration field is set.
+       */
+      public boolean hasNewConfiguration() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       * @return The newConfiguration.
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config getNewConfiguration() {
+        if (newConfigurationBuilder_ == null) {
+          return newConfiguration_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : newConfiguration_;
+        } else {
+          return newConfigurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      public Builder setNewConfiguration(com.starnamed.x.configuration.v1beta1.TypesProto.Config value) {
+        if (newConfigurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          newConfiguration_ = value;
+        } else {
+          newConfigurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      public Builder setNewConfiguration(
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder builderForValue) {
+        if (newConfigurationBuilder_ == null) {
+          newConfiguration_ = builderForValue.build();
+        } else {
+          newConfigurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      public Builder mergeNewConfiguration(com.starnamed.x.configuration.v1beta1.TypesProto.Config value) {
+        if (newConfigurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            newConfiguration_ != null &&
+            newConfiguration_ != com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance()) {
+            getNewConfigurationBuilder().mergeFrom(value);
+          } else {
+            newConfiguration_ = value;
+          }
+        } else {
+          newConfigurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      public Builder clearNewConfiguration() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        newConfiguration_ = null;
+        if (newConfigurationBuilder_ != null) {
+          newConfigurationBuilder_.dispose();
+          newConfigurationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder getNewConfigurationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getNewConfigurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getNewConfigurationOrBuilder() {
+        if (newConfigurationBuilder_ != null) {
+          return newConfigurationBuilder_.getMessageOrBuilder();
+        } else {
+          return newConfiguration_ == null ?
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : newConfiguration_;
+        }
+      }
+      /**
+       * <pre>
+       * NewConfiguration contains the new configuration data
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config new_configuration = 2 [json_name = "newConfiguration", (.gogoproto.nullable) = true, (.gogoproto.moretags) = "yaml:&#92;"new_configuration&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder> 
+          getNewConfigurationFieldBuilder() {
+        if (newConfigurationBuilder_ == null) {
+          newConfigurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder>(
+                  getNewConfiguration(),
+                  getParentForChildren(),
+                  isClean());
+          newConfiguration_ = null;
+        }
+        return newConfigurationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.MsgUpdateConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.MsgUpdateConfig)
+    private static final com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateConfig>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateConfig>() {
+      @java.lang.Override
+      public MsgUpdateConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateFeesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.MsgUpdateFees)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+     * @return Whether the fees field is set.
+     */
+    boolean hasFees();
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+     * @return The fees.
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees();
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder();
+
+    /**
+     * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The configurer.
+     */
+    java.lang.String getConfigurer();
+    /**
+     * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The bytes for configurer.
+     */
+    com.google.protobuf.ByteString
+        getConfigurerBytes();
+  }
+  /**
+   * <pre>
+   * MsgUpdateFees is used to update the starname product fees in the starname
+   * module.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.MsgUpdateFees}
+   */
+  public static final class MsgUpdateFees extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.MsgUpdateFees)
+      MsgUpdateFeesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateFees.newBuilder() to construct.
+    private MsgUpdateFees(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateFees() {
+      configurer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateFees();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.class, com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.Builder.class);
+    }
+
+    public static final int FEES_FIELD_NUMBER = 1;
+    private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+     * @return Whether the fees field is set.
+     */
+    @java.lang.Override
+    public boolean hasFees() {
+      return fees_ != null;
+    }
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+     * @return The fees.
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees() {
+      return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+    }
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder() {
+      return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+    }
+
+    public static final int CONFIGURER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configurer_ = "";
+    /**
+     * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The configurer.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigurer() {
+      java.lang.Object ref = configurer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configurer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The bytes for configurer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigurerBytes() {
+      java.lang.Object ref = configurer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configurer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (fees_ != null) {
+        output.writeMessage(1, getFees());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, configurer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (fees_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFees());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, configurer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees other = (com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees) obj;
+
+      if (hasFees() != other.hasFees()) return false;
+      if (hasFees()) {
+        if (!getFees()
+            .equals(other.getFees())) return false;
+      }
+      if (!getConfigurer()
+          .equals(other.getConfigurer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFees()) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFees().hashCode();
+      }
+      hash = (37 * hash) + CONFIGURER_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigurer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateFees is used to update the starname product fees in the starname
+     * module.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.MsgUpdateFees}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.MsgUpdateFees)
+        com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFeesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.class, com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fees_ = null;
+        if (feesBuilder_ != null) {
+          feesBuilder_.dispose();
+          feesBuilder_ = null;
+        }
+        configurer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees build() {
+        com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees buildPartial() {
+        com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees result = new com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fees_ = feesBuilder_ == null
+              ? fees_
+              : feesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.configurer_ = configurer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees other) {
+        if (other == com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees.getDefaultInstance()) return this;
+        if (other.hasFees()) {
+          mergeFees(other.getFees());
+        }
+        if (!other.getConfigurer().isEmpty()) {
+          configurer_ = other.configurer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFeesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                configurer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder> feesBuilder_;
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       * @return Whether the fees field is set.
+       */
+      public boolean hasFees() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       * @return The fees.
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees() {
+        if (feesBuilder_ == null) {
+          return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+        } else {
+          return feesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      public Builder setFees(com.starnamed.x.configuration.v1beta1.TypesProto.Fees value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fees_ = value;
+        } else {
+          feesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      public Builder setFees(
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          fees_ = builderForValue.build();
+        } else {
+          feesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      public Builder mergeFees(com.starnamed.x.configuration.v1beta1.TypesProto.Fees value) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            fees_ != null &&
+            fees_ != com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance()) {
+            getFeesBuilder().mergeFrom(value);
+          } else {
+            fees_ = value;
+          }
+        } else {
+          feesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      public Builder clearFees() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fees_ = null;
+        if (feesBuilder_ != null) {
+          feesBuilder_.dispose();
+          feesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder getFeesBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFeesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilder();
+        } else {
+          return fees_ == null ?
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+        }
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder>(
+                  getFees(),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+
+      private java.lang.Object configurer_ = "";
+      /**
+       * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @return The configurer.
+       */
+      public java.lang.String getConfigurer() {
+        java.lang.Object ref = configurer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configurer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @return The bytes for configurer.
+       */
+      public com.google.protobuf.ByteString
+          getConfigurerBytes() {
+        java.lang.Object ref = configurer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configurer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @param value The configurer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigurer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configurer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigurer() {
+        configurer_ = getDefaultInstance().getConfigurer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string configurer = 2 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @param value The bytes for configurer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigurerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configurer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.MsgUpdateFees)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.MsgUpdateFees)
+    private static final com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateFees>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateFees>() {
+      @java.lang.Override
+      public MsgUpdateFees parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateFees> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateFees> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.MsgsProto.MsgUpdateFees getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_MsgUpdateConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_MsgUpdateFees_fieldAccessorTable;
 
@@ -44,14 +1654,14 @@ public final class MsgsProto {
       "\203\001\n\rMsgUpdateFees\022;\n\004fees\030\001 \001(\0132\'.starna" +
       "med.x.configuration.v1beta1.FeesR\004fees\0225" +
       "\n\nconfigurer\030\002 \001(\tB\025\362\336\037\021yaml:\"configurer" +
-      "\"R\nconfigurerB\215\002\n%com.starnamed.x.config" +
-      "uration.v1beta1B\tMsgsProtoP\001Z2github.com" +
-      "/iov-one/starnamed/x/configuration/types" +
-      "\242\002\003SXC\252\002!Starnamed.X.Configuration.V1bet" +
-      "a1\312\002!Starnamed\\X\\Configuration\\V1beta1\342\002" +
-      "-Starnamed\\X\\Configuration\\V1beta1\\GPBMe" +
-      "tadata\352\002$Starnamed::X::Configuration::V1" +
-      "beta1b\006proto3"
+      "\"R\nconfigurerB\213\002\n%com.starnamed.x.config" +
+      "uration.v1beta1B\tMsgsProtoZ2github.com/i" +
+      "ov-one/starnamed/x/configuration/types\242\002" +
+      "\003SXC\252\002!Starnamed.X.Configuration.V1beta1" +
+      "\312\002!Starnamed\\X\\Configuration\\V1beta1\342\002-S" +
+      "tarnamed\\X\\Configuration\\V1beta1\\GPBMeta" +
+      "data\352\002$Starnamed::X::Configuration::V1be" +
+      "ta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

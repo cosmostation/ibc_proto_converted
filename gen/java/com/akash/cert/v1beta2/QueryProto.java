@@ -14,19 +14,2565 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CertificateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.cert.v1beta2.CertificateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+     * @return Whether the certificate field is set.
+     */
+    boolean hasCertificate();
+    /**
+     * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+     * @return The certificate.
+     */
+    com.akash.cert.v1beta2.CertProto.Certificate getCertificate();
+    /**
+     * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+     */
+    com.akash.cert.v1beta2.CertProto.CertificateOrBuilder getCertificateOrBuilder();
+
+    /**
+     * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+     * @return The serial.
+     */
+    java.lang.String getSerial();
+    /**
+     * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+     * @return The bytes for serial.
+     */
+    com.google.protobuf.ByteString
+        getSerialBytes();
+  }
+  /**
+   * <pre>
+   * CertificateResponse contains a single X509 certificate and its serial number
+   * </pre>
+   *
+   * Protobuf type {@code akash.cert.v1beta2.CertificateResponse}
+   */
+  public static final class CertificateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.cert.v1beta2.CertificateResponse)
+      CertificateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CertificateResponse.newBuilder() to construct.
+    private CertificateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CertificateResponse() {
+      serial_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CertificateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_CertificateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_CertificateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.cert.v1beta2.QueryProto.CertificateResponse.class, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder.class);
+    }
+
+    public static final int CERTIFICATE_FIELD_NUMBER = 1;
+    private com.akash.cert.v1beta2.CertProto.Certificate certificate_;
+    /**
+     * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+     * @return Whether the certificate field is set.
+     */
+    @java.lang.Override
+    public boolean hasCertificate() {
+      return certificate_ != null;
+    }
+    /**
+     * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+     * @return The certificate.
+     */
+    @java.lang.Override
+    public com.akash.cert.v1beta2.CertProto.Certificate getCertificate() {
+      return certificate_ == null ? com.akash.cert.v1beta2.CertProto.Certificate.getDefaultInstance() : certificate_;
+    }
+    /**
+     * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.cert.v1beta2.CertProto.CertificateOrBuilder getCertificateOrBuilder() {
+      return certificate_ == null ? com.akash.cert.v1beta2.CertProto.Certificate.getDefaultInstance() : certificate_;
+    }
+
+    public static final int SERIAL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serial_ = "";
+    /**
+     * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+     * @return The serial.
+     */
+    @java.lang.Override
+    public java.lang.String getSerial() {
+      java.lang.Object ref = serial_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serial_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+     * @return The bytes for serial.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSerialBytes() {
+      java.lang.Object ref = serial_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serial_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (certificate_ != null) {
+        output.writeMessage(1, getCertificate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serial_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serial_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (certificate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCertificate());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serial_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serial_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.cert.v1beta2.QueryProto.CertificateResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.cert.v1beta2.QueryProto.CertificateResponse other = (com.akash.cert.v1beta2.QueryProto.CertificateResponse) obj;
+
+      if (hasCertificate() != other.hasCertificate()) return false;
+      if (hasCertificate()) {
+        if (!getCertificate()
+            .equals(other.getCertificate())) return false;
+      }
+      if (!getSerial()
+          .equals(other.getSerial())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCertificate()) {
+        hash = (37 * hash) + CERTIFICATE_FIELD_NUMBER;
+        hash = (53 * hash) + getCertificate().hashCode();
+      }
+      hash = (37 * hash) + SERIAL_FIELD_NUMBER;
+      hash = (53 * hash) + getSerial().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.cert.v1beta2.QueryProto.CertificateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CertificateResponse contains a single X509 certificate and its serial number
+     * </pre>
+     *
+     * Protobuf type {@code akash.cert.v1beta2.CertificateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.cert.v1beta2.CertificateResponse)
+        com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_CertificateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_CertificateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.cert.v1beta2.QueryProto.CertificateResponse.class, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder.class);
+      }
+
+      // Construct using com.akash.cert.v1beta2.QueryProto.CertificateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        certificate_ = null;
+        if (certificateBuilder_ != null) {
+          certificateBuilder_.dispose();
+          certificateBuilder_ = null;
+        }
+        serial_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_CertificateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse getDefaultInstanceForType() {
+        return com.akash.cert.v1beta2.QueryProto.CertificateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse build() {
+        com.akash.cert.v1beta2.QueryProto.CertificateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse buildPartial() {
+        com.akash.cert.v1beta2.QueryProto.CertificateResponse result = new com.akash.cert.v1beta2.QueryProto.CertificateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.cert.v1beta2.QueryProto.CertificateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.certificate_ = certificateBuilder_ == null
+              ? certificate_
+              : certificateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.serial_ = serial_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.cert.v1beta2.QueryProto.CertificateResponse) {
+          return mergeFrom((com.akash.cert.v1beta2.QueryProto.CertificateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.cert.v1beta2.QueryProto.CertificateResponse other) {
+        if (other == com.akash.cert.v1beta2.QueryProto.CertificateResponse.getDefaultInstance()) return this;
+        if (other.hasCertificate()) {
+          mergeCertificate(other.getCertificate());
+        }
+        if (!other.getSerial().isEmpty()) {
+          serial_ = other.serial_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCertificateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                serial_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.cert.v1beta2.CertProto.Certificate certificate_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.cert.v1beta2.CertProto.Certificate, com.akash.cert.v1beta2.CertProto.Certificate.Builder, com.akash.cert.v1beta2.CertProto.CertificateOrBuilder> certificateBuilder_;
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       * @return Whether the certificate field is set.
+       */
+      public boolean hasCertificate() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       * @return The certificate.
+       */
+      public com.akash.cert.v1beta2.CertProto.Certificate getCertificate() {
+        if (certificateBuilder_ == null) {
+          return certificate_ == null ? com.akash.cert.v1beta2.CertProto.Certificate.getDefaultInstance() : certificate_;
+        } else {
+          return certificateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      public Builder setCertificate(com.akash.cert.v1beta2.CertProto.Certificate value) {
+        if (certificateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          certificate_ = value;
+        } else {
+          certificateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      public Builder setCertificate(
+          com.akash.cert.v1beta2.CertProto.Certificate.Builder builderForValue) {
+        if (certificateBuilder_ == null) {
+          certificate_ = builderForValue.build();
+        } else {
+          certificateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      public Builder mergeCertificate(com.akash.cert.v1beta2.CertProto.Certificate value) {
+        if (certificateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            certificate_ != null &&
+            certificate_ != com.akash.cert.v1beta2.CertProto.Certificate.getDefaultInstance()) {
+            getCertificateBuilder().mergeFrom(value);
+          } else {
+            certificate_ = value;
+          }
+        } else {
+          certificateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      public Builder clearCertificate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        certificate_ = null;
+        if (certificateBuilder_ != null) {
+          certificateBuilder_.dispose();
+          certificateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      public com.akash.cert.v1beta2.CertProto.Certificate.Builder getCertificateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCertificateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      public com.akash.cert.v1beta2.CertProto.CertificateOrBuilder getCertificateOrBuilder() {
+        if (certificateBuilder_ != null) {
+          return certificateBuilder_.getMessageOrBuilder();
+        } else {
+          return certificate_ == null ?
+              com.akash.cert.v1beta2.CertProto.Certificate.getDefaultInstance() : certificate_;
+        }
+      }
+      /**
+       * <code>.akash.cert.v1beta2.Certificate certificate = 1 [json_name = "certificate", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "certificate", (.gogoproto.moretags) = "yaml:&#92;"certificate&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.cert.v1beta2.CertProto.Certificate, com.akash.cert.v1beta2.CertProto.Certificate.Builder, com.akash.cert.v1beta2.CertProto.CertificateOrBuilder> 
+          getCertificateFieldBuilder() {
+        if (certificateBuilder_ == null) {
+          certificateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.cert.v1beta2.CertProto.Certificate, com.akash.cert.v1beta2.CertProto.Certificate.Builder, com.akash.cert.v1beta2.CertProto.CertificateOrBuilder>(
+                  getCertificate(),
+                  getParentForChildren(),
+                  isClean());
+          certificate_ = null;
+        }
+        return certificateBuilder_;
+      }
+
+      private java.lang.Object serial_ = "";
+      /**
+       * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+       * @return The serial.
+       */
+      public java.lang.String getSerial() {
+        java.lang.Object ref = serial_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serial_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+       * @return The bytes for serial.
+       */
+      public com.google.protobuf.ByteString
+          getSerialBytes() {
+        java.lang.Object ref = serial_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serial_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+       * @param value The serial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerial(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serial_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSerial() {
+        serial_ = getDefaultInstance().getSerial();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string serial = 2 [json_name = "serial", (.gogoproto.jsontag) = "serial", (.gogoproto.moretags) = "yaml:&#92;"serial&#92;""];</code>
+       * @param value The bytes for serial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSerialBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serial_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.cert.v1beta2.CertificateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.cert.v1beta2.CertificateResponse)
+    private static final com.akash.cert.v1beta2.QueryProto.CertificateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.cert.v1beta2.QueryProto.CertificateResponse();
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.CertificateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CertificateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CertificateResponse>() {
+      @java.lang.Override
+      public CertificateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CertificateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CertificateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.cert.v1beta2.QueryProto.CertificateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCertificatesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.cert.v1beta2.QueryCertificatesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filter field is set.
+     */
+    boolean hasFilter();
+    /**
+     * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+     * @return The filter.
+     */
+    com.akash.cert.v1beta2.CertProto.CertificateFilter getFilter();
+    /**
+     * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.cert.v1beta2.CertProto.CertificateFilterOrBuilder getFilterOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.cert.v1beta2.QueryCertificatesRequest}
+   */
+  public static final class QueryCertificatesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.cert.v1beta2.QueryCertificatesRequest)
+      QueryCertificatesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCertificatesRequest.newBuilder() to construct.
+    private QueryCertificatesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCertificatesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCertificatesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.class, com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.Builder.class);
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 1;
+    private com.akash.cert.v1beta2.CertProto.CertificateFilter filter_;
+    /**
+     * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filter field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilter() {
+      return filter_ != null;
+    }
+    /**
+     * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public com.akash.cert.v1beta2.CertProto.CertificateFilter getFilter() {
+      return filter_ == null ? com.akash.cert.v1beta2.CertProto.CertificateFilter.getDefaultInstance() : filter_;
+    }
+    /**
+     * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.cert.v1beta2.CertProto.CertificateFilterOrBuilder getFilterOrBuilder() {
+      return filter_ == null ? com.akash.cert.v1beta2.CertProto.CertificateFilter.getDefaultInstance() : filter_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (filter_ != null) {
+        output.writeMessage(1, getFilter());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (filter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFilter());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest other = (com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest) obj;
+
+      if (hasFilter() != other.hasFilter()) return false;
+      if (hasFilter()) {
+        if (!getFilter()
+            .equals(other.getFilter())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFilter()) {
+        hash = (37 * hash) + FILTER_FIELD_NUMBER;
+        hash = (53 * hash) + getFilter().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDeploymentsRequest is request type for the Query/Deployments RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.cert.v1beta2.QueryCertificatesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.cert.v1beta2.QueryCertificatesRequest)
+        com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.class, com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.Builder.class);
+      }
+
+      // Construct using com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        filter_ = null;
+        if (filterBuilder_ != null) {
+          filterBuilder_.dispose();
+          filterBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest getDefaultInstanceForType() {
+        return com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest build() {
+        com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest buildPartial() {
+        com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest result = new com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.filter_ = filterBuilder_ == null
+              ? filter_
+              : filterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest) {
+          return mergeFrom((com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest other) {
+        if (other == com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest.getDefaultInstance()) return this;
+        if (other.hasFilter()) {
+          mergeFilter(other.getFilter());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFilterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.cert.v1beta2.CertProto.CertificateFilter filter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.cert.v1beta2.CertProto.CertificateFilter, com.akash.cert.v1beta2.CertProto.CertificateFilter.Builder, com.akash.cert.v1beta2.CertProto.CertificateFilterOrBuilder> filterBuilder_;
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       * @return Whether the filter field is set.
+       */
+      public boolean hasFilter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       * @return The filter.
+       */
+      public com.akash.cert.v1beta2.CertProto.CertificateFilter getFilter() {
+        if (filterBuilder_ == null) {
+          return filter_ == null ? com.akash.cert.v1beta2.CertProto.CertificateFilter.getDefaultInstance() : filter_;
+        } else {
+          return filterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilter(com.akash.cert.v1beta2.CertProto.CertificateFilter value) {
+        if (filterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filter_ = value;
+        } else {
+          filterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilter(
+          com.akash.cert.v1beta2.CertProto.CertificateFilter.Builder builderForValue) {
+        if (filterBuilder_ == null) {
+          filter_ = builderForValue.build();
+        } else {
+          filterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFilter(com.akash.cert.v1beta2.CertProto.CertificateFilter value) {
+        if (filterBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            filter_ != null &&
+            filter_ != com.akash.cert.v1beta2.CertProto.CertificateFilter.getDefaultInstance()) {
+            getFilterBuilder().mergeFrom(value);
+          } else {
+            filter_ = value;
+          }
+        } else {
+          filterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFilter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filter_ = null;
+        if (filterBuilder_ != null) {
+          filterBuilder_.dispose();
+          filterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.cert.v1beta2.CertProto.CertificateFilter.Builder getFilterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFilterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.cert.v1beta2.CertProto.CertificateFilterOrBuilder getFilterOrBuilder() {
+        if (filterBuilder_ != null) {
+          return filterBuilder_.getMessageOrBuilder();
+        } else {
+          return filter_ == null ?
+              com.akash.cert.v1beta2.CertProto.CertificateFilter.getDefaultInstance() : filter_;
+        }
+      }
+      /**
+       * <code>.akash.cert.v1beta2.CertificateFilter filter = 1 [json_name = "filter", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.cert.v1beta2.CertProto.CertificateFilter, com.akash.cert.v1beta2.CertProto.CertificateFilter.Builder, com.akash.cert.v1beta2.CertProto.CertificateFilterOrBuilder> 
+          getFilterFieldBuilder() {
+        if (filterBuilder_ == null) {
+          filterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.cert.v1beta2.CertProto.CertificateFilter, com.akash.cert.v1beta2.CertProto.CertificateFilter.Builder, com.akash.cert.v1beta2.CertProto.CertificateFilterOrBuilder>(
+                  getFilter(),
+                  getParentForChildren(),
+                  isClean());
+          filter_ = null;
+        }
+        return filterBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.cert.v1beta2.QueryCertificatesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.cert.v1beta2.QueryCertificatesRequest)
+    private static final com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest();
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCertificatesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCertificatesRequest>() {
+      @java.lang.Override
+      public QueryCertificatesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCertificatesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCertificatesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.cert.v1beta2.QueryProto.QueryCertificatesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCertificatesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.cert.v1beta2.QueryCertificatesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    java.util.List<com.akash.cert.v1beta2.QueryProto.CertificateResponse> 
+        getCertificatesList();
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    com.akash.cert.v1beta2.QueryProto.CertificateResponse getCertificates(int index);
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    int getCertificatesCount();
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    java.util.List<? extends com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder> 
+        getCertificatesOrBuilderList();
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder getCertificatesOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryCertificatesResponse is response type for the Query/Certificates RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.cert.v1beta2.QueryCertificatesResponse}
+   */
+  public static final class QueryCertificatesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.cert.v1beta2.QueryCertificatesResponse)
+      QueryCertificatesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCertificatesResponse.newBuilder() to construct.
+    private QueryCertificatesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCertificatesResponse() {
+      certificates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCertificatesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.class, com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.Builder.class);
+    }
+
+    public static final int CERTIFICATES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.cert.v1beta2.QueryProto.CertificateResponse> certificates_;
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.cert.v1beta2.QueryProto.CertificateResponse> getCertificatesList() {
+      return certificates_;
+    }
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder> 
+        getCertificatesOrBuilderList() {
+      return certificates_;
+    }
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    @java.lang.Override
+    public int getCertificatesCount() {
+      return certificates_.size();
+    }
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    @java.lang.Override
+    public com.akash.cert.v1beta2.QueryProto.CertificateResponse getCertificates(int index) {
+      return certificates_.get(index);
+    }
+    /**
+     * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+     */
+    @java.lang.Override
+    public com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder getCertificatesOrBuilder(
+        int index) {
+      return certificates_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < certificates_.size(); i++) {
+        output.writeMessage(1, certificates_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < certificates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, certificates_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse other = (com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse) obj;
+
+      if (!getCertificatesList()
+          .equals(other.getCertificatesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCertificatesCount() > 0) {
+        hash = (37 * hash) + CERTIFICATES_FIELD_NUMBER;
+        hash = (53 * hash) + getCertificatesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCertificatesResponse is response type for the Query/Certificates RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.cert.v1beta2.QueryCertificatesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.cert.v1beta2.QueryCertificatesResponse)
+        com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.class, com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.Builder.class);
+      }
+
+      // Construct using com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (certificatesBuilder_ == null) {
+          certificates_ = java.util.Collections.emptyList();
+        } else {
+          certificates_ = null;
+          certificatesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.cert.v1beta2.QueryProto.internal_static_akash_cert_v1beta2_QueryCertificatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse getDefaultInstanceForType() {
+        return com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse build() {
+        com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse buildPartial() {
+        com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse result = new com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse result) {
+        if (certificatesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            certificates_ = java.util.Collections.unmodifiableList(certificates_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.certificates_ = certificates_;
+        } else {
+          result.certificates_ = certificatesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse) {
+          return mergeFrom((com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse other) {
+        if (other == com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse.getDefaultInstance()) return this;
+        if (certificatesBuilder_ == null) {
+          if (!other.certificates_.isEmpty()) {
+            if (certificates_.isEmpty()) {
+              certificates_ = other.certificates_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCertificatesIsMutable();
+              certificates_.addAll(other.certificates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.certificates_.isEmpty()) {
+            if (certificatesBuilder_.isEmpty()) {
+              certificatesBuilder_.dispose();
+              certificatesBuilder_ = null;
+              certificates_ = other.certificates_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              certificatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCertificatesFieldBuilder() : null;
+            } else {
+              certificatesBuilder_.addAllMessages(other.certificates_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.akash.cert.v1beta2.QueryProto.CertificateResponse m =
+                    input.readMessage(
+                        com.akash.cert.v1beta2.QueryProto.CertificateResponse.parser(),
+                        extensionRegistry);
+                if (certificatesBuilder_ == null) {
+                  ensureCertificatesIsMutable();
+                  certificates_.add(m);
+                } else {
+                  certificatesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.akash.cert.v1beta2.QueryProto.CertificateResponse> certificates_ =
+        java.util.Collections.emptyList();
+      private void ensureCertificatesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          certificates_ = new java.util.ArrayList<com.akash.cert.v1beta2.QueryProto.CertificateResponse>(certificates_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.cert.v1beta2.QueryProto.CertificateResponse, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder, com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder> certificatesBuilder_;
+
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public java.util.List<com.akash.cert.v1beta2.QueryProto.CertificateResponse> getCertificatesList() {
+        if (certificatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(certificates_);
+        } else {
+          return certificatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public int getCertificatesCount() {
+        if (certificatesBuilder_ == null) {
+          return certificates_.size();
+        } else {
+          return certificatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse getCertificates(int index) {
+        if (certificatesBuilder_ == null) {
+          return certificates_.get(index);
+        } else {
+          return certificatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder setCertificates(
+          int index, com.akash.cert.v1beta2.QueryProto.CertificateResponse value) {
+        if (certificatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCertificatesIsMutable();
+          certificates_.set(index, value);
+          onChanged();
+        } else {
+          certificatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder setCertificates(
+          int index, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder builderForValue) {
+        if (certificatesBuilder_ == null) {
+          ensureCertificatesIsMutable();
+          certificates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          certificatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder addCertificates(com.akash.cert.v1beta2.QueryProto.CertificateResponse value) {
+        if (certificatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCertificatesIsMutable();
+          certificates_.add(value);
+          onChanged();
+        } else {
+          certificatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder addCertificates(
+          int index, com.akash.cert.v1beta2.QueryProto.CertificateResponse value) {
+        if (certificatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCertificatesIsMutable();
+          certificates_.add(index, value);
+          onChanged();
+        } else {
+          certificatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder addCertificates(
+          com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder builderForValue) {
+        if (certificatesBuilder_ == null) {
+          ensureCertificatesIsMutable();
+          certificates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          certificatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder addCertificates(
+          int index, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder builderForValue) {
+        if (certificatesBuilder_ == null) {
+          ensureCertificatesIsMutable();
+          certificates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          certificatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder addAllCertificates(
+          java.lang.Iterable<? extends com.akash.cert.v1beta2.QueryProto.CertificateResponse> values) {
+        if (certificatesBuilder_ == null) {
+          ensureCertificatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, certificates_);
+          onChanged();
+        } else {
+          certificatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder clearCertificates() {
+        if (certificatesBuilder_ == null) {
+          certificates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          certificatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public Builder removeCertificates(int index) {
+        if (certificatesBuilder_ == null) {
+          ensureCertificatesIsMutable();
+          certificates_.remove(index);
+          onChanged();
+        } else {
+          certificatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder getCertificatesBuilder(
+          int index) {
+        return getCertificatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder getCertificatesOrBuilder(
+          int index) {
+        if (certificatesBuilder_ == null) {
+          return certificates_.get(index);  } else {
+          return certificatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public java.util.List<? extends com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder> 
+           getCertificatesOrBuilderList() {
+        if (certificatesBuilder_ != null) {
+          return certificatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(certificates_);
+        }
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder addCertificatesBuilder() {
+        return getCertificatesFieldBuilder().addBuilder(
+            com.akash.cert.v1beta2.QueryProto.CertificateResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder addCertificatesBuilder(
+          int index) {
+        return getCertificatesFieldBuilder().addBuilder(
+            index, com.akash.cert.v1beta2.QueryProto.CertificateResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.cert.v1beta2.CertificateResponse certificates = 1 [json_name = "certificates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "CertificatesResponse"];</code>
+       */
+      public java.util.List<com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder> 
+           getCertificatesBuilderList() {
+        return getCertificatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.cert.v1beta2.QueryProto.CertificateResponse, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder, com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder> 
+          getCertificatesFieldBuilder() {
+        if (certificatesBuilder_ == null) {
+          certificatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.cert.v1beta2.QueryProto.CertificateResponse, com.akash.cert.v1beta2.QueryProto.CertificateResponse.Builder, com.akash.cert.v1beta2.QueryProto.CertificateResponseOrBuilder>(
+                  certificates_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          certificates_ = null;
+        }
+        return certificatesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.cert.v1beta2.QueryCertificatesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.cert.v1beta2.QueryCertificatesResponse)
+    private static final com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse();
+    }
+
+    public static com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCertificatesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCertificatesResponse>() {
+      @java.lang.Override
+      public QueryCertificatesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCertificatesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCertificatesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.cert.v1beta2.QueryProto.QueryCertificatesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_cert_v1beta2_CertificateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_cert_v1beta2_CertificateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_cert_v1beta2_QueryCertificatesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_cert_v1beta2_QueryCertificatesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_cert_v1beta2_QueryCertificatesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_cert_v1beta2_QueryCertificatesResponse_fieldAccessorTable;
 
@@ -60,13 +2606,13 @@ public final class QueryProto {
       "\014Certificates\022,.akash.cert.v1beta2.Query" +
       "CertificatesRequest\032-.akash.cert.v1beta2" +
       ".QueryCertificatesResponse\"-\202\323\344\223\002\'\022%/aka" +
-      "sh/cert/v1beta3/certificates/listB\307\001\n\026co" +
-      "m.akash.cert.v1beta2B\nQueryProtoP\001Z7gith" +
-      "ub.com/akash-network/akash-api/go/node/c" +
-      "ert/v1beta2\242\002\003ACX\252\002\022Akash.Cert.V1beta2\312\002" +
-      "\022Akash\\Cert\\V1beta2\342\002\036Akash\\Cert\\V1beta2" +
-      "\\GPBMetadata\352\002\024Akash::Cert::V1beta2b\006pro" +
-      "to3"
+      "sh/cert/v1beta3/certificates/listB\305\001\n\026co" +
+      "m.akash.cert.v1beta2B\nQueryProtoZ7github" +
+      ".com/akash-network/akash-api/go/node/cer" +
+      "t/v1beta2\242\002\003ACX\252\002\022Akash.Cert.V1beta2\312\002\022A" +
+      "kash\\Cert\\V1beta2\342\002\036Akash\\Cert\\V1beta2\\G" +
+      "PBMetadata\352\002\024Akash::Cert::V1beta2b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

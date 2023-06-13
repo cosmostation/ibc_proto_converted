@@ -14,19 +14,1127 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PendingIBCTransferCountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest}
+   */
+  public static final class PendingIBCTransferCountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest)
+      PendingIBCTransferCountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PendingIBCTransferCountRequest.newBuilder() to construct.
+    private PendingIBCTransferCountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PendingIBCTransferCountRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PendingIBCTransferCountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.class, com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest other = (com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest)
+        com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.class, com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest getDefaultInstanceForType() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest build() {
+        com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest buildPartial() {
+        com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest result = new com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest) {
+          return mergeFrom((com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest other) {
+        if (other == com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.axelarnet.v1beta1.PendingIBCTransferCountRequest)
+    private static final com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest();
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PendingIBCTransferCountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PendingIBCTransferCountRequest>() {
+      @java.lang.Override
+      public PendingIBCTransferCountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PendingIBCTransferCountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PendingIBCTransferCountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PendingIBCTransferCountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    int getTransfersByChainCount();
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    boolean containsTransfersByChain(
+        java.lang.String key);
+    /**
+     * Use {@link #getTransfersByChainMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getTransfersByChain();
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getTransfersByChainMap();
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    int getTransfersByChainOrDefault(
+        java.lang.String key,
+        int defaultValue);
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    int getTransfersByChainOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse}
+   */
+  public static final class PendingIBCTransferCountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse)
+      PendingIBCTransferCountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PendingIBCTransferCountResponse.newBuilder() to construct.
+    private PendingIBCTransferCountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PendingIBCTransferCountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PendingIBCTransferCountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetTransfersByChain();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.class, com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.Builder.class);
+    }
+
+    public static final int TRANSFERS_BY_CHAIN_FIELD_NUMBER = 1;
+    private static final class TransfersByChainDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                  com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_TransfersByChainEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.UINT32,
+                  0);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Integer> transfersByChain_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+    internalGetTransfersByChain() {
+      if (transfersByChain_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TransfersByChainDefaultEntryHolder.defaultEntry);
+      }
+      return transfersByChain_;
+    }
+    public int getTransfersByChainCount() {
+      return internalGetTransfersByChain().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public boolean containsTransfersByChain(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetTransfersByChain().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTransfersByChainMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer> getTransfersByChain() {
+      return getTransfersByChainMap();
+    }
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, java.lang.Integer> getTransfersByChainMap() {
+      return internalGetTransfersByChain().getMap();
+    }
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTransfersByChainOrDefault(
+        java.lang.String key,
+        int defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetTransfersByChain().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTransfersByChainOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetTransfersByChain().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetTransfersByChain(),
+          TransfersByChainDefaultEntryHolder.defaultEntry,
+          1);
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+           : internalGetTransfersByChain().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+        transfersByChain__ = TransfersByChainDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, transfersByChain__);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse other = (com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse) obj;
+
+      if (!internalGetTransfersByChain().equals(
+          other.internalGetTransfersByChain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetTransfersByChain().getMap().isEmpty()) {
+        hash = (37 * hash) + TRANSFERS_BY_CHAIN_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetTransfersByChain().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse)
+        com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetTransfersByChain();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableTransfersByChain();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.class, com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        internalGetMutableTransfersByChain().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse getDefaultInstanceForType() {
+        return com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse build() {
+        com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse buildPartial() {
+        com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse result = new com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.transfersByChain_ = internalGetTransfersByChain();
+          result.transfersByChain_.makeImmutable();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse) {
+          return mergeFrom((com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse other) {
+        if (other == com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse.getDefaultInstance()) return this;
+        internalGetMutableTransfersByChain().mergeFrom(
+            other.internalGetTransfersByChain());
+        bitField0_ |= 0x00000001;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+                transfersByChain__ = input.readMessage(
+                    TransfersByChainDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableTransfersByChain().getMutableMap().put(
+                    transfersByChain__.getKey(), transfersByChain__.getValue());
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Integer> transfersByChain_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+          internalGetTransfersByChain() {
+        if (transfersByChain_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TransfersByChainDefaultEntryHolder.defaultEntry);
+        }
+        return transfersByChain_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+          internalGetMutableTransfersByChain() {
+        if (transfersByChain_ == null) {
+          transfersByChain_ = com.google.protobuf.MapField.newMapField(
+              TransfersByChainDefaultEntryHolder.defaultEntry);
+        }
+        if (!transfersByChain_.isMutable()) {
+          transfersByChain_ = transfersByChain_.copy();
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return transfersByChain_;
+      }
+      public int getTransfersByChainCount() {
+        return internalGetTransfersByChain().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public boolean containsTransfersByChain(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetTransfersByChain().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTransfersByChainMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer> getTransfersByChain() {
+        return getTransfersByChainMap();
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.Integer> getTransfersByChainMap() {
+        return internalGetTransfersByChain().getMap();
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public int getTransfersByChainOrDefault(
+          java.lang.String key,
+          int defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            internalGetTransfersByChain().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public int getTransfersByChainOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            internalGetTransfersByChain().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearTransfersByChain() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutableTransfersByChain().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTransfersByChain(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableTransfersByChain().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer>
+          getMutableTransfersByChain() {
+        bitField0_ |= 0x00000001;
+        return internalGetMutableTransfersByChain().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putTransfersByChain(
+          java.lang.String key,
+          int value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+
+        internalGetMutableTransfersByChain().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, uint32&gt; transfers_by_chain = 1 [json_name = "transfersByChain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putAllTransfersByChain(
+          java.util.Map<java.lang.String, java.lang.Integer> values) {
+        internalGetMutableTransfersByChain().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.axelarnet.v1beta1.PendingIBCTransferCountResponse)
+    private static final com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse();
+    }
+
+    public static com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PendingIBCTransferCountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PendingIBCTransferCountResponse>() {
+      @java.lang.Override
+      public PendingIBCTransferCountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PendingIBCTransferCountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PendingIBCTransferCountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.axelarnet.v1beta1.QueryProto.PendingIBCTransferCountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_TransfersByChainEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_axelarnet_v1beta1_PendingIBCTransferCountResponse_TransfersByChainEntry_fieldAccessorTable;
 
@@ -49,13 +1157,13 @@ public final class QueryProto {
       ".v1beta1.PendingIBCTransferCountResponse" +
       ".TransfersByChainEntryB\004\310\336\037\000R\020transfersB" +
       "yChain\032C\n\025TransfersByChainEntry\022\020\n\003key\030\001" +
-      " \001(\tR\003key\022\024\n\005value\030\002 \001(\rR\005value:\0028\001B\350\001\n\034" +
+      " \001(\tR\003key\022\024\n\005value\030\002 \001(\rR\005value:\0028\001B\346\001\n\034" +
       "com.axelar.axelarnet.v1beta1B\nQueryProto" +
-      "P\001Z6github.com/axelarnetwork/axelar-core" +
-      "/x/axelarnet/types\242\002\003AAX\252\002\030Axelar.Axelar" +
-      "net.V1beta1\312\002\030Axelar\\Axelarnet\\V1beta1\342\002" +
-      "$Axelar\\Axelarnet\\V1beta1\\GPBMetadata\352\002\032" +
-      "Axelar::Axelarnet::V1beta1\310\341\036\000b\006proto3"
+      "Z6github.com/axelarnetwork/axelar-core/x" +
+      "/axelarnet/types\242\002\003AAX\252\002\030Axelar.Axelarne" +
+      "t.V1beta1\312\002\030Axelar\\Axelarnet\\V1beta1\342\002$A" +
+      "xelar\\Axelarnet\\V1beta1\\GPBMetadata\352\002\032Ax" +
+      "elar::Axelarnet::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

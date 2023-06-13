@@ -14,14 +14,2318 @@ public final class ProposalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface SetTokenPricesProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:auction.v1.SetTokenPricesProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> 
+        getTokenPricesList();
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    com.auction.v1.AuctionProto.ProposedTokenPrice getTokenPrices(int index);
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    int getTokenPricesCount();
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    java.util.List<? extends com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+        getTokenPricesOrBuilderList();
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder getTokenPricesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code auction.v1.SetTokenPricesProposal}
+   */
+  public static final class SetTokenPricesProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:auction.v1.SetTokenPricesProposal)
+      SetTokenPricesProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetTokenPricesProposal.newBuilder() to construct.
+    private SetTokenPricesProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetTokenPricesProposal() {
+      title_ = "";
+      description_ = "";
+      tokenPrices_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetTokenPricesProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.auction.v1.ProposalProto.SetTokenPricesProposal.class, com.auction.v1.ProposalProto.SetTokenPricesProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_PRICES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> tokenPrices_;
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> getTokenPricesList() {
+      return tokenPrices_;
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+        getTokenPricesOrBuilderList() {
+      return tokenPrices_;
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public int getTokenPricesCount() {
+      return tokenPrices_.size();
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.ProposedTokenPrice getTokenPrices(int index) {
+      return tokenPrices_.get(index);
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder getTokenPricesOrBuilder(
+        int index) {
+      return tokenPrices_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < tokenPrices_.size(); i++) {
+        output.writeMessage(3, tokenPrices_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (int i = 0; i < tokenPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, tokenPrices_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.auction.v1.ProposalProto.SetTokenPricesProposal)) {
+        return super.equals(obj);
+      }
+      com.auction.v1.ProposalProto.SetTokenPricesProposal other = (com.auction.v1.ProposalProto.SetTokenPricesProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getTokenPricesList()
+          .equals(other.getTokenPricesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getTokenPricesCount() > 0) {
+        hash = (37 * hash) + TOKEN_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPricesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.auction.v1.ProposalProto.SetTokenPricesProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code auction.v1.SetTokenPricesProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:auction.v1.SetTokenPricesProposal)
+        com.auction.v1.ProposalProto.SetTokenPricesProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.auction.v1.ProposalProto.SetTokenPricesProposal.class, com.auction.v1.ProposalProto.SetTokenPricesProposal.Builder.class);
+      }
+
+      // Construct using com.auction.v1.ProposalProto.SetTokenPricesProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        if (tokenPricesBuilder_ == null) {
+          tokenPrices_ = java.util.Collections.emptyList();
+        } else {
+          tokenPrices_ = null;
+          tokenPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.ProposalProto.SetTokenPricesProposal getDefaultInstanceForType() {
+        return com.auction.v1.ProposalProto.SetTokenPricesProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.auction.v1.ProposalProto.SetTokenPricesProposal build() {
+        com.auction.v1.ProposalProto.SetTokenPricesProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.ProposalProto.SetTokenPricesProposal buildPartial() {
+        com.auction.v1.ProposalProto.SetTokenPricesProposal result = new com.auction.v1.ProposalProto.SetTokenPricesProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.auction.v1.ProposalProto.SetTokenPricesProposal result) {
+        if (tokenPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tokenPrices_ = java.util.Collections.unmodifiableList(tokenPrices_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tokenPrices_ = tokenPrices_;
+        } else {
+          result.tokenPrices_ = tokenPricesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.auction.v1.ProposalProto.SetTokenPricesProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.auction.v1.ProposalProto.SetTokenPricesProposal) {
+          return mergeFrom((com.auction.v1.ProposalProto.SetTokenPricesProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.auction.v1.ProposalProto.SetTokenPricesProposal other) {
+        if (other == com.auction.v1.ProposalProto.SetTokenPricesProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (tokenPricesBuilder_ == null) {
+          if (!other.tokenPrices_.isEmpty()) {
+            if (tokenPrices_.isEmpty()) {
+              tokenPrices_ = other.tokenPrices_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTokenPricesIsMutable();
+              tokenPrices_.addAll(other.tokenPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenPrices_.isEmpty()) {
+            if (tokenPricesBuilder_.isEmpty()) {
+              tokenPricesBuilder_.dispose();
+              tokenPricesBuilder_ = null;
+              tokenPrices_ = other.tokenPrices_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tokenPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPricesFieldBuilder() : null;
+            } else {
+              tokenPricesBuilder_.addAllMessages(other.tokenPrices_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.auction.v1.AuctionProto.ProposedTokenPrice m =
+                    input.readMessage(
+                        com.auction.v1.AuctionProto.ProposedTokenPrice.parser(),
+                        extensionRegistry);
+                if (tokenPricesBuilder_ == null) {
+                  ensureTokenPricesIsMutable();
+                  tokenPrices_.add(m);
+                } else {
+                  tokenPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> tokenPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPricesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tokenPrices_ = new java.util.ArrayList<com.auction.v1.AuctionProto.ProposedTokenPrice>(tokenPrices_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.ProposedTokenPrice, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder, com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> tokenPricesBuilder_;
+
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> getTokenPricesList() {
+        if (tokenPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenPrices_);
+        } else {
+          return tokenPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public int getTokenPricesCount() {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.size();
+        } else {
+          return tokenPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice getTokenPrices(int index) {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.get(index);
+        } else {
+          return tokenPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder setTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.set(index, value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder setTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(com.auction.v1.AuctionProto.ProposedTokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(index, value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          com.auction.v1.AuctionProto.ProposedTokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addAllTokenPrices(
+          java.lang.Iterable<? extends com.auction.v1.AuctionProto.ProposedTokenPrice> values) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenPrices_);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder clearTokenPrices() {
+        if (tokenPricesBuilder_ == null) {
+          tokenPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder removeTokenPrices(int index) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.remove(index);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice.Builder getTokenPricesBuilder(
+          int index) {
+        return getTokenPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder getTokenPricesOrBuilder(
+          int index) {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.get(index);  } else {
+          return tokenPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<? extends com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+           getTokenPricesOrBuilderList() {
+        if (tokenPricesBuilder_ != null) {
+          return tokenPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenPrices_);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice.Builder addTokenPricesBuilder() {
+        return getTokenPricesFieldBuilder().addBuilder(
+            com.auction.v1.AuctionProto.ProposedTokenPrice.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice.Builder addTokenPricesBuilder(
+          int index) {
+        return getTokenPricesFieldBuilder().addBuilder(
+            index, com.auction.v1.AuctionProto.ProposedTokenPrice.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice.Builder> 
+           getTokenPricesBuilderList() {
+        return getTokenPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.ProposedTokenPrice, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder, com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+          getTokenPricesFieldBuilder() {
+        if (tokenPricesBuilder_ == null) {
+          tokenPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.auction.v1.AuctionProto.ProposedTokenPrice, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder, com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder>(
+                  tokenPrices_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenPrices_ = null;
+        }
+        return tokenPricesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:auction.v1.SetTokenPricesProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:auction.v1.SetTokenPricesProposal)
+    private static final com.auction.v1.ProposalProto.SetTokenPricesProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.auction.v1.ProposalProto.SetTokenPricesProposal();
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetTokenPricesProposal>
+        PARSER = new com.google.protobuf.AbstractParser<SetTokenPricesProposal>() {
+      @java.lang.Override
+      public SetTokenPricesProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetTokenPricesProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetTokenPricesProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.auction.v1.ProposalProto.SetTokenPricesProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetTokenPricesProposalWithDepositOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:auction.v1.SetTokenPricesProposalWithDeposit)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> 
+        getTokenPricesList();
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    com.auction.v1.AuctionProto.ProposedTokenPrice getTokenPrices(int index);
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    int getTokenPricesCount();
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    java.util.List<? extends com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+        getTokenPricesOrBuilderList();
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder getTokenPricesOrBuilder(
+        int index);
+
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    java.lang.String getDeposit();
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    com.google.protobuf.ByteString
+        getDepositBytes();
+  }
+  /**
+   * Protobuf type {@code auction.v1.SetTokenPricesProposalWithDeposit}
+   */
+  public static final class SetTokenPricesProposalWithDeposit extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:auction.v1.SetTokenPricesProposalWithDeposit)
+      SetTokenPricesProposalWithDepositOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetTokenPricesProposalWithDeposit.newBuilder() to construct.
+    private SetTokenPricesProposalWithDeposit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetTokenPricesProposalWithDeposit() {
+      title_ = "";
+      description_ = "";
+      tokenPrices_ = java.util.Collections.emptyList();
+      deposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetTokenPricesProposalWithDeposit();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposalWithDeposit_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposalWithDeposit_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.class, com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_PRICES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> tokenPrices_;
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> getTokenPricesList() {
+      return tokenPrices_;
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+        getTokenPricesOrBuilderList() {
+      return tokenPrices_;
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public int getTokenPricesCount() {
+      return tokenPrices_.size();
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.ProposedTokenPrice getTokenPrices(int index) {
+      return tokenPrices_.get(index);
+    }
+    /**
+     * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+     */
+    @java.lang.Override
+    public com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder getTokenPricesOrBuilder(
+        int index) {
+      return tokenPrices_.get(index);
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deposit_ = "";
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public java.lang.String getDeposit() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string deposit = 4 [json_name = "deposit"];</code>
+     * @return The bytes for deposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDepositBytes() {
+      java.lang.Object ref = deposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < tokenPrices_.size(); i++) {
+        output.writeMessage(3, tokenPrices_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (int i = 0; i < tokenPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, tokenPrices_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit)) {
+        return super.equals(obj);
+      }
+      com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit other = (com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getTokenPricesList()
+          .equals(other.getTokenPricesList())) return false;
+      if (!getDeposit()
+          .equals(other.getDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getTokenPricesCount() > 0) {
+        hash = (37 * hash) + TOKEN_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPricesList().hashCode();
+      }
+      hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code auction.v1.SetTokenPricesProposalWithDeposit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:auction.v1.SetTokenPricesProposalWithDeposit)
+        com.auction.v1.ProposalProto.SetTokenPricesProposalWithDepositOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposalWithDeposit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.class, com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.Builder.class);
+      }
+
+      // Construct using com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        if (tokenPricesBuilder_ == null) {
+          tokenPrices_ = java.util.Collections.emptyList();
+        } else {
+          tokenPrices_ = null;
+          tokenPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        deposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.auction.v1.ProposalProto.internal_static_auction_v1_SetTokenPricesProposalWithDeposit_descriptor;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit getDefaultInstanceForType() {
+        return com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit build() {
+        com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit buildPartial() {
+        com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit result = new com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit result) {
+        if (tokenPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tokenPrices_ = java.util.Collections.unmodifiableList(tokenPrices_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tokenPrices_ = tokenPrices_;
+        } else {
+          result.tokenPrices_ = tokenPricesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deposit_ = deposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit) {
+          return mergeFrom((com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit other) {
+        if (other == com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (tokenPricesBuilder_ == null) {
+          if (!other.tokenPrices_.isEmpty()) {
+            if (tokenPrices_.isEmpty()) {
+              tokenPrices_ = other.tokenPrices_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTokenPricesIsMutable();
+              tokenPrices_.addAll(other.tokenPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenPrices_.isEmpty()) {
+            if (tokenPricesBuilder_.isEmpty()) {
+              tokenPricesBuilder_.dispose();
+              tokenPricesBuilder_ = null;
+              tokenPrices_ = other.tokenPrices_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tokenPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPricesFieldBuilder() : null;
+            } else {
+              tokenPricesBuilder_.addAllMessages(other.tokenPrices_);
+            }
+          }
+        }
+        if (!other.getDeposit().isEmpty()) {
+          deposit_ = other.deposit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.auction.v1.AuctionProto.ProposedTokenPrice m =
+                    input.readMessage(
+                        com.auction.v1.AuctionProto.ProposedTokenPrice.parser(),
+                        extensionRegistry);
+                if (tokenPricesBuilder_ == null) {
+                  ensureTokenPricesIsMutable();
+                  tokenPrices_.add(m);
+                } else {
+                  tokenPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                deposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> tokenPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPricesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tokenPrices_ = new java.util.ArrayList<com.auction.v1.AuctionProto.ProposedTokenPrice>(tokenPrices_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.ProposedTokenPrice, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder, com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> tokenPricesBuilder_;
+
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice> getTokenPricesList() {
+        if (tokenPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenPrices_);
+        } else {
+          return tokenPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public int getTokenPricesCount() {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.size();
+        } else {
+          return tokenPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice getTokenPrices(int index) {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.get(index);
+        } else {
+          return tokenPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder setTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.set(index, value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder setTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(com.auction.v1.AuctionProto.ProposedTokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice value) {
+        if (tokenPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(index, value);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          com.auction.v1.AuctionProto.ProposedTokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addTokenPrices(
+          int index, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder builderForValue) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder addAllTokenPrices(
+          java.lang.Iterable<? extends com.auction.v1.AuctionProto.ProposedTokenPrice> values) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenPrices_);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder clearTokenPrices() {
+        if (tokenPricesBuilder_ == null) {
+          tokenPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public Builder removeTokenPrices(int index) {
+        if (tokenPricesBuilder_ == null) {
+          ensureTokenPricesIsMutable();
+          tokenPrices_.remove(index);
+          onChanged();
+        } else {
+          tokenPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice.Builder getTokenPricesBuilder(
+          int index) {
+        return getTokenPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder getTokenPricesOrBuilder(
+          int index) {
+        if (tokenPricesBuilder_ == null) {
+          return tokenPrices_.get(index);  } else {
+          return tokenPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<? extends com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+           getTokenPricesOrBuilderList() {
+        if (tokenPricesBuilder_ != null) {
+          return tokenPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenPrices_);
+        }
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice.Builder addTokenPricesBuilder() {
+        return getTokenPricesFieldBuilder().addBuilder(
+            com.auction.v1.AuctionProto.ProposedTokenPrice.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public com.auction.v1.AuctionProto.ProposedTokenPrice.Builder addTokenPricesBuilder(
+          int index) {
+        return getTokenPricesFieldBuilder().addBuilder(
+            index, com.auction.v1.AuctionProto.ProposedTokenPrice.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .auction.v1.ProposedTokenPrice token_prices = 3 [json_name = "tokenPrices"];</code>
+       */
+      public java.util.List<com.auction.v1.AuctionProto.ProposedTokenPrice.Builder> 
+           getTokenPricesBuilderList() {
+        return getTokenPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.auction.v1.AuctionProto.ProposedTokenPrice, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder, com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder> 
+          getTokenPricesFieldBuilder() {
+        if (tokenPricesBuilder_ == null) {
+          tokenPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.auction.v1.AuctionProto.ProposedTokenPrice, com.auction.v1.AuctionProto.ProposedTokenPrice.Builder, com.auction.v1.AuctionProto.ProposedTokenPriceOrBuilder>(
+                  tokenPrices_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenPrices_ = null;
+        }
+        return tokenPricesBuilder_;
+      }
+
+      private java.lang.Object deposit_ = "";
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The deposit.
+       */
+      public java.lang.String getDeposit() {
+        java.lang.Object ref = deposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return The bytes for deposit.
+       */
+      public com.google.protobuf.ByteString
+          getDepositBytes() {
+        java.lang.Object ref = deposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeposit() {
+        deposit_ = getDefaultInstance().getDeposit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string deposit = 4 [json_name = "deposit"];</code>
+       * @param value The bytes for deposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:auction.v1.SetTokenPricesProposalWithDeposit)
+    }
+
+    // @@protoc_insertion_point(class_scope:auction.v1.SetTokenPricesProposalWithDeposit)
+    private static final com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit();
+    }
+
+    public static com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetTokenPricesProposalWithDeposit>
+        PARSER = new com.google.protobuf.AbstractParser<SetTokenPricesProposalWithDeposit>() {
+      @java.lang.Override
+      public SetTokenPricesProposalWithDeposit parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetTokenPricesProposalWithDeposit> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetTokenPricesProposalWithDeposit> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.auction.v1.ProposalProto.SetTokenPricesProposalWithDeposit getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_auction_v1_SetTokenPricesProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_auction_v1_SetTokenPricesProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_auction_v1_SetTokenPricesProposalWithDeposit_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_auction_v1_SetTokenPricesProposalWithDeposit_fieldAccessorTable;
 
@@ -44,11 +2348,11 @@ public final class ProposalProto {
       "le\022 \n\013description\030\002 \001(\tR\013description\022A\n\014" +
       "token_prices\030\003 \003(\0132\036.auction.v1.Proposed" +
       "TokenPriceR\013tokenPrices\022\030\n\007deposit\030\004 \001(\t" +
-      "R\007depositB\231\001\n\016com.auction.v1B\rProposalPr" +
-      "otoP\001Z/github.com/peggyjv/sommelier/v4/x" +
-      "/auction/types\242\002\003AXX\252\002\nAuction.V1\312\002\nAuct" +
-      "ion\\V1\342\002\026Auction\\V1\\GPBMetadata\352\002\013Auctio" +
-      "n::V1b\006proto3"
+      "R\007depositB\227\001\n\016com.auction.v1B\rProposalPr" +
+      "otoZ/github.com/peggyjv/sommelier/v4/x/a" +
+      "uction/types\242\002\003AXX\252\002\nAuction.V1\312\002\nAuctio" +
+      "n\\V1\342\002\026Auction\\V1\\GPBMetadata\352\002\013Auction:" +
+      ":V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

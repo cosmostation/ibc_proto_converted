@@ -14,14 +14,1193 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryIssuersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.issuer.v1.QueryIssuersRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.issuer.v1.QueryIssuersRequest}
+   */
+  public static final class QueryIssuersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.issuer.v1.QueryIssuersRequest)
+      QueryIssuersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIssuersRequest.newBuilder() to construct.
+    private QueryIssuersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIssuersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIssuersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.issuer.v1.QueryProto.QueryIssuersRequest.class, com.em.issuer.v1.QueryProto.QueryIssuersRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.issuer.v1.QueryProto.QueryIssuersRequest)) {
+        return super.equals(obj);
+      }
+      com.em.issuer.v1.QueryProto.QueryIssuersRequest other = (com.em.issuer.v1.QueryProto.QueryIssuersRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.issuer.v1.QueryProto.QueryIssuersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.issuer.v1.QueryIssuersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.issuer.v1.QueryIssuersRequest)
+        com.em.issuer.v1.QueryProto.QueryIssuersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.issuer.v1.QueryProto.QueryIssuersRequest.class, com.em.issuer.v1.QueryProto.QueryIssuersRequest.Builder.class);
+      }
+
+      // Construct using com.em.issuer.v1.QueryProto.QueryIssuersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.issuer.v1.QueryProto.QueryIssuersRequest getDefaultInstanceForType() {
+        return com.em.issuer.v1.QueryProto.QueryIssuersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.issuer.v1.QueryProto.QueryIssuersRequest build() {
+        com.em.issuer.v1.QueryProto.QueryIssuersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.issuer.v1.QueryProto.QueryIssuersRequest buildPartial() {
+        com.em.issuer.v1.QueryProto.QueryIssuersRequest result = new com.em.issuer.v1.QueryProto.QueryIssuersRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.issuer.v1.QueryProto.QueryIssuersRequest) {
+          return mergeFrom((com.em.issuer.v1.QueryProto.QueryIssuersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.issuer.v1.QueryProto.QueryIssuersRequest other) {
+        if (other == com.em.issuer.v1.QueryProto.QueryIssuersRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.issuer.v1.QueryIssuersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.issuer.v1.QueryIssuersRequest)
+    private static final com.em.issuer.v1.QueryProto.QueryIssuersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.issuer.v1.QueryProto.QueryIssuersRequest();
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIssuersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIssuersRequest>() {
+      @java.lang.Override
+      public QueryIssuersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIssuersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIssuersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.issuer.v1.QueryProto.QueryIssuersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIssuersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.issuer.v1.QueryIssuersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    java.util.List<com.em.issuer.v1.IssuerProto.Issuer> 
+        getIssuersList();
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    com.em.issuer.v1.IssuerProto.Issuer getIssuers(int index);
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    int getIssuersCount();
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    java.util.List<? extends com.em.issuer.v1.IssuerProto.IssuerOrBuilder> 
+        getIssuersOrBuilderList();
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    com.em.issuer.v1.IssuerProto.IssuerOrBuilder getIssuersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.issuer.v1.QueryIssuersResponse}
+   */
+  public static final class QueryIssuersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.issuer.v1.QueryIssuersResponse)
+      QueryIssuersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIssuersResponse.newBuilder() to construct.
+    private QueryIssuersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIssuersResponse() {
+      issuers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIssuersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.issuer.v1.QueryProto.QueryIssuersResponse.class, com.em.issuer.v1.QueryProto.QueryIssuersResponse.Builder.class);
+    }
+
+    public static final int ISSUERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.em.issuer.v1.IssuerProto.Issuer> issuers_;
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.em.issuer.v1.IssuerProto.Issuer> getIssuersList() {
+      return issuers_;
+    }
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.em.issuer.v1.IssuerProto.IssuerOrBuilder> 
+        getIssuersOrBuilderList() {
+      return issuers_;
+    }
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getIssuersCount() {
+      return issuers_.size();
+    }
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.issuer.v1.IssuerProto.Issuer getIssuers(int index) {
+      return issuers_.get(index);
+    }
+    /**
+     * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.issuer.v1.IssuerProto.IssuerOrBuilder getIssuersOrBuilder(
+        int index) {
+      return issuers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < issuers_.size(); i++) {
+        output.writeMessage(1, issuers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < issuers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, issuers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.issuer.v1.QueryProto.QueryIssuersResponse)) {
+        return super.equals(obj);
+      }
+      com.em.issuer.v1.QueryProto.QueryIssuersResponse other = (com.em.issuer.v1.QueryProto.QueryIssuersResponse) obj;
+
+      if (!getIssuersList()
+          .equals(other.getIssuersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIssuersCount() > 0) {
+        hash = (37 * hash) + ISSUERS_FIELD_NUMBER;
+        hash = (53 * hash) + getIssuersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.issuer.v1.QueryProto.QueryIssuersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.issuer.v1.QueryIssuersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.issuer.v1.QueryIssuersResponse)
+        com.em.issuer.v1.QueryProto.QueryIssuersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.issuer.v1.QueryProto.QueryIssuersResponse.class, com.em.issuer.v1.QueryProto.QueryIssuersResponse.Builder.class);
+      }
+
+      // Construct using com.em.issuer.v1.QueryProto.QueryIssuersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (issuersBuilder_ == null) {
+          issuers_ = java.util.Collections.emptyList();
+        } else {
+          issuers_ = null;
+          issuersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.issuer.v1.QueryProto.internal_static_em_issuer_v1_QueryIssuersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.issuer.v1.QueryProto.QueryIssuersResponse getDefaultInstanceForType() {
+        return com.em.issuer.v1.QueryProto.QueryIssuersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.issuer.v1.QueryProto.QueryIssuersResponse build() {
+        com.em.issuer.v1.QueryProto.QueryIssuersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.issuer.v1.QueryProto.QueryIssuersResponse buildPartial() {
+        com.em.issuer.v1.QueryProto.QueryIssuersResponse result = new com.em.issuer.v1.QueryProto.QueryIssuersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.issuer.v1.QueryProto.QueryIssuersResponse result) {
+        if (issuersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            issuers_ = java.util.Collections.unmodifiableList(issuers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.issuers_ = issuers_;
+        } else {
+          result.issuers_ = issuersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.issuer.v1.QueryProto.QueryIssuersResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.issuer.v1.QueryProto.QueryIssuersResponse) {
+          return mergeFrom((com.em.issuer.v1.QueryProto.QueryIssuersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.issuer.v1.QueryProto.QueryIssuersResponse other) {
+        if (other == com.em.issuer.v1.QueryProto.QueryIssuersResponse.getDefaultInstance()) return this;
+        if (issuersBuilder_ == null) {
+          if (!other.issuers_.isEmpty()) {
+            if (issuers_.isEmpty()) {
+              issuers_ = other.issuers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIssuersIsMutable();
+              issuers_.addAll(other.issuers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.issuers_.isEmpty()) {
+            if (issuersBuilder_.isEmpty()) {
+              issuersBuilder_.dispose();
+              issuersBuilder_ = null;
+              issuers_ = other.issuers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              issuersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIssuersFieldBuilder() : null;
+            } else {
+              issuersBuilder_.addAllMessages(other.issuers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.em.issuer.v1.IssuerProto.Issuer m =
+                    input.readMessage(
+                        com.em.issuer.v1.IssuerProto.Issuer.parser(),
+                        extensionRegistry);
+                if (issuersBuilder_ == null) {
+                  ensureIssuersIsMutable();
+                  issuers_.add(m);
+                } else {
+                  issuersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.em.issuer.v1.IssuerProto.Issuer> issuers_ =
+        java.util.Collections.emptyList();
+      private void ensureIssuersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          issuers_ = new java.util.ArrayList<com.em.issuer.v1.IssuerProto.Issuer>(issuers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.issuer.v1.IssuerProto.Issuer, com.em.issuer.v1.IssuerProto.Issuer.Builder, com.em.issuer.v1.IssuerProto.IssuerOrBuilder> issuersBuilder_;
+
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public java.util.List<com.em.issuer.v1.IssuerProto.Issuer> getIssuersList() {
+        if (issuersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(issuers_);
+        } else {
+          return issuersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public int getIssuersCount() {
+        if (issuersBuilder_ == null) {
+          return issuers_.size();
+        } else {
+          return issuersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public com.em.issuer.v1.IssuerProto.Issuer getIssuers(int index) {
+        if (issuersBuilder_ == null) {
+          return issuers_.get(index);
+        } else {
+          return issuersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder setIssuers(
+          int index, com.em.issuer.v1.IssuerProto.Issuer value) {
+        if (issuersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIssuersIsMutable();
+          issuers_.set(index, value);
+          onChanged();
+        } else {
+          issuersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder setIssuers(
+          int index, com.em.issuer.v1.IssuerProto.Issuer.Builder builderForValue) {
+        if (issuersBuilder_ == null) {
+          ensureIssuersIsMutable();
+          issuers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          issuersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder addIssuers(com.em.issuer.v1.IssuerProto.Issuer value) {
+        if (issuersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIssuersIsMutable();
+          issuers_.add(value);
+          onChanged();
+        } else {
+          issuersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder addIssuers(
+          int index, com.em.issuer.v1.IssuerProto.Issuer value) {
+        if (issuersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIssuersIsMutable();
+          issuers_.add(index, value);
+          onChanged();
+        } else {
+          issuersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder addIssuers(
+          com.em.issuer.v1.IssuerProto.Issuer.Builder builderForValue) {
+        if (issuersBuilder_ == null) {
+          ensureIssuersIsMutable();
+          issuers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          issuersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder addIssuers(
+          int index, com.em.issuer.v1.IssuerProto.Issuer.Builder builderForValue) {
+        if (issuersBuilder_ == null) {
+          ensureIssuersIsMutable();
+          issuers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          issuersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder addAllIssuers(
+          java.lang.Iterable<? extends com.em.issuer.v1.IssuerProto.Issuer> values) {
+        if (issuersBuilder_ == null) {
+          ensureIssuersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, issuers_);
+          onChanged();
+        } else {
+          issuersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder clearIssuers() {
+        if (issuersBuilder_ == null) {
+          issuers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          issuersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public Builder removeIssuers(int index) {
+        if (issuersBuilder_ == null) {
+          ensureIssuersIsMutable();
+          issuers_.remove(index);
+          onChanged();
+        } else {
+          issuersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public com.em.issuer.v1.IssuerProto.Issuer.Builder getIssuersBuilder(
+          int index) {
+        return getIssuersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public com.em.issuer.v1.IssuerProto.IssuerOrBuilder getIssuersOrBuilder(
+          int index) {
+        if (issuersBuilder_ == null) {
+          return issuers_.get(index);  } else {
+          return issuersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public java.util.List<? extends com.em.issuer.v1.IssuerProto.IssuerOrBuilder> 
+           getIssuersOrBuilderList() {
+        if (issuersBuilder_ != null) {
+          return issuersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(issuers_);
+        }
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public com.em.issuer.v1.IssuerProto.Issuer.Builder addIssuersBuilder() {
+        return getIssuersFieldBuilder().addBuilder(
+            com.em.issuer.v1.IssuerProto.Issuer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public com.em.issuer.v1.IssuerProto.Issuer.Builder addIssuersBuilder(
+          int index) {
+        return getIssuersFieldBuilder().addBuilder(
+            index, com.em.issuer.v1.IssuerProto.Issuer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.issuer.v1.Issuer issuers = 1 [json_name = "issuers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issuers&#92;""];</code>
+       */
+      public java.util.List<com.em.issuer.v1.IssuerProto.Issuer.Builder> 
+           getIssuersBuilderList() {
+        return getIssuersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.issuer.v1.IssuerProto.Issuer, com.em.issuer.v1.IssuerProto.Issuer.Builder, com.em.issuer.v1.IssuerProto.IssuerOrBuilder> 
+          getIssuersFieldBuilder() {
+        if (issuersBuilder_ == null) {
+          issuersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.em.issuer.v1.IssuerProto.Issuer, com.em.issuer.v1.IssuerProto.Issuer.Builder, com.em.issuer.v1.IssuerProto.IssuerOrBuilder>(
+                  issuers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          issuers_ = null;
+        }
+        return issuersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.issuer.v1.QueryIssuersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.issuer.v1.QueryIssuersResponse)
+    private static final com.em.issuer.v1.QueryProto.QueryIssuersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.issuer.v1.QueryProto.QueryIssuersResponse();
+    }
+
+    public static com.em.issuer.v1.QueryProto.QueryIssuersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIssuersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIssuersResponse>() {
+      @java.lang.Override
+      public QueryIssuersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIssuersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIssuersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.issuer.v1.QueryProto.QueryIssuersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_issuer_v1_QueryIssuersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_issuer_v1_QueryIssuersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_issuer_v1_QueryIssuersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_issuer_v1_QueryIssuersResponse_fieldAccessorTable;
 
@@ -42,12 +1221,12 @@ public final class QueryProto {
       "\336\037\000\362\336\037\016yaml:\"issuers\"R\007issuers2}\n\005Query\022" +
       "t\n\007Issuers\022!.em.issuer.v1.QueryIssuersRe" +
       "quest\032\".em.issuer.v1.QueryIssuersRespons" +
-      "e\"\"\202\323\344\223\002\034\022\032/e-money/issuer/v1/issuersB\235\001" +
-      "\n\020com.em.issuer.v1B\nQueryProtoP\001Z+github" +
-      ".com/e-money/em-ledger/x/issuer/types\242\002\003" +
-      "EIX\252\002\014Em.Issuer.V1\312\002\014Em\\Issuer\\V1\342\002\030Em\\I" +
-      "ssuer\\V1\\GPBMetadata\352\002\016Em::Issuer::V1b\006p" +
-      "roto3"
+      "e\"\"\202\323\344\223\002\034\022\032/e-money/issuer/v1/issuersB\233\001" +
+      "\n\020com.em.issuer.v1B\nQueryProtoZ+github.c" +
+      "om/e-money/em-ledger/x/issuer/types\242\002\003EI" +
+      "X\252\002\014Em.Issuer.V1\312\002\014Em\\Issuer\\V1\342\002\030Em\\Iss" +
+      "uer\\V1\\GPBMetadata\352\002\016Em::Issuer::V1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

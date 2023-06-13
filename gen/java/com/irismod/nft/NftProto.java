@@ -14,29 +14,5177 @@ public final class NftProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface BaseNFTOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.nft.BaseNFT)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <code>string data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    java.lang.String getData();
+    /**
+     * <code>string data = 4 [json_name = "data"];</code>
+     * @return The bytes for data.
+     */
+    com.google.protobuf.ByteString
+        getDataBytes();
+
+    /**
+     * <code>string owner = 5 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 5 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * BaseNFT defines a non-fungible token
+   * </pre>
+   *
+   * Protobuf type {@code irismod.nft.BaseNFT}
+   */
+  public static final class BaseNFT extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.nft.BaseNFT)
+      BaseNFTOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseNFT.newBuilder() to construct.
+    private BaseNFT(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseNFT() {
+      id_ = "";
+      name_ = "";
+      uri_ = "";
+      data_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseNFT();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_BaseNFT_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_BaseNFT_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.nft.NftProto.BaseNFT.class, com.irismod.nft.NftProto.BaseNFT.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URI_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uri_ = "";
+    /**
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The uri.
+     */
+    @java.lang.Override
+    public java.lang.String getUri() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+     * @return The bytes for uri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = uri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object data_ = "";
+    /**
+     * <code>string data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public java.lang.String getData() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        data_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data = 4 [json_name = "data"];</code>
+     * @return The bytes for data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataBytes() {
+      java.lang.Object ref = data_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        data_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 5 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 5 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, data_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(data_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, data_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.nft.NftProto.BaseNFT)) {
+        return super.equals(obj);
+      }
+      com.irismod.nft.NftProto.BaseNFT other = (com.irismod.nft.NftProto.BaseNFT) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getUri()
+          .equals(other.getUri())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + URI_FIELD_NUMBER;
+      hash = (53 * hash) + getUri().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.nft.NftProto.BaseNFT parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.nft.NftProto.BaseNFT parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.BaseNFT parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.nft.NftProto.BaseNFT prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BaseNFT defines a non-fungible token
+     * </pre>
+     *
+     * Protobuf type {@code irismod.nft.BaseNFT}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.nft.BaseNFT)
+        com.irismod.nft.NftProto.BaseNFTOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_BaseNFT_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_BaseNFT_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.nft.NftProto.BaseNFT.class, com.irismod.nft.NftProto.BaseNFT.Builder.class);
+      }
+
+      // Construct using com.irismod.nft.NftProto.BaseNFT.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        name_ = "";
+        uri_ = "";
+        data_ = "";
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_BaseNFT_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.BaseNFT getDefaultInstanceForType() {
+        return com.irismod.nft.NftProto.BaseNFT.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.BaseNFT build() {
+        com.irismod.nft.NftProto.BaseNFT result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.BaseNFT buildPartial() {
+        com.irismod.nft.NftProto.BaseNFT result = new com.irismod.nft.NftProto.BaseNFT(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.nft.NftProto.BaseNFT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.uri_ = uri_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.nft.NftProto.BaseNFT) {
+          return mergeFrom((com.irismod.nft.NftProto.BaseNFT)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.nft.NftProto.BaseNFT other) {
+        if (other == com.irismod.nft.NftProto.BaseNFT.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUri().isEmpty()) {
+          uri_ = other.uri_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getData().isEmpty()) {
+          data_ = other.data_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                uri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                data_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uri_ = "";
+      /**
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return The uri.
+       */
+      public java.lang.String getUri() {
+        java.lang.Object ref = uri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return The bytes for uri.
+       */
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = uri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uri_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        uri_ = getDefaultInstance().getUri();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uri = 3 [json_name = "uri", (.gogoproto.customname) = "URI"];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uri_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object data_ = "";
+      /**
+       * <code>string data = 4 [json_name = "data"];</code>
+       * @return The data.
+       */
+      public java.lang.String getData() {
+        java.lang.Object ref = data_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          data_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data = 4 [json_name = "data"];</code>
+       * @return The bytes for data.
+       */
+      public com.google.protobuf.ByteString
+          getDataBytes() {
+        java.lang.Object ref = data_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          data_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data = 4 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 4 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        data_ = getDefaultInstance().getData();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data = 4 [json_name = "data"];</code>
+       * @param value The bytes for data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        data_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 5 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 5 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 5 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 5 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 5 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.nft.BaseNFT)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.nft.BaseNFT)
+    private static final com.irismod.nft.NftProto.BaseNFT DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.nft.NftProto.BaseNFT();
+    }
+
+    public static com.irismod.nft.NftProto.BaseNFT getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseNFT>
+        PARSER = new com.google.protobuf.AbstractParser<BaseNFT>() {
+      @java.lang.Override
+      public BaseNFT parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseNFT> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseNFT> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.nft.NftProto.BaseNFT getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.nft.Denom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    java.lang.String getSchema();
+    /**
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    com.google.protobuf.ByteString
+        getSchemaBytes();
+
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>bool mint_restricted = 6 [json_name = "mintRestricted"];</code>
+     * @return The mintRestricted.
+     */
+    boolean getMintRestricted();
+
+    /**
+     * <code>bool update_restricted = 7 [json_name = "updateRestricted"];</code>
+     * @return The updateRestricted.
+     */
+    boolean getUpdateRestricted();
+  }
+  /**
+   * <pre>
+   * Denom defines a type of NFT
+   * </pre>
+   *
+   * Protobuf type {@code irismod.nft.Denom}
+   */
+  public static final class Denom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.nft.Denom)
+      DenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Denom.newBuilder() to construct.
+    private Denom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Denom() {
+      id_ = "";
+      name_ = "";
+      schema_ = "";
+      creator_ = "";
+      symbol_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Denom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_Denom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_Denom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.nft.NftProto.Denom.class, com.irismod.nft.NftProto.Denom.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schema_ = "";
+    /**
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public java.lang.String getSchema() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schema_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schema = 3 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaBytes() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schema_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 5 [json_name = "symbol"];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINT_RESTRICTED_FIELD_NUMBER = 6;
+    private boolean mintRestricted_ = false;
+    /**
+     * <code>bool mint_restricted = 6 [json_name = "mintRestricted"];</code>
+     * @return The mintRestricted.
+     */
+    @java.lang.Override
+    public boolean getMintRestricted() {
+      return mintRestricted_;
+    }
+
+    public static final int UPDATE_RESTRICTED_FIELD_NUMBER = 7;
+    private boolean updateRestricted_ = false;
+    /**
+     * <code>bool update_restricted = 7 [json_name = "updateRestricted"];</code>
+     * @return The updateRestricted.
+     */
+    @java.lang.Override
+    public boolean getUpdateRestricted() {
+      return updateRestricted_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, symbol_);
+      }
+      if (mintRestricted_ != false) {
+        output.writeBool(6, mintRestricted_);
+      }
+      if (updateRestricted_ != false) {
+        output.writeBool(7, updateRestricted_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, schema_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, symbol_);
+      }
+      if (mintRestricted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, mintRestricted_);
+      }
+      if (updateRestricted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, updateRestricted_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.nft.NftProto.Denom)) {
+        return super.equals(obj);
+      }
+      com.irismod.nft.NftProto.Denom other = (com.irismod.nft.NftProto.Denom) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getSchema()
+          .equals(other.getSchema())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (getMintRestricted()
+          != other.getMintRestricted()) return false;
+      if (getUpdateRestricted()
+          != other.getUpdateRestricted()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+      hash = (53 * hash) + getSchema().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + MINT_RESTRICTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMintRestricted());
+      hash = (37 * hash) + UPDATE_RESTRICTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUpdateRestricted());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.nft.NftProto.Denom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.nft.NftProto.Denom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.Denom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.nft.NftProto.Denom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Denom defines a type of NFT
+     * </pre>
+     *
+     * Protobuf type {@code irismod.nft.Denom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.nft.Denom)
+        com.irismod.nft.NftProto.DenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Denom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Denom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.nft.NftProto.Denom.class, com.irismod.nft.NftProto.Denom.Builder.class);
+      }
+
+      // Construct using com.irismod.nft.NftProto.Denom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        name_ = "";
+        schema_ = "";
+        creator_ = "";
+        symbol_ = "";
+        mintRestricted_ = false;
+        updateRestricted_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Denom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Denom getDefaultInstanceForType() {
+        return com.irismod.nft.NftProto.Denom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Denom build() {
+        com.irismod.nft.NftProto.Denom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Denom buildPartial() {
+        com.irismod.nft.NftProto.Denom result = new com.irismod.nft.NftProto.Denom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.nft.NftProto.Denom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.schema_ = schema_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.mintRestricted_ = mintRestricted_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.updateRestricted_ = updateRestricted_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.nft.NftProto.Denom) {
+          return mergeFrom((com.irismod.nft.NftProto.Denom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.nft.NftProto.Denom other) {
+        if (other == com.irismod.nft.NftProto.Denom.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSchema().isEmpty()) {
+          schema_ = other.schema_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getMintRestricted() != false) {
+          setMintRestricted(other.getMintRestricted());
+        }
+        if (other.getUpdateRestricted() != false) {
+          setUpdateRestricted(other.getUpdateRestricted());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                schema_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                mintRestricted_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                updateRestricted_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object schema_ = "";
+      /**
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @return The schema.
+       */
+      public java.lang.String getSchema() {
+        java.lang.Object ref = schema_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schema_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @return The bytes for schema.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaBytes() {
+        java.lang.Object ref = schema_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schema_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @param value The schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchema(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        schema_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchema() {
+        schema_ = getDefaultInstance().getSchema();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema = 3 [json_name = "schema"];</code>
+       * @param value The bytes for schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        schema_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 5 [json_name = "symbol"];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private boolean mintRestricted_ ;
+      /**
+       * <code>bool mint_restricted = 6 [json_name = "mintRestricted"];</code>
+       * @return The mintRestricted.
+       */
+      @java.lang.Override
+      public boolean getMintRestricted() {
+        return mintRestricted_;
+      }
+      /**
+       * <code>bool mint_restricted = 6 [json_name = "mintRestricted"];</code>
+       * @param value The mintRestricted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintRestricted(boolean value) {
+
+        mintRestricted_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool mint_restricted = 6 [json_name = "mintRestricted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintRestricted() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        mintRestricted_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean updateRestricted_ ;
+      /**
+       * <code>bool update_restricted = 7 [json_name = "updateRestricted"];</code>
+       * @return The updateRestricted.
+       */
+      @java.lang.Override
+      public boolean getUpdateRestricted() {
+        return updateRestricted_;
+      }
+      /**
+       * <code>bool update_restricted = 7 [json_name = "updateRestricted"];</code>
+       * @param value The updateRestricted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateRestricted(boolean value) {
+
+        updateRestricted_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool update_restricted = 7 [json_name = "updateRestricted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdateRestricted() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        updateRestricted_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.nft.Denom)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.nft.Denom)
+    private static final com.irismod.nft.NftProto.Denom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.nft.NftProto.Denom();
+    }
+
+    public static com.irismod.nft.NftProto.Denom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Denom>
+        PARSER = new com.google.protobuf.AbstractParser<Denom>() {
+      @java.lang.Override
+      public Denom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Denom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Denom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.nft.NftProto.Denom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IDCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.nft.IDCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    java.lang.String getDenomId();
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    com.google.protobuf.ByteString
+        getDenomIdBytes();
+
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @return A list containing the tokenIds.
+     */
+    java.util.List<java.lang.String>
+        getTokenIdsList();
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @return The count of tokenIds.
+     */
+    int getTokenIdsCount();
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The tokenIds at the given index.
+     */
+    java.lang.String getTokenIds(int index);
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tokenIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTokenIdsBytes(int index);
+  }
+  /**
+   * <pre>
+   * IDCollection defines a type of collection with specified ID
+   * </pre>
+   *
+   * Protobuf type {@code irismod.nft.IDCollection}
+   */
+  public static final class IDCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.nft.IDCollection)
+      IDCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IDCollection.newBuilder() to construct.
+    private IDCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IDCollection() {
+      denomId_ = "";
+      tokenIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IDCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_IDCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_IDCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.nft.NftProto.IDCollection.class, com.irismod.nft.NftProto.IDCollection.Builder.class);
+    }
+
+    public static final int DENOM_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denomId_ = "";
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The denomId.
+     */
+    @java.lang.Override
+    public java.lang.String getDenomId() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+     * @return The bytes for denomId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomIdBytes() {
+      java.lang.Object ref = denomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_IDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList tokenIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @return A list containing the tokenIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTokenIdsList() {
+      return tokenIds_;
+    }
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @return The count of tokenIds.
+     */
+    public int getTokenIdsCount() {
+      return tokenIds_.size();
+    }
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The tokenIds at the given index.
+     */
+    public java.lang.String getTokenIds(int index) {
+      return tokenIds_.get(index);
+    }
+    /**
+     * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tokenIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTokenIdsBytes(int index) {
+      return tokenIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denomId_);
+      }
+      for (int i = 0; i < tokenIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenIds_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denomId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denomId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tokenIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tokenIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTokenIdsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.nft.NftProto.IDCollection)) {
+        return super.equals(obj);
+      }
+      com.irismod.nft.NftProto.IDCollection other = (com.irismod.nft.NftProto.IDCollection) obj;
+
+      if (!getDenomId()
+          .equals(other.getDenomId())) return false;
+      if (!getTokenIdsList()
+          .equals(other.getTokenIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDenomId().hashCode();
+      if (getTokenIdsCount() > 0) {
+        hash = (37 * hash) + TOKEN_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.nft.NftProto.IDCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.nft.NftProto.IDCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.IDCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.nft.NftProto.IDCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IDCollection defines a type of collection with specified ID
+     * </pre>
+     *
+     * Protobuf type {@code irismod.nft.IDCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.nft.IDCollection)
+        com.irismod.nft.NftProto.IDCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_IDCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_IDCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.nft.NftProto.IDCollection.class, com.irismod.nft.NftProto.IDCollection.Builder.class);
+      }
+
+      // Construct using com.irismod.nft.NftProto.IDCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denomId_ = "";
+        tokenIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_IDCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.IDCollection getDefaultInstanceForType() {
+        return com.irismod.nft.NftProto.IDCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.IDCollection build() {
+        com.irismod.nft.NftProto.IDCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.IDCollection buildPartial() {
+        com.irismod.nft.NftProto.IDCollection result = new com.irismod.nft.NftProto.IDCollection(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.nft.NftProto.IDCollection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denomId_ = denomId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          tokenIds_.makeImmutable();
+          result.tokenIds_ = tokenIds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.nft.NftProto.IDCollection) {
+          return mergeFrom((com.irismod.nft.NftProto.IDCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.nft.NftProto.IDCollection other) {
+        if (other == com.irismod.nft.NftProto.IDCollection.getDefaultInstance()) return this;
+        if (!other.getDenomId().isEmpty()) {
+          denomId_ = other.denomId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.tokenIds_.isEmpty()) {
+          if (tokenIds_.isEmpty()) {
+            tokenIds_ = other.tokenIds_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureTokenIdsIsMutable();
+            tokenIds_.addAll(other.tokenIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denomId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTokenIdsIsMutable();
+                tokenIds_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denomId_ = "";
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The denomId.
+       */
+      public java.lang.String getDenomId() {
+        java.lang.Object ref = denomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return The bytes for denomId.
+       */
+      public com.google.protobuf.ByteString
+          getDenomIdBytes() {
+        java.lang.Object ref = denomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomId() {
+        denomId_ = getDefaultInstance().getDenomId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom_id = 1 [json_name = "denomId", (.gogoproto.moretags) = "yaml:&#92;"denom_id&#92;""];</code>
+       * @param value The bytes for denomId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denomId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList tokenIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTokenIdsIsMutable() {
+        if (!tokenIds_.isModifiable()) {
+          tokenIds_ = new com.google.protobuf.LazyStringArrayList(tokenIds_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @return A list containing the tokenIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTokenIdsList() {
+        tokenIds_.makeImmutable();
+        return tokenIds_;
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @return The count of tokenIds.
+       */
+      public int getTokenIdsCount() {
+        return tokenIds_.size();
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The tokenIds at the given index.
+       */
+      public java.lang.String getTokenIds(int index) {
+        return tokenIds_.get(index);
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tokenIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTokenIdsBytes(int index) {
+        return tokenIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The tokenIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTokenIdsIsMutable();
+        tokenIds_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @param value The tokenIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTokenIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTokenIdsIsMutable();
+        tokenIds_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @param values The tokenIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTokenIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTokenIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tokenIds_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenIds() {
+        tokenIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string token_ids = 2 [json_name = "tokenIds", (.gogoproto.moretags) = "yaml:&#92;"token_ids&#92;""];</code>
+       * @param value The bytes of the tokenIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTokenIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureTokenIdsIsMutable();
+        tokenIds_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.nft.IDCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.nft.IDCollection)
+    private static final com.irismod.nft.NftProto.IDCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.nft.NftProto.IDCollection();
+    }
+
+    public static com.irismod.nft.NftProto.IDCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IDCollection>
+        PARSER = new com.google.protobuf.AbstractParser<IDCollection>() {
+      @java.lang.Override
+      public IDCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IDCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IDCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.nft.NftProto.IDCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OwnerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.nft.Owner)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    java.util.List<com.irismod.nft.NftProto.IDCollection> 
+        getIdCollectionsList();
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    com.irismod.nft.NftProto.IDCollection getIdCollections(int index);
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    int getIdCollectionsCount();
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    java.util.List<? extends com.irismod.nft.NftProto.IDCollectionOrBuilder> 
+        getIdCollectionsOrBuilderList();
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    com.irismod.nft.NftProto.IDCollectionOrBuilder getIdCollectionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Owner defines a type of owner
+   * </pre>
+   *
+   * Protobuf type {@code irismod.nft.Owner}
+   */
+  public static final class Owner extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.nft.Owner)
+      OwnerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Owner.newBuilder() to construct.
+    private Owner(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Owner() {
+      address_ = "";
+      idCollections_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Owner();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_Owner_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_Owner_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.nft.NftProto.Owner.class, com.irismod.nft.NftProto.Owner.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_COLLECTIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.nft.NftProto.IDCollection> idCollections_;
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.nft.NftProto.IDCollection> getIdCollectionsList() {
+      return idCollections_;
+    }
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.nft.NftProto.IDCollectionOrBuilder> 
+        getIdCollectionsOrBuilderList() {
+      return idCollections_;
+    }
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getIdCollectionsCount() {
+      return idCollections_.size();
+    }
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.nft.NftProto.IDCollection getIdCollections(int index) {
+      return idCollections_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.nft.NftProto.IDCollectionOrBuilder getIdCollectionsOrBuilder(
+        int index) {
+      return idCollections_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      for (int i = 0; i < idCollections_.size(); i++) {
+        output.writeMessage(2, idCollections_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      for (int i = 0; i < idCollections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, idCollections_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.nft.NftProto.Owner)) {
+        return super.equals(obj);
+      }
+      com.irismod.nft.NftProto.Owner other = (com.irismod.nft.NftProto.Owner) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getIdCollectionsList()
+          .equals(other.getIdCollectionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getIdCollectionsCount() > 0) {
+        hash = (37 * hash) + ID_COLLECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getIdCollectionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.nft.NftProto.Owner parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.nft.NftProto.Owner parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.Owner parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.nft.NftProto.Owner prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Owner defines a type of owner
+     * </pre>
+     *
+     * Protobuf type {@code irismod.nft.Owner}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.nft.Owner)
+        com.irismod.nft.NftProto.OwnerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Owner_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Owner_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.nft.NftProto.Owner.class, com.irismod.nft.NftProto.Owner.Builder.class);
+      }
+
+      // Construct using com.irismod.nft.NftProto.Owner.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        if (idCollectionsBuilder_ == null) {
+          idCollections_ = java.util.Collections.emptyList();
+        } else {
+          idCollections_ = null;
+          idCollectionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Owner_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Owner getDefaultInstanceForType() {
+        return com.irismod.nft.NftProto.Owner.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Owner build() {
+        com.irismod.nft.NftProto.Owner result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Owner buildPartial() {
+        com.irismod.nft.NftProto.Owner result = new com.irismod.nft.NftProto.Owner(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.nft.NftProto.Owner result) {
+        if (idCollectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            idCollections_ = java.util.Collections.unmodifiableList(idCollections_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.idCollections_ = idCollections_;
+        } else {
+          result.idCollections_ = idCollectionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.nft.NftProto.Owner result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.nft.NftProto.Owner) {
+          return mergeFrom((com.irismod.nft.NftProto.Owner)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.nft.NftProto.Owner other) {
+        if (other == com.irismod.nft.NftProto.Owner.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (idCollectionsBuilder_ == null) {
+          if (!other.idCollections_.isEmpty()) {
+            if (idCollections_.isEmpty()) {
+              idCollections_ = other.idCollections_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureIdCollectionsIsMutable();
+              idCollections_.addAll(other.idCollections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.idCollections_.isEmpty()) {
+            if (idCollectionsBuilder_.isEmpty()) {
+              idCollectionsBuilder_.dispose();
+              idCollectionsBuilder_ = null;
+              idCollections_ = other.idCollections_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              idCollectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIdCollectionsFieldBuilder() : null;
+            } else {
+              idCollectionsBuilder_.addAllMessages(other.idCollections_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.irismod.nft.NftProto.IDCollection m =
+                    input.readMessage(
+                        com.irismod.nft.NftProto.IDCollection.parser(),
+                        extensionRegistry);
+                if (idCollectionsBuilder_ == null) {
+                  ensureIdCollectionsIsMutable();
+                  idCollections_.add(m);
+                } else {
+                  idCollectionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.irismod.nft.NftProto.IDCollection> idCollections_ =
+        java.util.Collections.emptyList();
+      private void ensureIdCollectionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          idCollections_ = new java.util.ArrayList<com.irismod.nft.NftProto.IDCollection>(idCollections_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.nft.NftProto.IDCollection, com.irismod.nft.NftProto.IDCollection.Builder, com.irismod.nft.NftProto.IDCollectionOrBuilder> idCollectionsBuilder_;
+
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public java.util.List<com.irismod.nft.NftProto.IDCollection> getIdCollectionsList() {
+        if (idCollectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(idCollections_);
+        } else {
+          return idCollectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public int getIdCollectionsCount() {
+        if (idCollectionsBuilder_ == null) {
+          return idCollections_.size();
+        } else {
+          return idCollectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public com.irismod.nft.NftProto.IDCollection getIdCollections(int index) {
+        if (idCollectionsBuilder_ == null) {
+          return idCollections_.get(index);
+        } else {
+          return idCollectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder setIdCollections(
+          int index, com.irismod.nft.NftProto.IDCollection value) {
+        if (idCollectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIdCollectionsIsMutable();
+          idCollections_.set(index, value);
+          onChanged();
+        } else {
+          idCollectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder setIdCollections(
+          int index, com.irismod.nft.NftProto.IDCollection.Builder builderForValue) {
+        if (idCollectionsBuilder_ == null) {
+          ensureIdCollectionsIsMutable();
+          idCollections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          idCollectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder addIdCollections(com.irismod.nft.NftProto.IDCollection value) {
+        if (idCollectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIdCollectionsIsMutable();
+          idCollections_.add(value);
+          onChanged();
+        } else {
+          idCollectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder addIdCollections(
+          int index, com.irismod.nft.NftProto.IDCollection value) {
+        if (idCollectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIdCollectionsIsMutable();
+          idCollections_.add(index, value);
+          onChanged();
+        } else {
+          idCollectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder addIdCollections(
+          com.irismod.nft.NftProto.IDCollection.Builder builderForValue) {
+        if (idCollectionsBuilder_ == null) {
+          ensureIdCollectionsIsMutable();
+          idCollections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          idCollectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder addIdCollections(
+          int index, com.irismod.nft.NftProto.IDCollection.Builder builderForValue) {
+        if (idCollectionsBuilder_ == null) {
+          ensureIdCollectionsIsMutable();
+          idCollections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          idCollectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder addAllIdCollections(
+          java.lang.Iterable<? extends com.irismod.nft.NftProto.IDCollection> values) {
+        if (idCollectionsBuilder_ == null) {
+          ensureIdCollectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, idCollections_);
+          onChanged();
+        } else {
+          idCollectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder clearIdCollections() {
+        if (idCollectionsBuilder_ == null) {
+          idCollections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          idCollectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public Builder removeIdCollections(int index) {
+        if (idCollectionsBuilder_ == null) {
+          ensureIdCollectionsIsMutable();
+          idCollections_.remove(index);
+          onChanged();
+        } else {
+          idCollectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public com.irismod.nft.NftProto.IDCollection.Builder getIdCollectionsBuilder(
+          int index) {
+        return getIdCollectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public com.irismod.nft.NftProto.IDCollectionOrBuilder getIdCollectionsOrBuilder(
+          int index) {
+        if (idCollectionsBuilder_ == null) {
+          return idCollections_.get(index);  } else {
+          return idCollectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public java.util.List<? extends com.irismod.nft.NftProto.IDCollectionOrBuilder> 
+           getIdCollectionsOrBuilderList() {
+        if (idCollectionsBuilder_ != null) {
+          return idCollectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(idCollections_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public com.irismod.nft.NftProto.IDCollection.Builder addIdCollectionsBuilder() {
+        return getIdCollectionsFieldBuilder().addBuilder(
+            com.irismod.nft.NftProto.IDCollection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public com.irismod.nft.NftProto.IDCollection.Builder addIdCollectionsBuilder(
+          int index) {
+        return getIdCollectionsFieldBuilder().addBuilder(
+            index, com.irismod.nft.NftProto.IDCollection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.nft.IDCollection id_collections = 2 [json_name = "idCollections", (.gogoproto.nullable) = false, (.gogoproto.customname) = "IDCollections", (.gogoproto.moretags) = "yaml:&#92;"idcs&#92;""];</code>
+       */
+      public java.util.List<com.irismod.nft.NftProto.IDCollection.Builder> 
+           getIdCollectionsBuilderList() {
+        return getIdCollectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.nft.NftProto.IDCollection, com.irismod.nft.NftProto.IDCollection.Builder, com.irismod.nft.NftProto.IDCollectionOrBuilder> 
+          getIdCollectionsFieldBuilder() {
+        if (idCollectionsBuilder_ == null) {
+          idCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.nft.NftProto.IDCollection, com.irismod.nft.NftProto.IDCollection.Builder, com.irismod.nft.NftProto.IDCollectionOrBuilder>(
+                  idCollections_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          idCollections_ = null;
+        }
+        return idCollectionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.nft.Owner)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.nft.Owner)
+    private static final com.irismod.nft.NftProto.Owner DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.nft.NftProto.Owner();
+    }
+
+    public static com.irismod.nft.NftProto.Owner getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Owner>
+        PARSER = new com.google.protobuf.AbstractParser<Owner>() {
+      @java.lang.Override
+      public Owner parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Owner> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Owner> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.nft.NftProto.Owner getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.nft.Collection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+     * @return Whether the denom field is set.
+     */
+    boolean hasDenom();
+    /**
+     * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+     * @return The denom.
+     */
+    com.irismod.nft.NftProto.Denom getDenom();
+    /**
+     * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.nft.NftProto.DenomOrBuilder getDenomOrBuilder();
+
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    java.util.List<com.irismod.nft.NftProto.BaseNFT> 
+        getNftsList();
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    com.irismod.nft.NftProto.BaseNFT getNfts(int index);
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    int getNftsCount();
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    java.util.List<? extends com.irismod.nft.NftProto.BaseNFTOrBuilder> 
+        getNftsOrBuilderList();
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    com.irismod.nft.NftProto.BaseNFTOrBuilder getNftsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Collection defines a type of collection
+   * </pre>
+   *
+   * Protobuf type {@code irismod.nft.Collection}
+   */
+  public static final class Collection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.nft.Collection)
+      CollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Collection.newBuilder() to construct.
+    private Collection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Collection() {
+      nfts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Collection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_Collection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.nft.NftProto.internal_static_irismod_nft_Collection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.nft.NftProto.Collection.class, com.irismod.nft.NftProto.Collection.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    private com.irismod.nft.NftProto.Denom denom_;
+    /**
+     * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+     * @return Whether the denom field is set.
+     */
+    @java.lang.Override
+    public boolean hasDenom() {
+      return denom_ != null;
+    }
+    /**
+     * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public com.irismod.nft.NftProto.Denom getDenom() {
+      return denom_ == null ? com.irismod.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+    /**
+     * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+      return denom_ == null ? com.irismod.nft.NftProto.Denom.getDefaultInstance() : denom_;
+    }
+
+    public static final int NFTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.nft.NftProto.BaseNFT> nfts_;
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.nft.NftProto.BaseNFT> getNftsList() {
+      return nfts_;
+    }
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.nft.NftProto.BaseNFTOrBuilder> 
+        getNftsOrBuilderList() {
+      return nfts_;
+    }
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    @java.lang.Override
+    public int getNftsCount() {
+      return nfts_.size();
+    }
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.nft.NftProto.BaseNFT getNfts(int index) {
+      return nfts_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.nft.NftProto.BaseNFTOrBuilder getNftsOrBuilder(
+        int index) {
+      return nfts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (denom_ != null) {
+        output.writeMessage(1, getDenom());
+      }
+      for (int i = 0; i < nfts_.size(); i++) {
+        output.writeMessage(2, nfts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (denom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDenom());
+      }
+      for (int i = 0; i < nfts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, nfts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.nft.NftProto.Collection)) {
+        return super.equals(obj);
+      }
+      com.irismod.nft.NftProto.Collection other = (com.irismod.nft.NftProto.Collection) obj;
+
+      if (hasDenom() != other.hasDenom()) return false;
+      if (hasDenom()) {
+        if (!getDenom()
+            .equals(other.getDenom())) return false;
+      }
+      if (!getNftsList()
+          .equals(other.getNftsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDenom()) {
+        hash = (37 * hash) + DENOM_FIELD_NUMBER;
+        hash = (53 * hash) + getDenom().hashCode();
+      }
+      if (getNftsCount() > 0) {
+        hash = (37 * hash) + NFTS_FIELD_NUMBER;
+        hash = (53 * hash) + getNftsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.nft.NftProto.Collection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.nft.NftProto.Collection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.nft.NftProto.Collection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.nft.NftProto.Collection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Collection defines a type of collection
+     * </pre>
+     *
+     * Protobuf type {@code irismod.nft.Collection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.nft.Collection)
+        com.irismod.nft.NftProto.CollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Collection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Collection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.nft.NftProto.Collection.class, com.irismod.nft.NftProto.Collection.Builder.class);
+      }
+
+      // Construct using com.irismod.nft.NftProto.Collection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        if (nftsBuilder_ == null) {
+          nfts_ = java.util.Collections.emptyList();
+        } else {
+          nfts_ = null;
+          nftsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.nft.NftProto.internal_static_irismod_nft_Collection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Collection getDefaultInstanceForType() {
+        return com.irismod.nft.NftProto.Collection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Collection build() {
+        com.irismod.nft.NftProto.Collection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.nft.NftProto.Collection buildPartial() {
+        com.irismod.nft.NftProto.Collection result = new com.irismod.nft.NftProto.Collection(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.nft.NftProto.Collection result) {
+        if (nftsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            nfts_ = java.util.Collections.unmodifiableList(nfts_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.nfts_ = nfts_;
+        } else {
+          result.nfts_ = nftsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.nft.NftProto.Collection result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denomBuilder_ == null
+              ? denom_
+              : denomBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.nft.NftProto.Collection) {
+          return mergeFrom((com.irismod.nft.NftProto.Collection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.nft.NftProto.Collection other) {
+        if (other == com.irismod.nft.NftProto.Collection.getDefaultInstance()) return this;
+        if (other.hasDenom()) {
+          mergeDenom(other.getDenom());
+        }
+        if (nftsBuilder_ == null) {
+          if (!other.nfts_.isEmpty()) {
+            if (nfts_.isEmpty()) {
+              nfts_ = other.nfts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureNftsIsMutable();
+              nfts_.addAll(other.nfts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.nfts_.isEmpty()) {
+            if (nftsBuilder_.isEmpty()) {
+              nftsBuilder_.dispose();
+              nftsBuilder_ = null;
+              nfts_ = other.nfts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              nftsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNftsFieldBuilder() : null;
+            } else {
+              nftsBuilder_.addAllMessages(other.nfts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDenomFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.irismod.nft.NftProto.BaseNFT m =
+                    input.readMessage(
+                        com.irismod.nft.NftProto.BaseNFT.parser(),
+                        extensionRegistry);
+                if (nftsBuilder_ == null) {
+                  ensureNftsIsMutable();
+                  nfts_.add(m);
+                } else {
+                  nftsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.nft.NftProto.Denom denom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.nft.NftProto.Denom, com.irismod.nft.NftProto.Denom.Builder, com.irismod.nft.NftProto.DenomOrBuilder> denomBuilder_;
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       * @return Whether the denom field is set.
+       */
+      public boolean hasDenom() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       * @return The denom.
+       */
+      public com.irismod.nft.NftProto.Denom getDenom() {
+        if (denomBuilder_ == null) {
+          return denom_ == null ? com.irismod.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        } else {
+          return denomBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDenom(com.irismod.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          denom_ = value;
+        } else {
+          denomBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDenom(
+          com.irismod.nft.NftProto.Denom.Builder builderForValue) {
+        if (denomBuilder_ == null) {
+          denom_ = builderForValue.build();
+        } else {
+          denomBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDenom(com.irismod.nft.NftProto.Denom value) {
+        if (denomBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            denom_ != null &&
+            denom_ != com.irismod.nft.NftProto.Denom.getDefaultInstance()) {
+            getDenomBuilder().mergeFrom(value);
+          } else {
+            denom_ = value;
+          }
+        } else {
+          denomBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDenom() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        denom_ = null;
+        if (denomBuilder_ != null) {
+          denomBuilder_.dispose();
+          denomBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.nft.NftProto.Denom.Builder getDenomBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDenomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.nft.NftProto.DenomOrBuilder getDenomOrBuilder() {
+        if (denomBuilder_ != null) {
+          return denomBuilder_.getMessageOrBuilder();
+        } else {
+          return denom_ == null ?
+              com.irismod.nft.NftProto.Denom.getDefaultInstance() : denom_;
+        }
+      }
+      /**
+       * <code>.irismod.nft.Denom denom = 1 [json_name = "denom", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.nft.NftProto.Denom, com.irismod.nft.NftProto.Denom.Builder, com.irismod.nft.NftProto.DenomOrBuilder> 
+          getDenomFieldBuilder() {
+        if (denomBuilder_ == null) {
+          denomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.nft.NftProto.Denom, com.irismod.nft.NftProto.Denom.Builder, com.irismod.nft.NftProto.DenomOrBuilder>(
+                  getDenom(),
+                  getParentForChildren(),
+                  isClean());
+          denom_ = null;
+        }
+        return denomBuilder_;
+      }
+
+      private java.util.List<com.irismod.nft.NftProto.BaseNFT> nfts_ =
+        java.util.Collections.emptyList();
+      private void ensureNftsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          nfts_ = new java.util.ArrayList<com.irismod.nft.NftProto.BaseNFT>(nfts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.nft.NftProto.BaseNFT, com.irismod.nft.NftProto.BaseNFT.Builder, com.irismod.nft.NftProto.BaseNFTOrBuilder> nftsBuilder_;
+
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public java.util.List<com.irismod.nft.NftProto.BaseNFT> getNftsList() {
+        if (nftsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(nfts_);
+        } else {
+          return nftsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public int getNftsCount() {
+        if (nftsBuilder_ == null) {
+          return nfts_.size();
+        } else {
+          return nftsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public com.irismod.nft.NftProto.BaseNFT getNfts(int index) {
+        if (nftsBuilder_ == null) {
+          return nfts_.get(index);
+        } else {
+          return nftsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder setNfts(
+          int index, com.irismod.nft.NftProto.BaseNFT value) {
+        if (nftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNftsIsMutable();
+          nfts_.set(index, value);
+          onChanged();
+        } else {
+          nftsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder setNfts(
+          int index, com.irismod.nft.NftProto.BaseNFT.Builder builderForValue) {
+        if (nftsBuilder_ == null) {
+          ensureNftsIsMutable();
+          nfts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          nftsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder addNfts(com.irismod.nft.NftProto.BaseNFT value) {
+        if (nftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNftsIsMutable();
+          nfts_.add(value);
+          onChanged();
+        } else {
+          nftsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder addNfts(
+          int index, com.irismod.nft.NftProto.BaseNFT value) {
+        if (nftsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNftsIsMutable();
+          nfts_.add(index, value);
+          onChanged();
+        } else {
+          nftsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder addNfts(
+          com.irismod.nft.NftProto.BaseNFT.Builder builderForValue) {
+        if (nftsBuilder_ == null) {
+          ensureNftsIsMutable();
+          nfts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          nftsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder addNfts(
+          int index, com.irismod.nft.NftProto.BaseNFT.Builder builderForValue) {
+        if (nftsBuilder_ == null) {
+          ensureNftsIsMutable();
+          nfts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          nftsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder addAllNfts(
+          java.lang.Iterable<? extends com.irismod.nft.NftProto.BaseNFT> values) {
+        if (nftsBuilder_ == null) {
+          ensureNftsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, nfts_);
+          onChanged();
+        } else {
+          nftsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder clearNfts() {
+        if (nftsBuilder_ == null) {
+          nfts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          nftsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public Builder removeNfts(int index) {
+        if (nftsBuilder_ == null) {
+          ensureNftsIsMutable();
+          nfts_.remove(index);
+          onChanged();
+        } else {
+          nftsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public com.irismod.nft.NftProto.BaseNFT.Builder getNftsBuilder(
+          int index) {
+        return getNftsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public com.irismod.nft.NftProto.BaseNFTOrBuilder getNftsOrBuilder(
+          int index) {
+        if (nftsBuilder_ == null) {
+          return nfts_.get(index);  } else {
+          return nftsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public java.util.List<? extends com.irismod.nft.NftProto.BaseNFTOrBuilder> 
+           getNftsOrBuilderList() {
+        if (nftsBuilder_ != null) {
+          return nftsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(nfts_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public com.irismod.nft.NftProto.BaseNFT.Builder addNftsBuilder() {
+        return getNftsFieldBuilder().addBuilder(
+            com.irismod.nft.NftProto.BaseNFT.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public com.irismod.nft.NftProto.BaseNFT.Builder addNftsBuilder(
+          int index) {
+        return getNftsFieldBuilder().addBuilder(
+            index, com.irismod.nft.NftProto.BaseNFT.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.nft.BaseNFT nfts = 2 [json_name = "nfts", (.gogoproto.nullable) = false, (.gogoproto.customname) = "NFTs"];</code>
+       */
+      public java.util.List<com.irismod.nft.NftProto.BaseNFT.Builder> 
+           getNftsBuilderList() {
+        return getNftsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.nft.NftProto.BaseNFT, com.irismod.nft.NftProto.BaseNFT.Builder, com.irismod.nft.NftProto.BaseNFTOrBuilder> 
+          getNftsFieldBuilder() {
+        if (nftsBuilder_ == null) {
+          nftsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.nft.NftProto.BaseNFT, com.irismod.nft.NftProto.BaseNFT.Builder, com.irismod.nft.NftProto.BaseNFTOrBuilder>(
+                  nfts_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          nfts_ = null;
+        }
+        return nftsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.nft.Collection)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.nft.Collection)
+    private static final com.irismod.nft.NftProto.Collection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.nft.NftProto.Collection();
+    }
+
+    public static com.irismod.nft.NftProto.Collection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Collection>
+        PARSER = new com.google.protobuf.AbstractParser<Collection>() {
+      @java.lang.Override
+      public Collection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Collection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Collection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.nft.NftProto.Collection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_nft_BaseNFT_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_nft_BaseNFT_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_nft_Denom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_nft_Denom_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_nft_IDCollection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_nft_IDCollection_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_nft_Owner_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_nft_Owner_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_nft_Collection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_nft_Collection_fieldAccessorTable;
 
@@ -67,11 +5215,11 @@ public final class NftProto {
       "idCollections:\004\350\240\037\001\"z\n\nCollection\022.\n\005den" +
       "om\030\001 \001(\0132\022.irismod.nft.DenomB\004\310\336\037\000R\005deno" +
       "m\0226\n\004nfts\030\002 \003(\0132\024.irismod.nft.BaseNFTB\014\310" +
-      "\336\037\000\342\336\037\004NFTsR\004nfts:\004\350\240\037\001B\232\001\n\017com.irismod." +
-      "nftB\010NftProtoP\001Z,github.com/irisnet/iris" +
-      "mod/modules/nft/types\242\002\003INX\252\002\013Irismod.Nf" +
-      "t\312\002\013Irismod\\Nft\342\002\027Irismod\\Nft\\GPBMetadat" +
-      "a\352\002\014Irismod::Nft\310\341\036\000b\006proto3"
+      "\336\037\000\342\336\037\004NFTsR\004nfts:\004\350\240\037\001B\230\001\n\017com.irismod." +
+      "nftB\010NftProtoZ,github.com/irisnet/irismo" +
+      "d/modules/nft/types\242\002\003INX\252\002\013Irismod.Nft\312" +
+      "\002\013Irismod\\Nft\342\002\027Irismod\\Nft\\GPBMetadata\352" +
+      "\002\014Irismod::Nft\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

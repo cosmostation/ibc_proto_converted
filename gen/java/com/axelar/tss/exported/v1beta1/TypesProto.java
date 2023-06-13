@@ -14,14 +14,2744 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code axelar.tss.exported.v1beta1.KeyRole}
+   */
+  public enum KeyRole
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>KEY_ROLE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unknown"];</code>
+     */
+    KEY_ROLE_UNSPECIFIED(0),
+    /**
+     * <code>KEY_ROLE_MASTER_KEY = 1 [(.gogoproto.enumvalue_customname) = "MasterKey"];</code>
+     */
+    KEY_ROLE_MASTER_KEY(1),
+    /**
+     * <code>KEY_ROLE_SECONDARY_KEY = 2 [(.gogoproto.enumvalue_customname) = "SecondaryKey"];</code>
+     */
+    KEY_ROLE_SECONDARY_KEY(2),
+    /**
+     * <code>KEY_ROLE_EXTERNAL_KEY = 3 [(.gogoproto.enumvalue_customname) = "ExternalKey"];</code>
+     */
+    KEY_ROLE_EXTERNAL_KEY(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>KEY_ROLE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unknown"];</code>
+     */
+    public static final int KEY_ROLE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>KEY_ROLE_MASTER_KEY = 1 [(.gogoproto.enumvalue_customname) = "MasterKey"];</code>
+     */
+    public static final int KEY_ROLE_MASTER_KEY_VALUE = 1;
+    /**
+     * <code>KEY_ROLE_SECONDARY_KEY = 2 [(.gogoproto.enumvalue_customname) = "SecondaryKey"];</code>
+     */
+    public static final int KEY_ROLE_SECONDARY_KEY_VALUE = 2;
+    /**
+     * <code>KEY_ROLE_EXTERNAL_KEY = 3 [(.gogoproto.enumvalue_customname) = "ExternalKey"];</code>
+     */
+    public static final int KEY_ROLE_EXTERNAL_KEY_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static KeyRole valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static KeyRole forNumber(int value) {
+      switch (value) {
+        case 0: return KEY_ROLE_UNSPECIFIED;
+        case 1: return KEY_ROLE_MASTER_KEY;
+        case 2: return KEY_ROLE_SECONDARY_KEY;
+        case 3: return KEY_ROLE_EXTERNAL_KEY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<KeyRole>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        KeyRole> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<KeyRole>() {
+            public KeyRole findValueByNumber(int number) {
+              return KeyRole.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final KeyRole[] VALUES = values();
+
+    public static KeyRole valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private KeyRole(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:axelar.tss.exported.v1beta1.KeyRole)
+  }
+
+  /**
+   * Protobuf enum {@code axelar.tss.exported.v1beta1.KeyType}
+   */
+  public enum KeyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>KEY_TYPE_UNSPECIFIED = 0;</code>
+     */
+    KEY_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>KEY_TYPE_NONE = 1 [(.gogoproto.enumvalue_customname) = "None"];</code>
+     */
+    KEY_TYPE_NONE(1),
+    /**
+     * <code>KEY_TYPE_THRESHOLD = 2 [(.gogoproto.enumvalue_customname) = "Threshold"];</code>
+     */
+    KEY_TYPE_THRESHOLD(2),
+    /**
+     * <code>KEY_TYPE_MULTISIG = 3 [(.gogoproto.enumvalue_customname) = "Multisig"];</code>
+     */
+    KEY_TYPE_MULTISIG(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>KEY_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int KEY_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>KEY_TYPE_NONE = 1 [(.gogoproto.enumvalue_customname) = "None"];</code>
+     */
+    public static final int KEY_TYPE_NONE_VALUE = 1;
+    /**
+     * <code>KEY_TYPE_THRESHOLD = 2 [(.gogoproto.enumvalue_customname) = "Threshold"];</code>
+     */
+    public static final int KEY_TYPE_THRESHOLD_VALUE = 2;
+    /**
+     * <code>KEY_TYPE_MULTISIG = 3 [(.gogoproto.enumvalue_customname) = "Multisig"];</code>
+     */
+    public static final int KEY_TYPE_MULTISIG_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static KeyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static KeyType forNumber(int value) {
+      switch (value) {
+        case 0: return KEY_TYPE_UNSPECIFIED;
+        case 1: return KEY_TYPE_NONE;
+        case 2: return KEY_TYPE_THRESHOLD;
+        case 3: return KEY_TYPE_MULTISIG;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<KeyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        KeyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<KeyType>() {
+            public KeyType findValueByNumber(int number) {
+              return KeyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final KeyType[] VALUES = values();
+
+    public static KeyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private KeyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:axelar.tss.exported.v1beta1.KeyType)
+  }
+
+  /**
+   * Protobuf enum {@code axelar.tss.exported.v1beta1.KeyShareDistributionPolicy}
+   */
+  public enum KeyShareDistributionPolicy
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED(0),
+    /**
+     * <code>KEY_SHARE_DISTRIBUTION_POLICY_WEIGHTED_BY_STAKE = 1 [(.gogoproto.enumvalue_customname) = "WeightedByStake"];</code>
+     */
+    KEY_SHARE_DISTRIBUTION_POLICY_WEIGHTED_BY_STAKE(1),
+    /**
+     * <code>KEY_SHARE_DISTRIBUTION_POLICY_ONE_PER_VALIDATOR = 2 [(.gogoproto.enumvalue_customname) = "OnePerValidator"];</code>
+     */
+    KEY_SHARE_DISTRIBUTION_POLICY_ONE_PER_VALIDATOR(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    public static final int KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>KEY_SHARE_DISTRIBUTION_POLICY_WEIGHTED_BY_STAKE = 1 [(.gogoproto.enumvalue_customname) = "WeightedByStake"];</code>
+     */
+    public static final int KEY_SHARE_DISTRIBUTION_POLICY_WEIGHTED_BY_STAKE_VALUE = 1;
+    /**
+     * <code>KEY_SHARE_DISTRIBUTION_POLICY_ONE_PER_VALIDATOR = 2 [(.gogoproto.enumvalue_customname) = "OnePerValidator"];</code>
+     */
+    public static final int KEY_SHARE_DISTRIBUTION_POLICY_ONE_PER_VALIDATOR_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static KeyShareDistributionPolicy valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static KeyShareDistributionPolicy forNumber(int value) {
+      switch (value) {
+        case 0: return KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED;
+        case 1: return KEY_SHARE_DISTRIBUTION_POLICY_WEIGHTED_BY_STAKE;
+        case 2: return KEY_SHARE_DISTRIBUTION_POLICY_ONE_PER_VALIDATOR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<KeyShareDistributionPolicy>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        KeyShareDistributionPolicy> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<KeyShareDistributionPolicy>() {
+            public KeyShareDistributionPolicy findValueByNumber(int number) {
+              return KeyShareDistributionPolicy.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final KeyShareDistributionPolicy[] VALUES = values();
+
+    public static KeyShareDistributionPolicy valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private KeyShareDistributionPolicy(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:axelar.tss.exported.v1beta1.KeyShareDistributionPolicy)
+  }
+
+  public interface KeyRequirementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.exported.v1beta1.KeyRequirement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+     * @return The enum numeric value on the wire for keyRole.
+     */
+    int getKeyRoleValue();
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+     * @return The keyRole.
+     */
+    com.axelar.tss.exported.v1beta1.TypesProto.KeyRole getKeyRole();
+
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+     * @return The enum numeric value on the wire for keyType.
+     */
+    int getKeyTypeValue();
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+     * @return The keyType.
+     */
+    com.axelar.tss.exported.v1beta1.TypesProto.KeyType getKeyType();
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minKeygenThreshold field is set.
+     */
+    boolean hasMinKeygenThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The minKeygenThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getMinKeygenThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getMinKeygenThresholdOrBuilder();
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the safetyThreshold field is set.
+     */
+    boolean hasSafetyThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The safetyThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getSafetyThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getSafetyThresholdOrBuilder();
+
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+     * @return The enum numeric value on the wire for keyShareDistributionPolicy.
+     */
+    int getKeyShareDistributionPolicyValue();
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+     * @return The keyShareDistributionPolicy.
+     */
+    com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy getKeyShareDistributionPolicy();
+
+    /**
+     * <code>int64 max_total_share_count = 6 [json_name = "maxTotalShareCount"];</code>
+     * @return The maxTotalShareCount.
+     */
+    long getMaxTotalShareCount();
+
+    /**
+     * <code>int64 min_total_share_count = 7 [json_name = "minTotalShareCount"];</code>
+     * @return The minTotalShareCount.
+     */
+    long getMinTotalShareCount();
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the keygenVotingThreshold field is set.
+     */
+    boolean hasKeygenVotingThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The keygenVotingThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getKeygenVotingThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getKeygenVotingThresholdOrBuilder();
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the signVotingThreshold field is set.
+     */
+    boolean hasSignVotingThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The signVotingThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getSignVotingThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getSignVotingThresholdOrBuilder();
+
+    /**
+     * <code>int64 keygen_timeout = 10 [json_name = "keygenTimeout"];</code>
+     * @return The keygenTimeout.
+     */
+    long getKeygenTimeout();
+
+    /**
+     * <code>int64 sign_timeout = 11 [json_name = "signTimeout"];</code>
+     * @return The signTimeout.
+     */
+    long getSignTimeout();
+  }
+  /**
+   * <pre>
+   * KeyRequirement defines requirements for keys
+   * </pre>
+   *
+   * Protobuf type {@code axelar.tss.exported.v1beta1.KeyRequirement}
+   */
+  public static final class KeyRequirement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.exported.v1beta1.KeyRequirement)
+      KeyRequirementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyRequirement.newBuilder() to construct.
+    private KeyRequirement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyRequirement() {
+      keyRole_ = 0;
+      keyType_ = 0;
+      keyShareDistributionPolicy_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyRequirement();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_KeyRequirement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_KeyRequirement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.class, com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.Builder.class);
+    }
+
+    public static final int KEY_ROLE_FIELD_NUMBER = 1;
+    private int keyRole_ = 0;
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+     * @return The enum numeric value on the wire for keyRole.
+     */
+    @java.lang.Override public int getKeyRoleValue() {
+      return keyRole_;
+    }
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+     * @return The keyRole.
+     */
+    @java.lang.Override public com.axelar.tss.exported.v1beta1.TypesProto.KeyRole getKeyRole() {
+      com.axelar.tss.exported.v1beta1.TypesProto.KeyRole result = com.axelar.tss.exported.v1beta1.TypesProto.KeyRole.forNumber(keyRole_);
+      return result == null ? com.axelar.tss.exported.v1beta1.TypesProto.KeyRole.UNRECOGNIZED : result;
+    }
+
+    public static final int KEY_TYPE_FIELD_NUMBER = 2;
+    private int keyType_ = 0;
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+     * @return The enum numeric value on the wire for keyType.
+     */
+    @java.lang.Override public int getKeyTypeValue() {
+      return keyType_;
+    }
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+     * @return The keyType.
+     */
+    @java.lang.Override public com.axelar.tss.exported.v1beta1.TypesProto.KeyType getKeyType() {
+      com.axelar.tss.exported.v1beta1.TypesProto.KeyType result = com.axelar.tss.exported.v1beta1.TypesProto.KeyType.forNumber(keyType_);
+      return result == null ? com.axelar.tss.exported.v1beta1.TypesProto.KeyType.UNRECOGNIZED : result;
+    }
+
+    public static final int MIN_KEYGEN_THRESHOLD_FIELD_NUMBER = 3;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold minKeygenThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minKeygenThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinKeygenThreshold() {
+      return minKeygenThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The minKeygenThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getMinKeygenThreshold() {
+      return minKeygenThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : minKeygenThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getMinKeygenThresholdOrBuilder() {
+      return minKeygenThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : minKeygenThreshold_;
+    }
+
+    public static final int SAFETY_THRESHOLD_FIELD_NUMBER = 4;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold safetyThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the safetyThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasSafetyThreshold() {
+      return safetyThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The safetyThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getSafetyThreshold() {
+      return safetyThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : safetyThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getSafetyThresholdOrBuilder() {
+      return safetyThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : safetyThreshold_;
+    }
+
+    public static final int KEY_SHARE_DISTRIBUTION_POLICY_FIELD_NUMBER = 5;
+    private int keyShareDistributionPolicy_ = 0;
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+     * @return The enum numeric value on the wire for keyShareDistributionPolicy.
+     */
+    @java.lang.Override public int getKeyShareDistributionPolicyValue() {
+      return keyShareDistributionPolicy_;
+    }
+    /**
+     * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+     * @return The keyShareDistributionPolicy.
+     */
+    @java.lang.Override public com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy getKeyShareDistributionPolicy() {
+      com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy result = com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.forNumber(keyShareDistributionPolicy_);
+      return result == null ? com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int MAX_TOTAL_SHARE_COUNT_FIELD_NUMBER = 6;
+    private long maxTotalShareCount_ = 0L;
+    /**
+     * <code>int64 max_total_share_count = 6 [json_name = "maxTotalShareCount"];</code>
+     * @return The maxTotalShareCount.
+     */
+    @java.lang.Override
+    public long getMaxTotalShareCount() {
+      return maxTotalShareCount_;
+    }
+
+    public static final int MIN_TOTAL_SHARE_COUNT_FIELD_NUMBER = 7;
+    private long minTotalShareCount_ = 0L;
+    /**
+     * <code>int64 min_total_share_count = 7 [json_name = "minTotalShareCount"];</code>
+     * @return The minTotalShareCount.
+     */
+    @java.lang.Override
+    public long getMinTotalShareCount() {
+      return minTotalShareCount_;
+    }
+
+    public static final int KEYGEN_VOTING_THRESHOLD_FIELD_NUMBER = 8;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold keygenVotingThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the keygenVotingThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasKeygenVotingThreshold() {
+      return keygenVotingThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The keygenVotingThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getKeygenVotingThreshold() {
+      return keygenVotingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : keygenVotingThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getKeygenVotingThresholdOrBuilder() {
+      return keygenVotingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : keygenVotingThreshold_;
+    }
+
+    public static final int SIGN_VOTING_THRESHOLD_FIELD_NUMBER = 9;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold signVotingThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the signVotingThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignVotingThreshold() {
+      return signVotingThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The signVotingThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getSignVotingThreshold() {
+      return signVotingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : signVotingThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getSignVotingThresholdOrBuilder() {
+      return signVotingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : signVotingThreshold_;
+    }
+
+    public static final int KEYGEN_TIMEOUT_FIELD_NUMBER = 10;
+    private long keygenTimeout_ = 0L;
+    /**
+     * <code>int64 keygen_timeout = 10 [json_name = "keygenTimeout"];</code>
+     * @return The keygenTimeout.
+     */
+    @java.lang.Override
+    public long getKeygenTimeout() {
+      return keygenTimeout_;
+    }
+
+    public static final int SIGN_TIMEOUT_FIELD_NUMBER = 11;
+    private long signTimeout_ = 0L;
+    /**
+     * <code>int64 sign_timeout = 11 [json_name = "signTimeout"];</code>
+     * @return The signTimeout.
+     */
+    @java.lang.Override
+    public long getSignTimeout() {
+      return signTimeout_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (keyRole_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyRole.KEY_ROLE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, keyRole_);
+      }
+      if (keyType_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyType.KEY_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, keyType_);
+      }
+      if (minKeygenThreshold_ != null) {
+        output.writeMessage(3, getMinKeygenThreshold());
+      }
+      if (safetyThreshold_ != null) {
+        output.writeMessage(4, getSafetyThreshold());
+      }
+      if (keyShareDistributionPolicy_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, keyShareDistributionPolicy_);
+      }
+      if (maxTotalShareCount_ != 0L) {
+        output.writeInt64(6, maxTotalShareCount_);
+      }
+      if (minTotalShareCount_ != 0L) {
+        output.writeInt64(7, minTotalShareCount_);
+      }
+      if (keygenVotingThreshold_ != null) {
+        output.writeMessage(8, getKeygenVotingThreshold());
+      }
+      if (signVotingThreshold_ != null) {
+        output.writeMessage(9, getSignVotingThreshold());
+      }
+      if (keygenTimeout_ != 0L) {
+        output.writeInt64(10, keygenTimeout_);
+      }
+      if (signTimeout_ != 0L) {
+        output.writeInt64(11, signTimeout_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (keyRole_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyRole.KEY_ROLE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, keyRole_);
+      }
+      if (keyType_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyType.KEY_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, keyType_);
+      }
+      if (minKeygenThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMinKeygenThreshold());
+      }
+      if (safetyThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSafetyThreshold());
+      }
+      if (keyShareDistributionPolicy_ != com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.KEY_SHARE_DISTRIBUTION_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, keyShareDistributionPolicy_);
+      }
+      if (maxTotalShareCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, maxTotalShareCount_);
+      }
+      if (minTotalShareCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, minTotalShareCount_);
+      }
+      if (keygenVotingThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getKeygenVotingThreshold());
+      }
+      if (signVotingThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getSignVotingThreshold());
+      }
+      if (keygenTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, keygenTimeout_);
+      }
+      if (signTimeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(11, signTimeout_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement other = (com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement) obj;
+
+      if (keyRole_ != other.keyRole_) return false;
+      if (keyType_ != other.keyType_) return false;
+      if (hasMinKeygenThreshold() != other.hasMinKeygenThreshold()) return false;
+      if (hasMinKeygenThreshold()) {
+        if (!getMinKeygenThreshold()
+            .equals(other.getMinKeygenThreshold())) return false;
+      }
+      if (hasSafetyThreshold() != other.hasSafetyThreshold()) return false;
+      if (hasSafetyThreshold()) {
+        if (!getSafetyThreshold()
+            .equals(other.getSafetyThreshold())) return false;
+      }
+      if (keyShareDistributionPolicy_ != other.keyShareDistributionPolicy_) return false;
+      if (getMaxTotalShareCount()
+          != other.getMaxTotalShareCount()) return false;
+      if (getMinTotalShareCount()
+          != other.getMinTotalShareCount()) return false;
+      if (hasKeygenVotingThreshold() != other.hasKeygenVotingThreshold()) return false;
+      if (hasKeygenVotingThreshold()) {
+        if (!getKeygenVotingThreshold()
+            .equals(other.getKeygenVotingThreshold())) return false;
+      }
+      if (hasSignVotingThreshold() != other.hasSignVotingThreshold()) return false;
+      if (hasSignVotingThreshold()) {
+        if (!getSignVotingThreshold()
+            .equals(other.getSignVotingThreshold())) return false;
+      }
+      if (getKeygenTimeout()
+          != other.getKeygenTimeout()) return false;
+      if (getSignTimeout()
+          != other.getSignTimeout()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_ROLE_FIELD_NUMBER;
+      hash = (53 * hash) + keyRole_;
+      hash = (37 * hash) + KEY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + keyType_;
+      if (hasMinKeygenThreshold()) {
+        hash = (37 * hash) + MIN_KEYGEN_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getMinKeygenThreshold().hashCode();
+      }
+      if (hasSafetyThreshold()) {
+        hash = (37 * hash) + SAFETY_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getSafetyThreshold().hashCode();
+      }
+      hash = (37 * hash) + KEY_SHARE_DISTRIBUTION_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + keyShareDistributionPolicy_;
+      hash = (37 * hash) + MAX_TOTAL_SHARE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxTotalShareCount());
+      hash = (37 * hash) + MIN_TOTAL_SHARE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinTotalShareCount());
+      if (hasKeygenVotingThreshold()) {
+        hash = (37 * hash) + KEYGEN_VOTING_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getKeygenVotingThreshold().hashCode();
+      }
+      if (hasSignVotingThreshold()) {
+        hash = (37 * hash) + SIGN_VOTING_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getSignVotingThreshold().hashCode();
+      }
+      hash = (37 * hash) + KEYGEN_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getKeygenTimeout());
+      hash = (37 * hash) + SIGN_TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSignTimeout());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * KeyRequirement defines requirements for keys
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.exported.v1beta1.KeyRequirement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.exported.v1beta1.KeyRequirement)
+        com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_KeyRequirement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_KeyRequirement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.class, com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        keyRole_ = 0;
+        keyType_ = 0;
+        minKeygenThreshold_ = null;
+        if (minKeygenThresholdBuilder_ != null) {
+          minKeygenThresholdBuilder_.dispose();
+          minKeygenThresholdBuilder_ = null;
+        }
+        safetyThreshold_ = null;
+        if (safetyThresholdBuilder_ != null) {
+          safetyThresholdBuilder_.dispose();
+          safetyThresholdBuilder_ = null;
+        }
+        keyShareDistributionPolicy_ = 0;
+        maxTotalShareCount_ = 0L;
+        minTotalShareCount_ = 0L;
+        keygenVotingThreshold_ = null;
+        if (keygenVotingThresholdBuilder_ != null) {
+          keygenVotingThresholdBuilder_.dispose();
+          keygenVotingThresholdBuilder_ = null;
+        }
+        signVotingThreshold_ = null;
+        if (signVotingThresholdBuilder_ != null) {
+          signVotingThresholdBuilder_.dispose();
+          signVotingThresholdBuilder_ = null;
+        }
+        keygenTimeout_ = 0L;
+        signTimeout_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_KeyRequirement_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement getDefaultInstanceForType() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement build() {
+        com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement buildPartial() {
+        com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement result = new com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.keyRole_ = keyRole_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keyType_ = keyType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.minKeygenThreshold_ = minKeygenThresholdBuilder_ == null
+              ? minKeygenThreshold_
+              : minKeygenThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.safetyThreshold_ = safetyThresholdBuilder_ == null
+              ? safetyThreshold_
+              : safetyThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.keyShareDistributionPolicy_ = keyShareDistributionPolicy_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.maxTotalShareCount_ = maxTotalShareCount_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.minTotalShareCount_ = minTotalShareCount_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.keygenVotingThreshold_ = keygenVotingThresholdBuilder_ == null
+              ? keygenVotingThreshold_
+              : keygenVotingThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.signVotingThreshold_ = signVotingThresholdBuilder_ == null
+              ? signVotingThreshold_
+              : signVotingThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.keygenTimeout_ = keygenTimeout_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.signTimeout_ = signTimeout_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement) {
+          return mergeFrom((com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement other) {
+        if (other == com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement.getDefaultInstance()) return this;
+        if (other.keyRole_ != 0) {
+          setKeyRoleValue(other.getKeyRoleValue());
+        }
+        if (other.keyType_ != 0) {
+          setKeyTypeValue(other.getKeyTypeValue());
+        }
+        if (other.hasMinKeygenThreshold()) {
+          mergeMinKeygenThreshold(other.getMinKeygenThreshold());
+        }
+        if (other.hasSafetyThreshold()) {
+          mergeSafetyThreshold(other.getSafetyThreshold());
+        }
+        if (other.keyShareDistributionPolicy_ != 0) {
+          setKeyShareDistributionPolicyValue(other.getKeyShareDistributionPolicyValue());
+        }
+        if (other.getMaxTotalShareCount() != 0L) {
+          setMaxTotalShareCount(other.getMaxTotalShareCount());
+        }
+        if (other.getMinTotalShareCount() != 0L) {
+          setMinTotalShareCount(other.getMinTotalShareCount());
+        }
+        if (other.hasKeygenVotingThreshold()) {
+          mergeKeygenVotingThreshold(other.getKeygenVotingThreshold());
+        }
+        if (other.hasSignVotingThreshold()) {
+          mergeSignVotingThreshold(other.getSignVotingThreshold());
+        }
+        if (other.getKeygenTimeout() != 0L) {
+          setKeygenTimeout(other.getKeygenTimeout());
+        }
+        if (other.getSignTimeout() != 0L) {
+          setSignTimeout(other.getSignTimeout());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                keyRole_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                keyType_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getMinKeygenThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getSafetyThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                keyShareDistributionPolicy_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                maxTotalShareCount_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                minTotalShareCount_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                input.readMessage(
+                    getKeygenVotingThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getSignVotingThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 80: {
+                keygenTimeout_ = input.readInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                signTimeout_ = input.readInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int keyRole_ = 0;
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+       * @return The enum numeric value on the wire for keyRole.
+       */
+      @java.lang.Override public int getKeyRoleValue() {
+        return keyRole_;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+       * @param value The enum numeric value on the wire for keyRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyRoleValue(int value) {
+        keyRole_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+       * @return The keyRole.
+       */
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.KeyRole getKeyRole() {
+        com.axelar.tss.exported.v1beta1.TypesProto.KeyRole result = com.axelar.tss.exported.v1beta1.TypesProto.KeyRole.forNumber(keyRole_);
+        return result == null ? com.axelar.tss.exported.v1beta1.TypesProto.KeyRole.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+       * @param value The keyRole to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyRole(com.axelar.tss.exported.v1beta1.TypesProto.KeyRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        keyRole_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyRole key_role = 1 [json_name = "keyRole"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyRole() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        keyRole_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int keyType_ = 0;
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+       * @return The enum numeric value on the wire for keyType.
+       */
+      @java.lang.Override public int getKeyTypeValue() {
+        return keyType_;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+       * @param value The enum numeric value on the wire for keyType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyTypeValue(int value) {
+        keyType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+       * @return The keyType.
+       */
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.KeyType getKeyType() {
+        com.axelar.tss.exported.v1beta1.TypesProto.KeyType result = com.axelar.tss.exported.v1beta1.TypesProto.KeyType.forNumber(keyType_);
+        return result == null ? com.axelar.tss.exported.v1beta1.TypesProto.KeyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+       * @param value The keyType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyType(com.axelar.tss.exported.v1beta1.TypesProto.KeyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        keyType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyType key_type = 2 [json_name = "keyType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        keyType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold minKeygenThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> minKeygenThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minKeygenThreshold field is set.
+       */
+      public boolean hasMinKeygenThreshold() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The minKeygenThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getMinKeygenThreshold() {
+        if (minKeygenThresholdBuilder_ == null) {
+          return minKeygenThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : minKeygenThreshold_;
+        } else {
+          return minKeygenThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinKeygenThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (minKeygenThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minKeygenThreshold_ = value;
+        } else {
+          minKeygenThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinKeygenThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (minKeygenThresholdBuilder_ == null) {
+          minKeygenThreshold_ = builderForValue.build();
+        } else {
+          minKeygenThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinKeygenThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (minKeygenThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            minKeygenThreshold_ != null &&
+            minKeygenThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getMinKeygenThresholdBuilder().mergeFrom(value);
+          } else {
+            minKeygenThreshold_ = value;
+          }
+        } else {
+          minKeygenThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinKeygenThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        minKeygenThreshold_ = null;
+        if (minKeygenThresholdBuilder_ != null) {
+          minKeygenThresholdBuilder_.dispose();
+          minKeygenThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getMinKeygenThresholdBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMinKeygenThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getMinKeygenThresholdOrBuilder() {
+        if (minKeygenThresholdBuilder_ != null) {
+          return minKeygenThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return minKeygenThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : minKeygenThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold min_keygen_threshold = 3 [json_name = "minKeygenThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getMinKeygenThresholdFieldBuilder() {
+        if (minKeygenThresholdBuilder_ == null) {
+          minKeygenThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getMinKeygenThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          minKeygenThreshold_ = null;
+        }
+        return minKeygenThresholdBuilder_;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold safetyThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> safetyThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the safetyThreshold field is set.
+       */
+      public boolean hasSafetyThreshold() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The safetyThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getSafetyThreshold() {
+        if (safetyThresholdBuilder_ == null) {
+          return safetyThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : safetyThreshold_;
+        } else {
+          return safetyThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSafetyThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (safetyThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          safetyThreshold_ = value;
+        } else {
+          safetyThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSafetyThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (safetyThresholdBuilder_ == null) {
+          safetyThreshold_ = builderForValue.build();
+        } else {
+          safetyThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSafetyThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (safetyThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            safetyThreshold_ != null &&
+            safetyThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getSafetyThresholdBuilder().mergeFrom(value);
+          } else {
+            safetyThreshold_ = value;
+          }
+        } else {
+          safetyThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSafetyThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        safetyThreshold_ = null;
+        if (safetyThresholdBuilder_ != null) {
+          safetyThresholdBuilder_.dispose();
+          safetyThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getSafetyThresholdBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getSafetyThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getSafetyThresholdOrBuilder() {
+        if (safetyThresholdBuilder_ != null) {
+          return safetyThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return safetyThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : safetyThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold safety_threshold = 4 [json_name = "safetyThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getSafetyThresholdFieldBuilder() {
+        if (safetyThresholdBuilder_ == null) {
+          safetyThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getSafetyThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          safetyThreshold_ = null;
+        }
+        return safetyThresholdBuilder_;
+      }
+
+      private int keyShareDistributionPolicy_ = 0;
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+       * @return The enum numeric value on the wire for keyShareDistributionPolicy.
+       */
+      @java.lang.Override public int getKeyShareDistributionPolicyValue() {
+        return keyShareDistributionPolicy_;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+       * @param value The enum numeric value on the wire for keyShareDistributionPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyShareDistributionPolicyValue(int value) {
+        keyShareDistributionPolicy_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+       * @return The keyShareDistributionPolicy.
+       */
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy getKeyShareDistributionPolicy() {
+        com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy result = com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.forNumber(keyShareDistributionPolicy_);
+        return result == null ? com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+       * @param value The keyShareDistributionPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyShareDistributionPolicy(com.axelar.tss.exported.v1beta1.TypesProto.KeyShareDistributionPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        keyShareDistributionPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.exported.v1beta1.KeyShareDistributionPolicy key_share_distribution_policy = 5 [json_name = "keyShareDistributionPolicy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyShareDistributionPolicy() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        keyShareDistributionPolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long maxTotalShareCount_ ;
+      /**
+       * <code>int64 max_total_share_count = 6 [json_name = "maxTotalShareCount"];</code>
+       * @return The maxTotalShareCount.
+       */
+      @java.lang.Override
+      public long getMaxTotalShareCount() {
+        return maxTotalShareCount_;
+      }
+      /**
+       * <code>int64 max_total_share_count = 6 [json_name = "maxTotalShareCount"];</code>
+       * @param value The maxTotalShareCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxTotalShareCount(long value) {
+
+        maxTotalShareCount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 max_total_share_count = 6 [json_name = "maxTotalShareCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxTotalShareCount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        maxTotalShareCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minTotalShareCount_ ;
+      /**
+       * <code>int64 min_total_share_count = 7 [json_name = "minTotalShareCount"];</code>
+       * @return The minTotalShareCount.
+       */
+      @java.lang.Override
+      public long getMinTotalShareCount() {
+        return minTotalShareCount_;
+      }
+      /**
+       * <code>int64 min_total_share_count = 7 [json_name = "minTotalShareCount"];</code>
+       * @param value The minTotalShareCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinTotalShareCount(long value) {
+
+        minTotalShareCount_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 min_total_share_count = 7 [json_name = "minTotalShareCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinTotalShareCount() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        minTotalShareCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold keygenVotingThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> keygenVotingThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the keygenVotingThreshold field is set.
+       */
+      public boolean hasKeygenVotingThreshold() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The keygenVotingThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getKeygenVotingThreshold() {
+        if (keygenVotingThresholdBuilder_ == null) {
+          return keygenVotingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : keygenVotingThreshold_;
+        } else {
+          return keygenVotingThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setKeygenVotingThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (keygenVotingThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          keygenVotingThreshold_ = value;
+        } else {
+          keygenVotingThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setKeygenVotingThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (keygenVotingThresholdBuilder_ == null) {
+          keygenVotingThreshold_ = builderForValue.build();
+        } else {
+          keygenVotingThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeKeygenVotingThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (keygenVotingThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            keygenVotingThreshold_ != null &&
+            keygenVotingThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getKeygenVotingThresholdBuilder().mergeFrom(value);
+          } else {
+            keygenVotingThreshold_ = value;
+          }
+        } else {
+          keygenVotingThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearKeygenVotingThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        keygenVotingThreshold_ = null;
+        if (keygenVotingThresholdBuilder_ != null) {
+          keygenVotingThresholdBuilder_.dispose();
+          keygenVotingThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getKeygenVotingThresholdBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getKeygenVotingThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getKeygenVotingThresholdOrBuilder() {
+        if (keygenVotingThresholdBuilder_ != null) {
+          return keygenVotingThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return keygenVotingThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : keygenVotingThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold keygen_voting_threshold = 8 [json_name = "keygenVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getKeygenVotingThresholdFieldBuilder() {
+        if (keygenVotingThresholdBuilder_ == null) {
+          keygenVotingThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getKeygenVotingThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          keygenVotingThreshold_ = null;
+        }
+        return keygenVotingThresholdBuilder_;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold signVotingThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> signVotingThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the signVotingThreshold field is set.
+       */
+      public boolean hasSignVotingThreshold() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The signVotingThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getSignVotingThreshold() {
+        if (signVotingThresholdBuilder_ == null) {
+          return signVotingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : signVotingThreshold_;
+        } else {
+          return signVotingThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSignVotingThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (signVotingThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signVotingThreshold_ = value;
+        } else {
+          signVotingThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSignVotingThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (signVotingThresholdBuilder_ == null) {
+          signVotingThreshold_ = builderForValue.build();
+        } else {
+          signVotingThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSignVotingThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (signVotingThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            signVotingThreshold_ != null &&
+            signVotingThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getSignVotingThresholdBuilder().mergeFrom(value);
+          } else {
+            signVotingThreshold_ = value;
+          }
+        } else {
+          signVotingThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSignVotingThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        signVotingThreshold_ = null;
+        if (signVotingThresholdBuilder_ != null) {
+          signVotingThresholdBuilder_.dispose();
+          signVotingThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getSignVotingThresholdBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getSignVotingThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getSignVotingThresholdOrBuilder() {
+        if (signVotingThresholdBuilder_ != null) {
+          return signVotingThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return signVotingThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : signVotingThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold sign_voting_threshold = 9 [json_name = "signVotingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getSignVotingThresholdFieldBuilder() {
+        if (signVotingThresholdBuilder_ == null) {
+          signVotingThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getSignVotingThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          signVotingThreshold_ = null;
+        }
+        return signVotingThresholdBuilder_;
+      }
+
+      private long keygenTimeout_ ;
+      /**
+       * <code>int64 keygen_timeout = 10 [json_name = "keygenTimeout"];</code>
+       * @return The keygenTimeout.
+       */
+      @java.lang.Override
+      public long getKeygenTimeout() {
+        return keygenTimeout_;
+      }
+      /**
+       * <code>int64 keygen_timeout = 10 [json_name = "keygenTimeout"];</code>
+       * @param value The keygenTimeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeygenTimeout(long value) {
+
+        keygenTimeout_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 keygen_timeout = 10 [json_name = "keygenTimeout"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeygenTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        keygenTimeout_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long signTimeout_ ;
+      /**
+       * <code>int64 sign_timeout = 11 [json_name = "signTimeout"];</code>
+       * @return The signTimeout.
+       */
+      @java.lang.Override
+      public long getSignTimeout() {
+        return signTimeout_;
+      }
+      /**
+       * <code>int64 sign_timeout = 11 [json_name = "signTimeout"];</code>
+       * @param value The signTimeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignTimeout(long value) {
+
+        signTimeout_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 sign_timeout = 11 [json_name = "signTimeout"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        signTimeout_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.exported.v1beta1.KeyRequirement)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.exported.v1beta1.KeyRequirement)
+    private static final com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement();
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyRequirement>
+        PARSER = new com.google.protobuf.AbstractParser<KeyRequirement>() {
+      @java.lang.Override
+      public KeyRequirement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyRequirement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyRequirement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.exported.v1beta1.TypesProto.KeyRequirement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SigKeyPairOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.exported.v1beta1.SigKeyPair)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    com.google.protobuf.ByteString getPubKey();
+
+    /**
+     * <code>bytes signature = 2 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+  }
+  /**
+   * <pre>
+   * PubKeyInfo holds a pubkey and a signature
+   * </pre>
+   *
+   * Protobuf type {@code axelar.tss.exported.v1beta1.SigKeyPair}
+   */
+  public static final class SigKeyPair extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.exported.v1beta1.SigKeyPair)
+      SigKeyPairOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SigKeyPair.newBuilder() to construct.
+    private SigKeyPair(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SigKeyPair() {
+      pubKey_ = com.google.protobuf.ByteString.EMPTY;
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SigKeyPair();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_SigKeyPair_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_SigKeyPair_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.class, com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.Builder.class);
+    }
+
+    public static final int PUB_KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPubKey() {
+      return pubKey_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes signature = 2 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!pubKey_.isEmpty()) {
+        output.writeBytes(1, pubKey_);
+      }
+      if (!signature_.isEmpty()) {
+        output.writeBytes(2, signature_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!pubKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, pubKey_);
+      }
+      if (!signature_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, signature_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair other = (com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair) obj;
+
+      if (!getPubKey()
+          .equals(other.getPubKey())) return false;
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUB_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPubKey().hashCode();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PubKeyInfo holds a pubkey and a signature
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.exported.v1beta1.SigKeyPair}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.exported.v1beta1.SigKeyPair)
+        com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPairOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_SigKeyPair_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_SigKeyPair_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.class, com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pubKey_ = com.google.protobuf.ByteString.EMPTY;
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.internal_static_axelar_tss_exported_v1beta1_SigKeyPair_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair getDefaultInstanceForType() {
+        return com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair build() {
+        com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair buildPartial() {
+        com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair result = new com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pubKey_ = pubKey_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signature_ = signature_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair) {
+          return mergeFrom((com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair other) {
+        if (other == com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair.getDefaultInstance()) return this;
+        if (other.getPubKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPubKey(other.getPubKey());
+        }
+        if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
+          setSignature(other.getSignature());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pubKey_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                signature_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+       * @return The pubKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPubKey() {
+        return pubKey_;
+      }
+      /**
+       * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+       * @param value The pubKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes pub_key = 1 [json_name = "pubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pubKey_ = getDefaultInstance().getPubKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.exported.v1beta1.SigKeyPair)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.exported.v1beta1.SigKeyPair)
+    private static final com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair();
+    }
+
+    public static com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SigKeyPair>
+        PARSER = new com.google.protobuf.AbstractParser<SigKeyPair>() {
+      @java.lang.Override
+      public SigKeyPair parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SigKeyPair> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SigKeyPair> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.exported.v1beta1.TypesProto.SigKeyPair getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_exported_v1beta1_KeyRequirement_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_exported_v1beta1_KeyRequirement_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_exported_v1beta1_SigKeyPair_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_exported_v1beta1_SigKeyPair_fieldAccessorTable;
 
@@ -75,13 +2805,13 @@ public final class TypesProto {
       "LICY_WEIGHTED_BY_STAKE\020\001\032\023\212\235 \017WeightedBy" +
       "Stake\022H\n/KEY_SHARE_DISTRIBUTION_POLICY_O" +
       "NE_PER_VALIDATOR\020\002\032\023\212\235 \017OnePerValidator\032" +
-      "\010\210\243\036\000\250\244\036\001B\361\001\n\037com.axelar.tss.exported.v1" +
-      "beta1B\nTypesProtoP\001Z3github.com/axelarne" +
-      "twork/axelar-core/x/tss/exported\242\002\003ATE\252\002" +
-      "\033Axelar.Tss.Exported.V1beta1\312\002\033Axelar\\Ts" +
-      "s\\Exported\\V1beta1\342\002\'Axelar\\Tss\\Exported" +
-      "\\V1beta1\\GPBMetadata\352\002\036Axelar::Tss::Expo" +
-      "rted::V1beta1b\006proto3"
+      "\010\210\243\036\000\250\244\036\001B\357\001\n\037com.axelar.tss.exported.v1" +
+      "beta1B\nTypesProtoZ3github.com/axelarnetw" +
+      "ork/axelar-core/x/tss/exported\242\002\003ATE\252\002\033A" +
+      "xelar.Tss.Exported.V1beta1\312\002\033Axelar\\Tss\\" +
+      "Exported\\V1beta1\342\002\'Axelar\\Tss\\Exported\\V" +
+      "1beta1\\GPBMetadata\352\002\036Axelar::Tss::Export" +
+      "ed::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

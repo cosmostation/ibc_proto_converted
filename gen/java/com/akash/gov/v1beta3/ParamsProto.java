@@ -14,9 +14,519 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface DepositParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.gov.v1beta3.DepositParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * min_initial_deposit_rate minimum % of TotalDeposit
+     * author of the proposal must put in order for proposal tx to be committed
+     * </pre>
+     *
+     * <code>bytes min_initial_deposit_rate = 1 [json_name = "minInitialDepositRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MinInitialDepositRate", (.gogoproto.jsontag) = "min_initial_deposit_rate", (.gogoproto.moretags) = "yaml:&#92;"min_initial_deposit_rate&#92;""];</code>
+     * @return The minInitialDepositRate.
+     */
+    com.google.protobuf.ByteString getMinInitialDepositRate();
+  }
+  /**
+   * <pre>
+   * DepositParams defines the parameters for the x/gov module
+   * </pre>
+   *
+   * Protobuf type {@code akash.gov.v1beta3.DepositParams}
+   */
+  public static final class DepositParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.gov.v1beta3.DepositParams)
+      DepositParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DepositParams.newBuilder() to construct.
+    private DepositParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DepositParams() {
+      minInitialDepositRate_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DepositParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.gov.v1beta3.ParamsProto.internal_static_akash_gov_v1beta3_DepositParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.gov.v1beta3.ParamsProto.internal_static_akash_gov_v1beta3_DepositParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.gov.v1beta3.ParamsProto.DepositParams.class, com.akash.gov.v1beta3.ParamsProto.DepositParams.Builder.class);
+    }
+
+    public static final int MIN_INITIAL_DEPOSIT_RATE_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString minInitialDepositRate_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * min_initial_deposit_rate minimum % of TotalDeposit
+     * author of the proposal must put in order for proposal tx to be committed
+     * </pre>
+     *
+     * <code>bytes min_initial_deposit_rate = 1 [json_name = "minInitialDepositRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MinInitialDepositRate", (.gogoproto.jsontag) = "min_initial_deposit_rate", (.gogoproto.moretags) = "yaml:&#92;"min_initial_deposit_rate&#92;""];</code>
+     * @return The minInitialDepositRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMinInitialDepositRate() {
+      return minInitialDepositRate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!minInitialDepositRate_.isEmpty()) {
+        output.writeBytes(1, minInitialDepositRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!minInitialDepositRate_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, minInitialDepositRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.gov.v1beta3.ParamsProto.DepositParams)) {
+        return super.equals(obj);
+      }
+      com.akash.gov.v1beta3.ParamsProto.DepositParams other = (com.akash.gov.v1beta3.ParamsProto.DepositParams) obj;
+
+      if (!getMinInitialDepositRate()
+          .equals(other.getMinInitialDepositRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MIN_INITIAL_DEPOSIT_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinInitialDepositRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.gov.v1beta3.ParamsProto.DepositParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DepositParams defines the parameters for the x/gov module
+     * </pre>
+     *
+     * Protobuf type {@code akash.gov.v1beta3.DepositParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.gov.v1beta3.DepositParams)
+        com.akash.gov.v1beta3.ParamsProto.DepositParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.gov.v1beta3.ParamsProto.internal_static_akash_gov_v1beta3_DepositParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.gov.v1beta3.ParamsProto.internal_static_akash_gov_v1beta3_DepositParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.gov.v1beta3.ParamsProto.DepositParams.class, com.akash.gov.v1beta3.ParamsProto.DepositParams.Builder.class);
+      }
+
+      // Construct using com.akash.gov.v1beta3.ParamsProto.DepositParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minInitialDepositRate_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.gov.v1beta3.ParamsProto.internal_static_akash_gov_v1beta3_DepositParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.gov.v1beta3.ParamsProto.DepositParams getDefaultInstanceForType() {
+        return com.akash.gov.v1beta3.ParamsProto.DepositParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.gov.v1beta3.ParamsProto.DepositParams build() {
+        com.akash.gov.v1beta3.ParamsProto.DepositParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.gov.v1beta3.ParamsProto.DepositParams buildPartial() {
+        com.akash.gov.v1beta3.ParamsProto.DepositParams result = new com.akash.gov.v1beta3.ParamsProto.DepositParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.gov.v1beta3.ParamsProto.DepositParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minInitialDepositRate_ = minInitialDepositRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.gov.v1beta3.ParamsProto.DepositParams) {
+          return mergeFrom((com.akash.gov.v1beta3.ParamsProto.DepositParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.gov.v1beta3.ParamsProto.DepositParams other) {
+        if (other == com.akash.gov.v1beta3.ParamsProto.DepositParams.getDefaultInstance()) return this;
+        if (other.getMinInitialDepositRate() != com.google.protobuf.ByteString.EMPTY) {
+          setMinInitialDepositRate(other.getMinInitialDepositRate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                minInitialDepositRate_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString minInitialDepositRate_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * min_initial_deposit_rate minimum % of TotalDeposit
+       * author of the proposal must put in order for proposal tx to be committed
+       * </pre>
+       *
+       * <code>bytes min_initial_deposit_rate = 1 [json_name = "minInitialDepositRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MinInitialDepositRate", (.gogoproto.jsontag) = "min_initial_deposit_rate", (.gogoproto.moretags) = "yaml:&#92;"min_initial_deposit_rate&#92;""];</code>
+       * @return The minInitialDepositRate.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMinInitialDepositRate() {
+        return minInitialDepositRate_;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit_rate minimum % of TotalDeposit
+       * author of the proposal must put in order for proposal tx to be committed
+       * </pre>
+       *
+       * <code>bytes min_initial_deposit_rate = 1 [json_name = "minInitialDepositRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MinInitialDepositRate", (.gogoproto.jsontag) = "min_initial_deposit_rate", (.gogoproto.moretags) = "yaml:&#92;"min_initial_deposit_rate&#92;""];</code>
+       * @param value The minInitialDepositRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinInitialDepositRate(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        minInitialDepositRate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit_rate minimum % of TotalDeposit
+       * author of the proposal must put in order for proposal tx to be committed
+       * </pre>
+       *
+       * <code>bytes min_initial_deposit_rate = 1 [json_name = "minInitialDepositRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MinInitialDepositRate", (.gogoproto.jsontag) = "min_initial_deposit_rate", (.gogoproto.moretags) = "yaml:&#92;"min_initial_deposit_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinInitialDepositRate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minInitialDepositRate_ = getDefaultInstance().getMinInitialDepositRate();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.gov.v1beta3.DepositParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.gov.v1beta3.DepositParams)
+    private static final com.akash.gov.v1beta3.ParamsProto.DepositParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.gov.v1beta3.ParamsProto.DepositParams();
+    }
+
+    public static com.akash.gov.v1beta3.ParamsProto.DepositParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DepositParams>
+        PARSER = new com.google.protobuf.AbstractParser<DepositParams>() {
+      @java.lang.Override
+      public DepositParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DepositParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DepositParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.gov.v1beta3.ParamsProto.DepositParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_gov_v1beta3_DepositParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_gov_v1beta3_DepositParams_fieldAccessorTable;
 
@@ -35,12 +545,12 @@ public final class ParamsProto {
       "s-sdk/types.Dec\342\336\037\025MinInitialDepositRate" +
       "\352\336\037\030min_initial_deposit_rate\362\336\037\037yaml:\"mi" +
       "n_initial_deposit_rate\"R\025minInitialDepos" +
-      "itRateB\302\001\n\025com.akash.gov.v1beta3B\013Params" +
-      "ProtoP\001Z6github.com/akash-network/akash-" +
-      "api/go/node/gov/v1beta3\242\002\003AGX\252\002\021Akash.Go" +
-      "v.V1beta3\312\002\021Akash\\Gov\\V1beta3\342\002\035Akash\\Go" +
-      "v\\V1beta3\\GPBMetadata\352\002\023Akash::Gov::V1be" +
-      "ta3b\006proto3"
+      "itRateB\300\001\n\025com.akash.gov.v1beta3B\013Params" +
+      "ProtoZ6github.com/akash-network/akash-ap" +
+      "i/go/node/gov/v1beta3\242\002\003AGX\252\002\021Akash.Gov." +
+      "V1beta3\312\002\021Akash\\Gov\\V1beta3\342\002\035Akash\\Gov\\" +
+      "V1beta3\\GPBMetadata\352\002\023Akash::Gov::V1beta" +
+      "3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

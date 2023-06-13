@@ -14,14 +14,1574 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventDelegateFeedConsentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.EventDelegateFeedConsent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Operator bech32 address who delegates his feed consent
+     * </pre>
+     *
+     * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The operator.
+     */
+    java.lang.String getOperator();
+    /**
+     * <pre>
+     * Operator bech32 address who delegates his feed consent
+     * </pre>
+     *
+     * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for operator.
+     */
+    com.google.protobuf.ByteString
+        getOperatorBytes();
+
+    /**
+     * <pre>
+     * Delegate bech32 address
+     * </pre>
+     *
+     * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The delegate.
+     */
+    java.lang.String getDelegate();
+    /**
+     * <pre>
+     * Delegate bech32 address
+     * </pre>
+     *
+     * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for delegate.
+     */
+    com.google.protobuf.ByteString
+        getDelegateBytes();
+  }
+  /**
+   * <pre>
+   * EventDelegateFeedConsent is emitted on Msg/DelegateFeedConsent
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.EventDelegateFeedConsent}
+   */
+  public static final class EventDelegateFeedConsent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.EventDelegateFeedConsent)
+      EventDelegateFeedConsentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventDelegateFeedConsent.newBuilder() to construct.
+    private EventDelegateFeedConsent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventDelegateFeedConsent() {
+      operator_ = "";
+      delegate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventDelegateFeedConsent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventDelegateFeedConsent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventDelegateFeedConsent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.class, com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.Builder.class);
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operator_ = "";
+    /**
+     * <pre>
+     * Operator bech32 address who delegates his feed consent
+     * </pre>
+     *
+     * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The operator.
+     */
+    @java.lang.Override
+    public java.lang.String getOperator() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Operator bech32 address who delegates his feed consent
+     * </pre>
+     *
+     * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for operator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorBytes() {
+      java.lang.Object ref = operator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELEGATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delegate_ = "";
+    /**
+     * <pre>
+     * Delegate bech32 address
+     * </pre>
+     *
+     * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The delegate.
+     */
+    @java.lang.Override
+    public java.lang.String getDelegate() {
+      java.lang.Object ref = delegate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delegate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Delegate bech32 address
+     * </pre>
+     *
+     * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for delegate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelegateBytes() {
+      java.lang.Object ref = delegate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delegate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, delegate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delegate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, delegate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent other = (com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent) obj;
+
+      if (!getOperator()
+          .equals(other.getOperator())) return false;
+      if (!getDelegate()
+          .equals(other.getDelegate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getOperator().hashCode();
+      hash = (37 * hash) + DELEGATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDelegate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventDelegateFeedConsent is emitted on Msg/DelegateFeedConsent
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.EventDelegateFeedConsent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.EventDelegateFeedConsent)
+        com.umee.oracle.v1.EventsProto.EventDelegateFeedConsentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventDelegateFeedConsent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventDelegateFeedConsent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.class, com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operator_ = "";
+        delegate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventDelegateFeedConsent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent getDefaultInstanceForType() {
+        return com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent build() {
+        com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent buildPartial() {
+        com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent result = new com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operator_ = operator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.delegate_ = delegate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent) {
+          return mergeFrom((com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent other) {
+        if (other == com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent.getDefaultInstance()) return this;
+        if (!other.getOperator().isEmpty()) {
+          operator_ = other.operator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDelegate().isEmpty()) {
+          delegate_ = other.delegate_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                operator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                delegate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object operator_ = "";
+      /**
+       * <pre>
+       * Operator bech32 address who delegates his feed consent
+       * </pre>
+       *
+       * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The operator.
+       */
+      public java.lang.String getOperator() {
+        java.lang.Object ref = operator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Operator bech32 address who delegates his feed consent
+       * </pre>
+       *
+       * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for operator.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorBytes() {
+        java.lang.Object ref = operator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Operator bech32 address who delegates his feed consent
+       * </pre>
+       *
+       * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Operator bech32 address who delegates his feed consent
+       * </pre>
+       *
+       * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperator() {
+        operator_ = getDefaultInstance().getOperator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Operator bech32 address who delegates his feed consent
+       * </pre>
+       *
+       * <code>string operator = 1 [json_name = "operator", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for operator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delegate_ = "";
+      /**
+       * <pre>
+       * Delegate bech32 address
+       * </pre>
+       *
+       * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The delegate.
+       */
+      public java.lang.String getDelegate() {
+        java.lang.Object ref = delegate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delegate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Delegate bech32 address
+       * </pre>
+       *
+       * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for delegate.
+       */
+      public com.google.protobuf.ByteString
+          getDelegateBytes() {
+        java.lang.Object ref = delegate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delegate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Delegate bech32 address
+       * </pre>
+       *
+       * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The delegate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delegate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Delegate bech32 address
+       * </pre>
+       *
+       * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelegate() {
+        delegate_ = getDefaultInstance().getDelegate();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Delegate bech32 address
+       * </pre>
+       *
+       * <code>string delegate = 2 [json_name = "delegate", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for delegate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelegateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delegate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.EventDelegateFeedConsent)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.EventDelegateFeedConsent)
+    private static final com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent();
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventDelegateFeedConsent>
+        PARSER = new com.google.protobuf.AbstractParser<EventDelegateFeedConsent>() {
+      @java.lang.Override
+      public EventDelegateFeedConsent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventDelegateFeedConsent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventDelegateFeedConsent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.EventsProto.EventDelegateFeedConsent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventSetFxRateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.EventSetFxRate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * uToken denom
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * uToken denom
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * Exchange rate (based to USD)
+     * </pre>
+     *
+     * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The rate.
+     */
+    java.lang.String getRate();
+    /**
+     * <pre>
+     * Exchange rate (based to USD)
+     * </pre>
+     *
+     * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for rate.
+     */
+    com.google.protobuf.ByteString
+        getRateBytes();
+  }
+  /**
+   * <pre>
+   * EventSetFxRate is emitted on exchange rate update
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.EventSetFxRate}
+   */
+  public static final class EventSetFxRate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.EventSetFxRate)
+      EventSetFxRateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventSetFxRate.newBuilder() to construct.
+    private EventSetFxRate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventSetFxRate() {
+      denom_ = "";
+      rate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventSetFxRate();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventSetFxRate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventSetFxRate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.EventsProto.EventSetFxRate.class, com.umee.oracle.v1.EventsProto.EventSetFxRate.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * uToken denom
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * uToken denom
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rate_ = "";
+    /**
+     * <pre>
+     * Exchange rate (based to USD)
+     * </pre>
+     *
+     * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The rate.
+     */
+    @java.lang.Override
+    public java.lang.String getRate() {
+      java.lang.Object ref = rate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Exchange rate (based to USD)
+     * </pre>
+     *
+     * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for rate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRateBytes() {
+      java.lang.Object ref = rate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.EventsProto.EventSetFxRate)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.EventsProto.EventSetFxRate other = (com.umee.oracle.v1.EventsProto.EventSetFxRate) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getRate()
+          .equals(other.getRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.EventsProto.EventSetFxRate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventSetFxRate is emitted on exchange rate update
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.EventSetFxRate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.EventSetFxRate)
+        com.umee.oracle.v1.EventsProto.EventSetFxRateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventSetFxRate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventSetFxRate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.EventsProto.EventSetFxRate.class, com.umee.oracle.v1.EventsProto.EventSetFxRate.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.EventsProto.EventSetFxRate.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        rate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.EventsProto.internal_static_umee_oracle_v1_EventSetFxRate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.EventsProto.EventSetFxRate getDefaultInstanceForType() {
+        return com.umee.oracle.v1.EventsProto.EventSetFxRate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.EventsProto.EventSetFxRate build() {
+        com.umee.oracle.v1.EventsProto.EventSetFxRate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.EventsProto.EventSetFxRate buildPartial() {
+        com.umee.oracle.v1.EventsProto.EventSetFxRate result = new com.umee.oracle.v1.EventsProto.EventSetFxRate(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.EventsProto.EventSetFxRate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rate_ = rate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.EventsProto.EventSetFxRate) {
+          return mergeFrom((com.umee.oracle.v1.EventsProto.EventSetFxRate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.EventsProto.EventSetFxRate other) {
+        if (other == com.umee.oracle.v1.EventsProto.EventSetFxRate.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRate().isEmpty()) {
+          rate_ = other.rate_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                rate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * uToken denom
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * uToken denom
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * uToken denom
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken denom
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * uToken denom
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rate_ = "";
+      /**
+       * <pre>
+       * Exchange rate (based to USD)
+       * </pre>
+       *
+       * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The rate.
+       */
+      public java.lang.String getRate() {
+        java.lang.Object ref = rate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Exchange rate (based to USD)
+       * </pre>
+       *
+       * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for rate.
+       */
+      public com.google.protobuf.ByteString
+          getRateBytes() {
+        java.lang.Object ref = rate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Exchange rate (based to USD)
+       * </pre>
+       *
+       * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The rate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exchange rate (based to USD)
+       * </pre>
+       *
+       * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRate() {
+        rate_ = getDefaultInstance().getRate();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Exchange rate (based to USD)
+       * </pre>
+       *
+       * <code>string rate = 2 [json_name = "rate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for rate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.EventSetFxRate)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.EventSetFxRate)
+    private static final com.umee.oracle.v1.EventsProto.EventSetFxRate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.EventsProto.EventSetFxRate();
+    }
+
+    public static com.umee.oracle.v1.EventsProto.EventSetFxRate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventSetFxRate>
+        PARSER = new com.google.protobuf.AbstractParser<EventSetFxRate>() {
+      @java.lang.Override
+      public EventSetFxRate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventSetFxRate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventSetFxRate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.EventsProto.EventSetFxRate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_EventDelegateFeedConsent_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_EventDelegateFeedConsent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_EventSetFxRate_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_EventSetFxRate_fieldAccessorTable;
 
@@ -41,12 +1601,12 @@ public final class EventsProto {
       "\024cosmos.AddressStringR\010delegate\"x\n\016Event" +
       "SetFxRate\022\024\n\005denom\030\001 \001(\tR\005denom\022P\n\004rate\030" +
       "\002 \001(\tB<\310\336\037\000\332\336\037&github.com/cosmos/cosmos-" +
-      "sdk/types.Dec\322\264-\ncosmos.DecR\004rateB\257\001\n\022co" +
-      "m.umee.oracle.v1B\013EventsProtoP\001Z.github." +
-      "com/umee-network/umee/v5/x/oracle/types\242" +
-      "\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle\\V1\342" +
-      "\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee::Ora" +
-      "cle::V1\310\341\036\000b\006proto3"
+      "sdk/types.Dec\322\264-\ncosmos.DecR\004rateB\255\001\n\022co" +
+      "m.umee.oracle.v1B\013EventsProtoZ.github.co" +
+      "m/umee-network/umee/v5/x/oracle/types\242\002\003" +
+      "UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle\\V1\342\002\032" +
+      "Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee::Oracl" +
+      "e::V1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

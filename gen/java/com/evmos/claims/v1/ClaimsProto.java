@@ -14,19 +14,2892 @@ public final class ClaimsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Action defines the list of available actions to claim the airdrop tokens.
+   * </pre>
+   *
+   * Protobuf enum {@code evmos.claims.v1.Action}
+   */
+  public enum Action
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * ACTION_UNSPECIFIED defines an invalid action.
+     * </pre>
+     *
+     * <code>ACTION_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ActionUnspecified"];</code>
+     */
+    ACTION_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ACTION_VOTE defines a proposal vote.
+     * </pre>
+     *
+     * <code>ACTION_VOTE = 1 [(.gogoproto.enumvalue_customname) = "ActionVote"];</code>
+     */
+    ACTION_VOTE(1),
+    /**
+     * <pre>
+     * ACTION_DELEGATE defines an staking delegation.
+     * </pre>
+     *
+     * <code>ACTION_DELEGATE = 2 [(.gogoproto.enumvalue_customname) = "ActionDelegate"];</code>
+     */
+    ACTION_DELEGATE(2),
+    /**
+     * <pre>
+     * ACTION_EVM defines an EVM transaction.
+     * </pre>
+     *
+     * <code>ACTION_EVM = 3 [(.gogoproto.enumvalue_customname) = "ActionEVM"];</code>
+     */
+    ACTION_EVM(3),
+    /**
+     * <pre>
+     * ACTION_IBC_TRANSFER defines a fungible token transfer transaction via IBC.
+     * </pre>
+     *
+     * <code>ACTION_IBC_TRANSFER = 4 [(.gogoproto.enumvalue_customname) = "ActionIBCTransfer"];</code>
+     */
+    ACTION_IBC_TRANSFER(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * ACTION_UNSPECIFIED defines an invalid action.
+     * </pre>
+     *
+     * <code>ACTION_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "ActionUnspecified"];</code>
+     */
+    public static final int ACTION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ACTION_VOTE defines a proposal vote.
+     * </pre>
+     *
+     * <code>ACTION_VOTE = 1 [(.gogoproto.enumvalue_customname) = "ActionVote"];</code>
+     */
+    public static final int ACTION_VOTE_VALUE = 1;
+    /**
+     * <pre>
+     * ACTION_DELEGATE defines an staking delegation.
+     * </pre>
+     *
+     * <code>ACTION_DELEGATE = 2 [(.gogoproto.enumvalue_customname) = "ActionDelegate"];</code>
+     */
+    public static final int ACTION_DELEGATE_VALUE = 2;
+    /**
+     * <pre>
+     * ACTION_EVM defines an EVM transaction.
+     * </pre>
+     *
+     * <code>ACTION_EVM = 3 [(.gogoproto.enumvalue_customname) = "ActionEVM"];</code>
+     */
+    public static final int ACTION_EVM_VALUE = 3;
+    /**
+     * <pre>
+     * ACTION_IBC_TRANSFER defines a fungible token transfer transaction via IBC.
+     * </pre>
+     *
+     * <code>ACTION_IBC_TRANSFER = 4 [(.gogoproto.enumvalue_customname) = "ActionIBCTransfer"];</code>
+     */
+    public static final int ACTION_IBC_TRANSFER_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Action valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Action forNumber(int value) {
+      switch (value) {
+        case 0: return ACTION_UNSPECIFIED;
+        case 1: return ACTION_VOTE;
+        case 2: return ACTION_DELEGATE;
+        case 3: return ACTION_EVM;
+        case 4: return ACTION_IBC_TRANSFER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Action>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Action> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+            public Action findValueByNumber(int number) {
+              return Action.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.ClaimsProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Action[] VALUES = values();
+
+    public static Action valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Action(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:evmos.claims.v1.Action)
+  }
+
+  public interface ClaimOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.Claim)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * action enum
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    int getActionValue();
+    /**
+     * <pre>
+     * action enum
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    com.evmos.claims.v1.ClaimsProto.Action getAction();
+
+    /**
+     * <pre>
+     * completed is true if the action has been completed
+     * </pre>
+     *
+     * <code>bool completed = 2 [json_name = "completed"];</code>
+     * @return The completed.
+     */
+    boolean getCompleted();
+
+    /**
+     * <pre>
+     * claimable_amount of tokens for the action. Zero if completed
+     * </pre>
+     *
+     * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The claimableAmount.
+     */
+    java.lang.String getClaimableAmount();
+    /**
+     * <pre>
+     * claimable_amount of tokens for the action. Zero if completed
+     * </pre>
+     *
+     * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for claimableAmount.
+     */
+    com.google.protobuf.ByteString
+        getClaimableAmountBytes();
+  }
+  /**
+   * <pre>
+   * Claim defines the action, completed flag and the remaining claimable amount
+   * for a given user. This is only used during client queries.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.Claim}
+   */
+  public static final class Claim extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.Claim)
+      ClaimOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Claim.newBuilder() to construct.
+    private Claim(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Claim() {
+      action_ = 0;
+      claimableAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Claim();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_Claim_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_Claim_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.ClaimsProto.Claim.class, com.evmos.claims.v1.ClaimsProto.Claim.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_ = 0;
+    /**
+     * <pre>
+     * action enum
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+     * @return The enum numeric value on the wire for action.
+     */
+    @java.lang.Override public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <pre>
+     * action enum
+     * </pre>
+     *
+     * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+     * @return The action.
+     */
+    @java.lang.Override public com.evmos.claims.v1.ClaimsProto.Action getAction() {
+      com.evmos.claims.v1.ClaimsProto.Action result = com.evmos.claims.v1.ClaimsProto.Action.forNumber(action_);
+      return result == null ? com.evmos.claims.v1.ClaimsProto.Action.UNRECOGNIZED : result;
+    }
+
+    public static final int COMPLETED_FIELD_NUMBER = 2;
+    private boolean completed_ = false;
+    /**
+     * <pre>
+     * completed is true if the action has been completed
+     * </pre>
+     *
+     * <code>bool completed = 2 [json_name = "completed"];</code>
+     * @return The completed.
+     */
+    @java.lang.Override
+    public boolean getCompleted() {
+      return completed_;
+    }
+
+    public static final int CLAIMABLE_AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimableAmount_ = "";
+    /**
+     * <pre>
+     * claimable_amount of tokens for the action. Zero if completed
+     * </pre>
+     *
+     * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The claimableAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimableAmount() {
+      java.lang.Object ref = claimableAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimableAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * claimable_amount of tokens for the action. Zero if completed
+     * </pre>
+     *
+     * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for claimableAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimableAmountBytes() {
+      java.lang.Object ref = claimableAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimableAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != com.evmos.claims.v1.ClaimsProto.Action.ACTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (completed_ != false) {
+        output.writeBool(2, completed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimableAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, claimableAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != com.evmos.claims.v1.ClaimsProto.Action.ACTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (completed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, completed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimableAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, claimableAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.ClaimsProto.Claim)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.ClaimsProto.Claim other = (com.evmos.claims.v1.ClaimsProto.Claim) obj;
+
+      if (action_ != other.action_) return false;
+      if (getCompleted()
+          != other.getCompleted()) return false;
+      if (!getClaimableAmount()
+          .equals(other.getClaimableAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      hash = (37 * hash) + COMPLETED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCompleted());
+      hash = (37 * hash) + CLAIMABLE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimableAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.Claim parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.ClaimsProto.Claim prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Claim defines the action, completed flag and the remaining claimable amount
+     * for a given user. This is only used during client queries.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.Claim}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.Claim)
+        com.evmos.claims.v1.ClaimsProto.ClaimOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_Claim_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_Claim_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.ClaimsProto.Claim.class, com.evmos.claims.v1.ClaimsProto.Claim.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.ClaimsProto.Claim.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        action_ = 0;
+        completed_ = false;
+        claimableAmount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_Claim_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.Claim getDefaultInstanceForType() {
+        return com.evmos.claims.v1.ClaimsProto.Claim.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.Claim build() {
+        com.evmos.claims.v1.ClaimsProto.Claim result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.Claim buildPartial() {
+        com.evmos.claims.v1.ClaimsProto.Claim result = new com.evmos.claims.v1.ClaimsProto.Claim(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.ClaimsProto.Claim result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.action_ = action_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.completed_ = completed_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.claimableAmount_ = claimableAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.ClaimsProto.Claim) {
+          return mergeFrom((com.evmos.claims.v1.ClaimsProto.Claim)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.ClaimsProto.Claim other) {
+        if (other == com.evmos.claims.v1.ClaimsProto.Claim.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (other.getCompleted() != false) {
+          setCompleted(other.getCompleted());
+        }
+        if (!other.getClaimableAmount().isEmpty()) {
+          claimableAmount_ = other.claimableAmount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                action_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                completed_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                claimableAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int action_ = 0;
+      /**
+       * <pre>
+       * action enum
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+       * @return The enum numeric value on the wire for action.
+       */
+      @java.lang.Override public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <pre>
+       * action enum
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+       * @param value The enum numeric value on the wire for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionValue(int value) {
+        action_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * action enum
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+       * @return The action.
+       */
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.Action getAction() {
+        com.evmos.claims.v1.ClaimsProto.Action result = com.evmos.claims.v1.ClaimsProto.Action.forNumber(action_);
+        return result == null ? com.evmos.claims.v1.ClaimsProto.Action.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * action enum
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(com.evmos.claims.v1.ClaimsProto.Action value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * action enum
+       * </pre>
+       *
+       * <code>.evmos.claims.v1.Action action = 1 [json_name = "action"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean completed_ ;
+      /**
+       * <pre>
+       * completed is true if the action has been completed
+       * </pre>
+       *
+       * <code>bool completed = 2 [json_name = "completed"];</code>
+       * @return The completed.
+       */
+      @java.lang.Override
+      public boolean getCompleted() {
+        return completed_;
+      }
+      /**
+       * <pre>
+       * completed is true if the action has been completed
+       * </pre>
+       *
+       * <code>bool completed = 2 [json_name = "completed"];</code>
+       * @param value The completed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompleted(boolean value) {
+
+        completed_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * completed is true if the action has been completed
+       * </pre>
+       *
+       * <code>bool completed = 2 [json_name = "completed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompleted() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        completed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimableAmount_ = "";
+      /**
+       * <pre>
+       * claimable_amount of tokens for the action. Zero if completed
+       * </pre>
+       *
+       * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The claimableAmount.
+       */
+      public java.lang.String getClaimableAmount() {
+        java.lang.Object ref = claimableAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimableAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * claimable_amount of tokens for the action. Zero if completed
+       * </pre>
+       *
+       * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for claimableAmount.
+       */
+      public com.google.protobuf.ByteString
+          getClaimableAmountBytes() {
+        java.lang.Object ref = claimableAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimableAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * claimable_amount of tokens for the action. Zero if completed
+       * </pre>
+       *
+       * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The claimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimableAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimableAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_amount of tokens for the action. Zero if completed
+       * </pre>
+       *
+       * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimableAmount() {
+        claimableAmount_ = getDefaultInstance().getClaimableAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimable_amount of tokens for the action. Zero if completed
+       * </pre>
+       *
+       * <code>string claimable_amount = 3 [json_name = "claimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for claimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimableAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimableAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.Claim)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.Claim)
+    private static final com.evmos.claims.v1.ClaimsProto.Claim DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.ClaimsProto.Claim();
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.Claim getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Claim>
+        PARSER = new com.google.protobuf.AbstractParser<Claim>() {
+      @java.lang.Override
+      public Claim parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Claim> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Claim> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.Claim getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimsRecordAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.ClaimsRecordAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of claiming user in either bech32 or hex format
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * address of claiming user in either bech32 or hex format
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialClaimableAmount.
+     */
+    java.lang.String getInitialClaimableAmount();
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialClaimableAmount.
+     */
+    com.google.protobuf.ByteString
+        getInitialClaimableAmountBytes();
+
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     * @return A list containing the actionsCompleted.
+     */
+    java.util.List<java.lang.Boolean> getActionsCompletedList();
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     * @return The count of actionsCompleted.
+     */
+    int getActionsCompletedCount();
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     * @param index The index of the element to return.
+     * @return The actionsCompleted at the given index.
+     */
+    boolean getActionsCompleted(int index);
+  }
+  /**
+   * <pre>
+   * ClaimsRecordAddress is the claims metadata per address that is used at
+   * Genesis.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.ClaimsRecordAddress}
+   */
+  public static final class ClaimsRecordAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.ClaimsRecordAddress)
+      ClaimsRecordAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimsRecordAddress.newBuilder() to construct.
+    private ClaimsRecordAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimsRecordAddress() {
+      address_ = "";
+      initialClaimableAmount_ = "";
+      actionsCompleted_ = emptyBooleanList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimsRecordAddress();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecordAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecordAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.class, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * address of claiming user in either bech32 or hex format
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of claiming user in either bech32 or hex format
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INITIAL_CLAIMABLE_AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object initialClaimableAmount_ = "";
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialClaimableAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getInitialClaimableAmount() {
+      java.lang.Object ref = initialClaimableAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        initialClaimableAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialClaimableAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInitialClaimableAmountBytes() {
+      java.lang.Object ref = initialClaimableAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        initialClaimableAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACTIONS_COMPLETED_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.BooleanList actionsCompleted_;
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     * @return A list containing the actionsCompleted.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Boolean>
+        getActionsCompletedList() {
+      return actionsCompleted_;
+    }
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     * @return The count of actionsCompleted.
+     */
+    public int getActionsCompletedCount() {
+      return actionsCompleted_.size();
+    }
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+     * @param index The index of the element to return.
+     * @return The actionsCompleted at the given index.
+     */
+    public boolean getActionsCompleted(int index) {
+      return actionsCompleted_.getBoolean(index);
+    }
+    private int actionsCompletedMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialClaimableAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, initialClaimableAmount_);
+      }
+      if (getActionsCompletedList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(actionsCompletedMemoizedSerializedSize);
+      }
+      for (int i = 0; i < actionsCompleted_.size(); i++) {
+        output.writeBoolNoTag(actionsCompleted_.getBoolean(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialClaimableAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, initialClaimableAmount_);
+      }
+      {
+        int dataSize = 0;
+        dataSize = 1 * getActionsCompletedList().size();
+        size += dataSize;
+        if (!getActionsCompletedList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        actionsCompletedMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress other = (com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getInitialClaimableAmount()
+          .equals(other.getInitialClaimableAmount())) return false;
+      if (!getActionsCompletedList()
+          .equals(other.getActionsCompletedList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + INITIAL_CLAIMABLE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getInitialClaimableAmount().hashCode();
+      if (getActionsCompletedCount() > 0) {
+        hash = (37 * hash) + ACTIONS_COMPLETED_FIELD_NUMBER;
+        hash = (53 * hash) + getActionsCompletedList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimsRecordAddress is the claims metadata per address that is used at
+     * Genesis.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.ClaimsRecordAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.ClaimsRecordAddress)
+        com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecordAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecordAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.class, com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        initialClaimableAmount_ = "";
+        actionsCompleted_ = emptyBooleanList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecordAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getDefaultInstanceForType() {
+        return com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress build() {
+        com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress buildPartial() {
+        com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result = new com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          actionsCompleted_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.actionsCompleted_ = actionsCompleted_;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.initialClaimableAmount_ = initialClaimableAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress) {
+          return mergeFrom((com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress other) {
+        if (other == com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getInitialClaimableAmount().isEmpty()) {
+          initialClaimableAmount_ = other.initialClaimableAmount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.actionsCompleted_.isEmpty()) {
+          if (actionsCompleted_.isEmpty()) {
+            actionsCompleted_ = other.actionsCompleted_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureActionsCompletedIsMutable();
+            actionsCompleted_.addAll(other.actionsCompleted_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                initialClaimableAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                boolean v = input.readBool();
+                ensureActionsCompletedIsMutable();
+                actionsCompleted_.addBoolean(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureActionsCompletedIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  actionsCompleted_.addBoolean(input.readBool());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * address of claiming user in either bech32 or hex format
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of claiming user in either bech32 or hex format
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of claiming user in either bech32 or hex format
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of claiming user in either bech32 or hex format
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of claiming user in either bech32 or hex format
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object initialClaimableAmount_ = "";
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The initialClaimableAmount.
+       */
+      public java.lang.String getInitialClaimableAmount() {
+        java.lang.Object ref = initialClaimableAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          initialClaimableAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for initialClaimableAmount.
+       */
+      public com.google.protobuf.ByteString
+          getInitialClaimableAmountBytes() {
+        java.lang.Object ref = initialClaimableAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialClaimableAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The initialClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialClaimableAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        initialClaimableAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialClaimableAmount() {
+        initialClaimableAmount_ = getDefaultInstance().getInitialClaimableAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 2 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for initialClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialClaimableAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        initialClaimableAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.BooleanList actionsCompleted_ = emptyBooleanList();
+      private void ensureActionsCompletedIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          actionsCompleted_ = mutableCopy(actionsCompleted_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @return A list containing the actionsCompleted.
+       */
+      public java.util.List<java.lang.Boolean>
+          getActionsCompletedList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(actionsCompleted_) : actionsCompleted_;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @return The count of actionsCompleted.
+       */
+      public int getActionsCompletedCount() {
+        return actionsCompleted_.size();
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @param index The index of the element to return.
+       * @return The actionsCompleted at the given index.
+       */
+      public boolean getActionsCompleted(int index) {
+        return actionsCompleted_.getBoolean(index);
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @param index The index to set the value at.
+       * @param value The actionsCompleted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionsCompleted(
+          int index, boolean value) {
+
+        ensureActionsCompletedIsMutable();
+        actionsCompleted_.setBoolean(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @param value The actionsCompleted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addActionsCompleted(boolean value) {
+
+        ensureActionsCompletedIsMutable();
+        actionsCompleted_.addBoolean(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @param values The actionsCompleted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllActionsCompleted(
+          java.lang.Iterable<? extends java.lang.Boolean> values) {
+        ensureActionsCompletedIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, actionsCompleted_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 3 [json_name = "actionsCompleted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActionsCompleted() {
+        actionsCompleted_ = emptyBooleanList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.ClaimsRecordAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.ClaimsRecordAddress)
+    private static final com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress();
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimsRecordAddress>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimsRecordAddress>() {
+      @java.lang.Override
+      public ClaimsRecordAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimsRecordAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimsRecordAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimsRecordAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimsRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.claims.v1.ClaimsRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialClaimableAmount.
+     */
+    java.lang.String getInitialClaimableAmount();
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialClaimableAmount.
+     */
+    com.google.protobuf.ByteString
+        getInitialClaimableAmountBytes();
+
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+     * @return A list containing the actionsCompleted.
+     */
+    java.util.List<java.lang.Boolean> getActionsCompletedList();
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+     * @return The count of actionsCompleted.
+     */
+    int getActionsCompletedCount();
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+     * @param index The index of the element to return.
+     * @return The actionsCompleted at the given index.
+     */
+    boolean getActionsCompleted(int index);
+  }
+  /**
+   * <pre>
+   * ClaimsRecord defines the initial claimable airdrop amount and the list of
+   * completed actions to claim the tokens.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.claims.v1.ClaimsRecord}
+   */
+  public static final class ClaimsRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.claims.v1.ClaimsRecord)
+      ClaimsRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimsRecord.newBuilder() to construct.
+    private ClaimsRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimsRecord() {
+      initialClaimableAmount_ = "";
+      actionsCompleted_ = emptyBooleanList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimsRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.claims.v1.ClaimsProto.ClaimsRecord.class, com.evmos.claims.v1.ClaimsProto.ClaimsRecord.Builder.class);
+    }
+
+    public static final int INITIAL_CLAIMABLE_AMOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object initialClaimableAmount_ = "";
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The initialClaimableAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getInitialClaimableAmount() {
+      java.lang.Object ref = initialClaimableAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        initialClaimableAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * initial_claimable_amount for the user
+     * </pre>
+     *
+     * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for initialClaimableAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInitialClaimableAmountBytes() {
+      java.lang.Object ref = initialClaimableAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        initialClaimableAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACTIONS_COMPLETED_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.BooleanList actionsCompleted_;
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+     * @return A list containing the actionsCompleted.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Boolean>
+        getActionsCompletedList() {
+      return actionsCompleted_;
+    }
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+     * @return The count of actionsCompleted.
+     */
+    public int getActionsCompletedCount() {
+      return actionsCompleted_.size();
+    }
+    /**
+     * <pre>
+     * actions_completed is a slice that describes which actions were completed
+     * </pre>
+     *
+     * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+     * @param index The index of the element to return.
+     * @return The actionsCompleted at the given index.
+     */
+    public boolean getActionsCompleted(int index) {
+      return actionsCompleted_.getBoolean(index);
+    }
+    private int actionsCompletedMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialClaimableAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, initialClaimableAmount_);
+      }
+      if (getActionsCompletedList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(actionsCompletedMemoizedSerializedSize);
+      }
+      for (int i = 0; i < actionsCompleted_.size(); i++) {
+        output.writeBoolNoTag(actionsCompleted_.getBoolean(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialClaimableAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, initialClaimableAmount_);
+      }
+      {
+        int dataSize = 0;
+        dataSize = 1 * getActionsCompletedList().size();
+        size += dataSize;
+        if (!getActionsCompletedList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        actionsCompletedMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.claims.v1.ClaimsProto.ClaimsRecord)) {
+        return super.equals(obj);
+      }
+      com.evmos.claims.v1.ClaimsProto.ClaimsRecord other = (com.evmos.claims.v1.ClaimsProto.ClaimsRecord) obj;
+
+      if (!getInitialClaimableAmount()
+          .equals(other.getInitialClaimableAmount())) return false;
+      if (!getActionsCompletedList()
+          .equals(other.getActionsCompletedList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INITIAL_CLAIMABLE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getInitialClaimableAmount().hashCode();
+      if (getActionsCompletedCount() > 0) {
+        hash = (37 * hash) + ACTIONS_COMPLETED_FIELD_NUMBER;
+        hash = (53 * hash) + getActionsCompletedList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.claims.v1.ClaimsProto.ClaimsRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimsRecord defines the initial claimable airdrop amount and the list of
+     * completed actions to claim the tokens.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.claims.v1.ClaimsRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.claims.v1.ClaimsRecord)
+        com.evmos.claims.v1.ClaimsProto.ClaimsRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.claims.v1.ClaimsProto.ClaimsRecord.class, com.evmos.claims.v1.ClaimsProto.ClaimsRecord.Builder.class);
+      }
+
+      // Construct using com.evmos.claims.v1.ClaimsProto.ClaimsRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        initialClaimableAmount_ = "";
+        actionsCompleted_ = emptyBooleanList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.claims.v1.ClaimsProto.internal_static_evmos_claims_v1_ClaimsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecord getDefaultInstanceForType() {
+        return com.evmos.claims.v1.ClaimsProto.ClaimsRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecord build() {
+        com.evmos.claims.v1.ClaimsProto.ClaimsRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.claims.v1.ClaimsProto.ClaimsRecord buildPartial() {
+        com.evmos.claims.v1.ClaimsProto.ClaimsRecord result = new com.evmos.claims.v1.ClaimsProto.ClaimsRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.claims.v1.ClaimsProto.ClaimsRecord result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          actionsCompleted_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.actionsCompleted_ = actionsCompleted_;
+      }
+
+      private void buildPartial0(com.evmos.claims.v1.ClaimsProto.ClaimsRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.initialClaimableAmount_ = initialClaimableAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.claims.v1.ClaimsProto.ClaimsRecord) {
+          return mergeFrom((com.evmos.claims.v1.ClaimsProto.ClaimsRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.claims.v1.ClaimsProto.ClaimsRecord other) {
+        if (other == com.evmos.claims.v1.ClaimsProto.ClaimsRecord.getDefaultInstance()) return this;
+        if (!other.getInitialClaimableAmount().isEmpty()) {
+          initialClaimableAmount_ = other.initialClaimableAmount_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.actionsCompleted_.isEmpty()) {
+          if (actionsCompleted_.isEmpty()) {
+            actionsCompleted_ = other.actionsCompleted_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureActionsCompletedIsMutable();
+            actionsCompleted_.addAll(other.actionsCompleted_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                initialClaimableAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                boolean v = input.readBool();
+                ensureActionsCompletedIsMutable();
+                actionsCompleted_.addBoolean(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureActionsCompletedIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  actionsCompleted_.addBoolean(input.readBool());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object initialClaimableAmount_ = "";
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The initialClaimableAmount.
+       */
+      public java.lang.String getInitialClaimableAmount() {
+        java.lang.Object ref = initialClaimableAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          initialClaimableAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for initialClaimableAmount.
+       */
+      public com.google.protobuf.ByteString
+          getInitialClaimableAmountBytes() {
+        java.lang.Object ref = initialClaimableAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialClaimableAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The initialClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialClaimableAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        initialClaimableAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialClaimableAmount() {
+        initialClaimableAmount_ = getDefaultInstance().getInitialClaimableAmount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_claimable_amount for the user
+       * </pre>
+       *
+       * <code>string initial_claimable_amount = 1 [json_name = "initialClaimableAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for initialClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialClaimableAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        initialClaimableAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.BooleanList actionsCompleted_ = emptyBooleanList();
+      private void ensureActionsCompletedIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          actionsCompleted_ = mutableCopy(actionsCompleted_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @return A list containing the actionsCompleted.
+       */
+      public java.util.List<java.lang.Boolean>
+          getActionsCompletedList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(actionsCompleted_) : actionsCompleted_;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @return The count of actionsCompleted.
+       */
+      public int getActionsCompletedCount() {
+        return actionsCompleted_.size();
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @param index The index of the element to return.
+       * @return The actionsCompleted at the given index.
+       */
+      public boolean getActionsCompleted(int index) {
+        return actionsCompleted_.getBoolean(index);
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @param index The index to set the value at.
+       * @param value The actionsCompleted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionsCompleted(
+          int index, boolean value) {
+
+        ensureActionsCompletedIsMutable();
+        actionsCompleted_.setBoolean(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @param value The actionsCompleted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addActionsCompleted(boolean value) {
+
+        ensureActionsCompletedIsMutable();
+        actionsCompleted_.addBoolean(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @param values The actionsCompleted to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllActionsCompleted(
+          java.lang.Iterable<? extends java.lang.Boolean> values) {
+        ensureActionsCompletedIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, actionsCompleted_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * actions_completed is a slice that describes which actions were completed
+       * </pre>
+       *
+       * <code>repeated bool actions_completed = 2 [json_name = "actionsCompleted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActionsCompleted() {
+        actionsCompleted_ = emptyBooleanList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.claims.v1.ClaimsRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.claims.v1.ClaimsRecord)
+    private static final com.evmos.claims.v1.ClaimsProto.ClaimsRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.claims.v1.ClaimsProto.ClaimsRecord();
+    }
+
+    public static com.evmos.claims.v1.ClaimsProto.ClaimsRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimsRecord>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimsRecord>() {
+      @java.lang.Override
+      public ClaimsRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimsRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimsRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.claims.v1.ClaimsProto.ClaimsRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_Claim_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_Claim_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_ClaimsRecordAddress_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_ClaimsRecordAddress_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_claims_v1_ClaimsRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_claims_v1_ClaimsRecord_fieldAccessorTable;
 
@@ -58,12 +2931,12 @@ public final class ClaimsProto {
       "ACTION_VOTE\020\001\032\016\212\235 \nActionVote\022\'\n\017ACTION_" +
       "DELEGATE\020\002\032\022\212\235 \016ActionDelegate\022\035\n\nACTION" +
       "_EVM\020\003\032\r\212\235 \tActionEVM\022.\n\023ACTION_IBC_TRAN" +
-      "SFER\020\004\032\025\212\235 \021ActionIBCTransfer\032\004\210\243\036\000B\253\001\n\023" +
-      "com.evmos.claims.v1B\013ClaimsProtoP\001Z)gith" +
-      "ub.com/evmos/evmos/v13/x/claims/types\242\002\003" +
-      "ECX\252\002\017Evmos.Claims.V1\312\002\017Evmos\\Claims\\V1\342" +
-      "\002\033Evmos\\Claims\\V1\\GPBMetadata\352\002\021Evmos::C" +
-      "laims::V1b\006proto3"
+      "SFER\020\004\032\025\212\235 \021ActionIBCTransfer\032\004\210\243\036\000B\251\001\n\023" +
+      "com.evmos.claims.v1B\013ClaimsProtoZ)github" +
+      ".com/evmos/evmos/v13/x/claims/types\242\002\003EC" +
+      "X\252\002\017Evmos.Claims.V1\312\002\017Evmos\\Claims\\V1\342\002\033" +
+      "Evmos\\Claims\\V1\\GPBMetadata\352\002\021Evmos::Cla" +
+      "ims::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -26,14 +26,14 @@ public final class PriceListProto {
       "\n\037quasar/qoracle/price_list.proto\022\035quasa" +
       "rlabs.quasarnode.qoracle\032\024gogoproto/gogo" +
       ".proto\032\037google/protobuf/timestamp.proto\032" +
-      "\036cosmos/base/v1beta1/coin.protoB\373\001\n!com." +
+      "\036cosmos/base/v1beta1/coin.protoB\371\001\n!com." +
       "quasarlabs.quasarnode.qoracleB\016PriceList" +
-      "ProtoP\001Z0github.com/quasarlabs/quasarnod" +
-      "e/x/qoracle/types\242\002\003QQQ\252\002\035Quasarlabs.Qua" +
-      "sarnode.Qoracle\312\002\035Quasarlabs\\Quasarnode\\" +
-      "Qoracle\342\002)Quasarlabs\\Quasarnode\\Qoracle\\" +
-      "GPBMetadata\352\002\037Quasarlabs::Quasarnode::Qo" +
-      "racleb\006proto3"
+      "ProtoZ0github.com/quasarlabs/quasarnode/" +
+      "x/qoracle/types\242\002\003QQQ\252\002\035Quasarlabs.Quasa" +
+      "rnode.Qoracle\312\002\035Quasarlabs\\Quasarnode\\Qo" +
+      "racle\342\002)Quasarlabs\\Quasarnode\\Qoracle\\GP" +
+      "BMetadata\352\002\037Quasarlabs::Quasarnode::Qora" +
+      "cleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

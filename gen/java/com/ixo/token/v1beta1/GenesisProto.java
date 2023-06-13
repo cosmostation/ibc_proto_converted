@@ -14,9 +14,1369 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.ixo.token.v1beta1.TokenProto.Params getParams();
+    /**
+     * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TokenProto.Token> 
+        getTokensList();
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.Token getTokens(int index);
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokensCount();
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenOrBuilder> 
+        getTokensOrBuilderList();
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.TokenOrBuilder getTokensOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TokenProto.TokenProperties> 
+        getTokenPropertiesList();
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.TokenProperties getTokenProperties(int index);
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    int getTokenPropertiesCount();
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder> 
+        getTokenPropertiesOrBuilderList();
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder getTokenPropertiesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code ixo.token.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      tokens_ = java.util.Collections.emptyList();
+      tokenProperties_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.GenesisProto.internal_static_ixo_token_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.GenesisProto.internal_static_ixo_token_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.GenesisProto.GenesisState.class, com.ixo.token.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.ixo.token.v1beta1.TokenProto.Params params_;
+    /**
+     * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.Params getParams() {
+      return params_ == null ? com.ixo.token.v1beta1.TokenProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.ixo.token.v1beta1.TokenProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int TOKENS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TokenProto.Token> tokens_;
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TokenProto.Token> getTokensList() {
+      return tokens_;
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenOrBuilder> 
+        getTokensOrBuilderList() {
+      return tokens_;
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokensCount() {
+      return tokens_.size();
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.Token getTokens(int index) {
+      return tokens_.get(index);
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.TokenOrBuilder getTokensOrBuilder(
+        int index) {
+      return tokens_.get(index);
+    }
+
+    public static final int TOKEN_PROPERTIES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TokenProto.TokenProperties> tokenProperties_;
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TokenProto.TokenProperties> getTokenPropertiesList() {
+      return tokenProperties_;
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder> 
+        getTokenPropertiesOrBuilderList() {
+      return tokenProperties_;
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTokenPropertiesCount() {
+      return tokenProperties_.size();
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.TokenProperties getTokenProperties(int index) {
+      return tokenProperties_.get(index);
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder getTokenPropertiesOrBuilder(
+        int index) {
+      return tokenProperties_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        output.writeMessage(2, tokens_.get(i));
+      }
+      for (int i = 0; i < tokenProperties_.size(); i++) {
+        output.writeMessage(3, tokenProperties_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tokens_.get(i));
+      }
+      for (int i = 0; i < tokenProperties_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, tokenProperties_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.GenesisProto.GenesisState other = (com.ixo.token.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getTokensList()
+          .equals(other.getTokensList())) return false;
+      if (!getTokenPropertiesList()
+          .equals(other.getTokenPropertiesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getTokensCount() > 0) {
+        hash = (37 * hash) + TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokensList().hashCode();
+      }
+      if (getTokenPropertiesCount() > 0) {
+        hash = (37 * hash) + TOKEN_PROPERTIES_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPropertiesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code ixo.token.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.GenesisState)
+        com.ixo.token.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.GenesisProto.internal_static_ixo_token_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.GenesisProto.internal_static_ixo_token_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.GenesisProto.GenesisState.class, com.ixo.token.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+        } else {
+          tokens_ = null;
+          tokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (tokenPropertiesBuilder_ == null) {
+          tokenProperties_ = java.util.Collections.emptyList();
+        } else {
+          tokenProperties_ = null;
+          tokenPropertiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.GenesisProto.internal_static_ixo_token_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.GenesisProto.GenesisState build() {
+        com.ixo.token.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.ixo.token.v1beta1.GenesisProto.GenesisState result = new com.ixo.token.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.token.v1beta1.GenesisProto.GenesisState result) {
+        if (tokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tokens_ = java.util.Collections.unmodifiableList(tokens_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tokens_ = tokens_;
+        } else {
+          result.tokens_ = tokensBuilder_.build();
+        }
+        if (tokenPropertiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tokenProperties_ = java.util.Collections.unmodifiableList(tokenProperties_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tokenProperties_ = tokenProperties_;
+        } else {
+          result.tokenProperties_ = tokenPropertiesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.ixo.token.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.ixo.token.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (tokensBuilder_ == null) {
+          if (!other.tokens_.isEmpty()) {
+            if (tokens_.isEmpty()) {
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTokensIsMutable();
+              tokens_.addAll(other.tokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokens_.isEmpty()) {
+            if (tokensBuilder_.isEmpty()) {
+              tokensBuilder_.dispose();
+              tokensBuilder_ = null;
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokensFieldBuilder() : null;
+            } else {
+              tokensBuilder_.addAllMessages(other.tokens_);
+            }
+          }
+        }
+        if (tokenPropertiesBuilder_ == null) {
+          if (!other.tokenProperties_.isEmpty()) {
+            if (tokenProperties_.isEmpty()) {
+              tokenProperties_ = other.tokenProperties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTokenPropertiesIsMutable();
+              tokenProperties_.addAll(other.tokenProperties_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenProperties_.isEmpty()) {
+            if (tokenPropertiesBuilder_.isEmpty()) {
+              tokenPropertiesBuilder_.dispose();
+              tokenPropertiesBuilder_ = null;
+              tokenProperties_ = other.tokenProperties_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tokenPropertiesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPropertiesFieldBuilder() : null;
+            } else {
+              tokenPropertiesBuilder_.addAllMessages(other.tokenProperties_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.ixo.token.v1beta1.TokenProto.Token m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TokenProto.Token.parser(),
+                        extensionRegistry);
+                if (tokensBuilder_ == null) {
+                  ensureTokensIsMutable();
+                  tokens_.add(m);
+                } else {
+                  tokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.ixo.token.v1beta1.TokenProto.TokenProperties m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TokenProto.TokenProperties.parser(),
+                        extensionRegistry);
+                if (tokenPropertiesBuilder_ == null) {
+                  ensureTokenPropertiesIsMutable();
+                  tokenProperties_.add(m);
+                } else {
+                  tokenPropertiesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.token.v1beta1.TokenProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.Params, com.ixo.token.v1beta1.TokenProto.Params.Builder, com.ixo.token.v1beta1.TokenProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.ixo.token.v1beta1.TokenProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.ixo.token.v1beta1.TokenProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.ixo.token.v1beta1.TokenProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.ixo.token.v1beta1.TokenProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.ixo.token.v1beta1.TokenProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.ixo.token.v1beta1.TokenProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.ixo.token.v1beta1.TokenProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.ixo.token.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.Params, com.ixo.token.v1beta1.TokenProto.Params.Builder, com.ixo.token.v1beta1.TokenProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.token.v1beta1.TokenProto.Params, com.ixo.token.v1beta1.TokenProto.Params.Builder, com.ixo.token.v1beta1.TokenProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TokenProto.Token> tokens_ =
+        java.util.Collections.emptyList();
+      private void ensureTokensIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tokens_ = new java.util.ArrayList<com.ixo.token.v1beta1.TokenProto.Token>(tokens_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.Token, com.ixo.token.v1beta1.TokenProto.Token.Builder, com.ixo.token.v1beta1.TokenProto.TokenOrBuilder> tokensBuilder_;
+
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TokenProto.Token> getTokensList() {
+        if (tokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokens_);
+        } else {
+          return tokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokensCount() {
+        if (tokensBuilder_ == null) {
+          return tokens_.size();
+        } else {
+          return tokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.Token getTokens(int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);
+        } else {
+          return tokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TokenProto.Token value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.set(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TokenProto.Token.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(com.ixo.token.v1beta1.TokenProto.Token value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TokenProto.Token value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(
+          com.ixo.token.v1beta1.TokenProto.Token.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TokenProto.Token.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokens(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TokenProto.Token> values) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokens_);
+          onChanged();
+        } else {
+          tokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokens() {
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokens(int index) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.remove(index);
+          onChanged();
+        } else {
+          tokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.Token.Builder getTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenOrBuilder getTokensOrBuilder(
+          int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);  } else {
+          return tokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenOrBuilder> 
+           getTokensOrBuilderList() {
+        if (tokensBuilder_ != null) {
+          return tokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokens_);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.Token.Builder addTokensBuilder() {
+        return getTokensFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TokenProto.Token.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.Token.Builder addTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TokenProto.Token.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.Token tokens = 2 [json_name = "tokens", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TokenProto.Token.Builder> 
+           getTokensBuilderList() {
+        return getTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.Token, com.ixo.token.v1beta1.TokenProto.Token.Builder, com.ixo.token.v1beta1.TokenProto.TokenOrBuilder> 
+          getTokensFieldBuilder() {
+        if (tokensBuilder_ == null) {
+          tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TokenProto.Token, com.ixo.token.v1beta1.TokenProto.Token.Builder, com.ixo.token.v1beta1.TokenProto.TokenOrBuilder>(
+                  tokens_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokens_ = null;
+        }
+        return tokensBuilder_;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TokenProto.TokenProperties> tokenProperties_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPropertiesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tokenProperties_ = new java.util.ArrayList<com.ixo.token.v1beta1.TokenProto.TokenProperties>(tokenProperties_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.TokenProperties, com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder, com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder> tokenPropertiesBuilder_;
+
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TokenProto.TokenProperties> getTokenPropertiesList() {
+        if (tokenPropertiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenProperties_);
+        } else {
+          return tokenPropertiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTokenPropertiesCount() {
+        if (tokenPropertiesBuilder_ == null) {
+          return tokenProperties_.size();
+        } else {
+          return tokenPropertiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenProperties getTokenProperties(int index) {
+        if (tokenPropertiesBuilder_ == null) {
+          return tokenProperties_.get(index);
+        } else {
+          return tokenPropertiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenProperties(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenProperties value) {
+        if (tokenPropertiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.set(index, value);
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTokenProperties(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder builderForValue) {
+        if (tokenPropertiesBuilder_ == null) {
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenProperties(com.ixo.token.v1beta1.TokenProto.TokenProperties value) {
+        if (tokenPropertiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.add(value);
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenProperties(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenProperties value) {
+        if (tokenPropertiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.add(index, value);
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenProperties(
+          com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder builderForValue) {
+        if (tokenPropertiesBuilder_ == null) {
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTokenProperties(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder builderForValue) {
+        if (tokenPropertiesBuilder_ == null) {
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTokenProperties(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TokenProto.TokenProperties> values) {
+        if (tokenPropertiesBuilder_ == null) {
+          ensureTokenPropertiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenProperties_);
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTokenProperties() {
+        if (tokenPropertiesBuilder_ == null) {
+          tokenProperties_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTokenProperties(int index) {
+        if (tokenPropertiesBuilder_ == null) {
+          ensureTokenPropertiesIsMutable();
+          tokenProperties_.remove(index);
+          onChanged();
+        } else {
+          tokenPropertiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder getTokenPropertiesBuilder(
+          int index) {
+        return getTokenPropertiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder getTokenPropertiesOrBuilder(
+          int index) {
+        if (tokenPropertiesBuilder_ == null) {
+          return tokenProperties_.get(index);  } else {
+          return tokenPropertiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder> 
+           getTokenPropertiesOrBuilderList() {
+        if (tokenPropertiesBuilder_ != null) {
+          return tokenPropertiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenProperties_);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder addTokenPropertiesBuilder() {
+        return getTokenPropertiesFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TokenProto.TokenProperties.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder addTokenPropertiesBuilder(
+          int index) {
+        return getTokenPropertiesFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TokenProto.TokenProperties.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.TokenProperties token_properties = 3 [json_name = "tokenProperties", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder> 
+           getTokenPropertiesBuilderList() {
+        return getTokenPropertiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.TokenProperties, com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder, com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder> 
+          getTokenPropertiesFieldBuilder() {
+        if (tokenPropertiesBuilder_ == null) {
+          tokenPropertiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TokenProto.TokenProperties, com.ixo.token.v1beta1.TokenProto.TokenProperties.Builder, com.ixo.token.v1beta1.TokenProto.TokenPropertiesOrBuilder>(
+                  tokenProperties_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenProperties_ = null;
+        }
+        return tokenPropertiesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.GenesisState)
+    private static final com.ixo.token.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.ixo.token.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -36,12 +1396,12 @@ public final class GenesisProto {
       "o.token.v1beta1.TokenB\004\310\336\037\000R\006tokens\022S\n\020t" +
       "oken_properties\030\003 \003(\0132\".ixo.token.v1beta" +
       "1.TokenPropertiesB\004\310\336\037\000R\017tokenProperties" +
-      "B\302\001\n\025com.ixo.token.v1beta1B\014GenesisProto" +
-      "P\001Z5github.com/ixofoundation/ixo-blockch" +
-      "ain/x/token/types\242\002\003ITX\252\002\021Ixo.Token.V1be" +
-      "ta1\312\002\021Ixo\\Token\\V1beta1\342\002\035Ixo\\Token\\V1be" +
-      "ta1\\GPBMetadata\352\002\023Ixo::Token::V1beta1b\006p" +
-      "roto3"
+      "B\300\001\n\025com.ixo.token.v1beta1B\014GenesisProto" +
+      "Z5github.com/ixofoundation/ixo-blockchai" +
+      "n/x/token/types\242\002\003ITX\252\002\021Ixo.Token.V1beta" +
+      "1\312\002\021Ixo\\Token\\V1beta1\342\002\035Ixo\\Token\\V1beta" +
+      "1\\GPBMetadata\352\002\023Ixo::Token::V1beta1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,1928 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.twap.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+     * @return The pruneEpochIdentifier.
+     */
+    java.lang.String getPruneEpochIdentifier();
+    /**
+     * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+     * @return The bytes for pruneEpochIdentifier.
+     */
+    com.google.protobuf.ByteString
+        getPruneEpochIdentifierBytes();
+
+    /**
+     * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the recordHistoryKeepPeriod field is set.
+     */
+    boolean hasRecordHistoryKeepPeriod();
+    /**
+     * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The recordHistoryKeepPeriod.
+     */
+    com.google.protobuf.Duration getRecordHistoryKeepPeriod();
+    /**
+     * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getRecordHistoryKeepPeriodOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the twap module
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.twap.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.twap.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      pruneEpochIdentifier_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.twap.v1beta1.GenesisProto.Params.class, com.osmosis.twap.v1beta1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int PRUNE_EPOCH_IDENTIFIER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pruneEpochIdentifier_ = "";
+    /**
+     * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+     * @return The pruneEpochIdentifier.
+     */
+    @java.lang.Override
+    public java.lang.String getPruneEpochIdentifier() {
+      java.lang.Object ref = pruneEpochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pruneEpochIdentifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+     * @return The bytes for pruneEpochIdentifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPruneEpochIdentifierBytes() {
+      java.lang.Object ref = pruneEpochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pruneEpochIdentifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORD_HISTORY_KEEP_PERIOD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration recordHistoryKeepPeriod_;
+    /**
+     * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the recordHistoryKeepPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecordHistoryKeepPeriod() {
+      return recordHistoryKeepPeriod_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The recordHistoryKeepPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getRecordHistoryKeepPeriod() {
+      return recordHistoryKeepPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : recordHistoryKeepPeriod_;
+    }
+    /**
+     * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getRecordHistoryKeepPeriodOrBuilder() {
+      return recordHistoryKeepPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : recordHistoryKeepPeriod_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pruneEpochIdentifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pruneEpochIdentifier_);
+      }
+      if (recordHistoryKeepPeriod_ != null) {
+        output.writeMessage(2, getRecordHistoryKeepPeriod());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pruneEpochIdentifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pruneEpochIdentifier_);
+      }
+      if (recordHistoryKeepPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRecordHistoryKeepPeriod());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.twap.v1beta1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.osmosis.twap.v1beta1.GenesisProto.Params other = (com.osmosis.twap.v1beta1.GenesisProto.Params) obj;
+
+      if (!getPruneEpochIdentifier()
+          .equals(other.getPruneEpochIdentifier())) return false;
+      if (hasRecordHistoryKeepPeriod() != other.hasRecordHistoryKeepPeriod()) return false;
+      if (hasRecordHistoryKeepPeriod()) {
+        if (!getRecordHistoryKeepPeriod()
+            .equals(other.getRecordHistoryKeepPeriod())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRUNE_EPOCH_IDENTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getPruneEpochIdentifier().hashCode();
+      if (hasRecordHistoryKeepPeriod()) {
+        hash = (37 * hash) + RECORD_HISTORY_KEEP_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecordHistoryKeepPeriod().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.twap.v1beta1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the twap module
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.twap.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.twap.v1beta1.Params)
+        com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.twap.v1beta1.GenesisProto.Params.class, com.osmosis.twap.v1beta1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.osmosis.twap.v1beta1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pruneEpochIdentifier_ = "";
+        recordHistoryKeepPeriod_ = null;
+        if (recordHistoryKeepPeriodBuilder_ != null) {
+          recordHistoryKeepPeriodBuilder_.dispose();
+          recordHistoryKeepPeriodBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.GenesisProto.Params build() {
+        com.osmosis.twap.v1beta1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.GenesisProto.Params buildPartial() {
+        com.osmosis.twap.v1beta1.GenesisProto.Params result = new com.osmosis.twap.v1beta1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.twap.v1beta1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pruneEpochIdentifier_ = pruneEpochIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recordHistoryKeepPeriod_ = recordHistoryKeepPeriodBuilder_ == null
+              ? recordHistoryKeepPeriod_
+              : recordHistoryKeepPeriodBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.twap.v1beta1.GenesisProto.Params) {
+          return mergeFrom((com.osmosis.twap.v1beta1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.twap.v1beta1.GenesisProto.Params other) {
+        if (other == com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (!other.getPruneEpochIdentifier().isEmpty()) {
+          pruneEpochIdentifier_ = other.pruneEpochIdentifier_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRecordHistoryKeepPeriod()) {
+          mergeRecordHistoryKeepPeriod(other.getRecordHistoryKeepPeriod());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pruneEpochIdentifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRecordHistoryKeepPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object pruneEpochIdentifier_ = "";
+      /**
+       * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+       * @return The pruneEpochIdentifier.
+       */
+      public java.lang.String getPruneEpochIdentifier() {
+        java.lang.Object ref = pruneEpochIdentifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pruneEpochIdentifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+       * @return The bytes for pruneEpochIdentifier.
+       */
+      public com.google.protobuf.ByteString
+          getPruneEpochIdentifierBytes() {
+        java.lang.Object ref = pruneEpochIdentifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pruneEpochIdentifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+       * @param value The pruneEpochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPruneEpochIdentifier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pruneEpochIdentifier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPruneEpochIdentifier() {
+        pruneEpochIdentifier_ = getDefaultInstance().getPruneEpochIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string prune_epoch_identifier = 1 [json_name = "pruneEpochIdentifier"];</code>
+       * @param value The bytes for pruneEpochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPruneEpochIdentifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pruneEpochIdentifier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration recordHistoryKeepPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> recordHistoryKeepPeriodBuilder_;
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the recordHistoryKeepPeriod field is set.
+       */
+      public boolean hasRecordHistoryKeepPeriod() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The recordHistoryKeepPeriod.
+       */
+      public com.google.protobuf.Duration getRecordHistoryKeepPeriod() {
+        if (recordHistoryKeepPeriodBuilder_ == null) {
+          return recordHistoryKeepPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : recordHistoryKeepPeriod_;
+        } else {
+          return recordHistoryKeepPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setRecordHistoryKeepPeriod(com.google.protobuf.Duration value) {
+        if (recordHistoryKeepPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recordHistoryKeepPeriod_ = value;
+        } else {
+          recordHistoryKeepPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setRecordHistoryKeepPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (recordHistoryKeepPeriodBuilder_ == null) {
+          recordHistoryKeepPeriod_ = builderForValue.build();
+        } else {
+          recordHistoryKeepPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeRecordHistoryKeepPeriod(com.google.protobuf.Duration value) {
+        if (recordHistoryKeepPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            recordHistoryKeepPeriod_ != null &&
+            recordHistoryKeepPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getRecordHistoryKeepPeriodBuilder().mergeFrom(value);
+          } else {
+            recordHistoryKeepPeriod_ = value;
+          }
+        } else {
+          recordHistoryKeepPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearRecordHistoryKeepPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recordHistoryKeepPeriod_ = null;
+        if (recordHistoryKeepPeriodBuilder_ != null) {
+          recordHistoryKeepPeriodBuilder_.dispose();
+          recordHistoryKeepPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getRecordHistoryKeepPeriodBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRecordHistoryKeepPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getRecordHistoryKeepPeriodOrBuilder() {
+        if (recordHistoryKeepPeriodBuilder_ != null) {
+          return recordHistoryKeepPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return recordHistoryKeepPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : recordHistoryKeepPeriod_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration record_history_keep_period = 2 [json_name = "recordHistoryKeepPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"record_history_keep_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getRecordHistoryKeepPeriodFieldBuilder() {
+        if (recordHistoryKeepPeriodBuilder_ == null) {
+          recordHistoryKeepPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getRecordHistoryKeepPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          recordHistoryKeepPeriod_ = null;
+        }
+        return recordHistoryKeepPeriodBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.twap.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.twap.v1beta1.Params)
+    private static final com.osmosis.twap.v1beta1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.twap.v1beta1.GenesisProto.Params();
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.twap.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> 
+        getTwapsList();
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord getTwaps(int index);
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    int getTwapsCount();
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder> 
+        getTwapsOrBuilderList();
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder getTwapsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * params is the container of twap parameters.
+     * </pre>
+     *
+     * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params is the container of twap parameters.
+     * </pre>
+     *
+     * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.osmosis.twap.v1beta1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params is the container of twap parameters.
+     * </pre>
+     *
+     * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the twap module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.twap.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.twap.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      twaps_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.twap.v1beta1.GenesisProto.GenesisState.class, com.osmosis.twap.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int TWAPS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> twaps_;
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> getTwapsList() {
+      return twaps_;
+    }
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder> 
+        getTwapsOrBuilderList() {
+      return twaps_;
+    }
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTwapsCount() {
+      return twaps_.size();
+    }
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord getTwaps(int index) {
+      return twaps_.get(index);
+    }
+    /**
+     * <pre>
+     * twaps is the collection of all twap records.
+     * </pre>
+     *
+     * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder getTwapsOrBuilder(
+        int index) {
+      return twaps_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.osmosis.twap.v1beta1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params is the container of twap parameters.
+     * </pre>
+     *
+     * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params is the container of twap parameters.
+     * </pre>
+     *
+     * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.GenesisProto.Params getParams() {
+      return params_ == null ? com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params is the container of twap parameters.
+     * </pre>
+     *
+     * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < twaps_.size(); i++) {
+        output.writeMessage(1, twaps_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < twaps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, twaps_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.twap.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.osmosis.twap.v1beta1.GenesisProto.GenesisState other = (com.osmosis.twap.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getTwapsList()
+          .equals(other.getTwapsList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTwapsCount() > 0) {
+        hash = (37 * hash) + TWAPS_FIELD_NUMBER;
+        hash = (53 * hash) + getTwapsList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.twap.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the twap module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.twap.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.twap.v1beta1.GenesisState)
+        com.osmosis.twap.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.twap.v1beta1.GenesisProto.GenesisState.class, com.osmosis.twap.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.osmosis.twap.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (twapsBuilder_ == null) {
+          twaps_ = java.util.Collections.emptyList();
+        } else {
+          twaps_ = null;
+          twapsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.twap.v1beta1.GenesisProto.internal_static_osmosis_twap_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.osmosis.twap.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.GenesisProto.GenesisState build() {
+        com.osmosis.twap.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.twap.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.osmosis.twap.v1beta1.GenesisProto.GenesisState result = new com.osmosis.twap.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.twap.v1beta1.GenesisProto.GenesisState result) {
+        if (twapsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            twaps_ = java.util.Collections.unmodifiableList(twaps_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.twaps_ = twaps_;
+        } else {
+          result.twaps_ = twapsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.twap.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.twap.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.osmosis.twap.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.twap.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.osmosis.twap.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (twapsBuilder_ == null) {
+          if (!other.twaps_.isEmpty()) {
+            if (twaps_.isEmpty()) {
+              twaps_ = other.twaps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTwapsIsMutable();
+              twaps_.addAll(other.twaps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.twaps_.isEmpty()) {
+            if (twapsBuilder_.isEmpty()) {
+              twapsBuilder_.dispose();
+              twapsBuilder_ = null;
+              twaps_ = other.twaps_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              twapsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTwapsFieldBuilder() : null;
+            } else {
+              twapsBuilder_.addAllMessages(other.twaps_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord m =
+                    input.readMessage(
+                        com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.parser(),
+                        extensionRegistry);
+                if (twapsBuilder_ == null) {
+                  ensureTwapsIsMutable();
+                  twaps_.add(m);
+                } else {
+                  twapsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> twaps_ =
+        java.util.Collections.emptyList();
+      private void ensureTwapsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          twaps_ = new java.util.ArrayList<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord>(twaps_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder> twapsBuilder_;
+
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> getTwapsList() {
+        if (twapsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(twaps_);
+        } else {
+          return twapsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTwapsCount() {
+        if (twapsBuilder_ == null) {
+          return twaps_.size();
+        } else {
+          return twapsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord getTwaps(int index) {
+        if (twapsBuilder_ == null) {
+          return twaps_.get(index);
+        } else {
+          return twapsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTwaps(
+          int index, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord value) {
+        if (twapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTwapsIsMutable();
+          twaps_.set(index, value);
+          onChanged();
+        } else {
+          twapsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTwaps(
+          int index, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder builderForValue) {
+        if (twapsBuilder_ == null) {
+          ensureTwapsIsMutable();
+          twaps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          twapsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTwaps(com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord value) {
+        if (twapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTwapsIsMutable();
+          twaps_.add(value);
+          onChanged();
+        } else {
+          twapsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTwaps(
+          int index, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord value) {
+        if (twapsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTwapsIsMutable();
+          twaps_.add(index, value);
+          onChanged();
+        } else {
+          twapsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTwaps(
+          com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder builderForValue) {
+        if (twapsBuilder_ == null) {
+          ensureTwapsIsMutable();
+          twaps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          twapsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTwaps(
+          int index, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder builderForValue) {
+        if (twapsBuilder_ == null) {
+          ensureTwapsIsMutable();
+          twaps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          twapsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTwaps(
+          java.lang.Iterable<? extends com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord> values) {
+        if (twapsBuilder_ == null) {
+          ensureTwapsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, twaps_);
+          onChanged();
+        } else {
+          twapsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTwaps() {
+        if (twapsBuilder_ == null) {
+          twaps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          twapsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTwaps(int index) {
+        if (twapsBuilder_ == null) {
+          ensureTwapsIsMutable();
+          twaps_.remove(index);
+          onChanged();
+        } else {
+          twapsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder getTwapsBuilder(
+          int index) {
+        return getTwapsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder getTwapsOrBuilder(
+          int index) {
+        if (twapsBuilder_ == null) {
+          return twaps_.get(index);  } else {
+          return twapsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder> 
+           getTwapsOrBuilderList() {
+        if (twapsBuilder_ != null) {
+          return twapsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(twaps_);
+        }
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder addTwapsBuilder() {
+        return getTwapsFieldBuilder().addBuilder(
+            com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder addTwapsBuilder(
+          int index) {
+        return getTwapsFieldBuilder().addBuilder(
+            index, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * twaps is the collection of all twap records.
+       * </pre>
+       *
+       * <code>repeated .osmosis.twap.v1beta1.TwapRecord twaps = 1 [json_name = "twaps", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder> 
+           getTwapsBuilderList() {
+        return getTwapsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder> 
+          getTwapsFieldBuilder() {
+        if (twapsBuilder_ == null) {
+          twapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecord.Builder, com.osmosis.twap.v1beta1.TwapRecordProto.TwapRecordOrBuilder>(
+                  twaps_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          twaps_ = null;
+        }
+        return twapsBuilder_;
+      }
+
+      private com.osmosis.twap.v1beta1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.twap.v1beta1.GenesisProto.Params, com.osmosis.twap.v1beta1.GenesisProto.Params.Builder, com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.osmosis.twap.v1beta1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.osmosis.twap.v1beta1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.osmosis.twap.v1beta1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.osmosis.twap.v1beta1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.osmosis.twap.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params is the container of twap parameters.
+       * </pre>
+       *
+       * <code>.osmosis.twap.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.twap.v1beta1.GenesisProto.Params, com.osmosis.twap.v1beta1.GenesisProto.Params.Builder, com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.twap.v1beta1.GenesisProto.Params, com.osmosis.twap.v1beta1.GenesisProto.Params.Builder, com.osmosis.twap.v1beta1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.twap.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.twap.v1beta1.GenesisState)
+    private static final com.osmosis.twap.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.twap.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.osmosis.twap.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.twap.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_twap_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_twap_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_twap_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_twap_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -46,13 +1960,12 @@ public final class GenesisProto {
       "pPeriod\"\210\001\n\014GenesisState\022<\n\005twaps\030\001 \003(\0132" +
       " .osmosis.twap.v1beta1.TwapRecordB\004\310\336\037\000R" +
       "\005twaps\022:\n\006params\030\002 \001(\0132\034.osmosis.twap.v1" +
-      "beta1.ParamsB\004\310\336\037\000R\006paramsB\314\001\n\030com.osmos" +
-      "is.twap.v1beta1B\014GenesisProtoP\001Z0github." +
-      "com/osmosis-labs/osmosis/v15/x/twap/type" +
-      "s\242\002\003OTX\252\002\024Osmosis.Twap.V1beta1\312\002\024Osmosis" +
-      "\\Twap\\V1beta1\342\002 Osmosis\\Twap\\V1beta1\\GPB" +
-      "Metadata\352\002\026Osmosis::Twap::V1beta1b\006proto" +
-      "3"
+      "beta1.ParamsB\004\310\336\037\000R\006paramsB\312\001\n\030com.osmos" +
+      "is.twap.v1beta1B\014GenesisProtoZ0github.co" +
+      "m/osmosis-labs/osmosis/v15/x/twap/types\242" +
+      "\002\003OTX\252\002\024Osmosis.Twap.V1beta1\312\002\024Osmosis\\T" +
+      "wap\\V1beta1\342\002 Osmosis\\Twap\\V1beta1\\GPBMe" +
+      "tadata\352\002\026Osmosis::Twap::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

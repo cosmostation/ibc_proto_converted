@@ -14,44 +14,6054 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateTopicOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgCreateTopic)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateTopic defines the Msg/CreateTopic request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgCreateTopic}
+   */
+  public static final class MsgCreateTopic extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgCreateTopic)
+      MsgCreateTopicOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateTopic.newBuilder() to construct.
+    private MsgCreateTopic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateTopic() {
+      topicName_ = "";
+      description_ = "";
+      ownerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateTopic();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopic_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopic_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgCreateTopic.class, com.panacea.aol.v2.TxProto.MsgCreateTopic.Builder.class);
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ownerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgCreateTopic)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgCreateTopic other = (com.panacea.aol.v2.TxProto.MsgCreateTopic) obj;
+
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgCreateTopic prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateTopic defines the Msg/CreateTopic request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgCreateTopic}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgCreateTopic)
+        com.panacea.aol.v2.TxProto.MsgCreateTopicOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopic_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopic_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgCreateTopic.class, com.panacea.aol.v2.TxProto.MsgCreateTopic.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgCreateTopic.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        topicName_ = "";
+        description_ = "";
+        ownerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopic_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgCreateTopic getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgCreateTopic.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgCreateTopic build() {
+        com.panacea.aol.v2.TxProto.MsgCreateTopic result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgCreateTopic buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgCreateTopic result = new com.panacea.aol.v2.TxProto.MsgCreateTopic(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.TxProto.MsgCreateTopic result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgCreateTopic) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgCreateTopic)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgCreateTopic other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgCreateTopic.getDefaultInstance()) return this;
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgCreateTopic)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgCreateTopic)
+    private static final com.panacea.aol.v2.TxProto.MsgCreateTopic DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgCreateTopic();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopic getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateTopic>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateTopic>() {
+      @java.lang.Override
+      public MsgCreateTopic parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateTopic> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateTopic> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgCreateTopic getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateTopicResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgCreateTopicResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateTopicResponse defines the Msg/CreateTopic response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgCreateTopicResponse}
+   */
+  public static final class MsgCreateTopicResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgCreateTopicResponse)
+      MsgCreateTopicResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateTopicResponse.newBuilder() to construct.
+    private MsgCreateTopicResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateTopicResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateTopicResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopicResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopicResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.class, com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgCreateTopicResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgCreateTopicResponse other = (com.panacea.aol.v2.TxProto.MsgCreateTopicResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgCreateTopicResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateTopicResponse defines the Msg/CreateTopic response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgCreateTopicResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgCreateTopicResponse)
+        com.panacea.aol.v2.TxProto.MsgCreateTopicResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopicResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopicResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.class, com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgCreateTopicResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgCreateTopicResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgCreateTopicResponse build() {
+        com.panacea.aol.v2.TxProto.MsgCreateTopicResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgCreateTopicResponse buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgCreateTopicResponse result = new com.panacea.aol.v2.TxProto.MsgCreateTopicResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgCreateTopicResponse) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgCreateTopicResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgCreateTopicResponse other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgCreateTopicResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgCreateTopicResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgCreateTopicResponse)
+    private static final com.panacea.aol.v2.TxProto.MsgCreateTopicResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgCreateTopicResponse();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgCreateTopicResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateTopicResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateTopicResponse>() {
+      @java.lang.Override
+      public MsgCreateTopicResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateTopicResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateTopicResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgCreateTopicResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddWriterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgAddWriter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    java.lang.String getMoniker();
+    /**
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    com.google.protobuf.ByteString
+        getMonikerBytes();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    java.lang.String getWriterAddress();
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWriterAddressBytes();
+
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgAddWriter defines the Msg/AddWriter request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgAddWriter}
+   */
+  public static final class MsgAddWriter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgAddWriter)
+      MsgAddWriterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddWriter.newBuilder() to construct.
+    private MsgAddWriter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddWriter() {
+      topicName_ = "";
+      moniker_ = "";
+      description_ = "";
+      writerAddress_ = "";
+      ownerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddWriter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgAddWriter.class, com.panacea.aol.v2.TxProto.MsgAddWriter.Builder.class);
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONIKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object moniker_ = "";
+    /**
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    @java.lang.Override
+    public java.lang.String getMoniker() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moniker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMonikerBytes() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moniker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WRITER_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object writerAddress_ = "";
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWriterAddress() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        writerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWriterAddressBytes() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        writerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, writerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ownerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, writerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ownerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgAddWriter)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgAddWriter other = (com.panacea.aol.v2.TxProto.MsgAddWriter) obj;
+
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (!getMoniker()
+          .equals(other.getMoniker())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getWriterAddress()
+          .equals(other.getWriterAddress())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + MONIKER_FIELD_NUMBER;
+      hash = (53 * hash) + getMoniker().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + WRITER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWriterAddress().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgAddWriter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddWriter defines the Msg/AddWriter request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgAddWriter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgAddWriter)
+        com.panacea.aol.v2.TxProto.MsgAddWriterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgAddWriter.class, com.panacea.aol.v2.TxProto.MsgAddWriter.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgAddWriter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        topicName_ = "";
+        moniker_ = "";
+        description_ = "";
+        writerAddress_ = "";
+        ownerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddWriter getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgAddWriter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddWriter build() {
+        com.panacea.aol.v2.TxProto.MsgAddWriter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddWriter buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgAddWriter result = new com.panacea.aol.v2.TxProto.MsgAddWriter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.TxProto.MsgAddWriter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.moniker_ = moniker_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.writerAddress_ = writerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgAddWriter) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgAddWriter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgAddWriter other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgAddWriter.getDefaultInstance()) return this;
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMoniker().isEmpty()) {
+          moniker_ = other.moniker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getWriterAddress().isEmpty()) {
+          writerAddress_ = other.writerAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                moniker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                writerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object moniker_ = "";
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The moniker.
+       */
+      public java.lang.String getMoniker() {
+        java.lang.Object ref = moniker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moniker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The bytes for moniker.
+       */
+      public com.google.protobuf.ByteString
+          getMonikerBytes() {
+        java.lang.Object ref = moniker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moniker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @param value The moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoniker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        moniker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoniker() {
+        moniker_ = getDefaultInstance().getMoniker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @param value The bytes for moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonikerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        moniker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object writerAddress_ = "";
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @return The writerAddress.
+       */
+      public java.lang.String getWriterAddress() {
+        java.lang.Object ref = writerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          writerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @return The bytes for writerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWriterAddressBytes() {
+        java.lang.Object ref = writerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          writerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @param value The writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        writerAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWriterAddress() {
+        writerAddress_ = getDefaultInstance().getWriterAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @param value The bytes for writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        writerAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgAddWriter)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgAddWriter)
+    private static final com.panacea.aol.v2.TxProto.MsgAddWriter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgAddWriter();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddWriter>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddWriter>() {
+      @java.lang.Override
+      public MsgAddWriter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddWriter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddWriter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgAddWriter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddWriterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgAddWriterResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAddWriter defines the Msg/AddWriter response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgAddWriterResponse}
+   */
+  public static final class MsgAddWriterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgAddWriterResponse)
+      MsgAddWriterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddWriterResponse.newBuilder() to construct.
+    private MsgAddWriterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddWriterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddWriterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgAddWriterResponse.class, com.panacea.aol.v2.TxProto.MsgAddWriterResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgAddWriterResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgAddWriterResponse other = (com.panacea.aol.v2.TxProto.MsgAddWriterResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgAddWriterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddWriter defines the Msg/AddWriter response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgAddWriterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgAddWriterResponse)
+        com.panacea.aol.v2.TxProto.MsgAddWriterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgAddWriterResponse.class, com.panacea.aol.v2.TxProto.MsgAddWriterResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgAddWriterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddWriterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddWriterResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgAddWriterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddWriterResponse build() {
+        com.panacea.aol.v2.TxProto.MsgAddWriterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddWriterResponse buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgAddWriterResponse result = new com.panacea.aol.v2.TxProto.MsgAddWriterResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgAddWriterResponse) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgAddWriterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgAddWriterResponse other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgAddWriterResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgAddWriterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgAddWriterResponse)
+    private static final com.panacea.aol.v2.TxProto.MsgAddWriterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgAddWriterResponse();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddWriterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddWriterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddWriterResponse>() {
+      @java.lang.Override
+      public MsgAddWriterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddWriterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddWriterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgAddWriterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteWriterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgDeleteWriter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    java.lang.String getWriterAddress();
+    /**
+     * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWriterAddressBytes();
+
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgDeleteWriter defines the Msg/DeleteWriter request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgDeleteWriter}
+   */
+  public static final class MsgDeleteWriter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgDeleteWriter)
+      MsgDeleteWriterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteWriter.newBuilder() to construct.
+    private MsgDeleteWriter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteWriter() {
+      topicName_ = "";
+      writerAddress_ = "";
+      ownerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteWriter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgDeleteWriter.class, com.panacea.aol.v2.TxProto.MsgDeleteWriter.Builder.class);
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WRITER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object writerAddress_ = "";
+    /**
+     * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWriterAddress() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        writerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWriterAddressBytes() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        writerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, writerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, writerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ownerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgDeleteWriter)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgDeleteWriter other = (com.panacea.aol.v2.TxProto.MsgDeleteWriter) obj;
+
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (!getWriterAddress()
+          .equals(other.getWriterAddress())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + WRITER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWriterAddress().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgDeleteWriter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteWriter defines the Msg/DeleteWriter request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgDeleteWriter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgDeleteWriter)
+        com.panacea.aol.v2.TxProto.MsgDeleteWriterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgDeleteWriter.class, com.panacea.aol.v2.TxProto.MsgDeleteWriter.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgDeleteWriter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        topicName_ = "";
+        writerAddress_ = "";
+        ownerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgDeleteWriter getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgDeleteWriter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgDeleteWriter build() {
+        com.panacea.aol.v2.TxProto.MsgDeleteWriter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgDeleteWriter buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgDeleteWriter result = new com.panacea.aol.v2.TxProto.MsgDeleteWriter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.TxProto.MsgDeleteWriter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.writerAddress_ = writerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgDeleteWriter) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgDeleteWriter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgDeleteWriter other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgDeleteWriter.getDefaultInstance()) return this;
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getWriterAddress().isEmpty()) {
+          writerAddress_ = other.writerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                writerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object writerAddress_ = "";
+      /**
+       * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+       * @return The writerAddress.
+       */
+      public java.lang.String getWriterAddress() {
+        java.lang.Object ref = writerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          writerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+       * @return The bytes for writerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWriterAddressBytes() {
+        java.lang.Object ref = writerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          writerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+       * @param value The writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        writerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWriterAddress() {
+        writerAddress_ = getDefaultInstance().getWriterAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 2 [json_name = "writerAddress"];</code>
+       * @param value The bytes for writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        writerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 3 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgDeleteWriter)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgDeleteWriter)
+    private static final com.panacea.aol.v2.TxProto.MsgDeleteWriter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgDeleteWriter();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteWriter>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteWriter>() {
+      @java.lang.Override
+      public MsgDeleteWriter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteWriter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteWriter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgDeleteWriter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgDeleteWriterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgDeleteWriterResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgDeleteWriter defines the Msg/DeleteWriter response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgDeleteWriterResponse}
+   */
+  public static final class MsgDeleteWriterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgDeleteWriterResponse)
+      MsgDeleteWriterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgDeleteWriterResponse.newBuilder() to construct.
+    private MsgDeleteWriterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgDeleteWriterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgDeleteWriterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.class, com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse other = (com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgDeleteWriter defines the Msg/DeleteWriter response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgDeleteWriterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgDeleteWriterResponse)
+        com.panacea.aol.v2.TxProto.MsgDeleteWriterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.class, com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgDeleteWriterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse build() {
+        com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse result = new com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgDeleteWriterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgDeleteWriterResponse)
+    private static final com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgDeleteWriterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgDeleteWriterResponse>() {
+      @java.lang.Override
+      public MsgDeleteWriterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgDeleteWriterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgDeleteWriterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgDeleteWriterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgAddRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>bytes key = 2 [json_name = "key"];</code>
+     * @return The key.
+     */
+    com.google.protobuf.ByteString getKey();
+
+    /**
+     * <code>bytes value = 3 [json_name = "value"];</code>
+     * @return The value.
+     */
+    com.google.protobuf.ByteString getValue();
+
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    java.lang.String getWriterAddress();
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWriterAddressBytes();
+
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+     * @return The feePayerAddress.
+     */
+    java.lang.String getFeePayerAddress();
+    /**
+     * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+     * @return The bytes for feePayerAddress.
+     */
+    com.google.protobuf.ByteString
+        getFeePayerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgAddRecord defines the Msg/AddRecord request type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgAddRecord}
+   */
+  public static final class MsgAddRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgAddRecord)
+      MsgAddRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddRecord.newBuilder() to construct.
+    private MsgAddRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddRecord() {
+      topicName_ = "";
+      key_ = com.google.protobuf.ByteString.EMPTY;
+      value_ = com.google.protobuf.ByteString.EMPTY;
+      writerAddress_ = "";
+      ownerAddress_ = "";
+      feePayerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgAddRecord.class, com.panacea.aol.v2.TxProto.MsgAddRecord.Builder.class);
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 1 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes key = 2 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getKey() {
+      return key_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes value = 3 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getValue() {
+      return value_;
+    }
+
+    public static final int WRITER_ADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object writerAddress_ = "";
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWriterAddress() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        writerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWriterAddressBytes() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        writerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEE_PAYER_ADDRESS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feePayerAddress_ = "";
+    /**
+     * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+     * @return The feePayerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFeePayerAddress() {
+      java.lang.Object ref = feePayerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feePayerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+     * @return The bytes for feePayerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeePayerAddressBytes() {
+      java.lang.Object ref = feePayerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feePayerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicName_);
+      }
+      if (!key_.isEmpty()) {
+        output.writeBytes(2, key_);
+      }
+      if (!value_.isEmpty()) {
+        output.writeBytes(3, value_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, writerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feePayerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, feePayerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, topicName_);
+      }
+      if (!key_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, key_);
+      }
+      if (!value_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, value_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, writerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feePayerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, feePayerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgAddRecord)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgAddRecord other = (com.panacea.aol.v2.TxProto.MsgAddRecord) obj;
+
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getWriterAddress()
+          .equals(other.getWriterAddress())) return false;
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getFeePayerAddress()
+          .equals(other.getFeePayerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + WRITER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWriterAddress().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + FEE_PAYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFeePayerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgAddRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddRecord defines the Msg/AddRecord request type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgAddRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgAddRecord)
+        com.panacea.aol.v2.TxProto.MsgAddRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgAddRecord.class, com.panacea.aol.v2.TxProto.MsgAddRecord.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgAddRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        topicName_ = "";
+        key_ = com.google.protobuf.ByteString.EMPTY;
+        value_ = com.google.protobuf.ByteString.EMPTY;
+        writerAddress_ = "";
+        ownerAddress_ = "";
+        feePayerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddRecord getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgAddRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddRecord build() {
+        com.panacea.aol.v2.TxProto.MsgAddRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddRecord buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgAddRecord result = new com.panacea.aol.v2.TxProto.MsgAddRecord(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.TxProto.MsgAddRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.writerAddress_ = writerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.feePayerAddress_ = feePayerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgAddRecord) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgAddRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgAddRecord other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgAddRecord.getDefaultInstance()) return this;
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
+          setKey(other.getKey());
+        }
+        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+          setValue(other.getValue());
+        }
+        if (!other.getWriterAddress().isEmpty()) {
+          writerAddress_ = other.writerAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getFeePayerAddress().isEmpty()) {
+          feePayerAddress_ = other.feePayerAddress_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                key_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                writerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                feePayerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 1 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes key = 2 [json_name = "key"];</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getKey() {
+        return key_;
+      }
+      /**
+       * <code>bytes key = 2 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes key = 2 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes value = 3 [json_name = "value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <code>bytes value = 3 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes value = 3 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object writerAddress_ = "";
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @return The writerAddress.
+       */
+      public java.lang.String getWriterAddress() {
+        java.lang.Object ref = writerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          writerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @return The bytes for writerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWriterAddressBytes() {
+        java.lang.Object ref = writerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          writerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @param value The writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        writerAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWriterAddress() {
+        writerAddress_ = getDefaultInstance().getWriterAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 4 [json_name = "writerAddress"];</code>
+       * @param value The bytes for writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        writerAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 5 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feePayerAddress_ = "";
+      /**
+       * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+       * @return The feePayerAddress.
+       */
+      public java.lang.String getFeePayerAddress() {
+        java.lang.Object ref = feePayerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feePayerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+       * @return The bytes for feePayerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFeePayerAddressBytes() {
+        java.lang.Object ref = feePayerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feePayerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+       * @param value The feePayerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeePayerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feePayerAddress_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeePayerAddress() {
+        feePayerAddress_ = getDefaultInstance().getFeePayerAddress();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fee_payer_address = 6 [json_name = "feePayerAddress"];</code>
+       * @param value The bytes for feePayerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeePayerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feePayerAddress_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgAddRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgAddRecord)
+    private static final com.panacea.aol.v2.TxProto.MsgAddRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgAddRecord();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddRecord>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddRecord>() {
+      @java.lang.Override
+      public MsgAddRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgAddRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.MsgAddRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>uint64 offset = 3 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    long getOffset();
+  }
+  /**
+   * <pre>
+   * MsgAddRecordResponse defines the Msg/AddRecordResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.MsgAddRecordResponse}
+   */
+  public static final class MsgAddRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.MsgAddRecordResponse)
+      MsgAddRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddRecordResponse.newBuilder() to construct.
+    private MsgAddRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddRecordResponse() {
+      ownerAddress_ = "";
+      topicName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.TxProto.MsgAddRecordResponse.class, com.panacea.aol.v2.TxProto.MsgAddRecordResponse.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 3;
+    private long offset_ = 0L;
+    /**
+     * <code>uint64 offset = 3 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public long getOffset() {
+      return offset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicName_);
+      }
+      if (offset_ != 0L) {
+        output.writeUInt64(3, offset_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicName_);
+      }
+      if (offset_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, offset_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.TxProto.MsgAddRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.TxProto.MsgAddRecordResponse other = (com.panacea.aol.v2.TxProto.MsgAddRecordResponse) obj;
+
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (getOffset()
+          != other.getOffset()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOffset());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.TxProto.MsgAddRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAddRecordResponse defines the Msg/AddRecordResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.MsgAddRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.MsgAddRecordResponse)
+        com.panacea.aol.v2.TxProto.MsgAddRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.TxProto.MsgAddRecordResponse.class, com.panacea.aol.v2.TxProto.MsgAddRecordResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.TxProto.MsgAddRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddress_ = "";
+        topicName_ = "";
+        offset_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.TxProto.internal_static_panacea_aol_v2_MsgAddRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddRecordResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.TxProto.MsgAddRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddRecordResponse build() {
+        com.panacea.aol.v2.TxProto.MsgAddRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.TxProto.MsgAddRecordResponse buildPartial() {
+        com.panacea.aol.v2.TxProto.MsgAddRecordResponse result = new com.panacea.aol.v2.TxProto.MsgAddRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.TxProto.MsgAddRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.offset_ = offset_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.TxProto.MsgAddRecordResponse) {
+          return mergeFrom((com.panacea.aol.v2.TxProto.MsgAddRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.TxProto.MsgAddRecordResponse other) {
+        if (other == com.panacea.aol.v2.TxProto.MsgAddRecordResponse.getDefaultInstance()) return this;
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getOffset() != 0L) {
+          setOffset(other.getOffset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                offset_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long offset_ ;
+      /**
+       * <code>uint64 offset = 3 [json_name = "offset"];</code>
+       * @return The offset.
+       */
+      @java.lang.Override
+      public long getOffset() {
+        return offset_;
+      }
+      /**
+       * <code>uint64 offset = 3 [json_name = "offset"];</code>
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffset(long value) {
+
+        offset_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 offset = 3 [json_name = "offset"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffset() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        offset_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.MsgAddRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.MsgAddRecordResponse)
+    private static final com.panacea.aol.v2.TxProto.MsgAddRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.TxProto.MsgAddRecordResponse();
+    }
+
+    public static com.panacea.aol.v2.TxProto.MsgAddRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddRecordResponse>() {
+      @java.lang.Override
+      public MsgAddRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.TxProto.MsgAddRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgCreateTopic_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgCreateTopic_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgCreateTopicResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgCreateTopicResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgAddWriter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgAddWriter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgAddWriterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgAddWriterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgDeleteWriter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgDeleteWriter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgDeleteWriterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgDeleteWriterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgAddRecord_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgAddRecord_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_MsgAddRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_MsgAddRecordResponse_fieldAccessorTable;
 
@@ -94,7 +6104,7 @@ public final class TxProto {
       "leteWriterResponse\022O\n\tAddRecord\022\034.panace" +
       "a.aol.v2.MsgAddRecord\032$.panacea.aol.v2.M" +
       "sgAddRecordResponseB\250\001\n\022com.panacea.aol." +
-      "v2B\007TxProtoP\001Z/github.com/medibloc/panac" +
+      "v2B\007TxProtoP\000Z/github.com/medibloc/panac" +
       "ea-core/v2/x/aol/types\242\002\003PAX\252\002\016Panacea.A" +
       "ol.V2\312\002\016Panacea\\Aol\\V2\342\002\032Panacea\\Aol\\V2\\" +
       "GPBMetadata\352\002\020Panacea::Aol::V2b\006proto3"

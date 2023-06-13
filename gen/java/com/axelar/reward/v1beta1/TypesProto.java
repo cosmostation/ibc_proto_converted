@@ -14,19 +14,2659 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.reward.v1beta1.Pool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.axelar.reward.v1beta1.TypesProto.Pool.Reward> 
+        getRewardsList();
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.reward.v1beta1.TypesProto.Pool.Reward getRewards(int index);
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code axelar.reward.v1beta1.Pool}
+   */
+  public static final class Pool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.reward.v1beta1.Pool)
+      PoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Pool.newBuilder() to construct.
+    private Pool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Pool() {
+      name_ = "";
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Pool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.reward.v1beta1.TypesProto.Pool.class, com.axelar.reward.v1beta1.TypesProto.Pool.Builder.class);
+    }
+
+    public interface RewardOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:axelar.reward.v1beta1.Pool.Reward)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return The validator.
+       */
+      com.google.protobuf.ByteString getValidator();
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+          getCoinsList();
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      int getCoinsCount();
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsOrBuilderList();
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code axelar.reward.v1beta1.Pool.Reward}
+     */
+    public static final class Reward extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:axelar.reward.v1beta1.Pool.Reward)
+        RewardOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Reward.newBuilder() to construct.
+      private Reward(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Reward() {
+        validator_ = com.google.protobuf.ByteString.EMPTY;
+        coins_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Reward();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_Reward_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_Reward_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.reward.v1beta1.TypesProto.Pool.Reward.class, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder.class);
+      }
+
+      public static final int VALIDATOR_FIELD_NUMBER = 1;
+      private com.google.protobuf.ByteString validator_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return The validator.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValidator() {
+        return validator_;
+      }
+
+      public static final int COINS_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        return coins_;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsOrBuilderList() {
+        return coins_;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      @java.lang.Override
+      public int getCoinsCount() {
+        return coins_.size();
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      @java.lang.Override
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        return coins_.get(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      @java.lang.Override
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        return coins_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!validator_.isEmpty()) {
+          output.writeBytes(1, validator_);
+        }
+        for (int i = 0; i < coins_.size(); i++) {
+          output.writeMessage(2, coins_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!validator_.isEmpty()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, validator_);
+        }
+        for (int i = 0; i < coins_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, coins_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.axelar.reward.v1beta1.TypesProto.Pool.Reward)) {
+          return super.equals(obj);
+        }
+        com.axelar.reward.v1beta1.TypesProto.Pool.Reward other = (com.axelar.reward.v1beta1.TypesProto.Pool.Reward) obj;
+
+        if (!getValidator()
+            .equals(other.getValidator())) return false;
+        if (!getCoinsList()
+            .equals(other.getCoinsList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getValidator().hashCode();
+        if (getCoinsCount() > 0) {
+          hash = (37 * hash) + COINS_FIELD_NUMBER;
+          hash = (53 * hash) + getCoinsList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.axelar.reward.v1beta1.TypesProto.Pool.Reward prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code axelar.reward.v1beta1.Pool.Reward}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:axelar.reward.v1beta1.Pool.Reward)
+          com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_Reward_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_Reward_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.axelar.reward.v1beta1.TypesProto.Pool.Reward.class, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder.class);
+        }
+
+        // Construct using com.axelar.reward.v1beta1.TypesProto.Pool.Reward.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          validator_ = com.google.protobuf.ByteString.EMPTY;
+          if (coinsBuilder_ == null) {
+            coins_ = java.util.Collections.emptyList();
+          } else {
+            coins_ = null;
+            coinsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_Reward_descriptor;
+        }
+
+        @java.lang.Override
+        public com.axelar.reward.v1beta1.TypesProto.Pool.Reward getDefaultInstanceForType() {
+          return com.axelar.reward.v1beta1.TypesProto.Pool.Reward.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.axelar.reward.v1beta1.TypesProto.Pool.Reward build() {
+          com.axelar.reward.v1beta1.TypesProto.Pool.Reward result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.axelar.reward.v1beta1.TypesProto.Pool.Reward buildPartial() {
+          com.axelar.reward.v1beta1.TypesProto.Pool.Reward result = new com.axelar.reward.v1beta1.TypesProto.Pool.Reward(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(com.axelar.reward.v1beta1.TypesProto.Pool.Reward result) {
+          if (coinsBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0)) {
+              coins_ = java.util.Collections.unmodifiableList(coins_);
+              bitField0_ = (bitField0_ & ~0x00000002);
+            }
+            result.coins_ = coins_;
+          } else {
+            result.coins_ = coinsBuilder_.build();
+          }
+        }
+
+        private void buildPartial0(com.axelar.reward.v1beta1.TypesProto.Pool.Reward result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.validator_ = validator_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.axelar.reward.v1beta1.TypesProto.Pool.Reward) {
+            return mergeFrom((com.axelar.reward.v1beta1.TypesProto.Pool.Reward)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.axelar.reward.v1beta1.TypesProto.Pool.Reward other) {
+          if (other == com.axelar.reward.v1beta1.TypesProto.Pool.Reward.getDefaultInstance()) return this;
+          if (other.getValidator() != com.google.protobuf.ByteString.EMPTY) {
+            setValidator(other.getValidator());
+          }
+          if (coinsBuilder_ == null) {
+            if (!other.coins_.isEmpty()) {
+              if (coins_.isEmpty()) {
+                coins_ = other.coins_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+              } else {
+                ensureCoinsIsMutable();
+                coins_.addAll(other.coins_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.coins_.isEmpty()) {
+              if (coinsBuilder_.isEmpty()) {
+                coinsBuilder_.dispose();
+                coinsBuilder_ = null;
+                coins_ = other.coins_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                coinsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getCoinsFieldBuilder() : null;
+              } else {
+                coinsBuilder_.addAllMessages(other.coins_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  validator_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  com.cosmos.base.v1beta1.CoinProto.Coin m =
+                      input.readMessage(
+                          com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                          extensionRegistry);
+                  if (coinsBuilder_ == null) {
+                    ensureCoinsIsMutable();
+                    coins_.add(m);
+                  } else {
+                    coinsBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private com.google.protobuf.ByteString validator_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+         * @return The validator.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString getValidator() {
+          return validator_;
+        }
+        /**
+         * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+         * @param value The validator to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValidator(com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          validator_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValidator() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          validator_ = getDefaultInstance().getValidator();
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+          java.util.Collections.emptyList();
+        private void ensureCoinsIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+          if (coinsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(coins_);
+          } else {
+            return coinsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public int getCoinsCount() {
+          if (coinsBuilder_ == null) {
+            return coins_.size();
+          } else {
+            return coinsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+          if (coinsBuilder_ == null) {
+            return coins_.get(index);
+          } else {
+            return coinsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder setCoins(
+            int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+          if (coinsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCoinsIsMutable();
+            coins_.set(index, value);
+            onChanged();
+          } else {
+            coinsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder setCoins(
+            int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+          if (coinsBuilder_ == null) {
+            ensureCoinsIsMutable();
+            coins_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            coinsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+          if (coinsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCoinsIsMutable();
+            coins_.add(value);
+            onChanged();
+          } else {
+            coinsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder addCoins(
+            int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+          if (coinsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCoinsIsMutable();
+            coins_.add(index, value);
+            onChanged();
+          } else {
+            coinsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder addCoins(
+            com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+          if (coinsBuilder_ == null) {
+            ensureCoinsIsMutable();
+            coins_.add(builderForValue.build());
+            onChanged();
+          } else {
+            coinsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder addCoins(
+            int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+          if (coinsBuilder_ == null) {
+            ensureCoinsIsMutable();
+            coins_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            coinsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder addAllCoins(
+            java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+          if (coinsBuilder_ == null) {
+            ensureCoinsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, coins_);
+            onChanged();
+          } else {
+            coinsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder clearCoins() {
+          if (coinsBuilder_ == null) {
+            coins_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+          } else {
+            coinsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public Builder removeCoins(int index) {
+          if (coinsBuilder_ == null) {
+            ensureCoinsIsMutable();
+            coins_.remove(index);
+            onChanged();
+          } else {
+            coinsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+            int index) {
+          return getCoinsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+            int index) {
+          if (coinsBuilder_ == null) {
+            return coins_.get(index);  } else {
+            return coinsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+             getCoinsOrBuilderList() {
+          if (coinsBuilder_ != null) {
+            return coinsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(coins_);
+          }
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+          return getCoinsFieldBuilder().addBuilder(
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+            int index) {
+          return getCoinsFieldBuilder().addBuilder(
+              index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .cosmos.base.v1beta1.Coin coins = 2 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+         */
+        public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+             getCoinsBuilderList() {
+          return getCoinsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+            getCoinsFieldBuilder() {
+          if (coinsBuilder_ == null) {
+            coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                    coins_,
+                    ((bitField0_ & 0x00000002) != 0),
+                    getParentForChildren(),
+                    isClean());
+            coins_ = null;
+          }
+          return coinsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:axelar.reward.v1beta1.Pool.Reward)
+      }
+
+      // @@protoc_insertion_point(class_scope:axelar.reward.v1beta1.Pool.Reward)
+      private static final com.axelar.reward.v1beta1.TypesProto.Pool.Reward DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.axelar.reward.v1beta1.TypesProto.Pool.Reward();
+      }
+
+      public static com.axelar.reward.v1beta1.TypesProto.Pool.Reward getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Reward>
+          PARSER = new com.google.protobuf.AbstractParser<Reward>() {
+        @java.lang.Override
+        public Reward parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Reward> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Reward> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Pool.Reward getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.axelar.reward.v1beta1.TypesProto.Pool.Reward> rewards_;
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.axelar.reward.v1beta1.TypesProto.Pool.Reward> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.reward.v1beta1.TypesProto.Pool.Reward getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(2, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.reward.v1beta1.TypesProto.Pool)) {
+        return super.equals(obj);
+      }
+      com.axelar.reward.v1beta1.TypesProto.Pool other = (com.axelar.reward.v1beta1.TypesProto.Pool) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Pool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.reward.v1beta1.TypesProto.Pool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.reward.v1beta1.Pool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.reward.v1beta1.Pool)
+        com.axelar.reward.v1beta1.TypesProto.PoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.reward.v1beta1.TypesProto.Pool.class, com.axelar.reward.v1beta1.TypesProto.Pool.Builder.class);
+      }
+
+      // Construct using com.axelar.reward.v1beta1.TypesProto.Pool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Pool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Pool getDefaultInstanceForType() {
+        return com.axelar.reward.v1beta1.TypesProto.Pool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Pool build() {
+        com.axelar.reward.v1beta1.TypesProto.Pool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Pool buildPartial() {
+        com.axelar.reward.v1beta1.TypesProto.Pool result = new com.axelar.reward.v1beta1.TypesProto.Pool(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.reward.v1beta1.TypesProto.Pool result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.axelar.reward.v1beta1.TypesProto.Pool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.reward.v1beta1.TypesProto.Pool) {
+          return mergeFrom((com.axelar.reward.v1beta1.TypesProto.Pool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.reward.v1beta1.TypesProto.Pool other) {
+        if (other == com.axelar.reward.v1beta1.TypesProto.Pool.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.axelar.reward.v1beta1.TypesProto.Pool.Reward m =
+                    input.readMessage(
+                        com.axelar.reward.v1beta1.TypesProto.Pool.Reward.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.axelar.reward.v1beta1.TypesProto.Pool.Reward> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rewards_ = new java.util.ArrayList<com.axelar.reward.v1beta1.TypesProto.Pool.Reward>(rewards_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.axelar.reward.v1beta1.TypesProto.Pool.Reward, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder, com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.axelar.reward.v1beta1.TypesProto.Pool.Reward> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.reward.v1beta1.TypesProto.Pool.Reward getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewards(
+          int index, com.axelar.reward.v1beta1.TypesProto.Pool.Reward value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewards(
+          int index, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(com.axelar.reward.v1beta1.TypesProto.Pool.Reward value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(
+          int index, com.axelar.reward.v1beta1.TypesProto.Pool.Reward value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(
+          com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewards(
+          int index, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.axelar.reward.v1beta1.TypesProto.Pool.Reward> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.axelar.reward.v1beta1.TypesProto.Pool.Reward.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .axelar.reward.v1beta1.Pool.Reward rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.axelar.reward.v1beta1.TypesProto.Pool.Reward, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder, com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.axelar.reward.v1beta1.TypesProto.Pool.Reward, com.axelar.reward.v1beta1.TypesProto.Pool.Reward.Builder, com.axelar.reward.v1beta1.TypesProto.Pool.RewardOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.reward.v1beta1.Pool)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.reward.v1beta1.Pool)
+    private static final com.axelar.reward.v1beta1.TypesProto.Pool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.reward.v1beta1.TypesProto.Pool();
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Pool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Pool>
+        PARSER = new com.google.protobuf.AbstractParser<Pool>() {
+      @java.lang.Override
+      public Pool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Pool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Pool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.reward.v1beta1.TypesProto.Pool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RefundOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.reward.v1beta1.Refund)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes payer = 1 [json_name = "payer", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The payer.
+     */
+    com.google.protobuf.ByteString getPayer();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code axelar.reward.v1beta1.Refund}
+   */
+  public static final class Refund extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.reward.v1beta1.Refund)
+      RefundOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Refund.newBuilder() to construct.
+    private Refund(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Refund() {
+      payer_ = com.google.protobuf.ByteString.EMPTY;
+      fees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Refund();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Refund_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Refund_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.reward.v1beta1.TypesProto.Refund.class, com.axelar.reward.v1beta1.TypesProto.Refund.Builder.class);
+    }
+
+    public static final int PAYER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString payer_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes payer = 1 [json_name = "payer", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The payer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPayer() {
+      return payer_;
+    }
+
+    public static final int FEES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeesList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeesOrBuilderList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeesCount() {
+      return fees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index) {
+      return fees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+        int index) {
+      return fees_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!payer_.isEmpty()) {
+        output.writeBytes(1, payer_);
+      }
+      for (int i = 0; i < fees_.size(); i++) {
+        output.writeMessage(2, fees_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!payer_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, payer_);
+      }
+      for (int i = 0; i < fees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, fees_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.reward.v1beta1.TypesProto.Refund)) {
+        return super.equals(obj);
+      }
+      com.axelar.reward.v1beta1.TypesProto.Refund other = (com.axelar.reward.v1beta1.TypesProto.Refund) obj;
+
+      if (!getPayer()
+          .equals(other.getPayer())) return false;
+      if (!getFeesList()
+          .equals(other.getFeesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PAYER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayer().hashCode();
+      if (getFeesCount() > 0) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.reward.v1beta1.TypesProto.Refund parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.reward.v1beta1.TypesProto.Refund prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.reward.v1beta1.Refund}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.reward.v1beta1.Refund)
+        com.axelar.reward.v1beta1.TypesProto.RefundOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Refund_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Refund_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.reward.v1beta1.TypesProto.Refund.class, com.axelar.reward.v1beta1.TypesProto.Refund.Builder.class);
+      }
+
+      // Construct using com.axelar.reward.v1beta1.TypesProto.Refund.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        payer_ = com.google.protobuf.ByteString.EMPTY;
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+        } else {
+          fees_ = null;
+          feesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.reward.v1beta1.TypesProto.internal_static_axelar_reward_v1beta1_Refund_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Refund getDefaultInstanceForType() {
+        return com.axelar.reward.v1beta1.TypesProto.Refund.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Refund build() {
+        com.axelar.reward.v1beta1.TypesProto.Refund result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.reward.v1beta1.TypesProto.Refund buildPartial() {
+        com.axelar.reward.v1beta1.TypesProto.Refund result = new com.axelar.reward.v1beta1.TypesProto.Refund(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.reward.v1beta1.TypesProto.Refund result) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            fees_ = java.util.Collections.unmodifiableList(fees_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.fees_ = fees_;
+        } else {
+          result.fees_ = feesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.axelar.reward.v1beta1.TypesProto.Refund result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.payer_ = payer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.reward.v1beta1.TypesProto.Refund) {
+          return mergeFrom((com.axelar.reward.v1beta1.TypesProto.Refund)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.reward.v1beta1.TypesProto.Refund other) {
+        if (other == com.axelar.reward.v1beta1.TypesProto.Refund.getDefaultInstance()) return this;
+        if (other.getPayer() != com.google.protobuf.ByteString.EMPTY) {
+          setPayer(other.getPayer());
+        }
+        if (feesBuilder_ == null) {
+          if (!other.fees_.isEmpty()) {
+            if (fees_.isEmpty()) {
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureFeesIsMutable();
+              fees_.addAll(other.fees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fees_.isEmpty()) {
+            if (feesBuilder_.isEmpty()) {
+              feesBuilder_.dispose();
+              feesBuilder_ = null;
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              feesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeesFieldBuilder() : null;
+            } else {
+              feesBuilder_.addAllMessages(other.fees_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                payer_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feesBuilder_ == null) {
+                  ensureFeesIsMutable();
+                  fees_.add(m);
+                } else {
+                  feesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString payer_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes payer = 1 [json_name = "payer", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The payer.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPayer() {
+        return payer_;
+      }
+      /**
+       * <code>bytes payer = 1 [json_name = "payer", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The payer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayer(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        payer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes payer = 1 [json_name = "payer", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayer() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        payer_ = getDefaultInstance().getPayer();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fees_ =
+        java.util.Collections.emptyList();
+      private void ensureFeesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          fees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(fees_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeesList() {
+        if (feesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fees_);
+        } else {
+          return feesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeesCount() {
+        if (feesBuilder_ == null) {
+          return fees_.size();
+        } else {
+          return feesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);
+        } else {
+          return feesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.set(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fees_);
+          onChanged();
+        } else {
+          feesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFees() {
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          feesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFees(int index) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.remove(index);
+          onChanged();
+        } else {
+          feesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+          int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);  } else {
+          return feesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeesOrBuilderList() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeesBuilder() {
+        return getFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeesBuilderList() {
+        return getFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  fees_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.reward.v1beta1.Refund)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.reward.v1beta1.Refund)
+    private static final com.axelar.reward.v1beta1.TypesProto.Refund DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.reward.v1beta1.TypesProto.Refund();
+    }
+
+    public static com.axelar.reward.v1beta1.TypesProto.Refund getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Refund>
+        PARSER = new com.google.protobuf.AbstractParser<Refund>() {
+      @java.lang.Override
+      public Refund parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Refund> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Refund> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.reward.v1beta1.TypesProto.Refund getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_reward_v1beta1_Pool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_reward_v1beta1_Pool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_reward_v1beta1_Pool_Reward_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_reward_v1beta1_Pool_Reward_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_reward_v1beta1_Refund_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_reward_v1beta1_Refund_fieldAccessorTable;
 
@@ -52,13 +2692,13 @@ public final class TypesProto {
       "om/cosmos/cosmos-sdk/types.AccAddressR\005p" +
       "ayer\022_\n\004fees\030\002 \003(\0132\031.cosmos.base.v1beta1" +
       ".CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cosmos-" +
-      "sdk/types.CoinsR\004feesB\326\001\n\031com.axelar.rew" +
-      "ard.v1beta1B\nTypesProtoP\001Z3github.com/ax" +
-      "elarnetwork/axelar-core/x/reward/types\242\002" +
-      "\003ARX\252\002\025Axelar.Reward.V1beta1\312\002\025Axelar\\Re" +
-      "ward\\V1beta1\342\002!Axelar\\Reward\\V1beta1\\GPB" +
-      "Metadata\352\002\027Axelar::Reward::V1beta1\310\341\036\000b\006" +
-      "proto3"
+      "sdk/types.CoinsR\004feesB\324\001\n\031com.axelar.rew" +
+      "ard.v1beta1B\nTypesProtoZ3github.com/axel" +
+      "arnetwork/axelar-core/x/reward/types\242\002\003A" +
+      "RX\252\002\025Axelar.Reward.V1beta1\312\002\025Axelar\\Rewa" +
+      "rd\\V1beta1\342\002!Axelar\\Reward\\V1beta1\\GPBMe" +
+      "tadata\352\002\027Axelar::Reward::V1beta1\310\341\036\000b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

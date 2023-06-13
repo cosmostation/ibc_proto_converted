@@ -14,9 +14,2679 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> 
+        getOperatorsList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Operator getOperators(int index);
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    int getOperatorsCount();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+        getOperatorsOrBuilderList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTotalCollateralList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalCollateral(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getTotalCollateralCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalCollateralOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalCollateralOrBuilder(
+        int index);
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+     * @return Whether the poolParams field is set.
+     */
+    boolean hasPoolParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+     * @return The poolParams.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams getPoolParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder getPoolParamsOrBuilder();
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+     * @return Whether the taskParams field is set.
+     */
+    boolean hasTaskParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+     * @return The taskParams.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TaskParams getTaskParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder getTaskParamsOrBuilder();
+
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> 
+        getWithdrawsList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Withdraw getWithdraws(int index);
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    int getWithdrawsCount();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+        getWithdrawsOrBuilderList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder getWithdrawsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Task> 
+        getTasksList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Task getTasks(int index);
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    int getTasksCount();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> 
+        getTasksOrBuilderList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder getTasksOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    java.util.List<com.shentu.oracle.v1alpha1.OracleProto.TxTask> 
+        getTxTasksList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TxTask getTxTasks(int index);
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    int getTxTasksCount();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> 
+        getTxTasksOrBuilderList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder getTxTasksOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      operators_ = java.util.Collections.emptyList();
+      totalCollateral_ = java.util.Collections.emptyList();
+      withdraws_ = java.util.Collections.emptyList();
+      tasks_ = java.util.Collections.emptyList();
+      txTasks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.GenesisProto.internal_static_shentu_oracle_v1alpha1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.GenesisProto.internal_static_shentu_oracle_v1alpha1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.class, com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int OPERATORS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> operators_;
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> getOperatorsList() {
+      return operators_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+        getOperatorsOrBuilderList() {
+      return operators_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getOperatorsCount() {
+      return operators_.size();
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Operator getOperators(int index) {
+      return operators_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorsOrBuilder(
+        int index) {
+      return operators_.get(index);
+    }
+
+    public static final int TOTAL_COLLATERAL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalCollateral_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalCollateralList() {
+      return totalCollateral_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalCollateralOrBuilderList() {
+      return totalCollateral_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getTotalCollateralCount() {
+      return totalCollateral_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalCollateral(int index) {
+      return totalCollateral_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalCollateralOrBuilder(
+        int index) {
+      return totalCollateral_.get(index);
+    }
+
+    public static final int POOL_PARAMS_FIELD_NUMBER = 3;
+    private com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams poolParams_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+     * @return Whether the poolParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolParams() {
+      return poolParams_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+     * @return The poolParams.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams getPoolParams() {
+      return poolParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder getPoolParamsOrBuilder() {
+      return poolParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+    }
+
+    public static final int TASK_PARAMS_FIELD_NUMBER = 4;
+    private com.shentu.oracle.v1alpha1.OracleProto.TaskParams taskParams_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+     * @return Whether the taskParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTaskParams() {
+      return taskParams_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+     * @return The taskParams.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TaskParams getTaskParams() {
+      return taskParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder getTaskParamsOrBuilder() {
+      return taskParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+    }
+
+    public static final int WITHDRAWS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> withdraws_;
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> getWithdrawsList() {
+      return withdraws_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+        getWithdrawsOrBuilderList() {
+      return withdraws_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getWithdrawsCount() {
+      return withdraws_.size();
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Withdraw getWithdraws(int index) {
+      return withdraws_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder getWithdrawsOrBuilder(
+        int index) {
+      return withdraws_.get(index);
+    }
+
+    public static final int TASKS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Task> tasks_;
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Task> getTasksList() {
+      return tasks_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> 
+        getTasksOrBuilderList() {
+      return tasks_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getTasksCount() {
+      return tasks_.size();
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Task getTasks(int index) {
+      return tasks_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder getTasksOrBuilder(
+        int index) {
+      return tasks_.get(index);
+    }
+
+    public static final int TX_TASKS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.TxTask> txTasks_;
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.TxTask> getTxTasksList() {
+      return txTasks_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> 
+        getTxTasksOrBuilderList() {
+      return txTasks_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getTxTasksCount() {
+      return txTasks_.size();
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TxTask getTxTasks(int index) {
+      return txTasks_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder getTxTasksOrBuilder(
+        int index) {
+      return txTasks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < operators_.size(); i++) {
+        output.writeMessage(1, operators_.get(i));
+      }
+      for (int i = 0; i < totalCollateral_.size(); i++) {
+        output.writeMessage(2, totalCollateral_.get(i));
+      }
+      if (poolParams_ != null) {
+        output.writeMessage(3, getPoolParams());
+      }
+      if (taskParams_ != null) {
+        output.writeMessage(4, getTaskParams());
+      }
+      for (int i = 0; i < withdraws_.size(); i++) {
+        output.writeMessage(5, withdraws_.get(i));
+      }
+      for (int i = 0; i < tasks_.size(); i++) {
+        output.writeMessage(6, tasks_.get(i));
+      }
+      for (int i = 0; i < txTasks_.size(); i++) {
+        output.writeMessage(7, txTasks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < operators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, operators_.get(i));
+      }
+      for (int i = 0; i < totalCollateral_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, totalCollateral_.get(i));
+      }
+      if (poolParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPoolParams());
+      }
+      if (taskParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTaskParams());
+      }
+      for (int i = 0; i < withdraws_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, withdraws_.get(i));
+      }
+      for (int i = 0; i < tasks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, tasks_.get(i));
+      }
+      for (int i = 0; i < txTasks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, txTasks_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.GenesisProto.GenesisState other = (com.shentu.oracle.v1alpha1.GenesisProto.GenesisState) obj;
+
+      if (!getOperatorsList()
+          .equals(other.getOperatorsList())) return false;
+      if (!getTotalCollateralList()
+          .equals(other.getTotalCollateralList())) return false;
+      if (hasPoolParams() != other.hasPoolParams()) return false;
+      if (hasPoolParams()) {
+        if (!getPoolParams()
+            .equals(other.getPoolParams())) return false;
+      }
+      if (hasTaskParams() != other.hasTaskParams()) return false;
+      if (hasTaskParams()) {
+        if (!getTaskParams()
+            .equals(other.getTaskParams())) return false;
+      }
+      if (!getWithdrawsList()
+          .equals(other.getWithdrawsList())) return false;
+      if (!getTasksList()
+          .equals(other.getTasksList())) return false;
+      if (!getTxTasksList()
+          .equals(other.getTxTasksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOperatorsCount() > 0) {
+        hash = (37 * hash) + OPERATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperatorsList().hashCode();
+      }
+      if (getTotalCollateralCount() > 0) {
+        hash = (37 * hash) + TOTAL_COLLATERAL_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalCollateralList().hashCode();
+      }
+      if (hasPoolParams()) {
+        hash = (37 * hash) + POOL_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolParams().hashCode();
+      }
+      if (hasTaskParams()) {
+        hash = (37 * hash) + TASK_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTaskParams().hashCode();
+      }
+      if (getWithdrawsCount() > 0) {
+        hash = (37 * hash) + WITHDRAWS_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawsList().hashCode();
+      }
+      if (getTasksCount() > 0) {
+        hash = (37 * hash) + TASKS_FIELD_NUMBER;
+        hash = (53 * hash) + getTasksList().hashCode();
+      }
+      if (getTxTasksCount() > 0) {
+        hash = (37 * hash) + TX_TASKS_FIELD_NUMBER;
+        hash = (53 * hash) + getTxTasksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.GenesisState)
+        com.shentu.oracle.v1alpha1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.GenesisProto.internal_static_shentu_oracle_v1alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.GenesisProto.internal_static_shentu_oracle_v1alpha1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.class, com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (operatorsBuilder_ == null) {
+          operators_ = java.util.Collections.emptyList();
+        } else {
+          operators_ = null;
+          operatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (totalCollateralBuilder_ == null) {
+          totalCollateral_ = java.util.Collections.emptyList();
+        } else {
+          totalCollateral_ = null;
+          totalCollateralBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        taskParams_ = null;
+        if (taskParamsBuilder_ != null) {
+          taskParamsBuilder_.dispose();
+          taskParamsBuilder_ = null;
+        }
+        if (withdrawsBuilder_ == null) {
+          withdraws_ = java.util.Collections.emptyList();
+        } else {
+          withdraws_ = null;
+          withdrawsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (tasksBuilder_ == null) {
+          tasks_ = java.util.Collections.emptyList();
+        } else {
+          tasks_ = null;
+          tasksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (txTasksBuilder_ == null) {
+          txTasks_ = java.util.Collections.emptyList();
+        } else {
+          txTasks_ = null;
+          txTasksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.GenesisProto.internal_static_shentu_oracle_v1alpha1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.GenesisProto.GenesisState build() {
+        com.shentu.oracle.v1alpha1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.GenesisProto.GenesisState buildPartial() {
+        com.shentu.oracle.v1alpha1.GenesisProto.GenesisState result = new com.shentu.oracle.v1alpha1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.oracle.v1alpha1.GenesisProto.GenesisState result) {
+        if (operatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            operators_ = java.util.Collections.unmodifiableList(operators_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.operators_ = operators_;
+        } else {
+          result.operators_ = operatorsBuilder_.build();
+        }
+        if (totalCollateralBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            totalCollateral_ = java.util.Collections.unmodifiableList(totalCollateral_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.totalCollateral_ = totalCollateral_;
+        } else {
+          result.totalCollateral_ = totalCollateralBuilder_.build();
+        }
+        if (withdrawsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            withdraws_ = java.util.Collections.unmodifiableList(withdraws_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.withdraws_ = withdraws_;
+        } else {
+          result.withdraws_ = withdrawsBuilder_.build();
+        }
+        if (tasksBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            tasks_ = java.util.Collections.unmodifiableList(tasks_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.tasks_ = tasks_;
+        } else {
+          result.tasks_ = tasksBuilder_.build();
+        }
+        if (txTasksBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            txTasks_ = java.util.Collections.unmodifiableList(txTasks_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.txTasks_ = txTasks_;
+        } else {
+          result.txTasks_ = txTasksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.poolParams_ = poolParamsBuilder_ == null
+              ? poolParams_
+              : poolParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.taskParams_ = taskParamsBuilder_ == null
+              ? taskParams_
+              : taskParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.GenesisProto.GenesisState) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.GenesisProto.GenesisState other) {
+        if (other == com.shentu.oracle.v1alpha1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (operatorsBuilder_ == null) {
+          if (!other.operators_.isEmpty()) {
+            if (operators_.isEmpty()) {
+              operators_ = other.operators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOperatorsIsMutable();
+              operators_.addAll(other.operators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.operators_.isEmpty()) {
+            if (operatorsBuilder_.isEmpty()) {
+              operatorsBuilder_.dispose();
+              operatorsBuilder_ = null;
+              operators_ = other.operators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              operatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOperatorsFieldBuilder() : null;
+            } else {
+              operatorsBuilder_.addAllMessages(other.operators_);
+            }
+          }
+        }
+        if (totalCollateralBuilder_ == null) {
+          if (!other.totalCollateral_.isEmpty()) {
+            if (totalCollateral_.isEmpty()) {
+              totalCollateral_ = other.totalCollateral_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTotalCollateralIsMutable();
+              totalCollateral_.addAll(other.totalCollateral_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalCollateral_.isEmpty()) {
+            if (totalCollateralBuilder_.isEmpty()) {
+              totalCollateralBuilder_.dispose();
+              totalCollateralBuilder_ = null;
+              totalCollateral_ = other.totalCollateral_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              totalCollateralBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalCollateralFieldBuilder() : null;
+            } else {
+              totalCollateralBuilder_.addAllMessages(other.totalCollateral_);
+            }
+          }
+        }
+        if (other.hasPoolParams()) {
+          mergePoolParams(other.getPoolParams());
+        }
+        if (other.hasTaskParams()) {
+          mergeTaskParams(other.getTaskParams());
+        }
+        if (withdrawsBuilder_ == null) {
+          if (!other.withdraws_.isEmpty()) {
+            if (withdraws_.isEmpty()) {
+              withdraws_ = other.withdraws_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureWithdrawsIsMutable();
+              withdraws_.addAll(other.withdraws_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.withdraws_.isEmpty()) {
+            if (withdrawsBuilder_.isEmpty()) {
+              withdrawsBuilder_.dispose();
+              withdrawsBuilder_ = null;
+              withdraws_ = other.withdraws_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              withdrawsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWithdrawsFieldBuilder() : null;
+            } else {
+              withdrawsBuilder_.addAllMessages(other.withdraws_);
+            }
+          }
+        }
+        if (tasksBuilder_ == null) {
+          if (!other.tasks_.isEmpty()) {
+            if (tasks_.isEmpty()) {
+              tasks_ = other.tasks_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureTasksIsMutable();
+              tasks_.addAll(other.tasks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tasks_.isEmpty()) {
+            if (tasksBuilder_.isEmpty()) {
+              tasksBuilder_.dispose();
+              tasksBuilder_ = null;
+              tasks_ = other.tasks_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              tasksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTasksFieldBuilder() : null;
+            } else {
+              tasksBuilder_.addAllMessages(other.tasks_);
+            }
+          }
+        }
+        if (txTasksBuilder_ == null) {
+          if (!other.txTasks_.isEmpty()) {
+            if (txTasks_.isEmpty()) {
+              txTasks_ = other.txTasks_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureTxTasksIsMutable();
+              txTasks_.addAll(other.txTasks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.txTasks_.isEmpty()) {
+            if (txTasksBuilder_.isEmpty()) {
+              txTasksBuilder_.dispose();
+              txTasksBuilder_ = null;
+              txTasks_ = other.txTasks_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              txTasksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTxTasksFieldBuilder() : null;
+            } else {
+              txTasksBuilder_.addAllMessages(other.txTasks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.oracle.v1alpha1.OracleProto.Operator m =
+                    input.readMessage(
+                        com.shentu.oracle.v1alpha1.OracleProto.Operator.parser(),
+                        extensionRegistry);
+                if (operatorsBuilder_ == null) {
+                  ensureOperatorsIsMutable();
+                  operators_.add(m);
+                } else {
+                  operatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (totalCollateralBuilder_ == null) {
+                  ensureTotalCollateralIsMutable();
+                  totalCollateral_.add(m);
+                } else {
+                  totalCollateralBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPoolParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getTaskParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.shentu.oracle.v1alpha1.OracleProto.Withdraw m =
+                    input.readMessage(
+                        com.shentu.oracle.v1alpha1.OracleProto.Withdraw.parser(),
+                        extensionRegistry);
+                if (withdrawsBuilder_ == null) {
+                  ensureWithdrawsIsMutable();
+                  withdraws_.add(m);
+                } else {
+                  withdrawsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.shentu.oracle.v1alpha1.OracleProto.Task m =
+                    input.readMessage(
+                        com.shentu.oracle.v1alpha1.OracleProto.Task.parser(),
+                        extensionRegistry);
+                if (tasksBuilder_ == null) {
+                  ensureTasksIsMutable();
+                  tasks_.add(m);
+                } else {
+                  tasksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.shentu.oracle.v1alpha1.OracleProto.TxTask m =
+                    input.readMessage(
+                        com.shentu.oracle.v1alpha1.OracleProto.TxTask.parser(),
+                        extensionRegistry);
+                if (txTasksBuilder_ == null) {
+                  ensureTxTasksIsMutable();
+                  txTasks_.add(m);
+                } else {
+                  txTasksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> operators_ =
+        java.util.Collections.emptyList();
+      private void ensureOperatorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          operators_ = new java.util.ArrayList<com.shentu.oracle.v1alpha1.OracleProto.Operator>(operators_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> operatorsBuilder_;
+
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> getOperatorsList() {
+        if (operatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(operators_);
+        } else {
+          return operatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public int getOperatorsCount() {
+        if (operatorsBuilder_ == null) {
+          return operators_.size();
+        } else {
+          return operatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator getOperators(int index) {
+        if (operatorsBuilder_ == null) {
+          return operators_.get(index);
+        } else {
+          return operatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder setOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperatorsIsMutable();
+          operators_.set(index, value);
+          onChanged();
+        } else {
+          operatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder setOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          operatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder addOperators(com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperatorsIsMutable();
+          operators_.add(value);
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder addOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperatorsIsMutable();
+          operators_.add(index, value);
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder addOperators(
+          com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder addOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder addAllOperators(
+          java.lang.Iterable<? extends com.shentu.oracle.v1alpha1.OracleProto.Operator> values) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, operators_);
+          onChanged();
+        } else {
+          operatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder clearOperators() {
+        if (operatorsBuilder_ == null) {
+          operators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          operatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public Builder removeOperators(int index) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.remove(index);
+          onChanged();
+        } else {
+          operatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder getOperatorsBuilder(
+          int index) {
+        return getOperatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorsOrBuilder(
+          int index) {
+        if (operatorsBuilder_ == null) {
+          return operators_.get(index);  } else {
+          return operatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+           getOperatorsOrBuilderList() {
+        if (operatorsBuilder_ != null) {
+          return operatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(operators_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder addOperatorsBuilder() {
+        return getOperatorsFieldBuilder().addBuilder(
+            com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder addOperatorsBuilder(
+          int index) {
+        return getOperatorsFieldBuilder().addBuilder(
+            index, com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"operators&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder> 
+           getOperatorsBuilderList() {
+        return getOperatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+          getOperatorsFieldBuilder() {
+        if (operatorsBuilder_ == null) {
+          operatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder>(
+                  operators_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          operators_ = null;
+        }
+        return operatorsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalCollateral_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalCollateralIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          totalCollateral_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(totalCollateral_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalCollateralBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalCollateralList() {
+        if (totalCollateralBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalCollateral_);
+        } else {
+          return totalCollateralBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getTotalCollateralCount() {
+        if (totalCollateralBuilder_ == null) {
+          return totalCollateral_.size();
+        } else {
+          return totalCollateralBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalCollateral(int index) {
+        if (totalCollateralBuilder_ == null) {
+          return totalCollateral_.get(index);
+        } else {
+          return totalCollateralBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTotalCollateral(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalCollateralBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.set(index, value);
+          onChanged();
+        } else {
+          totalCollateralBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setTotalCollateral(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalCollateralBuilder_ == null) {
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalCollateralBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalCollateral(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalCollateralBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.add(value);
+          onChanged();
+        } else {
+          totalCollateralBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalCollateral(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalCollateralBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.add(index, value);
+          onChanged();
+        } else {
+          totalCollateralBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalCollateral(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalCollateralBuilder_ == null) {
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalCollateralBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addTotalCollateral(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalCollateralBuilder_ == null) {
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalCollateralBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllTotalCollateral(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (totalCollateralBuilder_ == null) {
+          ensureTotalCollateralIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalCollateral_);
+          onChanged();
+        } else {
+          totalCollateralBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearTotalCollateral() {
+        if (totalCollateralBuilder_ == null) {
+          totalCollateral_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          totalCollateralBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeTotalCollateral(int index) {
+        if (totalCollateralBuilder_ == null) {
+          ensureTotalCollateralIsMutable();
+          totalCollateral_.remove(index);
+          onChanged();
+        } else {
+          totalCollateralBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalCollateralBuilder(
+          int index) {
+        return getTotalCollateralFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalCollateralOrBuilder(
+          int index) {
+        if (totalCollateralBuilder_ == null) {
+          return totalCollateral_.get(index);  } else {
+          return totalCollateralBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTotalCollateralOrBuilderList() {
+        if (totalCollateralBuilder_ != null) {
+          return totalCollateralBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalCollateral_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalCollateralBuilder() {
+        return getTotalCollateralFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalCollateralBuilder(
+          int index) {
+        return getTotalCollateralFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin total_collateral = 2 [json_name = "totalCollateral", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"total_collateral&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTotalCollateralBuilderList() {
+        return getTotalCollateralFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalCollateralFieldBuilder() {
+        if (totalCollateralBuilder_ == null) {
+          totalCollateralBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  totalCollateral_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalCollateral_ = null;
+        }
+        return totalCollateralBuilder_;
+      }
+
+      private com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams poolParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder> poolParamsBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       * @return Whether the poolParams field is set.
+       */
+      public boolean hasPoolParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       * @return The poolParams.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams getPoolParams() {
+        if (poolParamsBuilder_ == null) {
+          return poolParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+        } else {
+          return poolParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      public Builder setPoolParams(com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolParams_ = value;
+        } else {
+          poolParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      public Builder setPoolParams(
+          com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder builderForValue) {
+        if (poolParamsBuilder_ == null) {
+          poolParams_ = builderForValue.build();
+        } else {
+          poolParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      public Builder mergePoolParams(com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            poolParams_ != null &&
+            poolParams_ != com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance()) {
+            getPoolParamsBuilder().mergeFrom(value);
+          } else {
+            poolParams_ = value;
+          }
+        } else {
+          poolParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      public Builder clearPoolParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder getPoolParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPoolParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder getPoolParamsOrBuilder() {
+        if (poolParamsBuilder_ != null) {
+          return poolParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return poolParams_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 3 [json_name = "poolParams", (.gogoproto.moretags) = "yaml:&#92;"pool_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder> 
+          getPoolParamsFieldBuilder() {
+        if (poolParamsBuilder_ == null) {
+          poolParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder>(
+                  getPoolParams(),
+                  getParentForChildren(),
+                  isClean());
+          poolParams_ = null;
+        }
+        return poolParamsBuilder_;
+      }
+
+      private com.shentu.oracle.v1alpha1.OracleProto.TaskParams taskParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TaskParams, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder> taskParamsBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       * @return Whether the taskParams field is set.
+       */
+      public boolean hasTaskParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       * @return The taskParams.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskParams getTaskParams() {
+        if (taskParamsBuilder_ == null) {
+          return taskParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+        } else {
+          return taskParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      public Builder setTaskParams(com.shentu.oracle.v1alpha1.OracleProto.TaskParams value) {
+        if (taskParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          taskParams_ = value;
+        } else {
+          taskParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      public Builder setTaskParams(
+          com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder builderForValue) {
+        if (taskParamsBuilder_ == null) {
+          taskParams_ = builderForValue.build();
+        } else {
+          taskParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      public Builder mergeTaskParams(com.shentu.oracle.v1alpha1.OracleProto.TaskParams value) {
+        if (taskParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            taskParams_ != null &&
+            taskParams_ != com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance()) {
+            getTaskParamsBuilder().mergeFrom(value);
+          } else {
+            taskParams_ = value;
+          }
+        } else {
+          taskParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      public Builder clearTaskParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        taskParams_ = null;
+        if (taskParamsBuilder_ != null) {
+          taskParamsBuilder_.dispose();
+          taskParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder getTaskParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getTaskParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder getTaskParamsOrBuilder() {
+        if (taskParamsBuilder_ != null) {
+          return taskParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return taskParams_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 4 [json_name = "taskParams", (.gogoproto.moretags) = "yaml:&#92;"task_params&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TaskParams, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder> 
+          getTaskParamsFieldBuilder() {
+        if (taskParamsBuilder_ == null) {
+          taskParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.TaskParams, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder>(
+                  getTaskParams(),
+                  getParentForChildren(),
+                  isClean());
+          taskParams_ = null;
+        }
+        return taskParamsBuilder_;
+      }
+
+      private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> withdraws_ =
+        java.util.Collections.emptyList();
+      private void ensureWithdrawsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          withdraws_ = new java.util.ArrayList<com.shentu.oracle.v1alpha1.OracleProto.Withdraw>(withdraws_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Withdraw, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder, com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> withdrawsBuilder_;
+
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> getWithdrawsList() {
+        if (withdrawsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(withdraws_);
+        } else {
+          return withdrawsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public int getWithdrawsCount() {
+        if (withdrawsBuilder_ == null) {
+          return withdraws_.size();
+        } else {
+          return withdrawsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw getWithdraws(int index) {
+        if (withdrawsBuilder_ == null) {
+          return withdraws_.get(index);
+        } else {
+          return withdrawsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder setWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw value) {
+        if (withdrawsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawsIsMutable();
+          withdraws_.set(index, value);
+          onChanged();
+        } else {
+          withdrawsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder setWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder builderForValue) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder addWithdraws(com.shentu.oracle.v1alpha1.OracleProto.Withdraw value) {
+        if (withdrawsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawsIsMutable();
+          withdraws_.add(value);
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder addWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw value) {
+        if (withdrawsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawsIsMutable();
+          withdraws_.add(index, value);
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder addWithdraws(
+          com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder builderForValue) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.add(builderForValue.build());
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder addWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder builderForValue) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder addAllWithdraws(
+          java.lang.Iterable<? extends com.shentu.oracle.v1alpha1.OracleProto.Withdraw> values) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, withdraws_);
+          onChanged();
+        } else {
+          withdrawsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder clearWithdraws() {
+        if (withdrawsBuilder_ == null) {
+          withdraws_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          withdrawsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public Builder removeWithdraws(int index) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.remove(index);
+          onChanged();
+        } else {
+          withdrawsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder getWithdrawsBuilder(
+          int index) {
+        return getWithdrawsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder getWithdrawsOrBuilder(
+          int index) {
+        if (withdrawsBuilder_ == null) {
+          return withdraws_.get(index);  } else {
+          return withdrawsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+           getWithdrawsOrBuilderList() {
+        if (withdrawsBuilder_ != null) {
+          return withdrawsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(withdraws_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder addWithdrawsBuilder() {
+        return getWithdrawsFieldBuilder().addBuilder(
+            com.shentu.oracle.v1alpha1.OracleProto.Withdraw.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder addWithdrawsBuilder(
+          int index) {
+        return getWithdrawsFieldBuilder().addBuilder(
+            index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 5 [json_name = "withdraws", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"withdraws&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder> 
+           getWithdrawsBuilderList() {
+        return getWithdrawsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Withdraw, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder, com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+          getWithdrawsFieldBuilder() {
+        if (withdrawsBuilder_ == null) {
+          withdrawsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Withdraw, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder, com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder>(
+                  withdraws_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          withdraws_ = null;
+        }
+        return withdrawsBuilder_;
+      }
+
+      private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Task> tasks_ =
+        java.util.Collections.emptyList();
+      private void ensureTasksIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          tasks_ = new java.util.ArrayList<com.shentu.oracle.v1alpha1.OracleProto.Task>(tasks_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Task, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> tasksBuilder_;
+
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Task> getTasksList() {
+        if (tasksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tasks_);
+        } else {
+          return tasksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public int getTasksCount() {
+        if (tasksBuilder_ == null) {
+          return tasks_.size();
+        } else {
+          return tasksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Task getTasks(int index) {
+        if (tasksBuilder_ == null) {
+          return tasks_.get(index);
+        } else {
+          return tasksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder setTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Task value) {
+        if (tasksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTasksIsMutable();
+          tasks_.set(index, value);
+          onChanged();
+        } else {
+          tasksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder setTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder builderForValue) {
+        if (tasksBuilder_ == null) {
+          ensureTasksIsMutable();
+          tasks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tasksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder addTasks(com.shentu.oracle.v1alpha1.OracleProto.Task value) {
+        if (tasksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTasksIsMutable();
+          tasks_.add(value);
+          onChanged();
+        } else {
+          tasksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder addTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Task value) {
+        if (tasksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTasksIsMutable();
+          tasks_.add(index, value);
+          onChanged();
+        } else {
+          tasksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder addTasks(
+          com.shentu.oracle.v1alpha1.OracleProto.Task.Builder builderForValue) {
+        if (tasksBuilder_ == null) {
+          ensureTasksIsMutable();
+          tasks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tasksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder addTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder builderForValue) {
+        if (tasksBuilder_ == null) {
+          ensureTasksIsMutable();
+          tasks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tasksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder addAllTasks(
+          java.lang.Iterable<? extends com.shentu.oracle.v1alpha1.OracleProto.Task> values) {
+        if (tasksBuilder_ == null) {
+          ensureTasksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tasks_);
+          onChanged();
+        } else {
+          tasksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder clearTasks() {
+        if (tasksBuilder_ == null) {
+          tasks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          tasksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public Builder removeTasks(int index) {
+        if (tasksBuilder_ == null) {
+          ensureTasksIsMutable();
+          tasks_.remove(index);
+          onChanged();
+        } else {
+          tasksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Task.Builder getTasksBuilder(
+          int index) {
+        return getTasksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder getTasksOrBuilder(
+          int index) {
+        if (tasksBuilder_ == null) {
+          return tasks_.get(index);  } else {
+          return tasksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> 
+           getTasksOrBuilderList() {
+        if (tasksBuilder_ != null) {
+          return tasksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tasks_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Task.Builder addTasksBuilder() {
+        return getTasksFieldBuilder().addBuilder(
+            com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Task.Builder addTasksBuilder(
+          int index) {
+        return getTasksFieldBuilder().addBuilder(
+            index, com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Task tasks = 6 [json_name = "tasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tasks&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Task.Builder> 
+           getTasksBuilderList() {
+        return getTasksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Task, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> 
+          getTasksFieldBuilder() {
+        if (tasksBuilder_ == null) {
+          tasksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Task, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder>(
+                  tasks_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tasks_ = null;
+        }
+        return tasksBuilder_;
+      }
+
+      private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.TxTask> txTasks_ =
+        java.util.Collections.emptyList();
+      private void ensureTxTasksIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          txTasks_ = new java.util.ArrayList<com.shentu.oracle.v1alpha1.OracleProto.TxTask>(txTasks_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TxTask, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder, com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> txTasksBuilder_;
+
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.TxTask> getTxTasksList() {
+        if (txTasksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(txTasks_);
+        } else {
+          return txTasksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public int getTxTasksCount() {
+        if (txTasksBuilder_ == null) {
+          return txTasks_.size();
+        } else {
+          return txTasksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTask getTxTasks(int index) {
+        if (txTasksBuilder_ == null) {
+          return txTasks_.get(index);
+        } else {
+          return txTasksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder setTxTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.TxTask value) {
+        if (txTasksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxTasksIsMutable();
+          txTasks_.set(index, value);
+          onChanged();
+        } else {
+          txTasksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder setTxTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder builderForValue) {
+        if (txTasksBuilder_ == null) {
+          ensureTxTasksIsMutable();
+          txTasks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          txTasksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder addTxTasks(com.shentu.oracle.v1alpha1.OracleProto.TxTask value) {
+        if (txTasksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxTasksIsMutable();
+          txTasks_.add(value);
+          onChanged();
+        } else {
+          txTasksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder addTxTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.TxTask value) {
+        if (txTasksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTxTasksIsMutable();
+          txTasks_.add(index, value);
+          onChanged();
+        } else {
+          txTasksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder addTxTasks(
+          com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder builderForValue) {
+        if (txTasksBuilder_ == null) {
+          ensureTxTasksIsMutable();
+          txTasks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          txTasksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder addTxTasks(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder builderForValue) {
+        if (txTasksBuilder_ == null) {
+          ensureTxTasksIsMutable();
+          txTasks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          txTasksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder addAllTxTasks(
+          java.lang.Iterable<? extends com.shentu.oracle.v1alpha1.OracleProto.TxTask> values) {
+        if (txTasksBuilder_ == null) {
+          ensureTxTasksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, txTasks_);
+          onChanged();
+        } else {
+          txTasksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder clearTxTasks() {
+        if (txTasksBuilder_ == null) {
+          txTasks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          txTasksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public Builder removeTxTasks(int index) {
+        if (txTasksBuilder_ == null) {
+          ensureTxTasksIsMutable();
+          txTasks_.remove(index);
+          onChanged();
+        } else {
+          txTasksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder getTxTasksBuilder(
+          int index) {
+        return getTxTasksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder getTxTasksOrBuilder(
+          int index) {
+        if (txTasksBuilder_ == null) {
+          return txTasks_.get(index);  } else {
+          return txTasksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> 
+           getTxTasksOrBuilderList() {
+        if (txTasksBuilder_ != null) {
+          return txTasksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(txTasks_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder addTxTasksBuilder() {
+        return getTxTasksFieldBuilder().addBuilder(
+            com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder addTxTasksBuilder(
+          int index) {
+        return getTxTasksFieldBuilder().addBuilder(
+            index, com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.TxTask tx_tasks = 7 [json_name = "txTasks", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"tx_tasks&#92;""];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder> 
+           getTxTasksBuilderList() {
+        return getTxTasksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TxTask, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder, com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> 
+          getTxTasksFieldBuilder() {
+        if (txTasksBuilder_ == null) {
+          txTasksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.TxTask, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder, com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder>(
+                  txTasks_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          txTasks_ = null;
+        }
+        return txTasksBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.GenesisState)
+    private static final com.shentu.oracle.v1alpha1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.GenesisProto.GenesisState();
+    }
+
+    public static com.shentu.oracle.v1alpha1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_GenesisState_fieldAccessorTable;
 
@@ -49,13 +2719,13 @@ public final class GenesisProto {
       "e.v1alpha1.TaskB\024\310\336\037\000\362\336\037\014yaml:\"tasks\"R\005t" +
       "asks\022R\n\010tx_tasks\030\007 \003(\0132\036.shentu.oracle.v" +
       "1alpha1.TxTaskB\027\310\336\037\000\362\336\037\017yaml:\"tx_tasks\"R" +
-      "\007txTasks:\010\210\240\037\000\350\240\037\000B\327\001\n\032com.shentu.oracle" +
-      ".v1alpha1B\014GenesisProtoP\001Z1github.com/sh" +
-      "entufoundation/shentu/x/oracle/types\242\002\003S" +
-      "OX\252\002\026Shentu.Oracle.V1alpha1\312\002\026Shentu\\Ora" +
-      "cle\\V1alpha1\342\002\"Shentu\\Oracle\\V1alpha1\\GP" +
-      "BMetadata\352\002\030Shentu::Oracle::V1alpha1b\006pr" +
-      "oto3"
+      "\007txTasks:\010\210\240\037\000\350\240\037\000B\325\001\n\032com.shentu.oracle" +
+      ".v1alpha1B\014GenesisProtoZ1github.com/shen" +
+      "tufoundation/shentu/x/oracle/types\242\002\003SOX" +
+      "\252\002\026Shentu.Oracle.V1alpha1\312\002\026Shentu\\Oracl" +
+      "e\\V1alpha1\342\002\"Shentu\\Oracle\\V1alpha1\\GPBM" +
+      "etadata\352\002\030Shentu::Oracle::V1alpha1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,14 +14,1400 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface UserValidatorPreferencesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * user account address
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * user account address
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * Request type for UserValidatorPreferences.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest}
+   */
+  public static final class UserValidatorPreferencesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest)
+      UserValidatorPreferencesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserValidatorPreferencesRequest.newBuilder() to construct.
+    private UserValidatorPreferencesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserValidatorPreferencesRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserValidatorPreferencesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.class, com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * user account address
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * user account address
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest other = (com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request type for UserValidatorPreferences.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest)
+        com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.class, com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest build() {
+        com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest buildPartial() {
+        com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest result = new com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest other) {
+        if (other == com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * user account address
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * user account address
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * user account address
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * user account address
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * user account address
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.UserValidatorPreferencesRequest)
+    private static final com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserValidatorPreferencesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UserValidatorPreferencesRequest>() {
+      @java.lang.Override
+      public UserValidatorPreferencesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserValidatorPreferencesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserValidatorPreferencesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserValidatorPreferencesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> 
+        getPreferencesList();
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index);
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    int getPreferencesCount();
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+        getPreferencesOrBuilderList();
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Response type the QueryUserValidatorPreferences query request
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse}
+   */
+  public static final class UserValidatorPreferencesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse)
+      UserValidatorPreferencesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserValidatorPreferencesResponse.newBuilder() to construct.
+    private UserValidatorPreferencesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserValidatorPreferencesResponse() {
+      preferences_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserValidatorPreferencesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.class, com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.Builder.class);
+    }
+
+    public static final int PREFERENCES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> preferences_;
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> getPreferencesList() {
+      return preferences_;
+    }
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+        getPreferencesOrBuilderList() {
+      return preferences_;
+    }
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPreferencesCount() {
+      return preferences_.size();
+    }
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index) {
+      return preferences_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+        int index) {
+      return preferences_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < preferences_.size(); i++) {
+        output.writeMessage(1, preferences_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < preferences_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, preferences_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse other = (com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse) obj;
+
+      if (!getPreferencesList()
+          .equals(other.getPreferencesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPreferencesCount() > 0) {
+        hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getPreferencesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response type the QueryUserValidatorPreferences query request
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse)
+        com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.class, com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (preferencesBuilder_ == null) {
+          preferences_ = java.util.Collections.emptyList();
+        } else {
+          preferences_ = null;
+          preferencesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse getDefaultInstanceForType() {
+        return com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse build() {
+        com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse buildPartial() {
+        com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse result = new com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse result) {
+        if (preferencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            preferences_ = java.util.Collections.unmodifiableList(preferences_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.preferences_ = preferences_;
+        } else {
+          result.preferences_ = preferencesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse) {
+          return mergeFrom((com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse other) {
+        if (other == com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse.getDefaultInstance()) return this;
+        if (preferencesBuilder_ == null) {
+          if (!other.preferences_.isEmpty()) {
+            if (preferences_.isEmpty()) {
+              preferences_ = other.preferences_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePreferencesIsMutable();
+              preferences_.addAll(other.preferences_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.preferences_.isEmpty()) {
+            if (preferencesBuilder_.isEmpty()) {
+              preferencesBuilder_.dispose();
+              preferencesBuilder_ = null;
+              preferences_ = other.preferences_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              preferencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPreferencesFieldBuilder() : null;
+            } else {
+              preferencesBuilder_.addAllMessages(other.preferences_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference m =
+                    input.readMessage(
+                        com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.parser(),
+                        extensionRegistry);
+                if (preferencesBuilder_ == null) {
+                  ensurePreferencesIsMutable();
+                  preferences_.add(m);
+                } else {
+                  preferencesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> preferences_ =
+        java.util.Collections.emptyList();
+      private void ensurePreferencesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          preferences_ = new java.util.ArrayList<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference>(preferences_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> preferencesBuilder_;
+
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> getPreferencesList() {
+        if (preferencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(preferences_);
+        } else {
+          return preferencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPreferencesCount() {
+        if (preferencesBuilder_ == null) {
+          return preferences_.size();
+        } else {
+          return preferencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference getPreferences(int index) {
+        if (preferencesBuilder_ == null) {
+          return preferences_.get(index);
+        } else {
+          return preferencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.set(index, value);
+          onChanged();
+        } else {
+          preferencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPreferences(com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.add(value);
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference value) {
+        if (preferencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePreferencesIsMutable();
+          preferences_.add(index, value);
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPreferences(
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.add(builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPreferences(
+          int index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder builderForValue) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          preferencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPreferences(
+          java.lang.Iterable<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference> values) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, preferences_);
+          onChanged();
+        } else {
+          preferencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPreferences() {
+        if (preferencesBuilder_ == null) {
+          preferences_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          preferencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePreferences(int index) {
+        if (preferencesBuilder_ == null) {
+          ensurePreferencesIsMutable();
+          preferences_.remove(index);
+          onChanged();
+        } else {
+          preferencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder getPreferencesBuilder(
+          int index) {
+        return getPreferencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder getPreferencesOrBuilder(
+          int index) {
+        if (preferencesBuilder_ == null) {
+          return preferences_.get(index);  } else {
+          return preferencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+           getPreferencesOrBuilderList() {
+        if (preferencesBuilder_ != null) {
+          return preferencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(preferences_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder addPreferencesBuilder() {
+        return getPreferencesFieldBuilder().addBuilder(
+            com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder addPreferencesBuilder(
+          int index) {
+        return getPreferencesFieldBuilder().addBuilder(
+            index, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.valsetpref.v1beta1.ValidatorPreference preferences = 1 [json_name = "preferences", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder> 
+           getPreferencesBuilderList() {
+        return getPreferencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder> 
+          getPreferencesFieldBuilder() {
+        if (preferencesBuilder_ == null) {
+          preferencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreference.Builder, com.osmosis.valsetpref.v1beta1.StateProto.ValidatorPreferenceOrBuilder>(
+                  preferences_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          preferences_ = null;
+        }
+        return preferencesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.valsetpref.v1beta1.UserValidatorPreferencesResponse)
+    private static final com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse();
+    }
+
+    public static com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UserValidatorPreferencesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UserValidatorPreferencesResponse>() {
+      @java.lang.Override
+      public UserValidatorPreferencesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserValidatorPreferencesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserValidatorPreferencesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.valsetpref.v1beta1.QueryProto.UserValidatorPreferencesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_valsetpref_v1beta1_UserValidatorPreferencesResponse_fieldAccessorTable;
 
@@ -46,14 +1432,14 @@ public final class QueryProto {
       "lsetpref.v1beta1.UserValidatorPreference" +
       "sRequest\032<.osmosis.valsetpref.v1beta1.Us" +
       "erValidatorPreferencesResponse\".\202\323\344\223\002(\022&" +
-      "/osmosis/valset-pref/v1beta1/{address}B\377" +
+      "/osmosis/valset-pref/v1beta1/{address}B\375" +
       "\001\n\036com.osmosis.valsetpref.v1beta1B\nQuery" +
-      "ProtoP\001ZCgithub.com/osmosis-labs/osmosis" +
-      "/v15/x/valset-pref/client/queryproto\242\002\003O" +
-      "VX\252\002\032Osmosis.Valsetpref.V1beta1\312\002\032Osmosi" +
-      "s\\Valsetpref\\V1beta1\342\002&Osmosis\\Valsetpre" +
-      "f\\V1beta1\\GPBMetadata\352\002\034Osmosis::Valsetp" +
-      "ref::V1beta1\310\341\036\000b\006proto3"
+      "ProtoZCgithub.com/osmosis-labs/osmosis/v" +
+      "15/x/valset-pref/client/queryproto\242\002\003OVX" +
+      "\252\002\032Osmosis.Valsetpref.V1beta1\312\002\032Osmosis\\" +
+      "Valsetpref\\V1beta1\342\002&Osmosis\\Valsetpref\\" +
+      "V1beta1\\GPBMetadata\352\002\034Osmosis::Valsetpre" +
+      "f::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

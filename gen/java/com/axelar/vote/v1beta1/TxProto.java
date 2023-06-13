@@ -14,14 +14,1312 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface VoteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.vote.v1beta1.VoteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+     * @return The pollId.
+     */
+    long getPollId();
+
+    /**
+     * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return Whether the vote field is set.
+     */
+    boolean hasVote();
+    /**
+     * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return The vote.
+     */
+    com.google.protobuf.Any getVote();
+    /**
+     * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getVoteOrBuilder();
+  }
+  /**
+   * Protobuf type {@code axelar.vote.v1beta1.VoteRequest}
+   */
+  public static final class VoteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.vote.v1beta1.VoteRequest)
+      VoteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VoteRequest.newBuilder() to construct.
+    private VoteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VoteRequest() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoteRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.vote.v1beta1.TxProto.VoteRequest.class, com.axelar.vote.v1beta1.TxProto.VoteRequest.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int POLL_ID_FIELD_NUMBER = 4;
+    private long pollId_ = 0L;
+    /**
+     * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+     * @return The pollId.
+     */
+    @java.lang.Override
+    public long getPollId() {
+      return pollId_;
+    }
+
+    public static final int VOTE_FIELD_NUMBER = 5;
+    private com.google.protobuf.Any vote_;
+    /**
+     * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return Whether the vote field is set.
+     */
+    @java.lang.Override
+    public boolean hasVote() {
+      return vote_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     * @return The vote.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getVote() {
+      return vote_ == null ? com.google.protobuf.Any.getDefaultInstance() : vote_;
+    }
+    /**
+     * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getVoteOrBuilder() {
+      return vote_ == null ? com.google.protobuf.Any.getDefaultInstance() : vote_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (pollId_ != 0L) {
+        output.writeUInt64(4, pollId_);
+      }
+      if (vote_ != null) {
+        output.writeMessage(5, getVote());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (pollId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, pollId_);
+      }
+      if (vote_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getVote());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.vote.v1beta1.TxProto.VoteRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.vote.v1beta1.TxProto.VoteRequest other = (com.axelar.vote.v1beta1.TxProto.VoteRequest) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (getPollId()
+          != other.getPollId()) return false;
+      if (hasVote() != other.hasVote()) return false;
+      if (hasVote()) {
+        if (!getVote()
+            .equals(other.getVote())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + POLL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPollId());
+      if (hasVote()) {
+        hash = (37 * hash) + VOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getVote().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.vote.v1beta1.TxProto.VoteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.vote.v1beta1.VoteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.vote.v1beta1.VoteRequest)
+        com.axelar.vote.v1beta1.TxProto.VoteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.vote.v1beta1.TxProto.VoteRequest.class, com.axelar.vote.v1beta1.TxProto.VoteRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.vote.v1beta1.TxProto.VoteRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        pollId_ = 0L;
+        vote_ = null;
+        if (voteBuilder_ != null) {
+          voteBuilder_.dispose();
+          voteBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TxProto.VoteRequest getDefaultInstanceForType() {
+        return com.axelar.vote.v1beta1.TxProto.VoteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TxProto.VoteRequest build() {
+        com.axelar.vote.v1beta1.TxProto.VoteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TxProto.VoteRequest buildPartial() {
+        com.axelar.vote.v1beta1.TxProto.VoteRequest result = new com.axelar.vote.v1beta1.TxProto.VoteRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.vote.v1beta1.TxProto.VoteRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pollId_ = pollId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.vote_ = voteBuilder_ == null
+              ? vote_
+              : voteBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.vote.v1beta1.TxProto.VoteRequest) {
+          return mergeFrom((com.axelar.vote.v1beta1.TxProto.VoteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.vote.v1beta1.TxProto.VoteRequest other) {
+        if (other == com.axelar.vote.v1beta1.TxProto.VoteRequest.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.getPollId() != 0L) {
+          setPollId(other.getPollId());
+        }
+        if (other.hasVote()) {
+          mergeVote(other.getVote());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 32: {
+                pollId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getVoteFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private long pollId_ ;
+      /**
+       * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+       * @return The pollId.
+       */
+      @java.lang.Override
+      public long getPollId() {
+        return pollId_;
+      }
+      /**
+       * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+       * @param value The pollId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPollId(long value) {
+
+        pollId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 poll_id = 4 [json_name = "pollId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/axelarnetwork/axelar-core/x/vote/exported.PollID", (.gogoproto.customname) = "PollID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPollId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pollId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any vote_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> voteBuilder_;
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       * @return Whether the vote field is set.
+       */
+      public boolean hasVote() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       * @return The vote.
+       */
+      public com.google.protobuf.Any getVote() {
+        if (voteBuilder_ == null) {
+          return vote_ == null ? com.google.protobuf.Any.getDefaultInstance() : vote_;
+        } else {
+          return voteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder setVote(com.google.protobuf.Any value) {
+        if (voteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vote_ = value;
+        } else {
+          voteBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder setVote(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (voteBuilder_ == null) {
+          vote_ = builderForValue.build();
+        } else {
+          voteBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder mergeVote(com.google.protobuf.Any value) {
+        if (voteBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            vote_ != null &&
+            vote_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getVoteBuilder().mergeFrom(value);
+          } else {
+            vote_ = value;
+          }
+        } else {
+          voteBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public Builder clearVote() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        vote_ = null;
+        if (voteBuilder_ != null) {
+          voteBuilder_.dispose();
+          voteBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public com.google.protobuf.Any.Builder getVoteBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVoteFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getVoteOrBuilder() {
+        if (voteBuilder_ != null) {
+          return voteBuilder_.getMessageOrBuilder();
+        } else {
+          return vote_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : vote_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any vote = 5 [json_name = "vote", (.cosmos_proto.accepts_interface) = "github.com/cosmos/codec/ProtoMarshaler"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getVoteFieldBuilder() {
+        if (voteBuilder_ == null) {
+          voteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getVote(),
+                  getParentForChildren(),
+                  isClean());
+          vote_ = null;
+        }
+        return voteBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.vote.v1beta1.VoteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.vote.v1beta1.VoteRequest)
+    private static final com.axelar.vote.v1beta1.TxProto.VoteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.vote.v1beta1.TxProto.VoteRequest();
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VoteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<VoteRequest>() {
+      @java.lang.Override
+      public VoteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VoteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VoteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.vote.v1beta1.TxProto.VoteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.vote.v1beta1.VoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string log = 1 [json_name = "log"];</code>
+     * @return The log.
+     */
+    java.lang.String getLog();
+    /**
+     * <code>string log = 1 [json_name = "log"];</code>
+     * @return The bytes for log.
+     */
+    com.google.protobuf.ByteString
+        getLogBytes();
+  }
+  /**
+   * Protobuf type {@code axelar.vote.v1beta1.VoteResponse}
+   */
+  public static final class VoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.vote.v1beta1.VoteResponse)
+      VoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VoteResponse.newBuilder() to construct.
+    private VoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VoteResponse() {
+      log_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.vote.v1beta1.TxProto.VoteResponse.class, com.axelar.vote.v1beta1.TxProto.VoteResponse.Builder.class);
+    }
+
+    public static final int LOG_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object log_ = "";
+    /**
+     * <code>string log = 1 [json_name = "log"];</code>
+     * @return The log.
+     */
+    @java.lang.Override
+    public java.lang.String getLog() {
+      java.lang.Object ref = log_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        log_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string log = 1 [json_name = "log"];</code>
+     * @return The bytes for log.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLogBytes() {
+      java.lang.Object ref = log_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        log_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, log_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(log_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, log_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.vote.v1beta1.TxProto.VoteResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.vote.v1beta1.TxProto.VoteResponse other = (com.axelar.vote.v1beta1.TxProto.VoteResponse) obj;
+
+      if (!getLog()
+          .equals(other.getLog())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOG_FIELD_NUMBER;
+      hash = (53 * hash) + getLog().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.vote.v1beta1.TxProto.VoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.vote.v1beta1.VoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.vote.v1beta1.VoteResponse)
+        com.axelar.vote.v1beta1.TxProto.VoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.vote.v1beta1.TxProto.VoteResponse.class, com.axelar.vote.v1beta1.TxProto.VoteResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.vote.v1beta1.TxProto.VoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        log_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.vote.v1beta1.TxProto.internal_static_axelar_vote_v1beta1_VoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TxProto.VoteResponse getDefaultInstanceForType() {
+        return com.axelar.vote.v1beta1.TxProto.VoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TxProto.VoteResponse build() {
+        com.axelar.vote.v1beta1.TxProto.VoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.vote.v1beta1.TxProto.VoteResponse buildPartial() {
+        com.axelar.vote.v1beta1.TxProto.VoteResponse result = new com.axelar.vote.v1beta1.TxProto.VoteResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.vote.v1beta1.TxProto.VoteResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.log_ = log_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.vote.v1beta1.TxProto.VoteResponse) {
+          return mergeFrom((com.axelar.vote.v1beta1.TxProto.VoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.vote.v1beta1.TxProto.VoteResponse other) {
+        if (other == com.axelar.vote.v1beta1.TxProto.VoteResponse.getDefaultInstance()) return this;
+        if (!other.getLog().isEmpty()) {
+          log_ = other.log_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                log_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object log_ = "";
+      /**
+       * <code>string log = 1 [json_name = "log"];</code>
+       * @return The log.
+       */
+      public java.lang.String getLog() {
+        java.lang.Object ref = log_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          log_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string log = 1 [json_name = "log"];</code>
+       * @return The bytes for log.
+       */
+      public com.google.protobuf.ByteString
+          getLogBytes() {
+        java.lang.Object ref = log_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          log_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string log = 1 [json_name = "log"];</code>
+       * @param value The log to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLog(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        log_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string log = 1 [json_name = "log"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLog() {
+        log_ = getDefaultInstance().getLog();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string log = 1 [json_name = "log"];</code>
+       * @param value The bytes for log to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        log_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.vote.v1beta1.VoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.vote.v1beta1.VoteResponse)
+    private static final com.axelar.vote.v1beta1.TxProto.VoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.vote.v1beta1.TxProto.VoteResponse();
+    }
+
+    public static com.axelar.vote.v1beta1.TxProto.VoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<VoteResponse>() {
+      @java.lang.Override
+      public VoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.vote.v1beta1.TxProto.VoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_vote_v1beta1_VoteRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_vote_v1beta1_VoteRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_vote_v1beta1_VoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_vote_v1beta1_VoteResponse_fieldAccessorTable;
 
@@ -46,12 +1344,12 @@ public final class TxProto {
       "lId\022T\n\004vote\030\005 \001(\0132\024.google.protobuf.AnyB" +
       "*\312\264-&github.com/cosmos/codec/ProtoMarsha" +
       "lerR\004vote:\004\200\265\030\001J\004\010\002\020\003J\004\010\003\020\004\" \n\014VoteRespo" +
-      "nse\022\020\n\003log\030\001 \001(\tR\003logB\307\001\n\027com.axelar.vot" +
-      "e.v1beta1B\007TxProtoP\001Z1github.com/axelarn" +
-      "etwork/axelar-core/x/vote/types\242\002\003AVX\252\002\023" +
-      "Axelar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta" +
-      "1\342\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025Ax" +
-      "elar::Vote::V1beta1\310\341\036\000b\006proto3"
+      "nse\022\020\n\003log\030\001 \001(\tR\003logB\305\001\n\027com.axelar.vot" +
+      "e.v1beta1B\007TxProtoZ1github.com/axelarnet" +
+      "work/axelar-core/x/vote/types\242\002\003AVX\252\002\023Ax" +
+      "elar.Vote.V1beta1\312\002\023Axelar\\Vote\\V1beta1\342" +
+      "\002\037Axelar\\Vote\\V1beta1\\GPBMetadata\352\002\025Axel" +
+      "ar::Vote::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

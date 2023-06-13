@@ -14,9 +14,1382 @@ public final class QuotaProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * IBCTransferStatus status of ibc-transfer quota check for inflow and outflow
+   * </pre>
+   *
+   * Protobuf enum {@code umee.uibc.v1.IBCTransferStatus}
+   */
+  public enum IBCTransferStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * UNSPECIFIED  defines a no-op status.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_UNSPECIFIED = 0;</code>
+     */
+    IBC_TRANSFER_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * DISABLED: all inflow and outflow quota checks are disabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_DISABLED = 1;</code>
+     */
+    IBC_TRANSFER_STATUS_QUOTA_DISABLED(1),
+    /**
+     * <pre>
+     * ENABLED: all inflow and outflow quota checks are enabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_ENABLED = 2;</code>
+     */
+    IBC_TRANSFER_STATUS_QUOTA_ENABLED(2),
+    /**
+     * <pre>
+     * DISABLED OUT: outflow quota check is disabled, while the inflow quota check is enabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_OUT_DISABLED = 3;</code>
+     */
+    IBC_TRANSFER_STATUS_QUOTA_OUT_DISABLED(3),
+    /**
+     * <pre>
+     * DISABLED IN: inflow quota check is disabled, while the outflow quota check is enabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_IN_DISABLED = 4;</code>
+     */
+    IBC_TRANSFER_STATUS_QUOTA_IN_DISABLED(4),
+    /**
+     * <pre>
+     * PAUSED: all IBC transfers are paused.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_TRANSFERS_PAUSED = 5;</code>
+     */
+    IBC_TRANSFER_STATUS_TRANSFERS_PAUSED(5),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * UNSPECIFIED  defines a no-op status.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int IBC_TRANSFER_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * DISABLED: all inflow and outflow quota checks are disabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_DISABLED = 1;</code>
+     */
+    public static final int IBC_TRANSFER_STATUS_QUOTA_DISABLED_VALUE = 1;
+    /**
+     * <pre>
+     * ENABLED: all inflow and outflow quota checks are enabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_ENABLED = 2;</code>
+     */
+    public static final int IBC_TRANSFER_STATUS_QUOTA_ENABLED_VALUE = 2;
+    /**
+     * <pre>
+     * DISABLED OUT: outflow quota check is disabled, while the inflow quota check is enabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_OUT_DISABLED = 3;</code>
+     */
+    public static final int IBC_TRANSFER_STATUS_QUOTA_OUT_DISABLED_VALUE = 3;
+    /**
+     * <pre>
+     * DISABLED IN: inflow quota check is disabled, while the outflow quota check is enabled.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_QUOTA_IN_DISABLED = 4;</code>
+     */
+    public static final int IBC_TRANSFER_STATUS_QUOTA_IN_DISABLED_VALUE = 4;
+    /**
+     * <pre>
+     * PAUSED: all IBC transfers are paused.
+     * </pre>
+     *
+     * <code>IBC_TRANSFER_STATUS_TRANSFERS_PAUSED = 5;</code>
+     */
+    public static final int IBC_TRANSFER_STATUS_TRANSFERS_PAUSED_VALUE = 5;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IBCTransferStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static IBCTransferStatus forNumber(int value) {
+      switch (value) {
+        case 0: return IBC_TRANSFER_STATUS_UNSPECIFIED;
+        case 1: return IBC_TRANSFER_STATUS_QUOTA_DISABLED;
+        case 2: return IBC_TRANSFER_STATUS_QUOTA_ENABLED;
+        case 3: return IBC_TRANSFER_STATUS_QUOTA_OUT_DISABLED;
+        case 4: return IBC_TRANSFER_STATUS_QUOTA_IN_DISABLED;
+        case 5: return IBC_TRANSFER_STATUS_TRANSFERS_PAUSED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IBCTransferStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IBCTransferStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IBCTransferStatus>() {
+            public IBCTransferStatus findValueByNumber(int number) {
+              return IBCTransferStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.umee.uibc.v1.QuotaProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final IBCTransferStatus[] VALUES = values();
+
+    public static IBCTransferStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private IBCTransferStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:umee.uibc.v1.IBCTransferStatus)
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.uibc.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+     * </pre>
+     *
+     * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+     * @return The enum numeric value on the wire for ibcStatus.
+     */
+    int getIbcStatusValue();
+    /**
+     * <pre>
+     * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+     * </pre>
+     *
+     * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+     * @return The ibcStatus.
+     */
+    com.umee.uibc.v1.QuotaProto.IBCTransferStatus getIbcStatus();
+
+    /**
+     * <pre>
+     * total_quota defines the total outflow limit of ibc-transfer in USD
+     * </pre>
+     *
+     * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The totalQuota.
+     */
+    java.lang.String getTotalQuota();
+    /**
+     * <pre>
+     * total_quota defines the total outflow limit of ibc-transfer in USD
+     * </pre>
+     *
+     * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for totalQuota.
+     */
+    com.google.protobuf.ByteString
+        getTotalQuotaBytes();
+
+    /**
+     * <pre>
+     * token_quota defines the outflow limit per token in USD
+     * </pre>
+     *
+     * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The tokenQuota.
+     */
+    java.lang.String getTokenQuota();
+    /**
+     * <pre>
+     * token_quota defines the outflow limit per token in USD
+     * </pre>
+     *
+     * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for tokenQuota.
+     */
+    com.google.protobuf.ByteString
+        getTokenQuotaBytes();
+
+    /**
+     * <pre>
+     * quota_duration defines quota expires for each ibc-transfer denom in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the quotaDuration field is set.
+     */
+    boolean hasQuotaDuration();
+    /**
+     * <pre>
+     * quota_duration defines quota expires for each ibc-transfer denom in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The quotaDuration.
+     */
+    com.google.protobuf.Duration getQuotaDuration();
+    /**
+     * <pre>
+     * quota_duration defines quota expires for each ibc-transfer denom in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getQuotaDurationOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params of x/uibc module
+   * </pre>
+   *
+   * Protobuf type {@code umee.uibc.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.uibc.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      ibcStatus_ = 0;
+      totalQuota_ = "";
+      tokenQuota_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.uibc.v1.QuotaProto.internal_static_umee_uibc_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.uibc.v1.QuotaProto.internal_static_umee_uibc_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.uibc.v1.QuotaProto.Params.class, com.umee.uibc.v1.QuotaProto.Params.Builder.class);
+    }
+
+    public static final int IBC_STATUS_FIELD_NUMBER = 1;
+    private int ibcStatus_ = 0;
+    /**
+     * <pre>
+     * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+     * </pre>
+     *
+     * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+     * @return The enum numeric value on the wire for ibcStatus.
+     */
+    @java.lang.Override public int getIbcStatusValue() {
+      return ibcStatus_;
+    }
+    /**
+     * <pre>
+     * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+     * </pre>
+     *
+     * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+     * @return The ibcStatus.
+     */
+    @java.lang.Override public com.umee.uibc.v1.QuotaProto.IBCTransferStatus getIbcStatus() {
+      com.umee.uibc.v1.QuotaProto.IBCTransferStatus result = com.umee.uibc.v1.QuotaProto.IBCTransferStatus.forNumber(ibcStatus_);
+      return result == null ? com.umee.uibc.v1.QuotaProto.IBCTransferStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int TOTAL_QUOTA_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object totalQuota_ = "";
+    /**
+     * <pre>
+     * total_quota defines the total outflow limit of ibc-transfer in USD
+     * </pre>
+     *
+     * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The totalQuota.
+     */
+    @java.lang.Override
+    public java.lang.String getTotalQuota() {
+      java.lang.Object ref = totalQuota_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        totalQuota_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * total_quota defines the total outflow limit of ibc-transfer in USD
+     * </pre>
+     *
+     * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for totalQuota.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTotalQuotaBytes() {
+      java.lang.Object ref = totalQuota_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        totalQuota_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_QUOTA_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenQuota_ = "";
+    /**
+     * <pre>
+     * token_quota defines the outflow limit per token in USD
+     * </pre>
+     *
+     * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The tokenQuota.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenQuota() {
+      java.lang.Object ref = tokenQuota_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenQuota_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_quota defines the outflow limit per token in USD
+     * </pre>
+     *
+     * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+     * @return The bytes for tokenQuota.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenQuotaBytes() {
+      java.lang.Object ref = tokenQuota_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenQuota_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTA_DURATION_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration quotaDuration_;
+    /**
+     * <pre>
+     * quota_duration defines quota expires for each ibc-transfer denom in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the quotaDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasQuotaDuration() {
+      return quotaDuration_ != null;
+    }
+    /**
+     * <pre>
+     * quota_duration defines quota expires for each ibc-transfer denom in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The quotaDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getQuotaDuration() {
+      return quotaDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : quotaDuration_;
+    }
+    /**
+     * <pre>
+     * quota_duration defines quota expires for each ibc-transfer denom in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getQuotaDurationOrBuilder() {
+      return quotaDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : quotaDuration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (ibcStatus_ != com.umee.uibc.v1.QuotaProto.IBCTransferStatus.IBC_TRANSFER_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, ibcStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalQuota_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, totalQuota_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenQuota_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tokenQuota_);
+      }
+      if (quotaDuration_ != null) {
+        output.writeMessage(4, getQuotaDuration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (ibcStatus_ != com.umee.uibc.v1.QuotaProto.IBCTransferStatus.IBC_TRANSFER_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, ibcStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalQuota_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, totalQuota_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenQuota_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tokenQuota_);
+      }
+      if (quotaDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getQuotaDuration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.uibc.v1.QuotaProto.Params)) {
+        return super.equals(obj);
+      }
+      com.umee.uibc.v1.QuotaProto.Params other = (com.umee.uibc.v1.QuotaProto.Params) obj;
+
+      if (ibcStatus_ != other.ibcStatus_) return false;
+      if (!getTotalQuota()
+          .equals(other.getTotalQuota())) return false;
+      if (!getTokenQuota()
+          .equals(other.getTokenQuota())) return false;
+      if (hasQuotaDuration() != other.hasQuotaDuration()) return false;
+      if (hasQuotaDuration()) {
+        if (!getQuotaDuration()
+            .equals(other.getQuotaDuration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IBC_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + ibcStatus_;
+      hash = (37 * hash) + TOTAL_QUOTA_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalQuota().hashCode();
+      hash = (37 * hash) + TOKEN_QUOTA_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenQuota().hashCode();
+      if (hasQuotaDuration()) {
+        hash = (37 * hash) + QUOTA_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getQuotaDuration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.uibc.v1.QuotaProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.uibc.v1.QuotaProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.uibc.v1.QuotaProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.uibc.v1.QuotaProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params of x/uibc module
+     * </pre>
+     *
+     * Protobuf type {@code umee.uibc.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.uibc.v1.Params)
+        com.umee.uibc.v1.QuotaProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.uibc.v1.QuotaProto.internal_static_umee_uibc_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.uibc.v1.QuotaProto.internal_static_umee_uibc_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.uibc.v1.QuotaProto.Params.class, com.umee.uibc.v1.QuotaProto.Params.Builder.class);
+      }
+
+      // Construct using com.umee.uibc.v1.QuotaProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ibcStatus_ = 0;
+        totalQuota_ = "";
+        tokenQuota_ = "";
+        quotaDuration_ = null;
+        if (quotaDurationBuilder_ != null) {
+          quotaDurationBuilder_.dispose();
+          quotaDurationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.uibc.v1.QuotaProto.internal_static_umee_uibc_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.uibc.v1.QuotaProto.Params getDefaultInstanceForType() {
+        return com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.uibc.v1.QuotaProto.Params build() {
+        com.umee.uibc.v1.QuotaProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.uibc.v1.QuotaProto.Params buildPartial() {
+        com.umee.uibc.v1.QuotaProto.Params result = new com.umee.uibc.v1.QuotaProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.uibc.v1.QuotaProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ibcStatus_ = ibcStatus_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalQuota_ = totalQuota_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tokenQuota_ = tokenQuota_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.quotaDuration_ = quotaDurationBuilder_ == null
+              ? quotaDuration_
+              : quotaDurationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.uibc.v1.QuotaProto.Params) {
+          return mergeFrom((com.umee.uibc.v1.QuotaProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.uibc.v1.QuotaProto.Params other) {
+        if (other == com.umee.uibc.v1.QuotaProto.Params.getDefaultInstance()) return this;
+        if (other.ibcStatus_ != 0) {
+          setIbcStatusValue(other.getIbcStatusValue());
+        }
+        if (!other.getTotalQuota().isEmpty()) {
+          totalQuota_ = other.totalQuota_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTokenQuota().isEmpty()) {
+          tokenQuota_ = other.tokenQuota_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasQuotaDuration()) {
+          mergeQuotaDuration(other.getQuotaDuration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                ibcStatus_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                totalQuota_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                tokenQuota_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getQuotaDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int ibcStatus_ = 0;
+      /**
+       * <pre>
+       * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+       * </pre>
+       *
+       * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+       * @return The enum numeric value on the wire for ibcStatus.
+       */
+      @java.lang.Override public int getIbcStatusValue() {
+        return ibcStatus_;
+      }
+      /**
+       * <pre>
+       * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+       * </pre>
+       *
+       * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+       * @param value The enum numeric value on the wire for ibcStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcStatusValue(int value) {
+        ibcStatus_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+       * </pre>
+       *
+       * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+       * @return The ibcStatus.
+       */
+      @java.lang.Override
+      public com.umee.uibc.v1.QuotaProto.IBCTransferStatus getIbcStatus() {
+        com.umee.uibc.v1.QuotaProto.IBCTransferStatus result = com.umee.uibc.v1.QuotaProto.IBCTransferStatus.forNumber(ibcStatus_);
+        return result == null ? com.umee.uibc.v1.QuotaProto.IBCTransferStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+       * </pre>
+       *
+       * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+       * @param value The ibcStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcStatus(com.umee.uibc.v1.QuotaProto.IBCTransferStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        ibcStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ibc_status defines the IBC ICS20 status (transfer quota or transfers disabled).
+       * </pre>
+       *
+       * <code>.umee.uibc.v1.IBCTransferStatus ibc_status = 1 [json_name = "ibcStatus"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIbcStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ibcStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object totalQuota_ = "";
+      /**
+       * <pre>
+       * total_quota defines the total outflow limit of ibc-transfer in USD
+       * </pre>
+       *
+       * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The totalQuota.
+       */
+      public java.lang.String getTotalQuota() {
+        java.lang.Object ref = totalQuota_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          totalQuota_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_quota defines the total outflow limit of ibc-transfer in USD
+       * </pre>
+       *
+       * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for totalQuota.
+       */
+      public com.google.protobuf.ByteString
+          getTotalQuotaBytes() {
+        java.lang.Object ref = totalQuota_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          totalQuota_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * total_quota defines the total outflow limit of ibc-transfer in USD
+       * </pre>
+       *
+       * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The totalQuota to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalQuota(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        totalQuota_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_quota defines the total outflow limit of ibc-transfer in USD
+       * </pre>
+       *
+       * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalQuota() {
+        totalQuota_ = getDefaultInstance().getTotalQuota();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_quota defines the total outflow limit of ibc-transfer in USD
+       * </pre>
+       *
+       * <code>string total_quota = 2 [json_name = "totalQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for totalQuota to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalQuotaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        totalQuota_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenQuota_ = "";
+      /**
+       * <pre>
+       * token_quota defines the outflow limit per token in USD
+       * </pre>
+       *
+       * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The tokenQuota.
+       */
+      public java.lang.String getTokenQuota() {
+        java.lang.Object ref = tokenQuota_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenQuota_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_quota defines the outflow limit per token in USD
+       * </pre>
+       *
+       * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return The bytes for tokenQuota.
+       */
+      public com.google.protobuf.ByteString
+          getTokenQuotaBytes() {
+        java.lang.Object ref = tokenQuota_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenQuota_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_quota defines the outflow limit per token in USD
+       * </pre>
+       *
+       * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The tokenQuota to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenQuota(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenQuota_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_quota defines the outflow limit per token in USD
+       * </pre>
+       *
+       * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenQuota() {
+        tokenQuota_ = getDefaultInstance().getTokenQuota();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_quota defines the outflow limit per token in USD
+       * </pre>
+       *
+       * <code>string token_quota = 3 [json_name = "tokenQuota", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.cosmos_proto.scalar) = "cosmos.Dec"];</code>
+       * @param value The bytes for tokenQuota to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenQuotaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenQuota_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration quotaDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> quotaDurationBuilder_;
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the quotaDuration field is set.
+       */
+      public boolean hasQuotaDuration() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The quotaDuration.
+       */
+      public com.google.protobuf.Duration getQuotaDuration() {
+        if (quotaDurationBuilder_ == null) {
+          return quotaDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : quotaDuration_;
+        } else {
+          return quotaDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setQuotaDuration(com.google.protobuf.Duration value) {
+        if (quotaDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          quotaDuration_ = value;
+        } else {
+          quotaDurationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setQuotaDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (quotaDurationBuilder_ == null) {
+          quotaDuration_ = builderForValue.build();
+        } else {
+          quotaDurationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeQuotaDuration(com.google.protobuf.Duration value) {
+        if (quotaDurationBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            quotaDuration_ != null &&
+            quotaDuration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getQuotaDurationBuilder().mergeFrom(value);
+          } else {
+            quotaDuration_ = value;
+          }
+        } else {
+          quotaDurationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearQuotaDuration() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        quotaDuration_ = null;
+        if (quotaDurationBuilder_ != null) {
+          quotaDurationBuilder_.dispose();
+          quotaDurationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getQuotaDurationBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getQuotaDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getQuotaDurationOrBuilder() {
+        if (quotaDurationBuilder_ != null) {
+          return quotaDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return quotaDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : quotaDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * quota_duration defines quota expires for each ibc-transfer denom in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration quota_duration = 4 [json_name = "quotaDuration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "quota_duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"quota_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getQuotaDurationFieldBuilder() {
+        if (quotaDurationBuilder_ == null) {
+          quotaDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getQuotaDuration(),
+                  getParentForChildren(),
+                  isClean());
+          quotaDuration_ = null;
+        }
+        return quotaDurationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.uibc.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.uibc.v1.Params)
+    private static final com.umee.uibc.v1.QuotaProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.uibc.v1.QuotaProto.Params();
+    }
+
+    public static com.umee.uibc.v1.QuotaProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.uibc.v1.QuotaProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_uibc_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_uibc_v1_Params_fieldAccessorTable;
 
@@ -47,11 +1420,11 @@ public final class QuotaProto {
       "OTA_ENABLED\020\002\022*\n&IBC_TRANSFER_STATUS_QUO" +
       "TA_OUT_DISABLED\020\003\022)\n%IBC_TRANSFER_STATUS" +
       "_QUOTA_IN_DISABLED\020\004\022(\n$IBC_TRANSFER_STA" +
-      "TUS_TRANSFERS_PAUSED\020\005B\230\001\n\020com.umee.uibc" +
-      ".v1B\nQuotaProtoP\001Z&github.com/umee-netwo" +
-      "rk/umee/v5/x/uibc\242\002\003UUX\252\002\014Umee.Uibc.V1\312\002" +
-      "\014Umee\\Uibc\\V1\342\002\030Umee\\Uibc\\V1\\GPBMetadata" +
-      "\352\002\016Umee::Uibc::V1b\006proto3"
+      "TUS_TRANSFERS_PAUSED\020\005B\226\001\n\020com.umee.uibc" +
+      ".v1B\nQuotaProtoZ&github.com/umee-network" +
+      "/umee/v5/x/uibc\242\002\003UUX\252\002\014Umee.Uibc.V1\312\002\014U" +
+      "mee\\Uibc\\V1\342\002\030Umee\\Uibc\\V1\\GPBMetadata\352\002" +
+      "\016Umee::Uibc::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

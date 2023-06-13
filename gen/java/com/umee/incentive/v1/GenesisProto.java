@@ -14,34 +14,8127 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.umee.incentive.v1.IncentiveProto.Params getParams();
+    /**
+     * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>uint32 next_program_id = 2 [json_name = "nextProgramId"];</code>
+     * @return The nextProgramId.
+     */
+    int getNextProgramId();
+
+    /**
+     * <code>int64 last_rewards_time = 3 [json_name = "lastRewardsTime"];</code>
+     * @return The lastRewardsTime.
+     */
+    long getLastRewardsTime();
+
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.GenesisProto.RewardTracker> 
+        getRewardTrackersList();
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.RewardTracker getRewardTrackers(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardTrackersCount();
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder> 
+        getRewardTrackersOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder getRewardTrackersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.GenesisProto.RewardAccumulator> 
+        getRewardAccumulatorsList();
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.RewardAccumulator getRewardAccumulators(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    int getRewardAccumulatorsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder> 
+        getRewardAccumulatorsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder getRewardAccumulatorsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> 
+        getUpcomingProgramsList();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.IncentiveProgram getUpcomingPrograms(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    int getUpcomingProgramsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+        getUpcomingProgramsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getUpcomingProgramsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> 
+        getOngoingProgramsList();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.IncentiveProgram getOngoingPrograms(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    int getOngoingProgramsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+        getOngoingProgramsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getOngoingProgramsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> 
+        getCompletedProgramsList();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.IncentiveProgram getCompletedPrograms(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    int getCompletedProgramsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+        getCompletedProgramsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getCompletedProgramsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.GenesisProto.Bond> 
+        getBondsList();
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.Bond getBonds(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    int getBondsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.GenesisProto.BondOrBuilder> 
+        getBondsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.BondOrBuilder getBondsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.GenesisProto.AccountUnbondings> 
+        getAccountUnbondingsList();
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.AccountUnbondings getAccountUnbondings(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    int getAccountUnbondingsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder> 
+        getAccountUnbondingsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder getAccountUnbondingsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the x/incentive module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      rewardTrackers_ = java.util.Collections.emptyList();
+      rewardAccumulators_ = java.util.Collections.emptyList();
+      upcomingPrograms_ = java.util.Collections.emptyList();
+      ongoingPrograms_ = java.util.Collections.emptyList();
+      completedPrograms_ = java.util.Collections.emptyList();
+      bonds_ = java.util.Collections.emptyList();
+      accountUnbondings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.GenesisProto.GenesisState.class, com.umee.incentive.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.umee.incentive.v1.IncentiveProto.Params params_;
+    /**
+     * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.Params getParams() {
+      return params_ == null ? com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int NEXT_PROGRAM_ID_FIELD_NUMBER = 2;
+    private int nextProgramId_ = 0;
+    /**
+     * <code>uint32 next_program_id = 2 [json_name = "nextProgramId"];</code>
+     * @return The nextProgramId.
+     */
+    @java.lang.Override
+    public int getNextProgramId() {
+      return nextProgramId_;
+    }
+
+    public static final int LAST_REWARDS_TIME_FIELD_NUMBER = 3;
+    private long lastRewardsTime_ = 0L;
+    /**
+     * <code>int64 last_rewards_time = 3 [json_name = "lastRewardsTime"];</code>
+     * @return The lastRewardsTime.
+     */
+    @java.lang.Override
+    public long getLastRewardsTime() {
+      return lastRewardsTime_;
+    }
+
+    public static final int REWARD_TRACKERS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.GenesisProto.RewardTracker> rewardTrackers_;
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.GenesisProto.RewardTracker> getRewardTrackersList() {
+      return rewardTrackers_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder> 
+        getRewardTrackersOrBuilderList() {
+      return rewardTrackers_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardTrackersCount() {
+      return rewardTrackers_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.RewardTracker getRewardTrackers(int index) {
+      return rewardTrackers_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder getRewardTrackersOrBuilder(
+        int index) {
+      return rewardTrackers_.get(index);
+    }
+
+    public static final int REWARD_ACCUMULATORS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.GenesisProto.RewardAccumulator> rewardAccumulators_;
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.GenesisProto.RewardAccumulator> getRewardAccumulatorsList() {
+      return rewardAccumulators_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder> 
+        getRewardAccumulatorsOrBuilderList() {
+      return rewardAccumulators_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRewardAccumulatorsCount() {
+      return rewardAccumulators_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.RewardAccumulator getRewardAccumulators(int index) {
+      return rewardAccumulators_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder getRewardAccumulatorsOrBuilder(
+        int index) {
+      return rewardAccumulators_.get(index);
+    }
+
+    public static final int UPCOMING_PROGRAMS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> upcomingPrograms_;
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> getUpcomingProgramsList() {
+      return upcomingPrograms_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+        getUpcomingProgramsOrBuilderList() {
+      return upcomingPrograms_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getUpcomingProgramsCount() {
+      return upcomingPrograms_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getUpcomingPrograms(int index) {
+      return upcomingPrograms_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getUpcomingProgramsOrBuilder(
+        int index) {
+      return upcomingPrograms_.get(index);
+    }
+
+    public static final int ONGOING_PROGRAMS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> ongoingPrograms_;
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> getOngoingProgramsList() {
+      return ongoingPrograms_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+        getOngoingProgramsOrBuilderList() {
+      return ongoingPrograms_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOngoingProgramsCount() {
+      return ongoingPrograms_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getOngoingPrograms(int index) {
+      return ongoingPrograms_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getOngoingProgramsOrBuilder(
+        int index) {
+      return ongoingPrograms_.get(index);
+    }
+
+    public static final int COMPLETED_PROGRAMS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> completedPrograms_;
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> getCompletedProgramsList() {
+      return completedPrograms_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+        getCompletedProgramsOrBuilderList() {
+      return completedPrograms_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getCompletedProgramsCount() {
+      return completedPrograms_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getCompletedPrograms(int index) {
+      return completedPrograms_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getCompletedProgramsOrBuilder(
+        int index) {
+      return completedPrograms_.get(index);
+    }
+
+    public static final int BONDS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.GenesisProto.Bond> bonds_;
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.GenesisProto.Bond> getBondsList() {
+      return bonds_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.GenesisProto.BondOrBuilder> 
+        getBondsOrBuilderList() {
+      return bonds_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBondsCount() {
+      return bonds_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.Bond getBonds(int index) {
+      return bonds_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.BondOrBuilder getBondsOrBuilder(
+        int index) {
+      return bonds_.get(index);
+    }
+
+    public static final int ACCOUNT_UNBONDINGS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.GenesisProto.AccountUnbondings> accountUnbondings_;
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.GenesisProto.AccountUnbondings> getAccountUnbondingsList() {
+      return accountUnbondings_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder> 
+        getAccountUnbondingsOrBuilderList() {
+      return accountUnbondings_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAccountUnbondingsCount() {
+      return accountUnbondings_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.AccountUnbondings getAccountUnbondings(int index) {
+      return accountUnbondings_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder getAccountUnbondingsOrBuilder(
+        int index) {
+      return accountUnbondings_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (nextProgramId_ != 0) {
+        output.writeUInt32(2, nextProgramId_);
+      }
+      if (lastRewardsTime_ != 0L) {
+        output.writeInt64(3, lastRewardsTime_);
+      }
+      for (int i = 0; i < rewardTrackers_.size(); i++) {
+        output.writeMessage(4, rewardTrackers_.get(i));
+      }
+      for (int i = 0; i < rewardAccumulators_.size(); i++) {
+        output.writeMessage(5, rewardAccumulators_.get(i));
+      }
+      for (int i = 0; i < upcomingPrograms_.size(); i++) {
+        output.writeMessage(6, upcomingPrograms_.get(i));
+      }
+      for (int i = 0; i < ongoingPrograms_.size(); i++) {
+        output.writeMessage(7, ongoingPrograms_.get(i));
+      }
+      for (int i = 0; i < completedPrograms_.size(); i++) {
+        output.writeMessage(8, completedPrograms_.get(i));
+      }
+      for (int i = 0; i < bonds_.size(); i++) {
+        output.writeMessage(9, bonds_.get(i));
+      }
+      for (int i = 0; i < accountUnbondings_.size(); i++) {
+        output.writeMessage(10, accountUnbondings_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (nextProgramId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, nextProgramId_);
+      }
+      if (lastRewardsTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, lastRewardsTime_);
+      }
+      for (int i = 0; i < rewardTrackers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, rewardTrackers_.get(i));
+      }
+      for (int i = 0; i < rewardAccumulators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, rewardAccumulators_.get(i));
+      }
+      for (int i = 0; i < upcomingPrograms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, upcomingPrograms_.get(i));
+      }
+      for (int i = 0; i < ongoingPrograms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, ongoingPrograms_.get(i));
+      }
+      for (int i = 0; i < completedPrograms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, completedPrograms_.get(i));
+      }
+      for (int i = 0; i < bonds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, bonds_.get(i));
+      }
+      for (int i = 0; i < accountUnbondings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, accountUnbondings_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.GenesisProto.GenesisState other = (com.umee.incentive.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (getNextProgramId()
+          != other.getNextProgramId()) return false;
+      if (getLastRewardsTime()
+          != other.getLastRewardsTime()) return false;
+      if (!getRewardTrackersList()
+          .equals(other.getRewardTrackersList())) return false;
+      if (!getRewardAccumulatorsList()
+          .equals(other.getRewardAccumulatorsList())) return false;
+      if (!getUpcomingProgramsList()
+          .equals(other.getUpcomingProgramsList())) return false;
+      if (!getOngoingProgramsList()
+          .equals(other.getOngoingProgramsList())) return false;
+      if (!getCompletedProgramsList()
+          .equals(other.getCompletedProgramsList())) return false;
+      if (!getBondsList()
+          .equals(other.getBondsList())) return false;
+      if (!getAccountUnbondingsList()
+          .equals(other.getAccountUnbondingsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PROGRAM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNextProgramId();
+      hash = (37 * hash) + LAST_REWARDS_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLastRewardsTime());
+      if (getRewardTrackersCount() > 0) {
+        hash = (37 * hash) + REWARD_TRACKERS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardTrackersList().hashCode();
+      }
+      if (getRewardAccumulatorsCount() > 0) {
+        hash = (37 * hash) + REWARD_ACCUMULATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardAccumulatorsList().hashCode();
+      }
+      if (getUpcomingProgramsCount() > 0) {
+        hash = (37 * hash) + UPCOMING_PROGRAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getUpcomingProgramsList().hashCode();
+      }
+      if (getOngoingProgramsCount() > 0) {
+        hash = (37 * hash) + ONGOING_PROGRAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getOngoingProgramsList().hashCode();
+      }
+      if (getCompletedProgramsCount() > 0) {
+        hash = (37 * hash) + COMPLETED_PROGRAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletedProgramsList().hashCode();
+      }
+      if (getBondsCount() > 0) {
+        hash = (37 * hash) + BONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBondsList().hashCode();
+      }
+      if (getAccountUnbondingsCount() > 0) {
+        hash = (37 * hash) + ACCOUNT_UNBONDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountUnbondingsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the x/incentive module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.GenesisState)
+        com.umee.incentive.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.GenesisProto.GenesisState.class, com.umee.incentive.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        nextProgramId_ = 0;
+        lastRewardsTime_ = 0L;
+        if (rewardTrackersBuilder_ == null) {
+          rewardTrackers_ = java.util.Collections.emptyList();
+        } else {
+          rewardTrackers_ = null;
+          rewardTrackersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (rewardAccumulatorsBuilder_ == null) {
+          rewardAccumulators_ = java.util.Collections.emptyList();
+        } else {
+          rewardAccumulators_ = null;
+          rewardAccumulatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (upcomingProgramsBuilder_ == null) {
+          upcomingPrograms_ = java.util.Collections.emptyList();
+        } else {
+          upcomingPrograms_ = null;
+          upcomingProgramsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (ongoingProgramsBuilder_ == null) {
+          ongoingPrograms_ = java.util.Collections.emptyList();
+        } else {
+          ongoingPrograms_ = null;
+          ongoingProgramsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (completedProgramsBuilder_ == null) {
+          completedPrograms_ = java.util.Collections.emptyList();
+        } else {
+          completedPrograms_ = null;
+          completedProgramsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (bondsBuilder_ == null) {
+          bonds_ = java.util.Collections.emptyList();
+        } else {
+          bonds_ = null;
+          bondsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (accountUnbondingsBuilder_ == null) {
+          accountUnbondings_ = java.util.Collections.emptyList();
+        } else {
+          accountUnbondings_ = null;
+          accountUnbondingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000200);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.umee.incentive.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.GenesisState build() {
+        com.umee.incentive.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.GenesisState buildPartial() {
+        com.umee.incentive.v1.GenesisProto.GenesisState result = new com.umee.incentive.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.incentive.v1.GenesisProto.GenesisState result) {
+        if (rewardTrackersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            rewardTrackers_ = java.util.Collections.unmodifiableList(rewardTrackers_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.rewardTrackers_ = rewardTrackers_;
+        } else {
+          result.rewardTrackers_ = rewardTrackersBuilder_.build();
+        }
+        if (rewardAccumulatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            rewardAccumulators_ = java.util.Collections.unmodifiableList(rewardAccumulators_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.rewardAccumulators_ = rewardAccumulators_;
+        } else {
+          result.rewardAccumulators_ = rewardAccumulatorsBuilder_.build();
+        }
+        if (upcomingProgramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            upcomingPrograms_ = java.util.Collections.unmodifiableList(upcomingPrograms_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.upcomingPrograms_ = upcomingPrograms_;
+        } else {
+          result.upcomingPrograms_ = upcomingProgramsBuilder_.build();
+        }
+        if (ongoingProgramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            ongoingPrograms_ = java.util.Collections.unmodifiableList(ongoingPrograms_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.ongoingPrograms_ = ongoingPrograms_;
+        } else {
+          result.ongoingPrograms_ = ongoingProgramsBuilder_.build();
+        }
+        if (completedProgramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            completedPrograms_ = java.util.Collections.unmodifiableList(completedPrograms_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.completedPrograms_ = completedPrograms_;
+        } else {
+          result.completedPrograms_ = completedProgramsBuilder_.build();
+        }
+        if (bondsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            bonds_ = java.util.Collections.unmodifiableList(bonds_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.bonds_ = bonds_;
+        } else {
+          result.bonds_ = bondsBuilder_.build();
+        }
+        if (accountUnbondingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0)) {
+            accountUnbondings_ = java.util.Collections.unmodifiableList(accountUnbondings_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.accountUnbondings_ = accountUnbondings_;
+        } else {
+          result.accountUnbondings_ = accountUnbondingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nextProgramId_ = nextProgramId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastRewardsTime_ = lastRewardsTime_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.umee.incentive.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.GenesisProto.GenesisState other) {
+        if (other == com.umee.incentive.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.getNextProgramId() != 0) {
+          setNextProgramId(other.getNextProgramId());
+        }
+        if (other.getLastRewardsTime() != 0L) {
+          setLastRewardsTime(other.getLastRewardsTime());
+        }
+        if (rewardTrackersBuilder_ == null) {
+          if (!other.rewardTrackers_.isEmpty()) {
+            if (rewardTrackers_.isEmpty()) {
+              rewardTrackers_ = other.rewardTrackers_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRewardTrackersIsMutable();
+              rewardTrackers_.addAll(other.rewardTrackers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardTrackers_.isEmpty()) {
+            if (rewardTrackersBuilder_.isEmpty()) {
+              rewardTrackersBuilder_.dispose();
+              rewardTrackersBuilder_ = null;
+              rewardTrackers_ = other.rewardTrackers_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              rewardTrackersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardTrackersFieldBuilder() : null;
+            } else {
+              rewardTrackersBuilder_.addAllMessages(other.rewardTrackers_);
+            }
+          }
+        }
+        if (rewardAccumulatorsBuilder_ == null) {
+          if (!other.rewardAccumulators_.isEmpty()) {
+            if (rewardAccumulators_.isEmpty()) {
+              rewardAccumulators_ = other.rewardAccumulators_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureRewardAccumulatorsIsMutable();
+              rewardAccumulators_.addAll(other.rewardAccumulators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewardAccumulators_.isEmpty()) {
+            if (rewardAccumulatorsBuilder_.isEmpty()) {
+              rewardAccumulatorsBuilder_.dispose();
+              rewardAccumulatorsBuilder_ = null;
+              rewardAccumulators_ = other.rewardAccumulators_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              rewardAccumulatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardAccumulatorsFieldBuilder() : null;
+            } else {
+              rewardAccumulatorsBuilder_.addAllMessages(other.rewardAccumulators_);
+            }
+          }
+        }
+        if (upcomingProgramsBuilder_ == null) {
+          if (!other.upcomingPrograms_.isEmpty()) {
+            if (upcomingPrograms_.isEmpty()) {
+              upcomingPrograms_ = other.upcomingPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureUpcomingProgramsIsMutable();
+              upcomingPrograms_.addAll(other.upcomingPrograms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.upcomingPrograms_.isEmpty()) {
+            if (upcomingProgramsBuilder_.isEmpty()) {
+              upcomingProgramsBuilder_.dispose();
+              upcomingProgramsBuilder_ = null;
+              upcomingPrograms_ = other.upcomingPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              upcomingProgramsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUpcomingProgramsFieldBuilder() : null;
+            } else {
+              upcomingProgramsBuilder_.addAllMessages(other.upcomingPrograms_);
+            }
+          }
+        }
+        if (ongoingProgramsBuilder_ == null) {
+          if (!other.ongoingPrograms_.isEmpty()) {
+            if (ongoingPrograms_.isEmpty()) {
+              ongoingPrograms_ = other.ongoingPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureOngoingProgramsIsMutable();
+              ongoingPrograms_.addAll(other.ongoingPrograms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ongoingPrograms_.isEmpty()) {
+            if (ongoingProgramsBuilder_.isEmpty()) {
+              ongoingProgramsBuilder_.dispose();
+              ongoingProgramsBuilder_ = null;
+              ongoingPrograms_ = other.ongoingPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              ongoingProgramsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOngoingProgramsFieldBuilder() : null;
+            } else {
+              ongoingProgramsBuilder_.addAllMessages(other.ongoingPrograms_);
+            }
+          }
+        }
+        if (completedProgramsBuilder_ == null) {
+          if (!other.completedPrograms_.isEmpty()) {
+            if (completedPrograms_.isEmpty()) {
+              completedPrograms_ = other.completedPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureCompletedProgramsIsMutable();
+              completedPrograms_.addAll(other.completedPrograms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.completedPrograms_.isEmpty()) {
+            if (completedProgramsBuilder_.isEmpty()) {
+              completedProgramsBuilder_.dispose();
+              completedProgramsBuilder_ = null;
+              completedPrograms_ = other.completedPrograms_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              completedProgramsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCompletedProgramsFieldBuilder() : null;
+            } else {
+              completedProgramsBuilder_.addAllMessages(other.completedPrograms_);
+            }
+          }
+        }
+        if (bondsBuilder_ == null) {
+          if (!other.bonds_.isEmpty()) {
+            if (bonds_.isEmpty()) {
+              bonds_ = other.bonds_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureBondsIsMutable();
+              bonds_.addAll(other.bonds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bonds_.isEmpty()) {
+            if (bondsBuilder_.isEmpty()) {
+              bondsBuilder_.dispose();
+              bondsBuilder_ = null;
+              bonds_ = other.bonds_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              bondsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBondsFieldBuilder() : null;
+            } else {
+              bondsBuilder_.addAllMessages(other.bonds_);
+            }
+          }
+        }
+        if (accountUnbondingsBuilder_ == null) {
+          if (!other.accountUnbondings_.isEmpty()) {
+            if (accountUnbondings_.isEmpty()) {
+              accountUnbondings_ = other.accountUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureAccountUnbondingsIsMutable();
+              accountUnbondings_.addAll(other.accountUnbondings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accountUnbondings_.isEmpty()) {
+            if (accountUnbondingsBuilder_.isEmpty()) {
+              accountUnbondingsBuilder_.dispose();
+              accountUnbondingsBuilder_ = null;
+              accountUnbondings_ = other.accountUnbondings_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              accountUnbondingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccountUnbondingsFieldBuilder() : null;
+            } else {
+              accountUnbondingsBuilder_.addAllMessages(other.accountUnbondings_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                nextProgramId_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                lastRewardsTime_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                com.umee.incentive.v1.GenesisProto.RewardTracker m =
+                    input.readMessage(
+                        com.umee.incentive.v1.GenesisProto.RewardTracker.parser(),
+                        extensionRegistry);
+                if (rewardTrackersBuilder_ == null) {
+                  ensureRewardTrackersIsMutable();
+                  rewardTrackers_.add(m);
+                } else {
+                  rewardTrackersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.umee.incentive.v1.GenesisProto.RewardAccumulator m =
+                    input.readMessage(
+                        com.umee.incentive.v1.GenesisProto.RewardAccumulator.parser(),
+                        extensionRegistry);
+                if (rewardAccumulatorsBuilder_ == null) {
+                  ensureRewardAccumulatorsIsMutable();
+                  rewardAccumulators_.add(m);
+                } else {
+                  rewardAccumulatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.umee.incentive.v1.IncentiveProto.IncentiveProgram m =
+                    input.readMessage(
+                        com.umee.incentive.v1.IncentiveProto.IncentiveProgram.parser(),
+                        extensionRegistry);
+                if (upcomingProgramsBuilder_ == null) {
+                  ensureUpcomingProgramsIsMutable();
+                  upcomingPrograms_.add(m);
+                } else {
+                  upcomingProgramsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.umee.incentive.v1.IncentiveProto.IncentiveProgram m =
+                    input.readMessage(
+                        com.umee.incentive.v1.IncentiveProto.IncentiveProgram.parser(),
+                        extensionRegistry);
+                if (ongoingProgramsBuilder_ == null) {
+                  ensureOngoingProgramsIsMutable();
+                  ongoingPrograms_.add(m);
+                } else {
+                  ongoingProgramsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.umee.incentive.v1.IncentiveProto.IncentiveProgram m =
+                    input.readMessage(
+                        com.umee.incentive.v1.IncentiveProto.IncentiveProgram.parser(),
+                        extensionRegistry);
+                if (completedProgramsBuilder_ == null) {
+                  ensureCompletedProgramsIsMutable();
+                  completedPrograms_.add(m);
+                } else {
+                  completedProgramsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.umee.incentive.v1.GenesisProto.Bond m =
+                    input.readMessage(
+                        com.umee.incentive.v1.GenesisProto.Bond.parser(),
+                        extensionRegistry);
+                if (bondsBuilder_ == null) {
+                  ensureBondsIsMutable();
+                  bonds_.add(m);
+                } else {
+                  bondsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 82: {
+                com.umee.incentive.v1.GenesisProto.AccountUnbondings m =
+                    input.readMessage(
+                        com.umee.incentive.v1.GenesisProto.AccountUnbondings.parser(),
+                        extensionRegistry);
+                if (accountUnbondingsBuilder_ == null) {
+                  ensureAccountUnbondingsIsMutable();
+                  accountUnbondings_.add(m);
+                } else {
+                  accountUnbondingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.incentive.v1.IncentiveProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.Params, com.umee.incentive.v1.IncentiveProto.Params.Builder, com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.umee.incentive.v1.IncentiveProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.umee.incentive.v1.IncentiveProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.umee.incentive.v1.IncentiveProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.umee.incentive.v1.IncentiveProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.umee.incentive.v1.IncentiveProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.umee.incentive.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.Params, com.umee.incentive.v1.IncentiveProto.Params.Builder, com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.incentive.v1.IncentiveProto.Params, com.umee.incentive.v1.IncentiveProto.Params.Builder, com.umee.incentive.v1.IncentiveProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private int nextProgramId_ ;
+      /**
+       * <code>uint32 next_program_id = 2 [json_name = "nextProgramId"];</code>
+       * @return The nextProgramId.
+       */
+      @java.lang.Override
+      public int getNextProgramId() {
+        return nextProgramId_;
+      }
+      /**
+       * <code>uint32 next_program_id = 2 [json_name = "nextProgramId"];</code>
+       * @param value The nextProgramId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextProgramId(int value) {
+
+        nextProgramId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 next_program_id = 2 [json_name = "nextProgramId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextProgramId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nextProgramId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long lastRewardsTime_ ;
+      /**
+       * <code>int64 last_rewards_time = 3 [json_name = "lastRewardsTime"];</code>
+       * @return The lastRewardsTime.
+       */
+      @java.lang.Override
+      public long getLastRewardsTime() {
+        return lastRewardsTime_;
+      }
+      /**
+       * <code>int64 last_rewards_time = 3 [json_name = "lastRewardsTime"];</code>
+       * @param value The lastRewardsTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastRewardsTime(long value) {
+
+        lastRewardsTime_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 last_rewards_time = 3 [json_name = "lastRewardsTime"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastRewardsTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastRewardsTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.umee.incentive.v1.GenesisProto.RewardTracker> rewardTrackers_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardTrackersIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          rewardTrackers_ = new java.util.ArrayList<com.umee.incentive.v1.GenesisProto.RewardTracker>(rewardTrackers_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.RewardTracker, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder, com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder> rewardTrackersBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.RewardTracker> getRewardTrackersList() {
+        if (rewardTrackersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardTrackers_);
+        } else {
+          return rewardTrackersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardTrackersCount() {
+        if (rewardTrackersBuilder_ == null) {
+          return rewardTrackers_.size();
+        } else {
+          return rewardTrackersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardTracker getRewardTrackers(int index) {
+        if (rewardTrackersBuilder_ == null) {
+          return rewardTrackers_.get(index);
+        } else {
+          return rewardTrackersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardTrackers(
+          int index, com.umee.incentive.v1.GenesisProto.RewardTracker value) {
+        if (rewardTrackersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.set(index, value);
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardTrackers(
+          int index, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder builderForValue) {
+        if (rewardTrackersBuilder_ == null) {
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardTrackers(com.umee.incentive.v1.GenesisProto.RewardTracker value) {
+        if (rewardTrackersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.add(value);
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardTrackers(
+          int index, com.umee.incentive.v1.GenesisProto.RewardTracker value) {
+        if (rewardTrackersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.add(index, value);
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardTrackers(
+          com.umee.incentive.v1.GenesisProto.RewardTracker.Builder builderForValue) {
+        if (rewardTrackersBuilder_ == null) {
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardTrackers(
+          int index, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder builderForValue) {
+        if (rewardTrackersBuilder_ == null) {
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewardTrackers(
+          java.lang.Iterable<? extends com.umee.incentive.v1.GenesisProto.RewardTracker> values) {
+        if (rewardTrackersBuilder_ == null) {
+          ensureRewardTrackersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardTrackers_);
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewardTrackers() {
+        if (rewardTrackersBuilder_ == null) {
+          rewardTrackers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewardTrackers(int index) {
+        if (rewardTrackersBuilder_ == null) {
+          ensureRewardTrackersIsMutable();
+          rewardTrackers_.remove(index);
+          onChanged();
+        } else {
+          rewardTrackersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardTracker.Builder getRewardTrackersBuilder(
+          int index) {
+        return getRewardTrackersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder getRewardTrackersOrBuilder(
+          int index) {
+        if (rewardTrackersBuilder_ == null) {
+          return rewardTrackers_.get(index);  } else {
+          return rewardTrackersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder> 
+           getRewardTrackersOrBuilderList() {
+        if (rewardTrackersBuilder_ != null) {
+          return rewardTrackersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardTrackers_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardTracker.Builder addRewardTrackersBuilder() {
+        return getRewardTrackersFieldBuilder().addBuilder(
+            com.umee.incentive.v1.GenesisProto.RewardTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardTracker.Builder addRewardTrackersBuilder(
+          int index) {
+        return getRewardTrackersFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.GenesisProto.RewardTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardTracker reward_trackers = 4 [json_name = "rewardTrackers", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.RewardTracker.Builder> 
+           getRewardTrackersBuilderList() {
+        return getRewardTrackersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.RewardTracker, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder, com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder> 
+          getRewardTrackersFieldBuilder() {
+        if (rewardTrackersBuilder_ == null) {
+          rewardTrackersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.GenesisProto.RewardTracker, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder, com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder>(
+                  rewardTrackers_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardTrackers_ = null;
+        }
+        return rewardTrackersBuilder_;
+      }
+
+      private java.util.List<com.umee.incentive.v1.GenesisProto.RewardAccumulator> rewardAccumulators_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardAccumulatorsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          rewardAccumulators_ = new java.util.ArrayList<com.umee.incentive.v1.GenesisProto.RewardAccumulator>(rewardAccumulators_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.RewardAccumulator, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder, com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder> rewardAccumulatorsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.RewardAccumulator> getRewardAccumulatorsList() {
+        if (rewardAccumulatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewardAccumulators_);
+        } else {
+          return rewardAccumulatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRewardAccumulatorsCount() {
+        if (rewardAccumulatorsBuilder_ == null) {
+          return rewardAccumulators_.size();
+        } else {
+          return rewardAccumulatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator getRewardAccumulators(int index) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          return rewardAccumulators_.get(index);
+        } else {
+          return rewardAccumulatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardAccumulators(
+          int index, com.umee.incentive.v1.GenesisProto.RewardAccumulator value) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.set(index, value);
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRewardAccumulators(
+          int index, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder builderForValue) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccumulators(com.umee.incentive.v1.GenesisProto.RewardAccumulator value) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.add(value);
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccumulators(
+          int index, com.umee.incentive.v1.GenesisProto.RewardAccumulator value) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.add(index, value);
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccumulators(
+          com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder builderForValue) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRewardAccumulators(
+          int index, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder builderForValue) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRewardAccumulators(
+          java.lang.Iterable<? extends com.umee.incentive.v1.GenesisProto.RewardAccumulator> values) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          ensureRewardAccumulatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewardAccumulators_);
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRewardAccumulators() {
+        if (rewardAccumulatorsBuilder_ == null) {
+          rewardAccumulators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRewardAccumulators(int index) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          ensureRewardAccumulatorsIsMutable();
+          rewardAccumulators_.remove(index);
+          onChanged();
+        } else {
+          rewardAccumulatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder getRewardAccumulatorsBuilder(
+          int index) {
+        return getRewardAccumulatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder getRewardAccumulatorsOrBuilder(
+          int index) {
+        if (rewardAccumulatorsBuilder_ == null) {
+          return rewardAccumulators_.get(index);  } else {
+          return rewardAccumulatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder> 
+           getRewardAccumulatorsOrBuilderList() {
+        if (rewardAccumulatorsBuilder_ != null) {
+          return rewardAccumulatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewardAccumulators_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder addRewardAccumulatorsBuilder() {
+        return getRewardAccumulatorsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.GenesisProto.RewardAccumulator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder addRewardAccumulatorsBuilder(
+          int index) {
+        return getRewardAccumulatorsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.GenesisProto.RewardAccumulator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.RewardAccumulator reward_accumulators = 5 [json_name = "rewardAccumulators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder> 
+           getRewardAccumulatorsBuilderList() {
+        return getRewardAccumulatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.RewardAccumulator, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder, com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder> 
+          getRewardAccumulatorsFieldBuilder() {
+        if (rewardAccumulatorsBuilder_ == null) {
+          rewardAccumulatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.GenesisProto.RewardAccumulator, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder, com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder>(
+                  rewardAccumulators_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewardAccumulators_ = null;
+        }
+        return rewardAccumulatorsBuilder_;
+      }
+
+      private java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> upcomingPrograms_ =
+        java.util.Collections.emptyList();
+      private void ensureUpcomingProgramsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          upcomingPrograms_ = new java.util.ArrayList<com.umee.incentive.v1.IncentiveProto.IncentiveProgram>(upcomingPrograms_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> upcomingProgramsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> getUpcomingProgramsList() {
+        if (upcomingProgramsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(upcomingPrograms_);
+        } else {
+          return upcomingProgramsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getUpcomingProgramsCount() {
+        if (upcomingProgramsBuilder_ == null) {
+          return upcomingPrograms_.size();
+        } else {
+          return upcomingProgramsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getUpcomingPrograms(int index) {
+        if (upcomingProgramsBuilder_ == null) {
+          return upcomingPrograms_.get(index);
+        } else {
+          return upcomingProgramsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUpcomingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (upcomingProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.set(index, value);
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUpcomingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (upcomingProgramsBuilder_ == null) {
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUpcomingPrograms(com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (upcomingProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.add(value);
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUpcomingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (upcomingProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.add(index, value);
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUpcomingPrograms(
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (upcomingProgramsBuilder_ == null) {
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUpcomingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (upcomingProgramsBuilder_ == null) {
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllUpcomingPrograms(
+          java.lang.Iterable<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgram> values) {
+        if (upcomingProgramsBuilder_ == null) {
+          ensureUpcomingProgramsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, upcomingPrograms_);
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUpcomingPrograms() {
+        if (upcomingProgramsBuilder_ == null) {
+          upcomingPrograms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeUpcomingPrograms(int index) {
+        if (upcomingProgramsBuilder_ == null) {
+          ensureUpcomingProgramsIsMutable();
+          upcomingPrograms_.remove(index);
+          onChanged();
+        } else {
+          upcomingProgramsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder getUpcomingProgramsBuilder(
+          int index) {
+        return getUpcomingProgramsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getUpcomingProgramsOrBuilder(
+          int index) {
+        if (upcomingProgramsBuilder_ == null) {
+          return upcomingPrograms_.get(index);  } else {
+          return upcomingProgramsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+           getUpcomingProgramsOrBuilderList() {
+        if (upcomingProgramsBuilder_ != null) {
+          return upcomingProgramsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(upcomingPrograms_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder addUpcomingProgramsBuilder() {
+        return getUpcomingProgramsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder addUpcomingProgramsBuilder(
+          int index) {
+        return getUpcomingProgramsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram upcoming_programs = 6 [json_name = "upcomingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder> 
+           getUpcomingProgramsBuilderList() {
+        return getUpcomingProgramsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+          getUpcomingProgramsFieldBuilder() {
+        if (upcomingProgramsBuilder_ == null) {
+          upcomingProgramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder>(
+                  upcomingPrograms_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          upcomingPrograms_ = null;
+        }
+        return upcomingProgramsBuilder_;
+      }
+
+      private java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> ongoingPrograms_ =
+        java.util.Collections.emptyList();
+      private void ensureOngoingProgramsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          ongoingPrograms_ = new java.util.ArrayList<com.umee.incentive.v1.IncentiveProto.IncentiveProgram>(ongoingPrograms_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> ongoingProgramsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> getOngoingProgramsList() {
+        if (ongoingProgramsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ongoingPrograms_);
+        } else {
+          return ongoingProgramsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOngoingProgramsCount() {
+        if (ongoingProgramsBuilder_ == null) {
+          return ongoingPrograms_.size();
+        } else {
+          return ongoingProgramsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getOngoingPrograms(int index) {
+        if (ongoingProgramsBuilder_ == null) {
+          return ongoingPrograms_.get(index);
+        } else {
+          return ongoingProgramsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOngoingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (ongoingProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.set(index, value);
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOngoingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (ongoingProgramsBuilder_ == null) {
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOngoingPrograms(com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (ongoingProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.add(value);
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOngoingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (ongoingProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.add(index, value);
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOngoingPrograms(
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (ongoingProgramsBuilder_ == null) {
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOngoingPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (ongoingProgramsBuilder_ == null) {
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOngoingPrograms(
+          java.lang.Iterable<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgram> values) {
+        if (ongoingProgramsBuilder_ == null) {
+          ensureOngoingProgramsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ongoingPrograms_);
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOngoingPrograms() {
+        if (ongoingProgramsBuilder_ == null) {
+          ongoingPrograms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOngoingPrograms(int index) {
+        if (ongoingProgramsBuilder_ == null) {
+          ensureOngoingProgramsIsMutable();
+          ongoingPrograms_.remove(index);
+          onChanged();
+        } else {
+          ongoingProgramsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder getOngoingProgramsBuilder(
+          int index) {
+        return getOngoingProgramsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getOngoingProgramsOrBuilder(
+          int index) {
+        if (ongoingProgramsBuilder_ == null) {
+          return ongoingPrograms_.get(index);  } else {
+          return ongoingProgramsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+           getOngoingProgramsOrBuilderList() {
+        if (ongoingProgramsBuilder_ != null) {
+          return ongoingProgramsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ongoingPrograms_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder addOngoingProgramsBuilder() {
+        return getOngoingProgramsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder addOngoingProgramsBuilder(
+          int index) {
+        return getOngoingProgramsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram ongoing_programs = 7 [json_name = "ongoingPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder> 
+           getOngoingProgramsBuilderList() {
+        return getOngoingProgramsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+          getOngoingProgramsFieldBuilder() {
+        if (ongoingProgramsBuilder_ == null) {
+          ongoingProgramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder>(
+                  ongoingPrograms_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ongoingPrograms_ = null;
+        }
+        return ongoingProgramsBuilder_;
+      }
+
+      private java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> completedPrograms_ =
+        java.util.Collections.emptyList();
+      private void ensureCompletedProgramsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          completedPrograms_ = new java.util.ArrayList<com.umee.incentive.v1.IncentiveProto.IncentiveProgram>(completedPrograms_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> completedProgramsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram> getCompletedProgramsList() {
+        if (completedProgramsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(completedPrograms_);
+        } else {
+          return completedProgramsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public int getCompletedProgramsCount() {
+        if (completedProgramsBuilder_ == null) {
+          return completedPrograms_.size();
+        } else {
+          return completedProgramsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram getCompletedPrograms(int index) {
+        if (completedProgramsBuilder_ == null) {
+          return completedPrograms_.get(index);
+        } else {
+          return completedProgramsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCompletedPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (completedProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.set(index, value);
+          onChanged();
+        } else {
+          completedProgramsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCompletedPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (completedProgramsBuilder_ == null) {
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          completedProgramsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCompletedPrograms(com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (completedProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.add(value);
+          onChanged();
+        } else {
+          completedProgramsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCompletedPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram value) {
+        if (completedProgramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.add(index, value);
+          onChanged();
+        } else {
+          completedProgramsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCompletedPrograms(
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (completedProgramsBuilder_ == null) {
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          completedProgramsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addCompletedPrograms(
+          int index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder builderForValue) {
+        if (completedProgramsBuilder_ == null) {
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          completedProgramsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllCompletedPrograms(
+          java.lang.Iterable<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgram> values) {
+        if (completedProgramsBuilder_ == null) {
+          ensureCompletedProgramsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, completedPrograms_);
+          onChanged();
+        } else {
+          completedProgramsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCompletedPrograms() {
+        if (completedProgramsBuilder_ == null) {
+          completedPrograms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          completedProgramsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeCompletedPrograms(int index) {
+        if (completedProgramsBuilder_ == null) {
+          ensureCompletedProgramsIsMutable();
+          completedPrograms_.remove(index);
+          onChanged();
+        } else {
+          completedProgramsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder getCompletedProgramsBuilder(
+          int index) {
+        return getCompletedProgramsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder getCompletedProgramsOrBuilder(
+          int index) {
+        if (completedProgramsBuilder_ == null) {
+          return completedPrograms_.get(index);  } else {
+          return completedProgramsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+           getCompletedProgramsOrBuilderList() {
+        if (completedProgramsBuilder_ != null) {
+          return completedProgramsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(completedPrograms_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder addCompletedProgramsBuilder() {
+        return getCompletedProgramsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder addCompletedProgramsBuilder(
+          int index) {
+        return getCompletedProgramsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.IncentiveProgram completed_programs = 8 [json_name = "completedPrograms", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder> 
+           getCompletedProgramsBuilderList() {
+        return getCompletedProgramsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder> 
+          getCompletedProgramsFieldBuilder() {
+        if (completedProgramsBuilder_ == null) {
+          completedProgramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.IncentiveProto.IncentiveProgram, com.umee.incentive.v1.IncentiveProto.IncentiveProgram.Builder, com.umee.incentive.v1.IncentiveProto.IncentiveProgramOrBuilder>(
+                  completedPrograms_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          completedPrograms_ = null;
+        }
+        return completedProgramsBuilder_;
+      }
+
+      private java.util.List<com.umee.incentive.v1.GenesisProto.Bond> bonds_ =
+        java.util.Collections.emptyList();
+      private void ensureBondsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          bonds_ = new java.util.ArrayList<com.umee.incentive.v1.GenesisProto.Bond>(bonds_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.Bond, com.umee.incentive.v1.GenesisProto.Bond.Builder, com.umee.incentive.v1.GenesisProto.BondOrBuilder> bondsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.Bond> getBondsList() {
+        if (bondsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bonds_);
+        } else {
+          return bondsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBondsCount() {
+        if (bondsBuilder_ == null) {
+          return bonds_.size();
+        } else {
+          return bondsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Bond getBonds(int index) {
+        if (bondsBuilder_ == null) {
+          return bonds_.get(index);
+        } else {
+          return bondsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBonds(
+          int index, com.umee.incentive.v1.GenesisProto.Bond value) {
+        if (bondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondsIsMutable();
+          bonds_.set(index, value);
+          onChanged();
+        } else {
+          bondsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBonds(
+          int index, com.umee.incentive.v1.GenesisProto.Bond.Builder builderForValue) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBonds(com.umee.incentive.v1.GenesisProto.Bond value) {
+        if (bondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondsIsMutable();
+          bonds_.add(value);
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBonds(
+          int index, com.umee.incentive.v1.GenesisProto.Bond value) {
+        if (bondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBondsIsMutable();
+          bonds_.add(index, value);
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBonds(
+          com.umee.incentive.v1.GenesisProto.Bond.Builder builderForValue) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBonds(
+          int index, com.umee.incentive.v1.GenesisProto.Bond.Builder builderForValue) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bondsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBonds(
+          java.lang.Iterable<? extends com.umee.incentive.v1.GenesisProto.Bond> values) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bonds_);
+          onChanged();
+        } else {
+          bondsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBonds() {
+        if (bondsBuilder_ == null) {
+          bonds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          bondsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBonds(int index) {
+        if (bondsBuilder_ == null) {
+          ensureBondsIsMutable();
+          bonds_.remove(index);
+          onChanged();
+        } else {
+          bondsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Bond.Builder getBondsBuilder(
+          int index) {
+        return getBondsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.BondOrBuilder getBondsOrBuilder(
+          int index) {
+        if (bondsBuilder_ == null) {
+          return bonds_.get(index);  } else {
+          return bondsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.GenesisProto.BondOrBuilder> 
+           getBondsOrBuilderList() {
+        if (bondsBuilder_ != null) {
+          return bondsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bonds_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Bond.Builder addBondsBuilder() {
+        return getBondsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.GenesisProto.Bond.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Bond.Builder addBondsBuilder(
+          int index) {
+        return getBondsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.GenesisProto.Bond.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Bond bonds = 9 [json_name = "bonds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.Bond.Builder> 
+           getBondsBuilderList() {
+        return getBondsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.Bond, com.umee.incentive.v1.GenesisProto.Bond.Builder, com.umee.incentive.v1.GenesisProto.BondOrBuilder> 
+          getBondsFieldBuilder() {
+        if (bondsBuilder_ == null) {
+          bondsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.GenesisProto.Bond, com.umee.incentive.v1.GenesisProto.Bond.Builder, com.umee.incentive.v1.GenesisProto.BondOrBuilder>(
+                  bonds_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bonds_ = null;
+        }
+        return bondsBuilder_;
+      }
+
+      private java.util.List<com.umee.incentive.v1.GenesisProto.AccountUnbondings> accountUnbondings_ =
+        java.util.Collections.emptyList();
+      private void ensureAccountUnbondingsIsMutable() {
+        if (!((bitField0_ & 0x00000200) != 0)) {
+          accountUnbondings_ = new java.util.ArrayList<com.umee.incentive.v1.GenesisProto.AccountUnbondings>(accountUnbondings_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.AccountUnbondings, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder, com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder> accountUnbondingsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.AccountUnbondings> getAccountUnbondingsList() {
+        if (accountUnbondingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accountUnbondings_);
+        } else {
+          return accountUnbondingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAccountUnbondingsCount() {
+        if (accountUnbondingsBuilder_ == null) {
+          return accountUnbondings_.size();
+        } else {
+          return accountUnbondingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings getAccountUnbondings(int index) {
+        if (accountUnbondingsBuilder_ == null) {
+          return accountUnbondings_.get(index);
+        } else {
+          return accountUnbondingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccountUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.AccountUnbondings value) {
+        if (accountUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.set(index, value);
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccountUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder builderForValue) {
+        if (accountUnbondingsBuilder_ == null) {
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountUnbondings(com.umee.incentive.v1.GenesisProto.AccountUnbondings value) {
+        if (accountUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.add(value);
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.AccountUnbondings value) {
+        if (accountUnbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.add(index, value);
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountUnbondings(
+          com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder builderForValue) {
+        if (accountUnbondingsBuilder_ == null) {
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccountUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder builderForValue) {
+        if (accountUnbondingsBuilder_ == null) {
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAccountUnbondings(
+          java.lang.Iterable<? extends com.umee.incentive.v1.GenesisProto.AccountUnbondings> values) {
+        if (accountUnbondingsBuilder_ == null) {
+          ensureAccountUnbondingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accountUnbondings_);
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAccountUnbondings() {
+        if (accountUnbondingsBuilder_ == null) {
+          accountUnbondings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAccountUnbondings(int index) {
+        if (accountUnbondingsBuilder_ == null) {
+          ensureAccountUnbondingsIsMutable();
+          accountUnbondings_.remove(index);
+          onChanged();
+        } else {
+          accountUnbondingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder getAccountUnbondingsBuilder(
+          int index) {
+        return getAccountUnbondingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder getAccountUnbondingsOrBuilder(
+          int index) {
+        if (accountUnbondingsBuilder_ == null) {
+          return accountUnbondings_.get(index);  } else {
+          return accountUnbondingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder> 
+           getAccountUnbondingsOrBuilderList() {
+        if (accountUnbondingsBuilder_ != null) {
+          return accountUnbondingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accountUnbondings_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder addAccountUnbondingsBuilder() {
+        return getAccountUnbondingsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.GenesisProto.AccountUnbondings.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder addAccountUnbondingsBuilder(
+          int index) {
+        return getAccountUnbondingsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.GenesisProto.AccountUnbondings.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.AccountUnbondings account_unbondings = 10 [json_name = "accountUnbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder> 
+           getAccountUnbondingsBuilderList() {
+        return getAccountUnbondingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.AccountUnbondings, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder, com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder> 
+          getAccountUnbondingsFieldBuilder() {
+        if (accountUnbondingsBuilder_ == null) {
+          accountUnbondingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.GenesisProto.AccountUnbondings, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder, com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder>(
+                  accountUnbondings_,
+                  ((bitField0_ & 0x00000200) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accountUnbondings_ = null;
+        }
+        return accountUnbondingsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.GenesisState)
+    private static final com.umee.incentive.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BondOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.Bond)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the uToken field is set.
+     */
+    boolean hasUToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return The uToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUTokenOrBuilder();
+  }
+  /**
+   * <pre>
+   * Bond tracks the amount of coins of one uToken denomination bonded
+   * by a single account.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.Bond}
+   */
+  public static final class Bond extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.Bond)
+      BondOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Bond.newBuilder() to construct.
+    private Bond(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Bond() {
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Bond();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Bond_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Bond_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.GenesisProto.Bond.class, com.umee.incentive.v1.GenesisProto.Bond.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin uToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the uToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasUToken() {
+      return uToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return The uToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUToken() {
+      return uToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUTokenOrBuilder() {
+      return uToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (uToken_ != null) {
+        output.writeMessage(2, getUToken());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (uToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUToken());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.GenesisProto.Bond)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.GenesisProto.Bond other = (com.umee.incentive.v1.GenesisProto.Bond) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (hasUToken() != other.hasUToken()) return false;
+      if (hasUToken()) {
+        if (!getUToken()
+            .equals(other.getUToken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      if (hasUToken()) {
+        hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getUToken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Bond parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Bond parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Bond parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.GenesisProto.Bond prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Bond tracks the amount of coins of one uToken denomination bonded
+     * by a single account.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.Bond}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.Bond)
+        com.umee.incentive.v1.GenesisProto.BondOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Bond_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Bond_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.GenesisProto.Bond.class, com.umee.incentive.v1.GenesisProto.Bond.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.GenesisProto.Bond.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        uToken_ = null;
+        if (uTokenBuilder_ != null) {
+          uTokenBuilder_.dispose();
+          uTokenBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Bond_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.Bond getDefaultInstanceForType() {
+        return com.umee.incentive.v1.GenesisProto.Bond.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.Bond build() {
+        com.umee.incentive.v1.GenesisProto.Bond result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.Bond buildPartial() {
+        com.umee.incentive.v1.GenesisProto.Bond result = new com.umee.incentive.v1.GenesisProto.Bond(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.GenesisProto.Bond result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uToken_ = uTokenBuilder_ == null
+              ? uToken_
+              : uTokenBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.GenesisProto.Bond) {
+          return mergeFrom((com.umee.incentive.v1.GenesisProto.Bond)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.GenesisProto.Bond other) {
+        if (other == com.umee.incentive.v1.GenesisProto.Bond.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasUToken()) {
+          mergeUToken(other.getUToken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getUTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin uToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> uTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       * @return Whether the uToken field is set.
+       */
+      public boolean hasUToken() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       * @return The uToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUToken() {
+        if (uTokenBuilder_ == null) {
+          return uToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+        } else {
+          return uTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (uTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uToken_ = value;
+        } else {
+          uTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (uTokenBuilder_ == null) {
+          uToken_ = builderForValue.build();
+        } else {
+          uTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (uTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            uToken_ != null &&
+            uToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUTokenBuilder().mergeFrom(value);
+          } else {
+            uToken_ = value;
+          }
+        } else {
+          uTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUToken() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        uToken_ = null;
+        if (uTokenBuilder_ != null) {
+          uTokenBuilder_.dispose();
+          uTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUTokenBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getUTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUTokenOrBuilder() {
+        if (uTokenBuilder_ != null) {
+          return uTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return uToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 2 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUTokenFieldBuilder() {
+        if (uTokenBuilder_ == null) {
+          uTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUToken(),
+                  getParentForChildren(),
+                  isClean());
+          uToken_ = null;
+        }
+        return uTokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.Bond)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.Bond)
+    private static final com.umee.incentive.v1.GenesisProto.Bond DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.GenesisProto.Bond();
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Bond getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Bond>
+        PARSER = new com.google.protobuf.AbstractParser<Bond>() {
+      @java.lang.Override
+      public Bond parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Bond> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Bond> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.Bond getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardTrackerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.RewardTracker)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    java.lang.String getUToken();
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    com.google.protobuf.ByteString
+        getUTokenBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * RewardTracker tracks the value of a given lock denom's RewardAccumulator at the
+   * last time a specific account calculated pending rewards for it. When calculating
+   * available rewards, this value is used to determine the difference between the current
+   * RewardAccumulator for a uToken and the last value at which the user updated bonds or claimed
+   * tokens. Their pending rewards increase by only the rewards accrued in that time period.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.RewardTracker}
+   */
+  public static final class RewardTracker extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.RewardTracker)
+      RewardTrackerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardTracker.newBuilder() to construct.
+    private RewardTracker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardTracker() {
+      account_ = "";
+      uToken_ = "";
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardTracker();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardTracker_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardTracker_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.GenesisProto.RewardTracker.class, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uToken_ = "";
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    @java.lang.Override
+    public java.lang.String getUToken() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUTokenBytes() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> rewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uToken_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(3, rewards_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uToken_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, rewards_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.GenesisProto.RewardTracker)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.GenesisProto.RewardTracker other = (com.umee.incentive.v1.GenesisProto.RewardTracker) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUToken()
+          .equals(other.getUToken())) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getUToken().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.GenesisProto.RewardTracker prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RewardTracker tracks the value of a given lock denom's RewardAccumulator at the
+     * last time a specific account calculated pending rewards for it. When calculating
+     * available rewards, this value is used to determine the difference between the current
+     * RewardAccumulator for a uToken and the last value at which the user updated bonds or claimed
+     * tokens. Their pending rewards increase by only the rewards accrued in that time period.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.RewardTracker}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.RewardTracker)
+        com.umee.incentive.v1.GenesisProto.RewardTrackerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardTracker_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardTracker_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.GenesisProto.RewardTracker.class, com.umee.incentive.v1.GenesisProto.RewardTracker.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.GenesisProto.RewardTracker.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        uToken_ = "";
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardTracker_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.RewardTracker getDefaultInstanceForType() {
+        return com.umee.incentive.v1.GenesisProto.RewardTracker.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.RewardTracker build() {
+        com.umee.incentive.v1.GenesisProto.RewardTracker result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.RewardTracker buildPartial() {
+        com.umee.incentive.v1.GenesisProto.RewardTracker result = new com.umee.incentive.v1.GenesisProto.RewardTracker(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.incentive.v1.GenesisProto.RewardTracker result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.GenesisProto.RewardTracker result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uToken_ = uToken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.GenesisProto.RewardTracker) {
+          return mergeFrom((com.umee.incentive.v1.GenesisProto.RewardTracker)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.GenesisProto.RewardTracker other) {
+        if (other == com.umee.incentive.v1.GenesisProto.RewardTracker.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getUToken().isEmpty()) {
+          uToken_ = other.uToken_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                uToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uToken_ = "";
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @return The uToken.
+       */
+      public java.lang.String getUToken() {
+        java.lang.Object ref = uToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @return The bytes for uToken.
+       */
+      public com.google.protobuf.ByteString
+          getUTokenBytes() {
+        java.lang.Object ref = uToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @param value The uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUToken() {
+        uToken_ = getDefaultInstance().getUToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @param value The bytes for uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(rewards_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 3 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.RewardTracker)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.RewardTracker)
+    private static final com.umee.incentive.v1.GenesisProto.RewardTracker DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.GenesisProto.RewardTracker();
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardTracker getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardTracker>
+        PARSER = new com.google.protobuf.AbstractParser<RewardTracker>() {
+      @java.lang.Override
+      public RewardTracker parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardTracker> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardTracker> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.RewardTracker getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardAccumulatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.RewardAccumulator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string uToken = 1 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    java.lang.String getUToken();
+    /**
+     * <code>string uToken = 1 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    com.google.protobuf.ByteString
+        getUTokenBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getRewardsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getRewards(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getRewardsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getRewardsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardsOrBuilder(
+        int index);
+
+    /**
+     * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+     * @return The exponent.
+     */
+    int getExponent();
+  }
+  /**
+   * <pre>
+   * RewardAccumulator is a global reward tracking struct that indicates the amount
+   * of rewards that a reference amount of a bonded uToken denom would have accumulated
+   * if it was bonded since genesis. To prevent rounding issues, the reference amount is
+   * 10^exponent of the uToken's smallest possible amount, generally matching the exponent
+   * of the associated base token registered with the leverage module.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.RewardAccumulator}
+   */
+  public static final class RewardAccumulator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.RewardAccumulator)
+      RewardAccumulatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardAccumulator.newBuilder() to construct.
+    private RewardAccumulator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardAccumulator() {
+      uToken_ = "";
+      rewards_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardAccumulator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardAccumulator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardAccumulator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.GenesisProto.RewardAccumulator.class, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder.class);
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uToken_ = "";
+    /**
+     * <code>string uToken = 1 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    @java.lang.Override
+    public java.lang.String getUToken() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uToken = 1 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUTokenBytes() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> rewards_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getRewardsList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getRewardsOrBuilderList() {
+      return rewards_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getRewardsCount() {
+      return rewards_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getRewards(int index) {
+      return rewards_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardsOrBuilder(
+        int index) {
+      return rewards_.get(index);
+    }
+
+    public static final int EXPONENT_FIELD_NUMBER = 3;
+    private int exponent_ = 0;
+    /**
+     * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+     * @return The exponent.
+     */
+    @java.lang.Override
+    public int getExponent() {
+      return exponent_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uToken_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        output.writeMessage(2, rewards_.get(i));
+      }
+      if (exponent_ != 0) {
+        output.writeUInt32(3, exponent_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uToken_);
+      }
+      for (int i = 0; i < rewards_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, rewards_.get(i));
+      }
+      if (exponent_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, exponent_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.GenesisProto.RewardAccumulator)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.GenesisProto.RewardAccumulator other = (com.umee.incentive.v1.GenesisProto.RewardAccumulator) obj;
+
+      if (!getUToken()
+          .equals(other.getUToken())) return false;
+      if (!getRewardsList()
+          .equals(other.getRewardsList())) return false;
+      if (getExponent()
+          != other.getExponent()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getUToken().hashCode();
+      if (getRewardsCount() > 0) {
+        hash = (37 * hash) + REWARDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRewardsList().hashCode();
+      }
+      hash = (37 * hash) + EXPONENT_FIELD_NUMBER;
+      hash = (53 * hash) + getExponent();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.GenesisProto.RewardAccumulator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RewardAccumulator is a global reward tracking struct that indicates the amount
+     * of rewards that a reference amount of a bonded uToken denom would have accumulated
+     * if it was bonded since genesis. To prevent rounding issues, the reference amount is
+     * 10^exponent of the uToken's smallest possible amount, generally matching the exponent
+     * of the associated base token registered with the leverage module.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.RewardAccumulator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.RewardAccumulator)
+        com.umee.incentive.v1.GenesisProto.RewardAccumulatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardAccumulator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardAccumulator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.GenesisProto.RewardAccumulator.class, com.umee.incentive.v1.GenesisProto.RewardAccumulator.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.GenesisProto.RewardAccumulator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uToken_ = "";
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+        } else {
+          rewards_ = null;
+          rewardsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        exponent_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_RewardAccumulator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator getDefaultInstanceForType() {
+        return com.umee.incentive.v1.GenesisProto.RewardAccumulator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator build() {
+        com.umee.incentive.v1.GenesisProto.RewardAccumulator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.RewardAccumulator buildPartial() {
+        com.umee.incentive.v1.GenesisProto.RewardAccumulator result = new com.umee.incentive.v1.GenesisProto.RewardAccumulator(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.incentive.v1.GenesisProto.RewardAccumulator result) {
+        if (rewardsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            rewards_ = java.util.Collections.unmodifiableList(rewards_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.rewards_ = rewards_;
+        } else {
+          result.rewards_ = rewardsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.GenesisProto.RewardAccumulator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uToken_ = uToken_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.exponent_ = exponent_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.GenesisProto.RewardAccumulator) {
+          return mergeFrom((com.umee.incentive.v1.GenesisProto.RewardAccumulator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.GenesisProto.RewardAccumulator other) {
+        if (other == com.umee.incentive.v1.GenesisProto.RewardAccumulator.getDefaultInstance()) return this;
+        if (!other.getUToken().isEmpty()) {
+          uToken_ = other.uToken_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (rewardsBuilder_ == null) {
+          if (!other.rewards_.isEmpty()) {
+            if (rewards_.isEmpty()) {
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRewardsIsMutable();
+              rewards_.addAll(other.rewards_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rewards_.isEmpty()) {
+            if (rewardsBuilder_.isEmpty()) {
+              rewardsBuilder_.dispose();
+              rewardsBuilder_ = null;
+              rewards_ = other.rewards_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              rewardsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRewardsFieldBuilder() : null;
+            } else {
+              rewardsBuilder_.addAllMessages(other.rewards_);
+            }
+          }
+        }
+        if (other.getExponent() != 0) {
+          setExponent(other.getExponent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (rewardsBuilder_ == null) {
+                  ensureRewardsIsMutable();
+                  rewards_.add(m);
+                } else {
+                  rewardsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                exponent_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uToken_ = "";
+      /**
+       * <code>string uToken = 1 [json_name = "uToken"];</code>
+       * @return The uToken.
+       */
+      public java.lang.String getUToken() {
+        java.lang.Object ref = uToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uToken = 1 [json_name = "uToken"];</code>
+       * @return The bytes for uToken.
+       */
+      public com.google.protobuf.ByteString
+          getUTokenBytes() {
+        java.lang.Object ref = uToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uToken = 1 [json_name = "uToken"];</code>
+       * @param value The uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uToken_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uToken = 1 [json_name = "uToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUToken() {
+        uToken_ = getDefaultInstance().getUToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uToken = 1 [json_name = "uToken"];</code>
+       * @param value The bytes for uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uToken_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> rewards_ =
+        java.util.Collections.emptyList();
+      private void ensureRewardsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rewards_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(rewards_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> rewardsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getRewardsList() {
+        if (rewardsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rewards_);
+        } else {
+          return rewardsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getRewardsCount() {
+        if (rewardsBuilder_ == null) {
+          return rewards_.size();
+        } else {
+          return rewardsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);
+        } else {
+          return rewardsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.set(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (rewardsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRewardsIsMutable();
+          rewards_.add(index, value);
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addRewards(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rewardsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllRewards(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rewards_);
+          onChanged();
+        } else {
+          rewardsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearRewards() {
+        if (rewardsBuilder_ == null) {
+          rewards_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          rewardsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeRewards(int index) {
+        if (rewardsBuilder_ == null) {
+          ensureRewardsIsMutable();
+          rewards_.remove(index);
+          onChanged();
+        } else {
+          rewardsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getRewardsOrBuilder(
+          int index) {
+        if (rewardsBuilder_ == null) {
+          return rewards_.get(index);  } else {
+          return rewardsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getRewardsOrBuilderList() {
+        if (rewardsBuilder_ != null) {
+          return rewardsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rewards_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addRewardsBuilder() {
+        return getRewardsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addRewardsBuilder(
+          int index) {
+        return getRewardsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin rewards = 2 [json_name = "rewards", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getRewardsBuilderList() {
+        return getRewardsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getRewardsFieldBuilder() {
+        if (rewardsBuilder_ == null) {
+          rewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  rewards_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rewards_ = null;
+        }
+        return rewardsBuilder_;
+      }
+
+      private int exponent_ ;
+      /**
+       * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+       * @return The exponent.
+       */
+      @java.lang.Override
+      public int getExponent() {
+        return exponent_;
+      }
+      /**
+       * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+       * @param value The exponent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExponent(int value) {
+
+        exponent_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 exponent = 3 [json_name = "exponent"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExponent() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        exponent_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.RewardAccumulator)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.RewardAccumulator)
+    private static final com.umee.incentive.v1.GenesisProto.RewardAccumulator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.GenesisProto.RewardAccumulator();
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.RewardAccumulator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardAccumulator>
+        PARSER = new com.google.protobuf.AbstractParser<RewardAccumulator>() {
+      @java.lang.Override
+      public RewardAccumulator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardAccumulator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardAccumulator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.RewardAccumulator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnbondingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.Unbonding)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 start = 1 [json_name = "start"];</code>
+     * @return The start.
+     */
+    long getStart();
+
+    /**
+     * <code>int64 end = 2 [json_name = "end"];</code>
+     * @return The end.
+     */
+    long getEnd();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the uToken field is set.
+     */
+    boolean hasUToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return The uToken.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUToken();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUTokenOrBuilder();
+  }
+  /**
+   * <pre>
+   * Unbonding is a structure that tracks an in-progress token unbonding.
+   * It tracks both its start time and end time, so that if the module's
+   * unbonding time changes, the unbonding can complete at the earlier of
+   * its original end time or its new one based on the new parameter.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.Unbonding}
+   */
+  public static final class Unbonding extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.Unbonding)
+      UnbondingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Unbonding.newBuilder() to construct.
+    private Unbonding(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Unbonding() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Unbonding();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Unbonding_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Unbonding_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.GenesisProto.Unbonding.class, com.umee.incentive.v1.GenesisProto.Unbonding.Builder.class);
+    }
+
+    public static final int START_FIELD_NUMBER = 1;
+    private long start_ = 0L;
+    /**
+     * <code>int64 start = 1 [json_name = "start"];</code>
+     * @return The start.
+     */
+    @java.lang.Override
+    public long getStart() {
+      return start_;
+    }
+
+    public static final int END_FIELD_NUMBER = 2;
+    private long end_ = 0L;
+    /**
+     * <code>int64 end = 2 [json_name = "end"];</code>
+     * @return The end.
+     */
+    @java.lang.Override
+    public long getEnd() {
+      return end_;
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin uToken_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return Whether the uToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasUToken() {
+      return uToken_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     * @return The uToken.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUToken() {
+      return uToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUTokenOrBuilder() {
+      return uToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (start_ != 0L) {
+        output.writeInt64(1, start_);
+      }
+      if (end_ != 0L) {
+        output.writeInt64(2, end_);
+      }
+      if (uToken_ != null) {
+        output.writeMessage(3, getUToken());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (start_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, start_);
+      }
+      if (end_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, end_);
+      }
+      if (uToken_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUToken());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.GenesisProto.Unbonding)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.GenesisProto.Unbonding other = (com.umee.incentive.v1.GenesisProto.Unbonding) obj;
+
+      if (getStart()
+          != other.getStart()) return false;
+      if (getEnd()
+          != other.getEnd()) return false;
+      if (hasUToken() != other.hasUToken()) return false;
+      if (hasUToken()) {
+        if (!getUToken()
+            .equals(other.getUToken())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + START_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStart());
+      hash = (37 * hash) + END_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEnd());
+      if (hasUToken()) {
+        hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getUToken().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.Unbonding parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.GenesisProto.Unbonding prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Unbonding is a structure that tracks an in-progress token unbonding.
+     * It tracks both its start time and end time, so that if the module's
+     * unbonding time changes, the unbonding can complete at the earlier of
+     * its original end time or its new one based on the new parameter.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.Unbonding}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.Unbonding)
+        com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Unbonding_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Unbonding_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.GenesisProto.Unbonding.class, com.umee.incentive.v1.GenesisProto.Unbonding.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.GenesisProto.Unbonding.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        start_ = 0L;
+        end_ = 0L;
+        uToken_ = null;
+        if (uTokenBuilder_ != null) {
+          uTokenBuilder_.dispose();
+          uTokenBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_Unbonding_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.Unbonding getDefaultInstanceForType() {
+        return com.umee.incentive.v1.GenesisProto.Unbonding.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.Unbonding build() {
+        com.umee.incentive.v1.GenesisProto.Unbonding result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.Unbonding buildPartial() {
+        com.umee.incentive.v1.GenesisProto.Unbonding result = new com.umee.incentive.v1.GenesisProto.Unbonding(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.GenesisProto.Unbonding result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.start_ = start_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.end_ = end_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.uToken_ = uTokenBuilder_ == null
+              ? uToken_
+              : uTokenBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.GenesisProto.Unbonding) {
+          return mergeFrom((com.umee.incentive.v1.GenesisProto.Unbonding)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.GenesisProto.Unbonding other) {
+        if (other == com.umee.incentive.v1.GenesisProto.Unbonding.getDefaultInstance()) return this;
+        if (other.getStart() != 0L) {
+          setStart(other.getStart());
+        }
+        if (other.getEnd() != 0L) {
+          setEnd(other.getEnd());
+        }
+        if (other.hasUToken()) {
+          mergeUToken(other.getUToken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                start_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                end_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getUTokenFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long start_ ;
+      /**
+       * <code>int64 start = 1 [json_name = "start"];</code>
+       * @return The start.
+       */
+      @java.lang.Override
+      public long getStart() {
+        return start_;
+      }
+      /**
+       * <code>int64 start = 1 [json_name = "start"];</code>
+       * @param value The start to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStart(long value) {
+
+        start_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 start = 1 [json_name = "start"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStart() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        start_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long end_ ;
+      /**
+       * <code>int64 end = 2 [json_name = "end"];</code>
+       * @return The end.
+       */
+      @java.lang.Override
+      public long getEnd() {
+        return end_;
+      }
+      /**
+       * <code>int64 end = 2 [json_name = "end"];</code>
+       * @param value The end to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnd(long value) {
+
+        end_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 end = 2 [json_name = "end"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnd() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        end_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin uToken_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> uTokenBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       * @return Whether the uToken field is set.
+       */
+      public boolean hasUToken() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       * @return The uToken.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUToken() {
+        if (uTokenBuilder_ == null) {
+          return uToken_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+        } else {
+          return uTokenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (uTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          uToken_ = value;
+        } else {
+          uTokenBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUToken(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (uTokenBuilder_ == null) {
+          uToken_ = builderForValue.build();
+        } else {
+          uTokenBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUToken(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (uTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            uToken_ != null &&
+            uToken_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getUTokenBuilder().mergeFrom(value);
+          } else {
+            uToken_ = value;
+          }
+        } else {
+          uTokenBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUToken() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        uToken_ = null;
+        if (uTokenBuilder_ != null) {
+          uTokenBuilder_.dispose();
+          uTokenBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUTokenBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getUTokenFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUTokenOrBuilder() {
+        if (uTokenBuilder_ != null) {
+          return uTokenBuilder_.getMessageOrBuilder();
+        } else {
+          return uToken_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : uToken_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin uToken = 3 [json_name = "uToken", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUTokenFieldBuilder() {
+        if (uTokenBuilder_ == null) {
+          uTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getUToken(),
+                  getParentForChildren(),
+                  isClean());
+          uToken_ = null;
+        }
+        return uTokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.Unbonding)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.Unbonding)
+    private static final com.umee.incentive.v1.GenesisProto.Unbonding DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.GenesisProto.Unbonding();
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.Unbonding getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Unbonding>
+        PARSER = new com.google.protobuf.AbstractParser<Unbonding>() {
+      @java.lang.Override
+      public Unbonding parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Unbonding> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Unbonding> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.Unbonding getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccountUnbondingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.incentive.v1.AccountUnbondings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    java.lang.String getUToken();
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    com.google.protobuf.ByteString
+        getUTokenBytes();
+
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.incentive.v1.GenesisProto.Unbonding> 
+        getUnbondingsList();
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.Unbonding getUnbondings(int index);
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    int getUnbondingsCount();
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder> 
+        getUnbondingsOrBuilderList();
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder getUnbondingsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * AccountUnbondings is a structure that is used to store all of an account's unbondings
+   * for a single bonded uToken denom in both KVStore and genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code umee.incentive.v1.AccountUnbondings}
+   */
+  public static final class AccountUnbondings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.incentive.v1.AccountUnbondings)
+      AccountUnbondingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccountUnbondings.newBuilder() to construct.
+    private AccountUnbondings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccountUnbondings() {
+      account_ = "";
+      uToken_ = "";
+      unbondings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccountUnbondings();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_AccountUnbondings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_AccountUnbondings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.incentive.v1.GenesisProto.AccountUnbondings.class, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UTOKEN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uToken_ = "";
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The uToken.
+     */
+    @java.lang.Override
+    public java.lang.String getUToken() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string uToken = 2 [json_name = "uToken"];</code>
+     * @return The bytes for uToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUTokenBytes() {
+      java.lang.Object ref = uToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNBONDINGS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.incentive.v1.GenesisProto.Unbonding> unbondings_;
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.incentive.v1.GenesisProto.Unbonding> getUnbondingsList() {
+      return unbondings_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder> 
+        getUnbondingsOrBuilderList() {
+      return unbondings_;
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getUnbondingsCount() {
+      return unbondings_.size();
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.Unbonding getUnbondings(int index) {
+      return unbondings_.get(index);
+    }
+    /**
+     * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder getUnbondingsOrBuilder(
+        int index) {
+      return unbondings_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uToken_);
+      }
+      for (int i = 0; i < unbondings_.size(); i++) {
+        output.writeMessage(3, unbondings_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uToken_);
+      }
+      for (int i = 0; i < unbondings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, unbondings_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.incentive.v1.GenesisProto.AccountUnbondings)) {
+        return super.equals(obj);
+      }
+      com.umee.incentive.v1.GenesisProto.AccountUnbondings other = (com.umee.incentive.v1.GenesisProto.AccountUnbondings) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (!getUToken()
+          .equals(other.getUToken())) return false;
+      if (!getUnbondingsList()
+          .equals(other.getUnbondingsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + UTOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getUToken().hashCode();
+      if (getUnbondingsCount() > 0) {
+        hash = (37 * hash) + UNBONDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnbondingsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.incentive.v1.GenesisProto.AccountUnbondings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccountUnbondings is a structure that is used to store all of an account's unbondings
+     * for a single bonded uToken denom in both KVStore and genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code umee.incentive.v1.AccountUnbondings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.incentive.v1.AccountUnbondings)
+        com.umee.incentive.v1.GenesisProto.AccountUnbondingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_AccountUnbondings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_AccountUnbondings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.incentive.v1.GenesisProto.AccountUnbondings.class, com.umee.incentive.v1.GenesisProto.AccountUnbondings.Builder.class);
+      }
+
+      // Construct using com.umee.incentive.v1.GenesisProto.AccountUnbondings.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        uToken_ = "";
+        if (unbondingsBuilder_ == null) {
+          unbondings_ = java.util.Collections.emptyList();
+        } else {
+          unbondings_ = null;
+          unbondingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.incentive.v1.GenesisProto.internal_static_umee_incentive_v1_AccountUnbondings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings getDefaultInstanceForType() {
+        return com.umee.incentive.v1.GenesisProto.AccountUnbondings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings build() {
+        com.umee.incentive.v1.GenesisProto.AccountUnbondings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.incentive.v1.GenesisProto.AccountUnbondings buildPartial() {
+        com.umee.incentive.v1.GenesisProto.AccountUnbondings result = new com.umee.incentive.v1.GenesisProto.AccountUnbondings(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.incentive.v1.GenesisProto.AccountUnbondings result) {
+        if (unbondingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            unbondings_ = java.util.Collections.unmodifiableList(unbondings_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.unbondings_ = unbondings_;
+        } else {
+          result.unbondings_ = unbondingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.incentive.v1.GenesisProto.AccountUnbondings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uToken_ = uToken_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.incentive.v1.GenesisProto.AccountUnbondings) {
+          return mergeFrom((com.umee.incentive.v1.GenesisProto.AccountUnbondings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.incentive.v1.GenesisProto.AccountUnbondings other) {
+        if (other == com.umee.incentive.v1.GenesisProto.AccountUnbondings.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getUToken().isEmpty()) {
+          uToken_ = other.uToken_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (unbondingsBuilder_ == null) {
+          if (!other.unbondings_.isEmpty()) {
+            if (unbondings_.isEmpty()) {
+              unbondings_ = other.unbondings_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureUnbondingsIsMutable();
+              unbondings_.addAll(other.unbondings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unbondings_.isEmpty()) {
+            if (unbondingsBuilder_.isEmpty()) {
+              unbondingsBuilder_.dispose();
+              unbondingsBuilder_ = null;
+              unbondings_ = other.unbondings_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              unbondingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnbondingsFieldBuilder() : null;
+            } else {
+              unbondingsBuilder_.addAllMessages(other.unbondings_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                uToken_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.umee.incentive.v1.GenesisProto.Unbonding m =
+                    input.readMessage(
+                        com.umee.incentive.v1.GenesisProto.Unbonding.parser(),
+                        extensionRegistry);
+                if (unbondingsBuilder_ == null) {
+                  ensureUnbondingsIsMutable();
+                  unbondings_.add(m);
+                } else {
+                  unbondingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uToken_ = "";
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @return The uToken.
+       */
+      public java.lang.String getUToken() {
+        java.lang.Object ref = uToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @return The bytes for uToken.
+       */
+      public com.google.protobuf.ByteString
+          getUTokenBytes() {
+        java.lang.Object ref = uToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @param value The uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUToken(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUToken() {
+        uToken_ = getDefaultInstance().getUToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string uToken = 2 [json_name = "uToken"];</code>
+       * @param value The bytes for uToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uToken_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.umee.incentive.v1.GenesisProto.Unbonding> unbondings_ =
+        java.util.Collections.emptyList();
+      private void ensureUnbondingsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          unbondings_ = new java.util.ArrayList<com.umee.incentive.v1.GenesisProto.Unbonding>(unbondings_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.Unbonding, com.umee.incentive.v1.GenesisProto.Unbonding.Builder, com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder> unbondingsBuilder_;
+
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.Unbonding> getUnbondingsList() {
+        if (unbondingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unbondings_);
+        } else {
+          return unbondingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public int getUnbondingsCount() {
+        if (unbondingsBuilder_ == null) {
+          return unbondings_.size();
+        } else {
+          return unbondingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Unbonding getUnbondings(int index) {
+        if (unbondingsBuilder_ == null) {
+          return unbondings_.get(index);
+        } else {
+          return unbondingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.Unbonding value) {
+        if (unbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondingsIsMutable();
+          unbondings_.set(index, value);
+          onChanged();
+        } else {
+          unbondingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.Unbonding.Builder builderForValue) {
+        if (unbondingsBuilder_ == null) {
+          ensureUnbondingsIsMutable();
+          unbondings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbondings(com.umee.incentive.v1.GenesisProto.Unbonding value) {
+        if (unbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondingsIsMutable();
+          unbondings_.add(value);
+          onChanged();
+        } else {
+          unbondingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.Unbonding value) {
+        if (unbondingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnbondingsIsMutable();
+          unbondings_.add(index, value);
+          onChanged();
+        } else {
+          unbondingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbondings(
+          com.umee.incentive.v1.GenesisProto.Unbonding.Builder builderForValue) {
+        if (unbondingsBuilder_ == null) {
+          ensureUnbondingsIsMutable();
+          unbondings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unbondingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addUnbondings(
+          int index, com.umee.incentive.v1.GenesisProto.Unbonding.Builder builderForValue) {
+        if (unbondingsBuilder_ == null) {
+          ensureUnbondingsIsMutable();
+          unbondings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unbondingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllUnbondings(
+          java.lang.Iterable<? extends com.umee.incentive.v1.GenesisProto.Unbonding> values) {
+        if (unbondingsBuilder_ == null) {
+          ensureUnbondingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unbondings_);
+          onChanged();
+        } else {
+          unbondingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUnbondings() {
+        if (unbondingsBuilder_ == null) {
+          unbondings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          unbondingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeUnbondings(int index) {
+        if (unbondingsBuilder_ == null) {
+          ensureUnbondingsIsMutable();
+          unbondings_.remove(index);
+          onChanged();
+        } else {
+          unbondingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Unbonding.Builder getUnbondingsBuilder(
+          int index) {
+        return getUnbondingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder getUnbondingsOrBuilder(
+          int index) {
+        if (unbondingsBuilder_ == null) {
+          return unbondings_.get(index);  } else {
+          return unbondingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder> 
+           getUnbondingsOrBuilderList() {
+        if (unbondingsBuilder_ != null) {
+          return unbondingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unbondings_);
+        }
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Unbonding.Builder addUnbondingsBuilder() {
+        return getUnbondingsFieldBuilder().addBuilder(
+            com.umee.incentive.v1.GenesisProto.Unbonding.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.incentive.v1.GenesisProto.Unbonding.Builder addUnbondingsBuilder(
+          int index) {
+        return getUnbondingsFieldBuilder().addBuilder(
+            index, com.umee.incentive.v1.GenesisProto.Unbonding.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.incentive.v1.Unbonding unbondings = 3 [json_name = "unbondings", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.incentive.v1.GenesisProto.Unbonding.Builder> 
+           getUnbondingsBuilderList() {
+        return getUnbondingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.incentive.v1.GenesisProto.Unbonding, com.umee.incentive.v1.GenesisProto.Unbonding.Builder, com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder> 
+          getUnbondingsFieldBuilder() {
+        if (unbondingsBuilder_ == null) {
+          unbondingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.incentive.v1.GenesisProto.Unbonding, com.umee.incentive.v1.GenesisProto.Unbonding.Builder, com.umee.incentive.v1.GenesisProto.UnbondingOrBuilder>(
+                  unbondings_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unbondings_ = null;
+        }
+        return unbondingsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.incentive.v1.AccountUnbondings)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.incentive.v1.AccountUnbondings)
+    private static final com.umee.incentive.v1.GenesisProto.AccountUnbondings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.incentive.v1.GenesisProto.AccountUnbondings();
+    }
+
+    public static com.umee.incentive.v1.GenesisProto.AccountUnbondings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccountUnbondings>
+        PARSER = new com.google.protobuf.AbstractParser<AccountUnbondings>() {
+      @java.lang.Override
+      public AccountUnbondings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccountUnbondings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccountUnbondings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.incentive.v1.GenesisProto.AccountUnbondings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_Bond_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_Bond_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_RewardTracker_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_RewardTracker_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_RewardAccumulator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_RewardAccumulator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_Unbonding_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_Unbonding_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_incentive_v1_AccountUnbondings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_incentive_v1_AccountUnbondings_fieldAccessorTable;
 
@@ -92,12 +8185,12 @@ public final class GenesisProto {
       "en\"\211\001\n\021AccountUnbondings\022\030\n\007account\030\001 \001(" +
       "\tR\007account\022\026\n\006uToken\030\002 \001(\tR\006uToken\022B\n\nun" +
       "bondings\030\003 \003(\0132\034.umee.incentive.v1.Unbon" +
-      "dingB\004\310\336\037\000R\nunbondingsB\270\001\n\025com.umee.ince" +
-      "ntive.v1B\014GenesisProtoP\001Z+github.com/ume" +
-      "e-network/umee/v5/x/incentive\242\002\003UIX\252\002\021Um" +
-      "ee.Incentive.V1\312\002\021Umee\\Incentive\\V1\342\002\035Um" +
-      "ee\\Incentive\\V1\\GPBMetadata\352\002\023Umee::Ince" +
-      "ntive::V1b\006proto3"
+      "dingB\004\310\336\037\000R\nunbondingsB\266\001\n\025com.umee.ince" +
+      "ntive.v1B\014GenesisProtoZ+github.com/umee-" +
+      "network/umee/v5/x/incentive\242\002\003UIX\252\002\021Umee" +
+      ".Incentive.V1\312\002\021Umee\\Incentive\\V1\342\002\035Umee" +
+      "\\Incentive\\V1\\GPBMetadata\352\002\023Umee::Incent" +
+      "ive::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

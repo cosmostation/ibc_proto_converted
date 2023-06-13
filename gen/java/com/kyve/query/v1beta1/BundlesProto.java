@@ -14,74 +14,10593 @@ public final class BundlesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryFinalizedBundlesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryFinalizedBundlesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * QueryFinalizedBundlesRequest is the request type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesRequest}
+   */
+  public static final class QueryFinalizedBundlesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryFinalizedBundlesRequest)
+      QueryFinalizedBundlesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFinalizedBundlesRequest.newBuilder() to construct.
+    private QueryFinalizedBundlesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFinalizedBundlesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFinalizedBundlesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFinalizedBundlesRequest is the request type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryFinalizedBundlesRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryFinalizedBundlesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryFinalizedBundlesRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFinalizedBundlesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFinalizedBundlesRequest>() {
+      @java.lang.Override
+      public QueryFinalizedBundlesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFinalizedBundlesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFinalizedBundlesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFinalizedBundlesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryFinalizedBundlesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> 
+        getFinalizedBundlesList();
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundles(int index);
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    int getFinalizedBundlesCount();
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+        getFinalizedBundlesOrBuilderList();
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundlesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryStakersByPoolResponse is the response type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesResponse}
+   */
+  public static final class QueryFinalizedBundlesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryFinalizedBundlesResponse)
+      QueryFinalizedBundlesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFinalizedBundlesResponse.newBuilder() to construct.
+    private QueryFinalizedBundlesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFinalizedBundlesResponse() {
+      finalizedBundles_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFinalizedBundlesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.Builder.class);
+    }
+
+    public static final int FINALIZED_BUNDLES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> finalizedBundles_;
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> getFinalizedBundlesList() {
+      return finalizedBundles_;
+    }
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+        getFinalizedBundlesOrBuilderList() {
+      return finalizedBundles_;
+    }
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFinalizedBundlesCount() {
+      return finalizedBundles_.size();
+    }
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundles(int index) {
+      return finalizedBundles_.get(index);
+    }
+    /**
+     * <pre>
+     * finalized_bundles ...
+     * </pre>
+     *
+     * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundlesOrBuilder(
+        int index) {
+      return finalizedBundles_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < finalizedBundles_.size(); i++) {
+        output.writeMessage(1, finalizedBundles_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < finalizedBundles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, finalizedBundles_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse) obj;
+
+      if (!getFinalizedBundlesList()
+          .equals(other.getFinalizedBundlesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFinalizedBundlesCount() > 0) {
+        hash = (37 * hash) + FINALIZED_BUNDLES_FIELD_NUMBER;
+        hash = (53 * hash) + getFinalizedBundlesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStakersByPoolResponse is the response type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryFinalizedBundlesResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (finalizedBundlesBuilder_ == null) {
+          finalizedBundles_ = java.util.Collections.emptyList();
+        } else {
+          finalizedBundles_ = null;
+          finalizedBundlesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse result) {
+        if (finalizedBundlesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            finalizedBundles_ = java.util.Collections.unmodifiableList(finalizedBundles_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.finalizedBundles_ = finalizedBundles_;
+        } else {
+          result.finalizedBundles_ = finalizedBundlesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse.getDefaultInstance()) return this;
+        if (finalizedBundlesBuilder_ == null) {
+          if (!other.finalizedBundles_.isEmpty()) {
+            if (finalizedBundles_.isEmpty()) {
+              finalizedBundles_ = other.finalizedBundles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFinalizedBundlesIsMutable();
+              finalizedBundles_.addAll(other.finalizedBundles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.finalizedBundles_.isEmpty()) {
+            if (finalizedBundlesBuilder_.isEmpty()) {
+              finalizedBundlesBuilder_.dispose();
+              finalizedBundlesBuilder_ = null;
+              finalizedBundles_ = other.finalizedBundles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              finalizedBundlesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFinalizedBundlesFieldBuilder() : null;
+            } else {
+              finalizedBundlesBuilder_.addAllMessages(other.finalizedBundles_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle m =
+                    input.readMessage(
+                        com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.parser(),
+                        extensionRegistry);
+                if (finalizedBundlesBuilder_ == null) {
+                  ensureFinalizedBundlesIsMutable();
+                  finalizedBundles_.add(m);
+                } else {
+                  finalizedBundlesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> finalizedBundles_ =
+        java.util.Collections.emptyList();
+      private void ensureFinalizedBundlesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          finalizedBundles_ = new java.util.ArrayList<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle>(finalizedBundles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> finalizedBundlesBuilder_;
+
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> getFinalizedBundlesList() {
+        if (finalizedBundlesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(finalizedBundles_);
+        } else {
+          return finalizedBundlesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFinalizedBundlesCount() {
+        if (finalizedBundlesBuilder_ == null) {
+          return finalizedBundles_.size();
+        } else {
+          return finalizedBundlesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundles(int index) {
+        if (finalizedBundlesBuilder_ == null) {
+          return finalizedBundles_.get(index);
+        } else {
+          return finalizedBundlesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundles(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundlesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.set(index, value);
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundles(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundlesBuilder_ == null) {
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundles(com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundlesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.add(value);
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundles(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundlesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.add(index, value);
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundles(
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundlesBuilder_ == null) {
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFinalizedBundles(
+          int index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundlesBuilder_ == null) {
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFinalizedBundles(
+          java.lang.Iterable<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle> values) {
+        if (finalizedBundlesBuilder_ == null) {
+          ensureFinalizedBundlesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, finalizedBundles_);
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFinalizedBundles() {
+        if (finalizedBundlesBuilder_ == null) {
+          finalizedBundles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFinalizedBundles(int index) {
+        if (finalizedBundlesBuilder_ == null) {
+          ensureFinalizedBundlesIsMutable();
+          finalizedBundles_.remove(index);
+          onChanged();
+        } else {
+          finalizedBundlesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder getFinalizedBundlesBuilder(
+          int index) {
+        return getFinalizedBundlesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundlesOrBuilder(
+          int index) {
+        if (finalizedBundlesBuilder_ == null) {
+          return finalizedBundles_.get(index);  } else {
+          return finalizedBundlesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+           getFinalizedBundlesOrBuilderList() {
+        if (finalizedBundlesBuilder_ != null) {
+          return finalizedBundlesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(finalizedBundles_);
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder addFinalizedBundlesBuilder() {
+        return getFinalizedBundlesFieldBuilder().addBuilder(
+            com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder addFinalizedBundlesBuilder(
+          int index) {
+        return getFinalizedBundlesFieldBuilder().addBuilder(
+            index, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * finalized_bundles ...
+       * </pre>
+       *
+       * <code>repeated .kyve.bundles.v1beta1.FinalizedBundle finalized_bundles = 1 [json_name = "finalizedBundles", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder> 
+           getFinalizedBundlesBuilderList() {
+        return getFinalizedBundlesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+          getFinalizedBundlesFieldBuilder() {
+        if (finalizedBundlesBuilder_ == null) {
+          finalizedBundlesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder>(
+                  finalizedBundles_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          finalizedBundles_ = null;
+        }
+        return finalizedBundlesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryFinalizedBundlesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryFinalizedBundlesResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFinalizedBundlesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFinalizedBundlesResponse>() {
+      @java.lang.Override
+      public QueryFinalizedBundlesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFinalizedBundlesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFinalizedBundlesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFinalizedBundleRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryFinalizedBundleRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * id ...
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * <pre>
+   * QueryFinalizedBundleRequest is the request type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundleRequest}
+   */
+  public static final class QueryFinalizedBundleRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryFinalizedBundleRequest)
+      QueryFinalizedBundleRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFinalizedBundleRequest.newBuilder() to construct.
+    private QueryFinalizedBundleRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFinalizedBundleRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFinalizedBundleRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id ...
+     * </pre>
+     *
+     * <code>uint64 id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (id_ != 0L) {
+        output.writeUInt64(2, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFinalizedBundleRequest is the request type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundleRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryFinalizedBundleRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id ...
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id ...
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id ...
+       * </pre>
+       *
+       * <code>uint64 id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryFinalizedBundleRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryFinalizedBundleRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFinalizedBundleRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFinalizedBundleRequest>() {
+      @java.lang.Override
+      public QueryFinalizedBundleRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFinalizedBundleRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFinalizedBundleRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFinalizedBundleResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryFinalizedBundleResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return Whether the finalizedBundle field is set.
+     */
+    boolean hasFinalizedBundle();
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return The finalizedBundle.
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundle();
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryFinalizedBundleResponse is the response type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundleResponse}
+   */
+  public static final class QueryFinalizedBundleResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryFinalizedBundleResponse)
+      QueryFinalizedBundleResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFinalizedBundleResponse.newBuilder() to construct.
+    private QueryFinalizedBundleResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFinalizedBundleResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFinalizedBundleResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.Builder.class);
+    }
+
+    public static final int FINALIZED_BUNDLE_FIELD_NUMBER = 1;
+    private com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle finalizedBundle_;
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return Whether the finalizedBundle field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinalizedBundle() {
+      return finalizedBundle_ != null;
+    }
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return The finalizedBundle.
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundle() {
+      return finalizedBundle_ == null ? com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+    }
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleOrBuilder() {
+      return finalizedBundle_ == null ? com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (finalizedBundle_ != null) {
+        output.writeMessage(1, getFinalizedBundle());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (finalizedBundle_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFinalizedBundle());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse) obj;
+
+      if (hasFinalizedBundle() != other.hasFinalizedBundle()) return false;
+      if (hasFinalizedBundle()) {
+        if (!getFinalizedBundle()
+            .equals(other.getFinalizedBundle())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFinalizedBundle()) {
+        hash = (37 * hash) + FINALIZED_BUNDLE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinalizedBundle().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFinalizedBundleResponse is the response type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundleResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryFinalizedBundleResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        finalizedBundle_ = null;
+        if (finalizedBundleBuilder_ != null) {
+          finalizedBundleBuilder_.dispose();
+          finalizedBundleBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.finalizedBundle_ = finalizedBundleBuilder_ == null
+              ? finalizedBundle_
+              : finalizedBundleBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse.getDefaultInstance()) return this;
+        if (other.hasFinalizedBundle()) {
+          mergeFinalizedBundle(other.getFinalizedBundle());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFinalizedBundleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle finalizedBundle_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> finalizedBundleBuilder_;
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       * @return Whether the finalizedBundle field is set.
+       */
+      public boolean hasFinalizedBundle() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       * @return The finalizedBundle.
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundle() {
+        if (finalizedBundleBuilder_ == null) {
+          return finalizedBundle_ == null ? com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+        } else {
+          return finalizedBundleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundle(com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          finalizedBundle_ = value;
+        } else {
+          finalizedBundleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundle(
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundleBuilder_ == null) {
+          finalizedBundle_ = builderForValue.build();
+        } else {
+          finalizedBundleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFinalizedBundle(com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            finalizedBundle_ != null &&
+            finalizedBundle_ != com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance()) {
+            getFinalizedBundleBuilder().mergeFrom(value);
+          } else {
+            finalizedBundle_ = value;
+          }
+        } else {
+          finalizedBundleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFinalizedBundle() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        finalizedBundle_ = null;
+        if (finalizedBundleBuilder_ != null) {
+          finalizedBundleBuilder_.dispose();
+          finalizedBundleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder getFinalizedBundleBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFinalizedBundleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleOrBuilder() {
+        if (finalizedBundleBuilder_ != null) {
+          return finalizedBundleBuilder_.getMessageOrBuilder();
+        } else {
+          return finalizedBundle_ == null ?
+              com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+          getFinalizedBundleFieldBuilder() {
+        if (finalizedBundleBuilder_ == null) {
+          finalizedBundleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder>(
+                  getFinalizedBundle(),
+                  getParentForChildren(),
+                  isClean());
+          finalizedBundle_ = null;
+        }
+        return finalizedBundleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryFinalizedBundleResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryFinalizedBundleResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFinalizedBundleResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFinalizedBundleResponse>() {
+      @java.lang.Override
+      public QueryFinalizedBundleResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFinalizedBundleResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFinalizedBundleResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundleResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFinalizedBundlesByHeightRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * id ...
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+  }
+  /**
+   * <pre>
+   * QueryFinalizedBundleRequest is the request type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest}
+   */
+  public static final class QueryFinalizedBundlesByHeightRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest)
+      QueryFinalizedBundlesByHeightRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFinalizedBundlesByHeightRequest.newBuilder() to construct.
+    private QueryFinalizedBundlesByHeightRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFinalizedBundlesByHeightRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFinalizedBundlesByHeightRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private long height_ = 0L;
+    /**
+     * <pre>
+     * id ...
+     * </pre>
+     *
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (height_ != 0L) {
+        output.writeUInt64(2, height_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, height_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFinalizedBundleRequest is the request type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        height_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.height_ = height_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                height_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long height_ ;
+      /**
+       * <pre>
+       * id ...
+       * </pre>
+       *
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <pre>
+       * id ...
+       * </pre>
+       *
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id ...
+       * </pre>
+       *
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryFinalizedBundlesByHeightRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFinalizedBundlesByHeightRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFinalizedBundlesByHeightRequest>() {
+      @java.lang.Override
+      public QueryFinalizedBundlesByHeightRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFinalizedBundlesByHeightRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFinalizedBundlesByHeightRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFinalizedBundlesByHeightResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return Whether the finalizedBundle field is set.
+     */
+    boolean hasFinalizedBundle();
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return The finalizedBundle.
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundle();
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryFinalizedBundleResponse is the response type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse}
+   */
+  public static final class QueryFinalizedBundlesByHeightResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse)
+      QueryFinalizedBundlesByHeightResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFinalizedBundlesByHeightResponse.newBuilder() to construct.
+    private QueryFinalizedBundlesByHeightResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFinalizedBundlesByHeightResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFinalizedBundlesByHeightResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.Builder.class);
+    }
+
+    public static final int FINALIZED_BUNDLE_FIELD_NUMBER = 1;
+    private com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle finalizedBundle_;
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return Whether the finalizedBundle field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinalizedBundle() {
+      return finalizedBundle_ != null;
+    }
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     * @return The finalizedBundle.
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundle() {
+      return finalizedBundle_ == null ? com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+    }
+    /**
+     * <pre>
+     * finalized_bundle ...
+     * </pre>
+     *
+     * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleOrBuilder() {
+      return finalizedBundle_ == null ? com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (finalizedBundle_ != null) {
+        output.writeMessage(1, getFinalizedBundle());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (finalizedBundle_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFinalizedBundle());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse) obj;
+
+      if (hasFinalizedBundle() != other.hasFinalizedBundle()) return false;
+      if (hasFinalizedBundle()) {
+        if (!getFinalizedBundle()
+            .equals(other.getFinalizedBundle())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFinalizedBundle()) {
+        hash = (37 * hash) + FINALIZED_BUNDLE_FIELD_NUMBER;
+        hash = (53 * hash) + getFinalizedBundle().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFinalizedBundleResponse is the response type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        finalizedBundle_ = null;
+        if (finalizedBundleBuilder_ != null) {
+          finalizedBundleBuilder_.dispose();
+          finalizedBundleBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.finalizedBundle_ = finalizedBundleBuilder_ == null
+              ? finalizedBundle_
+              : finalizedBundleBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse.getDefaultInstance()) return this;
+        if (other.hasFinalizedBundle()) {
+          mergeFinalizedBundle(other.getFinalizedBundle());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFinalizedBundleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle finalizedBundle_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> finalizedBundleBuilder_;
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       * @return Whether the finalizedBundle field is set.
+       */
+      public boolean hasFinalizedBundle() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       * @return The finalizedBundle.
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle getFinalizedBundle() {
+        if (finalizedBundleBuilder_ == null) {
+          return finalizedBundle_ == null ? com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+        } else {
+          return finalizedBundleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundle(com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          finalizedBundle_ = value;
+        } else {
+          finalizedBundleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFinalizedBundle(
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder builderForValue) {
+        if (finalizedBundleBuilder_ == null) {
+          finalizedBundle_ = builderForValue.build();
+        } else {
+          finalizedBundleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFinalizedBundle(com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle value) {
+        if (finalizedBundleBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            finalizedBundle_ != null &&
+            finalizedBundle_ != com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance()) {
+            getFinalizedBundleBuilder().mergeFrom(value);
+          } else {
+            finalizedBundle_ = value;
+          }
+        } else {
+          finalizedBundleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFinalizedBundle() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        finalizedBundle_ = null;
+        if (finalizedBundleBuilder_ != null) {
+          finalizedBundleBuilder_.dispose();
+          finalizedBundleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder getFinalizedBundleBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFinalizedBundleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder getFinalizedBundleOrBuilder() {
+        if (finalizedBundleBuilder_ != null) {
+          return finalizedBundleBuilder_.getMessageOrBuilder();
+        } else {
+          return finalizedBundle_ == null ?
+              com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.getDefaultInstance() : finalizedBundle_;
+        }
+      }
+      /**
+       * <pre>
+       * finalized_bundle ...
+       * </pre>
+       *
+       * <code>.kyve.bundles.v1beta1.FinalizedBundle finalized_bundle = 1 [json_name = "finalizedBundle", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder> 
+          getFinalizedBundleFieldBuilder() {
+        if (finalizedBundleBuilder_ == null) {
+          finalizedBundleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundle.Builder, com.kyve.bundles.v1beta1.BundlesProto.FinalizedBundleOrBuilder>(
+                  getFinalizedBundle(),
+                  getParentForChildren(),
+                  isClean());
+          finalizedBundle_ = null;
+        }
+        return finalizedBundleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryFinalizedBundlesByHeightResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFinalizedBundlesByHeightResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFinalizedBundlesByHeightResponse>() {
+      @java.lang.Override
+      public QueryFinalizedBundlesByHeightResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFinalizedBundlesByHeightResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFinalizedBundlesByHeightResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryFinalizedBundlesByHeightResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentVoteStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCurrentVoteStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+  }
+  /**
+   * <pre>
+   * QueryCurrentVoteStatusRequest is the request type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCurrentVoteStatusRequest}
+   */
+  public static final class QueryCurrentVoteStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCurrentVoteStatusRequest)
+      QueryCurrentVoteStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentVoteStatusRequest.newBuilder() to construct.
+    private QueryCurrentVoteStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentVoteStatusRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentVoteStatusRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCurrentVoteStatusRequest is the request type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCurrentVoteStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCurrentVoteStatusRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCurrentVoteStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCurrentVoteStatusRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentVoteStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentVoteStatusRequest>() {
+      @java.lang.Override
+      public QueryCurrentVoteStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentVoteStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentVoteStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentVoteStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCurrentVoteStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * valid ...
+     * </pre>
+     *
+     * <code>uint64 valid = 1 [json_name = "valid"];</code>
+     * @return The valid.
+     */
+    long getValid();
+
+    /**
+     * <pre>
+     * invalid ...
+     * </pre>
+     *
+     * <code>uint64 invalid = 2 [json_name = "invalid"];</code>
+     * @return The invalid.
+     */
+    long getInvalid();
+
+    /**
+     * <pre>
+     * abstain ...
+     * </pre>
+     *
+     * <code>uint64 abstain = 3 [json_name = "abstain"];</code>
+     * @return The abstain.
+     */
+    long getAbstain();
+
+    /**
+     * <pre>
+     * total ...
+     * </pre>
+     *
+     * <code>uint64 total = 4 [json_name = "total"];</code>
+     * @return The total.
+     */
+    long getTotal();
+  }
+  /**
+   * <pre>
+   * QueryCurrentVoteStatusResponse is the response type for the Query/Staker RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCurrentVoteStatusResponse}
+   */
+  public static final class QueryCurrentVoteStatusResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCurrentVoteStatusResponse)
+      QueryCurrentVoteStatusResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentVoteStatusResponse.newBuilder() to construct.
+    private QueryCurrentVoteStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentVoteStatusResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentVoteStatusResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.Builder.class);
+    }
+
+    public static final int VALID_FIELD_NUMBER = 1;
+    private long valid_ = 0L;
+    /**
+     * <pre>
+     * valid ...
+     * </pre>
+     *
+     * <code>uint64 valid = 1 [json_name = "valid"];</code>
+     * @return The valid.
+     */
+    @java.lang.Override
+    public long getValid() {
+      return valid_;
+    }
+
+    public static final int INVALID_FIELD_NUMBER = 2;
+    private long invalid_ = 0L;
+    /**
+     * <pre>
+     * invalid ...
+     * </pre>
+     *
+     * <code>uint64 invalid = 2 [json_name = "invalid"];</code>
+     * @return The invalid.
+     */
+    @java.lang.Override
+    public long getInvalid() {
+      return invalid_;
+    }
+
+    public static final int ABSTAIN_FIELD_NUMBER = 3;
+    private long abstain_ = 0L;
+    /**
+     * <pre>
+     * abstain ...
+     * </pre>
+     *
+     * <code>uint64 abstain = 3 [json_name = "abstain"];</code>
+     * @return The abstain.
+     */
+    @java.lang.Override
+    public long getAbstain() {
+      return abstain_;
+    }
+
+    public static final int TOTAL_FIELD_NUMBER = 4;
+    private long total_ = 0L;
+    /**
+     * <pre>
+     * total ...
+     * </pre>
+     *
+     * <code>uint64 total = 4 [json_name = "total"];</code>
+     * @return The total.
+     */
+    @java.lang.Override
+    public long getTotal() {
+      return total_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (valid_ != 0L) {
+        output.writeUInt64(1, valid_);
+      }
+      if (invalid_ != 0L) {
+        output.writeUInt64(2, invalid_);
+      }
+      if (abstain_ != 0L) {
+        output.writeUInt64(3, abstain_);
+      }
+      if (total_ != 0L) {
+        output.writeUInt64(4, total_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (valid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, valid_);
+      }
+      if (invalid_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, invalid_);
+      }
+      if (abstain_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, abstain_);
+      }
+      if (total_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, total_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse) obj;
+
+      if (getValid()
+          != other.getValid()) return false;
+      if (getInvalid()
+          != other.getInvalid()) return false;
+      if (getAbstain()
+          != other.getAbstain()) return false;
+      if (getTotal()
+          != other.getTotal()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getValid());
+      hash = (37 * hash) + INVALID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInvalid());
+      hash = (37 * hash) + ABSTAIN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAbstain());
+      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotal());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCurrentVoteStatusResponse is the response type for the Query/Staker RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCurrentVoteStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCurrentVoteStatusResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        valid_ = 0L;
+        invalid_ = 0L;
+        abstain_ = 0L;
+        total_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.valid_ = valid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.invalid_ = invalid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.abstain_ = abstain_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.total_ = total_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse.getDefaultInstance()) return this;
+        if (other.getValid() != 0L) {
+          setValid(other.getValid());
+        }
+        if (other.getInvalid() != 0L) {
+          setInvalid(other.getInvalid());
+        }
+        if (other.getAbstain() != 0L) {
+          setAbstain(other.getAbstain());
+        }
+        if (other.getTotal() != 0L) {
+          setTotal(other.getTotal());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                valid_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                invalid_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                abstain_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                total_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long valid_ ;
+      /**
+       * <pre>
+       * valid ...
+       * </pre>
+       *
+       * <code>uint64 valid = 1 [json_name = "valid"];</code>
+       * @return The valid.
+       */
+      @java.lang.Override
+      public long getValid() {
+        return valid_;
+      }
+      /**
+       * <pre>
+       * valid ...
+       * </pre>
+       *
+       * <code>uint64 valid = 1 [json_name = "valid"];</code>
+       * @param value The valid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValid(long value) {
+
+        valid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * valid ...
+       * </pre>
+       *
+       * <code>uint64 valid = 1 [json_name = "valid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        valid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long invalid_ ;
+      /**
+       * <pre>
+       * invalid ...
+       * </pre>
+       *
+       * <code>uint64 invalid = 2 [json_name = "invalid"];</code>
+       * @return The invalid.
+       */
+      @java.lang.Override
+      public long getInvalid() {
+        return invalid_;
+      }
+      /**
+       * <pre>
+       * invalid ...
+       * </pre>
+       *
+       * <code>uint64 invalid = 2 [json_name = "invalid"];</code>
+       * @param value The invalid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvalid(long value) {
+
+        invalid_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * invalid ...
+       * </pre>
+       *
+       * <code>uint64 invalid = 2 [json_name = "invalid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvalid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        invalid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long abstain_ ;
+      /**
+       * <pre>
+       * abstain ...
+       * </pre>
+       *
+       * <code>uint64 abstain = 3 [json_name = "abstain"];</code>
+       * @return The abstain.
+       */
+      @java.lang.Override
+      public long getAbstain() {
+        return abstain_;
+      }
+      /**
+       * <pre>
+       * abstain ...
+       * </pre>
+       *
+       * <code>uint64 abstain = 3 [json_name = "abstain"];</code>
+       * @param value The abstain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAbstain(long value) {
+
+        abstain_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * abstain ...
+       * </pre>
+       *
+       * <code>uint64 abstain = 3 [json_name = "abstain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAbstain() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        abstain_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long total_ ;
+      /**
+       * <pre>
+       * total ...
+       * </pre>
+       *
+       * <code>uint64 total = 4 [json_name = "total"];</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public long getTotal() {
+        return total_;
+      }
+      /**
+       * <pre>
+       * total ...
+       * </pre>
+       *
+       * <code>uint64 total = 4 [json_name = "total"];</code>
+       * @param value The total to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotal(long value) {
+
+        total_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total ...
+       * </pre>
+       *
+       * <code>uint64 total = 4 [json_name = "total"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotal() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        total_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCurrentVoteStatusResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCurrentVoteStatusResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentVoteStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentVoteStatusResponse>() {
+      @java.lang.Override
+      public QueryCurrentVoteStatusResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentVoteStatusResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentVoteStatusResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCurrentVoteStatusResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCanValidateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCanValidateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id defines the unique ID of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * valaddress ...
+     * </pre>
+     *
+     * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+     * @return The valaddress.
+     */
+    java.lang.String getValaddress();
+    /**
+     * <pre>
+     * valaddress ...
+     * </pre>
+     *
+     * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+     * @return The bytes for valaddress.
+     */
+    com.google.protobuf.ByteString
+        getValaddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryCanProposeRequest is the request type for the Query/CanPropose RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCanValidateRequest}
+   */
+  public static final class QueryCanValidateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCanValidateRequest)
+      QueryCanValidateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCanValidateRequest.newBuilder() to construct.
+    private QueryCanValidateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCanValidateRequest() {
+      valaddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCanValidateRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id defines the unique ID of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int VALADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valaddress_ = "";
+    /**
+     * <pre>
+     * valaddress ...
+     * </pre>
+     *
+     * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+     * @return The valaddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValaddress() {
+      java.lang.Object ref = valaddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valaddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * valaddress ...
+     * </pre>
+     *
+     * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+     * @return The bytes for valaddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValaddressBytes() {
+      java.lang.Object ref = valaddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valaddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valaddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, valaddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valaddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, valaddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getValaddress()
+          .equals(other.getValaddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + VALADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValaddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCanProposeRequest is the request type for the Query/CanPropose RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCanValidateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCanValidateRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        valaddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.valaddress_ = valaddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getValaddress().isEmpty()) {
+          valaddress_ = other.valaddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                valaddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valaddress_ = "";
+      /**
+       * <pre>
+       * valaddress ...
+       * </pre>
+       *
+       * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+       * @return The valaddress.
+       */
+      public java.lang.String getValaddress() {
+        java.lang.Object ref = valaddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valaddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * valaddress ...
+       * </pre>
+       *
+       * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+       * @return The bytes for valaddress.
+       */
+      public com.google.protobuf.ByteString
+          getValaddressBytes() {
+        java.lang.Object ref = valaddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valaddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * valaddress ...
+       * </pre>
+       *
+       * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+       * @param value The valaddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValaddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valaddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * valaddress ...
+       * </pre>
+       *
+       * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValaddress() {
+        valaddress_ = getDefaultInstance().getValaddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * valaddress ...
+       * </pre>
+       *
+       * <code>string valaddress = 2 [json_name = "valaddress"];</code>
+       * @param value The bytes for valaddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValaddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valaddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCanValidateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCanValidateRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCanValidateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCanValidateRequest>() {
+      @java.lang.Override
+      public QueryCanValidateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCanValidateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCanValidateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCanValidateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCanValidateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * possible ...
+     * </pre>
+     *
+     * <code>bool possible = 1 [json_name = "possible"];</code>
+     * @return The possible.
+     */
+    boolean getPossible();
+
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+  }
+  /**
+   * <pre>
+   * QueryCanProposeResponse is the response type for the Query/CanPropose RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCanValidateResponse}
+   */
+  public static final class QueryCanValidateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCanValidateResponse)
+      QueryCanValidateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCanValidateResponse.newBuilder() to construct.
+    private QueryCanValidateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCanValidateResponse() {
+      reason_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCanValidateResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.Builder.class);
+    }
+
+    public static final int POSSIBLE_FIELD_NUMBER = 1;
+    private boolean possible_ = false;
+    /**
+     * <pre>
+     * possible ...
+     * </pre>
+     *
+     * <code>bool possible = 1 [json_name = "possible"];</code>
+     * @return The possible.
+     */
+    @java.lang.Override
+    public boolean getPossible() {
+      return possible_;
+    }
+
+    public static final int REASON_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reason_ = "";
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (possible_ != false) {
+        output.writeBool(1, possible_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (possible_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, possible_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse) obj;
+
+      if (getPossible()
+          != other.getPossible()) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POSSIBLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPossible());
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCanProposeResponse is the response type for the Query/CanPropose RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCanValidateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCanValidateResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        possible_ = false;
+        reason_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanValidateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.possible_ = possible_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reason_ = reason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse.getDefaultInstance()) return this;
+        if (other.getPossible() != false) {
+          setPossible(other.getPossible());
+        }
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                possible_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                reason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean possible_ ;
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @return The possible.
+       */
+      @java.lang.Override
+      public boolean getPossible() {
+        return possible_;
+      }
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @param value The possible to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPossible(boolean value) {
+
+        possible_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPossible() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        possible_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reason_ = "";
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        reason_ = getDefaultInstance().getReason();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCanValidateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCanValidateResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCanValidateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCanValidateResponse>() {
+      @java.lang.Override
+      public QueryCanValidateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCanValidateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCanValidateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCanValidateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCanProposeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCanProposeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id defines the unique ID of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * proposer ...
+     * </pre>
+     *
+     * <code>string proposer = 3 [json_name = "proposer"];</code>
+     * @return The proposer.
+     */
+    java.lang.String getProposer();
+    /**
+     * <pre>
+     * proposer ...
+     * </pre>
+     *
+     * <code>string proposer = 3 [json_name = "proposer"];</code>
+     * @return The bytes for proposer.
+     */
+    com.google.protobuf.ByteString
+        getProposerBytes();
+
+    /**
+     * <pre>
+     * from_index ...
+     * </pre>
+     *
+     * <code>uint64 from_index = 4 [json_name = "fromIndex"];</code>
+     * @return The fromIndex.
+     */
+    long getFromIndex();
+  }
+  /**
+   * <pre>
+   * QueryCanProposeRequest is the request type for the Query/CanPropose RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCanProposeRequest}
+   */
+  public static final class QueryCanProposeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCanProposeRequest)
+      QueryCanProposeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCanProposeRequest.newBuilder() to construct.
+    private QueryCanProposeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCanProposeRequest() {
+      staker_ = "";
+      proposer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCanProposeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id defines the unique ID of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPOSER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object proposer_ = "";
+    /**
+     * <pre>
+     * proposer ...
+     * </pre>
+     *
+     * <code>string proposer = 3 [json_name = "proposer"];</code>
+     * @return The proposer.
+     */
+    @java.lang.Override
+    public java.lang.String getProposer() {
+      java.lang.Object ref = proposer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        proposer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * proposer ...
+     * </pre>
+     *
+     * <code>string proposer = 3 [json_name = "proposer"];</code>
+     * @return The bytes for proposer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProposerBytes() {
+      java.lang.Object ref = proposer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        proposer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_INDEX_FIELD_NUMBER = 4;
+    private long fromIndex_ = 0L;
+    /**
+     * <pre>
+     * from_index ...
+     * </pre>
+     *
+     * <code>uint64 from_index = 4 [json_name = "fromIndex"];</code>
+     * @return The fromIndex.
+     */
+    @java.lang.Override
+    public long getFromIndex() {
+      return fromIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, proposer_);
+      }
+      if (fromIndex_ != 0L) {
+        output.writeUInt64(4, fromIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(proposer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, proposer_);
+      }
+      if (fromIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, fromIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getProposer()
+          .equals(other.getProposer())) return false;
+      if (getFromIndex()
+          != other.getFromIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + PROPOSER_FIELD_NUMBER;
+      hash = (53 * hash) + getProposer().hashCode();
+      hash = (37 * hash) + FROM_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFromIndex());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCanProposeRequest is the request type for the Query/CanPropose RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCanProposeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCanProposeRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        staker_ = "";
+        proposer_ = "";
+        fromIndex_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.proposer_ = proposer_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.fromIndex_ = fromIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getProposer().isEmpty()) {
+          proposer_ = other.proposer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getFromIndex() != 0L) {
+          setFromIndex(other.getFromIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                proposer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                fromIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object proposer_ = "";
+      /**
+       * <pre>
+       * proposer ...
+       * </pre>
+       *
+       * <code>string proposer = 3 [json_name = "proposer"];</code>
+       * @return The proposer.
+       */
+      public java.lang.String getProposer() {
+        java.lang.Object ref = proposer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          proposer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposer ...
+       * </pre>
+       *
+       * <code>string proposer = 3 [json_name = "proposer"];</code>
+       * @return The bytes for proposer.
+       */
+      public com.google.protobuf.ByteString
+          getProposerBytes() {
+        java.lang.Object ref = proposer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          proposer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * proposer ...
+       * </pre>
+       *
+       * <code>string proposer = 3 [json_name = "proposer"];</code>
+       * @param value The proposer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        proposer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposer ...
+       * </pre>
+       *
+       * <code>string proposer = 3 [json_name = "proposer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposer() {
+        proposer_ = getDefaultInstance().getProposer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposer ...
+       * </pre>
+       *
+       * <code>string proposer = 3 [json_name = "proposer"];</code>
+       * @param value The bytes for proposer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        proposer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long fromIndex_ ;
+      /**
+       * <pre>
+       * from_index ...
+       * </pre>
+       *
+       * <code>uint64 from_index = 4 [json_name = "fromIndex"];</code>
+       * @return The fromIndex.
+       */
+      @java.lang.Override
+      public long getFromIndex() {
+        return fromIndex_;
+      }
+      /**
+       * <pre>
+       * from_index ...
+       * </pre>
+       *
+       * <code>uint64 from_index = 4 [json_name = "fromIndex"];</code>
+       * @param value The fromIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromIndex(long value) {
+
+        fromIndex_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_index ...
+       * </pre>
+       *
+       * <code>uint64 from_index = 4 [json_name = "fromIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromIndex() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fromIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCanProposeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCanProposeRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCanProposeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCanProposeRequest>() {
+      @java.lang.Override
+      public QueryCanProposeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCanProposeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCanProposeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCanProposeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCanProposeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * possible ...
+     * </pre>
+     *
+     * <code>bool possible = 1 [json_name = "possible"];</code>
+     * @return The possible.
+     */
+    boolean getPossible();
+
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+  }
+  /**
+   * <pre>
+   * QueryCanProposeResponse is the response type for the Query/CanPropose RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCanProposeResponse}
+   */
+  public static final class QueryCanProposeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCanProposeResponse)
+      QueryCanProposeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCanProposeResponse.newBuilder() to construct.
+    private QueryCanProposeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCanProposeResponse() {
+      reason_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCanProposeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.Builder.class);
+    }
+
+    public static final int POSSIBLE_FIELD_NUMBER = 1;
+    private boolean possible_ = false;
+    /**
+     * <pre>
+     * possible ...
+     * </pre>
+     *
+     * <code>bool possible = 1 [json_name = "possible"];</code>
+     * @return The possible.
+     */
+    @java.lang.Override
+    public boolean getPossible() {
+      return possible_;
+    }
+
+    public static final int REASON_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reason_ = "";
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (possible_ != false) {
+        output.writeBool(1, possible_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (possible_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, possible_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse) obj;
+
+      if (getPossible()
+          != other.getPossible()) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POSSIBLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPossible());
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCanProposeResponse is the response type for the Query/CanPropose RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCanProposeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCanProposeResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        possible_ = false;
+        reason_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanProposeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.possible_ = possible_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reason_ = reason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse.getDefaultInstance()) return this;
+        if (other.getPossible() != false) {
+          setPossible(other.getPossible());
+        }
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                possible_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                reason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean possible_ ;
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @return The possible.
+       */
+      @java.lang.Override
+      public boolean getPossible() {
+        return possible_;
+      }
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @param value The possible to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPossible(boolean value) {
+
+        possible_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPossible() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        possible_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reason_ = "";
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        reason_ = getDefaultInstance().getReason();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCanProposeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCanProposeResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCanProposeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCanProposeResponse>() {
+      @java.lang.Override
+      public QueryCanProposeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCanProposeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCanProposeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCanProposeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCanVoteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCanVoteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id defines the unique ID of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * voter ...
+     * </pre>
+     *
+     * <code>string voter = 3 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    java.lang.String getVoter();
+    /**
+     * <pre>
+     * voter ...
+     * </pre>
+     *
+     * <code>string voter = 3 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    com.google.protobuf.ByteString
+        getVoterBytes();
+
+    /**
+     * <pre>
+     * storage_id ...
+     * </pre>
+     *
+     * <code>string storage_id = 4 [json_name = "storageId"];</code>
+     * @return The storageId.
+     */
+    java.lang.String getStorageId();
+    /**
+     * <pre>
+     * storage_id ...
+     * </pre>
+     *
+     * <code>string storage_id = 4 [json_name = "storageId"];</code>
+     * @return The bytes for storageId.
+     */
+    com.google.protobuf.ByteString
+        getStorageIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryCanVoteRequest is the request type for the Query/CanVote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCanVoteRequest}
+   */
+  public static final class QueryCanVoteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCanVoteRequest)
+      QueryCanVoteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCanVoteRequest.newBuilder() to construct.
+    private QueryCanVoteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCanVoteRequest() {
+      staker_ = "";
+      voter_ = "";
+      storageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCanVoteRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id defines the unique ID of the pool.
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voter_ = "";
+    /**
+     * <pre>
+     * voter ...
+     * </pre>
+     *
+     * <code>string voter = 3 [json_name = "voter"];</code>
+     * @return The voter.
+     */
+    @java.lang.Override
+    public java.lang.String getVoter() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * voter ...
+     * </pre>
+     *
+     * <code>string voter = 3 [json_name = "voter"];</code>
+     * @return The bytes for voter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterBytes() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STORAGE_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object storageId_ = "";
+    /**
+     * <pre>
+     * storage_id ...
+     * </pre>
+     *
+     * <code>string storage_id = 4 [json_name = "storageId"];</code>
+     * @return The storageId.
+     */
+    @java.lang.Override
+    public java.lang.String getStorageId() {
+      java.lang.Object ref = storageId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        storageId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * storage_id ...
+     * </pre>
+     *
+     * <code>string storage_id = 4 [json_name = "storageId"];</code>
+     * @return The bytes for storageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStorageIdBytes() {
+      java.lang.Object ref = storageId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        storageId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, voter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storageId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, storageId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, voter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storageId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, storageId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest other = (com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getVoter()
+          .equals(other.getVoter())) return false;
+      if (!getStorageId()
+          .equals(other.getStorageId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + VOTER_FIELD_NUMBER;
+      hash = (53 * hash) + getVoter().hashCode();
+      hash = (37 * hash) + STORAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStorageId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCanVoteRequest is the request type for the Query/CanVote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCanVoteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCanVoteRequest)
+        com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.class, com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        staker_ = "";
+        voter_ = "";
+        storageId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest result = new com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.voter_ = voter_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.storageId_ = storageId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getVoter().isEmpty()) {
+          voter_ = other.voter_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getStorageId().isEmpty()) {
+          storageId_ = other.storageId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                voter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                storageId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id defines the unique ID of the pool.
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object voter_ = "";
+      /**
+       * <pre>
+       * voter ...
+       * </pre>
+       *
+       * <code>string voter = 3 [json_name = "voter"];</code>
+       * @return The voter.
+       */
+      public java.lang.String getVoter() {
+        java.lang.Object ref = voter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * voter ...
+       * </pre>
+       *
+       * <code>string voter = 3 [json_name = "voter"];</code>
+       * @return The bytes for voter.
+       */
+      public com.google.protobuf.ByteString
+          getVoterBytes() {
+        java.lang.Object ref = voter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * voter ...
+       * </pre>
+       *
+       * <code>string voter = 3 [json_name = "voter"];</code>
+       * @param value The voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voter ...
+       * </pre>
+       *
+       * <code>string voter = 3 [json_name = "voter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoter() {
+        voter_ = getDefaultInstance().getVoter();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voter ...
+       * </pre>
+       *
+       * <code>string voter = 3 [json_name = "voter"];</code>
+       * @param value The bytes for voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object storageId_ = "";
+      /**
+       * <pre>
+       * storage_id ...
+       * </pre>
+       *
+       * <code>string storage_id = 4 [json_name = "storageId"];</code>
+       * @return The storageId.
+       */
+      public java.lang.String getStorageId() {
+        java.lang.Object ref = storageId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          storageId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * storage_id ...
+       * </pre>
+       *
+       * <code>string storage_id = 4 [json_name = "storageId"];</code>
+       * @return The bytes for storageId.
+       */
+      public com.google.protobuf.ByteString
+          getStorageIdBytes() {
+        java.lang.Object ref = storageId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          storageId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * storage_id ...
+       * </pre>
+       *
+       * <code>string storage_id = 4 [json_name = "storageId"];</code>
+       * @param value The storageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStorageId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        storageId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * storage_id ...
+       * </pre>
+       *
+       * <code>string storage_id = 4 [json_name = "storageId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStorageId() {
+        storageId_ = getDefaultInstance().getStorageId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * storage_id ...
+       * </pre>
+       *
+       * <code>string storage_id = 4 [json_name = "storageId"];</code>
+       * @param value The bytes for storageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStorageIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        storageId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCanVoteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCanVoteRequest)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCanVoteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCanVoteRequest>() {
+      @java.lang.Override
+      public QueryCanVoteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCanVoteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCanVoteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCanVoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.query.v1beta1.QueryCanVoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * possible ...
+     * </pre>
+     *
+     * <code>bool possible = 1 [json_name = "possible"];</code>
+     * @return The possible.
+     */
+    boolean getPossible();
+
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+  }
+  /**
+   * <pre>
+   * QueryCanVoteResponse is the response type for the Query/CanVote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.query.v1beta1.QueryCanVoteResponse}
+   */
+  public static final class QueryCanVoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.query.v1beta1.QueryCanVoteResponse)
+      QueryCanVoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCanVoteResponse.newBuilder() to construct.
+    private QueryCanVoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCanVoteResponse() {
+      reason_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCanVoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.Builder.class);
+    }
+
+    public static final int POSSIBLE_FIELD_NUMBER = 1;
+    private boolean possible_ = false;
+    /**
+     * <pre>
+     * possible ...
+     * </pre>
+     *
+     * <code>bool possible = 1 [json_name = "possible"];</code>
+     * @return The possible.
+     */
+    @java.lang.Override
+    public boolean getPossible() {
+      return possible_;
+    }
+
+    public static final int REASON_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reason_ = "";
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reason ...
+     * </pre>
+     *
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (possible_ != false) {
+        output.writeBool(1, possible_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (possible_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, possible_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse other = (com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse) obj;
+
+      if (getPossible()
+          != other.getPossible()) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POSSIBLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPossible());
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCanVoteResponse is the response type for the Query/CanVote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.query.v1beta1.QueryCanVoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.query.v1beta1.QueryCanVoteResponse)
+        com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.class, com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        possible_ = false;
+        reason_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.query.v1beta1.BundlesProto.internal_static_kyve_query_v1beta1_QueryCanVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse getDefaultInstanceForType() {
+        return com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse build() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse buildPartial() {
+        com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse result = new com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.possible_ = possible_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.reason_ = reason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse) {
+          return mergeFrom((com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse other) {
+        if (other == com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse.getDefaultInstance()) return this;
+        if (other.getPossible() != false) {
+          setPossible(other.getPossible());
+        }
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                possible_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                reason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean possible_ ;
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @return The possible.
+       */
+      @java.lang.Override
+      public boolean getPossible() {
+        return possible_;
+      }
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @param value The possible to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPossible(boolean value) {
+
+        possible_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * possible ...
+       * </pre>
+       *
+       * <code>bool possible = 1 [json_name = "possible"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPossible() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        possible_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reason_ = "";
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        reason_ = getDefaultInstance().getReason();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason ...
+       * </pre>
+       *
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.query.v1beta1.QueryCanVoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.query.v1beta1.QueryCanVoteResponse)
+    private static final com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse();
+    }
+
+    public static com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCanVoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCanVoteResponse>() {
+      @java.lang.Override
+      public QueryCanVoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCanVoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCanVoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.query.v1beta1.BundlesProto.QueryCanVoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryFinalizedBundlesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryFinalizedBundlesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryFinalizedBundleRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryFinalizedBundleResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryFinalizedBundlesByHeightResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCurrentVoteStatusResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCanValidateRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCanValidateRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCanValidateResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCanValidateResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCanProposeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCanProposeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCanProposeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCanProposeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCanVoteRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCanVoteRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_query_v1beta1_QueryCanVoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_query_v1beta1_QueryCanVoteResponse_fieldAccessorTable;
 
@@ -168,12 +10687,12 @@ public final class BundlesProto {
       "uest\032(.kyve.query.v1beta1.QueryCanVoteRe" +
       "sponse\"L\202\323\344\223\002F\022D/kyve/query/v1beta1/can_" +
       "vote/{pool_id}/{staker}/{voter}/{storage" +
-      "_id}B\274\001\n\026com.kyve.query.v1beta1B\014Bundles" +
-      "ProtoP\001Z*github.com/KYVENetwork/chain/x/" +
-      "query/types\242\002\003KQX\252\002\022Kyve.Query.V1beta1\312\002" +
-      "\022Kyve\\Query\\V1beta1\342\002\036Kyve\\Query\\V1beta1" +
-      "\\GPBMetadata\352\002\024Kyve::Query::V1beta1b\006pro" +
-      "to3"
+      "_id}B\272\001\n\026com.kyve.query.v1beta1B\014Bundles" +
+      "ProtoZ*github.com/KYVENetwork/chain/x/qu" +
+      "ery/types\242\002\003KQX\252\002\022Kyve.Query.V1beta1\312\002\022K" +
+      "yve\\Query\\V1beta1\342\002\036Kyve\\Query\\V1beta1\\G" +
+      "PBMetadata\352\002\024Kyve::Query::V1beta1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

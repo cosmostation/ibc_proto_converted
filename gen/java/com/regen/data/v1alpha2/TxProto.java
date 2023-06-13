@@ -14,24 +14,3167 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgAnchorDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.MsgAnchorData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * sender is the address of the sender of the transaction.
+     * The sender in StoreData is not attesting to the veracity of the underlying
+     * data. They can simply be a intermediary providing services.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * sender is the address of the sender of the transaction.
+     * The sender in StoreData is not attesting to the veracity of the underlying
+     * data. They can simply be a intermediary providing services.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash getHash();
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgAnchorData is the Msg/AnchorData request type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.MsgAnchorData}
+   */
+  public static final class MsgAnchorData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.MsgAnchorData)
+      MsgAnchorDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAnchorData.newBuilder() to construct.
+    private MsgAnchorData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAnchorData() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAnchorData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.TxProto.MsgAnchorData.class, com.regen.data.v1alpha2.TxProto.MsgAnchorData.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * sender is the address of the sender of the transaction.
+     * The sender in StoreData is not attesting to the veracity of the underlying
+     * data. They can simply be a intermediary providing services.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sender is the address of the sender of the transaction.
+     * The sender in StoreData is not attesting to the veracity of the underlying
+     * data. They can simply be a intermediary providing services.
+     * </pre>
+     *
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HASH_FIELD_NUMBER = 2;
+    private com.regen.data.v1alpha2.TypesProto.ContentHash hash_;
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    @java.lang.Override
+    public boolean hasHash() {
+      return hash_ != null;
+    }
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash getHash() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+    }
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (hash_ != null) {
+        output.writeMessage(2, getHash());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (hash_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getHash());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.TxProto.MsgAnchorData)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.TxProto.MsgAnchorData other = (com.regen.data.v1alpha2.TxProto.MsgAnchorData) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasHash() != other.hasHash()) return false;
+      if (hasHash()) {
+        if (!getHash()
+            .equals(other.getHash())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasHash()) {
+        hash = (37 * hash) + HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getHash().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.TxProto.MsgAnchorData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAnchorData is the Msg/AnchorData request type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.MsgAnchorData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.MsgAnchorData)
+        com.regen.data.v1alpha2.TxProto.MsgAnchorDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TxProto.MsgAnchorData.class, com.regen.data.v1alpha2.TxProto.MsgAnchorData.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.TxProto.MsgAnchorData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgAnchorData getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.TxProto.MsgAnchorData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgAnchorData build() {
+        com.regen.data.v1alpha2.TxProto.MsgAnchorData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgAnchorData buildPartial() {
+        com.regen.data.v1alpha2.TxProto.MsgAnchorData result = new com.regen.data.v1alpha2.TxProto.MsgAnchorData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.TxProto.MsgAnchorData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.hash_ = hashBuilder_ == null
+              ? hash_
+              : hashBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.TxProto.MsgAnchorData) {
+          return mergeFrom((com.regen.data.v1alpha2.TxProto.MsgAnchorData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.TxProto.MsgAnchorData other) {
+        if (other == com.regen.data.v1alpha2.TxProto.MsgAnchorData.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasHash()) {
+          mergeHash(other.getHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getHashFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * sender is the address of the sender of the transaction.
+       * The sender in StoreData is not attesting to the veracity of the underlying
+       * data. They can simply be a intermediary providing services.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender of the transaction.
+       * The sender in StoreData is not attesting to the veracity of the underlying
+       * data. They can simply be a intermediary providing services.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender of the transaction.
+       * The sender in StoreData is not attesting to the veracity of the underlying
+       * data. They can simply be a intermediary providing services.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender of the transaction.
+       * The sender in StoreData is not attesting to the veracity of the underlying
+       * data. They can simply be a intermediary providing services.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the address of the sender of the transaction.
+       * The sender in StoreData is not attesting to the veracity of the underlying
+       * data. They can simply be a intermediary providing services.
+       * </pre>
+       *
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.regen.data.v1alpha2.TypesProto.ContentHash hash_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder> hashBuilder_;
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      public boolean hasHash() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash getHash() {
+        if (hashBuilder_ == null) {
+          return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+        } else {
+          return hashBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder setHash(com.regen.data.v1alpha2.TypesProto.ContentHash value) {
+        if (hashBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hash_ = value;
+        } else {
+          hashBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder setHash(
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Builder builderForValue) {
+        if (hashBuilder_ == null) {
+          hash_ = builderForValue.build();
+        } else {
+          hashBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder mergeHash(com.regen.data.v1alpha2.TypesProto.ContentHash value) {
+        if (hashBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            hash_ != null &&
+            hash_ != com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance()) {
+            getHashBuilder().mergeFrom(value);
+          } else {
+            hash_ = value;
+          }
+        } else {
+          hashBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder clearHash() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Builder getHashBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getHashFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder() {
+        if (hashBuilder_ != null) {
+          return hashBuilder_.getMessageOrBuilder();
+        } else {
+          return hash_ == null ?
+              com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+        }
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 2 [json_name = "hash"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder> 
+          getHashFieldBuilder() {
+        if (hashBuilder_ == null) {
+          hashBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder>(
+                  getHash(),
+                  getParentForChildren(),
+                  isClean());
+          hash_ = null;
+        }
+        return hashBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.MsgAnchorData)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.MsgAnchorData)
+    private static final com.regen.data.v1alpha2.TxProto.MsgAnchorData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TxProto.MsgAnchorData();
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAnchorData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAnchorData>() {
+      @java.lang.Override
+      public MsgAnchorData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAnchorData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAnchorData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TxProto.MsgAnchorData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAnchorDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.MsgAnchorDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * timestamp is the timestamp of the block at which the data was anchored.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * timestamp is the timestamp of the block at which the data was anchored.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * timestamp is the timestamp of the block at which the data was anchored.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * iri is the IRI of the data that was anchored.
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    java.lang.String getIri();
+    /**
+     * <pre>
+     * iri is the IRI of the data that was anchored.
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    com.google.protobuf.ByteString
+        getIriBytes();
+  }
+  /**
+   * <pre>
+   * MsgAnchorData is the Msg/AnchorData response type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.MsgAnchorDataResponse}
+   */
+  public static final class MsgAnchorDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.MsgAnchorDataResponse)
+      MsgAnchorDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAnchorDataResponse.newBuilder() to construct.
+    private MsgAnchorDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAnchorDataResponse() {
+      iri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAnchorDataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.class, com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.Builder.class);
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * timestamp is the timestamp of the block at which the data was anchored.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * timestamp is the timestamp of the block at which the data was anchored.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * timestamp is the timestamp of the block at which the data was anchored.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+
+    public static final int IRI_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iri_ = "";
+    /**
+     * <pre>
+     * iri is the IRI of the data that was anchored.
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The iri.
+     */
+    @java.lang.Override
+    public java.lang.String getIri() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * iri is the IRI of the data that was anchored.
+     * </pre>
+     *
+     * <code>string iri = 2 [json_name = "iri"];</code>
+     * @return The bytes for iri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIriBytes() {
+      java.lang.Object ref = iri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (timestamp_ != null) {
+        output.writeMessage(1, getTimestamp());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTimestamp());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse other = (com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse) obj;
+
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (!getIri()
+          .equals(other.getIri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      hash = (37 * hash) + IRI_FIELD_NUMBER;
+      hash = (53 * hash) + getIri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAnchorData is the Msg/AnchorData response type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.MsgAnchorDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.MsgAnchorDataResponse)
+        com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.class, com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        iri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse build() {
+        com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse buildPartial() {
+        com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse result = new com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timestamp_ = timestampBuilder_ == null
+              ? timestamp_
+              : timestampBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.iri_ = iri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse) {
+          return mergeFrom((com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse other) {
+        if (other == com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse.getDefaultInstance()) return this;
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        if (!other.getIri().isEmpty()) {
+          iri_ = other.iri_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                iri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            timestamp_ != null &&
+            timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimestampBuilder().mergeFrom(value);
+          } else {
+            timestamp_ = value;
+          }
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the timestamp of the block at which the data was anchored.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 1 [json_name = "timestamp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+
+      private java.lang.Object iri_ = "";
+      /**
+       * <pre>
+       * iri is the IRI of the data that was anchored.
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @return The iri.
+       */
+      public java.lang.String getIri() {
+        java.lang.Object ref = iri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the IRI of the data that was anchored.
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @return The bytes for iri.
+       */
+      public com.google.protobuf.ByteString
+          getIriBytes() {
+        java.lang.Object ref = iri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * iri is the IRI of the data that was anchored.
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @param value The iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        iri_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the IRI of the data that was anchored.
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIri() {
+        iri_ = getDefaultInstance().getIri();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * iri is the IRI of the data that was anchored.
+       * </pre>
+       *
+       * <code>string iri = 2 [json_name = "iri"];</code>
+       * @param value The bytes for iri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        iri_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.MsgAnchorDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.MsgAnchorDataResponse)
+    private static final com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse();
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAnchorDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAnchorDataResponse>() {
+      @java.lang.Override
+      public MsgAnchorDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAnchorDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAnchorDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TxProto.MsgAnchorDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSignDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.MsgSignData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    java.util.List<java.lang.String>
+        getSignersList();
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    int getSignersCount();
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    java.lang.String getSigners(int index);
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSignersBytes(int index);
+
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content. Only RDF graph
+     * data can be signed as its data model is intended to specifically convey semantic meaning.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content. Only RDF graph
+     * data can be signed as its data model is intended to specifically convey semantic meaning.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getHash();
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content. Only RDF graph
+     * data can be signed as its data model is intended to specifically convey semantic meaning.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder getHashOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgSignData is the Msg/SignData request type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.MsgSignData}
+   */
+  public static final class MsgSignData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.MsgSignData)
+      MsgSignDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSignData.newBuilder() to construct.
+    private MsgSignData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSignData() {
+      signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSignData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.TxProto.MsgSignData.class, com.regen.data.v1alpha2.TxProto.MsgSignData.Builder.class);
+    }
+
+    public static final int SIGNERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList signers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return A list containing the signers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSignersList() {
+      return signers_;
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @return The count of signers.
+     */
+    public int getSignersCount() {
+      return signers_.size();
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the element to return.
+     * @return The signers at the given index.
+     */
+    public java.lang.String getSigners(int index) {
+      return signers_.get(index);
+    }
+    /**
+     * <pre>
+     * signers are the addresses of the accounts signing the data.
+     * By making a SignData request, the signers are attesting to the veracity
+     * of the data referenced by the cid. The precise meaning of this may vary
+     * depending on the underlying data.
+     * </pre>
+     *
+     * <code>repeated string signers = 1 [json_name = "signers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSignersBytes(int index) {
+      return signers_.getByteString(index);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 2;
+    private com.regen.data.v1alpha2.TypesProto.ContentHash.Graph hash_;
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content. Only RDF graph
+     * data can be signed as its data model is intended to specifically convey semantic meaning.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    @java.lang.Override
+    public boolean hasHash() {
+      return hash_ != null;
+    }
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content. Only RDF graph
+     * data can be signed as its data model is intended to specifically convey semantic meaning.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getHash() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance() : hash_;
+    }
+    /**
+     * <pre>
+     * hash is the hash-based identifier for the anchored content. Only RDF graph
+     * data can be signed as its data model is intended to specifically convey semantic meaning.
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder getHashOrBuilder() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance() : hash_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < signers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, signers_.getRaw(i));
+      }
+      if (hash_ != null) {
+        output.writeMessage(2, getHash());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < signers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(signers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSignersList().size();
+      }
+      if (hash_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getHash());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.TxProto.MsgSignData)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.TxProto.MsgSignData other = (com.regen.data.v1alpha2.TxProto.MsgSignData) obj;
+
+      if (!getSignersList()
+          .equals(other.getSignersList())) return false;
+      if (hasHash() != other.hasHash()) return false;
+      if (hasHash()) {
+        if (!getHash()
+            .equals(other.getHash())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSignersCount() > 0) {
+        hash = (37 * hash) + SIGNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSignersList().hashCode();
+      }
+      if (hasHash()) {
+        hash = (37 * hash) + HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getHash().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.TxProto.MsgSignData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSignData is the Msg/SignData request type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.MsgSignData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.MsgSignData)
+        com.regen.data.v1alpha2.TxProto.MsgSignDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TxProto.MsgSignData.class, com.regen.data.v1alpha2.TxProto.MsgSignData.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.TxProto.MsgSignData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgSignData getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.TxProto.MsgSignData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgSignData build() {
+        com.regen.data.v1alpha2.TxProto.MsgSignData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgSignData buildPartial() {
+        com.regen.data.v1alpha2.TxProto.MsgSignData result = new com.regen.data.v1alpha2.TxProto.MsgSignData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.TxProto.MsgSignData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          signers_.makeImmutable();
+          result.signers_ = signers_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.hash_ = hashBuilder_ == null
+              ? hash_
+              : hashBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.TxProto.MsgSignData) {
+          return mergeFrom((com.regen.data.v1alpha2.TxProto.MsgSignData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.TxProto.MsgSignData other) {
+        if (other == com.regen.data.v1alpha2.TxProto.MsgSignData.getDefaultInstance()) return this;
+        if (!other.signers_.isEmpty()) {
+          if (signers_.isEmpty()) {
+            signers_ = other.signers_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureSignersIsMutable();
+            signers_.addAll(other.signers_);
+          }
+          onChanged();
+        }
+        if (other.hasHash()) {
+          mergeHash(other.getHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSignersIsMutable();
+                signers_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getHashFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSignersIsMutable() {
+        if (!signers_.isModifiable()) {
+          signers_ = new com.google.protobuf.LazyStringArrayList(signers_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @return A list containing the signers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSignersList() {
+        signers_.makeImmutable();
+        return signers_;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @return The count of signers.
+       */
+      public int getSignersCount() {
+        return signers_.size();
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param index The index of the element to return.
+       * @return The signers at the given index.
+       */
+      public java.lang.String getSigners(int index) {
+        return signers_.get(index);
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the signers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSignersBytes(int index) {
+        return signers_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param index The index to set the value at.
+       * @param value The signers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigners(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param value The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSigners(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param values The signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSigners(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSignersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, signers_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigners() {
+        signers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the addresses of the accounts signing the data.
+       * By making a SignData request, the signers are attesting to the veracity
+       * of the data referenced by the cid. The precise meaning of this may vary
+       * depending on the underlying data.
+       * </pre>
+       *
+       * <code>repeated string signers = 1 [json_name = "signers"];</code>
+       * @param value The bytes of the signers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSignersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSignersIsMutable();
+        signers_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.regen.data.v1alpha2.TypesProto.ContentHash.Graph hash_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder> hashBuilder_;
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      public boolean hasHash() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph getHash() {
+        if (hashBuilder_ == null) {
+          return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance() : hash_;
+        } else {
+          return hashBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder setHash(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph value) {
+        if (hashBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hash_ = value;
+        } else {
+          hashBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder setHash(
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder builderForValue) {
+        if (hashBuilder_ == null) {
+          hash_ = builderForValue.build();
+        } else {
+          hashBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder mergeHash(com.regen.data.v1alpha2.TypesProto.ContentHash.Graph value) {
+        if (hashBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            hash_ != null &&
+            hash_ != com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance()) {
+            getHashBuilder().mergeFrom(value);
+          } else {
+            hash_ = value;
+          }
+        } else {
+          hashBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      public Builder clearHash() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder getHashBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getHashFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder getHashOrBuilder() {
+        if (hashBuilder_ != null) {
+          return hashBuilder_.getMessageOrBuilder();
+        } else {
+          return hash_ == null ?
+              com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.getDefaultInstance() : hash_;
+        }
+      }
+      /**
+       * <pre>
+       * hash is the hash-based identifier for the anchored content. Only RDF graph
+       * data can be signed as its data model is intended to specifically convey semantic meaning.
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash.Graph hash = 2 [json_name = "hash"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Graph, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder> 
+          getHashFieldBuilder() {
+        if (hashBuilder_ == null) {
+          hashBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.ContentHash.Graph, com.regen.data.v1alpha2.TypesProto.ContentHash.Graph.Builder, com.regen.data.v1alpha2.TypesProto.ContentHash.GraphOrBuilder>(
+                  getHash(),
+                  getParentForChildren(),
+                  isClean());
+          hash_ = null;
+        }
+        return hashBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.MsgSignData)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.MsgSignData)
+    private static final com.regen.data.v1alpha2.TxProto.MsgSignData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TxProto.MsgSignData();
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSignData>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSignData>() {
+      @java.lang.Override
+      public MsgSignData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSignData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSignData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TxProto.MsgSignData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSignDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.MsgSignDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSignDataResponse is the Msg/SignData response type.
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.MsgSignDataResponse}
+   */
+  public static final class MsgSignDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.MsgSignDataResponse)
+      MsgSignDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSignDataResponse.newBuilder() to construct.
+    private MsgSignDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSignDataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSignDataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.class, com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.TxProto.MsgSignDataResponse)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.TxProto.MsgSignDataResponse other = (com.regen.data.v1alpha2.TxProto.MsgSignDataResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.TxProto.MsgSignDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSignDataResponse is the Msg/SignData response type.
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.MsgSignDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.MsgSignDataResponse)
+        com.regen.data.v1alpha2.TxProto.MsgSignDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.class, com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.TxProto.internal_static_regen_data_v1alpha2_MsgSignDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgSignDataResponse getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgSignDataResponse build() {
+        com.regen.data.v1alpha2.TxProto.MsgSignDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.TxProto.MsgSignDataResponse buildPartial() {
+        com.regen.data.v1alpha2.TxProto.MsgSignDataResponse result = new com.regen.data.v1alpha2.TxProto.MsgSignDataResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.TxProto.MsgSignDataResponse) {
+          return mergeFrom((com.regen.data.v1alpha2.TxProto.MsgSignDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.TxProto.MsgSignDataResponse other) {
+        if (other == com.regen.data.v1alpha2.TxProto.MsgSignDataResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.MsgSignDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.MsgSignDataResponse)
+    private static final com.regen.data.v1alpha2.TxProto.MsgSignDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.TxProto.MsgSignDataResponse();
+    }
+
+    public static com.regen.data.v1alpha2.TxProto.MsgSignDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSignDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSignDataResponse>() {
+      @java.lang.Override
+      public MsgSignDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSignDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSignDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TxProto.MsgSignDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_MsgAnchorData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_MsgAnchorData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_MsgAnchorDataResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_MsgSignData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_MsgSignData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_MsgSignDataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_MsgSignDataResponse_fieldAccessorTable;
 
@@ -59,12 +3202,12 @@ public final class TxProto {
       "ata\032*.regen.data.v1alpha2.MsgAnchorDataR" +
       "esponse\022V\n\010SignData\022 .regen.data.v1alpha" +
       "2.MsgSignData\032(.regen.data.v1alpha2.MsgS" +
-      "ignDataResponseB\276\001\n\027com.regen.data.v1alp" +
-      "ha2B\007TxProtoP\001Z,github.com/regen-network" +
-      "/regen-ledger/x/data\242\002\003RDX\252\002\023Regen.Data." +
-      "V1alpha2\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\D" +
-      "ata\\V1alpha2\\GPBMetadata\352\002\025Regen::Data::" +
-      "V1alpha2b\006proto3"
+      "ignDataResponseB\274\001\n\027com.regen.data.v1alp" +
+      "ha2B\007TxProtoZ,github.com/regen-network/r" +
+      "egen-ledger/x/data\242\002\003RDX\252\002\023Regen.Data.V1" +
+      "alpha2\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\Dat" +
+      "a\\V1alpha2\\GPBMetadata\352\002\025Regen::Data::V1" +
+      "alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

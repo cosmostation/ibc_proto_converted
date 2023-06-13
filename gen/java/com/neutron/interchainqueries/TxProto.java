@@ -14,64 +14,11037 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgRegisterInterchainQueryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgRegisterInterchainQuery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * defines a query type: `kv` or `tx` now
+     * </pre>
+     *
+     * <code>string query_type = 1 [json_name = "queryType"];</code>
+     * @return The queryType.
+     */
+    java.lang.String getQueryType();
+    /**
+     * <pre>
+     * defines a query type: `kv` or `tx` now
+     * </pre>
+     *
+     * <code>string query_type = 1 [json_name = "queryType"];</code>
+     * @return The bytes for queryType.
+     */
+    com.google.protobuf.ByteString
+        getQueryTypeBytes();
+
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> 
+        getKeysList();
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.KVKey getKeys(int index);
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    int getKeysCount();
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    java.util.List<? extends com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+        getKeysOrBuilderList();
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder getKeysOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * is used to define a filter for transaction search ICQ
+     * </pre>
+     *
+     * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+     * @return The transactionsFilter.
+     */
+    java.lang.String getTransactionsFilter();
+    /**
+     * <pre>
+     * is used to define a filter for transaction search ICQ
+     * </pre>
+     *
+     * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+     * @return The bytes for transactionsFilter.
+     */
+    com.google.protobuf.ByteString
+        getTransactionsFilterBytes();
+
+    /**
+     * <pre>
+     * is IBC connection ID for getting ConsensusState to verify proofs
+     * </pre>
+     *
+     * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <pre>
+     * is IBC connection ID for getting ConsensusState to verify proofs
+     * </pre>
+     *
+     * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <pre>
+     * is used to specify how often (in neutron blocks) the query must be updated
+     * </pre>
+     *
+     * <code>uint64 update_period = 5 [json_name = "updatePeriod"];</code>
+     * @return The updatePeriod.
+     */
+    long getUpdatePeriod();
+
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 6 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 6 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgRegisterInterchainQuery}
+   */
+  public static final class MsgRegisterInterchainQuery extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgRegisterInterchainQuery)
+      MsgRegisterInterchainQueryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterInterchainQuery.newBuilder() to construct.
+    private MsgRegisterInterchainQuery(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterInterchainQuery() {
+      queryType_ = "";
+      keys_ = java.util.Collections.emptyList();
+      transactionsFilter_ = "";
+      connectionId_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterInterchainQuery();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.class, com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.Builder.class);
+    }
+
+    public static final int QUERY_TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object queryType_ = "";
+    /**
+     * <pre>
+     * defines a query type: `kv` or `tx` now
+     * </pre>
+     *
+     * <code>string query_type = 1 [json_name = "queryType"];</code>
+     * @return The queryType.
+     */
+    @java.lang.Override
+    public java.lang.String getQueryType() {
+      java.lang.Object ref = queryType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        queryType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * defines a query type: `kv` or `tx` now
+     * </pre>
+     *
+     * <code>string query_type = 1 [json_name = "queryType"];</code>
+     * @return The bytes for queryType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQueryTypeBytes() {
+      java.lang.Object ref = queryType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        queryType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEYS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> keys_;
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> getKeysList() {
+      return keys_;
+    }
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+        getKeysOrBuilderList() {
+      return keys_;
+    }
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    @java.lang.Override
+    public int getKeysCount() {
+      return keys_.size();
+    }
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.KVKey getKeys(int index) {
+      return keys_.get(index);
+    }
+    /**
+     * <pre>
+     * is used to define KV-storage keys for which we want to get values from
+     * remote chain
+     * </pre>
+     *
+     * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder getKeysOrBuilder(
+        int index) {
+      return keys_.get(index);
+    }
+
+    public static final int TRANSACTIONS_FILTER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transactionsFilter_ = "";
+    /**
+     * <pre>
+     * is used to define a filter for transaction search ICQ
+     * </pre>
+     *
+     * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+     * @return The transactionsFilter.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionsFilter() {
+      java.lang.Object ref = transactionsFilter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionsFilter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is used to define a filter for transaction search ICQ
+     * </pre>
+     *
+     * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+     * @return The bytes for transactionsFilter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionsFilterBytes() {
+      java.lang.Object ref = transactionsFilter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionsFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <pre>
+     * is IBC connection ID for getting ConsensusState to verify proofs
+     * </pre>
+     *
+     * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is IBC connection ID for getting ConsensusState to verify proofs
+     * </pre>
+     *
+     * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_PERIOD_FIELD_NUMBER = 5;
+    private long updatePeriod_ = 0L;
+    /**
+     * <pre>
+     * is used to specify how often (in neutron blocks) the query must be updated
+     * </pre>
+     *
+     * <code>uint64 update_period = 5 [json_name = "updatePeriod"];</code>
+     * @return The updatePeriod.
+     */
+    @java.lang.Override
+    public long getUpdatePeriod() {
+      return updatePeriod_;
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 6 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 6 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, queryType_);
+      }
+      for (int i = 0; i < keys_.size(); i++) {
+        output.writeMessage(2, keys_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionsFilter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, transactionsFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, connectionId_);
+      }
+      if (updatePeriod_ != 0L) {
+        output.writeUInt64(5, updatePeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, queryType_);
+      }
+      for (int i = 0; i < keys_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, keys_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionsFilter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, transactionsFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, connectionId_);
+      }
+      if (updatePeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, updatePeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery other = (com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery) obj;
+
+      if (!getQueryType()
+          .equals(other.getQueryType())) return false;
+      if (!getKeysList()
+          .equals(other.getKeysList())) return false;
+      if (!getTransactionsFilter()
+          .equals(other.getTransactionsFilter())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (getUpdatePeriod()
+          != other.getUpdatePeriod()) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getQueryType().hashCode();
+      if (getKeysCount() > 0) {
+        hash = (37 * hash) + KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getKeysList().hashCode();
+      }
+      hash = (37 * hash) + TRANSACTIONS_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionsFilter().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + UPDATE_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUpdatePeriod());
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgRegisterInterchainQuery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgRegisterInterchainQuery)
+        com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.class, com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryType_ = "";
+        if (keysBuilder_ == null) {
+          keys_ = java.util.Collections.emptyList();
+        } else {
+          keys_ = null;
+          keysBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        transactionsFilter_ = "";
+        connectionId_ = "";
+        updatePeriod_ = 0L;
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery build() {
+        com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery result = new com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery result) {
+        if (keysBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            keys_ = java.util.Collections.unmodifiableList(keys_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.keys_ = keys_;
+        } else {
+          result.keys_ = keysBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryType_ = queryType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.transactionsFilter_ = transactionsFilter_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.updatePeriod_ = updatePeriod_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery.getDefaultInstance()) return this;
+        if (!other.getQueryType().isEmpty()) {
+          queryType_ = other.queryType_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (keysBuilder_ == null) {
+          if (!other.keys_.isEmpty()) {
+            if (keys_.isEmpty()) {
+              keys_ = other.keys_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureKeysIsMutable();
+              keys_.addAll(other.keys_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.keys_.isEmpty()) {
+            if (keysBuilder_.isEmpty()) {
+              keysBuilder_.dispose();
+              keysBuilder_ = null;
+              keys_ = other.keys_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              keysBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getKeysFieldBuilder() : null;
+            } else {
+              keysBuilder_.addAllMessages(other.keys_);
+            }
+          }
+        }
+        if (!other.getTransactionsFilter().isEmpty()) {
+          transactionsFilter_ = other.transactionsFilter_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getUpdatePeriod() != 0L) {
+          setUpdatePeriod(other.getUpdatePeriod());
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                queryType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.neutron.interchainqueries.GenesisProto.KVKey m =
+                    input.readMessage(
+                        com.neutron.interchainqueries.GenesisProto.KVKey.parser(),
+                        extensionRegistry);
+                if (keysBuilder_ == null) {
+                  ensureKeysIsMutable();
+                  keys_.add(m);
+                } else {
+                  keysBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                transactionsFilter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                updatePeriod_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object queryType_ = "";
+      /**
+       * <pre>
+       * defines a query type: `kv` or `tx` now
+       * </pre>
+       *
+       * <code>string query_type = 1 [json_name = "queryType"];</code>
+       * @return The queryType.
+       */
+      public java.lang.String getQueryType() {
+        java.lang.Object ref = queryType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          queryType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * defines a query type: `kv` or `tx` now
+       * </pre>
+       *
+       * <code>string query_type = 1 [json_name = "queryType"];</code>
+       * @return The bytes for queryType.
+       */
+      public com.google.protobuf.ByteString
+          getQueryTypeBytes() {
+        java.lang.Object ref = queryType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          queryType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * defines a query type: `kv` or `tx` now
+       * </pre>
+       *
+       * <code>string query_type = 1 [json_name = "queryType"];</code>
+       * @param value The queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        queryType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * defines a query type: `kv` or `tx` now
+       * </pre>
+       *
+       * <code>string query_type = 1 [json_name = "queryType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryType() {
+        queryType_ = getDefaultInstance().getQueryType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * defines a query type: `kv` or `tx` now
+       * </pre>
+       *
+       * <code>string query_type = 1 [json_name = "queryType"];</code>
+       * @param value The bytes for queryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        queryType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> keys_ =
+        java.util.Collections.emptyList();
+      private void ensureKeysIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          keys_ = new java.util.ArrayList<com.neutron.interchainqueries.GenesisProto.KVKey>(keys_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.KVKey, com.neutron.interchainqueries.GenesisProto.KVKey.Builder, com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> keysBuilder_;
+
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> getKeysList() {
+        if (keysBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(keys_);
+        } else {
+          return keysBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public int getKeysCount() {
+        if (keysBuilder_ == null) {
+          return keys_.size();
+        } else {
+          return keysBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey getKeys(int index) {
+        if (keysBuilder_ == null) {
+          return keys_.get(index);
+        } else {
+          return keysBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder setKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey value) {
+        if (keysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeysIsMutable();
+          keys_.set(index, value);
+          onChanged();
+        } else {
+          keysBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder setKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey.Builder builderForValue) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          keysBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder addKeys(com.neutron.interchainqueries.GenesisProto.KVKey value) {
+        if (keysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeysIsMutable();
+          keys_.add(value);
+          onChanged();
+        } else {
+          keysBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder addKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey value) {
+        if (keysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeysIsMutable();
+          keys_.add(index, value);
+          onChanged();
+        } else {
+          keysBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder addKeys(
+          com.neutron.interchainqueries.GenesisProto.KVKey.Builder builderForValue) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.add(builderForValue.build());
+          onChanged();
+        } else {
+          keysBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder addKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey.Builder builderForValue) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          keysBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder addAllKeys(
+          java.lang.Iterable<? extends com.neutron.interchainqueries.GenesisProto.KVKey> values) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, keys_);
+          onChanged();
+        } else {
+          keysBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder clearKeys() {
+        if (keysBuilder_ == null) {
+          keys_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          keysBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public Builder removeKeys(int index) {
+        if (keysBuilder_ == null) {
+          ensureKeysIsMutable();
+          keys_.remove(index);
+          onChanged();
+        } else {
+          keysBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey.Builder getKeysBuilder(
+          int index) {
+        return getKeysFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder getKeysOrBuilder(
+          int index) {
+        if (keysBuilder_ == null) {
+          return keys_.get(index);  } else {
+          return keysBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public java.util.List<? extends com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+           getKeysOrBuilderList() {
+        if (keysBuilder_ != null) {
+          return keysBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(keys_);
+        }
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey.Builder addKeysBuilder() {
+        return getKeysFieldBuilder().addBuilder(
+            com.neutron.interchainqueries.GenesisProto.KVKey.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey.Builder addKeysBuilder(
+          int index) {
+        return getKeysFieldBuilder().addBuilder(
+            index, com.neutron.interchainqueries.GenesisProto.KVKey.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * is used to define KV-storage keys for which we want to get values from
+       * remote chain
+       * </pre>
+       *
+       * <code>repeated .neutron.interchainqueries.KVKey keys = 2 [json_name = "keys"];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey.Builder> 
+           getKeysBuilderList() {
+        return getKeysFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.KVKey, com.neutron.interchainqueries.GenesisProto.KVKey.Builder, com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+          getKeysFieldBuilder() {
+        if (keysBuilder_ == null) {
+          keysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.neutron.interchainqueries.GenesisProto.KVKey, com.neutron.interchainqueries.GenesisProto.KVKey.Builder, com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder>(
+                  keys_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          keys_ = null;
+        }
+        return keysBuilder_;
+      }
+
+      private java.lang.Object transactionsFilter_ = "";
+      /**
+       * <pre>
+       * is used to define a filter for transaction search ICQ
+       * </pre>
+       *
+       * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+       * @return The transactionsFilter.
+       */
+      public java.lang.String getTransactionsFilter() {
+        java.lang.Object ref = transactionsFilter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionsFilter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is used to define a filter for transaction search ICQ
+       * </pre>
+       *
+       * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+       * @return The bytes for transactionsFilter.
+       */
+      public com.google.protobuf.ByteString
+          getTransactionsFilterBytes() {
+        java.lang.Object ref = transactionsFilter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionsFilter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is used to define a filter for transaction search ICQ
+       * </pre>
+       *
+       * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+       * @param value The transactionsFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionsFilter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transactionsFilter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define a filter for transaction search ICQ
+       * </pre>
+       *
+       * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionsFilter() {
+        transactionsFilter_ = getDefaultInstance().getTransactionsFilter();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to define a filter for transaction search ICQ
+       * </pre>
+       *
+       * <code>string transactions_filter = 3 [json_name = "transactionsFilter"];</code>
+       * @param value The bytes for transactionsFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionsFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transactionsFilter_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <pre>
+       * is IBC connection ID for getting ConsensusState to verify proofs
+       * </pre>
+       *
+       * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is IBC connection ID for getting ConsensusState to verify proofs
+       * </pre>
+       *
+       * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is IBC connection ID for getting ConsensusState to verify proofs
+       * </pre>
+       *
+       * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is IBC connection ID for getting ConsensusState to verify proofs
+       * </pre>
+       *
+       * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is IBC connection ID for getting ConsensusState to verify proofs
+       * </pre>
+       *
+       * <code>string connection_id = 4 [json_name = "connectionId"];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long updatePeriod_ ;
+      /**
+       * <pre>
+       * is used to specify how often (in neutron blocks) the query must be updated
+       * </pre>
+       *
+       * <code>uint64 update_period = 5 [json_name = "updatePeriod"];</code>
+       * @return The updatePeriod.
+       */
+      @java.lang.Override
+      public long getUpdatePeriod() {
+        return updatePeriod_;
+      }
+      /**
+       * <pre>
+       * is used to specify how often (in neutron blocks) the query must be updated
+       * </pre>
+       *
+       * <code>uint64 update_period = 5 [json_name = "updatePeriod"];</code>
+       * @param value The updatePeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatePeriod(long value) {
+
+        updatePeriod_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is used to specify how often (in neutron blocks) the query must be updated
+       * </pre>
+       *
+       * <code>uint64 update_period = 5 [json_name = "updatePeriod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        updatePeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 6 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 6 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 6 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 6 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 6 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgRegisterInterchainQuery)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgRegisterInterchainQuery)
+    private static final com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterInterchainQuery>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterInterchainQuery>() {
+      @java.lang.Override
+      public MsgRegisterInterchainQuery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterInterchainQuery> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterInterchainQuery> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQuery getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterInterchainQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgRegisterInterchainQueryResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgRegisterInterchainQueryResponse}
+   */
+  public static final class MsgRegisterInterchainQueryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgRegisterInterchainQueryResponse)
+      MsgRegisterInterchainQueryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterInterchainQueryResponse.newBuilder() to construct.
+    private MsgRegisterInterchainQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterInterchainQueryResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterInterchainQueryResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.class, com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse other = (com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgRegisterInterchainQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgRegisterInterchainQueryResponse)
+        com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.class, com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse build() {
+        com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse result = new com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgRegisterInterchainQueryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgRegisterInterchainQueryResponse)
+    private static final com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterInterchainQueryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterInterchainQueryResponse>() {
+      @java.lang.Override
+      public MsgRegisterInterchainQueryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterInterchainQueryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterInterchainQueryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgRegisterInterchainQueryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSubmitQueryResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgSubmitQueryResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    long getQueryId();
+
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <pre>
+     * is the IBC client ID for an IBC connection between Neutron chain and target
+     * chain (where the result was obtained from)
+     * </pre>
+     *
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
+     * @return The clientId.
+     */
+    java.lang.String getClientId();
+    /**
+     * <pre>
+     * is the IBC client ID for an IBC connection between Neutron chain and target
+     * chain (where the result was obtained from)
+     * </pre>
+     *
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
+     * @return The bytes for clientId.
+     */
+    com.google.protobuf.ByteString
+        getClientIdBytes();
+
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+     * @return The result.
+     */
+    com.neutron.interchainqueries.TxProto.QueryResult getResult();
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+     */
+    com.neutron.interchainqueries.TxProto.QueryResultOrBuilder getResultOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgSubmitQueryResult}
+   */
+  public static final class MsgSubmitQueryResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgSubmitQueryResult)
+      MsgSubmitQueryResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSubmitQueryResult.newBuilder() to construct.
+    private MsgSubmitQueryResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSubmitQueryResult() {
+      sender_ = "";
+      clientId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSubmitQueryResult();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.class, com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.Builder.class);
+    }
+
+    public static final int QUERY_ID_FIELD_NUMBER = 1;
+    private long queryId_ = 0L;
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    @java.lang.Override
+    public long getQueryId() {
+      return queryId_;
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientId_ = "";
+    /**
+     * <pre>
+     * is the IBC client ID for an IBC connection between Neutron chain and target
+     * chain (where the result was obtained from)
+     * </pre>
+     *
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientId() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is the IBC client ID for an IBC connection between Neutron chain and target
+     * chain (where the result was obtained from)
+     * </pre>
+     *
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
+     * @return The bytes for clientId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientIdBytes() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 4;
+    private com.neutron.interchainqueries.TxProto.QueryResult result_;
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.QueryResult getResult() {
+      return result_ == null ? com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.QueryResultOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (queryId_ != 0L) {
+        output.writeUInt64(1, queryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clientId_);
+      }
+      if (result_ != null) {
+        output.writeMessage(4, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (queryId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, queryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clientId_);
+      }
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult other = (com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult) obj;
+
+      if (getQueryId()
+          != other.getQueryId()) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getClientId()
+          .equals(other.getClientId())) return false;
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getQueryId());
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientId().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgSubmitQueryResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgSubmitQueryResult)
+        com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.class, com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryId_ = 0L;
+        sender_ = "";
+        clientId_ = "";
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult build() {
+        com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult result = new com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryId_ = queryId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.clientId_ = clientId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult.getDefaultInstance()) return this;
+        if (other.getQueryId() != 0L) {
+          setQueryId(other.getQueryId());
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getClientId().isEmpty()) {
+          clientId_ = other.clientId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                queryId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                clientId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long queryId_ ;
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return The queryId.
+       */
+      @java.lang.Override
+      public long getQueryId() {
+        return queryId_;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @param value The queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryId(long value) {
+
+        queryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientId_ = "";
+      /**
+       * <pre>
+       * is the IBC client ID for an IBC connection between Neutron chain and target
+       * chain (where the result was obtained from)
+       * </pre>
+       *
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
+       * @return The clientId.
+       */
+      public java.lang.String getClientId() {
+        java.lang.Object ref = clientId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the IBC client ID for an IBC connection between Neutron chain and target
+       * chain (where the result was obtained from)
+       * </pre>
+       *
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
+       * @return The bytes for clientId.
+       */
+      public com.google.protobuf.ByteString
+          getClientIdBytes() {
+        java.lang.Object ref = clientId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the IBC client ID for an IBC connection between Neutron chain and target
+       * chain (where the result was obtained from)
+       * </pre>
+       *
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the IBC client ID for an IBC connection between Neutron chain and target
+       * chain (where the result was obtained from)
+       * </pre>
+       *
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        clientId_ = getDefaultInstance().getClientId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the IBC client ID for an IBC connection between Neutron chain and target
+       * chain (where the result was obtained from)
+       * </pre>
+       *
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
+       * @param value The bytes for clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.neutron.interchainqueries.TxProto.QueryResult result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.QueryResult, com.neutron.interchainqueries.TxProto.QueryResult.Builder, com.neutron.interchainqueries.TxProto.QueryResultOrBuilder> resultBuilder_;
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       * @return The result.
+       */
+      public com.neutron.interchainqueries.TxProto.QueryResult getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      public Builder setResult(com.neutron.interchainqueries.TxProto.QueryResult value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      public Builder setResult(
+          com.neutron.interchainqueries.TxProto.QueryResult.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      public Builder mergeResult(com.neutron.interchainqueries.TxProto.QueryResult value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            result_ != null &&
+            result_ != com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.QueryResult.Builder getResultBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.QueryResultOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 4 [json_name = "result"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.QueryResult, com.neutron.interchainqueries.TxProto.QueryResult.Builder, com.neutron.interchainqueries.TxProto.QueryResultOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.interchainqueries.TxProto.QueryResult, com.neutron.interchainqueries.TxProto.QueryResult.Builder, com.neutron.interchainqueries.TxProto.QueryResultOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgSubmitQueryResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgSubmitQueryResult)
+    private static final com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSubmitQueryResult>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSubmitQueryResult>() {
+      @java.lang.Override
+      public MsgSubmitQueryResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSubmitQueryResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSubmitQueryResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    java.util.List<com.neutron.interchainqueries.TxProto.StorageValue> 
+        getKvResultsList();
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    com.neutron.interchainqueries.TxProto.StorageValue getKvResults(int index);
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    int getKvResultsCount();
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    java.util.List<? extends com.neutron.interchainqueries.TxProto.StorageValueOrBuilder> 
+        getKvResultsOrBuilderList();
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    com.neutron.interchainqueries.TxProto.StorageValueOrBuilder getKvResultsOrBuilder(
+        int index);
+
+    /**
+     * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+     * @return Whether the block field is set.
+     */
+    boolean hasBlock();
+    /**
+     * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+     * @return The block.
+     */
+    com.neutron.interchainqueries.TxProto.Block getBlock();
+    /**
+     * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+     */
+    com.neutron.interchainqueries.TxProto.BlockOrBuilder getBlockOrBuilder();
+
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>uint64 revision = 4 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    long getRevision();
+
+    /**
+     * <code>bool allow_kv_callbacks = 5 [json_name = "allowKvCallbacks"];</code>
+     * @return The allowKvCallbacks.
+     */
+    boolean getAllowKvCallbacks();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryResult}
+   */
+  public static final class QueryResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryResult)
+      QueryResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResult.newBuilder() to construct.
+    private QueryResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResult() {
+      kvResults_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResult();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_QueryResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_QueryResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.QueryResult.class, com.neutron.interchainqueries.TxProto.QueryResult.Builder.class);
+    }
+
+    public static final int KV_RESULTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.neutron.interchainqueries.TxProto.StorageValue> kvResults_;
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.neutron.interchainqueries.TxProto.StorageValue> getKvResultsList() {
+      return kvResults_;
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.neutron.interchainqueries.TxProto.StorageValueOrBuilder> 
+        getKvResultsOrBuilderList() {
+      return kvResults_;
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    @java.lang.Override
+    public int getKvResultsCount() {
+      return kvResults_.size();
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.StorageValue getKvResults(int index) {
+      return kvResults_.get(index);
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.StorageValueOrBuilder getKvResultsOrBuilder(
+        int index) {
+      return kvResults_.get(index);
+    }
+
+    public static final int BLOCK_FIELD_NUMBER = 2;
+    private com.neutron.interchainqueries.TxProto.Block block_;
+    /**
+     * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+     * @return Whether the block field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlock() {
+      return block_ != null;
+    }
+    /**
+     * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+     * @return The block.
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.Block getBlock() {
+      return block_ == null ? com.neutron.interchainqueries.TxProto.Block.getDefaultInstance() : block_;
+    }
+    /**
+     * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.BlockOrBuilder getBlockOrBuilder() {
+      return block_ == null ? com.neutron.interchainqueries.TxProto.Block.getDefaultInstance() : block_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 3;
+    private long height_ = 0L;
+    /**
+     * <code>uint64 height = 3 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 4;
+    private long revision_ = 0L;
+    /**
+     * <code>uint64 revision = 4 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public long getRevision() {
+      return revision_;
+    }
+
+    public static final int ALLOW_KV_CALLBACKS_FIELD_NUMBER = 5;
+    private boolean allowKvCallbacks_ = false;
+    /**
+     * <code>bool allow_kv_callbacks = 5 [json_name = "allowKvCallbacks"];</code>
+     * @return The allowKvCallbacks.
+     */
+    @java.lang.Override
+    public boolean getAllowKvCallbacks() {
+      return allowKvCallbacks_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < kvResults_.size(); i++) {
+        output.writeMessage(1, kvResults_.get(i));
+      }
+      if (block_ != null) {
+        output.writeMessage(2, getBlock());
+      }
+      if (height_ != 0L) {
+        output.writeUInt64(3, height_);
+      }
+      if (revision_ != 0L) {
+        output.writeUInt64(4, revision_);
+      }
+      if (allowKvCallbacks_ != false) {
+        output.writeBool(5, allowKvCallbacks_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < kvResults_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, kvResults_.get(i));
+      }
+      if (block_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBlock());
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, height_);
+      }
+      if (revision_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, revision_);
+      }
+      if (allowKvCallbacks_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, allowKvCallbacks_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.QueryResult)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.QueryResult other = (com.neutron.interchainqueries.TxProto.QueryResult) obj;
+
+      if (!getKvResultsList()
+          .equals(other.getKvResultsList())) return false;
+      if (hasBlock() != other.hasBlock()) return false;
+      if (hasBlock()) {
+        if (!getBlock()
+            .equals(other.getBlock())) return false;
+      }
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (getRevision()
+          != other.getRevision()) return false;
+      if (getAllowKvCallbacks()
+          != other.getAllowKvCallbacks()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getKvResultsCount() > 0) {
+        hash = (37 * hash) + KV_RESULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getKvResultsList().hashCode();
+      }
+      if (hasBlock()) {
+        hash = (37 * hash) + BLOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getBlock().hashCode();
+      }
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + REVISION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRevision());
+      hash = (37 * hash) + ALLOW_KV_CALLBACKS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowKvCallbacks());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.QueryResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.QueryResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryResult)
+        com.neutron.interchainqueries.TxProto.QueryResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_QueryResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_QueryResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.QueryResult.class, com.neutron.interchainqueries.TxProto.QueryResult.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.QueryResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (kvResultsBuilder_ == null) {
+          kvResults_ = java.util.Collections.emptyList();
+        } else {
+          kvResults_ = null;
+          kvResultsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        block_ = null;
+        if (blockBuilder_ != null) {
+          blockBuilder_.dispose();
+          blockBuilder_ = null;
+        }
+        height_ = 0L;
+        revision_ = 0L;
+        allowKvCallbacks_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_QueryResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.QueryResult getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.QueryResult build() {
+        com.neutron.interchainqueries.TxProto.QueryResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.QueryResult buildPartial() {
+        com.neutron.interchainqueries.TxProto.QueryResult result = new com.neutron.interchainqueries.TxProto.QueryResult(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.neutron.interchainqueries.TxProto.QueryResult result) {
+        if (kvResultsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            kvResults_ = java.util.Collections.unmodifiableList(kvResults_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.kvResults_ = kvResults_;
+        } else {
+          result.kvResults_ = kvResultsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.QueryResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.block_ = blockBuilder_ == null
+              ? block_
+              : blockBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.revision_ = revision_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.allowKvCallbacks_ = allowKvCallbacks_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.QueryResult) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.QueryResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.QueryResult other) {
+        if (other == com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance()) return this;
+        if (kvResultsBuilder_ == null) {
+          if (!other.kvResults_.isEmpty()) {
+            if (kvResults_.isEmpty()) {
+              kvResults_ = other.kvResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureKvResultsIsMutable();
+              kvResults_.addAll(other.kvResults_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.kvResults_.isEmpty()) {
+            if (kvResultsBuilder_.isEmpty()) {
+              kvResultsBuilder_.dispose();
+              kvResultsBuilder_ = null;
+              kvResults_ = other.kvResults_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              kvResultsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getKvResultsFieldBuilder() : null;
+            } else {
+              kvResultsBuilder_.addAllMessages(other.kvResults_);
+            }
+          }
+        }
+        if (other.hasBlock()) {
+          mergeBlock(other.getBlock());
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (other.getRevision() != 0L) {
+          setRevision(other.getRevision());
+        }
+        if (other.getAllowKvCallbacks() != false) {
+          setAllowKvCallbacks(other.getAllowKvCallbacks());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.neutron.interchainqueries.TxProto.StorageValue m =
+                    input.readMessage(
+                        com.neutron.interchainqueries.TxProto.StorageValue.parser(),
+                        extensionRegistry);
+                if (kvResultsBuilder_ == null) {
+                  ensureKvResultsIsMutable();
+                  kvResults_.add(m);
+                } else {
+                  kvResultsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getBlockFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                height_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                revision_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                allowKvCallbacks_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.neutron.interchainqueries.TxProto.StorageValue> kvResults_ =
+        java.util.Collections.emptyList();
+      private void ensureKvResultsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          kvResults_ = new java.util.ArrayList<com.neutron.interchainqueries.TxProto.StorageValue>(kvResults_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.StorageValue, com.neutron.interchainqueries.TxProto.StorageValue.Builder, com.neutron.interchainqueries.TxProto.StorageValueOrBuilder> kvResultsBuilder_;
+
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.TxProto.StorageValue> getKvResultsList() {
+        if (kvResultsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(kvResults_);
+        } else {
+          return kvResultsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public int getKvResultsCount() {
+        if (kvResultsBuilder_ == null) {
+          return kvResults_.size();
+        } else {
+          return kvResultsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.StorageValue getKvResults(int index) {
+        if (kvResultsBuilder_ == null) {
+          return kvResults_.get(index);
+        } else {
+          return kvResultsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder setKvResults(
+          int index, com.neutron.interchainqueries.TxProto.StorageValue value) {
+        if (kvResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKvResultsIsMutable();
+          kvResults_.set(index, value);
+          onChanged();
+        } else {
+          kvResultsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder setKvResults(
+          int index, com.neutron.interchainqueries.TxProto.StorageValue.Builder builderForValue) {
+        if (kvResultsBuilder_ == null) {
+          ensureKvResultsIsMutable();
+          kvResults_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          kvResultsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder addKvResults(com.neutron.interchainqueries.TxProto.StorageValue value) {
+        if (kvResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKvResultsIsMutable();
+          kvResults_.add(value);
+          onChanged();
+        } else {
+          kvResultsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder addKvResults(
+          int index, com.neutron.interchainqueries.TxProto.StorageValue value) {
+        if (kvResultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKvResultsIsMutable();
+          kvResults_.add(index, value);
+          onChanged();
+        } else {
+          kvResultsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder addKvResults(
+          com.neutron.interchainqueries.TxProto.StorageValue.Builder builderForValue) {
+        if (kvResultsBuilder_ == null) {
+          ensureKvResultsIsMutable();
+          kvResults_.add(builderForValue.build());
+          onChanged();
+        } else {
+          kvResultsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder addKvResults(
+          int index, com.neutron.interchainqueries.TxProto.StorageValue.Builder builderForValue) {
+        if (kvResultsBuilder_ == null) {
+          ensureKvResultsIsMutable();
+          kvResults_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          kvResultsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder addAllKvResults(
+          java.lang.Iterable<? extends com.neutron.interchainqueries.TxProto.StorageValue> values) {
+        if (kvResultsBuilder_ == null) {
+          ensureKvResultsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, kvResults_);
+          onChanged();
+        } else {
+          kvResultsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder clearKvResults() {
+        if (kvResultsBuilder_ == null) {
+          kvResults_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          kvResultsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public Builder removeKvResults(int index) {
+        if (kvResultsBuilder_ == null) {
+          ensureKvResultsIsMutable();
+          kvResults_.remove(index);
+          onChanged();
+        } else {
+          kvResultsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.StorageValue.Builder getKvResultsBuilder(
+          int index) {
+        return getKvResultsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.StorageValueOrBuilder getKvResultsOrBuilder(
+          int index) {
+        if (kvResultsBuilder_ == null) {
+          return kvResults_.get(index);  } else {
+          return kvResultsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public java.util.List<? extends com.neutron.interchainqueries.TxProto.StorageValueOrBuilder> 
+           getKvResultsOrBuilderList() {
+        if (kvResultsBuilder_ != null) {
+          return kvResultsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(kvResults_);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.StorageValue.Builder addKvResultsBuilder() {
+        return getKvResultsFieldBuilder().addBuilder(
+            com.neutron.interchainqueries.TxProto.StorageValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.StorageValue.Builder addKvResultsBuilder(
+          int index) {
+        return getKvResultsFieldBuilder().addBuilder(
+            index, com.neutron.interchainqueries.TxProto.StorageValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.StorageValue kv_results = 1 [json_name = "kvResults"];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.TxProto.StorageValue.Builder> 
+           getKvResultsBuilderList() {
+        return getKvResultsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.StorageValue, com.neutron.interchainqueries.TxProto.StorageValue.Builder, com.neutron.interchainqueries.TxProto.StorageValueOrBuilder> 
+          getKvResultsFieldBuilder() {
+        if (kvResultsBuilder_ == null) {
+          kvResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.neutron.interchainqueries.TxProto.StorageValue, com.neutron.interchainqueries.TxProto.StorageValue.Builder, com.neutron.interchainqueries.TxProto.StorageValueOrBuilder>(
+                  kvResults_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          kvResults_ = null;
+        }
+        return kvResultsBuilder_;
+      }
+
+      private com.neutron.interchainqueries.TxProto.Block block_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.Block, com.neutron.interchainqueries.TxProto.Block.Builder, com.neutron.interchainqueries.TxProto.BlockOrBuilder> blockBuilder_;
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       * @return Whether the block field is set.
+       */
+      public boolean hasBlock() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       * @return The block.
+       */
+      public com.neutron.interchainqueries.TxProto.Block getBlock() {
+        if (blockBuilder_ == null) {
+          return block_ == null ? com.neutron.interchainqueries.TxProto.Block.getDefaultInstance() : block_;
+        } else {
+          return blockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      public Builder setBlock(com.neutron.interchainqueries.TxProto.Block value) {
+        if (blockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          block_ = value;
+        } else {
+          blockBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      public Builder setBlock(
+          com.neutron.interchainqueries.TxProto.Block.Builder builderForValue) {
+        if (blockBuilder_ == null) {
+          block_ = builderForValue.build();
+        } else {
+          blockBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      public Builder mergeBlock(com.neutron.interchainqueries.TxProto.Block value) {
+        if (blockBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            block_ != null &&
+            block_ != com.neutron.interchainqueries.TxProto.Block.getDefaultInstance()) {
+            getBlockBuilder().mergeFrom(value);
+          } else {
+            block_ = value;
+          }
+        } else {
+          blockBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      public Builder clearBlock() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        block_ = null;
+        if (blockBuilder_ != null) {
+          blockBuilder_.dispose();
+          blockBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.Block.Builder getBlockBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBlockFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.BlockOrBuilder getBlockOrBuilder() {
+        if (blockBuilder_ != null) {
+          return blockBuilder_.getMessageOrBuilder();
+        } else {
+          return block_ == null ?
+              com.neutron.interchainqueries.TxProto.Block.getDefaultInstance() : block_;
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.Block block = 2 [json_name = "block"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.Block, com.neutron.interchainqueries.TxProto.Block.Builder, com.neutron.interchainqueries.TxProto.BlockOrBuilder> 
+          getBlockFieldBuilder() {
+        if (blockBuilder_ == null) {
+          blockBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.interchainqueries.TxProto.Block, com.neutron.interchainqueries.TxProto.Block.Builder, com.neutron.interchainqueries.TxProto.BlockOrBuilder>(
+                  getBlock(),
+                  getParentForChildren(),
+                  isClean());
+          block_ = null;
+        }
+        return blockBuilder_;
+      }
+
+      private long height_ ;
+      /**
+       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 height = 3 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long revision_ ;
+      /**
+       * <code>uint64 revision = 4 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public long getRevision() {
+        return revision_;
+      }
+      /**
+       * <code>uint64 revision = 4 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(long value) {
+
+        revision_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 revision = 4 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        revision_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean allowKvCallbacks_ ;
+      /**
+       * <code>bool allow_kv_callbacks = 5 [json_name = "allowKvCallbacks"];</code>
+       * @return The allowKvCallbacks.
+       */
+      @java.lang.Override
+      public boolean getAllowKvCallbacks() {
+        return allowKvCallbacks_;
+      }
+      /**
+       * <code>bool allow_kv_callbacks = 5 [json_name = "allowKvCallbacks"];</code>
+       * @param value The allowKvCallbacks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowKvCallbacks(boolean value) {
+
+        allowKvCallbacks_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool allow_kv_callbacks = 5 [json_name = "allowKvCallbacks"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowKvCallbacks() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        allowKvCallbacks_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryResult)
+    private static final com.neutron.interchainqueries.TxProto.QueryResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.QueryResult();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.QueryResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResult>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResult>() {
+      @java.lang.Override
+      public QueryResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.QueryResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StorageValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.StorageValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * is the substore name (acc, staking, etc.)
+     * </pre>
+     *
+     * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+     * @return The storagePrefix.
+     */
+    java.lang.String getStoragePrefix();
+    /**
+     * <pre>
+     * is the substore name (acc, staking, etc.)
+     * </pre>
+     *
+     * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+     * @return The bytes for storagePrefix.
+     */
+    com.google.protobuf.ByteString
+        getStoragePrefixBytes();
+
+    /**
+     * <pre>
+     * is the key in IAVL store
+     * </pre>
+     *
+     * <code>bytes key = 2 [json_name = "key"];</code>
+     * @return The key.
+     */
+    com.google.protobuf.ByteString getKey();
+
+    /**
+     * <pre>
+     * is the value in IAVL store
+     * </pre>
+     *
+     * <code>bytes value = 3 [json_name = "value"];</code>
+     * @return The value.
+     */
+    com.google.protobuf.ByteString getValue();
+
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of key-value pair in IAVL
+     * storage
+     * </pre>
+     *
+     * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+     * @return Whether the proof field is set.
+     */
+    boolean hasProof();
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of key-value pair in IAVL
+     * storage
+     * </pre>
+     *
+     * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+     * @return The proof.
+     */
+    com.tendermint.crypto.ProofProto.ProofOps getProof();
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of key-value pair in IAVL
+     * storage
+     * </pre>
+     *
+     * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+     */
+    com.tendermint.crypto.ProofProto.ProofOpsOrBuilder getProofOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.StorageValue}
+   */
+  public static final class StorageValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.StorageValue)
+      StorageValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StorageValue.newBuilder() to construct.
+    private StorageValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StorageValue() {
+      storagePrefix_ = "";
+      key_ = com.google.protobuf.ByteString.EMPTY;
+      value_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StorageValue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_StorageValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_StorageValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.StorageValue.class, com.neutron.interchainqueries.TxProto.StorageValue.Builder.class);
+    }
+
+    public static final int STORAGE_PREFIX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object storagePrefix_ = "";
+    /**
+     * <pre>
+     * is the substore name (acc, staking, etc.)
+     * </pre>
+     *
+     * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+     * @return The storagePrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getStoragePrefix() {
+      java.lang.Object ref = storagePrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        storagePrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is the substore name (acc, staking, etc.)
+     * </pre>
+     *
+     * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+     * @return The bytes for storagePrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStoragePrefixBytes() {
+      java.lang.Object ref = storagePrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        storagePrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * is the key in IAVL store
+     * </pre>
+     *
+     * <code>bytes key = 2 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getKey() {
+      return key_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * is the value in IAVL store
+     * </pre>
+     *
+     * <code>bytes value = 3 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getValue() {
+      return value_;
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 4;
+    private com.tendermint.crypto.ProofProto.ProofOps proof_;
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of key-value pair in IAVL
+     * storage
+     * </pre>
+     *
+     * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+     * @return Whether the proof field is set.
+     */
+    @java.lang.Override
+    public boolean hasProof() {
+      return proof_ != null;
+    }
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of key-value pair in IAVL
+     * storage
+     * </pre>
+     *
+     * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.ProofOps getProof() {
+      return proof_ == null ? com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proof_;
+    }
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of key-value pair in IAVL
+     * storage
+     * </pre>
+     *
+     * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.ProofOpsOrBuilder getProofOrBuilder() {
+      return proof_ == null ? com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proof_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storagePrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, storagePrefix_);
+      }
+      if (!key_.isEmpty()) {
+        output.writeBytes(2, key_);
+      }
+      if (!value_.isEmpty()) {
+        output.writeBytes(3, value_);
+      }
+      if (proof_ != null) {
+        output.writeMessage(4, getProof());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storagePrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, storagePrefix_);
+      }
+      if (!key_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, key_);
+      }
+      if (!value_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, value_);
+      }
+      if (proof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getProof());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.StorageValue)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.StorageValue other = (com.neutron.interchainqueries.TxProto.StorageValue) obj;
+
+      if (!getStoragePrefix()
+          .equals(other.getStoragePrefix())) return false;
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (hasProof() != other.hasProof()) return false;
+      if (hasProof()) {
+        if (!getProof()
+            .equals(other.getProof())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STORAGE_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getStoragePrefix().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      if (hasProof()) {
+        hash = (37 * hash) + PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getProof().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.StorageValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.StorageValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.StorageValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.StorageValue)
+        com.neutron.interchainqueries.TxProto.StorageValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_StorageValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_StorageValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.StorageValue.class, com.neutron.interchainqueries.TxProto.StorageValue.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.StorageValue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        storagePrefix_ = "";
+        key_ = com.google.protobuf.ByteString.EMPTY;
+        value_ = com.google.protobuf.ByteString.EMPTY;
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_StorageValue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.StorageValue getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.StorageValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.StorageValue build() {
+        com.neutron.interchainqueries.TxProto.StorageValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.StorageValue buildPartial() {
+        com.neutron.interchainqueries.TxProto.StorageValue result = new com.neutron.interchainqueries.TxProto.StorageValue(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.StorageValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.storagePrefix_ = storagePrefix_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.proof_ = proofBuilder_ == null
+              ? proof_
+              : proofBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.StorageValue) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.StorageValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.StorageValue other) {
+        if (other == com.neutron.interchainqueries.TxProto.StorageValue.getDefaultInstance()) return this;
+        if (!other.getStoragePrefix().isEmpty()) {
+          storagePrefix_ = other.storagePrefix_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
+          setKey(other.getKey());
+        }
+        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+          setValue(other.getValue());
+        }
+        if (other.hasProof()) {
+          mergeProof(other.getProof());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                storagePrefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                key_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object storagePrefix_ = "";
+      /**
+       * <pre>
+       * is the substore name (acc, staking, etc.)
+       * </pre>
+       *
+       * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+       * @return The storagePrefix.
+       */
+      public java.lang.String getStoragePrefix() {
+        java.lang.Object ref = storagePrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          storagePrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the substore name (acc, staking, etc.)
+       * </pre>
+       *
+       * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+       * @return The bytes for storagePrefix.
+       */
+      public com.google.protobuf.ByteString
+          getStoragePrefixBytes() {
+        java.lang.Object ref = storagePrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          storagePrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the substore name (acc, staking, etc.)
+       * </pre>
+       *
+       * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+       * @param value The storagePrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStoragePrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        storagePrefix_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the substore name (acc, staking, etc.)
+       * </pre>
+       *
+       * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStoragePrefix() {
+        storagePrefix_ = getDefaultInstance().getStoragePrefix();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the substore name (acc, staking, etc.)
+       * </pre>
+       *
+       * <code>string storage_prefix = 1 [json_name = "storagePrefix"];</code>
+       * @param value The bytes for storagePrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStoragePrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        storagePrefix_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * is the key in IAVL store
+       * </pre>
+       *
+       * <code>bytes key = 2 [json_name = "key"];</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getKey() {
+        return key_;
+      }
+      /**
+       * <pre>
+       * is the key in IAVL store
+       * </pre>
+       *
+       * <code>bytes key = 2 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the key in IAVL store
+       * </pre>
+       *
+       * <code>bytes key = 2 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * is the value in IAVL store
+       * </pre>
+       *
+       * <code>bytes value = 3 [json_name = "value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <pre>
+       * is the value in IAVL store
+       * </pre>
+       *
+       * <code>bytes value = 3 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the value in IAVL store
+       * </pre>
+       *
+       * <code>bytes value = 3 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+
+      private com.tendermint.crypto.ProofProto.ProofOps proof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.ProofOps, com.tendermint.crypto.ProofProto.ProofOps.Builder, com.tendermint.crypto.ProofProto.ProofOpsOrBuilder> proofBuilder_;
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       * @return Whether the proof field is set.
+       */
+      public boolean hasProof() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       * @return The proof.
+       */
+      public com.tendermint.crypto.ProofProto.ProofOps getProof() {
+        if (proofBuilder_ == null) {
+          return proof_ == null ? com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proof_;
+        } else {
+          return proofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      public Builder setProof(com.tendermint.crypto.ProofProto.ProofOps value) {
+        if (proofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proof_ = value;
+        } else {
+          proofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      public Builder setProof(
+          com.tendermint.crypto.ProofProto.ProofOps.Builder builderForValue) {
+        if (proofBuilder_ == null) {
+          proof_ = builderForValue.build();
+        } else {
+          proofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      public Builder mergeProof(com.tendermint.crypto.ProofProto.ProofOps value) {
+        if (proofBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            proof_ != null &&
+            proof_ != com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance()) {
+            getProofBuilder().mergeFrom(value);
+          } else {
+            proof_ = value;
+          }
+        } else {
+          proofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      public Builder clearProof() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.ProofOps.Builder getProofBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.ProofOpsOrBuilder getProofOrBuilder() {
+        if (proofBuilder_ != null) {
+          return proofBuilder_.getMessageOrBuilder();
+        } else {
+          return proof_ == null ?
+              com.tendermint.crypto.ProofProto.ProofOps.getDefaultInstance() : proof_;
+        }
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of key-value pair in IAVL
+       * storage
+       * </pre>
+       *
+       * <code>.tendermint.crypto.ProofOps Proof = 4 [json_name = "Proof"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.ProofOps, com.tendermint.crypto.ProofProto.ProofOps.Builder, com.tendermint.crypto.ProofProto.ProofOpsOrBuilder> 
+          getProofFieldBuilder() {
+        if (proofBuilder_ == null) {
+          proofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tendermint.crypto.ProofProto.ProofOps, com.tendermint.crypto.ProofProto.ProofOps.Builder, com.tendermint.crypto.ProofProto.ProofOpsOrBuilder>(
+                  getProof(),
+                  getParentForChildren(),
+                  isClean());
+          proof_ = null;
+        }
+        return proofBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.StorageValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.StorageValue)
+    private static final com.neutron.interchainqueries.TxProto.StorageValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.StorageValue();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.StorageValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StorageValue>
+        PARSER = new com.google.protobuf.AbstractParser<StorageValue>() {
+      @java.lang.Override
+      public StorageValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StorageValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StorageValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.StorageValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.Block)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * We need to know block X+1 to verify response of transaction for block X
+     * since LastResultsHash is root hash of all results from the txs from the
+     * previous block
+     * </pre>
+     *
+     * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+     * @return Whether the nextBlockHeader field is set.
+     */
+    boolean hasNextBlockHeader();
+    /**
+     * <pre>
+     * We need to know block X+1 to verify response of transaction for block X
+     * since LastResultsHash is root hash of all results from the txs from the
+     * previous block
+     * </pre>
+     *
+     * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+     * @return The nextBlockHeader.
+     */
+    com.google.protobuf.Any getNextBlockHeader();
+    /**
+     * <pre>
+     * We need to know block X+1 to verify response of transaction for block X
+     * since LastResultsHash is root hash of all results from the txs from the
+     * previous block
+     * </pre>
+     *
+     * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getNextBlockHeaderOrBuilder();
+
+    /**
+     * <pre>
+     * We need to know block X to verify inclusion of transaction for block X
+     * </pre>
+     *
+     * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+     * @return Whether the header field is set.
+     */
+    boolean hasHeader();
+    /**
+     * <pre>
+     * We need to know block X to verify inclusion of transaction for block X
+     * </pre>
+     *
+     * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+     * @return The header.
+     */
+    com.google.protobuf.Any getHeader();
+    /**
+     * <pre>
+     * We need to know block X to verify inclusion of transaction for block X
+     * </pre>
+     *
+     * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getHeaderOrBuilder();
+
+    /**
+     * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+     * @return Whether the tx field is set.
+     */
+    boolean hasTx();
+    /**
+     * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+     * @return The tx.
+     */
+    com.neutron.interchainqueries.TxProto.TxValue getTx();
+    /**
+     * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+     */
+    com.neutron.interchainqueries.TxProto.TxValueOrBuilder getTxOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.Block}
+   */
+  public static final class Block extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.Block)
+      BlockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Block.newBuilder() to construct.
+    private Block(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Block() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Block();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_Block_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_Block_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.Block.class, com.neutron.interchainqueries.TxProto.Block.Builder.class);
+    }
+
+    public static final int NEXT_BLOCK_HEADER_FIELD_NUMBER = 1;
+    private com.google.protobuf.Any nextBlockHeader_;
+    /**
+     * <pre>
+     * We need to know block X+1 to verify response of transaction for block X
+     * since LastResultsHash is root hash of all results from the txs from the
+     * previous block
+     * </pre>
+     *
+     * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+     * @return Whether the nextBlockHeader field is set.
+     */
+    @java.lang.Override
+    public boolean hasNextBlockHeader() {
+      return nextBlockHeader_ != null;
+    }
+    /**
+     * <pre>
+     * We need to know block X+1 to verify response of transaction for block X
+     * since LastResultsHash is root hash of all results from the txs from the
+     * previous block
+     * </pre>
+     *
+     * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+     * @return The nextBlockHeader.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getNextBlockHeader() {
+      return nextBlockHeader_ == null ? com.google.protobuf.Any.getDefaultInstance() : nextBlockHeader_;
+    }
+    /**
+     * <pre>
+     * We need to know block X+1 to verify response of transaction for block X
+     * since LastResultsHash is root hash of all results from the txs from the
+     * previous block
+     * </pre>
+     *
+     * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getNextBlockHeaderOrBuilder() {
+      return nextBlockHeader_ == null ? com.google.protobuf.Any.getDefaultInstance() : nextBlockHeader_;
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Any header_;
+    /**
+     * <pre>
+     * We need to know block X to verify inclusion of transaction for block X
+     * </pre>
+     *
+     * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+     * @return Whether the header field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeader() {
+      return header_ != null;
+    }
+    /**
+     * <pre>
+     * We need to know block X to verify inclusion of transaction for block X
+     * </pre>
+     *
+     * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+     * @return The header.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getHeader() {
+      return header_ == null ? com.google.protobuf.Any.getDefaultInstance() : header_;
+    }
+    /**
+     * <pre>
+     * We need to know block X to verify inclusion of transaction for block X
+     * </pre>
+     *
+     * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getHeaderOrBuilder() {
+      return header_ == null ? com.google.protobuf.Any.getDefaultInstance() : header_;
+    }
+
+    public static final int TX_FIELD_NUMBER = 3;
+    private com.neutron.interchainqueries.TxProto.TxValue tx_;
+    /**
+     * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+     * @return Whether the tx field is set.
+     */
+    @java.lang.Override
+    public boolean hasTx() {
+      return tx_ != null;
+    }
+    /**
+     * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+     * @return The tx.
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.TxValue getTx() {
+      return tx_ == null ? com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance() : tx_;
+    }
+    /**
+     * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.TxValueOrBuilder getTxOrBuilder() {
+      return tx_ == null ? com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance() : tx_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (nextBlockHeader_ != null) {
+        output.writeMessage(1, getNextBlockHeader());
+      }
+      if (header_ != null) {
+        output.writeMessage(2, getHeader());
+      }
+      if (tx_ != null) {
+        output.writeMessage(3, getTx());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (nextBlockHeader_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getNextBlockHeader());
+      }
+      if (header_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getHeader());
+      }
+      if (tx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTx());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.Block)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.Block other = (com.neutron.interchainqueries.TxProto.Block) obj;
+
+      if (hasNextBlockHeader() != other.hasNextBlockHeader()) return false;
+      if (hasNextBlockHeader()) {
+        if (!getNextBlockHeader()
+            .equals(other.getNextBlockHeader())) return false;
+      }
+      if (hasHeader() != other.hasHeader()) return false;
+      if (hasHeader()) {
+        if (!getHeader()
+            .equals(other.getHeader())) return false;
+      }
+      if (hasTx() != other.hasTx()) return false;
+      if (hasTx()) {
+        if (!getTx()
+            .equals(other.getTx())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNextBlockHeader()) {
+        hash = (37 * hash) + NEXT_BLOCK_HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getNextBlockHeader().hashCode();
+      }
+      if (hasHeader()) {
+        hash = (37 * hash) + HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeader().hashCode();
+      }
+      if (hasTx()) {
+        hash = (37 * hash) + TX_FIELD_NUMBER;
+        hash = (53 * hash) + getTx().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.Block parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.Block parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.Block parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.Block prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.Block}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.Block)
+        com.neutron.interchainqueries.TxProto.BlockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_Block_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_Block_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.Block.class, com.neutron.interchainqueries.TxProto.Block.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.Block.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        nextBlockHeader_ = null;
+        if (nextBlockHeaderBuilder_ != null) {
+          nextBlockHeaderBuilder_.dispose();
+          nextBlockHeaderBuilder_ = null;
+        }
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
+          headerBuilder_ = null;
+        }
+        tx_ = null;
+        if (txBuilder_ != null) {
+          txBuilder_.dispose();
+          txBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_Block_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.Block getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.Block.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.Block build() {
+        com.neutron.interchainqueries.TxProto.Block result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.Block buildPartial() {
+        com.neutron.interchainqueries.TxProto.Block result = new com.neutron.interchainqueries.TxProto.Block(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.Block result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.nextBlockHeader_ = nextBlockHeaderBuilder_ == null
+              ? nextBlockHeader_
+              : nextBlockHeaderBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.header_ = headerBuilder_ == null
+              ? header_
+              : headerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tx_ = txBuilder_ == null
+              ? tx_
+              : txBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.Block) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.Block)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.Block other) {
+        if (other == com.neutron.interchainqueries.TxProto.Block.getDefaultInstance()) return this;
+        if (other.hasNextBlockHeader()) {
+          mergeNextBlockHeader(other.getNextBlockHeader());
+        }
+        if (other.hasHeader()) {
+          mergeHeader(other.getHeader());
+        }
+        if (other.hasTx()) {
+          mergeTx(other.getTx());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getNextBlockHeaderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getHeaderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Any nextBlockHeader_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> nextBlockHeaderBuilder_;
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       * @return Whether the nextBlockHeader field is set.
+       */
+      public boolean hasNextBlockHeader() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       * @return The nextBlockHeader.
+       */
+      public com.google.protobuf.Any getNextBlockHeader() {
+        if (nextBlockHeaderBuilder_ == null) {
+          return nextBlockHeader_ == null ? com.google.protobuf.Any.getDefaultInstance() : nextBlockHeader_;
+        } else {
+          return nextBlockHeaderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      public Builder setNextBlockHeader(com.google.protobuf.Any value) {
+        if (nextBlockHeaderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nextBlockHeader_ = value;
+        } else {
+          nextBlockHeaderBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      public Builder setNextBlockHeader(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (nextBlockHeaderBuilder_ == null) {
+          nextBlockHeader_ = builderForValue.build();
+        } else {
+          nextBlockHeaderBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      public Builder mergeNextBlockHeader(com.google.protobuf.Any value) {
+        if (nextBlockHeaderBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            nextBlockHeader_ != null &&
+            nextBlockHeader_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getNextBlockHeaderBuilder().mergeFrom(value);
+          } else {
+            nextBlockHeader_ = value;
+          }
+        } else {
+          nextBlockHeaderBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      public Builder clearNextBlockHeader() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nextBlockHeader_ = null;
+        if (nextBlockHeaderBuilder_ != null) {
+          nextBlockHeaderBuilder_.dispose();
+          nextBlockHeaderBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      public com.google.protobuf.Any.Builder getNextBlockHeaderBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNextBlockHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getNextBlockHeaderOrBuilder() {
+        if (nextBlockHeaderBuilder_ != null) {
+          return nextBlockHeaderBuilder_.getMessageOrBuilder();
+        } else {
+          return nextBlockHeader_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : nextBlockHeader_;
+        }
+      }
+      /**
+       * <pre>
+       * We need to know block X+1 to verify response of transaction for block X
+       * since LastResultsHash is root hash of all results from the txs from the
+       * previous block
+       * </pre>
+       *
+       * <code>.google.protobuf.Any next_block_header = 1 [json_name = "nextBlockHeader"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getNextBlockHeaderFieldBuilder() {
+        if (nextBlockHeaderBuilder_ == null) {
+          nextBlockHeaderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getNextBlockHeader(),
+                  getParentForChildren(),
+                  isClean());
+          nextBlockHeader_ = null;
+        }
+        return nextBlockHeaderBuilder_;
+      }
+
+      private com.google.protobuf.Any header_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> headerBuilder_;
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       * @return Whether the header field is set.
+       */
+      public boolean hasHeader() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       * @return The header.
+       */
+      public com.google.protobuf.Any getHeader() {
+        if (headerBuilder_ == null) {
+          return header_ == null ? com.google.protobuf.Any.getDefaultInstance() : header_;
+        } else {
+          return headerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      public Builder setHeader(com.google.protobuf.Any value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          header_ = value;
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      public Builder setHeader(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          header_ = builderForValue.build();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      public Builder mergeHeader(com.google.protobuf.Any value) {
+        if (headerBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            header_ != null &&
+            header_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getHeaderBuilder().mergeFrom(value);
+          } else {
+            header_ = value;
+          }
+        } else {
+          headerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      public Builder clearHeader() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
+          headerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      public com.google.protobuf.Any.Builder getHeaderBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getHeaderOrBuilder() {
+        if (headerBuilder_ != null) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          return header_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : header_;
+        }
+      }
+      /**
+       * <pre>
+       * We need to know block X to verify inclusion of transaction for block X
+       * </pre>
+       *
+       * <code>.google.protobuf.Any header = 2 [json_name = "header"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getHeader(),
+                  getParentForChildren(),
+                  isClean());
+          header_ = null;
+        }
+        return headerBuilder_;
+      }
+
+      private com.neutron.interchainqueries.TxProto.TxValue tx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.TxValue, com.neutron.interchainqueries.TxProto.TxValue.Builder, com.neutron.interchainqueries.TxProto.TxValueOrBuilder> txBuilder_;
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       * @return Whether the tx field is set.
+       */
+      public boolean hasTx() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       * @return The tx.
+       */
+      public com.neutron.interchainqueries.TxProto.TxValue getTx() {
+        if (txBuilder_ == null) {
+          return tx_ == null ? com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance() : tx_;
+        } else {
+          return txBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      public Builder setTx(com.neutron.interchainqueries.TxProto.TxValue value) {
+        if (txBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tx_ = value;
+        } else {
+          txBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      public Builder setTx(
+          com.neutron.interchainqueries.TxProto.TxValue.Builder builderForValue) {
+        if (txBuilder_ == null) {
+          tx_ = builderForValue.build();
+        } else {
+          txBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      public Builder mergeTx(com.neutron.interchainqueries.TxProto.TxValue value) {
+        if (txBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            tx_ != null &&
+            tx_ != com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance()) {
+            getTxBuilder().mergeFrom(value);
+          } else {
+            tx_ = value;
+          }
+        } else {
+          txBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      public Builder clearTx() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        tx_ = null;
+        if (txBuilder_ != null) {
+          txBuilder_.dispose();
+          txBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.TxValue.Builder getTxBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.TxValueOrBuilder getTxOrBuilder() {
+        if (txBuilder_ != null) {
+          return txBuilder_.getMessageOrBuilder();
+        } else {
+          return tx_ == null ?
+              com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance() : tx_;
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.TxValue tx = 3 [json_name = "tx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.TxValue, com.neutron.interchainqueries.TxProto.TxValue.Builder, com.neutron.interchainqueries.TxProto.TxValueOrBuilder> 
+          getTxFieldBuilder() {
+        if (txBuilder_ == null) {
+          txBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.interchainqueries.TxProto.TxValue, com.neutron.interchainqueries.TxProto.TxValue.Builder, com.neutron.interchainqueries.TxProto.TxValueOrBuilder>(
+                  getTx(),
+                  getParentForChildren(),
+                  isClean());
+          tx_ = null;
+        }
+        return txBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.Block)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.Block)
+    private static final com.neutron.interchainqueries.TxProto.Block DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.Block();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.Block getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Block>
+        PARSER = new com.google.protobuf.AbstractParser<Block>() {
+      @java.lang.Override
+      public Block parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Block> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Block> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.Block getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TxValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.TxValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    com.tendermint.abci.TypesProto.ResponseDeliverTx getResponse();
+    /**
+     * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+     */
+    com.tendermint.abci.TypesProto.ResponseDeliverTxOrBuilder getResponseOrBuilder();
+
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of response in block with height
+     * next_block_header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+     * @return Whether the deliveryProof field is set.
+     */
+    boolean hasDeliveryProof();
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of response in block with height
+     * next_block_header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+     * @return The deliveryProof.
+     */
+    com.tendermint.crypto.ProofProto.Proof getDeliveryProof();
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of response in block with height
+     * next_block_header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+     */
+    com.tendermint.crypto.ProofProto.ProofOrBuilder getDeliveryProofOrBuilder();
+
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of data in block with height
+     * header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+     * @return Whether the inclusionProof field is set.
+     */
+    boolean hasInclusionProof();
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of data in block with height
+     * header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+     * @return The inclusionProof.
+     */
+    com.tendermint.crypto.ProofProto.Proof getInclusionProof();
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of data in block with height
+     * header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+     */
+    com.tendermint.crypto.ProofProto.ProofOrBuilder getInclusionProofOrBuilder();
+
+    /**
+     * <pre>
+     * is body of the transaction
+     * </pre>
+     *
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.TxValue}
+   */
+  public static final class TxValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.TxValue)
+      TxValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TxValue.newBuilder() to construct.
+    private TxValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TxValue() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TxValue();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_TxValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_TxValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.TxValue.class, com.neutron.interchainqueries.TxProto.TxValue.Builder.class);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.tendermint.abci.TypesProto.ResponseDeliverTx response_;
+    /**
+     * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return response_ != null;
+    }
+    /**
+     * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.tendermint.abci.TypesProto.ResponseDeliverTx getResponse() {
+      return response_ == null ? com.tendermint.abci.TypesProto.ResponseDeliverTx.getDefaultInstance() : response_;
+    }
+    /**
+     * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+     */
+    @java.lang.Override
+    public com.tendermint.abci.TypesProto.ResponseDeliverTxOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.tendermint.abci.TypesProto.ResponseDeliverTx.getDefaultInstance() : response_;
+    }
+
+    public static final int DELIVERY_PROOF_FIELD_NUMBER = 2;
+    private com.tendermint.crypto.ProofProto.Proof deliveryProof_;
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of response in block with height
+     * next_block_header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+     * @return Whether the deliveryProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeliveryProof() {
+      return deliveryProof_ != null;
+    }
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of response in block with height
+     * next_block_header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+     * @return The deliveryProof.
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.Proof getDeliveryProof() {
+      return deliveryProof_ == null ? com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : deliveryProof_;
+    }
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of response in block with height
+     * next_block_header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.ProofOrBuilder getDeliveryProofOrBuilder() {
+      return deliveryProof_ == null ? com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : deliveryProof_;
+    }
+
+    public static final int INCLUSION_PROOF_FIELD_NUMBER = 3;
+    private com.tendermint.crypto.ProofProto.Proof inclusionProof_;
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of data in block with height
+     * header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+     * @return Whether the inclusionProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasInclusionProof() {
+      return inclusionProof_ != null;
+    }
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of data in block with height
+     * header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+     * @return The inclusionProof.
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.Proof getInclusionProof() {
+      return inclusionProof_ == null ? com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : inclusionProof_;
+    }
+    /**
+     * <pre>
+     * is the Merkle Proof which proves existence of data in block with height
+     * header.Height
+     * </pre>
+     *
+     * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+     */
+    @java.lang.Override
+    public com.tendermint.crypto.ProofProto.ProofOrBuilder getInclusionProofOrBuilder() {
+      return inclusionProof_ == null ? com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : inclusionProof_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * is body of the transaction
+     * </pre>
+     *
+     * <code>bytes data = 4 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (response_ != null) {
+        output.writeMessage(1, getResponse());
+      }
+      if (deliveryProof_ != null) {
+        output.writeMessage(2, getDeliveryProof());
+      }
+      if (inclusionProof_ != null) {
+        output.writeMessage(3, getInclusionProof());
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(4, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (response_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResponse());
+      }
+      if (deliveryProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeliveryProof());
+      }
+      if (inclusionProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getInclusionProof());
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.TxValue)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.TxValue other = (com.neutron.interchainqueries.TxProto.TxValue) obj;
+
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
+      if (hasDeliveryProof() != other.hasDeliveryProof()) return false;
+      if (hasDeliveryProof()) {
+        if (!getDeliveryProof()
+            .equals(other.getDeliveryProof())) return false;
+      }
+      if (hasInclusionProof() != other.hasInclusionProof()) return false;
+      if (hasInclusionProof()) {
+        if (!getInclusionProof()
+            .equals(other.getInclusionProof())) return false;
+      }
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
+      }
+      if (hasDeliveryProof()) {
+        hash = (37 * hash) + DELIVERY_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getDeliveryProof().hashCode();
+      }
+      if (hasInclusionProof()) {
+        hash = (37 * hash) + INCLUSION_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getInclusionProof().hashCode();
+      }
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.TxValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.TxValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.TxValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.TxValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.TxValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.TxValue)
+        com.neutron.interchainqueries.TxProto.TxValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_TxValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_TxValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.TxValue.class, com.neutron.interchainqueries.TxProto.TxValue.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.TxValue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        deliveryProof_ = null;
+        if (deliveryProofBuilder_ != null) {
+          deliveryProofBuilder_.dispose();
+          deliveryProofBuilder_ = null;
+        }
+        inclusionProof_ = null;
+        if (inclusionProofBuilder_ != null) {
+          inclusionProofBuilder_.dispose();
+          inclusionProofBuilder_ = null;
+        }
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_TxValue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.TxValue getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.TxValue build() {
+        com.neutron.interchainqueries.TxProto.TxValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.TxValue buildPartial() {
+        com.neutron.interchainqueries.TxProto.TxValue result = new com.neutron.interchainqueries.TxProto.TxValue(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.TxValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deliveryProof_ = deliveryProofBuilder_ == null
+              ? deliveryProof_
+              : deliveryProofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.inclusionProof_ = inclusionProofBuilder_ == null
+              ? inclusionProof_
+              : inclusionProofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.TxValue) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.TxValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.TxValue other) {
+        if (other == com.neutron.interchainqueries.TxProto.TxValue.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        if (other.hasDeliveryProof()) {
+          mergeDeliveryProof(other.getDeliveryProof());
+        }
+        if (other.hasInclusionProof()) {
+          mergeInclusionProof(other.getInclusionProof());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDeliveryProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getInclusionProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tendermint.abci.TypesProto.ResponseDeliverTx response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.abci.TypesProto.ResponseDeliverTx, com.tendermint.abci.TypesProto.ResponseDeliverTx.Builder, com.tendermint.abci.TypesProto.ResponseDeliverTxOrBuilder> responseBuilder_;
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       * @return The response.
+       */
+      public com.tendermint.abci.TypesProto.ResponseDeliverTx getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.tendermint.abci.TypesProto.ResponseDeliverTx.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      public Builder setResponse(com.tendermint.abci.TypesProto.ResponseDeliverTx value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      public Builder setResponse(
+          com.tendermint.abci.TypesProto.ResponseDeliverTx.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      public Builder mergeResponse(com.tendermint.abci.TypesProto.ResponseDeliverTx value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            response_ != null &&
+            response_ != com.tendermint.abci.TypesProto.ResponseDeliverTx.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      public com.tendermint.abci.TypesProto.ResponseDeliverTx.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      public com.tendermint.abci.TypesProto.ResponseDeliverTxOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.tendermint.abci.TypesProto.ResponseDeliverTx.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <code>.tendermint.abci.ResponseDeliverTx response = 1 [json_name = "response"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.abci.TypesProto.ResponseDeliverTx, com.tendermint.abci.TypesProto.ResponseDeliverTx.Builder, com.tendermint.abci.TypesProto.ResponseDeliverTxOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tendermint.abci.TypesProto.ResponseDeliverTx, com.tendermint.abci.TypesProto.ResponseDeliverTx.Builder, com.tendermint.abci.TypesProto.ResponseDeliverTxOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+
+      private com.tendermint.crypto.ProofProto.Proof deliveryProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.Proof, com.tendermint.crypto.ProofProto.Proof.Builder, com.tendermint.crypto.ProofProto.ProofOrBuilder> deliveryProofBuilder_;
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       * @return Whether the deliveryProof field is set.
+       */
+      public boolean hasDeliveryProof() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       * @return The deliveryProof.
+       */
+      public com.tendermint.crypto.ProofProto.Proof getDeliveryProof() {
+        if (deliveryProofBuilder_ == null) {
+          return deliveryProof_ == null ? com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : deliveryProof_;
+        } else {
+          return deliveryProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      public Builder setDeliveryProof(com.tendermint.crypto.ProofProto.Proof value) {
+        if (deliveryProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deliveryProof_ = value;
+        } else {
+          deliveryProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      public Builder setDeliveryProof(
+          com.tendermint.crypto.ProofProto.Proof.Builder builderForValue) {
+        if (deliveryProofBuilder_ == null) {
+          deliveryProof_ = builderForValue.build();
+        } else {
+          deliveryProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      public Builder mergeDeliveryProof(com.tendermint.crypto.ProofProto.Proof value) {
+        if (deliveryProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            deliveryProof_ != null &&
+            deliveryProof_ != com.tendermint.crypto.ProofProto.Proof.getDefaultInstance()) {
+            getDeliveryProofBuilder().mergeFrom(value);
+          } else {
+            deliveryProof_ = value;
+          }
+        } else {
+          deliveryProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      public Builder clearDeliveryProof() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        deliveryProof_ = null;
+        if (deliveryProofBuilder_ != null) {
+          deliveryProofBuilder_.dispose();
+          deliveryProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.Proof.Builder getDeliveryProofBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDeliveryProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.ProofOrBuilder getDeliveryProofOrBuilder() {
+        if (deliveryProofBuilder_ != null) {
+          return deliveryProofBuilder_.getMessageOrBuilder();
+        } else {
+          return deliveryProof_ == null ?
+              com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : deliveryProof_;
+        }
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of response in block with height
+       * next_block_header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof delivery_proof = 2 [json_name = "deliveryProof"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.Proof, com.tendermint.crypto.ProofProto.Proof.Builder, com.tendermint.crypto.ProofProto.ProofOrBuilder> 
+          getDeliveryProofFieldBuilder() {
+        if (deliveryProofBuilder_ == null) {
+          deliveryProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tendermint.crypto.ProofProto.Proof, com.tendermint.crypto.ProofProto.Proof.Builder, com.tendermint.crypto.ProofProto.ProofOrBuilder>(
+                  getDeliveryProof(),
+                  getParentForChildren(),
+                  isClean());
+          deliveryProof_ = null;
+        }
+        return deliveryProofBuilder_;
+      }
+
+      private com.tendermint.crypto.ProofProto.Proof inclusionProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.Proof, com.tendermint.crypto.ProofProto.Proof.Builder, com.tendermint.crypto.ProofProto.ProofOrBuilder> inclusionProofBuilder_;
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       * @return Whether the inclusionProof field is set.
+       */
+      public boolean hasInclusionProof() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       * @return The inclusionProof.
+       */
+      public com.tendermint.crypto.ProofProto.Proof getInclusionProof() {
+        if (inclusionProofBuilder_ == null) {
+          return inclusionProof_ == null ? com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : inclusionProof_;
+        } else {
+          return inclusionProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      public Builder setInclusionProof(com.tendermint.crypto.ProofProto.Proof value) {
+        if (inclusionProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inclusionProof_ = value;
+        } else {
+          inclusionProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      public Builder setInclusionProof(
+          com.tendermint.crypto.ProofProto.Proof.Builder builderForValue) {
+        if (inclusionProofBuilder_ == null) {
+          inclusionProof_ = builderForValue.build();
+        } else {
+          inclusionProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      public Builder mergeInclusionProof(com.tendermint.crypto.ProofProto.Proof value) {
+        if (inclusionProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            inclusionProof_ != null &&
+            inclusionProof_ != com.tendermint.crypto.ProofProto.Proof.getDefaultInstance()) {
+            getInclusionProofBuilder().mergeFrom(value);
+          } else {
+            inclusionProof_ = value;
+          }
+        } else {
+          inclusionProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      public Builder clearInclusionProof() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        inclusionProof_ = null;
+        if (inclusionProofBuilder_ != null) {
+          inclusionProofBuilder_.dispose();
+          inclusionProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.Proof.Builder getInclusionProofBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getInclusionProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      public com.tendermint.crypto.ProofProto.ProofOrBuilder getInclusionProofOrBuilder() {
+        if (inclusionProofBuilder_ != null) {
+          return inclusionProofBuilder_.getMessageOrBuilder();
+        } else {
+          return inclusionProof_ == null ?
+              com.tendermint.crypto.ProofProto.Proof.getDefaultInstance() : inclusionProof_;
+        }
+      }
+      /**
+       * <pre>
+       * is the Merkle Proof which proves existence of data in block with height
+       * header.Height
+       * </pre>
+       *
+       * <code>.tendermint.crypto.Proof inclusion_proof = 3 [json_name = "inclusionProof"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.crypto.ProofProto.Proof, com.tendermint.crypto.ProofProto.Proof.Builder, com.tendermint.crypto.ProofProto.ProofOrBuilder> 
+          getInclusionProofFieldBuilder() {
+        if (inclusionProofBuilder_ == null) {
+          inclusionProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tendermint.crypto.ProofProto.Proof, com.tendermint.crypto.ProofProto.Proof.Builder, com.tendermint.crypto.ProofProto.ProofOrBuilder>(
+                  getInclusionProof(),
+                  getParentForChildren(),
+                  isClean());
+          inclusionProof_ = null;
+        }
+        return inclusionProofBuilder_;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * is body of the transaction
+       * </pre>
+       *
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <pre>
+       * is body of the transaction
+       * </pre>
+       *
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is body of the transaction
+       * </pre>
+       *
+       * <code>bytes data = 4 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.TxValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.TxValue)
+    private static final com.neutron.interchainqueries.TxProto.TxValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.TxValue();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.TxValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TxValue>
+        PARSER = new com.google.protobuf.AbstractParser<TxValue>() {
+      @java.lang.Override
+      public TxValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TxValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TxValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.TxValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSubmitQueryResultResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgSubmitQueryResultResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgSubmitQueryResultResponse}
+   */
+  public static final class MsgSubmitQueryResultResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgSubmitQueryResultResponse)
+      MsgSubmitQueryResultResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSubmitQueryResultResponse.newBuilder() to construct.
+    private MsgSubmitQueryResultResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSubmitQueryResultResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSubmitQueryResultResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.class, com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse other = (com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgSubmitQueryResultResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgSubmitQueryResultResponse)
+        com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.class, com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse build() {
+        com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse result = new com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgSubmitQueryResultResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgSubmitQueryResultResponse)
+    private static final com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSubmitQueryResultResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSubmitQueryResultResponse>() {
+      @java.lang.Override
+      public MsgSubmitQueryResultResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSubmitQueryResultResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSubmitQueryResultResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgSubmitQueryResultResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveInterchainQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgRemoveInterchainQueryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    long getQueryId();
+
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgRemoveInterchainQueryRequest}
+   */
+  public static final class MsgRemoveInterchainQueryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgRemoveInterchainQueryRequest)
+      MsgRemoveInterchainQueryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveInterchainQueryRequest.newBuilder() to construct.
+    private MsgRemoveInterchainQueryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveInterchainQueryRequest() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveInterchainQueryRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.class, com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.Builder.class);
+    }
+
+    public static final int QUERY_ID_FIELD_NUMBER = 1;
+    private long queryId_ = 0L;
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    @java.lang.Override
+    public long getQueryId() {
+      return queryId_;
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 2 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (queryId_ != 0L) {
+        output.writeUInt64(1, queryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (queryId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, queryId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest other = (com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest) obj;
+
+      if (getQueryId()
+          != other.getQueryId()) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getQueryId());
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgRemoveInterchainQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgRemoveInterchainQueryRequest)
+        com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.class, com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryId_ = 0L;
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest build() {
+        com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest result = new com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryId_ = queryId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest.getDefaultInstance()) return this;
+        if (other.getQueryId() != 0L) {
+          setQueryId(other.getQueryId());
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                queryId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long queryId_ ;
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return The queryId.
+       */
+      @java.lang.Override
+      public long getQueryId() {
+        return queryId_;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @param value The queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryId(long value) {
+
+        queryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 2 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgRemoveInterchainQueryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgRemoveInterchainQueryRequest)
+    private static final com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveInterchainQueryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveInterchainQueryRequest>() {
+      @java.lang.Override
+      public MsgRemoveInterchainQueryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveInterchainQueryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveInterchainQueryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveInterchainQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgRemoveInterchainQueryResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgRemoveInterchainQueryResponse}
+   */
+  public static final class MsgRemoveInterchainQueryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgRemoveInterchainQueryResponse)
+      MsgRemoveInterchainQueryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveInterchainQueryResponse.newBuilder() to construct.
+    private MsgRemoveInterchainQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveInterchainQueryResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveInterchainQueryResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.class, com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse other = (com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgRemoveInterchainQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgRemoveInterchainQueryResponse)
+        com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.class, com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse build() {
+        com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse result = new com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgRemoveInterchainQueryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgRemoveInterchainQueryResponse)
+    private static final com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveInterchainQueryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveInterchainQueryResponse>() {
+      @java.lang.Override
+      public MsgRemoveInterchainQueryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveInterchainQueryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveInterchainQueryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgRemoveInterchainQueryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateInterchainQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgUpdateInterchainQueryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    long getQueryId();
+
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> 
+        getNewKeysList();
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.KVKey getNewKeys(int index);
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    int getNewKeysCount();
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    java.util.List<? extends com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+        getNewKeysOrBuilderList();
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder getNewKeysOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 new_update_period = 3 [json_name = "newUpdatePeriod"];</code>
+     * @return The newUpdatePeriod.
+     */
+    long getNewUpdatePeriod();
+
+    /**
+     * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+     * @return The newTransactionsFilter.
+     */
+    java.lang.String getNewTransactionsFilter();
+    /**
+     * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+     * @return The bytes for newTransactionsFilter.
+     */
+    com.google.protobuf.ByteString
+        getNewTransactionsFilterBytes();
+
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 5 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 5 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgUpdateInterchainQueryRequest}
+   */
+  public static final class MsgUpdateInterchainQueryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgUpdateInterchainQueryRequest)
+      MsgUpdateInterchainQueryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateInterchainQueryRequest.newBuilder() to construct.
+    private MsgUpdateInterchainQueryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateInterchainQueryRequest() {
+      newKeys_ = java.util.Collections.emptyList();
+      newTransactionsFilter_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateInterchainQueryRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.class, com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.Builder.class);
+    }
+
+    public static final int QUERY_ID_FIELD_NUMBER = 1;
+    private long queryId_ = 0L;
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    @java.lang.Override
+    public long getQueryId() {
+      return queryId_;
+    }
+
+    public static final int NEW_KEYS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> newKeys_;
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> getNewKeysList() {
+      return newKeys_;
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+        getNewKeysOrBuilderList() {
+      return newKeys_;
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    @java.lang.Override
+    public int getNewKeysCount() {
+      return newKeys_.size();
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.KVKey getNewKeys(int index) {
+      return newKeys_.get(index);
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder getNewKeysOrBuilder(
+        int index) {
+      return newKeys_.get(index);
+    }
+
+    public static final int NEW_UPDATE_PERIOD_FIELD_NUMBER = 3;
+    private long newUpdatePeriod_ = 0L;
+    /**
+     * <code>uint64 new_update_period = 3 [json_name = "newUpdatePeriod"];</code>
+     * @return The newUpdatePeriod.
+     */
+    @java.lang.Override
+    public long getNewUpdatePeriod() {
+      return newUpdatePeriod_;
+    }
+
+    public static final int NEW_TRANSACTIONS_FILTER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newTransactionsFilter_ = "";
+    /**
+     * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+     * @return The newTransactionsFilter.
+     */
+    @java.lang.Override
+    public java.lang.String getNewTransactionsFilter() {
+      java.lang.Object ref = newTransactionsFilter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newTransactionsFilter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+     * @return The bytes for newTransactionsFilter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewTransactionsFilterBytes() {
+      java.lang.Object ref = newTransactionsFilter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newTransactionsFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 5 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * is the signer of the message
+     * </pre>
+     *
+     * <code>string sender = 5 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (queryId_ != 0L) {
+        output.writeUInt64(1, queryId_);
+      }
+      for (int i = 0; i < newKeys_.size(); i++) {
+        output.writeMessage(2, newKeys_.get(i));
+      }
+      if (newUpdatePeriod_ != 0L) {
+        output.writeUInt64(3, newUpdatePeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newTransactionsFilter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newTransactionsFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (queryId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, queryId_);
+      }
+      for (int i = 0; i < newKeys_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, newKeys_.get(i));
+      }
+      if (newUpdatePeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, newUpdatePeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newTransactionsFilter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newTransactionsFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest other = (com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest) obj;
+
+      if (getQueryId()
+          != other.getQueryId()) return false;
+      if (!getNewKeysList()
+          .equals(other.getNewKeysList())) return false;
+      if (getNewUpdatePeriod()
+          != other.getNewUpdatePeriod()) return false;
+      if (!getNewTransactionsFilter()
+          .equals(other.getNewTransactionsFilter())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getQueryId());
+      if (getNewKeysCount() > 0) {
+        hash = (37 * hash) + NEW_KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + getNewKeysList().hashCode();
+      }
+      hash = (37 * hash) + NEW_UPDATE_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNewUpdatePeriod());
+      hash = (37 * hash) + NEW_TRANSACTIONS_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getNewTransactionsFilter().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgUpdateInterchainQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgUpdateInterchainQueryRequest)
+        com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.class, com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryId_ = 0L;
+        if (newKeysBuilder_ == null) {
+          newKeys_ = java.util.Collections.emptyList();
+        } else {
+          newKeys_ = null;
+          newKeysBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        newUpdatePeriod_ = 0L;
+        newTransactionsFilter_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest build() {
+        com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest result = new com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest result) {
+        if (newKeysBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            newKeys_ = java.util.Collections.unmodifiableList(newKeys_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.newKeys_ = newKeys_;
+        } else {
+          result.newKeys_ = newKeysBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryId_ = queryId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newUpdatePeriod_ = newUpdatePeriod_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newTransactionsFilter_ = newTransactionsFilter_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest.getDefaultInstance()) return this;
+        if (other.getQueryId() != 0L) {
+          setQueryId(other.getQueryId());
+        }
+        if (newKeysBuilder_ == null) {
+          if (!other.newKeys_.isEmpty()) {
+            if (newKeys_.isEmpty()) {
+              newKeys_ = other.newKeys_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureNewKeysIsMutable();
+              newKeys_.addAll(other.newKeys_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.newKeys_.isEmpty()) {
+            if (newKeysBuilder_.isEmpty()) {
+              newKeysBuilder_.dispose();
+              newKeysBuilder_ = null;
+              newKeys_ = other.newKeys_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              newKeysBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNewKeysFieldBuilder() : null;
+            } else {
+              newKeysBuilder_.addAllMessages(other.newKeys_);
+            }
+          }
+        }
+        if (other.getNewUpdatePeriod() != 0L) {
+          setNewUpdatePeriod(other.getNewUpdatePeriod());
+        }
+        if (!other.getNewTransactionsFilter().isEmpty()) {
+          newTransactionsFilter_ = other.newTransactionsFilter_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                queryId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.neutron.interchainqueries.GenesisProto.KVKey m =
+                    input.readMessage(
+                        com.neutron.interchainqueries.GenesisProto.KVKey.parser(),
+                        extensionRegistry);
+                if (newKeysBuilder_ == null) {
+                  ensureNewKeysIsMutable();
+                  newKeys_.add(m);
+                } else {
+                  newKeysBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 24: {
+                newUpdatePeriod_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                newTransactionsFilter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long queryId_ ;
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return The queryId.
+       */
+      @java.lang.Override
+      public long getQueryId() {
+        return queryId_;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @param value The queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryId(long value) {
+
+        queryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> newKeys_ =
+        java.util.Collections.emptyList();
+      private void ensureNewKeysIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          newKeys_ = new java.util.ArrayList<com.neutron.interchainqueries.GenesisProto.KVKey>(newKeys_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.KVKey, com.neutron.interchainqueries.GenesisProto.KVKey.Builder, com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> newKeysBuilder_;
+
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey> getNewKeysList() {
+        if (newKeysBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(newKeys_);
+        } else {
+          return newKeysBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public int getNewKeysCount() {
+        if (newKeysBuilder_ == null) {
+          return newKeys_.size();
+        } else {
+          return newKeysBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey getNewKeys(int index) {
+        if (newKeysBuilder_ == null) {
+          return newKeys_.get(index);
+        } else {
+          return newKeysBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder setNewKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey value) {
+        if (newKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewKeysIsMutable();
+          newKeys_.set(index, value);
+          onChanged();
+        } else {
+          newKeysBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder setNewKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey.Builder builderForValue) {
+        if (newKeysBuilder_ == null) {
+          ensureNewKeysIsMutable();
+          newKeys_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          newKeysBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder addNewKeys(com.neutron.interchainqueries.GenesisProto.KVKey value) {
+        if (newKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewKeysIsMutable();
+          newKeys_.add(value);
+          onChanged();
+        } else {
+          newKeysBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder addNewKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey value) {
+        if (newKeysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewKeysIsMutable();
+          newKeys_.add(index, value);
+          onChanged();
+        } else {
+          newKeysBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder addNewKeys(
+          com.neutron.interchainqueries.GenesisProto.KVKey.Builder builderForValue) {
+        if (newKeysBuilder_ == null) {
+          ensureNewKeysIsMutable();
+          newKeys_.add(builderForValue.build());
+          onChanged();
+        } else {
+          newKeysBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder addNewKeys(
+          int index, com.neutron.interchainqueries.GenesisProto.KVKey.Builder builderForValue) {
+        if (newKeysBuilder_ == null) {
+          ensureNewKeysIsMutable();
+          newKeys_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          newKeysBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder addAllNewKeys(
+          java.lang.Iterable<? extends com.neutron.interchainqueries.GenesisProto.KVKey> values) {
+        if (newKeysBuilder_ == null) {
+          ensureNewKeysIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, newKeys_);
+          onChanged();
+        } else {
+          newKeysBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder clearNewKeys() {
+        if (newKeysBuilder_ == null) {
+          newKeys_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          newKeysBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public Builder removeNewKeys(int index) {
+        if (newKeysBuilder_ == null) {
+          ensureNewKeysIsMutable();
+          newKeys_.remove(index);
+          onChanged();
+        } else {
+          newKeysBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey.Builder getNewKeysBuilder(
+          int index) {
+        return getNewKeysFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder getNewKeysOrBuilder(
+          int index) {
+        if (newKeysBuilder_ == null) {
+          return newKeys_.get(index);  } else {
+          return newKeysBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public java.util.List<? extends com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+           getNewKeysOrBuilderList() {
+        if (newKeysBuilder_ != null) {
+          return newKeysBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(newKeys_);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey.Builder addNewKeysBuilder() {
+        return getNewKeysFieldBuilder().addBuilder(
+            com.neutron.interchainqueries.GenesisProto.KVKey.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.KVKey.Builder addNewKeysBuilder(
+          int index) {
+        return getNewKeysFieldBuilder().addBuilder(
+            index, com.neutron.interchainqueries.GenesisProto.KVKey.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.KVKey new_keys = 2 [json_name = "newKeys"];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.GenesisProto.KVKey.Builder> 
+           getNewKeysBuilderList() {
+        return getNewKeysFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.KVKey, com.neutron.interchainqueries.GenesisProto.KVKey.Builder, com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder> 
+          getNewKeysFieldBuilder() {
+        if (newKeysBuilder_ == null) {
+          newKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.neutron.interchainqueries.GenesisProto.KVKey, com.neutron.interchainqueries.GenesisProto.KVKey.Builder, com.neutron.interchainqueries.GenesisProto.KVKeyOrBuilder>(
+                  newKeys_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          newKeys_ = null;
+        }
+        return newKeysBuilder_;
+      }
+
+      private long newUpdatePeriod_ ;
+      /**
+       * <code>uint64 new_update_period = 3 [json_name = "newUpdatePeriod"];</code>
+       * @return The newUpdatePeriod.
+       */
+      @java.lang.Override
+      public long getNewUpdatePeriod() {
+        return newUpdatePeriod_;
+      }
+      /**
+       * <code>uint64 new_update_period = 3 [json_name = "newUpdatePeriod"];</code>
+       * @param value The newUpdatePeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewUpdatePeriod(long value) {
+
+        newUpdatePeriod_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 new_update_period = 3 [json_name = "newUpdatePeriod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewUpdatePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        newUpdatePeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newTransactionsFilter_ = "";
+      /**
+       * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+       * @return The newTransactionsFilter.
+       */
+      public java.lang.String getNewTransactionsFilter() {
+        java.lang.Object ref = newTransactionsFilter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newTransactionsFilter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+       * @return The bytes for newTransactionsFilter.
+       */
+      public com.google.protobuf.ByteString
+          getNewTransactionsFilterBytes() {
+        java.lang.Object ref = newTransactionsFilter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newTransactionsFilter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+       * @param value The newTransactionsFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewTransactionsFilter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newTransactionsFilter_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewTransactionsFilter() {
+        newTransactionsFilter_ = getDefaultInstance().getNewTransactionsFilter();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_transactions_filter = 4 [json_name = "newTransactionsFilter"];</code>
+       * @param value The bytes for newTransactionsFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewTransactionsFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newTransactionsFilter_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 5 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 5 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 5 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 5 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * is the signer of the message
+       * </pre>
+       *
+       * <code>string sender = 5 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgUpdateInterchainQueryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgUpdateInterchainQueryRequest)
+    private static final com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateInterchainQueryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateInterchainQueryRequest>() {
+      @java.lang.Override
+      public MsgUpdateInterchainQueryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateInterchainQueryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateInterchainQueryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateInterchainQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.MsgUpdateInterchainQueryResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.MsgUpdateInterchainQueryResponse}
+   */
+  public static final class MsgUpdateInterchainQueryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.MsgUpdateInterchainQueryResponse)
+      MsgUpdateInterchainQueryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateInterchainQueryResponse.newBuilder() to construct.
+    private MsgUpdateInterchainQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateInterchainQueryResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateInterchainQueryResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.class, com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse other = (com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.MsgUpdateInterchainQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.MsgUpdateInterchainQueryResponse)
+        com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.class, com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.TxProto.internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse build() {
+        com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse buildPartial() {
+        com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse result = new com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse) {
+          return mergeFrom((com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse other) {
+        if (other == com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.MsgUpdateInterchainQueryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.MsgUpdateInterchainQueryResponse)
+    private static final com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse();
+    }
+
+    public static com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateInterchainQueryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateInterchainQueryResponse>() {
+      @java.lang.Override
+      public MsgUpdateInterchainQueryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateInterchainQueryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateInterchainQueryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.MsgUpdateInterchainQueryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgRegisterInterchainQuery_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgRegisterInterchainQueryResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgSubmitQueryResult_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgSubmitQueryResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryResult_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_StorageValue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_StorageValue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_Block_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_Block_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_TxValue_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_TxValue_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgSubmitQueryResultResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgRemoveInterchainQueryResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_MsgUpdateInterchainQueryResponse_fieldAccessorTable;
 
@@ -145,13 +11118,13 @@ public final class TxProto {
       "\022:.neutron.interchainqueries.MsgUpdateIn" +
       "terchainQueryRequest\032;.neutron.interchai" +
       "nqueries.MsgUpdateInterchainQueryRespons" +
-      "eB\347\001\n\035com.neutron.interchainqueriesB\007TxP" +
-      "rotoP\001Z8github.com/neutron-org/neutron/x" +
-      "/interchainqueries/types\242\002\003NIX\252\002\031Neutron" +
-      ".Interchainqueries\312\002\031Neutron\\Interchainq" +
-      "ueries\342\002%Neutron\\Interchainqueries\\GPBMe" +
-      "tadata\352\002\032Neutron::Interchainqueriesb\006pro" +
-      "to3"
+      "eB\345\001\n\035com.neutron.interchainqueriesB\007TxP" +
+      "rotoZ8github.com/neutron-org/neutron/x/i" +
+      "nterchainqueries/types\242\002\003NIX\252\002\031Neutron.I" +
+      "nterchainqueries\312\002\031Neutron\\Interchainque" +
+      "ries\342\002%Neutron\\Interchainqueries\\GPBMeta" +
+      "data\352\002\032Neutron::Interchainqueriesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

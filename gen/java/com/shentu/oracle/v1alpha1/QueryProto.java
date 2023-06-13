@@ -14,84 +14,10003 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryOperatorRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryOperatorRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorRequest}
+   */
+  public static final class QueryOperatorRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryOperatorRequest)
+      QueryOperatorRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOperatorRequest.newBuilder() to construct.
+    private QueryOperatorRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOperatorRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOperatorRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryOperatorRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryOperatorRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryOperatorRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOperatorRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOperatorRequest>() {
+      @java.lang.Override
+      public QueryOperatorRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOperatorRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOperatorRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOperatorResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryOperatorResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+     * @return Whether the operator field is set.
+     */
+    boolean hasOperator();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+     * @return The operator.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Operator getOperator();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorResponse}
+   */
+  public static final class QueryOperatorResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryOperatorResponse)
+      QueryOperatorResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOperatorResponse.newBuilder() to construct.
+    private QueryOperatorResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOperatorResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOperatorResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.Builder.class);
+    }
+
+    public static final int OPERATOR_FIELD_NUMBER = 1;
+    private com.shentu.oracle.v1alpha1.OracleProto.Operator operator_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+     * @return Whether the operator field is set.
+     */
+    @java.lang.Override
+    public boolean hasOperator() {
+      return operator_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+     * @return The operator.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Operator getOperator() {
+      return operator_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance() : operator_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorOrBuilder() {
+      return operator_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance() : operator_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (operator_ != null) {
+        output.writeMessage(1, getOperator());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (operator_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOperator());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse) obj;
+
+      if (hasOperator() != other.hasOperator()) return false;
+      if (hasOperator()) {
+        if (!getOperator()
+            .equals(other.getOperator())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOperator()) {
+        hash = (37 * hash) + OPERATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getOperator().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryOperatorResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        operator_ = null;
+        if (operatorBuilder_ != null) {
+          operatorBuilder_.dispose();
+          operatorBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.operator_ = operatorBuilder_ == null
+              ? operator_
+              : operatorBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse.getDefaultInstance()) return this;
+        if (other.hasOperator()) {
+          mergeOperator(other.getOperator());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOperatorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.oracle.v1alpha1.OracleProto.Operator operator_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> operatorBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       * @return Whether the operator field is set.
+       */
+      public boolean hasOperator() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       * @return The operator.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator getOperator() {
+        if (operatorBuilder_ == null) {
+          return operator_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance() : operator_;
+        } else {
+          return operatorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOperator(com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          operator_ = value;
+        } else {
+          operatorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOperator(
+          com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorBuilder_ == null) {
+          operator_ = builderForValue.build();
+        } else {
+          operatorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOperator(com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            operator_ != null &&
+            operator_ != com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance()) {
+            getOperatorBuilder().mergeFrom(value);
+          } else {
+            operator_ = value;
+          }
+        } else {
+          operatorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOperator() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        operator_ = null;
+        if (operatorBuilder_ != null) {
+          operatorBuilder_.dispose();
+          operatorBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder getOperatorBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOperatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorOrBuilder() {
+        if (operatorBuilder_ != null) {
+          return operatorBuilder_.getMessageOrBuilder();
+        } else {
+          return operator_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance() : operator_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Operator operator = 1 [json_name = "operator", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+          getOperatorFieldBuilder() {
+        if (operatorBuilder_ == null) {
+          operatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder>(
+                  getOperator(),
+                  getParentForChildren(),
+                  isClean());
+          operator_ = null;
+        }
+        return operatorBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryOperatorResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryOperatorResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOperatorResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOperatorResponse>() {
+      @java.lang.Override
+      public QueryOperatorResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOperatorResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOperatorResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOperatorsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryOperatorsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorsRequest}
+   */
+  public static final class QueryOperatorsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryOperatorsRequest)
+      QueryOperatorsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOperatorsRequest.newBuilder() to construct.
+    private QueryOperatorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOperatorsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOperatorsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryOperatorsRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryOperatorsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryOperatorsRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOperatorsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOperatorsRequest>() {
+      @java.lang.Override
+      public QueryOperatorsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOperatorsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOperatorsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOperatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryOperatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> 
+        getOperatorsList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Operator getOperators(int index);
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    int getOperatorsCount();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+        getOperatorsOrBuilderList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorsResponse}
+   */
+  public static final class QueryOperatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryOperatorsResponse)
+      QueryOperatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOperatorsResponse.newBuilder() to construct.
+    private QueryOperatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOperatorsResponse() {
+      operators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOperatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.Builder.class);
+    }
+
+    public static final int OPERATORS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> operators_;
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> getOperatorsList() {
+      return operators_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+        getOperatorsOrBuilderList() {
+      return operators_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOperatorsCount() {
+      return operators_.size();
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Operator getOperators(int index) {
+      return operators_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorsOrBuilder(
+        int index) {
+      return operators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < operators_.size(); i++) {
+        output.writeMessage(1, operators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < operators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, operators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse) obj;
+
+      if (!getOperatorsList()
+          .equals(other.getOperatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOperatorsCount() > 0) {
+        hash = (37 * hash) + OPERATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryOperatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryOperatorsResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (operatorsBuilder_ == null) {
+          operators_ = java.util.Collections.emptyList();
+        } else {
+          operators_ = null;
+          operatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse result) {
+        if (operatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            operators_ = java.util.Collections.unmodifiableList(operators_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.operators_ = operators_;
+        } else {
+          result.operators_ = operatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse.getDefaultInstance()) return this;
+        if (operatorsBuilder_ == null) {
+          if (!other.operators_.isEmpty()) {
+            if (operators_.isEmpty()) {
+              operators_ = other.operators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOperatorsIsMutable();
+              operators_.addAll(other.operators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.operators_.isEmpty()) {
+            if (operatorsBuilder_.isEmpty()) {
+              operatorsBuilder_.dispose();
+              operatorsBuilder_ = null;
+              operators_ = other.operators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              operatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOperatorsFieldBuilder() : null;
+            } else {
+              operatorsBuilder_.addAllMessages(other.operators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.oracle.v1alpha1.OracleProto.Operator m =
+                    input.readMessage(
+                        com.shentu.oracle.v1alpha1.OracleProto.Operator.parser(),
+                        extensionRegistry);
+                if (operatorsBuilder_ == null) {
+                  ensureOperatorsIsMutable();
+                  operators_.add(m);
+                } else {
+                  operatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> operators_ =
+        java.util.Collections.emptyList();
+      private void ensureOperatorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          operators_ = new java.util.ArrayList<com.shentu.oracle.v1alpha1.OracleProto.Operator>(operators_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> operatorsBuilder_;
+
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator> getOperatorsList() {
+        if (operatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(operators_);
+        } else {
+          return operatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOperatorsCount() {
+        if (operatorsBuilder_ == null) {
+          return operators_.size();
+        } else {
+          return operatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator getOperators(int index) {
+        if (operatorsBuilder_ == null) {
+          return operators_.get(index);
+        } else {
+          return operatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperatorsIsMutable();
+          operators_.set(index, value);
+          onChanged();
+        } else {
+          operatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          operatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOperators(com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperatorsIsMutable();
+          operators_.add(value);
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator value) {
+        if (operatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperatorsIsMutable();
+          operators_.add(index, value);
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOperators(
+          com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOperators(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder builderForValue) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          operatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOperators(
+          java.lang.Iterable<? extends com.shentu.oracle.v1alpha1.OracleProto.Operator> values) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, operators_);
+          onChanged();
+        } else {
+          operatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOperators() {
+        if (operatorsBuilder_ == null) {
+          operators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          operatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOperators(int index) {
+        if (operatorsBuilder_ == null) {
+          ensureOperatorsIsMutable();
+          operators_.remove(index);
+          onChanged();
+        } else {
+          operatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder getOperatorsBuilder(
+          int index) {
+        return getOperatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder getOperatorsOrBuilder(
+          int index) {
+        if (operatorsBuilder_ == null) {
+          return operators_.get(index);  } else {
+          return operatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+           getOperatorsOrBuilderList() {
+        if (operatorsBuilder_ != null) {
+          return operatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(operators_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder addOperatorsBuilder() {
+        return getOperatorsFieldBuilder().addBuilder(
+            com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder addOperatorsBuilder(
+          int index) {
+        return getOperatorsFieldBuilder().addBuilder(
+            index, com.shentu.oracle.v1alpha1.OracleProto.Operator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Operator operators = 1 [json_name = "operators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder> 
+           getOperatorsBuilderList() {
+        return getOperatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder> 
+          getOperatorsFieldBuilder() {
+        if (operatorsBuilder_ == null) {
+          operatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Operator, com.shentu.oracle.v1alpha1.OracleProto.Operator.Builder, com.shentu.oracle.v1alpha1.OracleProto.OperatorOrBuilder>(
+                  operators_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          operators_ = null;
+        }
+        return operatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryOperatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryOperatorsResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOperatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOperatorsResponse>() {
+      @java.lang.Override
+      public QueryOperatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOperatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOperatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryOperatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWithdrawsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryWithdrawsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryWithdrawsRequest}
+   */
+  public static final class QueryWithdrawsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryWithdrawsRequest)
+      QueryWithdrawsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWithdrawsRequest.newBuilder() to construct.
+    private QueryWithdrawsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWithdrawsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWithdrawsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryWithdrawsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryWithdrawsRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryWithdrawsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryWithdrawsRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWithdrawsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWithdrawsRequest>() {
+      @java.lang.Override
+      public QueryWithdrawsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWithdrawsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWithdrawsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWithdrawsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryWithdrawsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> 
+        getWithdrawsList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Withdraw getWithdraws(int index);
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    int getWithdrawsCount();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+        getWithdrawsOrBuilderList();
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder getWithdrawsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryWithdrawsResponse}
+   */
+  public static final class QueryWithdrawsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryWithdrawsResponse)
+      QueryWithdrawsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWithdrawsResponse.newBuilder() to construct.
+    private QueryWithdrawsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWithdrawsResponse() {
+      withdraws_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWithdrawsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.Builder.class);
+    }
+
+    public static final int WITHDRAWS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> withdraws_;
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> getWithdrawsList() {
+      return withdraws_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+        getWithdrawsOrBuilderList() {
+      return withdraws_;
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getWithdrawsCount() {
+      return withdraws_.size();
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Withdraw getWithdraws(int index) {
+      return withdraws_.get(index);
+    }
+    /**
+     * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder getWithdrawsOrBuilder(
+        int index) {
+      return withdraws_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < withdraws_.size(); i++) {
+        output.writeMessage(1, withdraws_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < withdraws_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, withdraws_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse) obj;
+
+      if (!getWithdrawsList()
+          .equals(other.getWithdrawsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getWithdrawsCount() > 0) {
+        hash = (37 * hash) + WITHDRAWS_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryWithdrawsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryWithdrawsResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (withdrawsBuilder_ == null) {
+          withdraws_ = java.util.Collections.emptyList();
+        } else {
+          withdraws_ = null;
+          withdrawsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse result) {
+        if (withdrawsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            withdraws_ = java.util.Collections.unmodifiableList(withdraws_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.withdraws_ = withdraws_;
+        } else {
+          result.withdraws_ = withdrawsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse.getDefaultInstance()) return this;
+        if (withdrawsBuilder_ == null) {
+          if (!other.withdraws_.isEmpty()) {
+            if (withdraws_.isEmpty()) {
+              withdraws_ = other.withdraws_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureWithdrawsIsMutable();
+              withdraws_.addAll(other.withdraws_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.withdraws_.isEmpty()) {
+            if (withdrawsBuilder_.isEmpty()) {
+              withdrawsBuilder_.dispose();
+              withdrawsBuilder_ = null;
+              withdraws_ = other.withdraws_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              withdrawsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWithdrawsFieldBuilder() : null;
+            } else {
+              withdrawsBuilder_.addAllMessages(other.withdraws_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.shentu.oracle.v1alpha1.OracleProto.Withdraw m =
+                    input.readMessage(
+                        com.shentu.oracle.v1alpha1.OracleProto.Withdraw.parser(),
+                        extensionRegistry);
+                if (withdrawsBuilder_ == null) {
+                  ensureWithdrawsIsMutable();
+                  withdraws_.add(m);
+                } else {
+                  withdrawsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> withdraws_ =
+        java.util.Collections.emptyList();
+      private void ensureWithdrawsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          withdraws_ = new java.util.ArrayList<com.shentu.oracle.v1alpha1.OracleProto.Withdraw>(withdraws_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Withdraw, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder, com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> withdrawsBuilder_;
+
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw> getWithdrawsList() {
+        if (withdrawsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(withdraws_);
+        } else {
+          return withdrawsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public int getWithdrawsCount() {
+        if (withdrawsBuilder_ == null) {
+          return withdraws_.size();
+        } else {
+          return withdrawsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw getWithdraws(int index) {
+        if (withdrawsBuilder_ == null) {
+          return withdraws_.get(index);
+        } else {
+          return withdrawsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw value) {
+        if (withdrawsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawsIsMutable();
+          withdraws_.set(index, value);
+          onChanged();
+        } else {
+          withdrawsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder builderForValue) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdraws(com.shentu.oracle.v1alpha1.OracleProto.Withdraw value) {
+        if (withdrawsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawsIsMutable();
+          withdraws_.add(value);
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw value) {
+        if (withdrawsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWithdrawsIsMutable();
+          withdraws_.add(index, value);
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdraws(
+          com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder builderForValue) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.add(builderForValue.build());
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addWithdraws(
+          int index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder builderForValue) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          withdrawsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllWithdraws(
+          java.lang.Iterable<? extends com.shentu.oracle.v1alpha1.OracleProto.Withdraw> values) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, withdraws_);
+          onChanged();
+        } else {
+          withdrawsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearWithdraws() {
+        if (withdrawsBuilder_ == null) {
+          withdraws_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          withdrawsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeWithdraws(int index) {
+        if (withdrawsBuilder_ == null) {
+          ensureWithdrawsIsMutable();
+          withdraws_.remove(index);
+          onChanged();
+        } else {
+          withdrawsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder getWithdrawsBuilder(
+          int index) {
+        return getWithdrawsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder getWithdrawsOrBuilder(
+          int index) {
+        if (withdrawsBuilder_ == null) {
+          return withdraws_.get(index);  } else {
+          return withdrawsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+           getWithdrawsOrBuilderList() {
+        if (withdrawsBuilder_ != null) {
+          return withdrawsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(withdraws_);
+        }
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder addWithdrawsBuilder() {
+        return getWithdrawsFieldBuilder().addBuilder(
+            com.shentu.oracle.v1alpha1.OracleProto.Withdraw.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder addWithdrawsBuilder(
+          int index) {
+        return getWithdrawsFieldBuilder().addBuilder(
+            index, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .shentu.oracle.v1alpha1.Withdraw withdraws = 1 [json_name = "withdraws", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder> 
+           getWithdrawsBuilderList() {
+        return getWithdrawsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Withdraw, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder, com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder> 
+          getWithdrawsFieldBuilder() {
+        if (withdrawsBuilder_ == null) {
+          withdrawsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Withdraw, com.shentu.oracle.v1alpha1.OracleProto.Withdraw.Builder, com.shentu.oracle.v1alpha1.OracleProto.WithdrawOrBuilder>(
+                  withdraws_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          withdraws_ = null;
+        }
+        return withdrawsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryWithdrawsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryWithdrawsResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWithdrawsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWithdrawsResponse>() {
+      @java.lang.Override
+      public QueryWithdrawsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWithdrawsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWithdrawsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryWithdrawsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTaskRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryTaskRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The function.
+     */
+    java.lang.String getFunction();
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The bytes for function.
+     */
+    com.google.protobuf.ByteString
+        getFunctionBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryTaskRequest}
+   */
+  public static final class QueryTaskRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryTaskRequest)
+      QueryTaskRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTaskRequest.newBuilder() to construct.
+    private QueryTaskRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTaskRequest() {
+      contract_ = "";
+      function_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTaskRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FUNCTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object function_ = "";
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The function.
+     */
+    @java.lang.Override
+    public java.lang.String getFunction() {
+      java.lang.Object ref = function_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        function_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The bytes for function.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunctionBytes() {
+      java.lang.Object ref = function_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        function_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(function_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, function_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(function_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, function_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getFunction()
+          .equals(other.getFunction())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
+      hash = (53 * hash) + getFunction().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryTaskRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryTaskRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        function_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.function_ = function_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFunction().isEmpty()) {
+          function_ = other.function_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                function_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object function_ = "";
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @return The function.
+       */
+      public java.lang.String getFunction() {
+        java.lang.Object ref = function_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          function_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @return The bytes for function.
+       */
+      public com.google.protobuf.ByteString
+          getFunctionBytes() {
+        java.lang.Object ref = function_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          function_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @param value The function to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        function_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunction() {
+        function_ = getDefaultInstance().getFunction();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @param value The bytes for function to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        function_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryTaskRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryTaskRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTaskRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTaskRequest>() {
+      @java.lang.Override
+      public QueryTaskRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTaskRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTaskRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTaskResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryTaskResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return Whether the task field is set.
+     */
+    boolean hasTask();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return The task.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Task getTask();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder getTaskOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryTaskResponse}
+   */
+  public static final class QueryTaskResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryTaskResponse)
+      QueryTaskResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTaskResponse.newBuilder() to construct.
+    private QueryTaskResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTaskResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTaskResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.Builder.class);
+    }
+
+    public static final int TASK_FIELD_NUMBER = 1;
+    private com.shentu.oracle.v1alpha1.OracleProto.Task task_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return Whether the task field is set.
+     */
+    @java.lang.Override
+    public boolean hasTask() {
+      return task_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return The task.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Task getTask() {
+      return task_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance() : task_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder getTaskOrBuilder() {
+      return task_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance() : task_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (task_ != null) {
+        output.writeMessage(1, getTask());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (task_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTask());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse) obj;
+
+      if (hasTask() != other.hasTask()) return false;
+      if (hasTask()) {
+        if (!getTask()
+            .equals(other.getTask())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTask()) {
+        hash = (37 * hash) + TASK_FIELD_NUMBER;
+        hash = (53 * hash) + getTask().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryTaskResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryTaskResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        task_ = null;
+        if (taskBuilder_ != null) {
+          taskBuilder_.dispose();
+          taskBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.task_ = taskBuilder_ == null
+              ? task_
+              : taskBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse.getDefaultInstance()) return this;
+        if (other.hasTask()) {
+          mergeTask(other.getTask());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTaskFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.oracle.v1alpha1.OracleProto.Task task_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Task, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> taskBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       * @return Whether the task field is set.
+       */
+      public boolean hasTask() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       * @return The task.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Task getTask() {
+        if (taskBuilder_ == null) {
+          return task_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance() : task_;
+        } else {
+          return taskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTask(com.shentu.oracle.v1alpha1.OracleProto.Task value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          task_ = value;
+        } else {
+          taskBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTask(
+          com.shentu.oracle.v1alpha1.OracleProto.Task.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          task_ = builderForValue.build();
+        } else {
+          taskBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTask(com.shentu.oracle.v1alpha1.OracleProto.Task value) {
+        if (taskBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            task_ != null &&
+            task_ != com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance()) {
+            getTaskBuilder().mergeFrom(value);
+          } else {
+            task_ = value;
+          }
+        } else {
+          taskBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTask() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        task_ = null;
+        if (taskBuilder_ != null) {
+          taskBuilder_.dispose();
+          taskBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Task.Builder getTaskBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder getTaskOrBuilder() {
+        if (taskBuilder_ != null) {
+          return taskBuilder_.getMessageOrBuilder();
+        } else {
+          return task_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.Task.getDefaultInstance() : task_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Task task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Task, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder> 
+          getTaskFieldBuilder() {
+        if (taskBuilder_ == null) {
+          taskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Task, com.shentu.oracle.v1alpha1.OracleProto.Task.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskOrBuilder>(
+                  getTask(),
+                  getParentForChildren(),
+                  isClean());
+          task_ = null;
+        }
+        return taskBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryTaskResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryTaskResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTaskResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTaskResponse>() {
+      @java.lang.Override
+      public QueryTaskResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTaskResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTaskResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryTaskResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTxTaskRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryTxTaskRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The atxHash.
+     */
+    java.lang.String getAtxHash();
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The bytes for atxHash.
+     */
+    com.google.protobuf.ByteString
+        getAtxHashBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxTaskRequest}
+   */
+  public static final class QueryTxTaskRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryTxTaskRequest)
+      QueryTxTaskRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTxTaskRequest.newBuilder() to construct.
+    private QueryTxTaskRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTxTaskRequest() {
+      atxHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTxTaskRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.Builder.class);
+    }
+
+    public static final int ATX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object atxHash_ = "";
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The atxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getAtxHash() {
+      java.lang.Object ref = atxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        atxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The bytes for atxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAtxHashBytes() {
+      java.lang.Object ref = atxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        atxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(atxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, atxHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(atxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, atxHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest) obj;
+
+      if (!getAtxHash()
+          .equals(other.getAtxHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ATX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getAtxHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxTaskRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryTxTaskRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        atxHash_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.atxHash_ = atxHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest.getDefaultInstance()) return this;
+        if (!other.getAtxHash().isEmpty()) {
+          atxHash_ = other.atxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                atxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object atxHash_ = "";
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @return The atxHash.
+       */
+      public java.lang.String getAtxHash() {
+        java.lang.Object ref = atxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          atxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @return The bytes for atxHash.
+       */
+      public com.google.protobuf.ByteString
+          getAtxHashBytes() {
+        java.lang.Object ref = atxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          atxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @param value The atxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAtxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        atxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAtxHash() {
+        atxHash_ = getDefaultInstance().getAtxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @param value The bytes for atxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAtxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        atxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryTxTaskRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryTxTaskRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTxTaskRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTxTaskRequest>() {
+      @java.lang.Override
+      public QueryTxTaskRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTxTaskRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTxTaskRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTxTaskResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryTxTaskResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return Whether the task field is set.
+     */
+    boolean hasTask();
+    /**
+     * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return The task.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TxTask getTask();
+    /**
+     * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder getTaskOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxTaskResponse}
+   */
+  public static final class QueryTxTaskResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryTxTaskResponse)
+      QueryTxTaskResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTxTaskResponse.newBuilder() to construct.
+    private QueryTxTaskResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTxTaskResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTxTaskResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.Builder.class);
+    }
+
+    public static final int TASK_FIELD_NUMBER = 1;
+    private com.shentu.oracle.v1alpha1.OracleProto.TxTask task_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return Whether the task field is set.
+     */
+    @java.lang.Override
+    public boolean hasTask() {
+      return task_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     * @return The task.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TxTask getTask() {
+      return task_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance() : task_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder getTaskOrBuilder() {
+      return task_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance() : task_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (task_ != null) {
+        output.writeMessage(1, getTask());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (task_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTask());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse) obj;
+
+      if (hasTask() != other.hasTask()) return false;
+      if (hasTask()) {
+        if (!getTask()
+            .equals(other.getTask())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTask()) {
+        hash = (37 * hash) + TASK_FIELD_NUMBER;
+        hash = (53 * hash) + getTask().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxTaskResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryTxTaskResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        task_ = null;
+        if (taskBuilder_ != null) {
+          taskBuilder_.dispose();
+          taskBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.task_ = taskBuilder_ == null
+              ? task_
+              : taskBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse.getDefaultInstance()) return this;
+        if (other.hasTask()) {
+          mergeTask(other.getTask());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTaskFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.oracle.v1alpha1.OracleProto.TxTask task_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TxTask, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder, com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> taskBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       * @return Whether the task field is set.
+       */
+      public boolean hasTask() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       * @return The task.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTask getTask() {
+        if (taskBuilder_ == null) {
+          return task_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance() : task_;
+        } else {
+          return taskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTask(com.shentu.oracle.v1alpha1.OracleProto.TxTask value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          task_ = value;
+        } else {
+          taskBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTask(
+          com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          task_ = builderForValue.build();
+        } else {
+          taskBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTask(com.shentu.oracle.v1alpha1.OracleProto.TxTask value) {
+        if (taskBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            task_ != null &&
+            task_ != com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance()) {
+            getTaskBuilder().mergeFrom(value);
+          } else {
+            task_ = value;
+          }
+        } else {
+          taskBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTask() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        task_ = null;
+        if (taskBuilder_ != null) {
+          taskBuilder_.dispose();
+          taskBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder getTaskBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder getTaskOrBuilder() {
+        if (taskBuilder_ != null) {
+          return taskBuilder_.getMessageOrBuilder();
+        } else {
+          return task_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.TxTask.getDefaultInstance() : task_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TxTask task = 1 [json_name = "task", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TxTask, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder, com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder> 
+          getTaskFieldBuilder() {
+        if (taskBuilder_ == null) {
+          taskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.TxTask, com.shentu.oracle.v1alpha1.OracleProto.TxTask.Builder, com.shentu.oracle.v1alpha1.OracleProto.TxTaskOrBuilder>(
+                  getTask(),
+                  getParentForChildren(),
+                  isClean());
+          task_ = null;
+        }
+        return taskBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryTxTaskResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryTxTaskResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTxTaskResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTxTaskResponse>() {
+      @java.lang.Override
+      public QueryTxTaskResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTxTaskResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTxTaskResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryTxTaskResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResponseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryResponseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    java.lang.String getContract();
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    com.google.protobuf.ByteString
+        getContractBytes();
+
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The function.
+     */
+    java.lang.String getFunction();
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The bytes for function.
+     */
+    com.google.protobuf.ByteString
+        getFunctionBytes();
+
+    /**
+     * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryResponseRequest}
+   */
+  public static final class QueryResponseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryResponseRequest)
+      QueryResponseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResponseRequest.newBuilder() to construct.
+    private QueryResponseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResponseRequest() {
+      contract_ = "";
+      function_ = "";
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResponseRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.Builder.class);
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contract_ = "";
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public java.lang.String getContract() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contract_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract = 1 [json_name = "contract"];</code>
+     * @return The bytes for contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractBytes() {
+      java.lang.Object ref = contract_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contract_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FUNCTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object function_ = "";
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The function.
+     */
+    @java.lang.Override
+    public java.lang.String getFunction() {
+      java.lang.Object ref = function_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        function_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string function = 2 [json_name = "function"];</code>
+     * @return The bytes for function.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunctionBytes() {
+      java.lang.Object ref = function_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        function_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(function_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, function_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, operatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contract_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contract_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(function_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, function_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, operatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest) obj;
+
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getFunction()
+          .equals(other.getFunction())) return false;
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (37 * hash) + FUNCTION_FIELD_NUMBER;
+      hash = (53 * hash) + getFunction().hashCode();
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryResponseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryResponseRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contract_ = "";
+        function_ = "";
+        operatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.function_ = function_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest.getDefaultInstance()) return this;
+        if (!other.getContract().isEmpty()) {
+          contract_ = other.contract_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFunction().isEmpty()) {
+          function_ = other.function_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contract_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                function_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contract_ = "";
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The contract.
+       */
+      public java.lang.String getContract() {
+        java.lang.Object ref = contract_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contract_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return The bytes for contract.
+       */
+      public com.google.protobuf.ByteString
+          getContractBytes() {
+        java.lang.Object ref = contract_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contract_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        contract_ = getDefaultInstance().getContract();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract = 1 [json_name = "contract"];</code>
+       * @param value The bytes for contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contract_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object function_ = "";
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @return The function.
+       */
+      public java.lang.String getFunction() {
+        java.lang.Object ref = function_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          function_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @return The bytes for function.
+       */
+      public com.google.protobuf.ByteString
+          getFunctionBytes() {
+        java.lang.Object ref = function_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          function_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @param value The function to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        function_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunction() {
+        function_ = getDefaultInstance().getFunction();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string function = 2 [json_name = "function"];</code>
+       * @param value The bytes for function to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        function_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 3 [json_name = "operatorAddress"];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryResponseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryResponseRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResponseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResponseRequest>() {
+      @java.lang.Override
+      public QueryResponseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResponseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResponseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResponseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryResponseResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return The response.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Response getResponse();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryResponseResponse}
+   */
+  public static final class QueryResponseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryResponseResponse)
+      QueryResponseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResponseResponse.newBuilder() to construct.
+    private QueryResponseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResponseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResponseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.Builder.class);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.shentu.oracle.v1alpha1.OracleProto.Response response_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return response_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Response getResponse() {
+      return response_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (response_ != null) {
+        output.writeMessage(1, getResponse());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (response_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResponse());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse) obj;
+
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryResponseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryResponseResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.oracle.v1alpha1.OracleProto.Response response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Response, com.shentu.oracle.v1alpha1.OracleProto.Response.Builder, com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       * @return The response.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Response getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResponse(com.shentu.oracle.v1alpha1.OracleProto.Response value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResponse(
+          com.shentu.oracle.v1alpha1.OracleProto.Response.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeResponse(com.shentu.oracle.v1alpha1.OracleProto.Response value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            response_ != null &&
+            response_ != com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Response.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Response, com.shentu.oracle.v1alpha1.OracleProto.Response.Builder, com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Response, com.shentu.oracle.v1alpha1.OracleProto.Response.Builder, com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryResponseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryResponseResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResponseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResponseResponse>() {
+      @java.lang.Override
+      public QueryResponseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResponseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResponseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryResponseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTxResponseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryTxResponseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The atxHash.
+     */
+    java.lang.String getAtxHash();
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The bytes for atxHash.
+     */
+    com.google.protobuf.ByteString
+        getAtxHashBytes();
+
+    /**
+     * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+     * @return The operatorAddress.
+     */
+    java.lang.String getOperatorAddress();
+    /**
+     * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+     * @return The bytes for operatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getOperatorAddressBytes();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxResponseRequest}
+   */
+  public static final class QueryTxResponseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryTxResponseRequest)
+      QueryTxResponseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTxResponseRequest.newBuilder() to construct.
+    private QueryTxResponseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTxResponseRequest() {
+      atxHash_ = "";
+      operatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTxResponseRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.Builder.class);
+    }
+
+    public static final int ATX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object atxHash_ = "";
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The atxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getAtxHash() {
+      java.lang.Object ref = atxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        atxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+     * @return The bytes for atxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAtxHashBytes() {
+      java.lang.Object ref = atxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        atxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPERATOR_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatorAddress_ = "";
+    /**
+     * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+     * @return The operatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOperatorAddress() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+     * @return The bytes for operatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperatorAddressBytes() {
+      java.lang.Object ref = operatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(atxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, atxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, operatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(atxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, atxHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, operatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest) obj;
+
+      if (!getAtxHash()
+          .equals(other.getAtxHash())) return false;
+      if (!getOperatorAddress()
+          .equals(other.getOperatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ATX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getAtxHash().hashCode();
+      hash = (37 * hash) + OPERATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOperatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxResponseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryTxResponseRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        atxHash_ = "";
+        operatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.atxHash_ = atxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.operatorAddress_ = operatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest.getDefaultInstance()) return this;
+        if (!other.getAtxHash().isEmpty()) {
+          atxHash_ = other.atxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOperatorAddress().isEmpty()) {
+          operatorAddress_ = other.operatorAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                atxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                operatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object atxHash_ = "";
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @return The atxHash.
+       */
+      public java.lang.String getAtxHash() {
+        java.lang.Object ref = atxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          atxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @return The bytes for atxHash.
+       */
+      public com.google.protobuf.ByteString
+          getAtxHashBytes() {
+        java.lang.Object ref = atxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          atxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @param value The atxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAtxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        atxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAtxHash() {
+        atxHash_ = getDefaultInstance().getAtxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string atx_hash = 1 [json_name = "atxHash"];</code>
+       * @param value The bytes for atxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAtxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        atxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object operatorAddress_ = "";
+      /**
+       * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+       * @return The operatorAddress.
+       */
+      public java.lang.String getOperatorAddress() {
+        java.lang.Object ref = operatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+       * @return The bytes for operatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOperatorAddressBytes() {
+        java.lang.Object ref = operatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+       * @param value The operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatorAddress() {
+        operatorAddress_ = getDefaultInstance().getOperatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operator_address = 2 [json_name = "operatorAddress"];</code>
+       * @param value The bytes for operatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        operatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryTxResponseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryTxResponseRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTxResponseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTxResponseRequest>() {
+      @java.lang.Override
+      public QueryTxResponseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTxResponseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTxResponseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTxResponseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryTxResponseResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return The response.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.Response getResponse();
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxResponseResponse}
+   */
+  public static final class QueryTxResponseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryTxResponseResponse)
+      QueryTxResponseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTxResponseResponse.newBuilder() to construct.
+    private QueryTxResponseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTxResponseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTxResponseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.Builder.class);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.shentu.oracle.v1alpha1.OracleProto.Response response_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return response_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.Response getResponse() {
+      return response_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (response_ != null) {
+        output.writeMessage(1, getResponse());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (response_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResponse());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse) obj;
+
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryTxResponseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryTxResponseResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.oracle.v1alpha1.OracleProto.Response response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Response, com.shentu.oracle.v1alpha1.OracleProto.Response.Builder, com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       * @return The response.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Response getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResponse(com.shentu.oracle.v1alpha1.OracleProto.Response value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResponse(
+          com.shentu.oracle.v1alpha1.OracleProto.Response.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeResponse(com.shentu.oracle.v1alpha1.OracleProto.Response value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            response_ != null &&
+            response_ != com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.Response.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.Response.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.Response response = 1 [json_name = "response", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.Response, com.shentu.oracle.v1alpha1.OracleProto.Response.Builder, com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.Response, com.shentu.oracle.v1alpha1.OracleProto.Response.Builder, com.shentu.oracle.v1alpha1.OracleProto.ResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryTxResponseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryTxResponseResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTxResponseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTxResponseResponse>() {
+      @java.lang.Override
+      public QueryTxResponseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTxResponseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTxResponseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryTxResponseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest other = (com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryParamsRequest)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.class, com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest result = new com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryParamsRequest)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.oracle.v1alpha1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the taskParams field is set.
+     */
+    boolean hasTaskParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+     * @return The taskParams.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TaskParams getTaskParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder getTaskParamsOrBuilder();
+
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the poolParams field is set.
+     */
+    boolean hasPoolParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+     * @return The poolParams.
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams getPoolParams();
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder getPoolParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code shentu.oracle.v1alpha1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.oracle.v1alpha1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int TASK_PARAMS_FIELD_NUMBER = 2;
+    private com.shentu.oracle.v1alpha1.OracleProto.TaskParams taskParams_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the taskParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTaskParams() {
+      return taskParams_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+     * @return The taskParams.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TaskParams getTaskParams() {
+      return taskParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder getTaskParamsOrBuilder() {
+      return taskParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+    }
+
+    public static final int POOL_PARAMS_FIELD_NUMBER = 1;
+    private com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams poolParams_;
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the poolParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolParams() {
+      return poolParams_ != null;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+     * @return The poolParams.
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams getPoolParams() {
+      return poolParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+    }
+    /**
+     * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder getPoolParamsOrBuilder() {
+      return poolParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolParams_ != null) {
+        output.writeMessage(1, getPoolParams());
+      }
+      if (taskParams_ != null) {
+        output.writeMessage(2, getTaskParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPoolParams());
+      }
+      if (taskParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTaskParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse other = (com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasTaskParams() != other.hasTaskParams()) return false;
+      if (hasTaskParams()) {
+        if (!getTaskParams()
+            .equals(other.getTaskParams())) return false;
+      }
+      if (hasPoolParams() != other.hasPoolParams()) return false;
+      if (hasPoolParams()) {
+        if (!getPoolParams()
+            .equals(other.getPoolParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTaskParams()) {
+        hash = (37 * hash) + TASK_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTaskParams().hashCode();
+      }
+      if (hasPoolParams()) {
+        hash = (37 * hash) + POOL_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code shentu.oracle.v1alpha1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.oracle.v1alpha1.QueryParamsResponse)
+        com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.class, com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        taskParams_ = null;
+        if (taskParamsBuilder_ != null) {
+          taskParamsBuilder_.dispose();
+          taskParamsBuilder_ = null;
+        }
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse build() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse buildPartial() {
+        com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse result = new com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.taskParams_ = taskParamsBuilder_ == null
+              ? taskParams_
+              : taskParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolParams_ = poolParamsBuilder_ == null
+              ? poolParams_
+              : poolParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse other) {
+        if (other == com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasTaskParams()) {
+          mergeTaskParams(other.getTaskParams());
+        }
+        if (other.hasPoolParams()) {
+          mergePoolParams(other.getPoolParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPoolParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTaskParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.shentu.oracle.v1alpha1.OracleProto.TaskParams taskParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TaskParams, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder> taskParamsBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the taskParams field is set.
+       */
+      public boolean hasTaskParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       * @return The taskParams.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskParams getTaskParams() {
+        if (taskParamsBuilder_ == null) {
+          return taskParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+        } else {
+          return taskParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTaskParams(com.shentu.oracle.v1alpha1.OracleProto.TaskParams value) {
+        if (taskParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          taskParams_ = value;
+        } else {
+          taskParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTaskParams(
+          com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder builderForValue) {
+        if (taskParamsBuilder_ == null) {
+          taskParams_ = builderForValue.build();
+        } else {
+          taskParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTaskParams(com.shentu.oracle.v1alpha1.OracleProto.TaskParams value) {
+        if (taskParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            taskParams_ != null &&
+            taskParams_ != com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance()) {
+            getTaskParamsBuilder().mergeFrom(value);
+          } else {
+            taskParams_ = value;
+          }
+        } else {
+          taskParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTaskParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        taskParams_ = null;
+        if (taskParamsBuilder_ != null) {
+          taskParamsBuilder_.dispose();
+          taskParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder getTaskParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTaskParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder getTaskParamsOrBuilder() {
+        if (taskParamsBuilder_ != null) {
+          return taskParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return taskParams_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.TaskParams.getDefaultInstance() : taskParams_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.TaskParams task_params = 2 [json_name = "taskParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.TaskParams, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder> 
+          getTaskParamsFieldBuilder() {
+        if (taskParamsBuilder_ == null) {
+          taskParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.TaskParams, com.shentu.oracle.v1alpha1.OracleProto.TaskParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.TaskParamsOrBuilder>(
+                  getTaskParams(),
+                  getParentForChildren(),
+                  isClean());
+          taskParams_ = null;
+        }
+        return taskParamsBuilder_;
+      }
+
+      private com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams poolParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder> poolParamsBuilder_;
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the poolParams field is set.
+       */
+      public boolean hasPoolParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       * @return The poolParams.
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams getPoolParams() {
+        if (poolParamsBuilder_ == null) {
+          return poolParams_ == null ? com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+        } else {
+          return poolParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPoolParams(com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolParams_ = value;
+        } else {
+          poolParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPoolParams(
+          com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder builderForValue) {
+        if (poolParamsBuilder_ == null) {
+          poolParams_ = builderForValue.build();
+        } else {
+          poolParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePoolParams(com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            poolParams_ != null &&
+            poolParams_ != com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance()) {
+            getPoolParamsBuilder().mergeFrom(value);
+          } else {
+            poolParams_ = value;
+          }
+        } else {
+          poolParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPoolParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder getPoolParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPoolParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder getPoolParamsOrBuilder() {
+        if (poolParamsBuilder_ != null) {
+          return poolParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return poolParams_ == null ?
+              com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.getDefaultInstance() : poolParams_;
+        }
+      }
+      /**
+       * <code>.shentu.oracle.v1alpha1.LockedPoolParams pool_params = 1 [json_name = "poolParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder> 
+          getPoolParamsFieldBuilder() {
+        if (poolParamsBuilder_ == null) {
+          poolParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParams.Builder, com.shentu.oracle.v1alpha1.OracleProto.LockedPoolParamsOrBuilder>(
+                  getPoolParams(),
+                  getParentForChildren(),
+                  isClean());
+          poolParams_ = null;
+        }
+        return poolParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.oracle.v1alpha1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.oracle.v1alpha1.QueryParamsResponse)
+    private static final com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.oracle.v1alpha1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryOperatorRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryOperatorResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryOperatorsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryOperatorsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryWithdrawsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryWithdrawsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryTaskRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryTaskResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryTxTaskRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryTxTaskResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryResponseRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryResponseResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryTxResponseRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryTxResponseResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_oracle_v1alpha1_QueryParamsResponse_fieldAccessorTable;
 
@@ -173,13 +10092,13 @@ public final class QueryProto {
       "Response\022\211\001\n\006Params\022*.shentu.oracle.v1al" +
       "pha1.QueryParamsRequest\032+.shentu.oracle." +
       "v1alpha1.QueryParamsResponse\"&\202\323\344\223\002 \022\036/s" +
-      "hentu/oracle/v1alpha1/paramsB\325\001\n\032com.she" +
-      "ntu.oracle.v1alpha1B\nQueryProtoP\001Z1githu" +
-      "b.com/shentufoundation/shentu/x/oracle/t" +
-      "ypes\242\002\003SOX\252\002\026Shentu.Oracle.V1alpha1\312\002\026Sh" +
-      "entu\\Oracle\\V1alpha1\342\002\"Shentu\\Oracle\\V1a" +
-      "lpha1\\GPBMetadata\352\002\030Shentu::Oracle::V1al" +
-      "pha1b\006proto3"
+      "hentu/oracle/v1alpha1/paramsB\323\001\n\032com.she" +
+      "ntu.oracle.v1alpha1B\nQueryProtoZ1github." +
+      "com/shentufoundation/shentu/x/oracle/typ" +
+      "es\242\002\003SOX\252\002\026Shentu.Oracle.V1alpha1\312\002\026Shen" +
+      "tu\\Oracle\\V1alpha1\342\002\"Shentu\\Oracle\\V1alp" +
+      "ha1\\GPBMetadata\352\002\030Shentu::Oracle::V1alph" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

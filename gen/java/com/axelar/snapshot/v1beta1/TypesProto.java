@@ -14,9 +14,632 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ProxiedValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.snapshot.v1beta1.ProxiedValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The validator.
+     */
+    com.google.protobuf.ByteString getValidator();
+
+    /**
+     * <code>bytes proxy = 2 [json_name = "proxy", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The proxy.
+     */
+    com.google.protobuf.ByteString getProxy();
+
+    /**
+     * <code>bool active = 3 [json_name = "active"];</code>
+     * @return The active.
+     */
+    boolean getActive();
+  }
+  /**
+   * Protobuf type {@code axelar.snapshot.v1beta1.ProxiedValidator}
+   */
+  public static final class ProxiedValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.snapshot.v1beta1.ProxiedValidator)
+      ProxiedValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProxiedValidator.newBuilder() to construct.
+    private ProxiedValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProxiedValidator() {
+      validator_ = com.google.protobuf.ByteString.EMPTY;
+      proxy_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProxiedValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.snapshot.v1beta1.TypesProto.internal_static_axelar_snapshot_v1beta1_ProxiedValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.snapshot.v1beta1.TypesProto.internal_static_axelar_snapshot_v1beta1_ProxiedValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.class, com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.Builder.class);
+    }
+
+    public static final int VALIDATOR_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString validator_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The validator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getValidator() {
+      return validator_;
+    }
+
+    public static final int PROXY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString proxy_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes proxy = 2 [json_name = "proxy", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The proxy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getProxy() {
+      return proxy_;
+    }
+
+    public static final int ACTIVE_FIELD_NUMBER = 3;
+    private boolean active_ = false;
+    /**
+     * <code>bool active = 3 [json_name = "active"];</code>
+     * @return The active.
+     */
+    @java.lang.Override
+    public boolean getActive() {
+      return active_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!validator_.isEmpty()) {
+        output.writeBytes(1, validator_);
+      }
+      if (!proxy_.isEmpty()) {
+        output.writeBytes(2, proxy_);
+      }
+      if (active_ != false) {
+        output.writeBool(3, active_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!validator_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, validator_);
+      }
+      if (!proxy_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, proxy_);
+      }
+      if (active_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, active_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator)) {
+        return super.equals(obj);
+      }
+      com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator other = (com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator) obj;
+
+      if (!getValidator()
+          .equals(other.getValidator())) return false;
+      if (!getProxy()
+          .equals(other.getProxy())) return false;
+      if (getActive()
+          != other.getActive()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidator().hashCode();
+      hash = (37 * hash) + PROXY_FIELD_NUMBER;
+      hash = (53 * hash) + getProxy().hashCode();
+      hash = (37 * hash) + ACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getActive());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.snapshot.v1beta1.ProxiedValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.snapshot.v1beta1.ProxiedValidator)
+        com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.snapshot.v1beta1.TypesProto.internal_static_axelar_snapshot_v1beta1_ProxiedValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.snapshot.v1beta1.TypesProto.internal_static_axelar_snapshot_v1beta1_ProxiedValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.class, com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.Builder.class);
+      }
+
+      // Construct using com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validator_ = com.google.protobuf.ByteString.EMPTY;
+        proxy_ = com.google.protobuf.ByteString.EMPTY;
+        active_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.snapshot.v1beta1.TypesProto.internal_static_axelar_snapshot_v1beta1_ProxiedValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator getDefaultInstanceForType() {
+        return com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator build() {
+        com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator buildPartial() {
+        com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator result = new com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validator_ = validator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.proxy_ = proxy_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.active_ = active_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator) {
+          return mergeFrom((com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator other) {
+        if (other == com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator.getDefaultInstance()) return this;
+        if (other.getValidator() != com.google.protobuf.ByteString.EMPTY) {
+          setValidator(other.getValidator());
+        }
+        if (other.getProxy() != com.google.protobuf.ByteString.EMPTY) {
+          setProxy(other.getProxy());
+        }
+        if (other.getActive() != false) {
+          setActive(other.getActive());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validator_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                proxy_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                active_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString validator_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return The validator.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValidator() {
+        return validator_;
+      }
+      /**
+       * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param value The validator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidator(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        validator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes validator = 1 [json_name = "validator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidator() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        validator_ = getDefaultInstance().getValidator();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString proxy_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes proxy = 2 [json_name = "proxy", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The proxy.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getProxy() {
+        return proxy_;
+      }
+      /**
+       * <code>bytes proxy = 2 [json_name = "proxy", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The proxy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProxy(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        proxy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes proxy = 2 [json_name = "proxy", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProxy() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        proxy_ = getDefaultInstance().getProxy();
+        onChanged();
+        return this;
+      }
+
+      private boolean active_ ;
+      /**
+       * <code>bool active = 3 [json_name = "active"];</code>
+       * @return The active.
+       */
+      @java.lang.Override
+      public boolean getActive() {
+        return active_;
+      }
+      /**
+       * <code>bool active = 3 [json_name = "active"];</code>
+       * @param value The active to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActive(boolean value) {
+
+        active_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool active = 3 [json_name = "active"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActive() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        active_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.snapshot.v1beta1.ProxiedValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.snapshot.v1beta1.ProxiedValidator)
+    private static final com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator();
+    }
+
+    public static com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProxiedValidator>
+        PARSER = new com.google.protobuf.AbstractParser<ProxiedValidator>() {
+      @java.lang.Override
+      public ProxiedValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProxiedValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProxiedValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.snapshot.v1beta1.TypesProto.ProxiedValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_snapshot_v1beta1_ProxiedValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_snapshot_v1beta1_ProxiedValidator_fieldAccessorTable;
 
@@ -35,13 +658,13 @@ public final class TypesProto {
       "github.com/cosmos/cosmos-sdk/types.ValAd" +
       "dressR\tvalidator\022G\n\005proxy\030\002 \001(\014B1\372\336\037-git" +
       "hub.com/cosmos/cosmos-sdk/types.AccAddre" +
-      "ssR\005proxy\022\026\n\006active\030\003 \001(\010R\006activeB\342\001\n\033co" +
-      "m.axelar.snapshot.v1beta1B\nTypesProtoP\001Z" +
-      "5github.com/axelarnetwork/axelar-core/x/" +
-      "snapshot/types\242\002\003ASX\252\002\027Axelar.Snapshot.V" +
-      "1beta1\312\002\027Axelar\\Snapshot\\V1beta1\342\002#Axela" +
-      "r\\Snapshot\\V1beta1\\GPBMetadata\352\002\031Axelar:" +
-      ":Snapshot::V1beta1\310\341\036\000b\006proto3"
+      "ssR\005proxy\022\026\n\006active\030\003 \001(\010R\006activeB\340\001\n\033co" +
+      "m.axelar.snapshot.v1beta1B\nTypesProtoZ5g" +
+      "ithub.com/axelarnetwork/axelar-core/x/sn" +
+      "apshot/types\242\002\003ASX\252\002\027Axelar.Snapshot.V1b" +
+      "eta1\312\002\027Axelar\\Snapshot\\V1beta1\342\002#Axelar\\" +
+      "Snapshot\\V1beta1\\GPBMetadata\352\002\031Axelar::S" +
+      "napshot::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

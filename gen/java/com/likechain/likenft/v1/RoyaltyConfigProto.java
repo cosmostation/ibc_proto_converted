@@ -14,29 +14,3662 @@ public final class RoyaltyConfigProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RoyaltyConfigByClassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.RoyaltyConfigByClass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+     * @return Whether the royaltyConfig field is set.
+     */
+    boolean hasRoyaltyConfig();
+    /**
+     * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+     * @return The royaltyConfig.
+     */
+    com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig getRoyaltyConfig();
+    /**
+     * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder getRoyaltyConfigOrBuilder();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.RoyaltyConfigByClass}
+   */
+  public static final class RoyaltyConfigByClass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.RoyaltyConfigByClass)
+      RoyaltyConfigByClassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RoyaltyConfigByClass.newBuilder() to construct.
+    private RoyaltyConfigByClass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RoyaltyConfigByClass() {
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoyaltyConfigByClass();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigByClass_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigByClass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.Builder.class);
+    }
+
+    public static final int CLASS_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string class_id = 1 [json_name = "classId"];</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROYALTY_CONFIG_FIELD_NUMBER = 2;
+    private com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig royaltyConfig_;
+    /**
+     * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+     * @return Whether the royaltyConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoyaltyConfig() {
+      return royaltyConfig_ != null;
+    }
+    /**
+     * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+     * @return The royaltyConfig.
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig getRoyaltyConfig() {
+      return royaltyConfig_ == null ? com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance() : royaltyConfig_;
+    }
+    /**
+     * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder getRoyaltyConfigOrBuilder() {
+      return royaltyConfig_ == null ? com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance() : royaltyConfig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (royaltyConfig_ != null) {
+        output.writeMessage(2, getRoyaltyConfig());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (royaltyConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRoyaltyConfig());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass other = (com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (hasRoyaltyConfig() != other.hasRoyaltyConfig()) return false;
+      if (hasRoyaltyConfig()) {
+        if (!getRoyaltyConfig()
+            .equals(other.getRoyaltyConfig())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      if (hasRoyaltyConfig()) {
+        hash = (37 * hash) + ROYALTY_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getRoyaltyConfig().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.RoyaltyConfigByClass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.RoyaltyConfigByClass)
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigByClass_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigByClass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        classId_ = "";
+        royaltyConfig_ = null;
+        if (royaltyConfigBuilder_ != null) {
+          royaltyConfigBuilder_.dispose();
+          royaltyConfigBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigByClass_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass build() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass buildPartial() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass result = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.royaltyConfig_ = royaltyConfigBuilder_ == null
+              ? royaltyConfig_
+              : royaltyConfigBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass) {
+          return mergeFrom((com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass other) {
+        if (other == com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasRoyaltyConfig()) {
+          mergeRoyaltyConfig(other.getRoyaltyConfig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getRoyaltyConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string class_id = 1 [json_name = "classId"];</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        classId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig royaltyConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder> royaltyConfigBuilder_;
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       * @return Whether the royaltyConfig field is set.
+       */
+      public boolean hasRoyaltyConfig() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       * @return The royaltyConfig.
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig getRoyaltyConfig() {
+        if (royaltyConfigBuilder_ == null) {
+          return royaltyConfig_ == null ? com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance() : royaltyConfig_;
+        } else {
+          return royaltyConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRoyaltyConfig(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig value) {
+        if (royaltyConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          royaltyConfig_ = value;
+        } else {
+          royaltyConfigBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRoyaltyConfig(
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder builderForValue) {
+        if (royaltyConfigBuilder_ == null) {
+          royaltyConfig_ = builderForValue.build();
+        } else {
+          royaltyConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeRoyaltyConfig(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig value) {
+        if (royaltyConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            royaltyConfig_ != null &&
+            royaltyConfig_ != com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance()) {
+            getRoyaltyConfigBuilder().mergeFrom(value);
+          } else {
+            royaltyConfig_ = value;
+          }
+        } else {
+          royaltyConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRoyaltyConfig() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        royaltyConfig_ = null;
+        if (royaltyConfigBuilder_ != null) {
+          royaltyConfigBuilder_.dispose();
+          royaltyConfigBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder getRoyaltyConfigBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRoyaltyConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder getRoyaltyConfigOrBuilder() {
+        if (royaltyConfigBuilder_ != null) {
+          return royaltyConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return royaltyConfig_ == null ?
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance() : royaltyConfig_;
+        }
+      }
+      /**
+       * <code>.likechain.likenft.v1.RoyaltyConfig royalty_config = 2 [json_name = "royaltyConfig", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder> 
+          getRoyaltyConfigFieldBuilder() {
+        if (royaltyConfigBuilder_ == null) {
+          royaltyConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder>(
+                  getRoyaltyConfig(),
+                  getParentForChildren(),
+                  isClean());
+          royaltyConfig_ = null;
+        }
+        return royaltyConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.RoyaltyConfigByClass)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.RoyaltyConfigByClass)
+    private static final com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass();
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoyaltyConfigByClass>
+        PARSER = new com.google.protobuf.AbstractParser<RoyaltyConfigByClass>() {
+      @java.lang.Override
+      public RoyaltyConfigByClass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoyaltyConfigByClass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoyaltyConfigByClass> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigByClass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoyaltyConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.RoyaltyConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+     * @return The rateBasisPoints.
+     */
+    long getRateBasisPoints();
+
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder> 
+        getStakeholdersList();
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder getStakeholders(int index);
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    int getStakeholdersCount();
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder> 
+        getStakeholdersOrBuilderList();
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder getStakeholdersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.RoyaltyConfig}
+   */
+  public static final class RoyaltyConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.RoyaltyConfig)
+      RoyaltyConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RoyaltyConfig.newBuilder() to construct.
+    private RoyaltyConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RoyaltyConfig() {
+      stakeholders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoyaltyConfig();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder.class);
+    }
+
+    public static final int RATE_BASIS_POINTS_FIELD_NUMBER = 1;
+    private long rateBasisPoints_ = 0L;
+    /**
+     * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+     * @return The rateBasisPoints.
+     */
+    @java.lang.Override
+    public long getRateBasisPoints() {
+      return rateBasisPoints_;
+    }
+
+    public static final int STAKEHOLDERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder> stakeholders_;
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder> getStakeholdersList() {
+      return stakeholders_;
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder> 
+        getStakeholdersOrBuilderList() {
+      return stakeholders_;
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getStakeholdersCount() {
+      return stakeholders_.size();
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder getStakeholders(int index) {
+      return stakeholders_.get(index);
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder getStakeholdersOrBuilder(
+        int index) {
+      return stakeholders_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rateBasisPoints_ != 0L) {
+        output.writeUInt64(1, rateBasisPoints_);
+      }
+      for (int i = 0; i < stakeholders_.size(); i++) {
+        output.writeMessage(2, stakeholders_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rateBasisPoints_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rateBasisPoints_);
+      }
+      for (int i = 0; i < stakeholders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, stakeholders_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig other = (com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig) obj;
+
+      if (getRateBasisPoints()
+          != other.getRateBasisPoints()) return false;
+      if (!getStakeholdersList()
+          .equals(other.getStakeholdersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RATE_BASIS_POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRateBasisPoints());
+      if (getStakeholdersCount() > 0) {
+        hash = (37 * hash) + STAKEHOLDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeholdersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.RoyaltyConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.RoyaltyConfig)
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rateBasisPoints_ = 0L;
+        if (stakeholdersBuilder_ == null) {
+          stakeholders_ = java.util.Collections.emptyList();
+        } else {
+          stakeholders_ = null;
+          stakeholdersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig build() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig buildPartial() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig result = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig result) {
+        if (stakeholdersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            stakeholders_ = java.util.Collections.unmodifiableList(stakeholders_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.stakeholders_ = stakeholders_;
+        } else {
+          result.stakeholders_ = stakeholdersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rateBasisPoints_ = rateBasisPoints_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig) {
+          return mergeFrom((com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig other) {
+        if (other == com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig.getDefaultInstance()) return this;
+        if (other.getRateBasisPoints() != 0L) {
+          setRateBasisPoints(other.getRateBasisPoints());
+        }
+        if (stakeholdersBuilder_ == null) {
+          if (!other.stakeholders_.isEmpty()) {
+            if (stakeholders_.isEmpty()) {
+              stakeholders_ = other.stakeholders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureStakeholdersIsMutable();
+              stakeholders_.addAll(other.stakeholders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakeholders_.isEmpty()) {
+            if (stakeholdersBuilder_.isEmpty()) {
+              stakeholdersBuilder_.dispose();
+              stakeholdersBuilder_ = null;
+              stakeholders_ = other.stakeholders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              stakeholdersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakeholdersFieldBuilder() : null;
+            } else {
+              stakeholdersBuilder_.addAllMessages(other.stakeholders_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rateBasisPoints_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder m =
+                    input.readMessage(
+                        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.parser(),
+                        extensionRegistry);
+                if (stakeholdersBuilder_ == null) {
+                  ensureStakeholdersIsMutable();
+                  stakeholders_.add(m);
+                } else {
+                  stakeholdersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rateBasisPoints_ ;
+      /**
+       * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+       * @return The rateBasisPoints.
+       */
+      @java.lang.Override
+      public long getRateBasisPoints() {
+        return rateBasisPoints_;
+      }
+      /**
+       * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+       * @param value The rateBasisPoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRateBasisPoints(long value) {
+
+        rateBasisPoints_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRateBasisPoints() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rateBasisPoints_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder> stakeholders_ =
+        java.util.Collections.emptyList();
+      private void ensureStakeholdersIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          stakeholders_ = new java.util.ArrayList<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder>(stakeholders_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder> stakeholdersBuilder_;
+
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder> getStakeholdersList() {
+        if (stakeholdersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakeholders_);
+        } else {
+          return stakeholdersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public int getStakeholdersCount() {
+        if (stakeholdersBuilder_ == null) {
+          return stakeholders_.size();
+        } else {
+          return stakeholdersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder getStakeholders(int index) {
+        if (stakeholdersBuilder_ == null) {
+          return stakeholders_.get(index);
+        } else {
+          return stakeholdersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder value) {
+        if (stakeholdersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeholdersIsMutable();
+          stakeholders_.set(index, value);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder builderForValue) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeholdersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder value) {
+        if (stakeholdersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(value);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder value) {
+        if (stakeholdersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(index, value);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder builderForValue) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder builderForValue) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllStakeholders(
+          java.lang.Iterable<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder> values) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakeholders_);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearStakeholders() {
+        if (stakeholdersBuilder_ == null) {
+          stakeholders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeStakeholders(int index) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.remove(index);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder getStakeholdersBuilder(
+          int index) {
+        return getStakeholdersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder getStakeholdersOrBuilder(
+          int index) {
+        if (stakeholdersBuilder_ == null) {
+          return stakeholders_.get(index);  } else {
+          return stakeholdersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder> 
+           getStakeholdersOrBuilderList() {
+        if (stakeholdersBuilder_ != null) {
+          return stakeholdersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakeholders_);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder addStakeholdersBuilder() {
+        return getStakeholdersFieldBuilder().addBuilder(
+            com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder addStakeholdersBuilder(
+          int index) {
+        return getStakeholdersFieldBuilder().addBuilder(
+            index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholder stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder> 
+           getStakeholdersBuilderList() {
+        return getStakeholdersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder> 
+          getStakeholdersFieldBuilder() {
+        if (stakeholdersBuilder_ == null) {
+          stakeholdersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder>(
+                  stakeholders_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakeholders_ = null;
+        }
+        return stakeholdersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.RoyaltyConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.RoyaltyConfig)
+    private static final com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig();
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoyaltyConfig>
+        PARSER = new com.google.protobuf.AbstractParser<RoyaltyConfig>() {
+      @java.lang.Override
+      public RoyaltyConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoyaltyConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoyaltyConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoyaltyStakeholderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.RoyaltyStakeholder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes account = 1 [json_name = "account", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The account.
+     */
+    com.google.protobuf.ByteString getAccount();
+
+    /**
+     * <code>uint64 weight = 2 [json_name = "weight"];</code>
+     * @return The weight.
+     */
+    long getWeight();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.RoyaltyStakeholder}
+   */
+  public static final class RoyaltyStakeholder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.RoyaltyStakeholder)
+      RoyaltyStakeholderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RoyaltyStakeholder.newBuilder() to construct.
+    private RoyaltyStakeholder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RoyaltyStakeholder() {
+      account_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoyaltyStakeholder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString account_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes account = 1 [json_name = "account", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAccount() {
+      return account_;
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 2;
+    private long weight_ = 0L;
+    /**
+     * <code>uint64 weight = 2 [json_name = "weight"];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public long getWeight() {
+      return weight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!account_.isEmpty()) {
+        output.writeBytes(1, account_);
+      }
+      if (weight_ != 0L) {
+        output.writeUInt64(2, weight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!account_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, account_);
+      }
+      if (weight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, weight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder other = (com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (getWeight()
+          != other.getWeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.RoyaltyStakeholder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.RoyaltyStakeholder)
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = com.google.protobuf.ByteString.EMPTY;
+        weight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder build() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder buildPartial() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder result = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weight_ = weight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder) {
+          return mergeFrom((com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder other) {
+        if (other == com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder.getDefaultInstance()) return this;
+        if (other.getAccount() != com.google.protobuf.ByteString.EMPTY) {
+          setAccount(other.getAccount());
+        }
+        if (other.getWeight() != 0L) {
+          setWeight(other.getWeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                weight_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString account_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes account = 1 [json_name = "account", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The account.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAccount() {
+        return account_;
+      }
+      /**
+       * <code>bytes account = 1 [json_name = "account", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes account = 1 [json_name = "account", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        account_ = getDefaultInstance().getAccount();
+        onChanged();
+        return this;
+      }
+
+      private long weight_ ;
+      /**
+       * <code>uint64 weight = 2 [json_name = "weight"];</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <code>uint64 weight = 2 [json_name = "weight"];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(long value) {
+
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 weight = 2 [json_name = "weight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        weight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.RoyaltyStakeholder)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.RoyaltyStakeholder)
+    private static final com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder();
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoyaltyStakeholder>
+        PARSER = new com.google.protobuf.AbstractParser<RoyaltyStakeholder>() {
+      @java.lang.Override
+      public RoyaltyStakeholder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoyaltyStakeholder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoyaltyStakeholder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoyaltyConfigInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.RoyaltyConfigInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+     * @return The rateBasisPoints.
+     */
+    long getRateBasisPoints();
+
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput> 
+        getStakeholdersList();
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput getStakeholders(int index);
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    int getStakeholdersCount();
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder> 
+        getStakeholdersOrBuilderList();
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder getStakeholdersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.RoyaltyConfigInput}
+   */
+  public static final class RoyaltyConfigInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.RoyaltyConfigInput)
+      RoyaltyConfigInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RoyaltyConfigInput.newBuilder() to construct.
+    private RoyaltyConfigInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RoyaltyConfigInput() {
+      stakeholders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoyaltyConfigInput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.Builder.class);
+    }
+
+    public static final int RATE_BASIS_POINTS_FIELD_NUMBER = 1;
+    private long rateBasisPoints_ = 0L;
+    /**
+     * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+     * @return The rateBasisPoints.
+     */
+    @java.lang.Override
+    public long getRateBasisPoints() {
+      return rateBasisPoints_;
+    }
+
+    public static final int STAKEHOLDERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput> stakeholders_;
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput> getStakeholdersList() {
+      return stakeholders_;
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder> 
+        getStakeholdersOrBuilderList() {
+      return stakeholders_;
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getStakeholdersCount() {
+      return stakeholders_.size();
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput getStakeholders(int index) {
+      return stakeholders_.get(index);
+    }
+    /**
+     * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder getStakeholdersOrBuilder(
+        int index) {
+      return stakeholders_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rateBasisPoints_ != 0L) {
+        output.writeUInt64(1, rateBasisPoints_);
+      }
+      for (int i = 0; i < stakeholders_.size(); i++) {
+        output.writeMessage(2, stakeholders_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rateBasisPoints_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rateBasisPoints_);
+      }
+      for (int i = 0; i < stakeholders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, stakeholders_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput other = (com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput) obj;
+
+      if (getRateBasisPoints()
+          != other.getRateBasisPoints()) return false;
+      if (!getStakeholdersList()
+          .equals(other.getStakeholdersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RATE_BASIS_POINTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRateBasisPoints());
+      if (getStakeholdersCount() > 0) {
+        hash = (37 * hash) + STAKEHOLDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakeholdersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.RoyaltyConfigInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.RoyaltyConfigInput)
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rateBasisPoints_ = 0L;
+        if (stakeholdersBuilder_ == null) {
+          stakeholders_ = java.util.Collections.emptyList();
+        } else {
+          stakeholders_ = null;
+          stakeholdersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyConfigInput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput build() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput buildPartial() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput result = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput result) {
+        if (stakeholdersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            stakeholders_ = java.util.Collections.unmodifiableList(stakeholders_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.stakeholders_ = stakeholders_;
+        } else {
+          result.stakeholders_ = stakeholdersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rateBasisPoints_ = rateBasisPoints_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput) {
+          return mergeFrom((com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput other) {
+        if (other == com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput.getDefaultInstance()) return this;
+        if (other.getRateBasisPoints() != 0L) {
+          setRateBasisPoints(other.getRateBasisPoints());
+        }
+        if (stakeholdersBuilder_ == null) {
+          if (!other.stakeholders_.isEmpty()) {
+            if (stakeholders_.isEmpty()) {
+              stakeholders_ = other.stakeholders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureStakeholdersIsMutable();
+              stakeholders_.addAll(other.stakeholders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakeholders_.isEmpty()) {
+            if (stakeholdersBuilder_.isEmpty()) {
+              stakeholdersBuilder_.dispose();
+              stakeholdersBuilder_ = null;
+              stakeholders_ = other.stakeholders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              stakeholdersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakeholdersFieldBuilder() : null;
+            } else {
+              stakeholdersBuilder_.addAllMessages(other.stakeholders_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rateBasisPoints_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput m =
+                    input.readMessage(
+                        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.parser(),
+                        extensionRegistry);
+                if (stakeholdersBuilder_ == null) {
+                  ensureStakeholdersIsMutable();
+                  stakeholders_.add(m);
+                } else {
+                  stakeholdersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rateBasisPoints_ ;
+      /**
+       * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+       * @return The rateBasisPoints.
+       */
+      @java.lang.Override
+      public long getRateBasisPoints() {
+        return rateBasisPoints_;
+      }
+      /**
+       * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+       * @param value The rateBasisPoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRateBasisPoints(long value) {
+
+        rateBasisPoints_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 rate_basis_points = 1 [json_name = "rateBasisPoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRateBasisPoints() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rateBasisPoints_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput> stakeholders_ =
+        java.util.Collections.emptyList();
+      private void ensureStakeholdersIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          stakeholders_ = new java.util.ArrayList<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput>(stakeholders_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder> stakeholdersBuilder_;
+
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput> getStakeholdersList() {
+        if (stakeholdersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakeholders_);
+        } else {
+          return stakeholdersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public int getStakeholdersCount() {
+        if (stakeholdersBuilder_ == null) {
+          return stakeholders_.size();
+        } else {
+          return stakeholdersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput getStakeholders(int index) {
+        if (stakeholdersBuilder_ == null) {
+          return stakeholders_.get(index);
+        } else {
+          return stakeholdersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput value) {
+        if (stakeholdersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeholdersIsMutable();
+          stakeholders_.set(index, value);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder builderForValue) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeholdersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput value) {
+        if (stakeholdersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(value);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput value) {
+        if (stakeholdersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(index, value);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder builderForValue) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addStakeholders(
+          int index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder builderForValue) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllStakeholders(
+          java.lang.Iterable<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput> values) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakeholders_);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearStakeholders() {
+        if (stakeholdersBuilder_ == null) {
+          stakeholders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeStakeholders(int index) {
+        if (stakeholdersBuilder_ == null) {
+          ensureStakeholdersIsMutable();
+          stakeholders_.remove(index);
+          onChanged();
+        } else {
+          stakeholdersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder getStakeholdersBuilder(
+          int index) {
+        return getStakeholdersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder getStakeholdersOrBuilder(
+          int index) {
+        if (stakeholdersBuilder_ == null) {
+          return stakeholders_.get(index);  } else {
+          return stakeholdersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder> 
+           getStakeholdersOrBuilderList() {
+        if (stakeholdersBuilder_ != null) {
+          return stakeholdersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakeholders_);
+        }
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder addStakeholdersBuilder() {
+        return getStakeholdersFieldBuilder().addBuilder(
+            com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder addStakeholdersBuilder(
+          int index) {
+        return getStakeholdersFieldBuilder().addBuilder(
+            index, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .likechain.likenft.v1.RoyaltyStakeholderInput stakeholders = 2 [json_name = "stakeholders", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder> 
+           getStakeholdersBuilderList() {
+        return getStakeholdersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder> 
+          getStakeholdersFieldBuilder() {
+        if (stakeholdersBuilder_ == null) {
+          stakeholdersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder>(
+                  stakeholders_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakeholders_ = null;
+        }
+        return stakeholdersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.RoyaltyConfigInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.RoyaltyConfigInput)
+    private static final com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput();
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoyaltyConfigInput>
+        PARSER = new com.google.protobuf.AbstractParser<RoyaltyConfigInput>() {
+      @java.lang.Override
+      public RoyaltyConfigInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoyaltyConfigInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoyaltyConfigInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyConfigInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoyaltyStakeholderInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.likenft.v1.RoyaltyStakeholderInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    java.lang.String getAccount();
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes();
+
+    /**
+     * <code>uint64 weight = 2 [json_name = "weight"];</code>
+     * @return The weight.
+     */
+    long getWeight();
+  }
+  /**
+   * Protobuf type {@code likechain.likenft.v1.RoyaltyStakeholderInput}
+   */
+  public static final class RoyaltyStakeholderInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.likenft.v1.RoyaltyStakeholderInput)
+      RoyaltyStakeholderInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RoyaltyStakeholderInput.newBuilder() to construct.
+    private RoyaltyStakeholderInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RoyaltyStakeholderInput() {
+      account_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoyaltyStakeholderInput();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object account_ = "";
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        account_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string account = 1 [json_name = "account"];</code>
+     * @return The bytes for account.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountBytes() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        account_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 2;
+    private long weight_ = 0L;
+    /**
+     * <code>uint64 weight = 2 [json_name = "weight"];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public long getWeight() {
+      return weight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_);
+      }
+      if (weight_ != 0L) {
+        output.writeUInt64(2, weight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(account_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, account_);
+      }
+      if (weight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, weight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput)) {
+        return super.equals(obj);
+      }
+      com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput other = (com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput) obj;
+
+      if (!getAccount()
+          .equals(other.getAccount())) return false;
+      if (getWeight()
+          != other.getWeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAccount().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.likenft.v1.RoyaltyStakeholderInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.likenft.v1.RoyaltyStakeholderInput)
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.class, com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.Builder.class);
+      }
+
+      // Construct using com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = "";
+        weight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput getDefaultInstanceForType() {
+        return com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput build() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput buildPartial() {
+        com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput result = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weight_ = weight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput) {
+          return mergeFrom((com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput other) {
+        if (other == com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput.getDefaultInstance()) return this;
+        if (!other.getAccount().isEmpty()) {
+          account_ = other.account_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getWeight() != 0L) {
+          setWeight(other.getWeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                account_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                weight_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object account_ = "";
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          account_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return The bytes for account.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes() {
+        java.lang.Object ref = account_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          account_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ = getDefaultInstance().getAccount();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string account = 1 [json_name = "account"];</code>
+       * @param value The bytes for account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        account_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long weight_ ;
+      /**
+       * <code>uint64 weight = 2 [json_name = "weight"];</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <code>uint64 weight = 2 [json_name = "weight"];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(long value) {
+
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 weight = 2 [json_name = "weight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        weight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.likenft.v1.RoyaltyStakeholderInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.likenft.v1.RoyaltyStakeholderInput)
+    private static final com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput();
+    }
+
+    public static com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoyaltyStakeholderInput>
+        PARSER = new com.google.protobuf.AbstractParser<RoyaltyStakeholderInput>() {
+      @java.lang.Override
+      public RoyaltyStakeholderInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoyaltyStakeholderInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoyaltyStakeholderInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.likenft.v1.RoyaltyConfigProto.RoyaltyStakeholderInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_RoyaltyConfigByClass_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_RoyaltyConfigByClass_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_RoyaltyConfig_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_RoyaltyConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_RoyaltyStakeholder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_RoyaltyStakeholder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_RoyaltyConfigInput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_RoyaltyConfigInput_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_likenft_v1_RoyaltyStakeholderInput_fieldAccessorTable;
 
@@ -66,12 +3699,12 @@ public final class RoyaltyConfigProto {
       "v1.RoyaltyStakeholderInputB\004\310\336\037\000R\014stakeh" +
       "olders\"K\n\027RoyaltyStakeholderInput\022\030\n\007acc" +
       "ount\030\001 \001(\tR\007account\022\026\n\006weight\030\002 \001(\004R\006wei" +
-      "ghtB\327\001\n\030com.likechain.likenft.v1B\022Royalt" +
-      "yConfigProtoP\001Z5github.com/likecoin/like" +
-      "coin-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Li" +
-      "kechain.Likenft.V1\312\002\024Likechain\\Likenft\\V" +
-      "1\342\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026L" +
-      "ikechain::Likenft::V1b\006proto3"
+      "ghtB\325\001\n\030com.likechain.likenft.v1B\022Royalt" +
+      "yConfigProtoZ5github.com/likecoin/likeco" +
+      "in-chain/v4/x/likenft/types\242\002\003LLX\252\002\024Like" +
+      "chain.Likenft.V1\312\002\024Likechain\\Likenft\\V1\342" +
+      "\002 Likechain\\Likenft\\V1\\GPBMetadata\352\002\026Lik" +
+      "echain::Likenft::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

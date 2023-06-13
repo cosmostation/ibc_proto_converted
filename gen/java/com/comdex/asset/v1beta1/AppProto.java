@@ -14,19 +14,2935 @@ public final class AppProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AppDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AppData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+     * @return The shortName.
+     */
+    java.lang.String getShortName();
+    /**
+     * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+     * @return The bytes for shortName.
+     */
+    com.google.protobuf.ByteString
+        getShortNameBytes();
+
+    /**
+     * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The minGovDeposit.
+     */
+    java.lang.String getMinGovDeposit();
+    /**
+     * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The bytes for minGovDeposit.
+     */
+    com.google.protobuf.ByteString
+        getMinGovDepositBytes();
+
+    /**
+     * <code>uint64 gov_time_in_seconds = 5 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+     * @return The govTimeInSeconds.
+     */
+    long getGovTimeInSeconds();
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.AppProto.MintGenesisToken> 
+        getGenesisTokenList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.MintGenesisToken getGenesisToken(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    int getGenesisTokenCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder> 
+        getGenesisTokenOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder getGenesisTokenOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AppData}
+   */
+  public static final class AppData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AppData)
+      AppDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppData.newBuilder() to construct.
+    private AppData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppData() {
+      name_ = "";
+      shortName_ = "";
+      minGovDeposit_ = "";
+      genesisToken_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AppData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.AppProto.AppData.class, com.comdex.asset.v1beta1.AppProto.AppData.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHORT_NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object shortName_ = "";
+    /**
+     * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+     * @return The shortName.
+     */
+    @java.lang.Override
+    public java.lang.String getShortName() {
+      java.lang.Object ref = shortName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shortName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+     * @return The bytes for shortName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getShortNameBytes() {
+      java.lang.Object ref = shortName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shortName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_GOV_DEPOSIT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minGovDeposit_ = "";
+    /**
+     * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The minGovDeposit.
+     */
+    @java.lang.Override
+    public java.lang.String getMinGovDeposit() {
+      java.lang.Object ref = minGovDeposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minGovDeposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The bytes for minGovDeposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinGovDepositBytes() {
+      java.lang.Object ref = minGovDeposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minGovDeposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GOV_TIME_IN_SECONDS_FIELD_NUMBER = 5;
+    private long govTimeInSeconds_ = 0L;
+    /**
+     * <code>uint64 gov_time_in_seconds = 5 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+     * @return The govTimeInSeconds.
+     */
+    @java.lang.Override
+    public long getGovTimeInSeconds() {
+      return govTimeInSeconds_;
+    }
+
+    public static final int GENESIS_TOKEN_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.AppProto.MintGenesisToken> genesisToken_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.AppProto.MintGenesisToken> getGenesisTokenList() {
+      return genesisToken_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder> 
+        getGenesisTokenOrBuilderList() {
+      return genesisToken_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getGenesisTokenCount() {
+      return genesisToken_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.MintGenesisToken getGenesisToken(int index) {
+      return genesisToken_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder getGenesisTokenOrBuilder(
+        int index) {
+      return genesisToken_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shortName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, shortName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minGovDeposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, minGovDeposit_);
+      }
+      if (govTimeInSeconds_ != 0L) {
+        output.writeUInt64(5, govTimeInSeconds_);
+      }
+      for (int i = 0; i < genesisToken_.size(); i++) {
+        output.writeMessage(6, genesisToken_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shortName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, shortName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minGovDeposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, minGovDeposit_);
+      }
+      if (govTimeInSeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, govTimeInSeconds_);
+      }
+      for (int i = 0; i < genesisToken_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, genesisToken_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.AppProto.AppData)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.AppProto.AppData other = (com.comdex.asset.v1beta1.AppProto.AppData) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getShortName()
+          .equals(other.getShortName())) return false;
+      if (!getMinGovDeposit()
+          .equals(other.getMinGovDeposit())) return false;
+      if (getGovTimeInSeconds()
+          != other.getGovTimeInSeconds()) return false;
+      if (!getGenesisTokenList()
+          .equals(other.getGenesisTokenList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SHORT_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getShortName().hashCode();
+      hash = (37 * hash) + MIN_GOV_DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinGovDeposit().hashCode();
+      hash = (37 * hash) + GOV_TIME_IN_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGovTimeInSeconds());
+      if (getGenesisTokenCount() > 0) {
+        hash = (37 * hash) + GENESIS_TOKEN_FIELD_NUMBER;
+        hash = (53 * hash) + getGenesisTokenList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.AppProto.AppData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AppData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AppData)
+        com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.AppProto.AppData.class, com.comdex.asset.v1beta1.AppProto.AppData.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.AppProto.AppData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        name_ = "";
+        shortName_ = "";
+        minGovDeposit_ = "";
+        govTimeInSeconds_ = 0L;
+        if (genesisTokenBuilder_ == null) {
+          genesisToken_ = java.util.Collections.emptyList();
+        } else {
+          genesisToken_ = null;
+          genesisTokenBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.AppData getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.AppData build() {
+        com.comdex.asset.v1beta1.AppProto.AppData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.AppData buildPartial() {
+        com.comdex.asset.v1beta1.AppProto.AppData result = new com.comdex.asset.v1beta1.AppProto.AppData(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.asset.v1beta1.AppProto.AppData result) {
+        if (genesisTokenBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            genesisToken_ = java.util.Collections.unmodifiableList(genesisToken_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.genesisToken_ = genesisToken_;
+        } else {
+          result.genesisToken_ = genesisTokenBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.AppProto.AppData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.shortName_ = shortName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.minGovDeposit_ = minGovDeposit_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.govTimeInSeconds_ = govTimeInSeconds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.AppProto.AppData) {
+          return mergeFrom((com.comdex.asset.v1beta1.AppProto.AppData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.AppProto.AppData other) {
+        if (other == com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getShortName().isEmpty()) {
+          shortName_ = other.shortName_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMinGovDeposit().isEmpty()) {
+          minGovDeposit_ = other.minGovDeposit_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getGovTimeInSeconds() != 0L) {
+          setGovTimeInSeconds(other.getGovTimeInSeconds());
+        }
+        if (genesisTokenBuilder_ == null) {
+          if (!other.genesisToken_.isEmpty()) {
+            if (genesisToken_.isEmpty()) {
+              genesisToken_ = other.genesisToken_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureGenesisTokenIsMutable();
+              genesisToken_.addAll(other.genesisToken_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.genesisToken_.isEmpty()) {
+            if (genesisTokenBuilder_.isEmpty()) {
+              genesisTokenBuilder_.dispose();
+              genesisTokenBuilder_ = null;
+              genesisToken_ = other.genesisToken_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              genesisTokenBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGenesisTokenFieldBuilder() : null;
+            } else {
+              genesisTokenBuilder_.addAllMessages(other.genesisToken_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                shortName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                minGovDeposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                govTimeInSeconds_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                com.comdex.asset.v1beta1.AppProto.MintGenesisToken m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.AppProto.MintGenesisToken.parser(),
+                        extensionRegistry);
+                if (genesisTokenBuilder_ == null) {
+                  ensureGenesisTokenIsMutable();
+                  genesisToken_.add(m);
+                } else {
+                  genesisTokenBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shortName_ = "";
+      /**
+       * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+       * @return The shortName.
+       */
+      public java.lang.String getShortName() {
+        java.lang.Object ref = shortName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shortName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+       * @return The bytes for shortName.
+       */
+      public com.google.protobuf.ByteString
+          getShortNameBytes() {
+        java.lang.Object ref = shortName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shortName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+       * @param value The shortName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShortName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        shortName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShortName() {
+        shortName_ = getDefaultInstance().getShortName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string short_name = 3 [json_name = "shortName", (.gogoproto.moretags) = "yaml:&#92;"short_name&#92;""];</code>
+       * @param value The bytes for shortName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShortNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        shortName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minGovDeposit_ = "";
+      /**
+       * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @return The minGovDeposit.
+       */
+      public java.lang.String getMinGovDeposit() {
+        java.lang.Object ref = minGovDeposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minGovDeposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @return The bytes for minGovDeposit.
+       */
+      public com.google.protobuf.ByteString
+          getMinGovDepositBytes() {
+        java.lang.Object ref = minGovDeposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minGovDeposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @param value The minGovDeposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinGovDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minGovDeposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinGovDeposit() {
+        minGovDeposit_ = getDefaultInstance().getMinGovDeposit();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_gov_deposit = 4 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @param value The bytes for minGovDeposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinGovDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minGovDeposit_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long govTimeInSeconds_ ;
+      /**
+       * <code>uint64 gov_time_in_seconds = 5 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+       * @return The govTimeInSeconds.
+       */
+      @java.lang.Override
+      public long getGovTimeInSeconds() {
+        return govTimeInSeconds_;
+      }
+      /**
+       * <code>uint64 gov_time_in_seconds = 5 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+       * @param value The govTimeInSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGovTimeInSeconds(long value) {
+
+        govTimeInSeconds_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 gov_time_in_seconds = 5 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGovTimeInSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        govTimeInSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.AppProto.MintGenesisToken> genesisToken_ =
+        java.util.Collections.emptyList();
+      private void ensureGenesisTokenIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          genesisToken_ = new java.util.ArrayList<com.comdex.asset.v1beta1.AppProto.MintGenesisToken>(genesisToken_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.MintGenesisToken, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder, com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder> genesisTokenBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AppProto.MintGenesisToken> getGenesisTokenList() {
+        if (genesisTokenBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(genesisToken_);
+        } else {
+          return genesisTokenBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public int getGenesisTokenCount() {
+        if (genesisTokenBuilder_ == null) {
+          return genesisToken_.size();
+        } else {
+          return genesisTokenBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken getGenesisToken(int index) {
+        if (genesisTokenBuilder_ == null) {
+          return genesisToken_.get(index);
+        } else {
+          return genesisTokenBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder setGenesisToken(
+          int index, com.comdex.asset.v1beta1.AppProto.MintGenesisToken value) {
+        if (genesisTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGenesisTokenIsMutable();
+          genesisToken_.set(index, value);
+          onChanged();
+        } else {
+          genesisTokenBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder setGenesisToken(
+          int index, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder builderForValue) {
+        if (genesisTokenBuilder_ == null) {
+          ensureGenesisTokenIsMutable();
+          genesisToken_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          genesisTokenBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder addGenesisToken(com.comdex.asset.v1beta1.AppProto.MintGenesisToken value) {
+        if (genesisTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGenesisTokenIsMutable();
+          genesisToken_.add(value);
+          onChanged();
+        } else {
+          genesisTokenBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder addGenesisToken(
+          int index, com.comdex.asset.v1beta1.AppProto.MintGenesisToken value) {
+        if (genesisTokenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGenesisTokenIsMutable();
+          genesisToken_.add(index, value);
+          onChanged();
+        } else {
+          genesisTokenBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder addGenesisToken(
+          com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder builderForValue) {
+        if (genesisTokenBuilder_ == null) {
+          ensureGenesisTokenIsMutable();
+          genesisToken_.add(builderForValue.build());
+          onChanged();
+        } else {
+          genesisTokenBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder addGenesisToken(
+          int index, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder builderForValue) {
+        if (genesisTokenBuilder_ == null) {
+          ensureGenesisTokenIsMutable();
+          genesisToken_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          genesisTokenBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder addAllGenesisToken(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.AppProto.MintGenesisToken> values) {
+        if (genesisTokenBuilder_ == null) {
+          ensureGenesisTokenIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, genesisToken_);
+          onChanged();
+        } else {
+          genesisTokenBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder clearGenesisToken() {
+        if (genesisTokenBuilder_ == null) {
+          genesisToken_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          genesisTokenBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public Builder removeGenesisToken(int index) {
+        if (genesisTokenBuilder_ == null) {
+          ensureGenesisTokenIsMutable();
+          genesisToken_.remove(index);
+          onChanged();
+        } else {
+          genesisTokenBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder getGenesisTokenBuilder(
+          int index) {
+        return getGenesisTokenFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder getGenesisTokenOrBuilder(
+          int index) {
+        if (genesisTokenBuilder_ == null) {
+          return genesisToken_.get(index);  } else {
+          return genesisTokenBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder> 
+           getGenesisTokenOrBuilderList() {
+        if (genesisTokenBuilder_ != null) {
+          return genesisTokenBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(genesisToken_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder addGenesisTokenBuilder() {
+        return getGenesisTokenFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.AppProto.MintGenesisToken.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder addGenesisTokenBuilder(
+          int index) {
+        return getGenesisTokenFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.MintGenesisToken genesis_token = 6 [json_name = "genesisToken", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"genesis_token&#92;""];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder> 
+           getGenesisTokenBuilderList() {
+        return getGenesisTokenFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.MintGenesisToken, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder, com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder> 
+          getGenesisTokenFieldBuilder() {
+        if (genesisTokenBuilder_ == null) {
+          genesisTokenBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.AppProto.MintGenesisToken, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder, com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder>(
+                  genesisToken_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          genesisToken_ = null;
+        }
+        return genesisTokenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AppData)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AppData)
+    private static final com.comdex.asset.v1beta1.AppProto.AppData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.AppProto.AppData();
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AppData>
+        PARSER = new com.google.protobuf.AbstractParser<AppData>() {
+      @java.lang.Override
+      public AppData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MintGenesisTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.MintGenesisToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    long getAssetId();
+
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The genesisSupply.
+     */
+    java.lang.String getGenesisSupply();
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for genesisSupply.
+     */
+    com.google.protobuf.ByteString
+        getGenesisSupplyBytes();
+
+    /**
+     * <code>bool is_gov_token = 3 [json_name = "isGovToken", (.gogoproto.moretags) = "yaml:&#92;"is_gov_token&#92;""];</code>
+     * @return The isGovToken.
+     */
+    boolean getIsGovToken();
+
+    /**
+     * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.MintGenesisToken}
+   */
+  public static final class MintGenesisToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.MintGenesisToken)
+      MintGenesisTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MintGenesisToken.newBuilder() to construct.
+    private MintGenesisToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MintGenesisToken() {
+      genesisSupply_ = "";
+      recipient_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MintGenesisToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_MintGenesisToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_MintGenesisToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.AppProto.MintGenesisToken.class, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder.class);
+    }
+
+    public static final int ASSET_ID_FIELD_NUMBER = 1;
+    private long assetId_ = 0L;
+    /**
+     * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+     * @return The assetId.
+     */
+    @java.lang.Override
+    public long getAssetId() {
+      return assetId_;
+    }
+
+    public static final int GENESIS_SUPPLY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object genesisSupply_ = "";
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The genesisSupply.
+     */
+    @java.lang.Override
+    public java.lang.String getGenesisSupply() {
+      java.lang.Object ref = genesisSupply_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        genesisSupply_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for genesisSupply.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGenesisSupplyBytes() {
+      java.lang.Object ref = genesisSupply_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        genesisSupply_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IS_GOV_TOKEN_FIELD_NUMBER = 3;
+    private boolean isGovToken_ = false;
+    /**
+     * <code>bool is_gov_token = 3 [json_name = "isGovToken", (.gogoproto.moretags) = "yaml:&#92;"is_gov_token&#92;""];</code>
+     * @return The isGovToken.
+     */
+    @java.lang.Override
+    public boolean getIsGovToken() {
+      return isGovToken_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assetId_ != 0L) {
+        output.writeUInt64(1, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisSupply_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, genesisSupply_);
+      }
+      if (isGovToken_ != false) {
+        output.writeBool(3, isGovToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recipient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assetId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, assetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisSupply_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, genesisSupply_);
+      }
+      if (isGovToken_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isGovToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recipient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.AppProto.MintGenesisToken)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.AppProto.MintGenesisToken other = (com.comdex.asset.v1beta1.AppProto.MintGenesisToken) obj;
+
+      if (getAssetId()
+          != other.getAssetId()) return false;
+      if (!getGenesisSupply()
+          .equals(other.getGenesisSupply())) return false;
+      if (getIsGovToken()
+          != other.getIsGovToken()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAssetId());
+      hash = (37 * hash) + GENESIS_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + getGenesisSupply().hashCode();
+      hash = (37 * hash) + IS_GOV_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsGovToken());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.AppProto.MintGenesisToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.MintGenesisToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.MintGenesisToken)
+        com.comdex.asset.v1beta1.AppProto.MintGenesisTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_MintGenesisToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_MintGenesisToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.AppProto.MintGenesisToken.class, com.comdex.asset.v1beta1.AppProto.MintGenesisToken.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.AppProto.MintGenesisToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetId_ = 0L;
+        genesisSupply_ = "";
+        isGovToken_ = false;
+        recipient_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_MintGenesisToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.AppProto.MintGenesisToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken build() {
+        com.comdex.asset.v1beta1.AppProto.MintGenesisToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.MintGenesisToken buildPartial() {
+        com.comdex.asset.v1beta1.AppProto.MintGenesisToken result = new com.comdex.asset.v1beta1.AppProto.MintGenesisToken(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.AppProto.MintGenesisToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetId_ = assetId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.genesisSupply_ = genesisSupply_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.isGovToken_ = isGovToken_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.AppProto.MintGenesisToken) {
+          return mergeFrom((com.comdex.asset.v1beta1.AppProto.MintGenesisToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.AppProto.MintGenesisToken other) {
+        if (other == com.comdex.asset.v1beta1.AppProto.MintGenesisToken.getDefaultInstance()) return this;
+        if (other.getAssetId() != 0L) {
+          setAssetId(other.getAssetId());
+        }
+        if (!other.getGenesisSupply().isEmpty()) {
+          genesisSupply_ = other.genesisSupply_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getIsGovToken() != false) {
+          setIsGovToken(other.getIsGovToken());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                assetId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                genesisSupply_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                isGovToken_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long assetId_ ;
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return The assetId.
+       */
+      @java.lang.Override
+      public long getAssetId() {
+        return assetId_;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @param value The assetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssetId(long value) {
+
+        assetId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 asset_id = 1 [json_name = "assetId", (.gogoproto.moretags) = "yaml:&#92;"asset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssetId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assetId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object genesisSupply_ = "";
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The genesisSupply.
+       */
+      public java.lang.String getGenesisSupply() {
+        java.lang.Object ref = genesisSupply_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          genesisSupply_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for genesisSupply.
+       */
+      public com.google.protobuf.ByteString
+          getGenesisSupplyBytes() {
+        java.lang.Object ref = genesisSupply_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          genesisSupply_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The genesisSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisSupply(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        genesisSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenesisSupply() {
+        genesisSupply_ = getDefaultInstance().getGenesisSupply();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string genesis_supply = 2 [json_name = "genesisSupply", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for genesisSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisSupplyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        genesisSupply_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean isGovToken_ ;
+      /**
+       * <code>bool is_gov_token = 3 [json_name = "isGovToken", (.gogoproto.moretags) = "yaml:&#92;"is_gov_token&#92;""];</code>
+       * @return The isGovToken.
+       */
+      @java.lang.Override
+      public boolean getIsGovToken() {
+        return isGovToken_;
+      }
+      /**
+       * <code>bool is_gov_token = 3 [json_name = "isGovToken", (.gogoproto.moretags) = "yaml:&#92;"is_gov_token&#92;""];</code>
+       * @param value The isGovToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsGovToken(boolean value) {
+
+        isGovToken_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_gov_token = 3 [json_name = "isGovToken", (.gogoproto.moretags) = "yaml:&#92;"is_gov_token&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsGovToken() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        isGovToken_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recipient = 4 [json_name = "recipient", (.gogoproto.moretags) = "yaml:&#92;"recipient&#92;""];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.MintGenesisToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.MintGenesisToken)
+    private static final com.comdex.asset.v1beta1.AppProto.MintGenesisToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.AppProto.MintGenesisToken();
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.MintGenesisToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MintGenesisToken>
+        PARSER = new com.google.protobuf.AbstractParser<MintGenesisToken>() {
+      @java.lang.Override
+      public MintGenesisToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MintGenesisToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MintGenesisToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.MintGenesisToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AppAndGovTimeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AppAndGovTime)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    long getAppId();
+
+    /**
+     * <code>uint64 gov_time_in_seconds = 2 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+     * @return The govTimeInSeconds.
+     */
+    long getGovTimeInSeconds();
+
+    /**
+     * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The minGovDeposit.
+     */
+    java.lang.String getMinGovDeposit();
+    /**
+     * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The bytes for minGovDeposit.
+     */
+    com.google.protobuf.ByteString
+        getMinGovDepositBytes();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AppAndGovTime}
+   */
+  public static final class AppAndGovTime extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AppAndGovTime)
+      AppAndGovTimeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppAndGovTime.newBuilder() to construct.
+    private AppAndGovTime(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppAndGovTime() {
+      minGovDeposit_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AppAndGovTime();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppAndGovTime_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppAndGovTime_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.AppProto.AppAndGovTime.class, com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder.class);
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 1;
+    private long appId_ = 0L;
+    /**
+     * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public long getAppId() {
+      return appId_;
+    }
+
+    public static final int GOV_TIME_IN_SECONDS_FIELD_NUMBER = 2;
+    private long govTimeInSeconds_ = 0L;
+    /**
+     * <code>uint64 gov_time_in_seconds = 2 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+     * @return The govTimeInSeconds.
+     */
+    @java.lang.Override
+    public long getGovTimeInSeconds() {
+      return govTimeInSeconds_;
+    }
+
+    public static final int MIN_GOV_DEPOSIT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minGovDeposit_ = "";
+    /**
+     * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The minGovDeposit.
+     */
+    @java.lang.Override
+    public java.lang.String getMinGovDeposit() {
+      java.lang.Object ref = minGovDeposit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minGovDeposit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+     * @return The bytes for minGovDeposit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinGovDepositBytes() {
+      java.lang.Object ref = minGovDeposit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minGovDeposit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (appId_ != 0L) {
+        output.writeUInt64(1, appId_);
+      }
+      if (govTimeInSeconds_ != 0L) {
+        output.writeUInt64(2, govTimeInSeconds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minGovDeposit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minGovDeposit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (appId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, appId_);
+      }
+      if (govTimeInSeconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, govTimeInSeconds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minGovDeposit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minGovDeposit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.AppProto.AppAndGovTime)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.AppProto.AppAndGovTime other = (com.comdex.asset.v1beta1.AppProto.AppAndGovTime) obj;
+
+      if (getAppId()
+          != other.getAppId()) return false;
+      if (getGovTimeInSeconds()
+          != other.getGovTimeInSeconds()) return false;
+      if (!getMinGovDeposit()
+          .equals(other.getMinGovDeposit())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAppId());
+      hash = (37 * hash) + GOV_TIME_IN_SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getGovTimeInSeconds());
+      hash = (37 * hash) + MIN_GOV_DEPOSIT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinGovDeposit().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.AppProto.AppAndGovTime prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AppAndGovTime}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AppAndGovTime)
+        com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppAndGovTime_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppAndGovTime_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.AppProto.AppAndGovTime.class, com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.AppProto.AppAndGovTime.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        appId_ = 0L;
+        govTimeInSeconds_ = 0L;
+        minGovDeposit_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.AppProto.internal_static_comdex_asset_v1beta1_AppAndGovTime_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.AppAndGovTime getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.AppAndGovTime build() {
+        com.comdex.asset.v1beta1.AppProto.AppAndGovTime result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.AppProto.AppAndGovTime buildPartial() {
+        com.comdex.asset.v1beta1.AppProto.AppAndGovTime result = new com.comdex.asset.v1beta1.AppProto.AppAndGovTime(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.AppProto.AppAndGovTime result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appId_ = appId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.govTimeInSeconds_ = govTimeInSeconds_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.minGovDeposit_ = minGovDeposit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.AppProto.AppAndGovTime) {
+          return mergeFrom((com.comdex.asset.v1beta1.AppProto.AppAndGovTime)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.AppProto.AppAndGovTime other) {
+        if (other == com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance()) return this;
+        if (other.getAppId() != 0L) {
+          setAppId(other.getAppId());
+        }
+        if (other.getGovTimeInSeconds() != 0L) {
+          setGovTimeInSeconds(other.getGovTimeInSeconds());
+        }
+        if (!other.getMinGovDeposit().isEmpty()) {
+          minGovDeposit_ = other.minGovDeposit_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                appId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                govTimeInSeconds_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                minGovDeposit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long appId_ ;
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return The appId.
+       */
+      @java.lang.Override
+      public long getAppId() {
+        return appId_;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @param value The appId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppId(long value) {
+
+        appId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 app_id = 1 [json_name = "appId", (.gogoproto.moretags) = "yaml:&#92;"app_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        appId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long govTimeInSeconds_ ;
+      /**
+       * <code>uint64 gov_time_in_seconds = 2 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+       * @return The govTimeInSeconds.
+       */
+      @java.lang.Override
+      public long getGovTimeInSeconds() {
+        return govTimeInSeconds_;
+      }
+      /**
+       * <code>uint64 gov_time_in_seconds = 2 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+       * @param value The govTimeInSeconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGovTimeInSeconds(long value) {
+
+        govTimeInSeconds_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 gov_time_in_seconds = 2 [json_name = "govTimeInSeconds", (.gogoproto.moretags) = "yaml:&#92;"gov_time_in_seconds&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGovTimeInSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        govTimeInSeconds_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minGovDeposit_ = "";
+      /**
+       * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @return The minGovDeposit.
+       */
+      public java.lang.String getMinGovDeposit() {
+        java.lang.Object ref = minGovDeposit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minGovDeposit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @return The bytes for minGovDeposit.
+       */
+      public com.google.protobuf.ByteString
+          getMinGovDepositBytes() {
+        java.lang.Object ref = minGovDeposit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minGovDeposit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @param value The minGovDeposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinGovDeposit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minGovDeposit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinGovDeposit() {
+        minGovDeposit_ = getDefaultInstance().getMinGovDeposit();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_gov_deposit = 3 [json_name = "minGovDeposit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"min_gov_deposit&#92;""];</code>
+       * @param value The bytes for minGovDeposit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinGovDepositBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minGovDeposit_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AppAndGovTime)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AppAndGovTime)
+    private static final com.comdex.asset.v1beta1.AppProto.AppAndGovTime DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.AppProto.AppAndGovTime();
+    }
+
+    public static com.comdex.asset.v1beta1.AppProto.AppAndGovTime getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AppAndGovTime>
+        PARSER = new com.google.protobuf.AbstractParser<AppAndGovTime>() {
+      @java.lang.Override
+      public AppAndGovTime parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppAndGovTime> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppAndGovTime> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppAndGovTime getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AppData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AppData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_MintGenesisToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_MintGenesisToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AppAndGovTime_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AppAndGovTime_fieldAccessorTable;
 
@@ -63,12 +2979,12 @@ public final class AppProto {
       "ds\"R\020govTimeInSeconds\022p\n\017min_gov_deposit" +
       "\030\003 \001(\tBH\310\336\037\000\332\336\037&github.com/cosmos/cosmos" +
       "-sdk/types.Int\362\336\037\026yaml:\"min_gov_deposit\"" +
-      "R\rminGovDepositB\317\001\n\030com.comdex.asset.v1b" +
-      "eta1B\010AppProtoP\001Z/github.com/comdex-offi" +
-      "cial/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex" +
-      ".Asset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 " +
-      "Comdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comde" +
-      "x::Asset::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "R\rminGovDepositB\315\001\n\030com.comdex.asset.v1b" +
+      "eta1B\010AppProtoZ/github.com/comdex-offici" +
+      "al/comdex/x/asset/types\242\002\003CAX\252\002\024Comdex.A" +
+      "sset.V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Co" +
+      "mdex\\Asset\\V1beta1\\GPBMetadata\352\002\026Comdex:" +
+      ":Asset::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

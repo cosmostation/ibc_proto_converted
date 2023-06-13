@@ -14,9 +14,791 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.market.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    java.util.List<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage> 
+        getTimeWeightedAverageList();
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage getTimeWeightedAverage(int index);
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    int getTimeWeightedAverageCount();
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    java.util.List<? extends com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder> 
+        getTimeWeightedAverageOrBuilderList();
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder getTimeWeightedAverageOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.market.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.market.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      timeWeightedAverage_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.market.v1beta1.GenesisProto.internal_static_comdex_market_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.market.v1beta1.GenesisProto.internal_static_comdex_market_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.market.v1beta1.GenesisProto.GenesisState.class, com.comdex.market.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int TIME_WEIGHTED_AVERAGE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage> timeWeightedAverage_;
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage> getTimeWeightedAverageList() {
+      return timeWeightedAverage_;
+    }
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder> 
+        getTimeWeightedAverageOrBuilderList() {
+      return timeWeightedAverage_;
+    }
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getTimeWeightedAverageCount() {
+      return timeWeightedAverage_.size();
+    }
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage getTimeWeightedAverage(int index) {
+      return timeWeightedAverage_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder getTimeWeightedAverageOrBuilder(
+        int index) {
+      return timeWeightedAverage_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < timeWeightedAverage_.size(); i++) {
+        output.writeMessage(1, timeWeightedAverage_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < timeWeightedAverage_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, timeWeightedAverage_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.market.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.comdex.market.v1beta1.GenesisProto.GenesisState other = (com.comdex.market.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getTimeWeightedAverageList()
+          .equals(other.getTimeWeightedAverageList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTimeWeightedAverageCount() > 0) {
+        hash = (37 * hash) + TIME_WEIGHTED_AVERAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeWeightedAverageList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.market.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.market.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.market.v1beta1.GenesisState)
+        com.comdex.market.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.market.v1beta1.GenesisProto.internal_static_comdex_market_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.market.v1beta1.GenesisProto.internal_static_comdex_market_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.market.v1beta1.GenesisProto.GenesisState.class, com.comdex.market.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.comdex.market.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (timeWeightedAverageBuilder_ == null) {
+          timeWeightedAverage_ = java.util.Collections.emptyList();
+        } else {
+          timeWeightedAverage_ = null;
+          timeWeightedAverageBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.market.v1beta1.GenesisProto.internal_static_comdex_market_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.market.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.comdex.market.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.market.v1beta1.GenesisProto.GenesisState build() {
+        com.comdex.market.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.market.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.comdex.market.v1beta1.GenesisProto.GenesisState result = new com.comdex.market.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.market.v1beta1.GenesisProto.GenesisState result) {
+        if (timeWeightedAverageBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            timeWeightedAverage_ = java.util.Collections.unmodifiableList(timeWeightedAverage_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.timeWeightedAverage_ = timeWeightedAverage_;
+        } else {
+          result.timeWeightedAverage_ = timeWeightedAverageBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.market.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.market.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.comdex.market.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.market.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.comdex.market.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (timeWeightedAverageBuilder_ == null) {
+          if (!other.timeWeightedAverage_.isEmpty()) {
+            if (timeWeightedAverage_.isEmpty()) {
+              timeWeightedAverage_ = other.timeWeightedAverage_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTimeWeightedAverageIsMutable();
+              timeWeightedAverage_.addAll(other.timeWeightedAverage_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.timeWeightedAverage_.isEmpty()) {
+            if (timeWeightedAverageBuilder_.isEmpty()) {
+              timeWeightedAverageBuilder_.dispose();
+              timeWeightedAverageBuilder_ = null;
+              timeWeightedAverage_ = other.timeWeightedAverage_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              timeWeightedAverageBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTimeWeightedAverageFieldBuilder() : null;
+            } else {
+              timeWeightedAverageBuilder_.addAllMessages(other.timeWeightedAverage_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage m =
+                    input.readMessage(
+                        com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.parser(),
+                        extensionRegistry);
+                if (timeWeightedAverageBuilder_ == null) {
+                  ensureTimeWeightedAverageIsMutable();
+                  timeWeightedAverage_.add(m);
+                } else {
+                  timeWeightedAverageBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage> timeWeightedAverage_ =
+        java.util.Collections.emptyList();
+      private void ensureTimeWeightedAverageIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          timeWeightedAverage_ = new java.util.ArrayList<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage>(timeWeightedAverage_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder> timeWeightedAverageBuilder_;
+
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public java.util.List<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage> getTimeWeightedAverageList() {
+        if (timeWeightedAverageBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(timeWeightedAverage_);
+        } else {
+          return timeWeightedAverageBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public int getTimeWeightedAverageCount() {
+        if (timeWeightedAverageBuilder_ == null) {
+          return timeWeightedAverage_.size();
+        } else {
+          return timeWeightedAverageBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage getTimeWeightedAverage(int index) {
+        if (timeWeightedAverageBuilder_ == null) {
+          return timeWeightedAverage_.get(index);
+        } else {
+          return timeWeightedAverageBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder setTimeWeightedAverage(
+          int index, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage value) {
+        if (timeWeightedAverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.set(index, value);
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder setTimeWeightedAverage(
+          int index, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder builderForValue) {
+        if (timeWeightedAverageBuilder_ == null) {
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder addTimeWeightedAverage(com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage value) {
+        if (timeWeightedAverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.add(value);
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder addTimeWeightedAverage(
+          int index, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage value) {
+        if (timeWeightedAverageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.add(index, value);
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder addTimeWeightedAverage(
+          com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder builderForValue) {
+        if (timeWeightedAverageBuilder_ == null) {
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.add(builderForValue.build());
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder addTimeWeightedAverage(
+          int index, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder builderForValue) {
+        if (timeWeightedAverageBuilder_ == null) {
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder addAllTimeWeightedAverage(
+          java.lang.Iterable<? extends com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage> values) {
+        if (timeWeightedAverageBuilder_ == null) {
+          ensureTimeWeightedAverageIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, timeWeightedAverage_);
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder clearTimeWeightedAverage() {
+        if (timeWeightedAverageBuilder_ == null) {
+          timeWeightedAverage_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public Builder removeTimeWeightedAverage(int index) {
+        if (timeWeightedAverageBuilder_ == null) {
+          ensureTimeWeightedAverageIsMutable();
+          timeWeightedAverage_.remove(index);
+          onChanged();
+        } else {
+          timeWeightedAverageBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder getTimeWeightedAverageBuilder(
+          int index) {
+        return getTimeWeightedAverageFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder getTimeWeightedAverageOrBuilder(
+          int index) {
+        if (timeWeightedAverageBuilder_ == null) {
+          return timeWeightedAverage_.get(index);  } else {
+          return timeWeightedAverageBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public java.util.List<? extends com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder> 
+           getTimeWeightedAverageOrBuilderList() {
+        if (timeWeightedAverageBuilder_ != null) {
+          return timeWeightedAverageBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(timeWeightedAverage_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder addTimeWeightedAverageBuilder() {
+        return getTimeWeightedAverageFieldBuilder().addBuilder(
+            com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder addTimeWeightedAverageBuilder(
+          int index) {
+        return getTimeWeightedAverageFieldBuilder().addBuilder(
+            index, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.market.v1beta1.TimeWeightedAverage time_weighted_average = 1 [json_name = "timeWeightedAverage", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"time_weighted_average&#92;""];</code>
+       */
+      public java.util.List<com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder> 
+           getTimeWeightedAverageBuilderList() {
+        return getTimeWeightedAverageFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder> 
+          getTimeWeightedAverageFieldBuilder() {
+        if (timeWeightedAverageBuilder_ == null) {
+          timeWeightedAverageBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverage.Builder, com.comdex.market.v1beta1.MarketProto.TimeWeightedAverageOrBuilder>(
+                  timeWeightedAverage_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          timeWeightedAverage_ = null;
+        }
+        return timeWeightedAverageBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.market.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.market.v1beta1.GenesisState)
+    private static final com.comdex.market.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.market.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.comdex.market.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.market.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_market_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_market_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -34,13 +816,13 @@ public final class GenesisProto {
       "\001\n\014GenesisState\022\204\001\n\025time_weighted_averag" +
       "e\030\001 \003(\0132*.comdex.market.v1beta1.TimeWeig" +
       "htedAverageB$\310\336\037\000\362\336\037\034yaml:\"time_weighted" +
-      "_average\"R\023timeWeightedAverageB\331\001\n\031com.c" +
-      "omdex.market.v1beta1B\014GenesisProtoP\001Z0gi" +
-      "thub.com/comdex-official/comdex/x/market" +
-      "/types\242\002\003CMX\252\002\025Comdex.Market.V1beta1\312\002\025C" +
-      "omdex\\Market\\V1beta1\342\002!Comdex\\Market\\V1b" +
-      "eta1\\GPBMetadata\352\002\027Comdex::Market::V1bet" +
-      "a1\310\341\036\000\250\342\036\000b\006proto3"
+      "_average\"R\023timeWeightedAverageB\327\001\n\031com.c" +
+      "omdex.market.v1beta1B\014GenesisProtoZ0gith" +
+      "ub.com/comdex-official/comdex/x/market/t" +
+      "ypes\242\002\003CMX\252\002\025Comdex.Market.V1beta1\312\002\025Com" +
+      "dex\\Market\\V1beta1\342\002!Comdex\\Market\\V1bet" +
+      "a1\\GPBMetadata\352\002\027Comdex::Market::V1beta1" +
+      "\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,34 +14,6624 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code stafihub.stafihub.bridge.DenomType}
+   */
+  public enum DenomType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    UNSPECIFIED(0),
+    /**
+     * <code>NATIVE = 1 [(.gogoproto.enumvalue_customname) = "Native"];</code>
+     */
+    NATIVE(1),
+    /**
+     * <code>EXTERNAL = 2 [(.gogoproto.enumvalue_customname) = "External"];</code>
+     */
+    EXTERNAL(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    public static final int UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>NATIVE = 1 [(.gogoproto.enumvalue_customname) = "Native"];</code>
+     */
+    public static final int NATIVE_VALUE = 1;
+    /**
+     * <code>EXTERNAL = 2 [(.gogoproto.enumvalue_customname) = "External"];</code>
+     */
+    public static final int EXTERNAL_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DenomType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DenomType forNumber(int value) {
+      switch (value) {
+        case 0: return UNSPECIFIED;
+        case 1: return NATIVE;
+        case 2: return EXTERNAL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DenomType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DenomType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DenomType>() {
+            public DenomType findValueByNumber(int number) {
+              return DenomType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DenomType[] VALUES = values();
+
+    public static DenomType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DenomType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:stafihub.stafihub.bridge.DenomType)
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.stafihub.stafihub.bridge.ParamsProto.Params getParams();
+    /**
+     * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.bridge.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.bridge.GenesisProto.DepositCount> 
+        getDepositCountListList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.DepositCount getDepositCountList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    int getDepositCountListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder> 
+        getDepositCountListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder getDepositCountListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal> 
+        getProposalListList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal getProposalList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    int getProposalListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder> 
+        getProposalListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder getProposalListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.bridge.GenesisProto.RelayFee> 
+        getRelayFeeListList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.RelayFee getRelayFeeList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    int getRelayFeeListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder> 
+        getRelayFeeListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder getRelayFeeListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+     * @return A list containing the chainIdList.
+     */
+    java.util.List<java.lang.Integer> getChainIdListList();
+    /**
+     * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+     * @return The count of chainIdList.
+     */
+    int getChainIdListCount();
+    /**
+     * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+     * @param index The index of the element to return.
+     * @return The chainIdList at the given index.
+     */
+    int getChainIdList(int index);
+
+    /**
+     * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+     * @return The relayFeeReceiver.
+     */
+    java.lang.String getRelayFeeReceiver();
+    /**
+     * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+     * @return The bytes for relayFeeReceiver.
+     */
+    com.google.protobuf.ByteString
+        getRelayFeeReceiverBytes();
+
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom> 
+        getResourceIdToDenomListList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom getResourceIdToDenomList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    int getResourceIdToDenomListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder> 
+        getResourceIdToDenomListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder getResourceIdToDenomListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom> 
+        getBannedDenomListList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.BannedDenom getBannedDenomList(int index);
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    int getBannedDenomListCount();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder> 
+        getBannedDenomListOrBuilderList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder getBannedDenomListOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the bridge module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.bridge.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      depositCountList_ = java.util.Collections.emptyList();
+      proposalList_ = java.util.Collections.emptyList();
+      relayFeeList_ = java.util.Collections.emptyList();
+      chainIdList_ = emptyIntList();
+      relayFeeReceiver_ = "";
+      resourceIdToDenomList_ = java.util.Collections.emptyList();
+      bannedDenomList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.GenesisProto.GenesisState.class, com.stafihub.stafihub.bridge.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.bridge.ParamsProto.Params params_;
+    /**
+     * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ParamsProto.Params getParams() {
+      return params_ == null ? com.stafihub.stafihub.bridge.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.stafihub.stafihub.bridge.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int DEPOSITCOUNTLIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.DepositCount> depositCountList_;
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.DepositCount> getDepositCountListList() {
+      return depositCountList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder> 
+        getDepositCountListOrBuilderList() {
+      return depositCountList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    @java.lang.Override
+    public int getDepositCountListCount() {
+      return depositCountList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.DepositCount getDepositCountList(int index) {
+      return depositCountList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder getDepositCountListOrBuilder(
+        int index) {
+      return depositCountList_.get(index);
+    }
+
+    public static final int PROPOSALLIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal> proposalList_;
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal> getProposalListList() {
+      return proposalList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder> 
+        getProposalListOrBuilderList() {
+      return proposalList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    @java.lang.Override
+    public int getProposalListCount() {
+      return proposalList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal getProposalList(int index) {
+      return proposalList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder getProposalListOrBuilder(
+        int index) {
+      return proposalList_.get(index);
+    }
+
+    public static final int RELAYFEELIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.RelayFee> relayFeeList_;
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.RelayFee> getRelayFeeListList() {
+      return relayFeeList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder> 
+        getRelayFeeListOrBuilderList() {
+      return relayFeeList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    @java.lang.Override
+    public int getRelayFeeListCount() {
+      return relayFeeList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.RelayFee getRelayFeeList(int index) {
+      return relayFeeList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder getRelayFeeListOrBuilder(
+        int index) {
+      return relayFeeList_.get(index);
+    }
+
+    public static final int CHAINIDLIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.IntList chainIdList_;
+    /**
+     * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+     * @return A list containing the chainIdList.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getChainIdListList() {
+      return chainIdList_;
+    }
+    /**
+     * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+     * @return The count of chainIdList.
+     */
+    public int getChainIdListCount() {
+      return chainIdList_.size();
+    }
+    /**
+     * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+     * @param index The index of the element to return.
+     * @return The chainIdList at the given index.
+     */
+    public int getChainIdList(int index) {
+      return chainIdList_.getInt(index);
+    }
+    private int chainIdListMemoizedSerializedSize = -1;
+
+    public static final int RELAYFEERECEIVER_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object relayFeeReceiver_ = "";
+    /**
+     * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+     * @return The relayFeeReceiver.
+     */
+    @java.lang.Override
+    public java.lang.String getRelayFeeReceiver() {
+      java.lang.Object ref = relayFeeReceiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        relayFeeReceiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+     * @return The bytes for relayFeeReceiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelayFeeReceiverBytes() {
+      java.lang.Object ref = relayFeeReceiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        relayFeeReceiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCEIDTODENOMLIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom> resourceIdToDenomList_;
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom> getResourceIdToDenomListList() {
+      return resourceIdToDenomList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder> 
+        getResourceIdToDenomListOrBuilderList() {
+      return resourceIdToDenomList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    @java.lang.Override
+    public int getResourceIdToDenomListCount() {
+      return resourceIdToDenomList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom getResourceIdToDenomList(int index) {
+      return resourceIdToDenomList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder getResourceIdToDenomListOrBuilder(
+        int index) {
+      return resourceIdToDenomList_.get(index);
+    }
+
+    public static final int BANNEDDENOMLIST_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom> bannedDenomList_;
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom> getBannedDenomListList() {
+      return bannedDenomList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder> 
+        getBannedDenomListOrBuilderList() {
+      return bannedDenomList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    @java.lang.Override
+    public int getBannedDenomListCount() {
+      return bannedDenomList_.size();
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom getBannedDenomList(int index) {
+      return bannedDenomList_.get(index);
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder getBannedDenomListOrBuilder(
+        int index) {
+      return bannedDenomList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < depositCountList_.size(); i++) {
+        output.writeMessage(2, depositCountList_.get(i));
+      }
+      for (int i = 0; i < proposalList_.size(); i++) {
+        output.writeMessage(3, proposalList_.get(i));
+      }
+      for (int i = 0; i < relayFeeList_.size(); i++) {
+        output.writeMessage(4, relayFeeList_.get(i));
+      }
+      if (getChainIdListList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(chainIdListMemoizedSerializedSize);
+      }
+      for (int i = 0; i < chainIdList_.size(); i++) {
+        output.writeUInt32NoTag(chainIdList_.getInt(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayFeeReceiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, relayFeeReceiver_);
+      }
+      for (int i = 0; i < resourceIdToDenomList_.size(); i++) {
+        output.writeMessage(7, resourceIdToDenomList_.get(i));
+      }
+      for (int i = 0; i < bannedDenomList_.size(); i++) {
+        output.writeMessage(8, bannedDenomList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < depositCountList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, depositCountList_.get(i));
+      }
+      for (int i = 0; i < proposalList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, proposalList_.get(i));
+      }
+      for (int i = 0; i < relayFeeList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, relayFeeList_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < chainIdList_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(chainIdList_.getInt(i));
+        }
+        size += dataSize;
+        if (!getChainIdListList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        chainIdListMemoizedSerializedSize = dataSize;
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(relayFeeReceiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, relayFeeReceiver_);
+      }
+      for (int i = 0; i < resourceIdToDenomList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, resourceIdToDenomList_.get(i));
+      }
+      for (int i = 0; i < bannedDenomList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, bannedDenomList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.GenesisProto.GenesisState other = (com.stafihub.stafihub.bridge.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getDepositCountListList()
+          .equals(other.getDepositCountListList())) return false;
+      if (!getProposalListList()
+          .equals(other.getProposalListList())) return false;
+      if (!getRelayFeeListList()
+          .equals(other.getRelayFeeListList())) return false;
+      if (!getChainIdListList()
+          .equals(other.getChainIdListList())) return false;
+      if (!getRelayFeeReceiver()
+          .equals(other.getRelayFeeReceiver())) return false;
+      if (!getResourceIdToDenomListList()
+          .equals(other.getResourceIdToDenomListList())) return false;
+      if (!getBannedDenomListList()
+          .equals(other.getBannedDenomListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getDepositCountListCount() > 0) {
+        hash = (37 * hash) + DEPOSITCOUNTLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositCountListList().hashCode();
+      }
+      if (getProposalListCount() > 0) {
+        hash = (37 * hash) + PROPOSALLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getProposalListList().hashCode();
+      }
+      if (getRelayFeeListCount() > 0) {
+        hash = (37 * hash) + RELAYFEELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getRelayFeeListList().hashCode();
+      }
+      if (getChainIdListCount() > 0) {
+        hash = (37 * hash) + CHAINIDLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getChainIdListList().hashCode();
+      }
+      hash = (37 * hash) + RELAYFEERECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getRelayFeeReceiver().hashCode();
+      if (getResourceIdToDenomListCount() > 0) {
+        hash = (37 * hash) + RESOURCEIDTODENOMLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceIdToDenomListList().hashCode();
+      }
+      if (getBannedDenomListCount() > 0) {
+        hash = (37 * hash) + BANNEDDENOMLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getBannedDenomListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the bridge module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.bridge.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.GenesisState)
+        com.stafihub.stafihub.bridge.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.GenesisProto.GenesisState.class, com.stafihub.stafihub.bridge.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (depositCountListBuilder_ == null) {
+          depositCountList_ = java.util.Collections.emptyList();
+        } else {
+          depositCountList_ = null;
+          depositCountListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (proposalListBuilder_ == null) {
+          proposalList_ = java.util.Collections.emptyList();
+        } else {
+          proposalList_ = null;
+          proposalListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (relayFeeListBuilder_ == null) {
+          relayFeeList_ = java.util.Collections.emptyList();
+        } else {
+          relayFeeList_ = null;
+          relayFeeListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        chainIdList_ = emptyIntList();
+        relayFeeReceiver_ = "";
+        if (resourceIdToDenomListBuilder_ == null) {
+          resourceIdToDenomList_ = java.util.Collections.emptyList();
+        } else {
+          resourceIdToDenomList_ = null;
+          resourceIdToDenomListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (bannedDenomListBuilder_ == null) {
+          bannedDenomList_ = java.util.Collections.emptyList();
+        } else {
+          bannedDenomList_ = null;
+          bannedDenomListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisState build() {
+        com.stafihub.stafihub.bridge.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisState buildPartial() {
+        com.stafihub.stafihub.bridge.GenesisProto.GenesisState result = new com.stafihub.stafihub.bridge.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.bridge.GenesisProto.GenesisState result) {
+        if (depositCountListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            depositCountList_ = java.util.Collections.unmodifiableList(depositCountList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.depositCountList_ = depositCountList_;
+        } else {
+          result.depositCountList_ = depositCountListBuilder_.build();
+        }
+        if (proposalListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            proposalList_ = java.util.Collections.unmodifiableList(proposalList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.proposalList_ = proposalList_;
+        } else {
+          result.proposalList_ = proposalListBuilder_.build();
+        }
+        if (relayFeeListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            relayFeeList_ = java.util.Collections.unmodifiableList(relayFeeList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.relayFeeList_ = relayFeeList_;
+        } else {
+          result.relayFeeList_ = relayFeeListBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          chainIdList_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.chainIdList_ = chainIdList_;
+        if (resourceIdToDenomListBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            resourceIdToDenomList_ = java.util.Collections.unmodifiableList(resourceIdToDenomList_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.resourceIdToDenomList_ = resourceIdToDenomList_;
+        } else {
+          result.resourceIdToDenomList_ = resourceIdToDenomListBuilder_.build();
+        }
+        if (bannedDenomListBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            bannedDenomList_ = java.util.Collections.unmodifiableList(bannedDenomList_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.bannedDenomList_ = bannedDenomList_;
+        } else {
+          result.bannedDenomList_ = bannedDenomListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.relayFeeReceiver_ = relayFeeReceiver_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.GenesisProto.GenesisState) {
+          return mergeFrom((com.stafihub.stafihub.bridge.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.GenesisProto.GenesisState other) {
+        if (other == com.stafihub.stafihub.bridge.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (depositCountListBuilder_ == null) {
+          if (!other.depositCountList_.isEmpty()) {
+            if (depositCountList_.isEmpty()) {
+              depositCountList_ = other.depositCountList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDepositCountListIsMutable();
+              depositCountList_.addAll(other.depositCountList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.depositCountList_.isEmpty()) {
+            if (depositCountListBuilder_.isEmpty()) {
+              depositCountListBuilder_.dispose();
+              depositCountListBuilder_ = null;
+              depositCountList_ = other.depositCountList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              depositCountListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositCountListFieldBuilder() : null;
+            } else {
+              depositCountListBuilder_.addAllMessages(other.depositCountList_);
+            }
+          }
+        }
+        if (proposalListBuilder_ == null) {
+          if (!other.proposalList_.isEmpty()) {
+            if (proposalList_.isEmpty()) {
+              proposalList_ = other.proposalList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureProposalListIsMutable();
+              proposalList_.addAll(other.proposalList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.proposalList_.isEmpty()) {
+            if (proposalListBuilder_.isEmpty()) {
+              proposalListBuilder_.dispose();
+              proposalListBuilder_ = null;
+              proposalList_ = other.proposalList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              proposalListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProposalListFieldBuilder() : null;
+            } else {
+              proposalListBuilder_.addAllMessages(other.proposalList_);
+            }
+          }
+        }
+        if (relayFeeListBuilder_ == null) {
+          if (!other.relayFeeList_.isEmpty()) {
+            if (relayFeeList_.isEmpty()) {
+              relayFeeList_ = other.relayFeeList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureRelayFeeListIsMutable();
+              relayFeeList_.addAll(other.relayFeeList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.relayFeeList_.isEmpty()) {
+            if (relayFeeListBuilder_.isEmpty()) {
+              relayFeeListBuilder_.dispose();
+              relayFeeListBuilder_ = null;
+              relayFeeList_ = other.relayFeeList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              relayFeeListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRelayFeeListFieldBuilder() : null;
+            } else {
+              relayFeeListBuilder_.addAllMessages(other.relayFeeList_);
+            }
+          }
+        }
+        if (!other.chainIdList_.isEmpty()) {
+          if (chainIdList_.isEmpty()) {
+            chainIdList_ = other.chainIdList_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureChainIdListIsMutable();
+            chainIdList_.addAll(other.chainIdList_);
+          }
+          onChanged();
+        }
+        if (!other.getRelayFeeReceiver().isEmpty()) {
+          relayFeeReceiver_ = other.relayFeeReceiver_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (resourceIdToDenomListBuilder_ == null) {
+          if (!other.resourceIdToDenomList_.isEmpty()) {
+            if (resourceIdToDenomList_.isEmpty()) {
+              resourceIdToDenomList_ = other.resourceIdToDenomList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureResourceIdToDenomListIsMutable();
+              resourceIdToDenomList_.addAll(other.resourceIdToDenomList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.resourceIdToDenomList_.isEmpty()) {
+            if (resourceIdToDenomListBuilder_.isEmpty()) {
+              resourceIdToDenomListBuilder_.dispose();
+              resourceIdToDenomListBuilder_ = null;
+              resourceIdToDenomList_ = other.resourceIdToDenomList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              resourceIdToDenomListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResourceIdToDenomListFieldBuilder() : null;
+            } else {
+              resourceIdToDenomListBuilder_.addAllMessages(other.resourceIdToDenomList_);
+            }
+          }
+        }
+        if (bannedDenomListBuilder_ == null) {
+          if (!other.bannedDenomList_.isEmpty()) {
+            if (bannedDenomList_.isEmpty()) {
+              bannedDenomList_ = other.bannedDenomList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureBannedDenomListIsMutable();
+              bannedDenomList_.addAll(other.bannedDenomList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bannedDenomList_.isEmpty()) {
+            if (bannedDenomListBuilder_.isEmpty()) {
+              bannedDenomListBuilder_.dispose();
+              bannedDenomListBuilder_ = null;
+              bannedDenomList_ = other.bannedDenomList_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              bannedDenomListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBannedDenomListFieldBuilder() : null;
+            } else {
+              bannedDenomListBuilder_.addAllMessages(other.bannedDenomList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.stafihub.stafihub.bridge.GenesisProto.DepositCount m =
+                    input.readMessage(
+                        com.stafihub.stafihub.bridge.GenesisProto.DepositCount.parser(),
+                        extensionRegistry);
+                if (depositCountListBuilder_ == null) {
+                  ensureDepositCountListIsMutable();
+                  depositCountList_.add(m);
+                } else {
+                  depositCountListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal m =
+                    input.readMessage(
+                        com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.parser(),
+                        extensionRegistry);
+                if (proposalListBuilder_ == null) {
+                  ensureProposalListIsMutable();
+                  proposalList_.add(m);
+                } else {
+                  proposalListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.stafihub.stafihub.bridge.GenesisProto.RelayFee m =
+                    input.readMessage(
+                        com.stafihub.stafihub.bridge.GenesisProto.RelayFee.parser(),
+                        extensionRegistry);
+                if (relayFeeListBuilder_ == null) {
+                  ensureRelayFeeListIsMutable();
+                  relayFeeList_.add(m);
+                } else {
+                  relayFeeListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                int v = input.readUInt32();
+                ensureChainIdListIsMutable();
+                chainIdList_.addInt(v);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureChainIdListIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  chainIdList_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 42
+              case 50: {
+                relayFeeReceiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom m =
+                    input.readMessage(
+                        com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.parser(),
+                        extensionRegistry);
+                if (resourceIdToDenomListBuilder_ == null) {
+                  ensureResourceIdToDenomListIsMutable();
+                  resourceIdToDenomList_.add(m);
+                } else {
+                  resourceIdToDenomListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.stafihub.stafihub.bridge.GenesisProto.BannedDenom m =
+                    input.readMessage(
+                        com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.parser(),
+                        extensionRegistry);
+                if (bannedDenomListBuilder_ == null) {
+                  ensureBannedDenomListIsMutable();
+                  bannedDenomList_.add(m);
+                } else {
+                  bannedDenomListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.bridge.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.bridge.ParamsProto.Params, com.stafihub.stafihub.bridge.ParamsProto.Params.Builder, com.stafihub.stafihub.bridge.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.stafihub.stafihub.bridge.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.stafihub.stafihub.bridge.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.stafihub.stafihub.bridge.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.stafihub.stafihub.bridge.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.stafihub.stafihub.bridge.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.stafihub.stafihub.bridge.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.bridge.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.bridge.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.stafihub.stafihub.bridge.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.bridge.ParamsProto.Params, com.stafihub.stafihub.bridge.ParamsProto.Params.Builder, com.stafihub.stafihub.bridge.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.bridge.ParamsProto.Params, com.stafihub.stafihub.bridge.ParamsProto.Params.Builder, com.stafihub.stafihub.bridge.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.DepositCount> depositCountList_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositCountListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          depositCountList_ = new java.util.ArrayList<com.stafihub.stafihub.bridge.GenesisProto.DepositCount>(depositCountList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.DepositCount, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder, com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder> depositCountListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.DepositCount> getDepositCountListList() {
+        if (depositCountListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(depositCountList_);
+        } else {
+          return depositCountListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public int getDepositCountListCount() {
+        if (depositCountListBuilder_ == null) {
+          return depositCountList_.size();
+        } else {
+          return depositCountListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount getDepositCountList(int index) {
+        if (depositCountListBuilder_ == null) {
+          return depositCountList_.get(index);
+        } else {
+          return depositCountListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder setDepositCountList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.DepositCount value) {
+        if (depositCountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositCountListIsMutable();
+          depositCountList_.set(index, value);
+          onChanged();
+        } else {
+          depositCountListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder setDepositCountList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder builderForValue) {
+        if (depositCountListBuilder_ == null) {
+          ensureDepositCountListIsMutable();
+          depositCountList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositCountListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder addDepositCountList(com.stafihub.stafihub.bridge.GenesisProto.DepositCount value) {
+        if (depositCountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositCountListIsMutable();
+          depositCountList_.add(value);
+          onChanged();
+        } else {
+          depositCountListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder addDepositCountList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.DepositCount value) {
+        if (depositCountListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositCountListIsMutable();
+          depositCountList_.add(index, value);
+          onChanged();
+        } else {
+          depositCountListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder addDepositCountList(
+          com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder builderForValue) {
+        if (depositCountListBuilder_ == null) {
+          ensureDepositCountListIsMutable();
+          depositCountList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositCountListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder addDepositCountList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder builderForValue) {
+        if (depositCountListBuilder_ == null) {
+          ensureDepositCountListIsMutable();
+          depositCountList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositCountListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder addAllDepositCountList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.bridge.GenesisProto.DepositCount> values) {
+        if (depositCountListBuilder_ == null) {
+          ensureDepositCountListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, depositCountList_);
+          onChanged();
+        } else {
+          depositCountListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder clearDepositCountList() {
+        if (depositCountListBuilder_ == null) {
+          depositCountList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          depositCountListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public Builder removeDepositCountList(int index) {
+        if (depositCountListBuilder_ == null) {
+          ensureDepositCountListIsMutable();
+          depositCountList_.remove(index);
+          onChanged();
+        } else {
+          depositCountListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder getDepositCountListBuilder(
+          int index) {
+        return getDepositCountListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder getDepositCountListOrBuilder(
+          int index) {
+        if (depositCountListBuilder_ == null) {
+          return depositCountList_.get(index);  } else {
+          return depositCountListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder> 
+           getDepositCountListOrBuilderList() {
+        if (depositCountListBuilder_ != null) {
+          return depositCountListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(depositCountList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder addDepositCountListBuilder() {
+        return getDepositCountListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.bridge.GenesisProto.DepositCount.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder addDepositCountListBuilder(
+          int index) {
+        return getDepositCountListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.DepositCount depositCountList = 2 [json_name = "depositCountList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder> 
+           getDepositCountListBuilderList() {
+        return getDepositCountListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.DepositCount, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder, com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder> 
+          getDepositCountListFieldBuilder() {
+        if (depositCountListBuilder_ == null) {
+          depositCountListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.bridge.GenesisProto.DepositCount, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder, com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder>(
+                  depositCountList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          depositCountList_ = null;
+        }
+        return depositCountListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal> proposalList_ =
+        java.util.Collections.emptyList();
+      private void ensureProposalListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          proposalList_ = new java.util.ArrayList<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal>(proposalList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder> proposalListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal> getProposalListList() {
+        if (proposalListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(proposalList_);
+        } else {
+          return proposalListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public int getProposalListCount() {
+        if (proposalListBuilder_ == null) {
+          return proposalList_.size();
+        } else {
+          return proposalListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal getProposalList(int index) {
+        if (proposalListBuilder_ == null) {
+          return proposalList_.get(index);
+        } else {
+          return proposalListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder setProposalList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal value) {
+        if (proposalListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProposalListIsMutable();
+          proposalList_.set(index, value);
+          onChanged();
+        } else {
+          proposalListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder setProposalList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder builderForValue) {
+        if (proposalListBuilder_ == null) {
+          ensureProposalListIsMutable();
+          proposalList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          proposalListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder addProposalList(com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal value) {
+        if (proposalListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProposalListIsMutable();
+          proposalList_.add(value);
+          onChanged();
+        } else {
+          proposalListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder addProposalList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal value) {
+        if (proposalListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProposalListIsMutable();
+          proposalList_.add(index, value);
+          onChanged();
+        } else {
+          proposalListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder addProposalList(
+          com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder builderForValue) {
+        if (proposalListBuilder_ == null) {
+          ensureProposalListIsMutable();
+          proposalList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          proposalListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder addProposalList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder builderForValue) {
+        if (proposalListBuilder_ == null) {
+          ensureProposalListIsMutable();
+          proposalList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          proposalListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder addAllProposalList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal> values) {
+        if (proposalListBuilder_ == null) {
+          ensureProposalListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, proposalList_);
+          onChanged();
+        } else {
+          proposalListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder clearProposalList() {
+        if (proposalListBuilder_ == null) {
+          proposalList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          proposalListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public Builder removeProposalList(int index) {
+        if (proposalListBuilder_ == null) {
+          ensureProposalListIsMutable();
+          proposalList_.remove(index);
+          onChanged();
+        } else {
+          proposalListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder getProposalListBuilder(
+          int index) {
+        return getProposalListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder getProposalListOrBuilder(
+          int index) {
+        if (proposalListBuilder_ == null) {
+          return proposalList_.get(index);  } else {
+          return proposalListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder> 
+           getProposalListOrBuilderList() {
+        if (proposalListBuilder_ != null) {
+          return proposalListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(proposalList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder addProposalListBuilder() {
+        return getProposalListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder addProposalListBuilder(
+          int index) {
+        return getProposalListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.GenesisProposal proposalList = 3 [json_name = "proposalList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder> 
+           getProposalListBuilderList() {
+        return getProposalListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder> 
+          getProposalListFieldBuilder() {
+        if (proposalListBuilder_ == null) {
+          proposalListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder>(
+                  proposalList_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          proposalList_ = null;
+        }
+        return proposalListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.RelayFee> relayFeeList_ =
+        java.util.Collections.emptyList();
+      private void ensureRelayFeeListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          relayFeeList_ = new java.util.ArrayList<com.stafihub.stafihub.bridge.GenesisProto.RelayFee>(relayFeeList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.RelayFee, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder, com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder> relayFeeListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.RelayFee> getRelayFeeListList() {
+        if (relayFeeListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(relayFeeList_);
+        } else {
+          return relayFeeListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public int getRelayFeeListCount() {
+        if (relayFeeListBuilder_ == null) {
+          return relayFeeList_.size();
+        } else {
+          return relayFeeListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee getRelayFeeList(int index) {
+        if (relayFeeListBuilder_ == null) {
+          return relayFeeList_.get(index);
+        } else {
+          return relayFeeListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder setRelayFeeList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.RelayFee value) {
+        if (relayFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.set(index, value);
+          onChanged();
+        } else {
+          relayFeeListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder setRelayFeeList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder builderForValue) {
+        if (relayFeeListBuilder_ == null) {
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          relayFeeListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder addRelayFeeList(com.stafihub.stafihub.bridge.GenesisProto.RelayFee value) {
+        if (relayFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.add(value);
+          onChanged();
+        } else {
+          relayFeeListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder addRelayFeeList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.RelayFee value) {
+        if (relayFeeListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.add(index, value);
+          onChanged();
+        } else {
+          relayFeeListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder addRelayFeeList(
+          com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder builderForValue) {
+        if (relayFeeListBuilder_ == null) {
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          relayFeeListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder addRelayFeeList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder builderForValue) {
+        if (relayFeeListBuilder_ == null) {
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          relayFeeListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder addAllRelayFeeList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.bridge.GenesisProto.RelayFee> values) {
+        if (relayFeeListBuilder_ == null) {
+          ensureRelayFeeListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, relayFeeList_);
+          onChanged();
+        } else {
+          relayFeeListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder clearRelayFeeList() {
+        if (relayFeeListBuilder_ == null) {
+          relayFeeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          relayFeeListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public Builder removeRelayFeeList(int index) {
+        if (relayFeeListBuilder_ == null) {
+          ensureRelayFeeListIsMutable();
+          relayFeeList_.remove(index);
+          onChanged();
+        } else {
+          relayFeeListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder getRelayFeeListBuilder(
+          int index) {
+        return getRelayFeeListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder getRelayFeeListOrBuilder(
+          int index) {
+        if (relayFeeListBuilder_ == null) {
+          return relayFeeList_.get(index);  } else {
+          return relayFeeListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder> 
+           getRelayFeeListOrBuilderList() {
+        if (relayFeeListBuilder_ != null) {
+          return relayFeeListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(relayFeeList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder addRelayFeeListBuilder() {
+        return getRelayFeeListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.bridge.GenesisProto.RelayFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder addRelayFeeListBuilder(
+          int index) {
+        return getRelayFeeListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.RelayFee relayFeeList = 4 [json_name = "relayFeeList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder> 
+           getRelayFeeListBuilderList() {
+        return getRelayFeeListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.RelayFee, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder, com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder> 
+          getRelayFeeListFieldBuilder() {
+        if (relayFeeListBuilder_ == null) {
+          relayFeeListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.bridge.GenesisProto.RelayFee, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder, com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder>(
+                  relayFeeList_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          relayFeeList_ = null;
+        }
+        return relayFeeListBuilder_;
+      }
+
+      private com.google.protobuf.Internal.IntList chainIdList_ = emptyIntList();
+      private void ensureChainIdListIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          chainIdList_ = mutableCopy(chainIdList_);
+          bitField0_ |= 0x00000010;
+        }
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @return A list containing the chainIdList.
+       */
+      public java.util.List<java.lang.Integer>
+          getChainIdListList() {
+        return ((bitField0_ & 0x00000010) != 0) ?
+                 java.util.Collections.unmodifiableList(chainIdList_) : chainIdList_;
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @return The count of chainIdList.
+       */
+      public int getChainIdListCount() {
+        return chainIdList_.size();
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @param index The index of the element to return.
+       * @return The chainIdList at the given index.
+       */
+      public int getChainIdList(int index) {
+        return chainIdList_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @param index The index to set the value at.
+       * @param value The chainIdList to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdList(
+          int index, int value) {
+
+        ensureChainIdListIsMutable();
+        chainIdList_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @param value The chainIdList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addChainIdList(int value) {
+
+        ensureChainIdListIsMutable();
+        chainIdList_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @param values The chainIdList to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllChainIdList(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureChainIdListIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, chainIdList_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 chainIdList = 5 [json_name = "chainIdList"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainIdList() {
+        chainIdList_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object relayFeeReceiver_ = "";
+      /**
+       * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+       * @return The relayFeeReceiver.
+       */
+      public java.lang.String getRelayFeeReceiver() {
+        java.lang.Object ref = relayFeeReceiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          relayFeeReceiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+       * @return The bytes for relayFeeReceiver.
+       */
+      public com.google.protobuf.ByteString
+          getRelayFeeReceiverBytes() {
+        java.lang.Object ref = relayFeeReceiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          relayFeeReceiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+       * @param value The relayFeeReceiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayFeeReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        relayFeeReceiver_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayFeeReceiver() {
+        relayFeeReceiver_ = getDefaultInstance().getRelayFeeReceiver();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string relayFeeReceiver = 6 [json_name = "relayFeeReceiver"];</code>
+       * @param value The bytes for relayFeeReceiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayFeeReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        relayFeeReceiver_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom> resourceIdToDenomList_ =
+        java.util.Collections.emptyList();
+      private void ensureResourceIdToDenomListIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          resourceIdToDenomList_ = new java.util.ArrayList<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom>(resourceIdToDenomList_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder> resourceIdToDenomListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom> getResourceIdToDenomListList() {
+        if (resourceIdToDenomListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(resourceIdToDenomList_);
+        } else {
+          return resourceIdToDenomListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public int getResourceIdToDenomListCount() {
+        if (resourceIdToDenomListBuilder_ == null) {
+          return resourceIdToDenomList_.size();
+        } else {
+          return resourceIdToDenomListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom getResourceIdToDenomList(int index) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          return resourceIdToDenomList_.get(index);
+        } else {
+          return resourceIdToDenomListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder setResourceIdToDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom value) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.set(index, value);
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder setResourceIdToDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder builderForValue) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder addResourceIdToDenomList(com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom value) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.add(value);
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder addResourceIdToDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom value) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.add(index, value);
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder addResourceIdToDenomList(
+          com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder builderForValue) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder addResourceIdToDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder builderForValue) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder addAllResourceIdToDenomList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom> values) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          ensureResourceIdToDenomListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resourceIdToDenomList_);
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder clearResourceIdToDenomList() {
+        if (resourceIdToDenomListBuilder_ == null) {
+          resourceIdToDenomList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public Builder removeResourceIdToDenomList(int index) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          ensureResourceIdToDenomListIsMutable();
+          resourceIdToDenomList_.remove(index);
+          onChanged();
+        } else {
+          resourceIdToDenomListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder getResourceIdToDenomListBuilder(
+          int index) {
+        return getResourceIdToDenomListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder getResourceIdToDenomListOrBuilder(
+          int index) {
+        if (resourceIdToDenomListBuilder_ == null) {
+          return resourceIdToDenomList_.get(index);  } else {
+          return resourceIdToDenomListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder> 
+           getResourceIdToDenomListOrBuilderList() {
+        if (resourceIdToDenomListBuilder_ != null) {
+          return resourceIdToDenomListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(resourceIdToDenomList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder addResourceIdToDenomListBuilder() {
+        return getResourceIdToDenomListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder addResourceIdToDenomListBuilder(
+          int index) {
+        return getResourceIdToDenomListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.bridge.ResourceIdToDenom resourceIdToDenomList = 7 [json_name = "resourceIdToDenomList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder> 
+           getResourceIdToDenomListBuilderList() {
+        return getResourceIdToDenomListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder> 
+          getResourceIdToDenomListFieldBuilder() {
+        if (resourceIdToDenomListBuilder_ == null) {
+          resourceIdToDenomListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder>(
+                  resourceIdToDenomList_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          resourceIdToDenomList_ = null;
+        }
+        return resourceIdToDenomListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom> bannedDenomList_ =
+        java.util.Collections.emptyList();
+      private void ensureBannedDenomListIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          bannedDenomList_ = new java.util.ArrayList<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom>(bannedDenomList_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.BannedDenom, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder, com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder> bannedDenomListBuilder_;
+
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom> getBannedDenomListList() {
+        if (bannedDenomListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bannedDenomList_);
+        } else {
+          return bannedDenomListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public int getBannedDenomListCount() {
+        if (bannedDenomListBuilder_ == null) {
+          return bannedDenomList_.size();
+        } else {
+          return bannedDenomListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom getBannedDenomList(int index) {
+        if (bannedDenomListBuilder_ == null) {
+          return bannedDenomList_.get(index);
+        } else {
+          return bannedDenomListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder setBannedDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom value) {
+        if (bannedDenomListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.set(index, value);
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder setBannedDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder builderForValue) {
+        if (bannedDenomListBuilder_ == null) {
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder addBannedDenomList(com.stafihub.stafihub.bridge.GenesisProto.BannedDenom value) {
+        if (bannedDenomListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.add(value);
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder addBannedDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom value) {
+        if (bannedDenomListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.add(index, value);
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder addBannedDenomList(
+          com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder builderForValue) {
+        if (bannedDenomListBuilder_ == null) {
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder addBannedDenomList(
+          int index, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder builderForValue) {
+        if (bannedDenomListBuilder_ == null) {
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder addAllBannedDenomList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.bridge.GenesisProto.BannedDenom> values) {
+        if (bannedDenomListBuilder_ == null) {
+          ensureBannedDenomListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bannedDenomList_);
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder clearBannedDenomList() {
+        if (bannedDenomListBuilder_ == null) {
+          bannedDenomList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public Builder removeBannedDenomList(int index) {
+        if (bannedDenomListBuilder_ == null) {
+          ensureBannedDenomListIsMutable();
+          bannedDenomList_.remove(index);
+          onChanged();
+        } else {
+          bannedDenomListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder getBannedDenomListBuilder(
+          int index) {
+        return getBannedDenomListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder getBannedDenomListOrBuilder(
+          int index) {
+        if (bannedDenomListBuilder_ == null) {
+          return bannedDenomList_.get(index);  } else {
+          return bannedDenomListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder> 
+           getBannedDenomListOrBuilderList() {
+        if (bannedDenomListBuilder_ != null) {
+          return bannedDenomListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bannedDenomList_);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder addBannedDenomListBuilder() {
+        return getBannedDenomListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder addBannedDenomListBuilder(
+          int index) {
+        return getBannedDenomListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.bridge.BannedDenom bannedDenomList = 8 [json_name = "bannedDenomList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder> 
+           getBannedDenomListBuilderList() {
+        return getBannedDenomListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.bridge.GenesisProto.BannedDenom, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder, com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder> 
+          getBannedDenomListFieldBuilder() {
+        if (bannedDenomListBuilder_ == null) {
+          bannedDenomListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.bridge.GenesisProto.BannedDenom, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder, com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder>(
+                  bannedDenomList_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bannedDenomList_ = null;
+        }
+        return bannedDenomListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.GenesisState)
+    private static final com.stafihub.stafihub.bridge.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.GenesisProto.GenesisState();
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DepositCountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.DepositCount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    int getChainId();
+
+    /**
+     * <code>uint64 count = 2 [json_name = "count"];</code>
+     * @return The count.
+     */
+    long getCount();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.DepositCount}
+   */
+  public static final class DepositCount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.DepositCount)
+      DepositCountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DepositCount.newBuilder() to construct.
+    private DepositCount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DepositCount() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DepositCount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_DepositCount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_DepositCount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.GenesisProto.DepositCount.class, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder.class);
+    }
+
+    public static final int CHAINID_FIELD_NUMBER = 1;
+    private int chainId_ = 0;
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public int getChainId() {
+      return chainId_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 2;
+    private long count_ = 0L;
+    /**
+     * <code>uint64 count = 2 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chainId_ != 0) {
+        output.writeUInt32(1, chainId_);
+      }
+      if (count_ != 0L) {
+        output.writeUInt64(2, count_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chainId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, chainId_);
+      }
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, count_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.GenesisProto.DepositCount)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.GenesisProto.DepositCount other = (com.stafihub.stafihub.bridge.GenesisProto.DepositCount) obj;
+
+      if (getChainId()
+          != other.getChainId()) return false;
+      if (getCount()
+          != other.getCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAINID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.GenesisProto.DepositCount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.DepositCount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.DepositCount)
+        com.stafihub.stafihub.bridge.GenesisProto.DepositCountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_DepositCount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_DepositCount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.GenesisProto.DepositCount.class, com.stafihub.stafihub.bridge.GenesisProto.DepositCount.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.GenesisProto.DepositCount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = 0;
+        count_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_DepositCount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.DepositCount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount build() {
+        com.stafihub.stafihub.bridge.GenesisProto.DepositCount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.DepositCount buildPartial() {
+        com.stafihub.stafihub.bridge.GenesisProto.DepositCount result = new com.stafihub.stafihub.bridge.GenesisProto.DepositCount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.DepositCount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.count_ = count_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.GenesisProto.DepositCount) {
+          return mergeFrom((com.stafihub.stafihub.bridge.GenesisProto.DepositCount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.GenesisProto.DepositCount other) {
+        if (other == com.stafihub.stafihub.bridge.GenesisProto.DepositCount.getDefaultInstance()) return this;
+        if (other.getChainId() != 0) {
+          setChainId(other.getChainId());
+        }
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                chainId_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                count_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int chainId_ ;
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      @java.lang.Override
+      public int getChainId() {
+        return chainId_;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(int value) {
+
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long count_ ;
+      /**
+       * <code>uint64 count = 2 [json_name = "count"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <code>uint64 count = 2 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(long value) {
+
+        count_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 count = 2 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.DepositCount)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.DepositCount)
+    private static final com.stafihub.stafihub.bridge.GenesisProto.DepositCount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.GenesisProto.DepositCount();
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.DepositCount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DepositCount>
+        PARSER = new com.google.protobuf.AbstractParser<DepositCount>() {
+      @java.lang.Override
+      public DepositCount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DepositCount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DepositCount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.DepositCount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.GenesisProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    int getChainId();
+
+    /**
+     * <code>uint64 depositNonce = 2 [json_name = "depositNonce"];</code>
+     * @return The depositNonce.
+     */
+    long getDepositNonce();
+
+    /**
+     * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+     * @return Whether the proposal field is set.
+     */
+    boolean hasProposal();
+    /**
+     * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+     * @return The proposal.
+     */
+    com.stafihub.stafihub.bridge.ProposalProto.Proposal getProposal();
+    /**
+     * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+     */
+    com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder getProposalOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.GenesisProposal}
+   */
+  public static final class GenesisProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.GenesisProposal)
+      GenesisProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisProposal.newBuilder() to construct.
+    private GenesisProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisProposal() {
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.class, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder.class);
+    }
+
+    public static final int CHAINID_FIELD_NUMBER = 1;
+    private int chainId_ = 0;
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public int getChainId() {
+      return chainId_;
+    }
+
+    public static final int DEPOSITNONCE_FIELD_NUMBER = 2;
+    private long depositNonce_ = 0L;
+    /**
+     * <code>uint64 depositNonce = 2 [json_name = "depositNonce"];</code>
+     * @return The depositNonce.
+     */
+    @java.lang.Override
+    public long getDepositNonce() {
+      return depositNonce_;
+    }
+
+    public static final int RESOURCEID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resourceId_ = "";
+    /**
+     * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPOSAL_FIELD_NUMBER = 4;
+    private com.stafihub.stafihub.bridge.ProposalProto.Proposal proposal_;
+    /**
+     * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+     * @return Whether the proposal field is set.
+     */
+    @java.lang.Override
+    public boolean hasProposal() {
+      return proposal_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+     * @return The proposal.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ProposalProto.Proposal getProposal() {
+      return proposal_ == null ? com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance() : proposal_;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder getProposalOrBuilder() {
+      return proposal_ == null ? com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance() : proposal_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chainId_ != 0) {
+        output.writeUInt32(1, chainId_);
+      }
+      if (depositNonce_ != 0L) {
+        output.writeUInt64(2, depositNonce_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resourceId_);
+      }
+      if (proposal_ != null) {
+        output.writeMessage(4, getProposal());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chainId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, chainId_);
+      }
+      if (depositNonce_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, depositNonce_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resourceId_);
+      }
+      if (proposal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getProposal());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal other = (com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal) obj;
+
+      if (getChainId()
+          != other.getChainId()) return false;
+      if (getDepositNonce()
+          != other.getDepositNonce()) return false;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (hasProposal() != other.hasProposal()) return false;
+      if (hasProposal()) {
+        if (!getProposal()
+            .equals(other.getProposal())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAINID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId();
+      hash = (37 * hash) + DEPOSITNONCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDepositNonce());
+      hash = (37 * hash) + RESOURCEID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      if (hasProposal()) {
+        hash = (37 * hash) + PROPOSAL_FIELD_NUMBER;
+        hash = (53 * hash) + getProposal().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.GenesisProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.GenesisProposal)
+        com.stafihub.stafihub.bridge.GenesisProto.GenesisProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.class, com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = 0;
+        depositNonce_ = 0L;
+        resourceId_ = "";
+        proposal_ = null;
+        if (proposalBuilder_ != null) {
+          proposalBuilder_.dispose();
+          proposalBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_GenesisProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal build() {
+        com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal buildPartial() {
+        com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal result = new com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depositNonce_ = depositNonce_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.resourceId_ = resourceId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.proposal_ = proposalBuilder_ == null
+              ? proposal_
+              : proposalBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal) {
+          return mergeFrom((com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal other) {
+        if (other == com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal.getDefaultInstance()) return this;
+        if (other.getChainId() != 0) {
+          setChainId(other.getChainId());
+        }
+        if (other.getDepositNonce() != 0L) {
+          setDepositNonce(other.getDepositNonce());
+        }
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasProposal()) {
+          mergeProposal(other.getProposal());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                chainId_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                depositNonce_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                resourceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getProposalFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int chainId_ ;
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      @java.lang.Override
+      public int getChainId() {
+        return chainId_;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(int value) {
+
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long depositNonce_ ;
+      /**
+       * <code>uint64 depositNonce = 2 [json_name = "depositNonce"];</code>
+       * @return The depositNonce.
+       */
+      @java.lang.Override
+      public long getDepositNonce() {
+        return depositNonce_;
+      }
+      /**
+       * <code>uint64 depositNonce = 2 [json_name = "depositNonce"];</code>
+       * @param value The depositNonce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDepositNonce(long value) {
+
+        depositNonce_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 depositNonce = 2 [json_name = "depositNonce"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDepositNonce() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depositNonce_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        resourceId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        resourceId_ = getDefaultInstance().getResourceId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourceId = 3 [json_name = "resourceId"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        resourceId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.stafihub.stafihub.bridge.ProposalProto.Proposal proposal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.bridge.ProposalProto.Proposal, com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder, com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder> proposalBuilder_;
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       * @return Whether the proposal field is set.
+       */
+      public boolean hasProposal() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       * @return The proposal.
+       */
+      public com.stafihub.stafihub.bridge.ProposalProto.Proposal getProposal() {
+        if (proposalBuilder_ == null) {
+          return proposal_ == null ? com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance() : proposal_;
+        } else {
+          return proposalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      public Builder setProposal(com.stafihub.stafihub.bridge.ProposalProto.Proposal value) {
+        if (proposalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proposal_ = value;
+        } else {
+          proposalBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      public Builder setProposal(
+          com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder builderForValue) {
+        if (proposalBuilder_ == null) {
+          proposal_ = builderForValue.build();
+        } else {
+          proposalBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      public Builder mergeProposal(com.stafihub.stafihub.bridge.ProposalProto.Proposal value) {
+        if (proposalBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            proposal_ != null &&
+            proposal_ != com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance()) {
+            getProposalBuilder().mergeFrom(value);
+          } else {
+            proposal_ = value;
+          }
+        } else {
+          proposalBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      public Builder clearProposal() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        proposal_ = null;
+        if (proposalBuilder_ != null) {
+          proposalBuilder_.dispose();
+          proposalBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      public com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder getProposalBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getProposalFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      public com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder getProposalOrBuilder() {
+        if (proposalBuilder_ != null) {
+          return proposalBuilder_.getMessageOrBuilder();
+        } else {
+          return proposal_ == null ?
+              com.stafihub.stafihub.bridge.ProposalProto.Proposal.getDefaultInstance() : proposal_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.Proposal proposal = 4 [json_name = "proposal"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.bridge.ProposalProto.Proposal, com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder, com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder> 
+          getProposalFieldBuilder() {
+        if (proposalBuilder_ == null) {
+          proposalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.bridge.ProposalProto.Proposal, com.stafihub.stafihub.bridge.ProposalProto.Proposal.Builder, com.stafihub.stafihub.bridge.ProposalProto.ProposalOrBuilder>(
+                  getProposal(),
+                  getParentForChildren(),
+                  isClean());
+          proposal_ = null;
+        }
+        return proposalBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.GenesisProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.GenesisProposal)
+    private static final com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal();
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisProposal>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisProposal>() {
+      @java.lang.Override
+      public GenesisProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.GenesisProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RelayFeeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.RelayFee)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    int getChainId();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The value.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getValue();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.RelayFee}
+   */
+  public static final class RelayFee extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.RelayFee)
+      RelayFeeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RelayFee.newBuilder() to construct.
+    private RelayFee(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RelayFee() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RelayFee();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_RelayFee_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_RelayFee_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.GenesisProto.RelayFee.class, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder.class);
+    }
+
+    public static final int CHAINID_FIELD_NUMBER = 1;
+    private int chainId_ = 0;
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public int getChainId() {
+      return chainId_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin value_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getValue() {
+      return value_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder() {
+      return value_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chainId_ != 0) {
+        output.writeUInt32(1, chainId_);
+      }
+      if (value_ != null) {
+        output.writeMessage(2, getValue());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chainId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, chainId_);
+      }
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getValue());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.GenesisProto.RelayFee)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.GenesisProto.RelayFee other = (com.stafihub.stafihub.bridge.GenesisProto.RelayFee) obj;
+
+      if (getChainId()
+          != other.getChainId()) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAINID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.GenesisProto.RelayFee prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.RelayFee}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.RelayFee)
+        com.stafihub.stafihub.bridge.GenesisProto.RelayFeeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_RelayFee_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_RelayFee_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.GenesisProto.RelayFee.class, com.stafihub.stafihub.bridge.GenesisProto.RelayFee.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.GenesisProto.RelayFee.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = 0;
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
+          valueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_RelayFee_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.RelayFee.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee build() {
+        com.stafihub.stafihub.bridge.GenesisProto.RelayFee result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.RelayFee buildPartial() {
+        com.stafihub.stafihub.bridge.GenesisProto.RelayFee result = new com.stafihub.stafihub.bridge.GenesisProto.RelayFee(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.RelayFee result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = valueBuilder_ == null
+              ? value_
+              : valueBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.GenesisProto.RelayFee) {
+          return mergeFrom((com.stafihub.stafihub.bridge.GenesisProto.RelayFee)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.GenesisProto.RelayFee other) {
+        if (other == com.stafihub.stafihub.bridge.GenesisProto.RelayFee.getDefaultInstance()) return this;
+        if (other.getChainId() != 0) {
+          setChainId(other.getChainId());
+        }
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                chainId_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getValueFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int chainId_ ;
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      @java.lang.Override
+      public int getChainId() {
+        return chainId_;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(int value) {
+
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin value_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> valueBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       * @return The value.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder setValue(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder mergeValue(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (valueBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            value_ != null &&
+            value_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getValueBuilder().mergeFrom(value);
+          } else {
+            value_ = value;
+          }
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
+          valueBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getValueBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin value = 2 [json_name = "value", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Coin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.RelayFee)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.RelayFee)
+    private static final com.stafihub.stafihub.bridge.GenesisProto.RelayFee DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.GenesisProto.RelayFee();
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.RelayFee getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RelayFee>
+        PARSER = new com.google.protobuf.AbstractParser<RelayFee>() {
+      @java.lang.Override
+      public RelayFee parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RelayFee> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RelayFee> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.RelayFee getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BannedDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.BannedDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    int getChainId();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.BannedDenom}
+   */
+  public static final class BannedDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.BannedDenom)
+      BannedDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BannedDenom.newBuilder() to construct.
+    private BannedDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BannedDenom() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BannedDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_BannedDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_BannedDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.class, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder.class);
+    }
+
+    public static final int CHAINID_FIELD_NUMBER = 1;
+    private int chainId_ = 0;
+    /**
+     * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public int getChainId() {
+      return chainId_;
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chainId_ != 0) {
+        output.writeUInt32(1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chainId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.GenesisProto.BannedDenom)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.GenesisProto.BannedDenom other = (com.stafihub.stafihub.bridge.GenesisProto.BannedDenom) obj;
+
+      if (getChainId()
+          != other.getChainId()) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAINID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.GenesisProto.BannedDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.BannedDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.BannedDenom)
+        com.stafihub.stafihub.bridge.GenesisProto.BannedDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_BannedDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_BannedDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.class, com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainId_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_BannedDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom build() {
+        com.stafihub.stafihub.bridge.GenesisProto.BannedDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom buildPartial() {
+        com.stafihub.stafihub.bridge.GenesisProto.BannedDenom result = new com.stafihub.stafihub.bridge.GenesisProto.BannedDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.BannedDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.GenesisProto.BannedDenom) {
+          return mergeFrom((com.stafihub.stafihub.bridge.GenesisProto.BannedDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.GenesisProto.BannedDenom other) {
+        if (other == com.stafihub.stafihub.bridge.GenesisProto.BannedDenom.getDefaultInstance()) return this;
+        if (other.getChainId() != 0) {
+          setChainId(other.getChainId());
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                chainId_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int chainId_ ;
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      @java.lang.Override
+      public int getChainId() {
+        return chainId_;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(int value) {
+
+        chainId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 chainId = 1 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.BannedDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.BannedDenom)
+    private static final com.stafihub.stafihub.bridge.GenesisProto.BannedDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.GenesisProto.BannedDenom();
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.BannedDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BannedDenom>
+        PARSER = new com.google.protobuf.AbstractParser<BannedDenom>() {
+      @java.lang.Override
+      public BannedDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BannedDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BannedDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.BannedDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResourceIdToDenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.bridge.ResourceIdToDenom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+     * @return The enum numeric value on the wire for denomType.
+     */
+    int getDenomTypeValue();
+    /**
+     * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+     * @return The denomType.
+     */
+    com.stafihub.stafihub.bridge.GenesisProto.DenomType getDenomType();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.bridge.ResourceIdToDenom}
+   */
+  public static final class ResourceIdToDenom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.bridge.ResourceIdToDenom)
+      ResourceIdToDenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceIdToDenom.newBuilder() to construct.
+    private ResourceIdToDenom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceIdToDenom() {
+      resourceId_ = "";
+      denom_ = "";
+      denomType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceIdToDenom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.class, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder.class);
+    }
+
+    public static final int RESOURCEID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resourceId_ = "";
+    /**
+     * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOMTYPE_FIELD_NUMBER = 3;
+    private int denomType_ = 0;
+    /**
+     * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+     * @return The enum numeric value on the wire for denomType.
+     */
+    @java.lang.Override public int getDenomTypeValue() {
+      return denomType_;
+    }
+    /**
+     * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+     * @return The denomType.
+     */
+    @java.lang.Override public com.stafihub.stafihub.bridge.GenesisProto.DenomType getDenomType() {
+      com.stafihub.stafihub.bridge.GenesisProto.DenomType result = com.stafihub.stafihub.bridge.GenesisProto.DenomType.forNumber(denomType_);
+      return result == null ? com.stafihub.stafihub.bridge.GenesisProto.DenomType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      if (denomType_ != com.stafihub.stafihub.bridge.GenesisProto.DenomType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, denomType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      if (denomType_ != com.stafihub.stafihub.bridge.GenesisProto.DenomType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, denomType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom other = (com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (denomType_ != other.denomType_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCEID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + DENOMTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + denomType_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.bridge.ResourceIdToDenom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.bridge.ResourceIdToDenom)
+        com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.class, com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        resourceId_ = "";
+        denom_ = "";
+        denomType_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom getDefaultInstanceForType() {
+        return com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom build() {
+        com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom buildPartial() {
+        com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom result = new com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.resourceId_ = resourceId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.denomType_ = denomType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom) {
+          return mergeFrom((com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom other) {
+        if (other == com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.denomType_ != 0) {
+          setDenomTypeValue(other.getDenomTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                resourceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                denomType_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        resourceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        resourceId_ = getDefaultInstance().getResourceId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourceId = 1 [json_name = "resourceId"];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        resourceId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int denomType_ = 0;
+      /**
+       * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+       * @return The enum numeric value on the wire for denomType.
+       */
+      @java.lang.Override public int getDenomTypeValue() {
+        return denomType_;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+       * @param value The enum numeric value on the wire for denomType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomTypeValue(int value) {
+        denomType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+       * @return The denomType.
+       */
+      @java.lang.Override
+      public com.stafihub.stafihub.bridge.GenesisProto.DenomType getDenomType() {
+        com.stafihub.stafihub.bridge.GenesisProto.DenomType result = com.stafihub.stafihub.bridge.GenesisProto.DenomType.forNumber(denomType_);
+        return result == null ? com.stafihub.stafihub.bridge.GenesisProto.DenomType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+       * @param value The denomType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomType(com.stafihub.stafihub.bridge.GenesisProto.DenomType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        denomType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.bridge.DenomType denomType = 3 [json_name = "denomType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenomType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        denomType_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.bridge.ResourceIdToDenom)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.bridge.ResourceIdToDenom)
+    private static final com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom();
+    }
+
+    public static com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceIdToDenom>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceIdToDenom>() {
+      @java.lang.Override
+      public ResourceIdToDenom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceIdToDenom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceIdToDenom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.bridge.GenesisProto.ResourceIdToDenom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_DepositCount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_DepositCount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_GenesisProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_GenesisProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_RelayFee_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_RelayFee_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_BannedDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_BannedDenom_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_bridge_ResourceIdToDenom_fieldAccessorTable;
 
@@ -88,13 +6678,13 @@ public final class GenesisProto {
       " \001(\0162#.stafihub.stafihub.bridge.DenomTyp" +
       "eR\tdenomType*g\n\tDenomType\022 \n\013UNSPECIFIED" +
       "\020\000\032\017\212\235 \013Unspecified\022\026\n\006NATIVE\020\001\032\n\212\235 \006Nat" +
-      "ive\022\032\n\010EXTERNAL\020\002\032\014\212\235 \010External\032\004\210\243\036\000B\333\001" +
+      "ive\022\032\n\010EXTERNAL\020\002\032\014\212\235 \010External\032\004\210\243\036\000B\331\001" +
       "\n\034com.stafihub.stafihub.bridgeB\014GenesisP" +
-      "rotoP\001Z+github.com/stafihub/stafihub/x/b" +
-      "ridge/types\242\002\003SSB\252\002\030Stafihub.Stafihub.Br" +
-      "idge\312\002\030Stafihub\\Stafihub\\Bridge\342\002$Stafih" +
-      "ub\\Stafihub\\Bridge\\GPBMetadata\352\002\032Stafihu" +
-      "b::Stafihub::Bridgeb\006proto3"
+      "rotoZ+github.com/stafihub/stafihub/x/bri" +
+      "dge/types\242\002\003SSB\252\002\030Stafihub.Stafihub.Brid" +
+      "ge\312\002\030Stafihub\\Stafihub\\Bridge\342\002$Stafihub" +
+      "\\Stafihub\\Bridge\\GPBMetadata\352\002\032Stafihub:" +
+      ":Stafihub::Bridgeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

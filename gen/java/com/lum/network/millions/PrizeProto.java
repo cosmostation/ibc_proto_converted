@@ -14,19 +14,3338 @@ public final class PrizeProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code lum.network.millions.PrizeState}
+   */
+  public enum PrizeState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PRIZE_STATE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    PRIZE_STATE_UNSPECIFIED(0),
+    /**
+     * <code>PRIZE_STATE_PENDING = 1 [(.gogoproto.enumvalue_customname) = "Pending"];</code>
+     */
+    PRIZE_STATE_PENDING(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PRIZE_STATE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unspecified"];</code>
+     */
+    public static final int PRIZE_STATE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>PRIZE_STATE_PENDING = 1 [(.gogoproto.enumvalue_customname) = "Pending"];</code>
+     */
+    public static final int PRIZE_STATE_PENDING_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PrizeState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PrizeState forNumber(int value) {
+      switch (value) {
+        case 0: return PRIZE_STATE_UNSPECIFIED;
+        case 1: return PRIZE_STATE_PENDING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PrizeState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PrizeState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PrizeState>() {
+            public PrizeState findValueByNumber(int number) {
+              return PrizeState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.lum.network.millions.PrizeProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PrizeState[] VALUES = values();
+
+    public static PrizeState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PrizeState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:lum.network.millions.PrizeState)
+  }
+
+  public interface PrizeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.Prize)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    long getDrawId();
+
+    /**
+     * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+     * @return The prizeId.
+     */
+    long getPrizeId();
+
+    /**
+     * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.lum.network.millions.PrizeProto.PrizeState getState();
+
+    /**
+     * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The winnerAddress.
+     */
+    java.lang.String getWinnerAddress();
+    /**
+     * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for winnerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWinnerAddressBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder();
+
+    /**
+     * <code>int64 created_at_height = 7 [json_name = "createdAtHeight"];</code>
+     * @return The createdAtHeight.
+     */
+    long getCreatedAtHeight();
+
+    /**
+     * <code>int64 updated_at_height = 8 [json_name = "updatedAtHeight"];</code>
+     * @return The updatedAtHeight.
+     */
+    long getUpdatedAtHeight();
+
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.Prize}
+   */
+  public static final class Prize extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.Prize)
+      PrizeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Prize.newBuilder() to construct.
+    private Prize(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Prize() {
+      state_ = 0;
+      winnerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Prize();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_Prize_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_Prize_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.PrizeProto.Prize.class, com.lum.network.millions.PrizeProto.Prize.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DRAW_ID_FIELD_NUMBER = 2;
+    private long drawId_ = 0L;
+    /**
+     * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    @java.lang.Override
+    public long getDrawId() {
+      return drawId_;
+    }
+
+    public static final int PRIZE_ID_FIELD_NUMBER = 3;
+    private long prizeId_ = 0L;
+    /**
+     * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+     * @return The prizeId.
+     */
+    @java.lang.Override
+    public long getPrizeId() {
+      return prizeId_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 4;
+    private int state_ = 0;
+    /**
+     * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.lum.network.millions.PrizeProto.PrizeState getState() {
+      com.lum.network.millions.PrizeProto.PrizeState result = com.lum.network.millions.PrizeProto.PrizeState.forNumber(state_);
+      return result == null ? com.lum.network.millions.PrizeProto.PrizeState.UNRECOGNIZED : result;
+    }
+
+    public static final int WINNER_ADDRESS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object winnerAddress_ = "";
+    /**
+     * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The winnerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWinnerAddress() {
+      java.lang.Object ref = winnerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        winnerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for winnerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWinnerAddressBytes() {
+      java.lang.Object ref = winnerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        winnerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return amount_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+      return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+    }
+
+    public static final int CREATED_AT_HEIGHT_FIELD_NUMBER = 7;
+    private long createdAtHeight_ = 0L;
+    /**
+     * <code>int64 created_at_height = 7 [json_name = "createdAtHeight"];</code>
+     * @return The createdAtHeight.
+     */
+    @java.lang.Override
+    public long getCreatedAtHeight() {
+      return createdAtHeight_;
+    }
+
+    public static final int UPDATED_AT_HEIGHT_FIELD_NUMBER = 8;
+    private long updatedAtHeight_ = 0L;
+    /**
+     * <code>int64 updated_at_height = 8 [json_name = "updatedAtHeight"];</code>
+     * @return The updatedAtHeight.
+     */
+    @java.lang.Override
+    public long getUpdatedAtHeight() {
+      return updatedAtHeight_;
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 9;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the expiresAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return expiresAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The expiresAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 10;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The updatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (drawId_ != 0L) {
+        output.writeUInt64(2, drawId_);
+      }
+      if (prizeId_ != 0L) {
+        output.writeUInt64(3, prizeId_);
+      }
+      if (state_ != com.lum.network.millions.PrizeProto.PrizeState.PRIZE_STATE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, state_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winnerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, winnerAddress_);
+      }
+      if (amount_ != null) {
+        output.writeMessage(6, getAmount());
+      }
+      if (createdAtHeight_ != 0L) {
+        output.writeInt64(7, createdAtHeight_);
+      }
+      if (updatedAtHeight_ != 0L) {
+        output.writeInt64(8, updatedAtHeight_);
+      }
+      if (expiresAt_ != null) {
+        output.writeMessage(9, getExpiresAt());
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(10, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(11, getUpdatedAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (drawId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, drawId_);
+      }
+      if (prizeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, prizeId_);
+      }
+      if (state_ != com.lum.network.millions.PrizeProto.PrizeState.PRIZE_STATE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, state_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(winnerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, winnerAddress_);
+      }
+      if (amount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAmount());
+      }
+      if (createdAtHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, createdAtHeight_);
+      }
+      if (updatedAtHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, updatedAtHeight_);
+      }
+      if (expiresAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getExpiresAt());
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getUpdatedAt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.PrizeProto.Prize)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.PrizeProto.Prize other = (com.lum.network.millions.PrizeProto.Prize) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getDrawId()
+          != other.getDrawId()) return false;
+      if (getPrizeId()
+          != other.getPrizeId()) return false;
+      if (state_ != other.state_) return false;
+      if (!getWinnerAddress()
+          .equals(other.getWinnerAddress())) return false;
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (getCreatedAtHeight()
+          != other.getCreatedAtHeight()) return false;
+      if (getUpdatedAtHeight()
+          != other.getUpdatedAtHeight()) return false;
+      if (hasExpiresAt() != other.hasExpiresAt()) return false;
+      if (hasExpiresAt()) {
+        if (!getExpiresAt()
+            .equals(other.getExpiresAt())) return false;
+      }
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+      if (hasUpdatedAt()) {
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + DRAW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDrawId());
+      hash = (37 * hash) + PRIZE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPrizeId());
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (37 * hash) + WINNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWinnerAddress().hashCode();
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      hash = (37 * hash) + CREATED_AT_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCreatedAtHeight());
+      hash = (37 * hash) + UPDATED_AT_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUpdatedAtHeight());
+      if (hasExpiresAt()) {
+        hash = (37 * hash) + EXPIRES_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getExpiresAt().hashCode();
+      }
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.PrizeProto.Prize parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.PrizeProto.Prize parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeProto.Prize parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.PrizeProto.Prize prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.Prize}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.Prize)
+        com.lum.network.millions.PrizeProto.PrizeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_Prize_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_Prize_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.PrizeProto.Prize.class, com.lum.network.millions.PrizeProto.Prize.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.PrizeProto.Prize.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        drawId_ = 0L;
+        prizeId_ = 0L;
+        state_ = 0;
+        winnerAddress_ = "";
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        createdAtHeight_ = 0L;
+        updatedAtHeight_ = 0L;
+        expiresAt_ = null;
+        if (expiresAtBuilder_ != null) {
+          expiresAtBuilder_.dispose();
+          expiresAtBuilder_ = null;
+        }
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
+          updatedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_Prize_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.Prize getDefaultInstanceForType() {
+        return com.lum.network.millions.PrizeProto.Prize.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.Prize build() {
+        com.lum.network.millions.PrizeProto.Prize result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.Prize buildPartial() {
+        com.lum.network.millions.PrizeProto.Prize result = new com.lum.network.millions.PrizeProto.Prize(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.PrizeProto.Prize result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.drawId_ = drawId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.prizeId_ = prizeId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.winnerAddress_ = winnerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.amount_ = amountBuilder_ == null
+              ? amount_
+              : amountBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.createdAtHeight_ = createdAtHeight_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.updatedAtHeight_ = updatedAtHeight_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.expiresAt_ = expiresAtBuilder_ == null
+              ? expiresAt_
+              : expiresAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.updatedAt_ = updatedAtBuilder_ == null
+              ? updatedAt_
+              : updatedAtBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.PrizeProto.Prize) {
+          return mergeFrom((com.lum.network.millions.PrizeProto.Prize)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.PrizeProto.Prize other) {
+        if (other == com.lum.network.millions.PrizeProto.Prize.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getDrawId() != 0L) {
+          setDrawId(other.getDrawId());
+        }
+        if (other.getPrizeId() != 0L) {
+          setPrizeId(other.getPrizeId());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (!other.getWinnerAddress().isEmpty()) {
+          winnerAddress_ = other.winnerAddress_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasAmount()) {
+          mergeAmount(other.getAmount());
+        }
+        if (other.getCreatedAtHeight() != 0L) {
+          setCreatedAtHeight(other.getCreatedAtHeight());
+        }
+        if (other.getUpdatedAtHeight() != 0L) {
+          setUpdatedAtHeight(other.getUpdatedAtHeight());
+        }
+        if (other.hasExpiresAt()) {
+          mergeExpiresAt(other.getExpiresAt());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                drawId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                prizeId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                winnerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getAmountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                createdAtHeight_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                updatedAtHeight_ = input.readInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                input.readMessage(
+                    getExpiresAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getUpdatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long drawId_ ;
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @return The drawId.
+       */
+      @java.lang.Override
+      public long getDrawId() {
+        return drawId_;
+      }
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @param value The drawId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDrawId(long value) {
+
+        drawId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDrawId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        drawId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long prizeId_ ;
+      /**
+       * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+       * @return The prizeId.
+       */
+      @java.lang.Override
+      public long getPrizeId() {
+        return prizeId_;
+      }
+      /**
+       * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+       * @param value The prizeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrizeId(long value) {
+
+        prizeId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrizeId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        prizeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeState getState() {
+        com.lum.network.millions.PrizeProto.PrizeState result = com.lum.network.millions.PrizeProto.PrizeState.forNumber(state_);
+        return result == null ? com.lum.network.millions.PrizeProto.PrizeState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.lum.network.millions.PrizeProto.PrizeState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeState state = 4 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object winnerAddress_ = "";
+      /**
+       * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The winnerAddress.
+       */
+      public java.lang.String getWinnerAddress() {
+        java.lang.Object ref = winnerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          winnerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for winnerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWinnerAddressBytes() {
+        java.lang.Object ref = winnerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          winnerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The winnerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWinnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        winnerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWinnerAddress() {
+        winnerAddress_ = getDefaultInstance().getWinnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string winner_address = 5 [json_name = "winnerAddress", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for winnerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWinnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        winnerAddress_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin amount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       * @return The amount.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount() {
+        if (amountBuilder_ == null) {
+          return amount_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        } else {
+          return amountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          amount_ = value;
+        } else {
+          amountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          amount_ = builderForValue.build();
+        } else {
+          amountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            amount_ != null &&
+            amount_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getAmountBuilder().mergeFrom(value);
+          } else {
+            amount_ = value;
+          }
+        } else {
+          amountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        amount_ = null;
+        if (amountBuilder_ != null) {
+          amountBuilder_.dispose();
+          amountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getAmountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilder();
+        } else {
+          return amount_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : amount_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin amount = 6 [json_name = "amount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getAmount(),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+
+      private long createdAtHeight_ ;
+      /**
+       * <code>int64 created_at_height = 7 [json_name = "createdAtHeight"];</code>
+       * @return The createdAtHeight.
+       */
+      @java.lang.Override
+      public long getCreatedAtHeight() {
+        return createdAtHeight_;
+      }
+      /**
+       * <code>int64 created_at_height = 7 [json_name = "createdAtHeight"];</code>
+       * @param value The createdAtHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedAtHeight(long value) {
+
+        createdAtHeight_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 created_at_height = 7 [json_name = "createdAtHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedAtHeight() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        createdAtHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long updatedAtHeight_ ;
+      /**
+       * <code>int64 updated_at_height = 8 [json_name = "updatedAtHeight"];</code>
+       * @return The updatedAtHeight.
+       */
+      @java.lang.Override
+      public long getUpdatedAtHeight() {
+        return updatedAtHeight_;
+      }
+      /**
+       * <code>int64 updated_at_height = 8 [json_name = "updatedAtHeight"];</code>
+       * @param value The updatedAtHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdatedAtHeight(long value) {
+
+        updatedAtHeight_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 updated_at_height = 8 [json_name = "updatedAtHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdatedAtHeight() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        updatedAtHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp expiresAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> expiresAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the expiresAt field is set.
+       */
+      public boolean hasExpiresAt() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The expiresAt.
+       */
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        if (expiresAtBuilder_ == null) {
+          return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+        } else {
+          return expiresAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        if (expiresAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expiresAt_ = value;
+        } else {
+          expiresAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (expiresAtBuilder_ == null) {
+          expiresAt_ = builderForValue.build();
+        } else {
+          expiresAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        if (expiresAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            expiresAt_ != null &&
+            expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiresAtBuilder().mergeFrom(value);
+          } else {
+            expiresAt_ = value;
+          }
+        } else {
+          expiresAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearExpiresAt() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        expiresAt_ = null;
+        if (expiresAtBuilder_ != null) {
+          expiresAtBuilder_.dispose();
+          expiresAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getExpiresAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
+        if (expiresAtBuilder_ != null) {
+          return expiresAtBuilder_.getMessageOrBuilder();
+        } else {
+          return expiresAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp expires_at = 9 [json_name = "expiresAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getExpiresAtFieldBuilder() {
+        if (expiresAtBuilder_ == null) {
+          expiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getExpiresAt(),
+                  getParentForChildren(),
+                  isClean());
+          expiresAt_ = null;
+        }
+        return expiresAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
+          } else {
+            createdAt_ = value;
+          }
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the updatedAt field is set.
+       */
+      public boolean hasUpdatedAt() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The updatedAt.
+       */
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            updatedAt_ != null &&
+            updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedAtBuilder().mergeFrom(value);
+          } else {
+            updatedAt_ = value;
+          }
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearUpdatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
+          updatedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.Prize)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.Prize)
+    private static final com.lum.network.millions.PrizeProto.Prize DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.PrizeProto.Prize();
+    }
+
+    public static com.lum.network.millions.PrizeProto.Prize getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Prize>
+        PARSER = new com.google.protobuf.AbstractParser<Prize>() {
+      @java.lang.Override
+      public Prize parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Prize> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Prize> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.PrizeProto.Prize getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrizeIDsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.PrizeIDs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    long getDrawId();
+
+    /**
+     * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+     * @return The prizeId.
+     */
+    long getPrizeId();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.PrizeIDs}
+   */
+  public static final class PrizeIDs extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.PrizeIDs)
+      PrizeIDsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrizeIDs.newBuilder() to construct.
+    private PrizeIDs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrizeIDs() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrizeIDs();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.PrizeProto.PrizeIDs.class, com.lum.network.millions.PrizeProto.PrizeIDs.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DRAW_ID_FIELD_NUMBER = 2;
+    private long drawId_ = 0L;
+    /**
+     * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+     * @return The drawId.
+     */
+    @java.lang.Override
+    public long getDrawId() {
+      return drawId_;
+    }
+
+    public static final int PRIZE_ID_FIELD_NUMBER = 3;
+    private long prizeId_ = 0L;
+    /**
+     * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+     * @return The prizeId.
+     */
+    @java.lang.Override
+    public long getPrizeId() {
+      return prizeId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (drawId_ != 0L) {
+        output.writeUInt64(2, drawId_);
+      }
+      if (prizeId_ != 0L) {
+        output.writeUInt64(3, prizeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (drawId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, drawId_);
+      }
+      if (prizeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, prizeId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.PrizeProto.PrizeIDs)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.PrizeProto.PrizeIDs other = (com.lum.network.millions.PrizeProto.PrizeIDs) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getDrawId()
+          != other.getDrawId()) return false;
+      if (getPrizeId()
+          != other.getPrizeId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + DRAW_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDrawId());
+      hash = (37 * hash) + PRIZE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPrizeId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.PrizeProto.PrizeIDs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.PrizeIDs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.PrizeIDs)
+        com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.PrizeProto.PrizeIDs.class, com.lum.network.millions.PrizeProto.PrizeIDs.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.PrizeProto.PrizeIDs.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        drawId_ = 0L;
+        prizeId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDs_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeIDs getDefaultInstanceForType() {
+        return com.lum.network.millions.PrizeProto.PrizeIDs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeIDs build() {
+        com.lum.network.millions.PrizeProto.PrizeIDs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeIDs buildPartial() {
+        com.lum.network.millions.PrizeProto.PrizeIDs result = new com.lum.network.millions.PrizeProto.PrizeIDs(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.PrizeProto.PrizeIDs result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.drawId_ = drawId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.prizeId_ = prizeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.PrizeProto.PrizeIDs) {
+          return mergeFrom((com.lum.network.millions.PrizeProto.PrizeIDs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.PrizeProto.PrizeIDs other) {
+        if (other == com.lum.network.millions.PrizeProto.PrizeIDs.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getDrawId() != 0L) {
+          setDrawId(other.getDrawId());
+        }
+        if (other.getPrizeId() != 0L) {
+          setPrizeId(other.getPrizeId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                drawId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                prizeId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long drawId_ ;
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @return The drawId.
+       */
+      @java.lang.Override
+      public long getDrawId() {
+        return drawId_;
+      }
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @param value The drawId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDrawId(long value) {
+
+        drawId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 draw_id = 2 [json_name = "drawId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDrawId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        drawId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long prizeId_ ;
+      /**
+       * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+       * @return The prizeId.
+       */
+      @java.lang.Override
+      public long getPrizeId() {
+        return prizeId_;
+      }
+      /**
+       * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+       * @param value The prizeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrizeId(long value) {
+
+        prizeId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 prize_id = 3 [json_name = "prizeId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrizeId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        prizeId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.PrizeIDs)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.PrizeIDs)
+    private static final com.lum.network.millions.PrizeProto.PrizeIDs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.PrizeProto.PrizeIDs();
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrizeIDs>
+        PARSER = new com.google.protobuf.AbstractParser<PrizeIDs>() {
+      @java.lang.Override
+      public PrizeIDs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrizeIDs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrizeIDs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.PrizeProto.PrizeIDs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrizeIDsCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.PrizeIDsCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.lum.network.millions.PrizeProto.PrizeIDs> 
+        getPrizesIdsList();
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.millions.PrizeProto.PrizeIDs getPrizesIds(int index);
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    int getPrizesIdsCount();
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder> 
+        getPrizesIdsOrBuilderList();
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder getPrizesIdsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.PrizeIDsCollection}
+   */
+  public static final class PrizeIDsCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.PrizeIDsCollection)
+      PrizeIDsCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrizeIDsCollection.newBuilder() to construct.
+    private PrizeIDsCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrizeIDsCollection() {
+      prizesIds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrizeIDsCollection();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDsCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDsCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.PrizeProto.PrizeIDsCollection.class, com.lum.network.millions.PrizeProto.PrizeIDsCollection.Builder.class);
+    }
+
+    public static final int PRIZES_IDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.millions.PrizeProto.PrizeIDs> prizesIds_;
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.millions.PrizeProto.PrizeIDs> getPrizesIdsList() {
+      return prizesIds_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder> 
+        getPrizesIdsOrBuilderList() {
+      return prizesIds_;
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPrizesIdsCount() {
+      return prizesIds_.size();
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeProto.PrizeIDs getPrizesIds(int index) {
+      return prizesIds_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder getPrizesIdsOrBuilder(
+        int index) {
+      return prizesIds_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < prizesIds_.size(); i++) {
+        output.writeMessage(1, prizesIds_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < prizesIds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, prizesIds_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.PrizeProto.PrizeIDsCollection)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.PrizeProto.PrizeIDsCollection other = (com.lum.network.millions.PrizeProto.PrizeIDsCollection) obj;
+
+      if (!getPrizesIdsList()
+          .equals(other.getPrizesIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPrizesIdsCount() > 0) {
+        hash = (37 * hash) + PRIZES_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPrizesIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.PrizeProto.PrizeIDsCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.PrizeIDsCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.PrizeIDsCollection)
+        com.lum.network.millions.PrizeProto.PrizeIDsCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDsCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDsCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.PrizeProto.PrizeIDsCollection.class, com.lum.network.millions.PrizeProto.PrizeIDsCollection.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.PrizeProto.PrizeIDsCollection.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (prizesIdsBuilder_ == null) {
+          prizesIds_ = java.util.Collections.emptyList();
+        } else {
+          prizesIds_ = null;
+          prizesIdsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.PrizeProto.internal_static_lum_network_millions_PrizeIDsCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeIDsCollection getDefaultInstanceForType() {
+        return com.lum.network.millions.PrizeProto.PrizeIDsCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeIDsCollection build() {
+        com.lum.network.millions.PrizeProto.PrizeIDsCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.PrizeProto.PrizeIDsCollection buildPartial() {
+        com.lum.network.millions.PrizeProto.PrizeIDsCollection result = new com.lum.network.millions.PrizeProto.PrizeIDsCollection(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.millions.PrizeProto.PrizeIDsCollection result) {
+        if (prizesIdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            prizesIds_ = java.util.Collections.unmodifiableList(prizesIds_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.prizesIds_ = prizesIds_;
+        } else {
+          result.prizesIds_ = prizesIdsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.millions.PrizeProto.PrizeIDsCollection result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.PrizeProto.PrizeIDsCollection) {
+          return mergeFrom((com.lum.network.millions.PrizeProto.PrizeIDsCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.PrizeProto.PrizeIDsCollection other) {
+        if (other == com.lum.network.millions.PrizeProto.PrizeIDsCollection.getDefaultInstance()) return this;
+        if (prizesIdsBuilder_ == null) {
+          if (!other.prizesIds_.isEmpty()) {
+            if (prizesIds_.isEmpty()) {
+              prizesIds_ = other.prizesIds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePrizesIdsIsMutable();
+              prizesIds_.addAll(other.prizesIds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.prizesIds_.isEmpty()) {
+            if (prizesIdsBuilder_.isEmpty()) {
+              prizesIdsBuilder_.dispose();
+              prizesIdsBuilder_ = null;
+              prizesIds_ = other.prizesIds_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              prizesIdsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPrizesIdsFieldBuilder() : null;
+            } else {
+              prizesIdsBuilder_.addAllMessages(other.prizesIds_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.millions.PrizeProto.PrizeIDs m =
+                    input.readMessage(
+                        com.lum.network.millions.PrizeProto.PrizeIDs.parser(),
+                        extensionRegistry);
+                if (prizesIdsBuilder_ == null) {
+                  ensurePrizesIdsIsMutable();
+                  prizesIds_.add(m);
+                } else {
+                  prizesIdsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.millions.PrizeProto.PrizeIDs> prizesIds_ =
+        java.util.Collections.emptyList();
+      private void ensurePrizesIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          prizesIds_ = new java.util.ArrayList<com.lum.network.millions.PrizeProto.PrizeIDs>(prizesIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.PrizeProto.PrizeIDs, com.lum.network.millions.PrizeProto.PrizeIDs.Builder, com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder> prizesIdsBuilder_;
+
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.millions.PrizeProto.PrizeIDs> getPrizesIdsList() {
+        if (prizesIdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(prizesIds_);
+        } else {
+          return prizesIdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPrizesIdsCount() {
+        if (prizesIdsBuilder_ == null) {
+          return prizesIds_.size();
+        } else {
+          return prizesIdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeProto.PrizeIDs getPrizesIds(int index) {
+        if (prizesIdsBuilder_ == null) {
+          return prizesIds_.get(index);
+        } else {
+          return prizesIdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrizesIds(
+          int index, com.lum.network.millions.PrizeProto.PrizeIDs value) {
+        if (prizesIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrizesIdsIsMutable();
+          prizesIds_.set(index, value);
+          onChanged();
+        } else {
+          prizesIdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrizesIds(
+          int index, com.lum.network.millions.PrizeProto.PrizeIDs.Builder builderForValue) {
+        if (prizesIdsBuilder_ == null) {
+          ensurePrizesIdsIsMutable();
+          prizesIds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          prizesIdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizesIds(com.lum.network.millions.PrizeProto.PrizeIDs value) {
+        if (prizesIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrizesIdsIsMutable();
+          prizesIds_.add(value);
+          onChanged();
+        } else {
+          prizesIdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizesIds(
+          int index, com.lum.network.millions.PrizeProto.PrizeIDs value) {
+        if (prizesIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePrizesIdsIsMutable();
+          prizesIds_.add(index, value);
+          onChanged();
+        } else {
+          prizesIdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizesIds(
+          com.lum.network.millions.PrizeProto.PrizeIDs.Builder builderForValue) {
+        if (prizesIdsBuilder_ == null) {
+          ensurePrizesIdsIsMutable();
+          prizesIds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          prizesIdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPrizesIds(
+          int index, com.lum.network.millions.PrizeProto.PrizeIDs.Builder builderForValue) {
+        if (prizesIdsBuilder_ == null) {
+          ensurePrizesIdsIsMutable();
+          prizesIds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          prizesIdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPrizesIds(
+          java.lang.Iterable<? extends com.lum.network.millions.PrizeProto.PrizeIDs> values) {
+        if (prizesIdsBuilder_ == null) {
+          ensurePrizesIdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, prizesIds_);
+          onChanged();
+        } else {
+          prizesIdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPrizesIds() {
+        if (prizesIdsBuilder_ == null) {
+          prizesIds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          prizesIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePrizesIds(int index) {
+        if (prizesIdsBuilder_ == null) {
+          ensurePrizesIdsIsMutable();
+          prizesIds_.remove(index);
+          onChanged();
+        } else {
+          prizesIdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeProto.PrizeIDs.Builder getPrizesIdsBuilder(
+          int index) {
+        return getPrizesIdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder getPrizesIdsOrBuilder(
+          int index) {
+        if (prizesIdsBuilder_ == null) {
+          return prizesIds_.get(index);  } else {
+          return prizesIdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder> 
+           getPrizesIdsOrBuilderList() {
+        if (prizesIdsBuilder_ != null) {
+          return prizesIdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(prizesIds_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeProto.PrizeIDs.Builder addPrizesIdsBuilder() {
+        return getPrizesIdsFieldBuilder().addBuilder(
+            com.lum.network.millions.PrizeProto.PrizeIDs.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeProto.PrizeIDs.Builder addPrizesIdsBuilder(
+          int index) {
+        return getPrizesIdsFieldBuilder().addBuilder(
+            index, com.lum.network.millions.PrizeProto.PrizeIDs.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.millions.PrizeIDs prizes_ids = 1 [json_name = "prizesIds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.millions.PrizeProto.PrizeIDs.Builder> 
+           getPrizesIdsBuilderList() {
+        return getPrizesIdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.millions.PrizeProto.PrizeIDs, com.lum.network.millions.PrizeProto.PrizeIDs.Builder, com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder> 
+          getPrizesIdsFieldBuilder() {
+        if (prizesIdsBuilder_ == null) {
+          prizesIdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.millions.PrizeProto.PrizeIDs, com.lum.network.millions.PrizeProto.PrizeIDs.Builder, com.lum.network.millions.PrizeProto.PrizeIDsOrBuilder>(
+                  prizesIds_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          prizesIds_ = null;
+        }
+        return prizesIdsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.PrizeIDsCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.PrizeIDsCollection)
+    private static final com.lum.network.millions.PrizeProto.PrizeIDsCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.PrizeProto.PrizeIDsCollection();
+    }
+
+    public static com.lum.network.millions.PrizeProto.PrizeIDsCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrizeIDsCollection>
+        PARSER = new com.google.protobuf.AbstractParser<PrizeIDsCollection>() {
+      @java.lang.Override
+      public PrizeIDsCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrizeIDsCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrizeIDsCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.PrizeProto.PrizeIDsCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_Prize_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_Prize_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_PrizeIDs_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_PrizeIDs_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_PrizeIDsCollection_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_PrizeIDsCollection_fieldAccessorTable;
 
@@ -63,12 +3382,12 @@ public final class PrizeProto {
       "ions.PrizeIDsB\004\310\336\037\000R\tprizesIds*f\n\nPrizeS" +
       "tate\022,\n\027PRIZE_STATE_UNSPECIFIED\020\000\032\017\212\235 \013U" +
       "nspecified\022$\n\023PRIZE_STATE_PENDING\020\001\032\013\212\235 " +
-      "\007Pending\032\004\210\243\036\001B\307\001\n\030com.lum.network.milli" +
-      "onsB\nPrizeProtoP\001Z-github.com/lum-networ" +
-      "k/chain/x/millions/types\242\002\003LNM\252\002\024Lum.Net" +
-      "work.Millions\312\002\024Lum\\Network\\Millions\342\002 L" +
-      "um\\Network\\Millions\\GPBMetadata\352\002\026Lum::N" +
-      "etwork::Millionsb\006proto3"
+      "\007Pending\032\004\210\243\036\001B\305\001\n\030com.lum.network.milli" +
+      "onsB\nPrizeProtoZ-github.com/lum-network/" +
+      "chain/x/millions/types\242\002\003LNM\252\002\024Lum.Netwo" +
+      "rk.Millions\312\002\024Lum\\Network\\Millions\342\002 Lum" +
+      "\\Network\\Millions\\GPBMetadata\352\002\026Lum::Net" +
+      "work::Millionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

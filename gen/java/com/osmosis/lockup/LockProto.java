@@ -14,19 +14,4661 @@ public final class LockProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * LockQueryType defines the type of the lock query that can
+   * either be by duration or start time of the lock.
+   * </pre>
+   *
+   * Protobuf enum {@code osmosis.lockup.LockQueryType}
+   */
+  public enum LockQueryType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ByDuration = 0;</code>
+     */
+    ByDuration(0),
+    /**
+     * <code>ByTime = 1;</code>
+     */
+    ByTime(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ByDuration = 0;</code>
+     */
+    public static final int ByDuration_VALUE = 0;
+    /**
+     * <code>ByTime = 1;</code>
+     */
+    public static final int ByTime_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LockQueryType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LockQueryType forNumber(int value) {
+      switch (value) {
+        case 0: return ByDuration;
+        case 1: return ByTime;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LockQueryType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LockQueryType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LockQueryType>() {
+            public LockQueryType findValueByNumber(int number) {
+              return LockQueryType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.osmosis.lockup.LockProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final LockQueryType[] VALUES = values();
+
+    public static LockQueryType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LockQueryType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:osmosis.lockup.LockQueryType)
+  }
+
+  public interface PeriodLockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.lockup.PeriodLock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID is the unique id of the lock.
+     * The ID of the lock is decided upon lock creation, incrementing by 1 for
+     * every lock.
+     * </pre>
+     *
+     * <code>uint64 ID = 1 [json_name = "ID"];</code>
+     * @return The iD.
+     */
+    long getID();
+
+    /**
+     * <pre>
+     * Owner is the account address of the lock owner.
+     * Only the owner can modify the state of the lock.
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * Owner is the account address of the lock owner.
+     * Only the owner can modify the state of the lock.
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * Duration is the time needed for a lock to mature after unlocking has
+     * started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * Duration is the time needed for a lock to mature after unlocking has
+     * started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * Duration is the time needed for a lock to mature after unlocking has
+     * started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <pre>
+     * EndTime refers to the time at which the lock would mature and get deleted.
+     * This value is first initialized when an unlock has started for the lock,
+     * end time being block time + duration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * EndTime refers to the time at which the lock would mature and get deleted.
+     * This value is first initialized when an unlock has started for the lock,
+     * end time being block time + duration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * EndTime refers to the time at which the lock would mature and get deleted.
+     * This value is first initialized when an unlock has started for the lock,
+     * end time being block time + duration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getCoinsList();
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index);
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getCoinsCount();
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList();
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Reward Receiver Address is the address that would be receiving rewards for
+     * the incentives for the lock. This is set to owner by default and can be
+     * changed via separate msg.
+     * </pre>
+     *
+     * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+     * @return The rewardReceiverAddress.
+     */
+    java.lang.String getRewardReceiverAddress();
+    /**
+     * <pre>
+     * Reward Receiver Address is the address that would be receiving rewards for
+     * the incentives for the lock. This is set to owner by default and can be
+     * changed via separate msg.
+     * </pre>
+     *
+     * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+     * @return The bytes for rewardReceiverAddress.
+     */
+    com.google.protobuf.ByteString
+        getRewardReceiverAddressBytes();
+  }
+  /**
+   * <pre>
+   * PeriodLock is a single lock unit by period defined by the x/lockup module.
+   * It's a record of a locked coin at a specific time. It stores owner, duration,
+   * unlock time and the number of coins locked. A state of a period lock is
+   * created upon lock creation, and deleted once the lock has been matured after
+   * the `duration` has passed since unbonding started.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.lockup.PeriodLock}
+   */
+  public static final class PeriodLock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.lockup.PeriodLock)
+      PeriodLockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PeriodLock.newBuilder() to construct.
+    private PeriodLock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PeriodLock() {
+      owner_ = "";
+      coins_ = java.util.Collections.emptyList();
+      rewardReceiverAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PeriodLock();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_PeriodLock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_PeriodLock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.lockup.LockProto.PeriodLock.class, com.osmosis.lockup.LockProto.PeriodLock.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long iD_ = 0L;
+    /**
+     * <pre>
+     * ID is the unique id of the lock.
+     * The ID of the lock is decided upon lock creation, incrementing by 1 for
+     * every lock.
+     * </pre>
+     *
+     * <code>uint64 ID = 1 [json_name = "ID"];</code>
+     * @return The iD.
+     */
+    @java.lang.Override
+    public long getID() {
+      return iD_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner is the account address of the lock owner.
+     * Only the owner can modify the state of the lock.
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Owner is the account address of the lock owner.
+     * Only the owner can modify the state of the lock.
+     * </pre>
+     *
+     * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * Duration is the time needed for a lock to mature after unlocking has
+     * started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * Duration is the time needed for a lock to mature after unlocking has
+     * started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * Duration is the time needed for a lock to mature after unlocking has
+     * started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * EndTime refers to the time at which the lock would mature and get deleted.
+     * This value is first initialized when an unlock has started for the lock,
+     * end time being block time + duration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * EndTime refers to the time at which the lock would mature and get deleted.
+     * This value is first initialized when an unlock has started for the lock,
+     * end time being block time + duration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * EndTime refers to the time at which the lock would mature and get deleted.
+     * This value is first initialized when an unlock has started for the lock,
+     * end time being block time + duration.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int COINS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_;
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getCoinsOrBuilderList() {
+      return coins_;
+    }
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getCoinsCount() {
+      return coins_.size();
+    }
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+      return coins_.get(index);
+    }
+    /**
+     * <pre>
+     * Coins are the tokens locked within the lock, kept in the module account.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+        int index) {
+      return coins_.get(index);
+    }
+
+    public static final int REWARD_RECEIVER_ADDRESS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardReceiverAddress_ = "";
+    /**
+     * <pre>
+     * Reward Receiver Address is the address that would be receiving rewards for
+     * the incentives for the lock. This is set to owner by default and can be
+     * changed via separate msg.
+     * </pre>
+     *
+     * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+     * @return The rewardReceiverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardReceiverAddress() {
+      java.lang.Object ref = rewardReceiverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardReceiverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Reward Receiver Address is the address that would be receiving rewards for
+     * the incentives for the lock. This is set to owner by default and can be
+     * changed via separate msg.
+     * </pre>
+     *
+     * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+     * @return The bytes for rewardReceiverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardReceiverAddressBytes() {
+      java.lang.Object ref = rewardReceiverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardReceiverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (iD_ != 0L) {
+        output.writeUInt64(1, iD_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(4, getEndTime());
+      }
+      for (int i = 0; i < coins_.size(); i++) {
+        output.writeMessage(5, coins_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardReceiverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, rewardReceiverAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (iD_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, iD_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getEndTime());
+      }
+      for (int i = 0; i < coins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, coins_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardReceiverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, rewardReceiverAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.lockup.LockProto.PeriodLock)) {
+        return super.equals(obj);
+      }
+      com.osmosis.lockup.LockProto.PeriodLock other = (com.osmosis.lockup.LockProto.PeriodLock) obj;
+
+      if (getID()
+          != other.getID()) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getCoinsList()
+          .equals(other.getCoinsList())) return false;
+      if (!getRewardReceiverAddress()
+          .equals(other.getRewardReceiverAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getID());
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      if (getCoinsCount() > 0) {
+        hash = (37 * hash) + COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getCoinsList().hashCode();
+      }
+      hash = (37 * hash) + REWARD_RECEIVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardReceiverAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.lockup.LockProto.PeriodLock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.lockup.LockProto.PeriodLock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.lockup.LockProto.PeriodLock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.lockup.LockProto.PeriodLock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PeriodLock is a single lock unit by period defined by the x/lockup module.
+     * It's a record of a locked coin at a specific time. It stores owner, duration,
+     * unlock time and the number of coins locked. A state of a period lock is
+     * created upon lock creation, and deleted once the lock has been matured after
+     * the `duration` has passed since unbonding started.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.lockup.PeriodLock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.lockup.PeriodLock)
+        com.osmosis.lockup.LockProto.PeriodLockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_PeriodLock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_PeriodLock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.lockup.LockProto.PeriodLock.class, com.osmosis.lockup.LockProto.PeriodLock.Builder.class);
+      }
+
+      // Construct using com.osmosis.lockup.LockProto.PeriodLock.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iD_ = 0L;
+        owner_ = "";
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+        } else {
+          coins_ = null;
+          coinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        rewardReceiverAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_PeriodLock_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.PeriodLock getDefaultInstanceForType() {
+        return com.osmosis.lockup.LockProto.PeriodLock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.PeriodLock build() {
+        com.osmosis.lockup.LockProto.PeriodLock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.PeriodLock buildPartial() {
+        com.osmosis.lockup.LockProto.PeriodLock result = new com.osmosis.lockup.LockProto.PeriodLock(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.lockup.LockProto.PeriodLock result) {
+        if (coinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            coins_ = java.util.Collections.unmodifiableList(coins_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.coins_ = coins_;
+        } else {
+          result.coins_ = coinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.lockup.LockProto.PeriodLock result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iD_ = iD_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.rewardReceiverAddress_ = rewardReceiverAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.lockup.LockProto.PeriodLock) {
+          return mergeFrom((com.osmosis.lockup.LockProto.PeriodLock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.lockup.LockProto.PeriodLock other) {
+        if (other == com.osmosis.lockup.LockProto.PeriodLock.getDefaultInstance()) return this;
+        if (other.getID() != 0L) {
+          setID(other.getID());
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (coinsBuilder_ == null) {
+          if (!other.coins_.isEmpty()) {
+            if (coins_.isEmpty()) {
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureCoinsIsMutable();
+              coins_.addAll(other.coins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.coins_.isEmpty()) {
+            if (coinsBuilder_.isEmpty()) {
+              coinsBuilder_.dispose();
+              coinsBuilder_ = null;
+              coins_ = other.coins_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              coinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCoinsFieldBuilder() : null;
+            } else {
+              coinsBuilder_.addAllMessages(other.coins_);
+            }
+          }
+        }
+        if (!other.getRewardReceiverAddress().isEmpty()) {
+          rewardReceiverAddress_ = other.rewardReceiverAddress_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                iD_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (coinsBuilder_ == null) {
+                  ensureCoinsIsMutable();
+                  coins_.add(m);
+                } else {
+                  coinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                rewardReceiverAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long iD_ ;
+      /**
+       * <pre>
+       * ID is the unique id of the lock.
+       * The ID of the lock is decided upon lock creation, incrementing by 1 for
+       * every lock.
+       * </pre>
+       *
+       * <code>uint64 ID = 1 [json_name = "ID"];</code>
+       * @return The iD.
+       */
+      @java.lang.Override
+      public long getID() {
+        return iD_;
+      }
+      /**
+       * <pre>
+       * ID is the unique id of the lock.
+       * The ID of the lock is decided upon lock creation, incrementing by 1 for
+       * every lock.
+       * </pre>
+       *
+       * <code>uint64 ID = 1 [json_name = "ID"];</code>
+       * @param value The iD to set.
+       * @return This builder for chaining.
+       */
+      public Builder setID(long value) {
+
+        iD_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID is the unique id of the lock.
+       * The ID of the lock is decided upon lock creation, incrementing by 1 for
+       * every lock.
+       * </pre>
+       *
+       * <code>uint64 ID = 1 [json_name = "ID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        iD_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * Owner is the account address of the lock owner.
+       * Only the owner can modify the state of the lock.
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the account address of the lock owner.
+       * Only the owner can modify the state of the lock.
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Owner is the account address of the lock owner.
+       * Only the owner can modify the state of the lock.
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the account address of the lock owner.
+       * Only the owner can modify the state of the lock.
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Owner is the account address of the lock owner.
+       * Only the owner can modify the state of the lock.
+       * </pre>
+       *
+       * <code>string owner = 2 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration is the time needed for a lock to mature after unlocking has
+       * started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * EndTime refers to the time at which the lock would mature and get deleted.
+       * This value is first initialized when an unlock has started for the lock,
+       * end time being block time + duration.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 4 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> coins_ =
+        java.util.Collections.emptyList();
+      private void ensureCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          coins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(coins_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinsBuilder_;
+
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getCoinsList() {
+        if (coinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(coins_);
+        } else {
+          return coinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getCoinsCount() {
+        if (coinsBuilder_ == null) {
+          return coins_.size();
+        } else {
+          return coinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoins(int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);
+        } else {
+          return coinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.set(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCoinsIsMutable();
+          coins_.add(index, value);
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          coinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, coins_);
+          onChanged();
+        } else {
+          coinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearCoins() {
+        if (coinsBuilder_ == null) {
+          coins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          coinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeCoins(int index) {
+        if (coinsBuilder_ == null) {
+          ensureCoinsIsMutable();
+          coins_.remove(index);
+          onChanged();
+        } else {
+          coinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinsOrBuilder(
+          int index) {
+        if (coinsBuilder_ == null) {
+          return coins_.get(index);  } else {
+          return coinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getCoinsOrBuilderList() {
+        if (coinsBuilder_ != null) {
+          return coinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(coins_);
+        }
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder() {
+        return getCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addCoinsBuilder(
+          int index) {
+        return getCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Coins are the tokens locked within the lock, kept in the module account.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin coins = 5 [json_name = "coins", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getCoinsBuilderList() {
+        return getCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinsFieldBuilder() {
+        if (coinsBuilder_ == null) {
+          coinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  coins_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          coins_ = null;
+        }
+        return coinsBuilder_;
+      }
+
+      private java.lang.Object rewardReceiverAddress_ = "";
+      /**
+       * <pre>
+       * Reward Receiver Address is the address that would be receiving rewards for
+       * the incentives for the lock. This is set to owner by default and can be
+       * changed via separate msg.
+       * </pre>
+       *
+       * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+       * @return The rewardReceiverAddress.
+       */
+      public java.lang.String getRewardReceiverAddress() {
+        java.lang.Object ref = rewardReceiverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardReceiverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Reward Receiver Address is the address that would be receiving rewards for
+       * the incentives for the lock. This is set to owner by default and can be
+       * changed via separate msg.
+       * </pre>
+       *
+       * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+       * @return The bytes for rewardReceiverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getRewardReceiverAddressBytes() {
+        java.lang.Object ref = rewardReceiverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardReceiverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Reward Receiver Address is the address that would be receiving rewards for
+       * the incentives for the lock. This is set to owner by default and can be
+       * changed via separate msg.
+       * </pre>
+       *
+       * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+       * @param value The rewardReceiverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardReceiverAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardReceiverAddress_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reward Receiver Address is the address that would be receiving rewards for
+       * the incentives for the lock. This is set to owner by default and can be
+       * changed via separate msg.
+       * </pre>
+       *
+       * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardReceiverAddress() {
+        rewardReceiverAddress_ = getDefaultInstance().getRewardReceiverAddress();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Reward Receiver Address is the address that would be receiving rewards for
+       * the incentives for the lock. This is set to owner by default and can be
+       * changed via separate msg.
+       * </pre>
+       *
+       * <code>string reward_receiver_address = 6 [json_name = "rewardReceiverAddress", (.gogoproto.moretags) = "yaml:&#92;"reward_receiver_address&#92;""];</code>
+       * @param value The bytes for rewardReceiverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardReceiverAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardReceiverAddress_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.lockup.PeriodLock)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.lockup.PeriodLock)
+    private static final com.osmosis.lockup.LockProto.PeriodLock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.lockup.LockProto.PeriodLock();
+    }
+
+    public static com.osmosis.lockup.LockProto.PeriodLock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PeriodLock>
+        PARSER = new com.google.protobuf.AbstractParser<PeriodLock>() {
+      @java.lang.Override
+      public PeriodLock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PeriodLock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PeriodLock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.PeriodLock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryConditionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.lockup.QueryCondition)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+     * </pre>
+     *
+     * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+     * @return The enum numeric value on the wire for lockQueryType.
+     */
+    int getLockQueryTypeValue();
+    /**
+     * <pre>
+     * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+     * </pre>
+     *
+     * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+     * @return The lockQueryType.
+     */
+    com.osmosis.lockup.LockProto.LockQueryType getLockQueryType();
+
+    /**
+     * <pre>
+     * Denom represents the token denomination we are looking to lock up
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * Denom represents the token denomination we are looking to lock up
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * Duration is used to query locks with longer duration than the specified
+     * duration. Duration field must not be nil when the lock query type is
+     * `ByLockDuration`.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * Duration is used to query locks with longer duration than the specified
+     * duration. Duration field must not be nil when the lock query type is
+     * `ByLockDuration`.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * Duration is used to query locks with longer duration than the specified
+     * duration. Duration field must not be nil when the lock query type is
+     * `ByLockDuration`.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp is used by locks started before the specified duration.
+     * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+     * Querying locks with timestamp is currently not implemented.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * Timestamp is used by locks started before the specified duration.
+     * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+     * Querying locks with timestamp is currently not implemented.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * Timestamp is used by locks started before the specified duration.
+     * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+     * Querying locks with timestamp is currently not implemented.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryCondition is a struct used for querying locks upon different conditions.
+   * Duration field and timestamp fields could be optional, depending on the
+   * LockQueryType.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.lockup.QueryCondition}
+   */
+  public static final class QueryCondition extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.lockup.QueryCondition)
+      QueryConditionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCondition.newBuilder() to construct.
+    private QueryCondition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCondition() {
+      lockQueryType_ = 0;
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCondition();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_QueryCondition_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_QueryCondition_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.lockup.LockProto.QueryCondition.class, com.osmosis.lockup.LockProto.QueryCondition.Builder.class);
+    }
+
+    public static final int LOCK_QUERY_TYPE_FIELD_NUMBER = 1;
+    private int lockQueryType_ = 0;
+    /**
+     * <pre>
+     * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+     * </pre>
+     *
+     * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+     * @return The enum numeric value on the wire for lockQueryType.
+     */
+    @java.lang.Override public int getLockQueryTypeValue() {
+      return lockQueryType_;
+    }
+    /**
+     * <pre>
+     * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+     * </pre>
+     *
+     * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+     * @return The lockQueryType.
+     */
+    @java.lang.Override public com.osmosis.lockup.LockProto.LockQueryType getLockQueryType() {
+      com.osmosis.lockup.LockProto.LockQueryType result = com.osmosis.lockup.LockProto.LockQueryType.forNumber(lockQueryType_);
+      return result == null ? com.osmosis.lockup.LockProto.LockQueryType.UNRECOGNIZED : result;
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * Denom represents the token denomination we are looking to lock up
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Denom represents the token denomination we are looking to lock up
+     * </pre>
+     *
+     * <code>string denom = 2 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * Duration is used to query locks with longer duration than the specified
+     * duration. Duration field must not be nil when the lock query type is
+     * `ByLockDuration`.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * Duration is used to query locks with longer duration than the specified
+     * duration. Duration field must not be nil when the lock query type is
+     * `ByLockDuration`.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * Duration is used to query locks with longer duration than the specified
+     * duration. Duration field must not be nil when the lock query type is
+     * `ByLockDuration`.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * Timestamp is used by locks started before the specified duration.
+     * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+     * Querying locks with timestamp is currently not implemented.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp is used by locks started before the specified duration.
+     * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+     * Querying locks with timestamp is currently not implemented.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * Timestamp is used by locks started before the specified duration.
+     * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+     * Querying locks with timestamp is currently not implemented.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lockQueryType_ != com.osmosis.lockup.LockProto.LockQueryType.ByDuration.getNumber()) {
+        output.writeEnum(1, lockQueryType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, denom_);
+      }
+      if (duration_ != null) {
+        output.writeMessage(3, getDuration());
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(4, getTimestamp());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lockQueryType_ != com.osmosis.lockup.LockProto.LockQueryType.ByDuration.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, lockQueryType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, denom_);
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDuration());
+      }
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTimestamp());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.lockup.LockProto.QueryCondition)) {
+        return super.equals(obj);
+      }
+      com.osmosis.lockup.LockProto.QueryCondition other = (com.osmosis.lockup.LockProto.QueryCondition) obj;
+
+      if (lockQueryType_ != other.lockQueryType_) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOCK_QUERY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + lockQueryType_;
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.lockup.LockProto.QueryCondition parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.lockup.LockProto.QueryCondition parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.lockup.LockProto.QueryCondition parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.lockup.LockProto.QueryCondition prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryCondition is a struct used for querying locks upon different conditions.
+     * Duration field and timestamp fields could be optional, depending on the
+     * LockQueryType.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.lockup.QueryCondition}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.lockup.QueryCondition)
+        com.osmosis.lockup.LockProto.QueryConditionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_QueryCondition_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_QueryCondition_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.lockup.LockProto.QueryCondition.class, com.osmosis.lockup.LockProto.QueryCondition.Builder.class);
+      }
+
+      // Construct using com.osmosis.lockup.LockProto.QueryCondition.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lockQueryType_ = 0;
+        denom_ = "";
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_QueryCondition_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.QueryCondition getDefaultInstanceForType() {
+        return com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.QueryCondition build() {
+        com.osmosis.lockup.LockProto.QueryCondition result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.QueryCondition buildPartial() {
+        com.osmosis.lockup.LockProto.QueryCondition result = new com.osmosis.lockup.LockProto.QueryCondition(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.lockup.LockProto.QueryCondition result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lockQueryType_ = lockQueryType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timestamp_ = timestampBuilder_ == null
+              ? timestamp_
+              : timestampBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.lockup.LockProto.QueryCondition) {
+          return mergeFrom((com.osmosis.lockup.LockProto.QueryCondition)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.lockup.LockProto.QueryCondition other) {
+        if (other == com.osmosis.lockup.LockProto.QueryCondition.getDefaultInstance()) return this;
+        if (other.lockQueryType_ != 0) {
+          setLockQueryTypeValue(other.getLockQueryTypeValue());
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                lockQueryType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int lockQueryType_ = 0;
+      /**
+       * <pre>
+       * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+       * </pre>
+       *
+       * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+       * @return The enum numeric value on the wire for lockQueryType.
+       */
+      @java.lang.Override public int getLockQueryTypeValue() {
+        return lockQueryType_;
+      }
+      /**
+       * <pre>
+       * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+       * </pre>
+       *
+       * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+       * @param value The enum numeric value on the wire for lockQueryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockQueryTypeValue(int value) {
+        lockQueryType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+       * </pre>
+       *
+       * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+       * @return The lockQueryType.
+       */
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.LockQueryType getLockQueryType() {
+        com.osmosis.lockup.LockProto.LockQueryType result = com.osmosis.lockup.LockProto.LockQueryType.forNumber(lockQueryType_);
+        return result == null ? com.osmosis.lockup.LockProto.LockQueryType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+       * </pre>
+       *
+       * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+       * @param value The lockQueryType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockQueryType(com.osmosis.lockup.LockProto.LockQueryType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        lockQueryType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * LockQueryType is a type of lock query, ByLockDuration | ByLockTime
+       * </pre>
+       *
+       * <code>.osmosis.lockup.LockQueryType lock_query_type = 1 [json_name = "lockQueryType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockQueryType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lockQueryType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * Denom represents the token denomination we are looking to lock up
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Denom represents the token denomination we are looking to lock up
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Denom represents the token denomination we are looking to lock up
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Denom represents the token denomination we are looking to lock up
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Denom represents the token denomination we are looking to lock up
+       * </pre>
+       *
+       * <code>string denom = 2 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration is used to query locks with longer duration than the specified
+       * duration. Duration field must not be nil when the lock query type is
+       * `ByLockDuration`.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 3 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            timestamp_ != null &&
+            timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimestampBuilder().mergeFrom(value);
+          } else {
+            timestamp_ = value;
+          }
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp is used by locks started before the specified duration.
+       * Timestamp field must not be nil when the lock query type is `ByLockTime`.
+       * Querying locks with timestamp is currently not implemented.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 4 [json_name = "timestamp", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"timestamp&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.lockup.QueryCondition)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.lockup.QueryCondition)
+    private static final com.osmosis.lockup.LockProto.QueryCondition DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.lockup.LockProto.QueryCondition();
+    }
+
+    public static com.osmosis.lockup.LockProto.QueryCondition getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCondition>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCondition>() {
+      @java.lang.Override
+      public QueryCondition parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCondition> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCondition> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.QueryCondition getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SyntheticLockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.lockup.SyntheticLock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Underlying Lock ID is the underlying native lock's id for this synthetic
+     * lockup. A synthetic lock MUST have an underlying lock.
+     * </pre>
+     *
+     * <code>uint64 underlying_lock_id = 1 [json_name = "underlyingLockId"];</code>
+     * @return The underlyingLockId.
+     */
+    long getUnderlyingLockId();
+
+    /**
+     * <pre>
+     * SynthDenom is the synthetic denom that is a combination of
+     * gamm share + bonding status + validator address.
+     * </pre>
+     *
+     * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+     * @return The synthDenom.
+     */
+    java.lang.String getSynthDenom();
+    /**
+     * <pre>
+     * SynthDenom is the synthetic denom that is a combination of
+     * gamm share + bonding status + validator address.
+     * </pre>
+     *
+     * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+     * @return The bytes for synthDenom.
+     */
+    com.google.protobuf.ByteString
+        getSynthDenomBytes();
+
+    /**
+     * <pre>
+     * used for unbonding synthetic lockups, for active synthetic lockups, this
+     * value is set to uninitialized value
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * used for unbonding synthetic lockups, for active synthetic lockups, this
+     * value is set to uninitialized value
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * used for unbonding synthetic lockups, for active synthetic lockups, this
+     * value is set to uninitialized value
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Duration is the duration for a synthetic lock to mature
+     * at the point of unbonding has started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * Duration is the duration for a synthetic lock to mature
+     * at the point of unbonding has started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <pre>
+     * Duration is the duration for a synthetic lock to mature
+     * at the point of unbonding has started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+  }
+  /**
+   * <pre>
+   * SyntheticLock is creating virtual lockup where new denom is combination of
+   * original denom and synthetic suffix. At the time of synthetic lockup creation
+   * and deletion, accumulation store is also being updated and on querier side,
+   * they can query as freely as native lockup.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.lockup.SyntheticLock}
+   */
+  public static final class SyntheticLock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.lockup.SyntheticLock)
+      SyntheticLockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SyntheticLock.newBuilder() to construct.
+    private SyntheticLock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SyntheticLock() {
+      synthDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SyntheticLock();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_SyntheticLock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_SyntheticLock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.lockup.LockProto.SyntheticLock.class, com.osmosis.lockup.LockProto.SyntheticLock.Builder.class);
+    }
+
+    public static final int UNDERLYING_LOCK_ID_FIELD_NUMBER = 1;
+    private long underlyingLockId_ = 0L;
+    /**
+     * <pre>
+     * Underlying Lock ID is the underlying native lock's id for this synthetic
+     * lockup. A synthetic lock MUST have an underlying lock.
+     * </pre>
+     *
+     * <code>uint64 underlying_lock_id = 1 [json_name = "underlyingLockId"];</code>
+     * @return The underlyingLockId.
+     */
+    @java.lang.Override
+    public long getUnderlyingLockId() {
+      return underlyingLockId_;
+    }
+
+    public static final int SYNTH_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object synthDenom_ = "";
+    /**
+     * <pre>
+     * SynthDenom is the synthetic denom that is a combination of
+     * gamm share + bonding status + validator address.
+     * </pre>
+     *
+     * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+     * @return The synthDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getSynthDenom() {
+      java.lang.Object ref = synthDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        synthDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SynthDenom is the synthetic denom that is a combination of
+     * gamm share + bonding status + validator address.
+     * </pre>
+     *
+     * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+     * @return The bytes for synthDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSynthDenomBytes() {
+      java.lang.Object ref = synthDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        synthDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * used for unbonding synthetic lockups, for active synthetic lockups, this
+     * value is set to uninitialized value
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * used for unbonding synthetic lockups, for active synthetic lockups, this
+     * value is set to uninitialized value
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * used for unbonding synthetic lockups, for active synthetic lockups, this
+     * value is set to uninitialized value
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <pre>
+     * Duration is the duration for a synthetic lock to mature
+     * at the point of unbonding has started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <pre>
+     * Duration is the duration for a synthetic lock to mature
+     * at the point of unbonding has started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <pre>
+     * Duration is the duration for a synthetic lock to mature
+     * at the point of unbonding has started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (underlyingLockId_ != 0L) {
+        output.writeUInt64(1, underlyingLockId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(synthDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, synthDenom_);
+      }
+      if (endTime_ != null) {
+        output.writeMessage(3, getEndTime());
+      }
+      if (duration_ != null) {
+        output.writeMessage(4, getDuration());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (underlyingLockId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, underlyingLockId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(synthDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, synthDenom_);
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getEndTime());
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDuration());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.lockup.LockProto.SyntheticLock)) {
+        return super.equals(obj);
+      }
+      com.osmosis.lockup.LockProto.SyntheticLock other = (com.osmosis.lockup.LockProto.SyntheticLock) obj;
+
+      if (getUnderlyingLockId()
+          != other.getUnderlyingLockId()) return false;
+      if (!getSynthDenom()
+          .equals(other.getSynthDenom())) return false;
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNDERLYING_LOCK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUnderlyingLockId());
+      hash = (37 * hash) + SYNTH_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getSynthDenom().hashCode();
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.lockup.LockProto.SyntheticLock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.lockup.LockProto.SyntheticLock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SyntheticLock is creating virtual lockup where new denom is combination of
+     * original denom and synthetic suffix. At the time of synthetic lockup creation
+     * and deletion, accumulation store is also being updated and on querier side,
+     * they can query as freely as native lockup.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.lockup.SyntheticLock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.lockup.SyntheticLock)
+        com.osmosis.lockup.LockProto.SyntheticLockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_SyntheticLock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_SyntheticLock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.lockup.LockProto.SyntheticLock.class, com.osmosis.lockup.LockProto.SyntheticLock.Builder.class);
+      }
+
+      // Construct using com.osmosis.lockup.LockProto.SyntheticLock.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        underlyingLockId_ = 0L;
+        synthDenom_ = "";
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.lockup.LockProto.internal_static_osmosis_lockup_SyntheticLock_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.SyntheticLock getDefaultInstanceForType() {
+        return com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.SyntheticLock build() {
+        com.osmosis.lockup.LockProto.SyntheticLock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.lockup.LockProto.SyntheticLock buildPartial() {
+        com.osmosis.lockup.LockProto.SyntheticLock result = new com.osmosis.lockup.LockProto.SyntheticLock(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.lockup.LockProto.SyntheticLock result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.underlyingLockId_ = underlyingLockId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.synthDenom_ = synthDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.duration_ = durationBuilder_ == null
+              ? duration_
+              : durationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.lockup.LockProto.SyntheticLock) {
+          return mergeFrom((com.osmosis.lockup.LockProto.SyntheticLock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.lockup.LockProto.SyntheticLock other) {
+        if (other == com.osmosis.lockup.LockProto.SyntheticLock.getDefaultInstance()) return this;
+        if (other.getUnderlyingLockId() != 0L) {
+          setUnderlyingLockId(other.getUnderlyingLockId());
+        }
+        if (!other.getSynthDenom().isEmpty()) {
+          synthDenom_ = other.synthDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                underlyingLockId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                synthDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getDurationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long underlyingLockId_ ;
+      /**
+       * <pre>
+       * Underlying Lock ID is the underlying native lock's id for this synthetic
+       * lockup. A synthetic lock MUST have an underlying lock.
+       * </pre>
+       *
+       * <code>uint64 underlying_lock_id = 1 [json_name = "underlyingLockId"];</code>
+       * @return The underlyingLockId.
+       */
+      @java.lang.Override
+      public long getUnderlyingLockId() {
+        return underlyingLockId_;
+      }
+      /**
+       * <pre>
+       * Underlying Lock ID is the underlying native lock's id for this synthetic
+       * lockup. A synthetic lock MUST have an underlying lock.
+       * </pre>
+       *
+       * <code>uint64 underlying_lock_id = 1 [json_name = "underlyingLockId"];</code>
+       * @param value The underlyingLockId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnderlyingLockId(long value) {
+
+        underlyingLockId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Underlying Lock ID is the underlying native lock's id for this synthetic
+       * lockup. A synthetic lock MUST have an underlying lock.
+       * </pre>
+       *
+       * <code>uint64 underlying_lock_id = 1 [json_name = "underlyingLockId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnderlyingLockId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        underlyingLockId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object synthDenom_ = "";
+      /**
+       * <pre>
+       * SynthDenom is the synthetic denom that is a combination of
+       * gamm share + bonding status + validator address.
+       * </pre>
+       *
+       * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+       * @return The synthDenom.
+       */
+      public java.lang.String getSynthDenom() {
+        java.lang.Object ref = synthDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          synthDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SynthDenom is the synthetic denom that is a combination of
+       * gamm share + bonding status + validator address.
+       * </pre>
+       *
+       * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+       * @return The bytes for synthDenom.
+       */
+      public com.google.protobuf.ByteString
+          getSynthDenomBytes() {
+        java.lang.Object ref = synthDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          synthDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SynthDenom is the synthetic denom that is a combination of
+       * gamm share + bonding status + validator address.
+       * </pre>
+       *
+       * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+       * @param value The synthDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSynthDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        synthDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SynthDenom is the synthetic denom that is a combination of
+       * gamm share + bonding status + validator address.
+       * </pre>
+       *
+       * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSynthDenom() {
+        synthDenom_ = getDefaultInstance().getSynthDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SynthDenom is the synthetic denom that is a combination of
+       * gamm share + bonding status + validator address.
+       * </pre>
+       *
+       * <code>string synth_denom = 2 [json_name = "synthDenom"];</code>
+       * @param value The bytes for synthDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSynthDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        synthDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * used for unbonding synthetic lockups, for active synthetic lockups, this
+       * value is set to uninitialized value
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            duration_ != null &&
+            duration_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDurationBuilder().mergeFrom(value);
+          } else {
+            duration_ = value;
+          }
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        duration_ = null;
+        if (durationBuilder_ != null) {
+          durationBuilder_.dispose();
+          durationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <pre>
+       * Duration is the duration for a synthetic lock to mature
+       * at the point of unbonding has started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration duration = 4 [json_name = "duration", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "duration,omitempty", (.gogoproto.moretags) = "yaml:&#92;"duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.lockup.SyntheticLock)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.lockup.SyntheticLock)
+    private static final com.osmosis.lockup.LockProto.SyntheticLock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.lockup.LockProto.SyntheticLock();
+    }
+
+    public static com.osmosis.lockup.LockProto.SyntheticLock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SyntheticLock>
+        PARSER = new com.google.protobuf.AbstractParser<SyntheticLock>() {
+      @java.lang.Override
+      public SyntheticLock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SyntheticLock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SyntheticLock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.lockup.LockProto.SyntheticLock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_lockup_PeriodLock_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_lockup_PeriodLock_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_lockup_QueryCondition_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_lockup_QueryCondition_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_lockup_SyntheticLock_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_lockup_SyntheticLock_fieldAccessorTable;
 
@@ -68,12 +4710,12 @@ public final class LockProto {
       "h\n\010duration\030\004 \001(\0132\031.google.protobuf.Dura" +
       "tionB1\310\336\037\000\352\336\037\022duration,omitempty\362\336\037\017yaml" +
       ":\"duration\"\230\337\037\001R\010duration*1\n\rLockQueryTy" +
-      "pe\022\016\n\nByDuration\020\000\022\n\n\006ByTime\020\001\032\004\210\243\036\000B\254\001\n" +
-      "\022com.osmosis.lockupB\tLockProtoP\001Z2github" +
-      ".com/osmosis-labs/osmosis/v15/x/lockup/t" +
-      "ypes\242\002\003OLX\252\002\016Osmosis.Lockup\312\002\016Osmosis\\Lo" +
-      "ckup\342\002\032Osmosis\\Lockup\\GPBMetadata\352\002\017Osmo" +
-      "sis::Lockupb\006proto3"
+      "pe\022\016\n\nByDuration\020\000\022\n\n\006ByTime\020\001\032\004\210\243\036\000B\252\001\n" +
+      "\022com.osmosis.lockupB\tLockProtoZ2github.c" +
+      "om/osmosis-labs/osmosis/v15/x/lockup/typ" +
+      "es\242\002\003OLX\252\002\016Osmosis.Lockup\312\002\016Osmosis\\Lock" +
+      "up\342\002\032Osmosis\\Lockup\\GPBMetadata\352\002\017Osmosi" +
+      "s::Lockupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

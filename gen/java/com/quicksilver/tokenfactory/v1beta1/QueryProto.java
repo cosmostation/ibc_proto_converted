@@ -14,34 +14,3469 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.tokenfactory.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.tokenfactory.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest other = (com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.tokenfactory.v1beta1.QueryParamsRequest)
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest result = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.tokenfactory.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.tokenfactory.v1beta1.QueryParamsRequest)
+    private static final com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.tokenfactory.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.tokenfactory.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse other = (com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.tokenfactory.v1beta1.QueryParamsResponse)
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse result = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params, com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.quicksilver.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.quicksilver.tokenfactory.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params, com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.quicksilver.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params, com.quicksilver.tokenfactory.v1beta1.ParamsProto.Params.Builder, com.quicksilver.tokenfactory.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.tokenfactory.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.tokenfactory.v1beta1.QueryParamsResponse)
+    private static final com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomAuthorityMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryDenomAuthorityMetadataRequest defines the request structure for the
+   * DenomAuthorityMetadata gRPC query.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest}
+   */
+  public static final class QueryDenomAuthorityMetadataRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest)
+      QueryDenomAuthorityMetadataRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomAuthorityMetadataRequest.newBuilder() to construct.
+    private QueryDenomAuthorityMetadataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomAuthorityMetadataRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomAuthorityMetadataRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest other = (com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomAuthorityMetadataRequest defines the request structure for the
+     * DenomAuthorityMetadata gRPC query.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest)
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.Builder.class);
+      }
+
+      // Construct using com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest getDefaultInstanceForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest build() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest buildPartial() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest result = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest) {
+          return mergeFrom((com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest other) {
+        if (other == com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest)
+    private static final com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest();
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomAuthorityMetadataRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomAuthorityMetadataRequest>() {
+      @java.lang.Override
+      public QueryDenomAuthorityMetadataRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomAuthorityMetadataRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomAuthorityMetadataRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomAuthorityMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return Whether the authorityMetadata field is set.
+     */
+    boolean hasAuthorityMetadata();
+    /**
+     * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return The authorityMetadata.
+     */
+    com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata getAuthorityMetadata();
+    /**
+     * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     */
+    com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder getAuthorityMetadataOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDenomAuthorityMetadataResponse defines the response structure for the
+   * DenomAuthorityMetadata gRPC query.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse}
+   */
+  public static final class QueryDenomAuthorityMetadataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse)
+      QueryDenomAuthorityMetadataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomAuthorityMetadataResponse.newBuilder() to construct.
+    private QueryDenomAuthorityMetadataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomAuthorityMetadataResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomAuthorityMetadataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.Builder.class);
+    }
+
+    public static final int AUTHORITY_METADATA_FIELD_NUMBER = 1;
+    private com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata authorityMetadata_;
+    /**
+     * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return Whether the authorityMetadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthorityMetadata() {
+      return authorityMetadata_ != null;
+    }
+    /**
+     * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     * @return The authorityMetadata.
+     */
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata getAuthorityMetadata() {
+      return authorityMetadata_ == null ? com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+    }
+    /**
+     * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder getAuthorityMetadataOrBuilder() {
+      return authorityMetadata_ == null ? com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (authorityMetadata_ != null) {
+        output.writeMessage(1, getAuthorityMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (authorityMetadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAuthorityMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse other = (com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse) obj;
+
+      if (hasAuthorityMetadata() != other.hasAuthorityMetadata()) return false;
+      if (hasAuthorityMetadata()) {
+        if (!getAuthorityMetadata()
+            .equals(other.getAuthorityMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAuthorityMetadata()) {
+        hash = (37 * hash) + AUTHORITY_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthorityMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomAuthorityMetadataResponse defines the response structure for the
+     * DenomAuthorityMetadata gRPC query.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse)
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        authorityMetadata_ = null;
+        if (authorityMetadataBuilder_ != null) {
+          authorityMetadataBuilder_.dispose();
+          authorityMetadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse getDefaultInstanceForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse build() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse buildPartial() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse result = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.authorityMetadata_ = authorityMetadataBuilder_ == null
+              ? authorityMetadata_
+              : authorityMetadataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse) {
+          return mergeFrom((com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse other) {
+        if (other == com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse.getDefaultInstance()) return this;
+        if (other.hasAuthorityMetadata()) {
+          mergeAuthorityMetadata(other.getAuthorityMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAuthorityMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata authorityMetadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata, com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder, com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder> authorityMetadataBuilder_;
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       * @return Whether the authorityMetadata field is set.
+       */
+      public boolean hasAuthorityMetadata() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       * @return The authorityMetadata.
+       */
+      public com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata getAuthorityMetadata() {
+        if (authorityMetadataBuilder_ == null) {
+          return authorityMetadata_ == null ? com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+        } else {
+          return authorityMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder setAuthorityMetadata(com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata value) {
+        if (authorityMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authorityMetadata_ = value;
+        } else {
+          authorityMetadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder setAuthorityMetadata(
+          com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder builderForValue) {
+        if (authorityMetadataBuilder_ == null) {
+          authorityMetadata_ = builderForValue.build();
+        } else {
+          authorityMetadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder mergeAuthorityMetadata(com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata value) {
+        if (authorityMetadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            authorityMetadata_ != null &&
+            authorityMetadata_ != com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance()) {
+            getAuthorityMetadataBuilder().mergeFrom(value);
+          } else {
+            authorityMetadata_ = value;
+          }
+        } else {
+          authorityMetadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public Builder clearAuthorityMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        authorityMetadata_ = null;
+        if (authorityMetadataBuilder_ != null) {
+          authorityMetadataBuilder_.dispose();
+          authorityMetadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder getAuthorityMetadataBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAuthorityMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      public com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder getAuthorityMetadataOrBuilder() {
+        if (authorityMetadataBuilder_ != null) {
+          return authorityMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return authorityMetadata_ == null ?
+              com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.getDefaultInstance() : authorityMetadata_;
+        }
+      }
+      /**
+       * <code>.quicksilver.tokenfactory.v1beta1.DenomAuthorityMetadata authority_metadata = 1 [json_name = "authorityMetadata", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"authority_metadata&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata, com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder, com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder> 
+          getAuthorityMetadataFieldBuilder() {
+        if (authorityMetadataBuilder_ == null) {
+          authorityMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata, com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadata.Builder, com.quicksilver.tokenfactory.v1beta1.AuthorityMetadataProto.DenomAuthorityMetadataOrBuilder>(
+                  getAuthorityMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          authorityMetadata_ = null;
+        }
+        return authorityMetadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse)
+    private static final com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse();
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomAuthorityMetadataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomAuthorityMetadataResponse>() {
+      @java.lang.Override
+      public QueryDenomAuthorityMetadataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomAuthorityMetadataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomAuthorityMetadataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomAuthorityMetadataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomsFromCreatorRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+  }
+  /**
+   * <pre>
+   * QueryDenomsFromCreatorRequest defines the request structure for the
+   * DenomsFromCreator gRPC query.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest}
+   */
+  public static final class QueryDenomsFromCreatorRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest)
+      QueryDenomsFromCreatorRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomsFromCreatorRequest.newBuilder() to construct.
+    private QueryDenomsFromCreatorRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomsFromCreatorRequest() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomsFromCreatorRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest other = (com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomsFromCreatorRequest defines the request structure for the
+     * DenomsFromCreator gRPC query.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest)
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.Builder.class);
+      }
+
+      // Construct using com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest getDefaultInstanceForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest build() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest buildPartial() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest result = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest) {
+          return mergeFrom((com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest other) {
+        if (other == com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator", (.gogoproto.moretags) = "yaml:&#92;"creator&#92;""];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest)
+    private static final com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest();
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomsFromCreatorRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomsFromCreatorRequest>() {
+      @java.lang.Override
+      public QueryDenomsFromCreatorRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomsFromCreatorRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomsFromCreatorRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDenomsFromCreatorResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return A list containing the denoms.
+     */
+    java.util.List<java.lang.String>
+        getDenomsList();
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return The count of denoms.
+     */
+    int getDenomsCount();
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denoms at the given index.
+     */
+    java.lang.String getDenoms(int index);
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDenomsBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryDenomsFromCreatorRequest defines the response structure for the
+   * DenomsFromCreator gRPC query.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse}
+   */
+  public static final class QueryDenomsFromCreatorResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse)
+      QueryDenomsFromCreatorResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDenomsFromCreatorResponse.newBuilder() to construct.
+    private QueryDenomsFromCreatorResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDenomsFromCreatorResponse() {
+      denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDenomsFromCreatorResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.Builder.class);
+    }
+
+    public static final int DENOMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList denoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return A list containing the denoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDenomsList() {
+      return denoms_;
+    }
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @return The count of denoms.
+     */
+    public int getDenomsCount() {
+      return denoms_.size();
+    }
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The denoms at the given index.
+     */
+    public java.lang.String getDenoms(int index) {
+      return denoms_.get(index);
+    }
+    /**
+     * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the denoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDenomsBytes(int index) {
+      return denoms_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < denoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denoms_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < denoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(denoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDenomsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse other = (com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse) obj;
+
+      if (!getDenomsList()
+          .equals(other.getDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDenomsCount() > 0) {
+        hash = (37 * hash) + DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDenomsFromCreatorRequest defines the response structure for the
+     * DenomsFromCreator gRPC query.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse)
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.class, com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse getDefaultInstanceForType() {
+        return com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse build() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse buildPartial() {
+        com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse result = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          denoms_.makeImmutable();
+          result.denoms_ = denoms_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse) {
+          return mergeFrom((com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse other) {
+        if (other == com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse.getDefaultInstance()) return this;
+        if (!other.denoms_.isEmpty()) {
+          if (denoms_.isEmpty()) {
+            denoms_ = other.denoms_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureDenomsIsMutable();
+            denoms_.addAll(other.denoms_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDenomsIsMutable();
+                denoms_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDenomsIsMutable() {
+        if (!denoms_.isModifiable()) {
+          denoms_ = new com.google.protobuf.LazyStringArrayList(denoms_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return A list containing the denoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDenomsList() {
+        denoms_.makeImmutable();
+        return denoms_;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return The count of denoms.
+       */
+      public int getDenomsCount() {
+        return denoms_.size();
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The denoms at the given index.
+       */
+      public java.lang.String getDenoms(int index) {
+        return denoms_.get(index);
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the denoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDenomsBytes(int index) {
+        return denoms_.getByteString(index);
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The denoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomsIsMutable();
+        denoms_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param value The denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDenomsIsMutable();
+        denoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param values The denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, denoms_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenoms() {
+        denoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string denoms = 1 [json_name = "denoms", (.gogoproto.moretags) = "yaml:&#92;"denoms&#92;""];</code>
+       * @param value The bytes of the denoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDenomsIsMutable();
+        denoms_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse)
+    private static final com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse();
+    }
+
+    public static com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDenomsFromCreatorResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDenomsFromCreatorResponse>() {
+      @java.lang.Override
+      public QueryDenomsFromCreatorResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDenomsFromCreatorResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDenomsFromCreatorResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.tokenfactory.v1beta1.QueryProto.QueryDenomsFromCreatorResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_tokenfactory_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomAuthorityMetadataResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_tokenfactory_v1beta1_QueryDenomsFromCreatorResponse_fieldAccessorTable;
 
@@ -89,14 +3524,14 @@ public final class QueryProto {
       "quest\032@.quicksilver.tokenfactory.v1beta1" +
       ".QueryDenomsFromCreatorResponse\"G\202\323\344\223\002A\022" +
       "?/quicksilver/tokenfactory/v1beta1/denom" +
-      "s_from_creator/{creator}B\221\002\n$com.quicksi" +
-      "lver.tokenfactory.v1beta1B\nQueryProtoP\001Z" +
-      ";github.com/ingenuity-build/quicksilver/" +
-      "x/tokenfactory/types\242\002\003QTX\252\002 Quicksilver" +
-      ".Tokenfactory.V1beta1\312\002 Quicksilver\\Toke" +
-      "nfactory\\V1beta1\342\002,Quicksilver\\Tokenfact" +
-      "ory\\V1beta1\\GPBMetadata\352\002\"Quicksilver::T" +
-      "okenfactory::V1beta1b\006proto3"
+      "s_from_creator/{creator}B\217\002\n$com.quicksi" +
+      "lver.tokenfactory.v1beta1B\nQueryProtoZ;g" +
+      "ithub.com/ingenuity-build/quicksilver/x/" +
+      "tokenfactory/types\242\002\003QTX\252\002 Quicksilver.T" +
+      "okenfactory.V1beta1\312\002 Quicksilver\\Tokenf" +
+      "actory\\V1beta1\342\002,Quicksilver\\Tokenfactor" +
+      "y\\V1beta1\\GPBMetadata\352\002\"Quicksilver::Tok" +
+      "enfactory::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

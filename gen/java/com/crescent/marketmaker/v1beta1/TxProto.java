@@ -14,24 +14,2114 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgApplyMarketMakerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marketmaker.v1beta1.MsgApplyMarketMaker)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+     * @return A list containing the pairIds.
+     */
+    java.util.List<java.lang.Long> getPairIdsList();
+    /**
+     * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+     * @return The count of pairIds.
+     */
+    int getPairIdsCount();
+    /**
+     * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The pairIds at the given index.
+     */
+    long getPairIds(int index);
+  }
+  /**
+   * Protobuf type {@code crescent.marketmaker.v1beta1.MsgApplyMarketMaker}
+   */
+  public static final class MsgApplyMarketMaker extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marketmaker.v1beta1.MsgApplyMarketMaker)
+      MsgApplyMarketMakerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgApplyMarketMaker.newBuilder() to construct.
+    private MsgApplyMarketMaker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgApplyMarketMaker() {
+      address_ = "";
+      pairIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgApplyMarketMaker();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.class, com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAIR_IDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList pairIds_;
+    /**
+     * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+     * @return A list containing the pairIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getPairIdsList() {
+      return pairIds_;
+    }
+    /**
+     * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+     * @return The count of pairIds.
+     */
+    public int getPairIdsCount() {
+      return pairIds_.size();
+    }
+    /**
+     * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The pairIds at the given index.
+     */
+    public long getPairIds(int index) {
+      return pairIds_.getLong(index);
+    }
+    private int pairIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (getPairIdsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(pairIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < pairIds_.size(); i++) {
+        output.writeUInt64NoTag(pairIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < pairIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(pairIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getPairIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        pairIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker)) {
+        return super.equals(obj);
+      }
+      com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker other = (com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getPairIdsList()
+          .equals(other.getPairIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getPairIdsCount() > 0) {
+        hash = (37 * hash) + PAIR_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marketmaker.v1beta1.MsgApplyMarketMaker}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marketmaker.v1beta1.MsgApplyMarketMaker)
+        com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.class, com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.Builder.class);
+      }
+
+      // Construct using com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        pairIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker getDefaultInstanceForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker build() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker buildPartial() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result = new com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          pairIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.pairIds_ = pairIds_;
+      }
+
+      private void buildPartial0(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker) {
+          return mergeFrom((com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker other) {
+        if (other == com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.pairIds_.isEmpty()) {
+          if (pairIds_.isEmpty()) {
+            pairIds_ = other.pairIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensurePairIdsIsMutable();
+            pairIds_.addAll(other.pairIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                long v = input.readUInt64();
+                ensurePairIdsIsMutable();
+                pairIds_.addLong(v);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePairIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  pairIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList pairIds_ = emptyLongList();
+      private void ensurePairIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          pairIds_ = mutableCopy(pairIds_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @return A list containing the pairIds.
+       */
+      public java.util.List<java.lang.Long>
+          getPairIdsList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(pairIds_) : pairIds_;
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @return The count of pairIds.
+       */
+      public int getPairIdsCount() {
+        return pairIds_.size();
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The pairIds at the given index.
+       */
+      public long getPairIds(int index) {
+        return pairIds_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The pairIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPairIds(
+          int index, long value) {
+
+        ensurePairIdsIsMutable();
+        pairIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @param value The pairIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPairIds(long value) {
+
+        ensurePairIdsIsMutable();
+        pairIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @param values The pairIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPairIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePairIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pairIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 pair_ids = 2 [json_name = "pairIds", (.gogoproto.moretags) = "yaml:&#92;"pair_ids&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPairIds() {
+        pairIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marketmaker.v1beta1.MsgApplyMarketMaker)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marketmaker.v1beta1.MsgApplyMarketMaker)
+    private static final com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker();
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgApplyMarketMaker>
+        PARSER = new com.google.protobuf.AbstractParser<MsgApplyMarketMaker>() {
+      @java.lang.Override
+      public MsgApplyMarketMaker parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgApplyMarketMaker> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgApplyMarketMaker> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMaker getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgApplyMarketMakerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse}
+   */
+  public static final class MsgApplyMarketMakerResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse)
+      MsgApplyMarketMakerResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgApplyMarketMakerResponse.newBuilder() to construct.
+    private MsgApplyMarketMakerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgApplyMarketMakerResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgApplyMarketMakerResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.class, com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse other = (com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse)
+        com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.class, com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse getDefaultInstanceForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse build() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse buildPartial() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse result = new com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse) {
+          return mergeFrom((com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse other) {
+        if (other == com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marketmaker.v1beta1.MsgApplyMarketMakerResponse)
+    private static final com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse();
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgApplyMarketMakerResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgApplyMarketMakerResponse>() {
+      @java.lang.Override
+      public MsgApplyMarketMakerResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgApplyMarketMakerResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgApplyMarketMakerResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marketmaker.v1beta1.TxProto.MsgApplyMarketMakerResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimIncentivesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marketmaker.v1beta1.MsgClaimIncentives)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code crescent.marketmaker.v1beta1.MsgClaimIncentives}
+   */
+  public static final class MsgClaimIncentives extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marketmaker.v1beta1.MsgClaimIncentives)
+      MsgClaimIncentivesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimIncentives.newBuilder() to construct.
+    private MsgClaimIncentives(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimIncentives() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimIncentives();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.class, com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives)) {
+        return super.equals(obj);
+      }
+      com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives other = (com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marketmaker.v1beta1.MsgClaimIncentives}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marketmaker.v1beta1.MsgClaimIncentives)
+        com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.class, com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.Builder.class);
+      }
+
+      // Construct using com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives getDefaultInstanceForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives build() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives buildPartial() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives result = new com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives) {
+          return mergeFrom((com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives other) {
+        if (other == com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marketmaker.v1beta1.MsgClaimIncentives)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marketmaker.v1beta1.MsgClaimIncentives)
+    private static final com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives();
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimIncentives>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimIncentives>() {
+      @java.lang.Override
+      public MsgClaimIncentives parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimIncentives> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimIncentives> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentives getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimIncentivesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse}
+   */
+  public static final class MsgClaimIncentivesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse)
+      MsgClaimIncentivesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimIncentivesResponse.newBuilder() to construct.
+    private MsgClaimIncentivesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimIncentivesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimIncentivesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.class, com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse other = (com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse)
+        com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.class, com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse getDefaultInstanceForType() {
+        return com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse build() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse buildPartial() {
+        com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse result = new com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse) {
+          return mergeFrom((com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse other) {
+        if (other == com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.marketmaker.v1beta1.MsgClaimIncentivesResponse)
+    private static final com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse();
+    }
+
+    public static com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimIncentivesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimIncentivesResponse>() {
+      @java.lang.Override
+      public MsgClaimIncentivesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimIncentivesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimIncentivesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.marketmaker.v1beta1.TxProto.MsgClaimIncentivesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMaker_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marketmaker_v1beta1_MsgApplyMarketMakerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentives_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_marketmaker_v1beta1_MsgClaimIncentivesResponse_fieldAccessorTable;
 
@@ -59,14 +2149,14 @@ public final class TxProto {
       "yMarketMakerResponse\022}\n\017ClaimIncentives\022" +
       "0.crescent.marketmaker.v1beta1.MsgClaimI" +
       "ncentives\0328.crescent.marketmaker.v1beta1" +
-      ".MsgClaimIncentivesResponseB\372\001\n com.cres" +
-      "cent.marketmaker.v1beta1B\007TxProtoP\001Z;git" +
-      "hub.com/crescent-network/crescent/v5/x/m" +
-      "arketmaker/types\242\002\003CMX\252\002\034Crescent.Market" +
-      "maker.V1beta1\312\002\034Crescent\\Marketmaker\\V1b" +
-      "eta1\342\002(Crescent\\Marketmaker\\V1beta1\\GPBM" +
-      "etadata\352\002\036Crescent::Marketmaker::V1beta1" +
-      "b\006proto3"
+      ".MsgClaimIncentivesResponseB\370\001\n com.cres" +
+      "cent.marketmaker.v1beta1B\007TxProtoZ;githu" +
+      "b.com/crescent-network/crescent/v5/x/mar" +
+      "ketmaker/types\242\002\003CMX\252\002\034Crescent.Marketma" +
+      "ker.V1beta1\312\002\034Crescent\\Marketmaker\\V1bet" +
+      "a1\342\002(Crescent\\Marketmaker\\V1beta1\\GPBMet" +
+      "adata\352\002\036Crescent::Marketmaker::V1beta1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

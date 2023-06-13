@@ -14,19 +14,2026 @@ public final class TreeProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface NodeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.store.v1beta1.Node)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    java.util.List<com.osmosis.store.v1beta1.TreeProto.Child> 
+        getChildrenList();
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    com.osmosis.store.v1beta1.TreeProto.Child getChildren(int index);
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    int getChildrenCount();
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    java.util.List<? extends com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> 
+        getChildrenOrBuilderList();
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder getChildrenOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.store.v1beta1.Node}
+   */
+  public static final class Node extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.store.v1beta1.Node)
+      NodeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Node.newBuilder() to construct.
+    private Node(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Node() {
+      children_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Node();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Node_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Node_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.store.v1beta1.TreeProto.Node.class, com.osmosis.store.v1beta1.TreeProto.Node.Builder.class);
+    }
+
+    public static final int CHILDREN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.store.v1beta1.TreeProto.Child> children_;
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.store.v1beta1.TreeProto.Child> getChildrenList() {
+      return children_;
+    }
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> 
+        getChildrenOrBuilderList() {
+      return children_;
+    }
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    @java.lang.Override
+    public int getChildrenCount() {
+      return children_.size();
+    }
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.Child getChildren(int index) {
+      return children_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder getChildrenOrBuilder(
+        int index) {
+      return children_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < children_.size(); i++) {
+        output.writeMessage(1, children_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < children_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, children_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.store.v1beta1.TreeProto.Node)) {
+        return super.equals(obj);
+      }
+      com.osmosis.store.v1beta1.TreeProto.Node other = (com.osmosis.store.v1beta1.TreeProto.Node) obj;
+
+      if (!getChildrenList()
+          .equals(other.getChildrenList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getChildrenCount() > 0) {
+        hash = (37 * hash) + CHILDREN_FIELD_NUMBER;
+        hash = (53 * hash) + getChildrenList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Node parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.store.v1beta1.TreeProto.Node prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.store.v1beta1.Node}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.store.v1beta1.Node)
+        com.osmosis.store.v1beta1.TreeProto.NodeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Node_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Node_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.store.v1beta1.TreeProto.Node.class, com.osmosis.store.v1beta1.TreeProto.Node.Builder.class);
+      }
+
+      // Construct using com.osmosis.store.v1beta1.TreeProto.Node.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (childrenBuilder_ == null) {
+          children_ = java.util.Collections.emptyList();
+        } else {
+          children_ = null;
+          childrenBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Node_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Node getDefaultInstanceForType() {
+        return com.osmosis.store.v1beta1.TreeProto.Node.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Node build() {
+        com.osmosis.store.v1beta1.TreeProto.Node result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Node buildPartial() {
+        com.osmosis.store.v1beta1.TreeProto.Node result = new com.osmosis.store.v1beta1.TreeProto.Node(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.store.v1beta1.TreeProto.Node result) {
+        if (childrenBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            children_ = java.util.Collections.unmodifiableList(children_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.children_ = children_;
+        } else {
+          result.children_ = childrenBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.store.v1beta1.TreeProto.Node result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.store.v1beta1.TreeProto.Node) {
+          return mergeFrom((com.osmosis.store.v1beta1.TreeProto.Node)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.store.v1beta1.TreeProto.Node other) {
+        if (other == com.osmosis.store.v1beta1.TreeProto.Node.getDefaultInstance()) return this;
+        if (childrenBuilder_ == null) {
+          if (!other.children_.isEmpty()) {
+            if (children_.isEmpty()) {
+              children_ = other.children_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureChildrenIsMutable();
+              children_.addAll(other.children_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.children_.isEmpty()) {
+            if (childrenBuilder_.isEmpty()) {
+              childrenBuilder_.dispose();
+              childrenBuilder_ = null;
+              children_ = other.children_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              childrenBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getChildrenFieldBuilder() : null;
+            } else {
+              childrenBuilder_.addAllMessages(other.children_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.store.v1beta1.TreeProto.Child m =
+                    input.readMessage(
+                        com.osmosis.store.v1beta1.TreeProto.Child.parser(),
+                        extensionRegistry);
+                if (childrenBuilder_ == null) {
+                  ensureChildrenIsMutable();
+                  children_.add(m);
+                } else {
+                  childrenBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.store.v1beta1.TreeProto.Child> children_ =
+        java.util.Collections.emptyList();
+      private void ensureChildrenIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          children_ = new java.util.ArrayList<com.osmosis.store.v1beta1.TreeProto.Child>(children_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.store.v1beta1.TreeProto.Child, com.osmosis.store.v1beta1.TreeProto.Child.Builder, com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> childrenBuilder_;
+
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public java.util.List<com.osmosis.store.v1beta1.TreeProto.Child> getChildrenList() {
+        if (childrenBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(children_);
+        } else {
+          return childrenBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public int getChildrenCount() {
+        if (childrenBuilder_ == null) {
+          return children_.size();
+        } else {
+          return childrenBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.Child getChildren(int index) {
+        if (childrenBuilder_ == null) {
+          return children_.get(index);
+        } else {
+          return childrenBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder setChildren(
+          int index, com.osmosis.store.v1beta1.TreeProto.Child value) {
+        if (childrenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChildrenIsMutable();
+          children_.set(index, value);
+          onChanged();
+        } else {
+          childrenBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder setChildren(
+          int index, com.osmosis.store.v1beta1.TreeProto.Child.Builder builderForValue) {
+        if (childrenBuilder_ == null) {
+          ensureChildrenIsMutable();
+          children_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          childrenBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder addChildren(com.osmosis.store.v1beta1.TreeProto.Child value) {
+        if (childrenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChildrenIsMutable();
+          children_.add(value);
+          onChanged();
+        } else {
+          childrenBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder addChildren(
+          int index, com.osmosis.store.v1beta1.TreeProto.Child value) {
+        if (childrenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureChildrenIsMutable();
+          children_.add(index, value);
+          onChanged();
+        } else {
+          childrenBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder addChildren(
+          com.osmosis.store.v1beta1.TreeProto.Child.Builder builderForValue) {
+        if (childrenBuilder_ == null) {
+          ensureChildrenIsMutable();
+          children_.add(builderForValue.build());
+          onChanged();
+        } else {
+          childrenBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder addChildren(
+          int index, com.osmosis.store.v1beta1.TreeProto.Child.Builder builderForValue) {
+        if (childrenBuilder_ == null) {
+          ensureChildrenIsMutable();
+          children_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          childrenBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder addAllChildren(
+          java.lang.Iterable<? extends com.osmosis.store.v1beta1.TreeProto.Child> values) {
+        if (childrenBuilder_ == null) {
+          ensureChildrenIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, children_);
+          onChanged();
+        } else {
+          childrenBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder clearChildren() {
+        if (childrenBuilder_ == null) {
+          children_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          childrenBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public Builder removeChildren(int index) {
+        if (childrenBuilder_ == null) {
+          ensureChildrenIsMutable();
+          children_.remove(index);
+          onChanged();
+        } else {
+          childrenBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.Child.Builder getChildrenBuilder(
+          int index) {
+        return getChildrenFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder getChildrenOrBuilder(
+          int index) {
+        if (childrenBuilder_ == null) {
+          return children_.get(index);  } else {
+          return childrenBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public java.util.List<? extends com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> 
+           getChildrenOrBuilderList() {
+        if (childrenBuilder_ != null) {
+          return childrenBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(children_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.Child.Builder addChildrenBuilder() {
+        return getChildrenFieldBuilder().addBuilder(
+            com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.Child.Builder addChildrenBuilder(
+          int index) {
+        return getChildrenFieldBuilder().addBuilder(
+            index, com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.store.v1beta1.Child children = 1 [json_name = "children"];</code>
+       */
+      public java.util.List<com.osmosis.store.v1beta1.TreeProto.Child.Builder> 
+           getChildrenBuilderList() {
+        return getChildrenFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.store.v1beta1.TreeProto.Child, com.osmosis.store.v1beta1.TreeProto.Child.Builder, com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> 
+          getChildrenFieldBuilder() {
+        if (childrenBuilder_ == null) {
+          childrenBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.store.v1beta1.TreeProto.Child, com.osmosis.store.v1beta1.TreeProto.Child.Builder, com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder>(
+                  children_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          children_ = null;
+        }
+        return childrenBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.store.v1beta1.Node)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.store.v1beta1.Node)
+    private static final com.osmosis.store.v1beta1.TreeProto.Node DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.store.v1beta1.TreeProto.Node();
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Node getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Node>
+        PARSER = new com.google.protobuf.AbstractParser<Node>() {
+      @java.lang.Override
+      public Node parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Node> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Node> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.Node getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChildOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.store.v1beta1.Child)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    com.google.protobuf.ByteString getIndex();
+
+    /**
+     * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The accumulation.
+     */
+    java.lang.String getAccumulation();
+    /**
+     * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for accumulation.
+     */
+    com.google.protobuf.ByteString
+        getAccumulationBytes();
+  }
+  /**
+   * Protobuf type {@code osmosis.store.v1beta1.Child}
+   */
+  public static final class Child extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.store.v1beta1.Child)
+      ChildOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Child.newBuilder() to construct.
+    private Child(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Child() {
+      index_ = com.google.protobuf.ByteString.EMPTY;
+      accumulation_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Child();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Child_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Child_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.store.v1beta1.TreeProto.Child.class, com.osmosis.store.v1beta1.TreeProto.Child.Builder.class);
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString index_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes index = 1 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getIndex() {
+      return index_;
+    }
+
+    public static final int ACCUMULATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accumulation_ = "";
+    /**
+     * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The accumulation.
+     */
+    @java.lang.Override
+    public java.lang.String getAccumulation() {
+      java.lang.Object ref = accumulation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accumulation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for accumulation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccumulationBytes() {
+      java.lang.Object ref = accumulation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accumulation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!index_.isEmpty()) {
+        output.writeBytes(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accumulation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accumulation_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!index_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accumulation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accumulation_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.store.v1beta1.TreeProto.Child)) {
+        return super.equals(obj);
+      }
+      com.osmosis.store.v1beta1.TreeProto.Child other = (com.osmosis.store.v1beta1.TreeProto.Child) obj;
+
+      if (!getIndex()
+          .equals(other.getIndex())) return false;
+      if (!getAccumulation()
+          .equals(other.getAccumulation())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex().hashCode();
+      hash = (37 * hash) + ACCUMULATION_FIELD_NUMBER;
+      hash = (53 * hash) + getAccumulation().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Child parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.store.v1beta1.TreeProto.Child prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.store.v1beta1.Child}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.store.v1beta1.Child)
+        com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Child_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Child_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.store.v1beta1.TreeProto.Child.class, com.osmosis.store.v1beta1.TreeProto.Child.Builder.class);
+      }
+
+      // Construct using com.osmosis.store.v1beta1.TreeProto.Child.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        index_ = com.google.protobuf.ByteString.EMPTY;
+        accumulation_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Child_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Child getDefaultInstanceForType() {
+        return com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Child build() {
+        com.osmosis.store.v1beta1.TreeProto.Child result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Child buildPartial() {
+        com.osmosis.store.v1beta1.TreeProto.Child result = new com.osmosis.store.v1beta1.TreeProto.Child(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.store.v1beta1.TreeProto.Child result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.accumulation_ = accumulation_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.store.v1beta1.TreeProto.Child) {
+          return mergeFrom((com.osmosis.store.v1beta1.TreeProto.Child)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.store.v1beta1.TreeProto.Child other) {
+        if (other == com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance()) return this;
+        if (other.getIndex() != com.google.protobuf.ByteString.EMPTY) {
+          setIndex(other.getIndex());
+        }
+        if (!other.getAccumulation().isEmpty()) {
+          accumulation_ = other.accumulation_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                index_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                accumulation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString index_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes index = 1 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getIndex() {
+        return index_;
+      }
+      /**
+       * <code>bytes index = 1 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        index_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes index = 1 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = getDefaultInstance().getIndex();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accumulation_ = "";
+      /**
+       * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The accumulation.
+       */
+      public java.lang.String getAccumulation() {
+        java.lang.Object ref = accumulation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accumulation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for accumulation.
+       */
+      public com.google.protobuf.ByteString
+          getAccumulationBytes() {
+        java.lang.Object ref = accumulation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accumulation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The accumulation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccumulation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        accumulation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccumulation() {
+        accumulation_ = getDefaultInstance().getAccumulation();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string accumulation = 2 [json_name = "accumulation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for accumulation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccumulationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        accumulation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.store.v1beta1.Child)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.store.v1beta1.Child)
+    private static final com.osmosis.store.v1beta1.TreeProto.Child DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.store.v1beta1.TreeProto.Child();
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Child getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Child>
+        PARSER = new com.google.protobuf.AbstractParser<Child>() {
+      @java.lang.Override
+      public Child parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Child> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Child> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.Child getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LeafOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.store.v1beta1.Leaf)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+     * @return Whether the leaf field is set.
+     */
+    boolean hasLeaf();
+    /**
+     * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+     * @return The leaf.
+     */
+    com.osmosis.store.v1beta1.TreeProto.Child getLeaf();
+    /**
+     * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+     */
+    com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder getLeafOrBuilder();
+  }
+  /**
+   * Protobuf type {@code osmosis.store.v1beta1.Leaf}
+   */
+  public static final class Leaf extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.store.v1beta1.Leaf)
+      LeafOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Leaf.newBuilder() to construct.
+    private Leaf(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Leaf() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Leaf();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Leaf_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Leaf_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.store.v1beta1.TreeProto.Leaf.class, com.osmosis.store.v1beta1.TreeProto.Leaf.Builder.class);
+    }
+
+    public static final int LEAF_FIELD_NUMBER = 1;
+    private com.osmosis.store.v1beta1.TreeProto.Child leaf_;
+    /**
+     * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+     * @return Whether the leaf field is set.
+     */
+    @java.lang.Override
+    public boolean hasLeaf() {
+      return leaf_ != null;
+    }
+    /**
+     * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+     * @return The leaf.
+     */
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.Child getLeaf() {
+      return leaf_ == null ? com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance() : leaf_;
+    }
+    /**
+     * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder getLeafOrBuilder() {
+      return leaf_ == null ? com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance() : leaf_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (leaf_ != null) {
+        output.writeMessage(1, getLeaf());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (leaf_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLeaf());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.store.v1beta1.TreeProto.Leaf)) {
+        return super.equals(obj);
+      }
+      com.osmosis.store.v1beta1.TreeProto.Leaf other = (com.osmosis.store.v1beta1.TreeProto.Leaf) obj;
+
+      if (hasLeaf() != other.hasLeaf()) return false;
+      if (hasLeaf()) {
+        if (!getLeaf()
+            .equals(other.getLeaf())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLeaf()) {
+        hash = (37 * hash) + LEAF_FIELD_NUMBER;
+        hash = (53 * hash) + getLeaf().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.store.v1beta1.TreeProto.Leaf prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.store.v1beta1.Leaf}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.store.v1beta1.Leaf)
+        com.osmosis.store.v1beta1.TreeProto.LeafOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Leaf_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Leaf_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.store.v1beta1.TreeProto.Leaf.class, com.osmosis.store.v1beta1.TreeProto.Leaf.Builder.class);
+      }
+
+      // Construct using com.osmosis.store.v1beta1.TreeProto.Leaf.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        leaf_ = null;
+        if (leafBuilder_ != null) {
+          leafBuilder_.dispose();
+          leafBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.store.v1beta1.TreeProto.internal_static_osmosis_store_v1beta1_Leaf_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Leaf getDefaultInstanceForType() {
+        return com.osmosis.store.v1beta1.TreeProto.Leaf.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Leaf build() {
+        com.osmosis.store.v1beta1.TreeProto.Leaf result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.store.v1beta1.TreeProto.Leaf buildPartial() {
+        com.osmosis.store.v1beta1.TreeProto.Leaf result = new com.osmosis.store.v1beta1.TreeProto.Leaf(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.store.v1beta1.TreeProto.Leaf result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.leaf_ = leafBuilder_ == null
+              ? leaf_
+              : leafBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.store.v1beta1.TreeProto.Leaf) {
+          return mergeFrom((com.osmosis.store.v1beta1.TreeProto.Leaf)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.store.v1beta1.TreeProto.Leaf other) {
+        if (other == com.osmosis.store.v1beta1.TreeProto.Leaf.getDefaultInstance()) return this;
+        if (other.hasLeaf()) {
+          mergeLeaf(other.getLeaf());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLeafFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.store.v1beta1.TreeProto.Child leaf_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.store.v1beta1.TreeProto.Child, com.osmosis.store.v1beta1.TreeProto.Child.Builder, com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> leafBuilder_;
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       * @return Whether the leaf field is set.
+       */
+      public boolean hasLeaf() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       * @return The leaf.
+       */
+      public com.osmosis.store.v1beta1.TreeProto.Child getLeaf() {
+        if (leafBuilder_ == null) {
+          return leaf_ == null ? com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance() : leaf_;
+        } else {
+          return leafBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      public Builder setLeaf(com.osmosis.store.v1beta1.TreeProto.Child value) {
+        if (leafBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          leaf_ = value;
+        } else {
+          leafBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      public Builder setLeaf(
+          com.osmosis.store.v1beta1.TreeProto.Child.Builder builderForValue) {
+        if (leafBuilder_ == null) {
+          leaf_ = builderForValue.build();
+        } else {
+          leafBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      public Builder mergeLeaf(com.osmosis.store.v1beta1.TreeProto.Child value) {
+        if (leafBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            leaf_ != null &&
+            leaf_ != com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance()) {
+            getLeafBuilder().mergeFrom(value);
+          } else {
+            leaf_ = value;
+          }
+        } else {
+          leafBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      public Builder clearLeaf() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        leaf_ = null;
+        if (leafBuilder_ != null) {
+          leafBuilder_.dispose();
+          leafBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.Child.Builder getLeafBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLeafFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      public com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder getLeafOrBuilder() {
+        if (leafBuilder_ != null) {
+          return leafBuilder_.getMessageOrBuilder();
+        } else {
+          return leaf_ == null ?
+              com.osmosis.store.v1beta1.TreeProto.Child.getDefaultInstance() : leaf_;
+        }
+      }
+      /**
+       * <code>.osmosis.store.v1beta1.Child leaf = 1 [json_name = "leaf"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.store.v1beta1.TreeProto.Child, com.osmosis.store.v1beta1.TreeProto.Child.Builder, com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder> 
+          getLeafFieldBuilder() {
+        if (leafBuilder_ == null) {
+          leafBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.store.v1beta1.TreeProto.Child, com.osmosis.store.v1beta1.TreeProto.Child.Builder, com.osmosis.store.v1beta1.TreeProto.ChildOrBuilder>(
+                  getLeaf(),
+                  getParentForChildren(),
+                  isClean());
+          leaf_ = null;
+        }
+        return leafBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.store.v1beta1.Leaf)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.store.v1beta1.Leaf)
+    private static final com.osmosis.store.v1beta1.TreeProto.Leaf DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.store.v1beta1.TreeProto.Leaf();
+    }
+
+    public static com.osmosis.store.v1beta1.TreeProto.Leaf getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Leaf>
+        PARSER = new com.google.protobuf.AbstractParser<Leaf>() {
+      @java.lang.Override
+      public Leaf parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Leaf> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Leaf> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.store.v1beta1.TreeProto.Leaf getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_store_v1beta1_Node_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_store_v1beta1_Node_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_store_v1beta1_Child_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_store_v1beta1_Child_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_store_v1beta1_Leaf_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_store_v1beta1_Leaf_fieldAccessorTable;
 
@@ -46,13 +2053,13 @@ public final class TreeProto {
       "\001(\014R\005index\022R\n\014accumulation\030\002 \001(\tB.\310\336\037\000\332\336" +
       "\037&github.com/cosmos/cosmos-sdk/types.Int" +
       "R\014accumulation\"8\n\004Leaf\0220\n\004leaf\030\001 \001(\0132\034.o" +
-      "smosis.store.v1beta1.ChildR\004leafB\317\001\n\031com" +
-      ".osmosis.store.v1beta1B\tTreeProtoP\001Z1git" +
-      "hub.com/osmosis-labs/osmosis/osmoutils/s" +
-      "umtree\242\002\003OSX\252\002\025Osmosis.Store.V1beta1\312\002\025O" +
-      "smosis\\Store\\V1beta1\342\002!Osmosis\\Store\\V1b" +
-      "eta1\\GPBMetadata\352\002\027Osmosis::Store::V1bet" +
-      "a1b\006proto3"
+      "smosis.store.v1beta1.ChildR\004leafB\315\001\n\031com" +
+      ".osmosis.store.v1beta1B\tTreeProtoZ1githu" +
+      "b.com/osmosis-labs/osmosis/osmoutils/sum" +
+      "tree\242\002\003OSX\252\002\025Osmosis.Store.V1beta1\312\002\025Osm" +
+      "osis\\Store\\V1beta1\342\002!Osmosis\\Store\\V1bet" +
+      "a1\\GPBMetadata\352\002\027Osmosis::Store::V1beta1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

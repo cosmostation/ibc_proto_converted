@@ -14,34 +14,3151 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryMerkledropRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.QueryMerkledropRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryMerkledropRequest}
+   */
+  public static final class QueryMerkledropRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.QueryMerkledropRequest)
+      QueryMerkledropRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMerkledropRequest.newBuilder() to construct.
+    private QueryMerkledropRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMerkledropRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMerkledropRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest other = (com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryMerkledropRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.QueryMerkledropRequest)
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest build() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest buildPartial() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest result = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest other) {
+        if (other == com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.QueryMerkledropRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.QueryMerkledropRequest)
+    private static final com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMerkledropRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMerkledropRequest>() {
+      @java.lang.Override
+      public QueryMerkledropRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMerkledropRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMerkledropRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMerkledropResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.QueryMerkledropResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+     * @return Whether the merkledrop field is set.
+     */
+    boolean hasMerkledrop();
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+     * @return The merkledrop.
+     */
+    com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getMerkledrop();
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder getMerkledropOrBuilder();
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryMerkledropResponse}
+   */
+  public static final class QueryMerkledropResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.QueryMerkledropResponse)
+      QueryMerkledropResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMerkledropResponse.newBuilder() to construct.
+    private QueryMerkledropResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMerkledropResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMerkledropResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.Builder.class);
+    }
+
+    public static final int MERKLEDROP_FIELD_NUMBER = 1;
+    private com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop merkledrop_;
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+     * @return Whether the merkledrop field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerkledrop() {
+      return merkledrop_ != null;
+    }
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+     * @return The merkledrop.
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getMerkledrop() {
+      return merkledrop_ == null ? com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance() : merkledrop_;
+    }
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder getMerkledropOrBuilder() {
+      return merkledrop_ == null ? com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance() : merkledrop_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merkledrop_ != null) {
+        output.writeMessage(1, getMerkledrop());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merkledrop_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerkledrop());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse other = (com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse) obj;
+
+      if (hasMerkledrop() != other.hasMerkledrop()) return false;
+      if (hasMerkledrop()) {
+        if (!getMerkledrop()
+            .equals(other.getMerkledrop())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerkledrop()) {
+        hash = (37 * hash) + MERKLEDROP_FIELD_NUMBER;
+        hash = (53 * hash) + getMerkledrop().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryMerkledropResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.QueryMerkledropResponse)
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merkledrop_ = null;
+        if (merkledropBuilder_ != null) {
+          merkledropBuilder_.dispose();
+          merkledropBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse build() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse buildPartial() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse result = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merkledrop_ = merkledropBuilder_ == null
+              ? merkledrop_
+              : merkledropBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse other) {
+        if (other == com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse.getDefaultInstance()) return this;
+        if (other.hasMerkledrop()) {
+          mergeMerkledrop(other.getMerkledrop());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerkledropFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop merkledrop_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder, com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> merkledropBuilder_;
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       * @return Whether the merkledrop field is set.
+       */
+      public boolean hasMerkledrop() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       * @return The merkledrop.
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getMerkledrop() {
+        if (merkledropBuilder_ == null) {
+          return merkledrop_ == null ? com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance() : merkledrop_;
+        } else {
+          return merkledropBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerkledrop(com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop value) {
+        if (merkledropBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merkledrop_ = value;
+        } else {
+          merkledropBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerkledrop(
+          com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder builderForValue) {
+        if (merkledropBuilder_ == null) {
+          merkledrop_ = builderForValue.build();
+        } else {
+          merkledropBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMerkledrop(com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop value) {
+        if (merkledropBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merkledrop_ != null &&
+            merkledrop_ != com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance()) {
+            getMerkledropBuilder().mergeFrom(value);
+          } else {
+            merkledrop_ = value;
+          }
+        } else {
+          merkledropBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMerkledrop() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merkledrop_ = null;
+        if (merkledropBuilder_ != null) {
+          merkledropBuilder_.dispose();
+          merkledropBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder getMerkledropBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerkledropFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder getMerkledropOrBuilder() {
+        if (merkledropBuilder_ != null) {
+          return merkledropBuilder_.getMessageOrBuilder();
+        } else {
+          return merkledrop_ == null ?
+              com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance() : merkledrop_;
+        }
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Merkledrop merkledrop = 1 [json_name = "merkledrop", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder, com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder> 
+          getMerkledropFieldBuilder() {
+        if (merkledropBuilder_ == null) {
+          merkledropBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder, com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder>(
+                  getMerkledrop(),
+                  getParentForChildren(),
+                  isClean());
+          merkledrop_ = null;
+        }
+        return merkledropBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.QueryMerkledropResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.QueryMerkledropResponse)
+    private static final com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMerkledropResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMerkledropResponse>() {
+      @java.lang.Override
+      public QueryMerkledropResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMerkledropResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMerkledropResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.QueryProto.QueryMerkledropResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIndexClaimedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>uint64 index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    long getIndex();
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest}
+   */
+  public static final class QueryIndexClaimedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest)
+      QueryIndexClaimedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIndexClaimedRequest.newBuilder() to construct.
+    private QueryIndexClaimedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIndexClaimedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIndexClaimedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 2;
+    private long index_ = 0L;
+    /**
+     * <code>uint64 index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public long getIndex() {
+      return index_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (index_ != 0L) {
+        output.writeUInt64(2, index_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (index_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, index_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest other = (com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getIndex()
+          != other.getIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIndex());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest)
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        index_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest build() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest buildPartial() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest result = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.index_ = index_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest other) {
+        if (other == com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getIndex() != 0L) {
+          setIndex(other.getIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                index_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long index_ ;
+      /**
+       * <code>uint64 index = 2 [json_name = "index"];</code>
+       * @return The index.
+       */
+      @java.lang.Override
+      public long getIndex() {
+        return index_;
+      }
+      /**
+       * <code>uint64 index = 2 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(long value) {
+
+        index_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 index = 2 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        index_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.QueryIndexClaimedRequest)
+    private static final com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIndexClaimedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIndexClaimedRequest>() {
+      @java.lang.Override
+      public QueryIndexClaimedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIndexClaimedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIndexClaimedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIndexClaimedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool is_claimed = 1 [json_name = "isClaimed", (.gogoproto.moretags) = "yaml:&#92;"is_claimed&#92;""];</code>
+     * @return The isClaimed.
+     */
+    boolean getIsClaimed();
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse}
+   */
+  public static final class QueryIndexClaimedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse)
+      QueryIndexClaimedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIndexClaimedResponse.newBuilder() to construct.
+    private QueryIndexClaimedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIndexClaimedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIndexClaimedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.Builder.class);
+    }
+
+    public static final int IS_CLAIMED_FIELD_NUMBER = 1;
+    private boolean isClaimed_ = false;
+    /**
+     * <code>bool is_claimed = 1 [json_name = "isClaimed", (.gogoproto.moretags) = "yaml:&#92;"is_claimed&#92;""];</code>
+     * @return The isClaimed.
+     */
+    @java.lang.Override
+    public boolean getIsClaimed() {
+      return isClaimed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isClaimed_ != false) {
+        output.writeBool(1, isClaimed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isClaimed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isClaimed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse other = (com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse) obj;
+
+      if (getIsClaimed()
+          != other.getIsClaimed()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_CLAIMED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsClaimed());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse)
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isClaimed_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse build() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse buildPartial() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse result = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isClaimed_ = isClaimed_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse other) {
+        if (other == com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse.getDefaultInstance()) return this;
+        if (other.getIsClaimed() != false) {
+          setIsClaimed(other.getIsClaimed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isClaimed_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isClaimed_ ;
+      /**
+       * <code>bool is_claimed = 1 [json_name = "isClaimed", (.gogoproto.moretags) = "yaml:&#92;"is_claimed&#92;""];</code>
+       * @return The isClaimed.
+       */
+      @java.lang.Override
+      public boolean getIsClaimed() {
+        return isClaimed_;
+      }
+      /**
+       * <code>bool is_claimed = 1 [json_name = "isClaimed", (.gogoproto.moretags) = "yaml:&#92;"is_claimed&#92;""];</code>
+       * @param value The isClaimed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsClaimed(boolean value) {
+
+        isClaimed_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_claimed = 1 [json_name = "isClaimed", (.gogoproto.moretags) = "yaml:&#92;"is_claimed&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsClaimed() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isClaimed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.QueryIndexClaimedResponse)
+    private static final com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIndexClaimedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIndexClaimedResponse>() {
+      @java.lang.Override
+      public QueryIndexClaimedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIndexClaimedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIndexClaimedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.QueryProto.QueryIndexClaimedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParametersRequest is request type for the Query/Parameters RPC method
+   * </pre>
+   *
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest other = (com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParametersRequest is request type for the Query/Parameters RPC method
+     * </pre>
+     *
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.QueryParamsRequest)
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest result = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.QueryParamsRequest)
+    private static final com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.bitsong.merkledrop.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParametersResponse is response type for the Query/Parameters RPC method
+   * </pre>
+   *
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.bitsong.merkledrop.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse other = (com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParametersResponse is response type for the Query/Parameters RPC method
+     * </pre>
+     *
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.QueryParamsResponse)
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.class, com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse result = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bitsong.merkledrop.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.ParamsProto.Params, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder, com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.bitsong.merkledrop.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.bitsong.merkledrop.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.bitsong.merkledrop.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.bitsong.merkledrop.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.bitsong.merkledrop.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bitsong.merkledrop.v1beta1.ParamsProto.Params, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder, com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bitsong.merkledrop.v1beta1.ParamsProto.Params, com.bitsong.merkledrop.v1beta1.ParamsProto.Params.Builder, com.bitsong.merkledrop.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.QueryParamsResponse)
+    private static final com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_QueryMerkledropResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_QueryIndexClaimedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_QueryParamsResponse_fieldAccessorTable;
 
@@ -82,13 +3199,13 @@ public final class QueryProto {
       "ms\022..bitsong.merkledrop.v1beta1.QueryPar" +
       "amsRequest\032/.bitsong.merkledrop.v1beta1." +
       "QueryParamsResponse\"*\202\323\344\223\002$\022\"/bitsong/me" +
-      "rkledrop/v1beta1/paramsB\364\001\n\036com.bitsong." +
-      "merkledrop.v1beta1B\nQueryProtoP\001Z8github" +
-      ".com/bitsongofficial/go-bitsong/x/merkle" +
-      "drop/types\242\002\003BMX\252\002\032Bitsong.Merkledrop.V1" +
-      "beta1\312\002\032Bitsong\\Merkledrop\\V1beta1\342\002&Bit" +
-      "song\\Merkledrop\\V1beta1\\GPBMetadata\352\002\034Bi" +
-      "tsong::Merkledrop::V1beta1\310\341\036\000b\006proto3"
+      "rkledrop/v1beta1/paramsB\362\001\n\036com.bitsong." +
+      "merkledrop.v1beta1B\nQueryProtoZ8github.c" +
+      "om/bitsongofficial/go-bitsong/x/merkledr" +
+      "op/types\242\002\003BMX\252\002\032Bitsong.Merkledrop.V1be" +
+      "ta1\312\002\032Bitsong\\Merkledrop\\V1beta1\342\002&Bitso" +
+      "ng\\Merkledrop\\V1beta1\\GPBMetadata\352\002\034Bits" +
+      "ong::Merkledrop::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

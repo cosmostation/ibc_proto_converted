@@ -14,14 +14,1302 @@ public final class CommonProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface KeyPresenceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.KeyPresenceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+     * @return The keyUid.
+     */
+    java.lang.String getKeyUid();
+    /**
+     * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+     * @return The bytes for keyUid.
+     */
+    com.google.protobuf.ByteString
+        getKeyUidBytes();
+
+    /**
+     * <pre>
+     * SEC1-encoded compressed pub key bytes to find the right
+     * </pre>
+     *
+     * <code>bytes pub_key = 2 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    com.google.protobuf.ByteString getPubKey();
+  }
+  /**
+   * <pre>
+   * Key presence check types
+   * </pre>
+   *
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeyPresenceRequest}
+   */
+  public static final class KeyPresenceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.KeyPresenceRequest)
+      KeyPresenceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyPresenceRequest.newBuilder() to construct.
+    private KeyPresenceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyPresenceRequest() {
+      keyUid_ = "";
+      pubKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyPresenceRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.class, com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.Builder.class);
+    }
+
+    public static final int KEY_UID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyUid_ = "";
+    /**
+     * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+     * @return The keyUid.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyUid() {
+      java.lang.Object ref = keyUid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyUid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+     * @return The bytes for keyUid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyUidBytes() {
+      java.lang.Object ref = keyUid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUB_KEY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * SEC1-encoded compressed pub key bytes to find the right
+     * </pre>
+     *
+     * <code>bytes pub_key = 2 [json_name = "pubKey"];</code>
+     * @return The pubKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPubKey() {
+      return pubKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyUid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyUid_);
+      }
+      if (!pubKey_.isEmpty()) {
+        output.writeBytes(2, pubKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyUid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyUid_);
+      }
+      if (!pubKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, pubKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest other = (com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest) obj;
+
+      if (!getKeyUid()
+          .equals(other.getKeyUid())) return false;
+      if (!getPubKey()
+          .equals(other.getPubKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_UID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyUid().hashCode();
+      hash = (37 * hash) + PUB_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPubKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Key presence check types
+     * </pre>
+     *
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeyPresenceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.KeyPresenceRequest)
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.class, com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        keyUid_ = "";
+        pubKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest build() {
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest result = new com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.keyUid_ = keyUid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pubKey_ = pubKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest.getDefaultInstance()) return this;
+        if (!other.getKeyUid().isEmpty()) {
+          keyUid_ = other.keyUid_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPubKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPubKey(other.getPubKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                keyUid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                pubKey_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object keyUid_ = "";
+      /**
+       * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+       * @return The keyUid.
+       */
+      public java.lang.String getKeyUid() {
+        java.lang.Object ref = keyUid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyUid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+       * @return The bytes for keyUid.
+       */
+      public com.google.protobuf.ByteString
+          getKeyUidBytes() {
+        java.lang.Object ref = keyUid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyUid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+       * @param value The keyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyUid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyUid() {
+        keyUid_ = getDefaultInstance().getKeyUid();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_uid = 1 [json_name = "keyUid"];</code>
+       * @param value The bytes for keyUid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyUid_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * SEC1-encoded compressed pub key bytes to find the right
+       * </pre>
+       *
+       * <code>bytes pub_key = 2 [json_name = "pubKey"];</code>
+       * @return The pubKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPubKey() {
+        return pubKey_;
+      }
+      /**
+       * <pre>
+       * SEC1-encoded compressed pub key bytes to find the right
+       * </pre>
+       *
+       * <code>bytes pub_key = 2 [json_name = "pubKey"];</code>
+       * @param value The pubKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SEC1-encoded compressed pub key bytes to find the right
+       * </pre>
+       *
+       * <code>bytes pub_key = 2 [json_name = "pubKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pubKey_ = getDefaultInstance().getPubKey();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.KeyPresenceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.KeyPresenceRequest)
+    private static final com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyPresenceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<KeyPresenceRequest>() {
+      @java.lang.Override
+      public KeyPresenceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyPresenceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyPresenceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeyPresenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.tss.tofnd.v1beta1.KeyPresenceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The enum numeric value on the wire for response.
+     */
+    int getResponseValue();
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response getResponse();
+  }
+  /**
+   * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeyPresenceResponse}
+   */
+  public static final class KeyPresenceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.tss.tofnd.v1beta1.KeyPresenceResponse)
+      KeyPresenceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyPresenceResponse.newBuilder() to construct.
+    private KeyPresenceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyPresenceResponse() {
+      response_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyPresenceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.class, com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response}
+     */
+    public enum Response
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>RESPONSE_UNSPECIFIED = 0;</code>
+       */
+      RESPONSE_UNSPECIFIED(0),
+      /**
+       * <code>RESPONSE_PRESENT = 1;</code>
+       */
+      RESPONSE_PRESENT(1),
+      /**
+       * <code>RESPONSE_ABSENT = 2;</code>
+       */
+      RESPONSE_ABSENT(2),
+      /**
+       * <code>RESPONSE_FAIL = 3;</code>
+       */
+      RESPONSE_FAIL(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>RESPONSE_UNSPECIFIED = 0;</code>
+       */
+      public static final int RESPONSE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>RESPONSE_PRESENT = 1;</code>
+       */
+      public static final int RESPONSE_PRESENT_VALUE = 1;
+      /**
+       * <code>RESPONSE_ABSENT = 2;</code>
+       */
+      public static final int RESPONSE_ABSENT_VALUE = 2;
+      /**
+       * <code>RESPONSE_FAIL = 3;</code>
+       */
+      public static final int RESPONSE_FAIL_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Response valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Response forNumber(int value) {
+        switch (value) {
+          case 0: return RESPONSE_UNSPECIFIED;
+          case 1: return RESPONSE_PRESENT;
+          case 2: return RESPONSE_ABSENT;
+          case 3: return RESPONSE_FAIL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Response>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Response> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Response>() {
+              public Response findValueByNumber(int number) {
+                return Response.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Response[] VALUES = values();
+
+      public static Response valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Response(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response)
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private int response_ = 0;
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The enum numeric value on the wire for response.
+     */
+    @java.lang.Override public int getResponseValue() {
+      return response_;
+    }
+    /**
+     * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    @java.lang.Override public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response getResponse() {
+      com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response result = com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response.forNumber(response_);
+      return result == null ? com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (response_ != com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response.RESPONSE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, response_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (response_ != com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response.RESPONSE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, response_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse other = (com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse) obj;
+
+      if (response_ != other.response_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + response_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.tss.tofnd.v1beta1.KeyPresenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.tss.tofnd.v1beta1.KeyPresenceResponse)
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.class, com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        response_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse getDefaultInstanceForType() {
+        return com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse build() {
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse buildPartial() {
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse result = new com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.response_ = response_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse) {
+          return mergeFrom((com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse other) {
+        if (other == com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.getDefaultInstance()) return this;
+        if (other.response_ != 0) {
+          setResponseValue(other.getResponseValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                response_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int response_ = 0;
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+       * @return The enum numeric value on the wire for response.
+       */
+      @java.lang.Override public int getResponseValue() {
+        return response_;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+       * @param value The enum numeric value on the wire for response to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseValue(int value) {
+        response_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+       * @return The response.
+       */
+      @java.lang.Override
+      public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response getResponse() {
+        com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response result = com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response.forNumber(response_);
+        return result == null ? com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+       * @param value The response to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponse(com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse.Response value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        response_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.tss.tofnd.v1beta1.KeyPresenceResponse.Response response = 1 [json_name = "response"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        response_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.tss.tofnd.v1beta1.KeyPresenceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.tss.tofnd.v1beta1.KeyPresenceResponse)
+    private static final com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse();
+    }
+
+    public static com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyPresenceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<KeyPresenceResponse>() {
+      @java.lang.Override
+      public KeyPresenceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyPresenceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyPresenceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.tss.tofnd.v1beta1.CommonProto.KeyPresenceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_tss_tofnd_v1beta1_KeyPresenceResponse_fieldAccessorTable;
 
@@ -42,13 +1330,13 @@ public final class CommonProto {
       "Response.ResponseR\010response\"h\n\010Response\022" +
       "\030\n\024RESPONSE_UNSPECIFIED\020\000\022\024\n\020RESPONSE_PR" +
       "ESENT\020\001\022\023\n\017RESPONSE_ABSENT\020\002\022\021\n\rRESPONSE" +
-      "_FAIL\020\003\032\004\210\243\036\000B\340\001\n\034com.axelar.tss.tofnd.v" +
-      "1beta1B\013CommonProtoP\001Z0github.com/axelar" +
-      "network/axelar-core/x/tss/tofnd\242\002\003ATT\252\002\030" +
-      "Axelar.Tss.Tofnd.V1beta1\312\002\030Axelar\\Tss\\To" +
-      "fnd\\V1beta1\342\002$Axelar\\Tss\\Tofnd\\V1beta1\\G" +
-      "PBMetadata\352\002\033Axelar::Tss::Tofnd::V1beta1" +
-      "b\006proto3"
+      "_FAIL\020\003\032\004\210\243\036\000B\336\001\n\034com.axelar.tss.tofnd.v" +
+      "1beta1B\013CommonProtoZ0github.com/axelarne" +
+      "twork/axelar-core/x/tss/tofnd\242\002\003ATT\252\002\030Ax" +
+      "elar.Tss.Tofnd.V1beta1\312\002\030Axelar\\Tss\\Tofn" +
+      "d\\V1beta1\342\002$Axelar\\Tss\\Tofnd\\V1beta1\\GPB" +
+      "Metadata\352\002\033Axelar::Tss::Tofnd::V1beta1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

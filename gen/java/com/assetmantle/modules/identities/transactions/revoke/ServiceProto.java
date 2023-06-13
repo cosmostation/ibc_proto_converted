@@ -34,15 +34,15 @@ public final class ServiceProto {
       "ities.transactions.revoke.Message\032G.asse" +
       "tmantle.modules.identities.transactions." +
       "revoke.TransactionResponse\"!\202\323\344\223\002\033\"\031/man" +
-      "tle/identities/revokeB\264\002\n6com.assetmantl" +
+      "tle/identities/revokeB\262\002\n6com.assetmantl" +
       "e.modules.identities.transactions.revoke" +
-      "B\014ServiceProtoP\001\242\002\005AMITR\252\0022Assetmantle.M" +
-      "odules.Identities.Transactions.Revoke\312\0022" +
-      "Assetmantle\\Modules\\Identities\\Transacti" +
-      "ons\\Revoke\342\002>Assetmantle\\Modules\\Identit" +
-      "ies\\Transactions\\Revoke\\GPBMetadata\352\0026As" +
-      "setmantle::Modules::Identities::Transact" +
-      "ions::Revokeb\006proto3"
+      "B\014ServiceProto\242\002\005AMITR\252\0022Assetmantle.Mod" +
+      "ules.Identities.Transactions.Revoke\312\0022As" +
+      "setmantle\\Modules\\Identities\\Transaction" +
+      "s\\Revoke\342\002>Assetmantle\\Modules\\Identitie" +
+      "s\\Transactions\\Revoke\\GPBMetadata\352\0026Asse" +
+      "tmantle::Modules::Identities::Transactio" +
+      "ns::Revokeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

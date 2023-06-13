@@ -14,14 +14,2715 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.evmos.incentives.v1.GenesisProto.Params getParams();
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> 
+        getIncentivesList();
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.Incentive getIncentives(int index);
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    int getIncentivesCount();
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+        getIncentivesOrBuilderList();
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentivesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> 
+        getGasMetersList();
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.GasMeter getGasMeters(int index);
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    int getGasMetersCount();
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+        getGasMetersOrBuilderList();
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder getGasMetersOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      incentives_ = java.util.Collections.emptyList();
+      gasMeters_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.GenesisProto.GenesisState.class, com.evmos.incentives.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.evmos.incentives.v1.GenesisProto.Params params_;
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.GenesisProto.Params getParams() {
+      return params_ == null ? com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params are the incentives module parameters
+     * </pre>
+     *
+     * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int INCENTIVES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> incentives_;
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> getIncentivesList() {
+      return incentives_;
+    }
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+        getIncentivesOrBuilderList() {
+      return incentives_;
+    }
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getIncentivesCount() {
+      return incentives_.size();
+    }
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.Incentive getIncentives(int index) {
+      return incentives_.get(index);
+    }
+    /**
+     * <pre>
+     * incentives is a slice of active incentives
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentivesOrBuilder(
+        int index) {
+      return incentives_.get(index);
+    }
+
+    public static final int GAS_METERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> gasMeters_;
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> getGasMetersList() {
+      return gasMeters_;
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+        getGasMetersOrBuilderList() {
+      return gasMeters_;
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGasMetersCount() {
+      return gasMeters_.size();
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.GasMeter getGasMeters(int index) {
+      return gasMeters_.get(index);
+    }
+    /**
+     * <pre>
+     * gas_meters is a slice of active Gasmeters
+     * </pre>
+     *
+     * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder getGasMetersOrBuilder(
+        int index) {
+      return gasMeters_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < incentives_.size(); i++) {
+        output.writeMessage(2, incentives_.get(i));
+      }
+      for (int i = 0; i < gasMeters_.size(); i++) {
+        output.writeMessage(3, gasMeters_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < incentives_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, incentives_.get(i));
+      }
+      for (int i = 0; i < gasMeters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, gasMeters_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.GenesisProto.GenesisState other = (com.evmos.incentives.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getIncentivesList()
+          .equals(other.getIncentivesList())) return false;
+      if (!getGasMetersList()
+          .equals(other.getGasMetersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getIncentivesCount() > 0) {
+        hash = (37 * hash) + INCENTIVES_FIELD_NUMBER;
+        hash = (53 * hash) + getIncentivesList().hashCode();
+      }
+      if (getGasMetersCount() > 0) {
+        hash = (37 * hash) + GAS_METERS_FIELD_NUMBER;
+        hash = (53 * hash) + getGasMetersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.GenesisState)
+        com.evmos.incentives.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.GenesisProto.GenesisState.class, com.evmos.incentives.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (incentivesBuilder_ == null) {
+          incentives_ = java.util.Collections.emptyList();
+        } else {
+          incentives_ = null;
+          incentivesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (gasMetersBuilder_ == null) {
+          gasMeters_ = java.util.Collections.emptyList();
+        } else {
+          gasMeters_ = null;
+          gasMetersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.GenesisProto.GenesisState build() {
+        com.evmos.incentives.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.GenesisProto.GenesisState buildPartial() {
+        com.evmos.incentives.v1.GenesisProto.GenesisState result = new com.evmos.incentives.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.incentives.v1.GenesisProto.GenesisState result) {
+        if (incentivesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            incentives_ = java.util.Collections.unmodifiableList(incentives_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.incentives_ = incentives_;
+        } else {
+          result.incentives_ = incentivesBuilder_.build();
+        }
+        if (gasMetersBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            gasMeters_ = java.util.Collections.unmodifiableList(gasMeters_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.gasMeters_ = gasMeters_;
+        } else {
+          result.gasMeters_ = gasMetersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.evmos.incentives.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.GenesisProto.GenesisState other) {
+        if (other == com.evmos.incentives.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (incentivesBuilder_ == null) {
+          if (!other.incentives_.isEmpty()) {
+            if (incentives_.isEmpty()) {
+              incentives_ = other.incentives_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureIncentivesIsMutable();
+              incentives_.addAll(other.incentives_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.incentives_.isEmpty()) {
+            if (incentivesBuilder_.isEmpty()) {
+              incentivesBuilder_.dispose();
+              incentivesBuilder_ = null;
+              incentives_ = other.incentives_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              incentivesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIncentivesFieldBuilder() : null;
+            } else {
+              incentivesBuilder_.addAllMessages(other.incentives_);
+            }
+          }
+        }
+        if (gasMetersBuilder_ == null) {
+          if (!other.gasMeters_.isEmpty()) {
+            if (gasMeters_.isEmpty()) {
+              gasMeters_ = other.gasMeters_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureGasMetersIsMutable();
+              gasMeters_.addAll(other.gasMeters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gasMeters_.isEmpty()) {
+            if (gasMetersBuilder_.isEmpty()) {
+              gasMetersBuilder_.dispose();
+              gasMetersBuilder_ = null;
+              gasMeters_ = other.gasMeters_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              gasMetersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGasMetersFieldBuilder() : null;
+            } else {
+              gasMetersBuilder_.addAllMessages(other.gasMeters_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.evmos.incentives.v1.IncentivesProto.Incentive m =
+                    input.readMessage(
+                        com.evmos.incentives.v1.IncentivesProto.Incentive.parser(),
+                        extensionRegistry);
+                if (incentivesBuilder_ == null) {
+                  ensureIncentivesIsMutable();
+                  incentives_.add(m);
+                } else {
+                  incentivesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.evmos.incentives.v1.IncentivesProto.GasMeter m =
+                    input.readMessage(
+                        com.evmos.incentives.v1.IncentivesProto.GasMeter.parser(),
+                        extensionRegistry);
+                if (gasMetersBuilder_ == null) {
+                  ensureGasMetersIsMutable();
+                  gasMeters_.add(m);
+                } else {
+                  gasMetersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.evmos.incentives.v1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.incentives.v1.GenesisProto.Params, com.evmos.incentives.v1.GenesisProto.Params.Builder, com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.evmos.incentives.v1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.evmos.incentives.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.evmos.incentives.v1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.evmos.incentives.v1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params are the incentives module parameters
+       * </pre>
+       *
+       * <code>.evmos.incentives.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.evmos.incentives.v1.GenesisProto.Params, com.evmos.incentives.v1.GenesisProto.Params.Builder, com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.evmos.incentives.v1.GenesisProto.Params, com.evmos.incentives.v1.GenesisProto.Params.Builder, com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> incentives_ =
+        java.util.Collections.emptyList();
+      private void ensureIncentivesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          incentives_ = new java.util.ArrayList<com.evmos.incentives.v1.IncentivesProto.Incentive>(incentives_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> incentivesBuilder_;
+
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive> getIncentivesList() {
+        if (incentivesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(incentives_);
+        } else {
+          return incentivesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public int getIncentivesCount() {
+        if (incentivesBuilder_ == null) {
+          return incentives_.size();
+        } else {
+          return incentivesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive getIncentives(int index) {
+        if (incentivesBuilder_ == null) {
+          return incentives_.get(index);
+        } else {
+          return incentivesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentivesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivesIsMutable();
+          incentives_.set(index, value);
+          onChanged();
+        } else {
+          incentivesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          incentivesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentivesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivesIsMutable();
+          incentives_.add(value);
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive value) {
+        if (incentivesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIncentivesIsMutable();
+          incentives_.add(index, value);
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(
+          com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.add(builderForValue.build());
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIncentives(
+          int index, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder builderForValue) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          incentivesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllIncentives(
+          java.lang.Iterable<? extends com.evmos.incentives.v1.IncentivesProto.Incentive> values) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, incentives_);
+          onChanged();
+        } else {
+          incentivesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIncentives() {
+        if (incentivesBuilder_ == null) {
+          incentives_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          incentivesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeIncentives(int index) {
+        if (incentivesBuilder_ == null) {
+          ensureIncentivesIsMutable();
+          incentives_.remove(index);
+          onChanged();
+        } else {
+          incentivesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder getIncentivesBuilder(
+          int index) {
+        return getIncentivesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder getIncentivesOrBuilder(
+          int index) {
+        if (incentivesBuilder_ == null) {
+          return incentives_.get(index);  } else {
+          return incentivesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+           getIncentivesOrBuilderList() {
+        if (incentivesBuilder_ != null) {
+          return incentivesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(incentives_);
+        }
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder addIncentivesBuilder() {
+        return getIncentivesFieldBuilder().addBuilder(
+            com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.Incentive.Builder addIncentivesBuilder(
+          int index) {
+        return getIncentivesFieldBuilder().addBuilder(
+            index, com.evmos.incentives.v1.IncentivesProto.Incentive.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * incentives is a slice of active incentives
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.Incentive incentives = 2 [json_name = "incentives", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.Incentive.Builder> 
+           getIncentivesBuilderList() {
+        return getIncentivesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder> 
+          getIncentivesFieldBuilder() {
+        if (incentivesBuilder_ == null) {
+          incentivesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.incentives.v1.IncentivesProto.Incentive, com.evmos.incentives.v1.IncentivesProto.Incentive.Builder, com.evmos.incentives.v1.IncentivesProto.IncentiveOrBuilder>(
+                  incentives_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          incentives_ = null;
+        }
+        return incentivesBuilder_;
+      }
+
+      private java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> gasMeters_ =
+        java.util.Collections.emptyList();
+      private void ensureGasMetersIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          gasMeters_ = new java.util.ArrayList<com.evmos.incentives.v1.IncentivesProto.GasMeter>(gasMeters_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.GasMeter, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder, com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> gasMetersBuilder_;
+
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter> getGasMetersList() {
+        if (gasMetersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gasMeters_);
+        } else {
+          return gasMetersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGasMetersCount() {
+        if (gasMetersBuilder_ == null) {
+          return gasMeters_.size();
+        } else {
+          return gasMetersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter getGasMeters(int index) {
+        if (gasMetersBuilder_ == null) {
+          return gasMeters_.get(index);
+        } else {
+          return gasMetersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter value) {
+        if (gasMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasMetersIsMutable();
+          gasMeters_.set(index, value);
+          onChanged();
+        } else {
+          gasMetersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder builderForValue) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasMetersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(com.evmos.incentives.v1.IncentivesProto.GasMeter value) {
+        if (gasMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasMetersIsMutable();
+          gasMeters_.add(value);
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter value) {
+        if (gasMetersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasMetersIsMutable();
+          gasMeters_.add(index, value);
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(
+          com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder builderForValue) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasMeters(
+          int index, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder builderForValue) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasMetersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGasMeters(
+          java.lang.Iterable<? extends com.evmos.incentives.v1.IncentivesProto.GasMeter> values) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gasMeters_);
+          onChanged();
+        } else {
+          gasMetersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGasMeters() {
+        if (gasMetersBuilder_ == null) {
+          gasMeters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          gasMetersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGasMeters(int index) {
+        if (gasMetersBuilder_ == null) {
+          ensureGasMetersIsMutable();
+          gasMeters_.remove(index);
+          onChanged();
+        } else {
+          gasMetersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder getGasMetersBuilder(
+          int index) {
+        return getGasMetersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder getGasMetersOrBuilder(
+          int index) {
+        if (gasMetersBuilder_ == null) {
+          return gasMeters_.get(index);  } else {
+          return gasMetersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+           getGasMetersOrBuilderList() {
+        if (gasMetersBuilder_ != null) {
+          return gasMetersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gasMeters_);
+        }
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder addGasMetersBuilder() {
+        return getGasMetersFieldBuilder().addBuilder(
+            com.evmos.incentives.v1.IncentivesProto.GasMeter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder addGasMetersBuilder(
+          int index) {
+        return getGasMetersFieldBuilder().addBuilder(
+            index, com.evmos.incentives.v1.IncentivesProto.GasMeter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_meters is a slice of active Gasmeters
+       * </pre>
+       *
+       * <code>repeated .evmos.incentives.v1.GasMeter gas_meters = 3 [json_name = "gasMeters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder> 
+           getGasMetersBuilderList() {
+        return getGasMetersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.evmos.incentives.v1.IncentivesProto.GasMeter, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder, com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder> 
+          getGasMetersFieldBuilder() {
+        if (gasMetersBuilder_ == null) {
+          gasMetersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.evmos.incentives.v1.IncentivesProto.GasMeter, com.evmos.incentives.v1.IncentivesProto.GasMeter.Builder, com.evmos.incentives.v1.IncentivesProto.GasMeterOrBuilder>(
+                  gasMeters_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gasMeters_ = null;
+        }
+        return gasMetersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.GenesisState)
+    private static final com.evmos.incentives.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.incentives.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * enable_incentives is the parameter to enable incentives
+     * </pre>
+     *
+     * <code>bool enable_incentives = 1 [json_name = "enableIncentives"];</code>
+     * @return The enableIncentives.
+     */
+    boolean getEnableIncentives();
+
+    /**
+     * <pre>
+     * allocation_limit is the maximum percentage an incentive can allocate per denomination
+     * </pre>
+     *
+     * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The allocationLimit.
+     */
+    java.lang.String getAllocationLimit();
+    /**
+     * <pre>
+     * allocation_limit is the maximum percentage an incentive can allocate per denomination
+     * </pre>
+     *
+     * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for allocationLimit.
+     */
+    com.google.protobuf.ByteString
+        getAllocationLimitBytes();
+
+    /**
+     * <pre>
+     * incentives_epoch_identifier for the epochs module hooks
+     * </pre>
+     *
+     * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+     * @return The incentivesEpochIdentifier.
+     */
+    java.lang.String getIncentivesEpochIdentifier();
+    /**
+     * <pre>
+     * incentives_epoch_identifier for the epochs module hooks
+     * </pre>
+     *
+     * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+     * @return The bytes for incentivesEpochIdentifier.
+     */
+    com.google.protobuf.ByteString
+        getIncentivesEpochIdentifierBytes();
+
+    /**
+     * <pre>
+     * reward_scaler is the scaling factor for capping rewards
+     * </pre>
+     *
+     * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The rewardScaler.
+     */
+    java.lang.String getRewardScaler();
+    /**
+     * <pre>
+     * reward_scaler is the scaling factor for capping rewards
+     * </pre>
+     *
+     * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for rewardScaler.
+     */
+    com.google.protobuf.ByteString
+        getRewardScalerBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the incentives module params
+   * </pre>
+   *
+   * Protobuf type {@code evmos.incentives.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.incentives.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      allocationLimit_ = "";
+      incentivesEpochIdentifier_ = "";
+      rewardScaler_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.incentives.v1.GenesisProto.Params.class, com.evmos.incentives.v1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int ENABLE_INCENTIVES_FIELD_NUMBER = 1;
+    private boolean enableIncentives_ = false;
+    /**
+     * <pre>
+     * enable_incentives is the parameter to enable incentives
+     * </pre>
+     *
+     * <code>bool enable_incentives = 1 [json_name = "enableIncentives"];</code>
+     * @return The enableIncentives.
+     */
+    @java.lang.Override
+    public boolean getEnableIncentives() {
+      return enableIncentives_;
+    }
+
+    public static final int ALLOCATION_LIMIT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object allocationLimit_ = "";
+    /**
+     * <pre>
+     * allocation_limit is the maximum percentage an incentive can allocate per denomination
+     * </pre>
+     *
+     * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The allocationLimit.
+     */
+    @java.lang.Override
+    public java.lang.String getAllocationLimit() {
+      java.lang.Object ref = allocationLimit_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        allocationLimit_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * allocation_limit is the maximum percentage an incentive can allocate per denomination
+     * </pre>
+     *
+     * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for allocationLimit.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAllocationLimitBytes() {
+      java.lang.Object ref = allocationLimit_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        allocationLimit_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INCENTIVES_EPOCH_IDENTIFIER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object incentivesEpochIdentifier_ = "";
+    /**
+     * <pre>
+     * incentives_epoch_identifier for the epochs module hooks
+     * </pre>
+     *
+     * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+     * @return The incentivesEpochIdentifier.
+     */
+    @java.lang.Override
+    public java.lang.String getIncentivesEpochIdentifier() {
+      java.lang.Object ref = incentivesEpochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        incentivesEpochIdentifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * incentives_epoch_identifier for the epochs module hooks
+     * </pre>
+     *
+     * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+     * @return The bytes for incentivesEpochIdentifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIncentivesEpochIdentifierBytes() {
+      java.lang.Object ref = incentivesEpochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        incentivesEpochIdentifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARD_SCALER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardScaler_ = "";
+    /**
+     * <pre>
+     * reward_scaler is the scaling factor for capping rewards
+     * </pre>
+     *
+     * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The rewardScaler.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardScaler() {
+      java.lang.Object ref = rewardScaler_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardScaler_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reward_scaler is the scaling factor for capping rewards
+     * </pre>
+     *
+     * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for rewardScaler.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardScalerBytes() {
+      java.lang.Object ref = rewardScaler_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardScaler_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enableIncentives_ != false) {
+        output.writeBool(1, enableIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(allocationLimit_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, allocationLimit_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentivesEpochIdentifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, incentivesEpochIdentifier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardScaler_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, rewardScaler_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableIncentives_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(allocationLimit_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, allocationLimit_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(incentivesEpochIdentifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, incentivesEpochIdentifier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardScaler_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, rewardScaler_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.incentives.v1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.evmos.incentives.v1.GenesisProto.Params other = (com.evmos.incentives.v1.GenesisProto.Params) obj;
+
+      if (getEnableIncentives()
+          != other.getEnableIncentives()) return false;
+      if (!getAllocationLimit()
+          .equals(other.getAllocationLimit())) return false;
+      if (!getIncentivesEpochIdentifier()
+          .equals(other.getIncentivesEpochIdentifier())) return false;
+      if (!getRewardScaler()
+          .equals(other.getRewardScaler())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_INCENTIVES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableIncentives());
+      hash = (37 * hash) + ALLOCATION_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getAllocationLimit().hashCode();
+      hash = (37 * hash) + INCENTIVES_EPOCH_IDENTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getIncentivesEpochIdentifier().hashCode();
+      hash = (37 * hash) + REWARD_SCALER_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardScaler().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.incentives.v1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.incentives.v1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the incentives module params
+     * </pre>
+     *
+     * Protobuf type {@code evmos.incentives.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.incentives.v1.Params)
+        com.evmos.incentives.v1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.incentives.v1.GenesisProto.Params.class, com.evmos.incentives.v1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.evmos.incentives.v1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enableIncentives_ = false;
+        allocationLimit_ = "";
+        incentivesEpochIdentifier_ = "";
+        rewardScaler_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.incentives.v1.GenesisProto.internal_static_evmos_incentives_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.GenesisProto.Params build() {
+        com.evmos.incentives.v1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.incentives.v1.GenesisProto.Params buildPartial() {
+        com.evmos.incentives.v1.GenesisProto.Params result = new com.evmos.incentives.v1.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.incentives.v1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enableIncentives_ = enableIncentives_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.allocationLimit_ = allocationLimit_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.incentivesEpochIdentifier_ = incentivesEpochIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.rewardScaler_ = rewardScaler_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.incentives.v1.GenesisProto.Params) {
+          return mergeFrom((com.evmos.incentives.v1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.incentives.v1.GenesisProto.Params other) {
+        if (other == com.evmos.incentives.v1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getEnableIncentives() != false) {
+          setEnableIncentives(other.getEnableIncentives());
+        }
+        if (!other.getAllocationLimit().isEmpty()) {
+          allocationLimit_ = other.allocationLimit_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getIncentivesEpochIdentifier().isEmpty()) {
+          incentivesEpochIdentifier_ = other.incentivesEpochIdentifier_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRewardScaler().isEmpty()) {
+          rewardScaler_ = other.rewardScaler_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                enableIncentives_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                allocationLimit_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                incentivesEpochIdentifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                rewardScaler_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableIncentives_ ;
+      /**
+       * <pre>
+       * enable_incentives is the parameter to enable incentives
+       * </pre>
+       *
+       * <code>bool enable_incentives = 1 [json_name = "enableIncentives"];</code>
+       * @return The enableIncentives.
+       */
+      @java.lang.Override
+      public boolean getEnableIncentives() {
+        return enableIncentives_;
+      }
+      /**
+       * <pre>
+       * enable_incentives is the parameter to enable incentives
+       * </pre>
+       *
+       * <code>bool enable_incentives = 1 [json_name = "enableIncentives"];</code>
+       * @param value The enableIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableIncentives(boolean value) {
+
+        enableIncentives_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enable_incentives is the parameter to enable incentives
+       * </pre>
+       *
+       * <code>bool enable_incentives = 1 [json_name = "enableIncentives"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableIncentives() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enableIncentives_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object allocationLimit_ = "";
+      /**
+       * <pre>
+       * allocation_limit is the maximum percentage an incentive can allocate per denomination
+       * </pre>
+       *
+       * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The allocationLimit.
+       */
+      public java.lang.String getAllocationLimit() {
+        java.lang.Object ref = allocationLimit_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          allocationLimit_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * allocation_limit is the maximum percentage an incentive can allocate per denomination
+       * </pre>
+       *
+       * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for allocationLimit.
+       */
+      public com.google.protobuf.ByteString
+          getAllocationLimitBytes() {
+        java.lang.Object ref = allocationLimit_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          allocationLimit_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * allocation_limit is the maximum percentage an incentive can allocate per denomination
+       * </pre>
+       *
+       * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The allocationLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllocationLimit(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        allocationLimit_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_limit is the maximum percentage an incentive can allocate per denomination
+       * </pre>
+       *
+       * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllocationLimit() {
+        allocationLimit_ = getDefaultInstance().getAllocationLimit();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * allocation_limit is the maximum percentage an incentive can allocate per denomination
+       * </pre>
+       *
+       * <code>string allocation_limit = 2 [json_name = "allocationLimit", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for allocationLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllocationLimitBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        allocationLimit_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object incentivesEpochIdentifier_ = "";
+      /**
+       * <pre>
+       * incentives_epoch_identifier for the epochs module hooks
+       * </pre>
+       *
+       * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+       * @return The incentivesEpochIdentifier.
+       */
+      public java.lang.String getIncentivesEpochIdentifier() {
+        java.lang.Object ref = incentivesEpochIdentifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          incentivesEpochIdentifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * incentives_epoch_identifier for the epochs module hooks
+       * </pre>
+       *
+       * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+       * @return The bytes for incentivesEpochIdentifier.
+       */
+      public com.google.protobuf.ByteString
+          getIncentivesEpochIdentifierBytes() {
+        java.lang.Object ref = incentivesEpochIdentifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          incentivesEpochIdentifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * incentives_epoch_identifier for the epochs module hooks
+       * </pre>
+       *
+       * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+       * @param value The incentivesEpochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentivesEpochIdentifier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        incentivesEpochIdentifier_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives_epoch_identifier for the epochs module hooks
+       * </pre>
+       *
+       * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncentivesEpochIdentifier() {
+        incentivesEpochIdentifier_ = getDefaultInstance().getIncentivesEpochIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * incentives_epoch_identifier for the epochs module hooks
+       * </pre>
+       *
+       * <code>string incentives_epoch_identifier = 3 [json_name = "incentivesEpochIdentifier"];</code>
+       * @param value The bytes for incentivesEpochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncentivesEpochIdentifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        incentivesEpochIdentifier_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardScaler_ = "";
+      /**
+       * <pre>
+       * reward_scaler is the scaling factor for capping rewards
+       * </pre>
+       *
+       * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The rewardScaler.
+       */
+      public java.lang.String getRewardScaler() {
+        java.lang.Object ref = rewardScaler_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardScaler_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reward_scaler is the scaling factor for capping rewards
+       * </pre>
+       *
+       * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for rewardScaler.
+       */
+      public com.google.protobuf.ByteString
+          getRewardScalerBytes() {
+        java.lang.Object ref = rewardScaler_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardScaler_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reward_scaler is the scaling factor for capping rewards
+       * </pre>
+       *
+       * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The rewardScaler to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardScaler(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardScaler_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward_scaler is the scaling factor for capping rewards
+       * </pre>
+       *
+       * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardScaler() {
+        rewardScaler_ = getDefaultInstance().getRewardScaler();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward_scaler is the scaling factor for capping rewards
+       * </pre>
+       *
+       * <code>string reward_scaler = 4 [json_name = "rewardScaler", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for rewardScaler to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardScalerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardScaler_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.incentives.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.incentives.v1.Params)
+    private static final com.evmos.incentives.v1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.incentives.v1.GenesisProto.Params();
+    }
+
+    public static com.evmos.incentives.v1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.incentives.v1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_incentives_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_incentives_v1_Params_fieldAccessorTable;
 
@@ -48,12 +2749,12 @@ public final class GenesisProto {
       "\033incentives_epoch_identifier\030\003 \001(\tR\031ince" +
       "ntivesEpochIdentifier\022S\n\rreward_scaler\030\004" +
       " \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosmos-s" +
-      "dk/types.DecR\014rewardScalerB\304\001\n\027com.evmos" +
-      ".incentives.v1B\014GenesisProtoP\001Z-github.c" +
-      "om/evmos/evmos/v13/x/incentives/types\242\002\003" +
-      "EIX\252\002\023Evmos.Incentives.V1\312\002\023Evmos\\Incent" +
-      "ives\\V1\342\002\037Evmos\\Incentives\\V1\\GPBMetadat" +
-      "a\352\002\025Evmos::Incentives::V1b\006proto3"
+      "dk/types.DecR\014rewardScalerB\302\001\n\027com.evmos" +
+      ".incentives.v1B\014GenesisProtoZ-github.com" +
+      "/evmos/evmos/v13/x/incentives/types\242\002\003EI" +
+      "X\252\002\023Evmos.Incentives.V1\312\002\023Evmos\\Incentiv" +
+      "es\\V1\342\002\037Evmos\\Incentives\\V1\\GPBMetadata\352" +
+      "\002\025Evmos::Incentives::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

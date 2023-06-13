@@ -14,34 +14,5383 @@ public final class MsgProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgStoreCodeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.MsgStoreCode)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * sender is the canonical address of the sender
+     * </pre>
+     *
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <pre>
+     * WASMByteCode can be raw or gzip compressed
+     * </pre>
+     *
+     * <code>bytes wasm_byte_code = 2 [json_name = "wasmByteCode", (.gogoproto.customname) = "WASMByteCode"];</code>
+     * @return The wasmByteCode.
+     */
+    com.google.protobuf.ByteString getWasmByteCode();
+
+    /**
+     * <pre>
+     * Source is a valid absolute HTTPS URI to the contract's source code, optional
+     * </pre>
+     *
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <pre>
+     * Source is a valid absolute HTTPS URI to the contract's source code, optional
+     * </pre>
+     *
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <pre>
+     * Builder is a valid docker image name with tag, optional
+     * </pre>
+     *
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The builder.
+     */
+    java.lang.String getBuilder();
+    /**
+     * <pre>
+     * Builder is a valid docker image name with tag, optional
+     * </pre>
+     *
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The bytes for builder.
+     */
+    com.google.protobuf.ByteString
+        getBuilderBytes();
+  }
+  /**
+   * Protobuf type {@code secret.compute.v1beta1.MsgStoreCode}
+   */
+  public static final class MsgStoreCode extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.MsgStoreCode)
+      MsgStoreCodeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStoreCode.newBuilder() to construct.
+    private MsgStoreCode(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStoreCode() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      wasmByteCode_ = com.google.protobuf.ByteString.EMPTY;
+      source_ = "";
+      builder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStoreCode();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCode_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCode_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.MsgProto.MsgStoreCode.class, com.secret.compute.v1beta1.MsgProto.MsgStoreCode.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * sender is the canonical address of the sender
+     * </pre>
+     *
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int WASM_BYTE_CODE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString wasmByteCode_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * WASMByteCode can be raw or gzip compressed
+     * </pre>
+     *
+     * <code>bytes wasm_byte_code = 2 [json_name = "wasmByteCode", (.gogoproto.customname) = "WASMByteCode"];</code>
+     * @return The wasmByteCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getWasmByteCode() {
+      return wasmByteCode_;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <pre>
+     * Source is a valid absolute HTTPS URI to the contract's source code, optional
+     * </pre>
+     *
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        source_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Source is a valid absolute HTTPS URI to the contract's source code, optional
+     * </pre>
+     *
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUILDER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object builder_ = "";
+    /**
+     * <pre>
+     * Builder is a valid docker image name with tag, optional
+     * </pre>
+     *
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The builder.
+     */
+    @java.lang.Override
+    public java.lang.String getBuilder() {
+      java.lang.Object ref = builder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        builder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Builder is a valid docker image name with tag, optional
+     * </pre>
+     *
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The bytes for builder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuilderBytes() {
+      java.lang.Object ref = builder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        builder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!wasmByteCode_.isEmpty()) {
+        output.writeBytes(2, wasmByteCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(builder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, builder_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!wasmByteCode_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, wasmByteCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(builder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, builder_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.MsgProto.MsgStoreCode)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.MsgProto.MsgStoreCode other = (com.secret.compute.v1beta1.MsgProto.MsgStoreCode) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getWasmByteCode()
+          .equals(other.getWasmByteCode())) return false;
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (!getBuilder()
+          .equals(other.getBuilder())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + WASM_BYTE_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getWasmByteCode().hashCode();
+      hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSource().hashCode();
+      hash = (37 * hash) + BUILDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuilder().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.MsgProto.MsgStoreCode prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.compute.v1beta1.MsgStoreCode}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.MsgStoreCode)
+        com.secret.compute.v1beta1.MsgProto.MsgStoreCodeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCode_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCode_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.MsgProto.MsgStoreCode.class, com.secret.compute.v1beta1.MsgProto.MsgStoreCode.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.MsgProto.MsgStoreCode.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        wasmByteCode_ = com.google.protobuf.ByteString.EMPTY;
+        source_ = "";
+        builder_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCode_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgStoreCode getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.MsgProto.MsgStoreCode.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgStoreCode build() {
+        com.secret.compute.v1beta1.MsgProto.MsgStoreCode result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgStoreCode buildPartial() {
+        com.secret.compute.v1beta1.MsgProto.MsgStoreCode result = new com.secret.compute.v1beta1.MsgProto.MsgStoreCode(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.MsgProto.MsgStoreCode result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.wasmByteCode_ = wasmByteCode_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.source_ = source_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.builder_ = builder_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.MsgProto.MsgStoreCode) {
+          return mergeFrom((com.secret.compute.v1beta1.MsgProto.MsgStoreCode)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.MsgProto.MsgStoreCode other) {
+        if (other == com.secret.compute.v1beta1.MsgProto.MsgStoreCode.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.getWasmByteCode() != com.google.protobuf.ByteString.EMPTY) {
+          setWasmByteCode(other.getWasmByteCode());
+        }
+        if (!other.getSource().isEmpty()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBuilder().isEmpty()) {
+          builder_ = other.builder_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                wasmByteCode_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                source_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                builder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString wasmByteCode_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * WASMByteCode can be raw or gzip compressed
+       * </pre>
+       *
+       * <code>bytes wasm_byte_code = 2 [json_name = "wasmByteCode", (.gogoproto.customname) = "WASMByteCode"];</code>
+       * @return The wasmByteCode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getWasmByteCode() {
+        return wasmByteCode_;
+      }
+      /**
+       * <pre>
+       * WASMByteCode can be raw or gzip compressed
+       * </pre>
+       *
+       * <code>bytes wasm_byte_code = 2 [json_name = "wasmByteCode", (.gogoproto.customname) = "WASMByteCode"];</code>
+       * @param value The wasmByteCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWasmByteCode(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        wasmByteCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WASMByteCode can be raw or gzip compressed
+       * </pre>
+       *
+       * <code>bytes wasm_byte_code = 2 [json_name = "wasmByteCode", (.gogoproto.customname) = "WASMByteCode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWasmByteCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        wasmByteCode_ = getDefaultInstance().getWasmByteCode();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object source_ = "";
+      /**
+       * <pre>
+       * Source is a valid absolute HTTPS URI to the contract's source code, optional
+       * </pre>
+       *
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Source is a valid absolute HTTPS URI to the contract's source code, optional
+       * </pre>
+       *
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Source is a valid absolute HTTPS URI to the contract's source code, optional
+       * </pre>
+       *
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Source is a valid absolute HTTPS URI to the contract's source code, optional
+       * </pre>
+       *
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Source is a valid absolute HTTPS URI to the contract's source code, optional
+       * </pre>
+       *
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        source_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object builder_ = "";
+      /**
+       * <pre>
+       * Builder is a valid docker image name with tag, optional
+       * </pre>
+       *
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @return The builder.
+       */
+      public java.lang.String getBuilder() {
+        java.lang.Object ref = builder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          builder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Builder is a valid docker image name with tag, optional
+       * </pre>
+       *
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @return The bytes for builder.
+       */
+      public com.google.protobuf.ByteString
+          getBuilderBytes() {
+        java.lang.Object ref = builder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          builder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Builder is a valid docker image name with tag, optional
+       * </pre>
+       *
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @param value The builder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuilder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        builder_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Builder is a valid docker image name with tag, optional
+       * </pre>
+       *
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuilder() {
+        builder_ = getDefaultInstance().getBuilder();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Builder is a valid docker image name with tag, optional
+       * </pre>
+       *
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @param value The bytes for builder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuilderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        builder_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.MsgStoreCode)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.MsgStoreCode)
+    private static final com.secret.compute.v1beta1.MsgProto.MsgStoreCode DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.MsgProto.MsgStoreCode();
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCode getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStoreCode>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStoreCode>() {
+      @java.lang.Override
+      public MsgStoreCode parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStoreCode> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStoreCode> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.MsgProto.MsgStoreCode getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStoreCodeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.MsgStoreCodeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * CodeID is the reference to the stored WASM code
+     * </pre>
+     *
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+  }
+  /**
+   * <pre>
+   * MsgStoreCodeResponse returns store result data.
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.MsgStoreCodeResponse}
+   */
+  public static final class MsgStoreCodeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.MsgStoreCodeResponse)
+      MsgStoreCodeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStoreCodeResponse.newBuilder() to construct.
+    private MsgStoreCodeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStoreCodeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStoreCodeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.class, com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.Builder.class);
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 1;
+    private long codeId_ = 0L;
+    /**
+     * <pre>
+     * CodeID is the reference to the stored WASM code
+     * </pre>
+     *
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (codeId_ != 0L) {
+        output.writeUInt64(1, codeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, codeId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse other = (com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse) obj;
+
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgStoreCodeResponse returns store result data.
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.MsgStoreCodeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.MsgStoreCodeResponse)
+        com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.class, com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse build() {
+        com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse buildPartial() {
+        com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse result = new com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeId_ = codeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse) {
+          return mergeFrom((com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse other) {
+        if (other == com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse.getDefaultInstance()) return this;
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long codeId_ ;
+      /**
+       * <pre>
+       * CodeID is the reference to the stored WASM code
+       * </pre>
+       *
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <pre>
+       * CodeID is the reference to the stored WASM code
+       * </pre>
+       *
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CodeID is the reference to the stored WASM code
+       * </pre>
+       *
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.MsgStoreCodeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.MsgStoreCodeResponse)
+    private static final com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse();
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStoreCodeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStoreCodeResponse>() {
+      @java.lang.Override
+      public MsgStoreCodeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStoreCodeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStoreCodeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.MsgProto.MsgStoreCodeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgInstantiateContractOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.MsgInstantiateContract)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * sender is the canonical address of the sender
+     * </pre>
+     *
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+     * @return The callbackCodeHash.
+     */
+    java.lang.String getCallbackCodeHash();
+    /**
+     * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+     * @return The bytes for callbackCodeHash.
+     */
+    com.google.protobuf.ByteString
+        getCallbackCodeHashBytes();
+
+    /**
+     * <code>uint64 code_id = 3 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+
+    /**
+     * <code>bytes init_msg = 5 [json_name = "initMsg"];</code>
+     * @return The initMsg.
+     */
+    com.google.protobuf.ByteString getInitMsg();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getInitFundsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getInitFunds(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getInitFundsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getInitFundsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInitFundsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * used internally for encryption, should always be empty in a signed transaction
+     * </pre>
+     *
+     * <code>bytes callback_sig = 7 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+     * @return The callbackSig.
+     */
+    com.google.protobuf.ByteString getCallbackSig();
+  }
+  /**
+   * Protobuf type {@code secret.compute.v1beta1.MsgInstantiateContract}
+   */
+  public static final class MsgInstantiateContract extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.MsgInstantiateContract)
+      MsgInstantiateContractOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgInstantiateContract.newBuilder() to construct.
+    private MsgInstantiateContract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgInstantiateContract() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      callbackCodeHash_ = "";
+      label_ = "";
+      initMsg_ = com.google.protobuf.ByteString.EMPTY;
+      initFunds_ = java.util.Collections.emptyList();
+      callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgInstantiateContract();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContract_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContract_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.class, com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * sender is the canonical address of the sender
+     * </pre>
+     *
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CALLBACK_CODE_HASH_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object callbackCodeHash_ = "";
+    /**
+     * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+     * @return The callbackCodeHash.
+     */
+    @java.lang.Override
+    public java.lang.String getCallbackCodeHash() {
+      java.lang.Object ref = callbackCodeHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callbackCodeHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+     * @return The bytes for callbackCodeHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCallbackCodeHashBytes() {
+      java.lang.Object ref = callbackCodeHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callbackCodeHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 3;
+    private long codeId_ = 0L;
+    /**
+     * <code>uint64 code_id = 3 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object label_ = "";
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        label_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        label_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INIT_MSG_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString initMsg_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes init_msg = 5 [json_name = "initMsg"];</code>
+     * @return The initMsg.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getInitMsg() {
+      return initMsg_;
+    }
+
+    public static final int INIT_FUNDS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> initFunds_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getInitFundsList() {
+      return initFunds_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getInitFundsOrBuilderList() {
+      return initFunds_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getInitFundsCount() {
+      return initFunds_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getInitFunds(int index) {
+      return initFunds_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInitFundsOrBuilder(
+        int index) {
+      return initFunds_.get(index);
+    }
+
+    public static final int CALLBACK_SIG_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * used internally for encryption, should always be empty in a signed transaction
+     * </pre>
+     *
+     * <code>bytes callback_sig = 7 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+     * @return The callbackSig.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCallbackSig() {
+      return callbackSig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbackCodeHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callbackCodeHash_);
+      }
+      if (codeId_ != 0L) {
+        output.writeUInt64(3, codeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
+      }
+      if (!initMsg_.isEmpty()) {
+        output.writeBytes(5, initMsg_);
+      }
+      for (int i = 0; i < initFunds_.size(); i++) {
+        output.writeMessage(6, initFunds_.get(i));
+      }
+      if (!callbackSig_.isEmpty()) {
+        output.writeBytes(7, callbackSig_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbackCodeHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callbackCodeHash_);
+      }
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, codeId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
+      }
+      if (!initMsg_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, initMsg_);
+      }
+      for (int i = 0; i < initFunds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, initFunds_.get(i));
+      }
+      if (!callbackSig_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, callbackSig_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract other = (com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getCallbackCodeHash()
+          .equals(other.getCallbackCodeHash())) return false;
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (!getInitMsg()
+          .equals(other.getInitMsg())) return false;
+      if (!getInitFundsList()
+          .equals(other.getInitFundsList())) return false;
+      if (!getCallbackSig()
+          .equals(other.getCallbackSig())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CALLBACK_CODE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getCallbackCodeHash().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      hash = (37 * hash) + LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLabel().hashCode();
+      hash = (37 * hash) + INIT_MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getInitMsg().hashCode();
+      if (getInitFundsCount() > 0) {
+        hash = (37 * hash) + INIT_FUNDS_FIELD_NUMBER;
+        hash = (53 * hash) + getInitFundsList().hashCode();
+      }
+      hash = (37 * hash) + CALLBACK_SIG_FIELD_NUMBER;
+      hash = (53 * hash) + getCallbackSig().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.compute.v1beta1.MsgInstantiateContract}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.MsgInstantiateContract)
+        com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContract_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContract_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.class, com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        callbackCodeHash_ = "";
+        codeId_ = 0L;
+        label_ = "";
+        initMsg_ = com.google.protobuf.ByteString.EMPTY;
+        if (initFundsBuilder_ == null) {
+          initFunds_ = java.util.Collections.emptyList();
+        } else {
+          initFunds_ = null;
+          initFundsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContract_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract build() {
+        com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract buildPartial() {
+        com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract result = new com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract result) {
+        if (initFundsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            initFunds_ = java.util.Collections.unmodifiableList(initFunds_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.initFunds_ = initFunds_;
+        } else {
+          result.initFunds_ = initFundsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.callbackCodeHash_ = callbackCodeHash_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.codeId_ = codeId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.label_ = label_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.initMsg_ = initMsg_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.callbackSig_ = callbackSig_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract) {
+          return mergeFrom((com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract other) {
+        if (other == com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (!other.getCallbackCodeHash().isEmpty()) {
+          callbackCodeHash_ = other.callbackCodeHash_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        if (!other.getLabel().isEmpty()) {
+          label_ = other.label_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getInitMsg() != com.google.protobuf.ByteString.EMPTY) {
+          setInitMsg(other.getInitMsg());
+        }
+        if (initFundsBuilder_ == null) {
+          if (!other.initFunds_.isEmpty()) {
+            if (initFunds_.isEmpty()) {
+              initFunds_ = other.initFunds_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureInitFundsIsMutable();
+              initFunds_.addAll(other.initFunds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.initFunds_.isEmpty()) {
+            if (initFundsBuilder_.isEmpty()) {
+              initFundsBuilder_.dispose();
+              initFundsBuilder_ = null;
+              initFunds_ = other.initFunds_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              initFundsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInitFundsFieldBuilder() : null;
+            } else {
+              initFundsBuilder_.addAllMessages(other.initFunds_);
+            }
+          }
+        }
+        if (other.getCallbackSig() != com.google.protobuf.ByteString.EMPTY) {
+          setCallbackSig(other.getCallbackSig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                callbackCodeHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                label_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                initMsg_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (initFundsBuilder_ == null) {
+                  ensureInitFundsIsMutable();
+                  initFunds_.add(m);
+                } else {
+                  initFundsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                callbackSig_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object callbackCodeHash_ = "";
+      /**
+       * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+       * @return The callbackCodeHash.
+       */
+      public java.lang.String getCallbackCodeHash() {
+        java.lang.Object ref = callbackCodeHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          callbackCodeHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+       * @return The bytes for callbackCodeHash.
+       */
+      public com.google.protobuf.ByteString
+          getCallbackCodeHashBytes() {
+        java.lang.Object ref = callbackCodeHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          callbackCodeHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+       * @param value The callbackCodeHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackCodeHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        callbackCodeHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallbackCodeHash() {
+        callbackCodeHash_ = getDefaultInstance().getCallbackCodeHash();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callback_code_hash = 2 [json_name = "callbackCodeHash"];</code>
+       * @param value The bytes for callbackCodeHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackCodeHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        callbackCodeHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long codeId_ ;
+      /**
+       * <code>uint64 code_id = 3 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <code>uint64 code_id = 3 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 code_id = 3 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object label_ = "";
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @return The label.
+       */
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @return The bytes for label.
+       */
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        label_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        label_ = getDefaultInstance().getLabel();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        label_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString initMsg_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes init_msg = 5 [json_name = "initMsg"];</code>
+       * @return The initMsg.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getInitMsg() {
+        return initMsg_;
+      }
+      /**
+       * <code>bytes init_msg = 5 [json_name = "initMsg"];</code>
+       * @param value The initMsg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitMsg(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        initMsg_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes init_msg = 5 [json_name = "initMsg"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitMsg() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        initMsg_ = getDefaultInstance().getInitMsg();
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> initFunds_ =
+        java.util.Collections.emptyList();
+      private void ensureInitFundsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          initFunds_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(initFunds_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> initFundsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getInitFundsList() {
+        if (initFundsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(initFunds_);
+        } else {
+          return initFundsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getInitFundsCount() {
+        if (initFundsBuilder_ == null) {
+          return initFunds_.size();
+        } else {
+          return initFundsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getInitFunds(int index) {
+        if (initFundsBuilder_ == null) {
+          return initFunds_.get(index);
+        } else {
+          return initFundsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setInitFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (initFundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitFundsIsMutable();
+          initFunds_.set(index, value);
+          onChanged();
+        } else {
+          initFundsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setInitFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (initFundsBuilder_ == null) {
+          ensureInitFundsIsMutable();
+          initFunds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          initFundsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitFunds(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (initFundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitFundsIsMutable();
+          initFunds_.add(value);
+          onChanged();
+        } else {
+          initFundsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (initFundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInitFundsIsMutable();
+          initFunds_.add(index, value);
+          onChanged();
+        } else {
+          initFundsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitFunds(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (initFundsBuilder_ == null) {
+          ensureInitFundsIsMutable();
+          initFunds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          initFundsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addInitFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (initFundsBuilder_ == null) {
+          ensureInitFundsIsMutable();
+          initFunds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          initFundsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllInitFunds(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (initFundsBuilder_ == null) {
+          ensureInitFundsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, initFunds_);
+          onChanged();
+        } else {
+          initFundsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearInitFunds() {
+        if (initFundsBuilder_ == null) {
+          initFunds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          initFundsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeInitFunds(int index) {
+        if (initFundsBuilder_ == null) {
+          ensureInitFundsIsMutable();
+          initFunds_.remove(index);
+          onChanged();
+        } else {
+          initFundsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getInitFundsBuilder(
+          int index) {
+        return getInitFundsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getInitFundsOrBuilder(
+          int index) {
+        if (initFundsBuilder_ == null) {
+          return initFunds_.get(index);  } else {
+          return initFundsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getInitFundsOrBuilderList() {
+        if (initFundsBuilder_ != null) {
+          return initFundsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(initFunds_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addInitFundsBuilder() {
+        return getInitFundsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addInitFundsBuilder(
+          int index) {
+        return getInitFundsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin init_funds = 6 [json_name = "initFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getInitFundsBuilderList() {
+        return getInitFundsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getInitFundsFieldBuilder() {
+        if (initFundsBuilder_ == null) {
+          initFundsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  initFunds_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          initFunds_ = null;
+        }
+        return initFundsBuilder_;
+      }
+
+      private com.google.protobuf.ByteString callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * used internally for encryption, should always be empty in a signed transaction
+       * </pre>
+       *
+       * <code>bytes callback_sig = 7 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+       * @return The callbackSig.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCallbackSig() {
+        return callbackSig_;
+      }
+      /**
+       * <pre>
+       * used internally for encryption, should always be empty in a signed transaction
+       * </pre>
+       *
+       * <code>bytes callback_sig = 7 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+       * @param value The callbackSig to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackSig(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        callbackSig_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * used internally for encryption, should always be empty in a signed transaction
+       * </pre>
+       *
+       * <code>bytes callback_sig = 7 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallbackSig() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        callbackSig_ = getDefaultInstance().getCallbackSig();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.MsgInstantiateContract)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.MsgInstantiateContract)
+    private static final com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract();
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgInstantiateContract>
+        PARSER = new com.google.protobuf.AbstractParser<MsgInstantiateContract>() {
+      @java.lang.Override
+      public MsgInstantiateContract parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgInstantiateContract> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgInstantiateContract> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContract getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgInstantiateContractResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.MsgInstantiateContractResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Address is the bech32 address of the new contract instance.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Address is the bech32 address of the new contract instance.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <pre>
+     * Data contains base64-encoded bytes to returned from the contract
+     * </pre>
+     *
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * <pre>
+   * MsgInstantiateContractResponse return instantiation result data
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.MsgInstantiateContractResponse}
+   */
+  public static final class MsgInstantiateContractResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.MsgInstantiateContractResponse)
+      MsgInstantiateContractResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgInstantiateContractResponse.newBuilder() to construct.
+    private MsgInstantiateContractResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgInstantiateContractResponse() {
+      address_ = "";
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgInstantiateContractResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.class, com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <pre>
+     * Address is the bech32 address of the new contract instance.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Address is the bech32 address of the new contract instance.
+     * </pre>
+     *
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Data contains base64-encoded bytes to returned from the contract
+     * </pre>
+     *
+     * <code>bytes data = 2 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(2, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse other = (com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgInstantiateContractResponse return instantiation result data
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.MsgInstantiateContractResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.MsgInstantiateContractResponse)
+        com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.class, com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse build() {
+        com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse buildPartial() {
+        com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse result = new com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse) {
+          return mergeFrom((com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse other) {
+        if (other == com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Address is the bech32 address of the new contract instance.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address of the new contract instance.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address of the new contract instance.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address of the new contract instance.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Address is the bech32 address of the new contract instance.
+       * </pre>
+       *
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Data contains base64-encoded bytes to returned from the contract
+       * </pre>
+       *
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <pre>
+       * Data contains base64-encoded bytes to returned from the contract
+       * </pre>
+       *
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data contains base64-encoded bytes to returned from the contract
+       * </pre>
+       *
+       * <code>bytes data = 2 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.MsgInstantiateContractResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.MsgInstantiateContractResponse)
+    private static final com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse();
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgInstantiateContractResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgInstantiateContractResponse>() {
+      @java.lang.Override
+      public MsgInstantiateContractResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgInstantiateContractResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgInstantiateContractResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.MsgProto.MsgInstantiateContractResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgExecuteContractOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.MsgExecuteContract)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * sender is the canonical address of the sender
+     * </pre>
+     *
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    com.google.protobuf.ByteString getSender();
+
+    /**
+     * <pre>
+     * contract is the canonical address of the contract
+     * </pre>
+     *
+     * <code>bytes contract = 2 [json_name = "contract", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The contract.
+     */
+    com.google.protobuf.ByteString getContract();
+
+    /**
+     * <code>bytes msg = 3 [json_name = "msg"];</code>
+     * @return The msg.
+     */
+    com.google.protobuf.ByteString getMsg();
+
+    /**
+     * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+     * @return The callbackCodeHash.
+     */
+    java.lang.String getCallbackCodeHash();
+    /**
+     * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+     * @return The bytes for callbackCodeHash.
+     */
+    com.google.protobuf.ByteString
+        getCallbackCodeHashBytes();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getSentFundsList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSentFunds(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getSentFundsCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getSentFundsOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSentFundsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * used internally for encryption, should always be empty in a signed transaction
+     * </pre>
+     *
+     * <code>bytes callback_sig = 6 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+     * @return The callbackSig.
+     */
+    com.google.protobuf.ByteString getCallbackSig();
+  }
+  /**
+   * Protobuf type {@code secret.compute.v1beta1.MsgExecuteContract}
+   */
+  public static final class MsgExecuteContract extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.MsgExecuteContract)
+      MsgExecuteContractOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgExecuteContract.newBuilder() to construct.
+    private MsgExecuteContract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgExecuteContract() {
+      sender_ = com.google.protobuf.ByteString.EMPTY;
+      contract_ = com.google.protobuf.ByteString.EMPTY;
+      msg_ = com.google.protobuf.ByteString.EMPTY;
+      callbackCodeHash_ = "";
+      sentFunds_ = java.util.Collections.emptyList();
+      callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgExecuteContract();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContract_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContract_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.class, com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * sender is the canonical address of the sender
+     * </pre>
+     *
+     * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSender() {
+      return sender_;
+    }
+
+    public static final int CONTRACT_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString contract_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * contract is the canonical address of the contract
+     * </pre>
+     *
+     * <code>bytes contract = 2 [json_name = "contract", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The contract.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContract() {
+      return contract_;
+    }
+
+    public static final int MSG_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString msg_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes msg = 3 [json_name = "msg"];</code>
+     * @return The msg.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMsg() {
+      return msg_;
+    }
+
+    public static final int CALLBACK_CODE_HASH_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object callbackCodeHash_ = "";
+    /**
+     * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+     * @return The callbackCodeHash.
+     */
+    @java.lang.Override
+    public java.lang.String getCallbackCodeHash() {
+      java.lang.Object ref = callbackCodeHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callbackCodeHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+     * @return The bytes for callbackCodeHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCallbackCodeHashBytes() {
+      java.lang.Object ref = callbackCodeHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callbackCodeHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENT_FUNDS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> sentFunds_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getSentFundsList() {
+      return sentFunds_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getSentFundsOrBuilderList() {
+      return sentFunds_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getSentFundsCount() {
+      return sentFunds_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSentFunds(int index) {
+      return sentFunds_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSentFundsOrBuilder(
+        int index) {
+      return sentFunds_.get(index);
+    }
+
+    public static final int CALLBACK_SIG_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * used internally for encryption, should always be empty in a signed transaction
+     * </pre>
+     *
+     * <code>bytes callback_sig = 6 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+     * @return The callbackSig.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCallbackSig() {
+      return callbackSig_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sender_.isEmpty()) {
+        output.writeBytes(1, sender_);
+      }
+      if (!contract_.isEmpty()) {
+        output.writeBytes(2, contract_);
+      }
+      if (!msg_.isEmpty()) {
+        output.writeBytes(3, msg_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbackCodeHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, callbackCodeHash_);
+      }
+      for (int i = 0; i < sentFunds_.size(); i++) {
+        output.writeMessage(5, sentFunds_.get(i));
+      }
+      if (!callbackSig_.isEmpty()) {
+        output.writeBytes(6, callbackSig_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sender_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sender_);
+      }
+      if (!contract_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, contract_);
+      }
+      if (!msg_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, msg_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbackCodeHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, callbackCodeHash_);
+      }
+      for (int i = 0; i < sentFunds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, sentFunds_.get(i));
+      }
+      if (!callbackSig_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, callbackSig_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.MsgProto.MsgExecuteContract)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.MsgProto.MsgExecuteContract other = (com.secret.compute.v1beta1.MsgProto.MsgExecuteContract) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getContract()
+          .equals(other.getContract())) return false;
+      if (!getMsg()
+          .equals(other.getMsg())) return false;
+      if (!getCallbackCodeHash()
+          .equals(other.getCallbackCodeHash())) return false;
+      if (!getSentFundsList()
+          .equals(other.getSentFundsList())) return false;
+      if (!getCallbackSig()
+          .equals(other.getCallbackSig())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CONTRACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContract().hashCode();
+      hash = (37 * hash) + MSG_FIELD_NUMBER;
+      hash = (53 * hash) + getMsg().hashCode();
+      hash = (37 * hash) + CALLBACK_CODE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getCallbackCodeHash().hashCode();
+      if (getSentFundsCount() > 0) {
+        hash = (37 * hash) + SENT_FUNDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSentFundsList().hashCode();
+      }
+      hash = (37 * hash) + CALLBACK_SIG_FIELD_NUMBER;
+      hash = (53 * hash) + getCallbackSig().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.MsgProto.MsgExecuteContract prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.compute.v1beta1.MsgExecuteContract}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.MsgExecuteContract)
+        com.secret.compute.v1beta1.MsgProto.MsgExecuteContractOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContract_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContract_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.class, com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = com.google.protobuf.ByteString.EMPTY;
+        contract_ = com.google.protobuf.ByteString.EMPTY;
+        msg_ = com.google.protobuf.ByteString.EMPTY;
+        callbackCodeHash_ = "";
+        if (sentFundsBuilder_ == null) {
+          sentFunds_ = java.util.Collections.emptyList();
+        } else {
+          sentFunds_ = null;
+          sentFundsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContract_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgExecuteContract getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgExecuteContract build() {
+        com.secret.compute.v1beta1.MsgProto.MsgExecuteContract result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgExecuteContract buildPartial() {
+        com.secret.compute.v1beta1.MsgProto.MsgExecuteContract result = new com.secret.compute.v1beta1.MsgProto.MsgExecuteContract(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.secret.compute.v1beta1.MsgProto.MsgExecuteContract result) {
+        if (sentFundsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            sentFunds_ = java.util.Collections.unmodifiableList(sentFunds_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.sentFunds_ = sentFunds_;
+        } else {
+          result.sentFunds_ = sentFundsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.MsgProto.MsgExecuteContract result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contract_ = contract_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.msg_ = msg_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.callbackCodeHash_ = callbackCodeHash_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.callbackSig_ = callbackSig_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.MsgProto.MsgExecuteContract) {
+          return mergeFrom((com.secret.compute.v1beta1.MsgProto.MsgExecuteContract)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.MsgProto.MsgExecuteContract other) {
+        if (other == com.secret.compute.v1beta1.MsgProto.MsgExecuteContract.getDefaultInstance()) return this;
+        if (other.getSender() != com.google.protobuf.ByteString.EMPTY) {
+          setSender(other.getSender());
+        }
+        if (other.getContract() != com.google.protobuf.ByteString.EMPTY) {
+          setContract(other.getContract());
+        }
+        if (other.getMsg() != com.google.protobuf.ByteString.EMPTY) {
+          setMsg(other.getMsg());
+        }
+        if (!other.getCallbackCodeHash().isEmpty()) {
+          callbackCodeHash_ = other.callbackCodeHash_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (sentFundsBuilder_ == null) {
+          if (!other.sentFunds_.isEmpty()) {
+            if (sentFunds_.isEmpty()) {
+              sentFunds_ = other.sentFunds_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureSentFundsIsMutable();
+              sentFunds_.addAll(other.sentFunds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sentFunds_.isEmpty()) {
+            if (sentFundsBuilder_.isEmpty()) {
+              sentFundsBuilder_.dispose();
+              sentFundsBuilder_ = null;
+              sentFunds_ = other.sentFunds_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              sentFundsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSentFundsFieldBuilder() : null;
+            } else {
+              sentFundsBuilder_.addAllMessages(other.sentFunds_);
+            }
+          }
+        }
+        if (other.getCallbackSig() != com.google.protobuf.ByteString.EMPTY) {
+          setCallbackSig(other.getCallbackSig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contract_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                msg_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                callbackCodeHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (sentFundsBuilder_ == null) {
+                  ensureSentFundsIsMutable();
+                  sentFunds_.add(m);
+                } else {
+                  sentFundsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                callbackSig_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sender_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The sender.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSender() {
+        return sender_;
+      }
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender is the canonical address of the sender
+       * </pre>
+       *
+       * <code>bytes sender = 1 [json_name = "sender", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sender_ = getDefaultInstance().getSender();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString contract_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * contract is the canonical address of the contract
+       * </pre>
+       *
+       * <code>bytes contract = 2 [json_name = "contract", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The contract.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContract() {
+        return contract_;
+      }
+      /**
+       * <pre>
+       * contract is the canonical address of the contract
+       * </pre>
+       *
+       * <code>bytes contract = 2 [json_name = "contract", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The contract to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContract(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        contract_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract is the canonical address of the contract
+       * </pre>
+       *
+       * <code>bytes contract = 2 [json_name = "contract", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContract() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contract_ = getDefaultInstance().getContract();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString msg_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes msg = 3 [json_name = "msg"];</code>
+       * @return The msg.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMsg() {
+        return msg_;
+      }
+      /**
+       * <code>bytes msg = 3 [json_name = "msg"];</code>
+       * @param value The msg to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMsg(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        msg_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes msg = 3 [json_name = "msg"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMsg() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        msg_ = getDefaultInstance().getMsg();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object callbackCodeHash_ = "";
+      /**
+       * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+       * @return The callbackCodeHash.
+       */
+      public java.lang.String getCallbackCodeHash() {
+        java.lang.Object ref = callbackCodeHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          callbackCodeHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+       * @return The bytes for callbackCodeHash.
+       */
+      public com.google.protobuf.ByteString
+          getCallbackCodeHashBytes() {
+        java.lang.Object ref = callbackCodeHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          callbackCodeHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+       * @param value The callbackCodeHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackCodeHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        callbackCodeHash_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallbackCodeHash() {
+        callbackCodeHash_ = getDefaultInstance().getCallbackCodeHash();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string callback_code_hash = 4 [json_name = "callbackCodeHash"];</code>
+       * @param value The bytes for callbackCodeHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackCodeHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        callbackCodeHash_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> sentFunds_ =
+        java.util.Collections.emptyList();
+      private void ensureSentFundsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          sentFunds_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(sentFunds_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> sentFundsBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getSentFundsList() {
+        if (sentFundsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sentFunds_);
+        } else {
+          return sentFundsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getSentFundsCount() {
+        if (sentFundsBuilder_ == null) {
+          return sentFunds_.size();
+        } else {
+          return sentFundsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSentFunds(int index) {
+        if (sentFundsBuilder_ == null) {
+          return sentFunds_.get(index);
+        } else {
+          return sentFundsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setSentFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sentFundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSentFundsIsMutable();
+          sentFunds_.set(index, value);
+          onChanged();
+        } else {
+          sentFundsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setSentFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sentFundsBuilder_ == null) {
+          ensureSentFundsIsMutable();
+          sentFunds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sentFundsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSentFunds(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sentFundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSentFundsIsMutable();
+          sentFunds_.add(value);
+          onChanged();
+        } else {
+          sentFundsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSentFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sentFundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSentFundsIsMutable();
+          sentFunds_.add(index, value);
+          onChanged();
+        } else {
+          sentFundsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSentFunds(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sentFundsBuilder_ == null) {
+          ensureSentFundsIsMutable();
+          sentFunds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sentFundsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addSentFunds(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sentFundsBuilder_ == null) {
+          ensureSentFundsIsMutable();
+          sentFunds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sentFundsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllSentFunds(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (sentFundsBuilder_ == null) {
+          ensureSentFundsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sentFunds_);
+          onChanged();
+        } else {
+          sentFundsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearSentFunds() {
+        if (sentFundsBuilder_ == null) {
+          sentFunds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          sentFundsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeSentFunds(int index) {
+        if (sentFundsBuilder_ == null) {
+          ensureSentFundsIsMutable();
+          sentFunds_.remove(index);
+          onChanged();
+        } else {
+          sentFundsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSentFundsBuilder(
+          int index) {
+        return getSentFundsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSentFundsOrBuilder(
+          int index) {
+        if (sentFundsBuilder_ == null) {
+          return sentFunds_.get(index);  } else {
+          return sentFundsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getSentFundsOrBuilderList() {
+        if (sentFundsBuilder_ != null) {
+          return sentFundsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sentFunds_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addSentFundsBuilder() {
+        return getSentFundsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addSentFundsBuilder(
+          int index) {
+        return getSentFundsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin sent_funds = 5 [json_name = "sentFunds", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getSentFundsBuilderList() {
+        return getSentFundsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSentFundsFieldBuilder() {
+        if (sentFundsBuilder_ == null) {
+          sentFundsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  sentFunds_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sentFunds_ = null;
+        }
+        return sentFundsBuilder_;
+      }
+
+      private com.google.protobuf.ByteString callbackSig_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * used internally for encryption, should always be empty in a signed transaction
+       * </pre>
+       *
+       * <code>bytes callback_sig = 6 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+       * @return The callbackSig.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCallbackSig() {
+        return callbackSig_;
+      }
+      /**
+       * <pre>
+       * used internally for encryption, should always be empty in a signed transaction
+       * </pre>
+       *
+       * <code>bytes callback_sig = 6 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+       * @param value The callbackSig to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallbackSig(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        callbackSig_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * used internally for encryption, should always be empty in a signed transaction
+       * </pre>
+       *
+       * <code>bytes callback_sig = 6 [json_name = "callbackSig", (.gogoproto.customname) = "CallbackSig"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallbackSig() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        callbackSig_ = getDefaultInstance().getCallbackSig();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.MsgExecuteContract)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.MsgExecuteContract)
+    private static final com.secret.compute.v1beta1.MsgProto.MsgExecuteContract DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.MsgProto.MsgExecuteContract();
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContract getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgExecuteContract>
+        PARSER = new com.google.protobuf.AbstractParser<MsgExecuteContract>() {
+      @java.lang.Override
+      public MsgExecuteContract parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgExecuteContract> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgExecuteContract> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.MsgProto.MsgExecuteContract getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgExecuteContractResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.MsgExecuteContractResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Data contains base64-encoded bytes to returned from the contract
+     * </pre>
+     *
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * <pre>
+   * MsgExecuteContractResponse returns execution result data.
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.MsgExecuteContractResponse}
+   */
+  public static final class MsgExecuteContractResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.MsgExecuteContractResponse)
+      MsgExecuteContractResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgExecuteContractResponse.newBuilder() to construct.
+    private MsgExecuteContractResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgExecuteContractResponse() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgExecuteContractResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.class, com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.Builder.class);
+    }
+
+    public static final int DATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Data contains base64-encoded bytes to returned from the contract
+     * </pre>
+     *
+     * <code>bytes data = 1 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!data_.isEmpty()) {
+        output.writeBytes(1, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse other = (com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse) obj;
+
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgExecuteContractResponse returns execution result data.
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.MsgExecuteContractResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.MsgExecuteContractResponse)
+        com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.class, com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.MsgProto.internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse build() {
+        com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse buildPartial() {
+        com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse result = new com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse) {
+          return mergeFrom((com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse other) {
+        if (other == com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse.getDefaultInstance()) return this;
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Data contains base64-encoded bytes to returned from the contract
+       * </pre>
+       *
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <pre>
+       * Data contains base64-encoded bytes to returned from the contract
+       * </pre>
+       *
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data contains base64-encoded bytes to returned from the contract
+       * </pre>
+       *
+       * <code>bytes data = 1 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.MsgExecuteContractResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.MsgExecuteContractResponse)
+    private static final com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse();
+    }
+
+    public static com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgExecuteContractResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgExecuteContractResponse>() {
+      @java.lang.Override
+      public MsgExecuteContractResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgExecuteContractResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgExecuteContractResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.MsgProto.MsgExecuteContractResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_MsgStoreCode_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_MsgStoreCode_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_MsgStoreCodeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_MsgInstantiateContract_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_MsgInstantiateContract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_MsgInstantiateContractResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_MsgExecuteContract_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_MsgExecuteContract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_MsgExecuteContractResponse_fieldAccessorTable;
 
@@ -94,13 +5443,13 @@ public final class MsgProto {
       "nstantiateContractResponse\022q\n\017ExecuteCon" +
       "tract\022*.secret.compute.v1beta1.MsgExecut" +
       "eContract\0322.secret.compute.v1beta1.MsgEx" +
-      "ecuteContractResponseB\334\001\n\032com.secret.com" +
-      "pute.v1beta1B\010MsgProtoP\001Z:github.com/scr" +
-      "tlabs/SecretNetwork/x/compute/internal/t" +
-      "ypes\242\002\003SCX\252\002\026Secret.Compute.V1beta1\312\002\026Se" +
-      "cret\\Compute\\V1beta1\342\002\"Secret\\Compute\\V1" +
-      "beta1\\GPBMetadata\352\002\030Secret::Compute::V1b" +
-      "eta1b\006proto3"
+      "ecuteContractResponseB\332\001\n\032com.secret.com" +
+      "pute.v1beta1B\010MsgProtoZ:github.com/scrtl" +
+      "abs/SecretNetwork/x/compute/internal/typ" +
+      "es\242\002\003SCX\252\002\026Secret.Compute.V1beta1\312\002\026Secr" +
+      "et\\Compute\\V1beta1\342\002\"Secret\\Compute\\V1be" +
+      "ta1\\GPBMetadata\352\002\030Secret::Compute::V1bet" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

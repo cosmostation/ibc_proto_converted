@@ -14,54 +14,9560 @@ public final class GovProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AddAssetsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddAssetsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     * @return Whether the assets field is set.
+     */
+    boolean hasAssets();
+    /**
+     * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     * @return The assets.
+     */
+    com.comdex.asset.v1beta1.AssetProto.Asset getAssets();
+    /**
+     * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddAssetsProposal}
+   */
+  public static final class AddAssetsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddAssetsProposal)
+      AddAssetsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddAssetsProposal.newBuilder() to construct.
+    private AddAssetsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddAssetsProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddAssetsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.class, com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.AssetProto.Asset assets_;
+    /**
+     * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     * @return Whether the assets field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssets() {
+      return assets_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     * @return The assets.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.Asset getAssets() {
+      return assets_ == null ? com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : assets_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder() {
+      return assets_ == null ? com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : assets_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (assets_ != null) {
+        output.writeMessage(3, getAssets());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (assets_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAssets());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddAssetsProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddAssetsProposal other = (com.comdex.asset.v1beta1.GovProto.AddAssetsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasAssets() != other.hasAssets()) return false;
+      if (hasAssets()) {
+        if (!getAssets()
+            .equals(other.getAssets())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasAssets()) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssets().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddAssetsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddAssetsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddAssetsProposal)
+        com.comdex.asset.v1beta1.GovProto.AddAssetsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.class, com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        assets_ = null;
+        if (assetsBuilder_ != null) {
+          assetsBuilder_.dispose();
+          assetsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAssetsProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAssetsProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddAssetsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAssetsProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddAssetsProposal result = new com.comdex.asset.v1beta1.GovProto.AddAssetsProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddAssetsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.assets_ = assetsBuilder_ == null
+              ? assets_
+              : assetsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddAssetsProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddAssetsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddAssetsProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddAssetsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasAssets()) {
+          mergeAssets(other.getAssets());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAssetsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.AssetProto.Asset assets_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> assetsBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       * @return Whether the assets field is set.
+       */
+      public boolean hasAssets() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       * @return The assets.
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset getAssets() {
+        if (assetsBuilder_ == null) {
+          return assets_ == null ? com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : assets_;
+        } else {
+          return assetsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          assets_ = value;
+        } else {
+          assetsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          assets_ = builderForValue.build();
+        } else {
+          assetsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAssets(com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            assets_ != null &&
+            assets_ != com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance()) {
+            getAssetsBuilder().mergeFrom(value);
+          } else {
+            assets_ = value;
+          }
+        } else {
+          assetsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAssets() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        assets_ = null;
+        if (assetsBuilder_ != null) {
+          assetsBuilder_.dispose();
+          assetsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder getAssetsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAssetsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilder();
+        } else {
+          return assets_ == null ?
+              com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : assets_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder>(
+                  getAssets(),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddAssetsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddAssetsProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddAssetsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddAssetsProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddAssetsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddAssetsProposal>() {
+      @java.lang.Override
+      public AddAssetsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddAssetsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddAssetsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddAssetsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddMultipleAssetsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddMultipleAssetsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> 
+        getAssetsList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AssetProto.Asset getAssets(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    int getAssetsCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddMultipleAssetsProposal}
+   */
+  public static final class AddMultipleAssetsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddMultipleAssetsProposal)
+      AddMultipleAssetsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddMultipleAssetsProposal.newBuilder() to construct.
+    private AddMultipleAssetsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddMultipleAssetsProposal() {
+      title_ = "";
+      description_ = "";
+      assets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddMultipleAssetsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.class, com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> assets_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.Asset getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(3, assets_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, assets_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal other = (com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddMultipleAssetsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddMultipleAssetsProposal)
+        com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.class, com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+        } else {
+          assets_ = null;
+          assetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal result = new com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal result) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.comdex.asset.v1beta1.AssetProto.Asset m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.AssetProto.Asset.parser(),
+                        extensionRegistry);
+                if (assetsBuilder_ == null) {
+                  ensureAssetsIsMutable();
+                  assets_.add(m);
+                } else {
+                  assetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          assets_ = new java.util.ArrayList<com.comdex.asset.v1beta1.AssetProto.Asset>(assets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> assetsBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          int index, com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.AssetProto.Asset> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Asset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.AssetProto.Asset.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddMultipleAssetsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddMultipleAssetsProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddMultipleAssetsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddMultipleAssetsProposal>() {
+      @java.lang.Override
+      public AddMultipleAssetsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddMultipleAssetsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddMultipleAssetsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddMultiplePairsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddMultiplePairsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> 
+        getPairsList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.Pair getPairs(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    int getPairsCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+        getPairsOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddMultiplePairsProposal}
+   */
+  public static final class AddMultiplePairsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddMultiplePairsProposal)
+      AddMultiplePairsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddMultiplePairsProposal.newBuilder() to construct.
+    private AddMultiplePairsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddMultiplePairsProposal() {
+      title_ = "";
+      description_ = "";
+      pairs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddMultiplePairsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.class, com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> pairs_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> getPairsList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+        getPairsOrBuilderList() {
+      return pairs_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPairsCount() {
+      return pairs_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.Pair getPairs(int index) {
+      return pairs_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder(
+        int index) {
+      return pairs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < pairs_.size(); i++) {
+        output.writeMessage(3, pairs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (int i = 0; i < pairs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, pairs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal other = (com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getPairsList()
+          .equals(other.getPairsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getPairsCount() > 0) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddMultiplePairsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddMultiplePairsProposal)
+        com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.class, com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+        } else {
+          pairs_ = null;
+          pairsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal result = new com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal result) {
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            pairs_ = java.util.Collections.unmodifiableList(pairs_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.pairs_ = pairs_;
+        } else {
+          result.pairs_ = pairsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (pairsBuilder_ == null) {
+          if (!other.pairs_.isEmpty()) {
+            if (pairs_.isEmpty()) {
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePairsIsMutable();
+              pairs_.addAll(other.pairs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pairs_.isEmpty()) {
+            if (pairsBuilder_.isEmpty()) {
+              pairsBuilder_.dispose();
+              pairsBuilder_ = null;
+              pairs_ = other.pairs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              pairsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPairsFieldBuilder() : null;
+            } else {
+              pairsBuilder_.addAllMessages(other.pairs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.comdex.asset.v1beta1.PairProto.Pair m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.PairProto.Pair.parser(),
+                        extensionRegistry);
+                if (pairsBuilder_ == null) {
+                  ensurePairsIsMutable();
+                  pairs_.add(m);
+                } else {
+                  pairsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> pairs_ =
+        java.util.Collections.emptyList();
+      private void ensurePairsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          pairs_ = new java.util.ArrayList<com.comdex.asset.v1beta1.PairProto.Pair>(pairs_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> pairsBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.PairProto.Pair> getPairsList() {
+        if (pairsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pairs_);
+        } else {
+          return pairsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPairsCount() {
+        if (pairsBuilder_ == null) {
+          return pairs_.size();
+        } else {
+          return pairsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair getPairs(int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);
+        } else {
+          return pairsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.set(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePairsIsMutable();
+          pairs_.add(index, value);
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPairs(
+          int index, com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pairsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPairs(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.PairProto.Pair> values) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pairs_);
+          onChanged();
+        } else {
+          pairsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPairs() {
+        if (pairsBuilder_ == null) {
+          pairs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          pairsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePairs(int index) {
+        if (pairsBuilder_ == null) {
+          ensurePairsIsMutable();
+          pairs_.remove(index);
+          onChanged();
+        } else {
+          pairsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder getPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder(
+          int index) {
+        if (pairsBuilder_ == null) {
+          return pairs_.get(index);  } else {
+          return pairsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+           getPairsOrBuilderList() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pairs_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder addPairsBuilder() {
+        return getPairsFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder addPairsBuilder(
+          int index) {
+        return getPairsFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.PairProto.Pair.Builder> 
+           getPairsBuilderList() {
+        return getPairsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder>(
+                  pairs_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddMultiplePairsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddMultiplePairsProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddMultiplePairsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddMultiplePairsProposal>() {
+      @java.lang.Override
+      public AddMultiplePairsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddMultiplePairsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddMultiplePairsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddMultiplePairsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAssetProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.UpdateAssetProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    boolean hasAsset();
+    /**
+     * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    com.comdex.asset.v1beta1.AssetProto.Asset getAsset();
+    /**
+     * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.UpdateAssetProposal}
+   */
+  public static final class UpdateAssetProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.UpdateAssetProposal)
+      UpdateAssetProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAssetProposal.newBuilder() to construct.
+    private UpdateAssetProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAssetProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAssetProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateAssetProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateAssetProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.class, com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSET_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.AssetProto.Asset asset_;
+    /**
+     * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return Whether the asset field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsset() {
+      return asset_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     * @return The asset.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.Asset getAsset() {
+      return asset_ == null ? com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : asset_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetOrBuilder() {
+      return asset_ == null ? com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : asset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (asset_ != null) {
+        output.writeMessage(3, getAsset());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (asset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAsset());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal other = (com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasAsset() != other.hasAsset()) return false;
+      if (hasAsset()) {
+        if (!getAsset()
+            .equals(other.getAsset())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasAsset()) {
+        hash = (37 * hash) + ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAsset().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.UpdateAssetProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.UpdateAssetProposal)
+        com.comdex.asset.v1beta1.GovProto.UpdateAssetProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateAssetProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateAssetProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.class, com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateAssetProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal build() {
+        com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal result = new com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.asset_ = assetBuilder_ == null
+              ? asset_
+              : assetBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasAsset()) {
+          mergeAsset(other.getAsset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.AssetProto.Asset asset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> assetBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return Whether the asset field is set.
+       */
+      public boolean hasAsset() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       * @return The asset.
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset getAsset() {
+        if (assetBuilder_ == null) {
+          return asset_ == null ? com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : asset_;
+        } else {
+          return assetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asset_ = value;
+        } else {
+          assetBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAsset(
+          com.comdex.asset.v1beta1.AssetProto.Asset.Builder builderForValue) {
+        if (assetBuilder_ == null) {
+          asset_ = builderForValue.build();
+        } else {
+          assetBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAsset(com.comdex.asset.v1beta1.AssetProto.Asset value) {
+        if (assetBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            asset_ != null &&
+            asset_ != com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance()) {
+            getAssetBuilder().mergeFrom(value);
+          } else {
+            asset_ = value;
+          }
+        } else {
+          assetBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAsset() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        asset_ = null;
+        if (assetBuilder_ != null) {
+          assetBuilder_.dispose();
+          assetBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.Asset.Builder getAssetBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAssetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder getAssetOrBuilder() {
+        if (assetBuilder_ != null) {
+          return assetBuilder_.getMessageOrBuilder();
+        } else {
+          return asset_ == null ?
+              com.comdex.asset.v1beta1.AssetProto.Asset.getDefaultInstance() : asset_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Asset asset = 3 [json_name = "asset", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder> 
+          getAssetFieldBuilder() {
+        if (assetBuilder_ == null) {
+          assetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.AssetProto.Asset, com.comdex.asset.v1beta1.AssetProto.Asset.Builder, com.comdex.asset.v1beta1.AssetProto.AssetOrBuilder>(
+                  getAsset(),
+                  getParentForChildren(),
+                  isClean());
+          asset_ = null;
+        }
+        return assetBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.UpdateAssetProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.UpdateAssetProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAssetProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAssetProposal>() {
+      @java.lang.Override
+      public UpdateAssetProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAssetProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAssetProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.UpdateAssetProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddPairsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddPairsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pairs field is set.
+     */
+    boolean hasPairs();
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return The pairs.
+     */
+    com.comdex.asset.v1beta1.PairProto.Pair getPairs();
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddPairsProposal}
+   */
+  public static final class AddPairsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddPairsProposal)
+      AddPairsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddPairsProposal.newBuilder() to construct.
+    private AddPairsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddPairsProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddPairsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddPairsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddPairsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddPairsProposal.class, com.comdex.asset.v1beta1.GovProto.AddPairsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.PairProto.Pair pairs_;
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pairs field is set.
+     */
+    @java.lang.Override
+    public boolean hasPairs() {
+      return pairs_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return The pairs.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.Pair getPairs() {
+      return pairs_ == null ? com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder() {
+      return pairs_ == null ? com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (pairs_ != null) {
+        output.writeMessage(3, getPairs());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (pairs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPairs());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddPairsProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddPairsProposal other = (com.comdex.asset.v1beta1.GovProto.AddPairsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasPairs() != other.hasPairs()) return false;
+      if (hasPairs()) {
+        if (!getPairs()
+            .equals(other.getPairs())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasPairs()) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairs().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddPairsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddPairsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddPairsProposal)
+        com.comdex.asset.v1beta1.GovProto.AddPairsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddPairsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddPairsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddPairsProposal.class, com.comdex.asset.v1beta1.GovProto.AddPairsProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddPairsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        pairs_ = null;
+        if (pairsBuilder_ != null) {
+          pairsBuilder_.dispose();
+          pairsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddPairsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddPairsProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddPairsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddPairsProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddPairsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddPairsProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddPairsProposal result = new com.comdex.asset.v1beta1.GovProto.AddPairsProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddPairsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pairs_ = pairsBuilder_ == null
+              ? pairs_
+              : pairsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddPairsProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddPairsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddPairsProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddPairsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPairs()) {
+          mergePairs(other.getPairs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPairsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.PairProto.Pair pairs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> pairsBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       * @return Whether the pairs field is set.
+       */
+      public boolean hasPairs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       * @return The pairs.
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair getPairs() {
+        if (pairsBuilder_ == null) {
+          return pairs_ == null ? com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+        } else {
+          return pairsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pairs_ = value;
+        } else {
+          pairsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          pairs_ = builderForValue.build();
+        } else {
+          pairsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePairs(com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pairs_ != null &&
+            pairs_ != com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance()) {
+            getPairsBuilder().mergeFrom(value);
+          } else {
+            pairs_ = value;
+          }
+        } else {
+          pairsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPairs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pairs_ = null;
+        if (pairsBuilder_ != null) {
+          pairsBuilder_.dispose();
+          pairsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder getPairsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPairsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilder();
+        } else {
+          return pairs_ == null ?
+              com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder>(
+                  getPairs(),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddPairsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddPairsProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddPairsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddPairsProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddPairsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddPairsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddPairsProposal>() {
+      @java.lang.Override
+      public AddPairsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddPairsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddPairsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddPairsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdatePairProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.UpdatePairProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pairs field is set.
+     */
+    boolean hasPairs();
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return The pairs.
+     */
+    com.comdex.asset.v1beta1.PairProto.Pair getPairs();
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.UpdatePairProposal}
+   */
+  public static final class UpdatePairProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.UpdatePairProposal)
+      UpdatePairProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdatePairProposal.newBuilder() to construct.
+    private UpdatePairProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdatePairProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdatePairProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdatePairProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdatePairProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.class, com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAIRS_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.PairProto.Pair pairs_;
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return Whether the pairs field is set.
+     */
+    @java.lang.Override
+    public boolean hasPairs() {
+      return pairs_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     * @return The pairs.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.Pair getPairs() {
+      return pairs_ == null ? com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder() {
+      return pairs_ == null ? com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (pairs_ != null) {
+        output.writeMessage(3, getPairs());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (pairs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPairs());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.UpdatePairProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.UpdatePairProposal other = (com.comdex.asset.v1beta1.GovProto.UpdatePairProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasPairs() != other.hasPairs()) return false;
+      if (hasPairs()) {
+        if (!getPairs()
+            .equals(other.getPairs())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasPairs()) {
+        hash = (37 * hash) + PAIRS_FIELD_NUMBER;
+        hash = (53 * hash) + getPairs().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.UpdatePairProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.UpdatePairProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.UpdatePairProposal)
+        com.comdex.asset.v1beta1.GovProto.UpdatePairProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdatePairProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdatePairProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.class, com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        pairs_ = null;
+        if (pairsBuilder_ != null) {
+          pairsBuilder_.dispose();
+          pairsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdatePairProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdatePairProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdatePairProposal build() {
+        com.comdex.asset.v1beta1.GovProto.UpdatePairProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdatePairProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.UpdatePairProposal result = new com.comdex.asset.v1beta1.GovProto.UpdatePairProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.UpdatePairProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pairs_ = pairsBuilder_ == null
+              ? pairs_
+              : pairsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.UpdatePairProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.UpdatePairProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.UpdatePairProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.UpdatePairProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPairs()) {
+          mergePairs(other.getPairs());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPairsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.PairProto.Pair pairs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> pairsBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       * @return Whether the pairs field is set.
+       */
+      public boolean hasPairs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       * @return The pairs.
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair getPairs() {
+        if (pairsBuilder_ == null) {
+          return pairs_ == null ? com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+        } else {
+          return pairsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pairs_ = value;
+        } else {
+          pairsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPairs(
+          com.comdex.asset.v1beta1.PairProto.Pair.Builder builderForValue) {
+        if (pairsBuilder_ == null) {
+          pairs_ = builderForValue.build();
+        } else {
+          pairsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePairs(com.comdex.asset.v1beta1.PairProto.Pair value) {
+        if (pairsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pairs_ != null &&
+            pairs_ != com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance()) {
+            getPairsBuilder().mergeFrom(value);
+          } else {
+            pairs_ = value;
+          }
+        } else {
+          pairsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPairs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pairs_ = null;
+        if (pairsBuilder_ != null) {
+          pairsBuilder_.dispose();
+          pairsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.Pair.Builder getPairsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPairsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.PairOrBuilder getPairsOrBuilder() {
+        if (pairsBuilder_ != null) {
+          return pairsBuilder_.getMessageOrBuilder();
+        } else {
+          return pairs_ == null ?
+              com.comdex.asset.v1beta1.PairProto.Pair.getDefaultInstance() : pairs_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.Pair pairs = 3 [json_name = "pairs", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder> 
+          getPairsFieldBuilder() {
+        if (pairsBuilder_ == null) {
+          pairsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.PairProto.Pair, com.comdex.asset.v1beta1.PairProto.Pair.Builder, com.comdex.asset.v1beta1.PairProto.PairOrBuilder>(
+                  getPairs(),
+                  getParentForChildren(),
+                  isClean());
+          pairs_ = null;
+        }
+        return pairsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.UpdatePairProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.UpdatePairProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.UpdatePairProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.UpdatePairProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdatePairProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdatePairProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdatePairProposal>() {
+      @java.lang.Override
+      public UpdatePairProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdatePairProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdatePairProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.UpdatePairProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddAppProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddAppProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return Whether the app field is set.
+     */
+    boolean hasApp();
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return The app.
+     */
+    com.comdex.asset.v1beta1.AppProto.AppData getApp();
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddAppProposal}
+   */
+  public static final class AddAppProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddAppProposal)
+      AddAppProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddAppProposal.newBuilder() to construct.
+    private AddAppProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddAppProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddAppProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAppProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAppProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddAppProposal.class, com.comdex.asset.v1beta1.GovProto.AddAppProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.AppProto.AppData app_;
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return Whether the app field is set.
+     */
+    @java.lang.Override
+    public boolean hasApp() {
+      return app_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return The app.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppData getApp() {
+      return app_ == null ? com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppOrBuilder() {
+      return app_ == null ? com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (app_ != null) {
+        output.writeMessage(3, getApp());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (app_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getApp());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddAppProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddAppProposal other = (com.comdex.asset.v1beta1.GovProto.AddAppProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasApp() != other.hasApp()) return false;
+      if (hasApp()) {
+        if (!getApp()
+            .equals(other.getApp())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasApp()) {
+        hash = (37 * hash) + APP_FIELD_NUMBER;
+        hash = (53 * hash) + getApp().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddAppProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddAppProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddAppProposal)
+        com.comdex.asset.v1beta1.GovProto.AddAppProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAppProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAppProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddAppProposal.class, com.comdex.asset.v1beta1.GovProto.AddAppProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddAppProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        app_ = null;
+        if (appBuilder_ != null) {
+          appBuilder_.dispose();
+          appBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAppProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAppProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddAppProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAppProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddAppProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAppProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddAppProposal result = new com.comdex.asset.v1beta1.GovProto.AddAppProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddAppProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.app_ = appBuilder_ == null
+              ? app_
+              : appBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddAppProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddAppProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddAppProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddAppProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasApp()) {
+          mergeApp(other.getApp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAppFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.AppProto.AppData app_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> appBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       * @return Whether the app field is set.
+       */
+      public boolean hasApp() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       * @return The app.
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData getApp() {
+        if (appBuilder_ == null) {
+          return app_ == null ? com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+        } else {
+          return appBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setApp(com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          app_ = value;
+        } else {
+          appBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setApp(
+          com.comdex.asset.v1beta1.AppProto.AppData.Builder builderForValue) {
+        if (appBuilder_ == null) {
+          app_ = builderForValue.build();
+        } else {
+          appBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeApp(com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            app_ != null &&
+            app_ != com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance()) {
+            getAppBuilder().mergeFrom(value);
+          } else {
+            app_ = value;
+          }
+        } else {
+          appBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearApp() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        app_ = null;
+        if (appBuilder_ != null) {
+          appBuilder_.dispose();
+          appBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData.Builder getAppBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAppFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppOrBuilder() {
+        if (appBuilder_ != null) {
+          return appBuilder_.getMessageOrBuilder();
+        } else {
+          return app_ == null ?
+              com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> 
+          getAppFieldBuilder() {
+        if (appBuilder_ == null) {
+          appBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder>(
+                  getApp(),
+                  getParentForChildren(),
+                  isClean());
+          app_ = null;
+        }
+        return appBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddAppProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddAppProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddAppProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddAppProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAppProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddAppProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddAppProposal>() {
+      @java.lang.Override
+      public AddAppProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddAppProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddAppProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddAppProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateGovTimeInAppProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.UpdateGovTimeInAppProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+     * @return Whether the govTime field is set.
+     */
+    boolean hasGovTime();
+    /**
+     * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+     * @return The govTime.
+     */
+    com.comdex.asset.v1beta1.AppProto.AppAndGovTime getGovTime();
+    /**
+     * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder getGovTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.UpdateGovTimeInAppProposal}
+   */
+  public static final class UpdateGovTimeInAppProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.UpdateGovTimeInAppProposal)
+      UpdateGovTimeInAppProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateGovTimeInAppProposal.newBuilder() to construct.
+    private UpdateGovTimeInAppProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateGovTimeInAppProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateGovTimeInAppProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.class, com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GOVTIME_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.AppProto.AppAndGovTime govTime_;
+    /**
+     * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+     * @return Whether the govTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasGovTime() {
+      return govTime_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+     * @return The govTime.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppAndGovTime getGovTime() {
+      return govTime_ == null ? com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance() : govTime_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder getGovTimeOrBuilder() {
+      return govTime_ == null ? com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance() : govTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (govTime_ != null) {
+        output.writeMessage(3, getGovTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (govTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getGovTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal other = (com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasGovTime() != other.hasGovTime()) return false;
+      if (hasGovTime()) {
+        if (!getGovTime()
+            .equals(other.getGovTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasGovTime()) {
+        hash = (37 * hash) + GOVTIME_FIELD_NUMBER;
+        hash = (53 * hash) + getGovTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.UpdateGovTimeInAppProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.UpdateGovTimeInAppProposal)
+        com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.class, com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        govTime_ = null;
+        if (govTimeBuilder_ != null) {
+          govTimeBuilder_.dispose();
+          govTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal build() {
+        com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal result = new com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.govTime_ = govTimeBuilder_ == null
+              ? govTime_
+              : govTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasGovTime()) {
+          mergeGovTime(other.getGovTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getGovTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.AppProto.AppAndGovTime govTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppAndGovTime, com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder, com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder> govTimeBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       * @return Whether the govTime field is set.
+       */
+      public boolean hasGovTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       * @return The govTime.
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppAndGovTime getGovTime() {
+        if (govTimeBuilder_ == null) {
+          return govTime_ == null ? com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance() : govTime_;
+        } else {
+          return govTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGovTime(com.comdex.asset.v1beta1.AppProto.AppAndGovTime value) {
+        if (govTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          govTime_ = value;
+        } else {
+          govTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGovTime(
+          com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder builderForValue) {
+        if (govTimeBuilder_ == null) {
+          govTime_ = builderForValue.build();
+        } else {
+          govTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeGovTime(com.comdex.asset.v1beta1.AppProto.AppAndGovTime value) {
+        if (govTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            govTime_ != null &&
+            govTime_ != com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance()) {
+            getGovTimeBuilder().mergeFrom(value);
+          } else {
+            govTime_ = value;
+          }
+        } else {
+          govTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGovTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        govTime_ = null;
+        if (govTimeBuilder_ != null) {
+          govTimeBuilder_.dispose();
+          govTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder getGovTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getGovTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder getGovTimeOrBuilder() {
+        if (govTimeBuilder_ != null) {
+          return govTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return govTime_ == null ?
+              com.comdex.asset.v1beta1.AppProto.AppAndGovTime.getDefaultInstance() : govTime_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppAndGovTime govTime = 3 [json_name = "govTime", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppAndGovTime, com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder, com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder> 
+          getGovTimeFieldBuilder() {
+        if (govTimeBuilder_ == null) {
+          govTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.AppProto.AppAndGovTime, com.comdex.asset.v1beta1.AppProto.AppAndGovTime.Builder, com.comdex.asset.v1beta1.AppProto.AppAndGovTimeOrBuilder>(
+                  getGovTime(),
+                  getParentForChildren(),
+                  isClean());
+          govTime_ = null;
+        }
+        return govTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.UpdateGovTimeInAppProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.UpdateGovTimeInAppProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateGovTimeInAppProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateGovTimeInAppProposal>() {
+      @java.lang.Override
+      public UpdateGovTimeInAppProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateGovTimeInAppProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateGovTimeInAppProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.UpdateGovTimeInAppProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddAssetInAppProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddAssetInAppProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return Whether the app field is set.
+     */
+    boolean hasApp();
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return The app.
+     */
+    com.comdex.asset.v1beta1.AppProto.AppData getApp();
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppOrBuilder();
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddAssetInAppProposal}
+   */
+  public static final class AddAssetInAppProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddAssetInAppProposal)
+      AddAssetInAppProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddAssetInAppProposal.newBuilder() to construct.
+    private AddAssetInAppProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddAssetInAppProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddAssetInAppProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.class, com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APP_FIELD_NUMBER = 3;
+    private com.comdex.asset.v1beta1.AppProto.AppData app_;
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return Whether the app field is set.
+     */
+    @java.lang.Override
+    public boolean hasApp() {
+      return app_ != null;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     * @return The app.
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppData getApp() {
+      return app_ == null ? com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+    }
+    /**
+     * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppOrBuilder() {
+      return app_ == null ? com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (app_ != null) {
+        output.writeMessage(3, getApp());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (app_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getApp());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal other = (com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasApp() != other.hasApp()) return false;
+      if (hasApp()) {
+        if (!getApp()
+            .equals(other.getApp())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasApp()) {
+        hash = (37 * hash) + APP_FIELD_NUMBER;
+        hash = (53 * hash) + getApp().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddAssetInAppProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddAssetInAppProposal)
+        com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.class, com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        app_ = null;
+        if (appBuilder_ != null) {
+          appBuilder_.dispose();
+          appBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal result = new com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.app_ = appBuilder_ == null
+              ? app_
+              : appBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasApp()) {
+          mergeApp(other.getApp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAppFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.comdex.asset.v1beta1.AppProto.AppData app_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> appBuilder_;
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       * @return Whether the app field is set.
+       */
+      public boolean hasApp() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       * @return The app.
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData getApp() {
+        if (appBuilder_ == null) {
+          return app_ == null ? com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+        } else {
+          return appBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setApp(com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          app_ = value;
+        } else {
+          appBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setApp(
+          com.comdex.asset.v1beta1.AppProto.AppData.Builder builderForValue) {
+        if (appBuilder_ == null) {
+          app_ = builderForValue.build();
+        } else {
+          appBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeApp(com.comdex.asset.v1beta1.AppProto.AppData value) {
+        if (appBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            app_ != null &&
+            app_ != com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance()) {
+            getAppBuilder().mergeFrom(value);
+          } else {
+            app_ = value;
+          }
+        } else {
+          appBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearApp() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        app_ = null;
+        if (appBuilder_ != null) {
+          appBuilder_.dispose();
+          appBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppData.Builder getAppBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getAppFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder getAppOrBuilder() {
+        if (appBuilder_ != null) {
+          return appBuilder_.getMessageOrBuilder();
+        } else {
+          return app_ == null ?
+              com.comdex.asset.v1beta1.AppProto.AppData.getDefaultInstance() : app_;
+        }
+      }
+      /**
+       * <code>.comdex.asset.v1beta1.AppData app = 3 [json_name = "app", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder> 
+          getAppFieldBuilder() {
+        if (appBuilder_ == null) {
+          appBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.comdex.asset.v1beta1.AppProto.AppData, com.comdex.asset.v1beta1.AppProto.AppData.Builder, com.comdex.asset.v1beta1.AppProto.AppDataOrBuilder>(
+                  getApp(),
+                  getParentForChildren(),
+                  isClean());
+          app_ = null;
+        }
+        return appBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddAssetInAppProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddAssetInAppProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddAssetInAppProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddAssetInAppProposal>() {
+      @java.lang.Override
+      public AddAssetInAppProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddAssetInAppProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddAssetInAppProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddAssetInAppProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddMultipleAssetsPairsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.asset.v1beta1.AddMultipleAssetsPairsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.comdex.asset.v1beta1.PairProto.AssetPair> 
+        getAssetsPairList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.AssetPair getAssetsPair(int index);
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    int getAssetsPairCount();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder> 
+        getAssetsPairOrBuilderList();
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder getAssetsPairOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code comdex.asset.v1beta1.AddMultipleAssetsPairsProposal}
+   */
+  public static final class AddMultipleAssetsPairsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.asset.v1beta1.AddMultipleAssetsPairsProposal)
+      AddMultipleAssetsPairsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddMultipleAssetsPairsProposal.newBuilder() to construct.
+    private AddMultipleAssetsPairsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddMultipleAssetsPairsProposal() {
+      title_ = "";
+      description_ = "";
+      assetsPair_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddMultipleAssetsPairsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.class, com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSETSPAIR_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.comdex.asset.v1beta1.PairProto.AssetPair> assetsPair_;
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.comdex.asset.v1beta1.PairProto.AssetPair> getAssetsPairList() {
+      return assetsPair_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder> 
+        getAssetsPairOrBuilderList() {
+      return assetsPair_;
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAssetsPairCount() {
+      return assetsPair_.size();
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.AssetPair getAssetsPair(int index) {
+      return assetsPair_.get(index);
+    }
+    /**
+     * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder getAssetsPairOrBuilder(
+        int index) {
+      return assetsPair_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < assetsPair_.size(); i++) {
+        output.writeMessage(3, assetsPair_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (int i = 0; i < assetsPair_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, assetsPair_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal)) {
+        return super.equals(obj);
+      }
+      com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal other = (com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getAssetsPairList()
+          .equals(other.getAssetsPairList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getAssetsPairCount() > 0) {
+        hash = (37 * hash) + ASSETSPAIR_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsPairList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.asset.v1beta1.AddMultipleAssetsPairsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.asset.v1beta1.AddMultipleAssetsPairsProposal)
+        com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.class, com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.Builder.class);
+      }
+
+      // Construct using com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        if (assetsPairBuilder_ == null) {
+          assetsPair_ = java.util.Collections.emptyList();
+        } else {
+          assetsPair_ = null;
+          assetsPairBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.asset.v1beta1.GovProto.internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal getDefaultInstanceForType() {
+        return com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal build() {
+        com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal buildPartial() {
+        com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal result = new com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal result) {
+        if (assetsPairBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            assetsPair_ = java.util.Collections.unmodifiableList(assetsPair_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.assetsPair_ = assetsPair_;
+        } else {
+          result.assetsPair_ = assetsPairBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal) {
+          return mergeFrom((com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal other) {
+        if (other == com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (assetsPairBuilder_ == null) {
+          if (!other.assetsPair_.isEmpty()) {
+            if (assetsPair_.isEmpty()) {
+              assetsPair_ = other.assetsPair_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAssetsPairIsMutable();
+              assetsPair_.addAll(other.assetsPair_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetsPair_.isEmpty()) {
+            if (assetsPairBuilder_.isEmpty()) {
+              assetsPairBuilder_.dispose();
+              assetsPairBuilder_ = null;
+              assetsPair_ = other.assetsPair_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              assetsPairBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsPairFieldBuilder() : null;
+            } else {
+              assetsPairBuilder_.addAllMessages(other.assetsPair_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.comdex.asset.v1beta1.PairProto.AssetPair m =
+                    input.readMessage(
+                        com.comdex.asset.v1beta1.PairProto.AssetPair.parser(),
+                        extensionRegistry);
+                if (assetsPairBuilder_ == null) {
+                  ensureAssetsPairIsMutable();
+                  assetsPair_.add(m);
+                } else {
+                  assetsPairBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title", (.gogoproto.moretags) = "yaml:&#92;"title&#92;""];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description", (.gogoproto.moretags) = "yaml:&#92;"description&#92;""];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.comdex.asset.v1beta1.PairProto.AssetPair> assetsPair_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsPairIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          assetsPair_ = new java.util.ArrayList<com.comdex.asset.v1beta1.PairProto.AssetPair>(assetsPair_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.AssetPair, com.comdex.asset.v1beta1.PairProto.AssetPair.Builder, com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder> assetsPairBuilder_;
+
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.PairProto.AssetPair> getAssetsPairList() {
+        if (assetsPairBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetsPair_);
+        } else {
+          return assetsPairBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAssetsPairCount() {
+        if (assetsPairBuilder_ == null) {
+          return assetsPair_.size();
+        } else {
+          return assetsPairBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.AssetPair getAssetsPair(int index) {
+        if (assetsPairBuilder_ == null) {
+          return assetsPair_.get(index);
+        } else {
+          return assetsPairBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssetsPair(
+          int index, com.comdex.asset.v1beta1.PairProto.AssetPair value) {
+        if (assetsPairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsPairIsMutable();
+          assetsPair_.set(index, value);
+          onChanged();
+        } else {
+          assetsPairBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssetsPair(
+          int index, com.comdex.asset.v1beta1.PairProto.AssetPair.Builder builderForValue) {
+        if (assetsPairBuilder_ == null) {
+          ensureAssetsPairIsMutable();
+          assetsPair_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsPairBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssetsPair(com.comdex.asset.v1beta1.PairProto.AssetPair value) {
+        if (assetsPairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsPairIsMutable();
+          assetsPair_.add(value);
+          onChanged();
+        } else {
+          assetsPairBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssetsPair(
+          int index, com.comdex.asset.v1beta1.PairProto.AssetPair value) {
+        if (assetsPairBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsPairIsMutable();
+          assetsPair_.add(index, value);
+          onChanged();
+        } else {
+          assetsPairBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssetsPair(
+          com.comdex.asset.v1beta1.PairProto.AssetPair.Builder builderForValue) {
+        if (assetsPairBuilder_ == null) {
+          ensureAssetsPairIsMutable();
+          assetsPair_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsPairBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssetsPair(
+          int index, com.comdex.asset.v1beta1.PairProto.AssetPair.Builder builderForValue) {
+        if (assetsPairBuilder_ == null) {
+          ensureAssetsPairIsMutable();
+          assetsPair_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsPairBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAssetsPair(
+          java.lang.Iterable<? extends com.comdex.asset.v1beta1.PairProto.AssetPair> values) {
+        if (assetsPairBuilder_ == null) {
+          ensureAssetsPairIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetsPair_);
+          onChanged();
+        } else {
+          assetsPairBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAssetsPair() {
+        if (assetsPairBuilder_ == null) {
+          assetsPair_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          assetsPairBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAssetsPair(int index) {
+        if (assetsPairBuilder_ == null) {
+          ensureAssetsPairIsMutable();
+          assetsPair_.remove(index);
+          onChanged();
+        } else {
+          assetsPairBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.AssetPair.Builder getAssetsPairBuilder(
+          int index) {
+        return getAssetsPairFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder getAssetsPairOrBuilder(
+          int index) {
+        if (assetsPairBuilder_ == null) {
+          return assetsPair_.get(index);  } else {
+          return assetsPairBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder> 
+           getAssetsPairOrBuilderList() {
+        if (assetsPairBuilder_ != null) {
+          return assetsPairBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetsPair_);
+        }
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.AssetPair.Builder addAssetsPairBuilder() {
+        return getAssetsPairFieldBuilder().addBuilder(
+            com.comdex.asset.v1beta1.PairProto.AssetPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public com.comdex.asset.v1beta1.PairProto.AssetPair.Builder addAssetsPairBuilder(
+          int index) {
+        return getAssetsPairFieldBuilder().addBuilder(
+            index, com.comdex.asset.v1beta1.PairProto.AssetPair.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .comdex.asset.v1beta1.AssetPair assetsPair = 3 [json_name = "assetsPair", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.comdex.asset.v1beta1.PairProto.AssetPair.Builder> 
+           getAssetsPairBuilderList() {
+        return getAssetsPairFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.comdex.asset.v1beta1.PairProto.AssetPair, com.comdex.asset.v1beta1.PairProto.AssetPair.Builder, com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder> 
+          getAssetsPairFieldBuilder() {
+        if (assetsPairBuilder_ == null) {
+          assetsPairBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.comdex.asset.v1beta1.PairProto.AssetPair, com.comdex.asset.v1beta1.PairProto.AssetPair.Builder, com.comdex.asset.v1beta1.PairProto.AssetPairOrBuilder>(
+                  assetsPair_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetsPair_ = null;
+        }
+        return assetsPairBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.asset.v1beta1.AddMultipleAssetsPairsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.asset.v1beta1.AddMultipleAssetsPairsProposal)
+    private static final com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal();
+    }
+
+    public static com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddMultipleAssetsPairsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<AddMultipleAssetsPairsProposal>() {
+      @java.lang.Override
+      public AddMultipleAssetsPairsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddMultipleAssetsPairsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddMultipleAssetsPairsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.asset.v1beta1.GovProto.AddMultipleAssetsPairsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddAssetsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddAssetsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddMultipleAssetsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddMultiplePairsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_UpdateAssetProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_UpdateAssetProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddPairsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddPairsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_UpdatePairProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_UpdatePairProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddAppProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddAppProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_UpdateGovTimeInAppProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddAssetInAppProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_asset_v1beta1_AddMultipleAssetsPairsProposal_fieldAccessorTable;
 
@@ -123,12 +9629,12 @@ public final class GovProto {
       "8\n\013description\030\002 \001(\tB\026\362\336\037\022yaml:\"descript" +
       "ion\"R\013description\022E\n\nassetsPair\030\003 \003(\0132\037." +
       "comdex.asset.v1beta1.AssetPairB\004\310\336\037\000R\nas" +
-      "setsPairB\317\001\n\030com.comdex.asset.v1beta1B\010G" +
-      "ovProtoP\001Z/github.com/comdex-official/co" +
-      "mdex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset." +
-      "V1beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\" +
-      "Asset\\V1beta1\\GPBMetadata\352\002\026Comdex::Asse" +
-      "t::V1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "setsPairB\315\001\n\030com.comdex.asset.v1beta1B\010G" +
+      "ovProtoZ/github.com/comdex-official/comd" +
+      "ex/x/asset/types\242\002\003CAX\252\002\024Comdex.Asset.V1" +
+      "beta1\312\002\024Comdex\\Asset\\V1beta1\342\002 Comdex\\As" +
+      "set\\V1beta1\\GPBMetadata\352\002\026Comdex::Asset:" +
+      ":V1beta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

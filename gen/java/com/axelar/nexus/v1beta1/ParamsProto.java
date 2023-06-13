@@ -14,9 +14,1081 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.nexus.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chainActivationThreshold field is set.
+     */
+    boolean hasChainActivationThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The chainActivationThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainActivationThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainActivationThresholdOrBuilder();
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chainMaintainerMissingVoteThreshold field is set.
+     */
+    boolean hasChainMaintainerMissingVoteThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The chainMaintainerMissingVoteThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainMaintainerMissingVoteThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainMaintainerMissingVoteThresholdOrBuilder();
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chainMaintainerIncorrectVoteThreshold field is set.
+     */
+    boolean hasChainMaintainerIncorrectVoteThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The chainMaintainerIncorrectVoteThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainMaintainerIncorrectVoteThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainMaintainerIncorrectVoteThresholdOrBuilder();
+
+    /**
+     * <code>int32 chain_maintainer_check_window = 4 [json_name = "chainMaintainerCheckWindow"];</code>
+     * @return The chainMaintainerCheckWindow.
+     */
+    int getChainMaintainerCheckWindow();
+  }
+  /**
+   * <pre>
+   * Params represent the genesis parameters for the module
+   * </pre>
+   *
+   * Protobuf type {@code axelar.nexus.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.nexus.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.nexus.v1beta1.ParamsProto.internal_static_axelar_nexus_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.nexus.v1beta1.ParamsProto.internal_static_axelar_nexus_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.nexus.v1beta1.ParamsProto.Params.class, com.axelar.nexus.v1beta1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int CHAIN_ACTIVATION_THRESHOLD_FIELD_NUMBER = 1;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold chainActivationThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chainActivationThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasChainActivationThreshold() {
+      return chainActivationThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The chainActivationThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainActivationThreshold() {
+      return chainActivationThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainActivationThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainActivationThresholdOrBuilder() {
+      return chainActivationThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainActivationThreshold_;
+    }
+
+    public static final int CHAIN_MAINTAINER_MISSING_VOTE_THRESHOLD_FIELD_NUMBER = 2;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold chainMaintainerMissingVoteThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chainMaintainerMissingVoteThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasChainMaintainerMissingVoteThreshold() {
+      return chainMaintainerMissingVoteThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The chainMaintainerMissingVoteThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainMaintainerMissingVoteThreshold() {
+      return chainMaintainerMissingVoteThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerMissingVoteThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainMaintainerMissingVoteThresholdOrBuilder() {
+      return chainMaintainerMissingVoteThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerMissingVoteThreshold_;
+    }
+
+    public static final int CHAIN_MAINTAINER_INCORRECT_VOTE_THRESHOLD_FIELD_NUMBER = 3;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold chainMaintainerIncorrectVoteThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chainMaintainerIncorrectVoteThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasChainMaintainerIncorrectVoteThreshold() {
+      return chainMaintainerIncorrectVoteThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The chainMaintainerIncorrectVoteThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainMaintainerIncorrectVoteThreshold() {
+      return chainMaintainerIncorrectVoteThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerIncorrectVoteThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainMaintainerIncorrectVoteThresholdOrBuilder() {
+      return chainMaintainerIncorrectVoteThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerIncorrectVoteThreshold_;
+    }
+
+    public static final int CHAIN_MAINTAINER_CHECK_WINDOW_FIELD_NUMBER = 4;
+    private int chainMaintainerCheckWindow_ = 0;
+    /**
+     * <code>int32 chain_maintainer_check_window = 4 [json_name = "chainMaintainerCheckWindow"];</code>
+     * @return The chainMaintainerCheckWindow.
+     */
+    @java.lang.Override
+    public int getChainMaintainerCheckWindow() {
+      return chainMaintainerCheckWindow_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (chainActivationThreshold_ != null) {
+        output.writeMessage(1, getChainActivationThreshold());
+      }
+      if (chainMaintainerMissingVoteThreshold_ != null) {
+        output.writeMessage(2, getChainMaintainerMissingVoteThreshold());
+      }
+      if (chainMaintainerIncorrectVoteThreshold_ != null) {
+        output.writeMessage(3, getChainMaintainerIncorrectVoteThreshold());
+      }
+      if (chainMaintainerCheckWindow_ != 0) {
+        output.writeInt32(4, chainMaintainerCheckWindow_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (chainActivationThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getChainActivationThreshold());
+      }
+      if (chainMaintainerMissingVoteThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getChainMaintainerMissingVoteThreshold());
+      }
+      if (chainMaintainerIncorrectVoteThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getChainMaintainerIncorrectVoteThreshold());
+      }
+      if (chainMaintainerCheckWindow_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, chainMaintainerCheckWindow_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.nexus.v1beta1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.axelar.nexus.v1beta1.ParamsProto.Params other = (com.axelar.nexus.v1beta1.ParamsProto.Params) obj;
+
+      if (hasChainActivationThreshold() != other.hasChainActivationThreshold()) return false;
+      if (hasChainActivationThreshold()) {
+        if (!getChainActivationThreshold()
+            .equals(other.getChainActivationThreshold())) return false;
+      }
+      if (hasChainMaintainerMissingVoteThreshold() != other.hasChainMaintainerMissingVoteThreshold()) return false;
+      if (hasChainMaintainerMissingVoteThreshold()) {
+        if (!getChainMaintainerMissingVoteThreshold()
+            .equals(other.getChainMaintainerMissingVoteThreshold())) return false;
+      }
+      if (hasChainMaintainerIncorrectVoteThreshold() != other.hasChainMaintainerIncorrectVoteThreshold()) return false;
+      if (hasChainMaintainerIncorrectVoteThreshold()) {
+        if (!getChainMaintainerIncorrectVoteThreshold()
+            .equals(other.getChainMaintainerIncorrectVoteThreshold())) return false;
+      }
+      if (getChainMaintainerCheckWindow()
+          != other.getChainMaintainerCheckWindow()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasChainActivationThreshold()) {
+        hash = (37 * hash) + CHAIN_ACTIVATION_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getChainActivationThreshold().hashCode();
+      }
+      if (hasChainMaintainerMissingVoteThreshold()) {
+        hash = (37 * hash) + CHAIN_MAINTAINER_MISSING_VOTE_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getChainMaintainerMissingVoteThreshold().hashCode();
+      }
+      if (hasChainMaintainerIncorrectVoteThreshold()) {
+        hash = (37 * hash) + CHAIN_MAINTAINER_INCORRECT_VOTE_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getChainMaintainerIncorrectVoteThreshold().hashCode();
+      }
+      hash = (37 * hash) + CHAIN_MAINTAINER_CHECK_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + getChainMaintainerCheckWindow();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.nexus.v1beta1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params represent the genesis parameters for the module
+     * </pre>
+     *
+     * Protobuf type {@code axelar.nexus.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.nexus.v1beta1.Params)
+        com.axelar.nexus.v1beta1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.nexus.v1beta1.ParamsProto.internal_static_axelar_nexus_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.nexus.v1beta1.ParamsProto.internal_static_axelar_nexus_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.nexus.v1beta1.ParamsProto.Params.class, com.axelar.nexus.v1beta1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.axelar.nexus.v1beta1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chainActivationThreshold_ = null;
+        if (chainActivationThresholdBuilder_ != null) {
+          chainActivationThresholdBuilder_.dispose();
+          chainActivationThresholdBuilder_ = null;
+        }
+        chainMaintainerMissingVoteThreshold_ = null;
+        if (chainMaintainerMissingVoteThresholdBuilder_ != null) {
+          chainMaintainerMissingVoteThresholdBuilder_.dispose();
+          chainMaintainerMissingVoteThresholdBuilder_ = null;
+        }
+        chainMaintainerIncorrectVoteThreshold_ = null;
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ != null) {
+          chainMaintainerIncorrectVoteThresholdBuilder_.dispose();
+          chainMaintainerIncorrectVoteThresholdBuilder_ = null;
+        }
+        chainMaintainerCheckWindow_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.nexus.v1beta1.ParamsProto.internal_static_axelar_nexus_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.axelar.nexus.v1beta1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.ParamsProto.Params build() {
+        com.axelar.nexus.v1beta1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.nexus.v1beta1.ParamsProto.Params buildPartial() {
+        com.axelar.nexus.v1beta1.ParamsProto.Params result = new com.axelar.nexus.v1beta1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.nexus.v1beta1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chainActivationThreshold_ = chainActivationThresholdBuilder_ == null
+              ? chainActivationThreshold_
+              : chainActivationThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chainMaintainerMissingVoteThreshold_ = chainMaintainerMissingVoteThresholdBuilder_ == null
+              ? chainMaintainerMissingVoteThreshold_
+              : chainMaintainerMissingVoteThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chainMaintainerIncorrectVoteThreshold_ = chainMaintainerIncorrectVoteThresholdBuilder_ == null
+              ? chainMaintainerIncorrectVoteThreshold_
+              : chainMaintainerIncorrectVoteThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.chainMaintainerCheckWindow_ = chainMaintainerCheckWindow_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.nexus.v1beta1.ParamsProto.Params) {
+          return mergeFrom((com.axelar.nexus.v1beta1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.nexus.v1beta1.ParamsProto.Params other) {
+        if (other == com.axelar.nexus.v1beta1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.hasChainActivationThreshold()) {
+          mergeChainActivationThreshold(other.getChainActivationThreshold());
+        }
+        if (other.hasChainMaintainerMissingVoteThreshold()) {
+          mergeChainMaintainerMissingVoteThreshold(other.getChainMaintainerMissingVoteThreshold());
+        }
+        if (other.hasChainMaintainerIncorrectVoteThreshold()) {
+          mergeChainMaintainerIncorrectVoteThreshold(other.getChainMaintainerIncorrectVoteThreshold());
+        }
+        if (other.getChainMaintainerCheckWindow() != 0) {
+          setChainMaintainerCheckWindow(other.getChainMaintainerCheckWindow());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getChainActivationThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getChainMaintainerMissingVoteThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getChainMaintainerIncorrectVoteThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                chainMaintainerCheckWindow_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold chainActivationThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> chainActivationThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the chainActivationThreshold field is set.
+       */
+      public boolean hasChainActivationThreshold() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The chainActivationThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainActivationThreshold() {
+        if (chainActivationThresholdBuilder_ == null) {
+          return chainActivationThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainActivationThreshold_;
+        } else {
+          return chainActivationThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChainActivationThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (chainActivationThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chainActivationThreshold_ = value;
+        } else {
+          chainActivationThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChainActivationThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (chainActivationThresholdBuilder_ == null) {
+          chainActivationThreshold_ = builderForValue.build();
+        } else {
+          chainActivationThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeChainActivationThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (chainActivationThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            chainActivationThreshold_ != null &&
+            chainActivationThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getChainActivationThresholdBuilder().mergeFrom(value);
+          } else {
+            chainActivationThreshold_ = value;
+          }
+        } else {
+          chainActivationThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearChainActivationThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chainActivationThreshold_ = null;
+        if (chainActivationThresholdBuilder_ != null) {
+          chainActivationThresholdBuilder_.dispose();
+          chainActivationThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getChainActivationThresholdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getChainActivationThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainActivationThresholdOrBuilder() {
+        if (chainActivationThresholdBuilder_ != null) {
+          return chainActivationThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return chainActivationThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainActivationThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_activation_threshold = 1 [json_name = "chainActivationThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getChainActivationThresholdFieldBuilder() {
+        if (chainActivationThresholdBuilder_ == null) {
+          chainActivationThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getChainActivationThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          chainActivationThreshold_ = null;
+        }
+        return chainActivationThresholdBuilder_;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold chainMaintainerMissingVoteThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> chainMaintainerMissingVoteThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the chainMaintainerMissingVoteThreshold field is set.
+       */
+      public boolean hasChainMaintainerMissingVoteThreshold() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The chainMaintainerMissingVoteThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainMaintainerMissingVoteThreshold() {
+        if (chainMaintainerMissingVoteThresholdBuilder_ == null) {
+          return chainMaintainerMissingVoteThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerMissingVoteThreshold_;
+        } else {
+          return chainMaintainerMissingVoteThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChainMaintainerMissingVoteThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (chainMaintainerMissingVoteThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chainMaintainerMissingVoteThreshold_ = value;
+        } else {
+          chainMaintainerMissingVoteThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChainMaintainerMissingVoteThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (chainMaintainerMissingVoteThresholdBuilder_ == null) {
+          chainMaintainerMissingVoteThreshold_ = builderForValue.build();
+        } else {
+          chainMaintainerMissingVoteThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeChainMaintainerMissingVoteThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (chainMaintainerMissingVoteThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            chainMaintainerMissingVoteThreshold_ != null &&
+            chainMaintainerMissingVoteThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getChainMaintainerMissingVoteThresholdBuilder().mergeFrom(value);
+          } else {
+            chainMaintainerMissingVoteThreshold_ = value;
+          }
+        } else {
+          chainMaintainerMissingVoteThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearChainMaintainerMissingVoteThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        chainMaintainerMissingVoteThreshold_ = null;
+        if (chainMaintainerMissingVoteThresholdBuilder_ != null) {
+          chainMaintainerMissingVoteThresholdBuilder_.dispose();
+          chainMaintainerMissingVoteThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getChainMaintainerMissingVoteThresholdBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getChainMaintainerMissingVoteThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainMaintainerMissingVoteThresholdOrBuilder() {
+        if (chainMaintainerMissingVoteThresholdBuilder_ != null) {
+          return chainMaintainerMissingVoteThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return chainMaintainerMissingVoteThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerMissingVoteThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_missing_vote_threshold = 2 [json_name = "chainMaintainerMissingVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getChainMaintainerMissingVoteThresholdFieldBuilder() {
+        if (chainMaintainerMissingVoteThresholdBuilder_ == null) {
+          chainMaintainerMissingVoteThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getChainMaintainerMissingVoteThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          chainMaintainerMissingVoteThreshold_ = null;
+        }
+        return chainMaintainerMissingVoteThresholdBuilder_;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold chainMaintainerIncorrectVoteThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> chainMaintainerIncorrectVoteThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the chainMaintainerIncorrectVoteThreshold field is set.
+       */
+      public boolean hasChainMaintainerIncorrectVoteThreshold() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The chainMaintainerIncorrectVoteThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getChainMaintainerIncorrectVoteThreshold() {
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ == null) {
+          return chainMaintainerIncorrectVoteThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerIncorrectVoteThreshold_;
+        } else {
+          return chainMaintainerIncorrectVoteThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChainMaintainerIncorrectVoteThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chainMaintainerIncorrectVoteThreshold_ = value;
+        } else {
+          chainMaintainerIncorrectVoteThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChainMaintainerIncorrectVoteThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ == null) {
+          chainMaintainerIncorrectVoteThreshold_ = builderForValue.build();
+        } else {
+          chainMaintainerIncorrectVoteThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeChainMaintainerIncorrectVoteThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            chainMaintainerIncorrectVoteThreshold_ != null &&
+            chainMaintainerIncorrectVoteThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getChainMaintainerIncorrectVoteThresholdBuilder().mergeFrom(value);
+          } else {
+            chainMaintainerIncorrectVoteThreshold_ = value;
+          }
+        } else {
+          chainMaintainerIncorrectVoteThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearChainMaintainerIncorrectVoteThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        chainMaintainerIncorrectVoteThreshold_ = null;
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ != null) {
+          chainMaintainerIncorrectVoteThresholdBuilder_.dispose();
+          chainMaintainerIncorrectVoteThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getChainMaintainerIncorrectVoteThresholdBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getChainMaintainerIncorrectVoteThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getChainMaintainerIncorrectVoteThresholdOrBuilder() {
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ != null) {
+          return chainMaintainerIncorrectVoteThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return chainMaintainerIncorrectVoteThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : chainMaintainerIncorrectVoteThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold chain_maintainer_incorrect_vote_threshold = 3 [json_name = "chainMaintainerIncorrectVoteThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getChainMaintainerIncorrectVoteThresholdFieldBuilder() {
+        if (chainMaintainerIncorrectVoteThresholdBuilder_ == null) {
+          chainMaintainerIncorrectVoteThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getChainMaintainerIncorrectVoteThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          chainMaintainerIncorrectVoteThreshold_ = null;
+        }
+        return chainMaintainerIncorrectVoteThresholdBuilder_;
+      }
+
+      private int chainMaintainerCheckWindow_ ;
+      /**
+       * <code>int32 chain_maintainer_check_window = 4 [json_name = "chainMaintainerCheckWindow"];</code>
+       * @return The chainMaintainerCheckWindow.
+       */
+      @java.lang.Override
+      public int getChainMaintainerCheckWindow() {
+        return chainMaintainerCheckWindow_;
+      }
+      /**
+       * <code>int32 chain_maintainer_check_window = 4 [json_name = "chainMaintainerCheckWindow"];</code>
+       * @param value The chainMaintainerCheckWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainMaintainerCheckWindow(int value) {
+
+        chainMaintainerCheckWindow_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 chain_maintainer_check_window = 4 [json_name = "chainMaintainerCheckWindow"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainMaintainerCheckWindow() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        chainMaintainerCheckWindow_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.nexus.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.nexus.v1beta1.Params)
+    private static final com.axelar.nexus.v1beta1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.nexus.v1beta1.ParamsProto.Params();
+    }
+
+    public static com.axelar.nexus.v1beta1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.nexus.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_nexus_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_nexus_v1beta1_Params_fieldAccessorTable;
 
@@ -41,13 +1113,13 @@ public final class ParamsProto {
       "\003 \001(\0132\037.axelar.utils.v1beta1.ThresholdB\004" +
       "\310\336\037\000R%chainMaintainerIncorrectVoteThresh" +
       "old\022A\n\035chain_maintainer_check_window\030\004 \001" +
-      "(\005R\032chainMaintainerCheckWindowB\321\001\n\030com.a" +
-      "xelar.nexus.v1beta1B\013ParamsProtoP\001Z2gith" +
-      "ub.com/axelarnetwork/axelar-core/x/nexus" +
-      "/types\242\002\003ANX\252\002\024Axelar.Nexus.V1beta1\312\002\024Ax" +
-      "elar\\Nexus\\V1beta1\342\002 Axelar\\Nexus\\V1beta" +
-      "1\\GPBMetadata\352\002\026Axelar::Nexus::V1beta1\310\341" +
-      "\036\000b\006proto3"
+      "(\005R\032chainMaintainerCheckWindowB\317\001\n\030com.a" +
+      "xelar.nexus.v1beta1B\013ParamsProtoZ2github" +
+      ".com/axelarnetwork/axelar-core/x/nexus/t" +
+      "ypes\242\002\003ANX\252\002\024Axelar.Nexus.V1beta1\312\002\024Axel" +
+      "ar\\Nexus\\V1beta1\342\002 Axelar\\Nexus\\V1beta1\\" +
+      "GPBMetadata\352\002\026Axelar::Nexus::V1beta1\310\341\036\000" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

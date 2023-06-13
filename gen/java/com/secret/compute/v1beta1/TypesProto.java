@@ -14,34 +14,4469 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code secret.compute.v1beta1.AccessType}
+   */
+  public enum AccessType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNDEFINED = 0 [(.gogoproto.enumvalue_customname) = "AccessTypeUndefined"];</code>
+     */
+    UNDEFINED(0),
+    /**
+     * <code>NOBODY = 1 [(.gogoproto.enumvalue_customname) = "AccessTypeNobody"];</code>
+     */
+    NOBODY(1),
+    /**
+     * <code>ONLY_ADDRESS = 2 [(.gogoproto.enumvalue_customname) = "AccessTypeOnlyAddress"];</code>
+     */
+    ONLY_ADDRESS(2),
+    /**
+     * <code>EVERYBODY = 3 [(.gogoproto.enumvalue_customname) = "AccessTypeEverybody"];</code>
+     */
+    EVERYBODY(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>UNDEFINED = 0 [(.gogoproto.enumvalue_customname) = "AccessTypeUndefined"];</code>
+     */
+    public static final int UNDEFINED_VALUE = 0;
+    /**
+     * <code>NOBODY = 1 [(.gogoproto.enumvalue_customname) = "AccessTypeNobody"];</code>
+     */
+    public static final int NOBODY_VALUE = 1;
+    /**
+     * <code>ONLY_ADDRESS = 2 [(.gogoproto.enumvalue_customname) = "AccessTypeOnlyAddress"];</code>
+     */
+    public static final int ONLY_ADDRESS_VALUE = 2;
+    /**
+     * <code>EVERYBODY = 3 [(.gogoproto.enumvalue_customname) = "AccessTypeEverybody"];</code>
+     */
+    public static final int EVERYBODY_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AccessType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static AccessType forNumber(int value) {
+      switch (value) {
+        case 0: return UNDEFINED;
+        case 1: return NOBODY;
+        case 2: return ONLY_ADDRESS;
+        case 3: return EVERYBODY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AccessType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AccessType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AccessType>() {
+            public AccessType findValueByNumber(int number) {
+              return AccessType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final AccessType[] VALUES = values();
+
+    public static AccessType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AccessType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:secret.compute.v1beta1.AccessType)
+  }
+
+  public interface AccessTypeParamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.AccessTypeParam)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The enum numeric value on the wire for value.
+     */
+    int getValueValue();
+    /**
+     * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    com.secret.compute.v1beta1.TypesProto.AccessType getValue();
+  }
+  /**
+   * Protobuf type {@code secret.compute.v1beta1.AccessTypeParam}
+   */
+  public static final class AccessTypeParam extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.AccessTypeParam)
+      AccessTypeParamOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessTypeParam.newBuilder() to construct.
+    private AccessTypeParam(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessTypeParam() {
+      value_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessTypeParam();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AccessTypeParam_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AccessTypeParam_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.TypesProto.AccessTypeParam.class, com.secret.compute.v1beta1.TypesProto.AccessTypeParam.Builder.class);
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private int value_ = 0;
+    /**
+     * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The enum numeric value on the wire for value.
+     */
+    @java.lang.Override public int getValueValue() {
+      return value_;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+     * @return The value.
+     */
+    @java.lang.Override public com.secret.compute.v1beta1.TypesProto.AccessType getValue() {
+      com.secret.compute.v1beta1.TypesProto.AccessType result = com.secret.compute.v1beta1.TypesProto.AccessType.forNumber(value_);
+      return result == null ? com.secret.compute.v1beta1.TypesProto.AccessType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (value_ != com.secret.compute.v1beta1.TypesProto.AccessType.UNDEFINED.getNumber()) {
+        output.writeEnum(1, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (value_ != com.secret.compute.v1beta1.TypesProto.AccessType.UNDEFINED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.TypesProto.AccessTypeParam)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.TypesProto.AccessTypeParam other = (com.secret.compute.v1beta1.TypesProto.AccessTypeParam) obj;
+
+      if (value_ != other.value_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + value_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.TypesProto.AccessTypeParam prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.compute.v1beta1.AccessTypeParam}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.AccessTypeParam)
+        com.secret.compute.v1beta1.TypesProto.AccessTypeParamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AccessTypeParam_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AccessTypeParam_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.TypesProto.AccessTypeParam.class, com.secret.compute.v1beta1.TypesProto.AccessTypeParam.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.TypesProto.AccessTypeParam.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        value_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AccessTypeParam_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AccessTypeParam getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.TypesProto.AccessTypeParam.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AccessTypeParam build() {
+        com.secret.compute.v1beta1.TypesProto.AccessTypeParam result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AccessTypeParam buildPartial() {
+        com.secret.compute.v1beta1.TypesProto.AccessTypeParam result = new com.secret.compute.v1beta1.TypesProto.AccessTypeParam(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.TypesProto.AccessTypeParam result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.TypesProto.AccessTypeParam) {
+          return mergeFrom((com.secret.compute.v1beta1.TypesProto.AccessTypeParam)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.TypesProto.AccessTypeParam other) {
+        if (other == com.secret.compute.v1beta1.TypesProto.AccessTypeParam.getDefaultInstance()) return this;
+        if (other.value_ != 0) {
+          setValueValue(other.getValueValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                value_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int value_ = 0;
+      /**
+       * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The enum numeric value on the wire for value.
+       */
+      @java.lang.Override public int getValueValue() {
+        return value_;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The enum numeric value on the wire for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueValue(int value) {
+        value_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AccessType getValue() {
+        com.secret.compute.v1beta1.TypesProto.AccessType result = com.secret.compute.v1beta1.TypesProto.AccessType.forNumber(value_);
+        return result == null ? com.secret.compute.v1beta1.TypesProto.AccessType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(com.secret.compute.v1beta1.TypesProto.AccessType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        value_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.AccessType value = 1 [json_name = "value", (.gogoproto.moretags) = "yaml:&#92;"value&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.AccessTypeParam)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.AccessTypeParam)
+    private static final com.secret.compute.v1beta1.TypesProto.AccessTypeParam DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.TypesProto.AccessTypeParam();
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AccessTypeParam getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessTypeParam>
+        PARSER = new com.google.protobuf.AbstractParser<AccessTypeParam>() {
+      @java.lang.Override
+      public AccessTypeParam parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessTypeParam> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessTypeParam> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.AccessTypeParam getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CodeInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.CodeInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes code_hash = 1 [json_name = "codeHash"];</code>
+     * @return The codeHash.
+     */
+    com.google.protobuf.ByteString getCodeHash();
+
+    /**
+     * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The creator.
+     */
+    com.google.protobuf.ByteString getCreator();
+
+    /**
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The builder.
+     */
+    java.lang.String getBuilder();
+    /**
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The bytes for builder.
+     */
+    com.google.protobuf.ByteString
+        getBuilderBytes();
+  }
+  /**
+   * <pre>
+   * CodeInfo is data for the uploaded contract WASM code
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.CodeInfo}
+   */
+  public static final class CodeInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.CodeInfo)
+      CodeInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CodeInfo.newBuilder() to construct.
+    private CodeInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CodeInfo() {
+      codeHash_ = com.google.protobuf.ByteString.EMPTY;
+      creator_ = com.google.protobuf.ByteString.EMPTY;
+      source_ = "";
+      builder_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CodeInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_CodeInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_CodeInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.TypesProto.CodeInfo.class, com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder.class);
+    }
+
+    public static final int CODE_HASH_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString codeHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes code_hash = 1 [json_name = "codeHash"];</code>
+     * @return The codeHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCodeHash() {
+      return codeHash_;
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString creator_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCreator() {
+      return creator_;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        source_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source = 3 [json_name = "source"];</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BUILDER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object builder_ = "";
+    /**
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The builder.
+     */
+    @java.lang.Override
+    public java.lang.String getBuilder() {
+      java.lang.Object ref = builder_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        builder_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string builder = 4 [json_name = "builder"];</code>
+     * @return The bytes for builder.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBuilderBytes() {
+      java.lang.Object ref = builder_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        builder_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!codeHash_.isEmpty()) {
+        output.writeBytes(1, codeHash_);
+      }
+      if (!creator_.isEmpty()) {
+        output.writeBytes(2, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(builder_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, builder_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!codeHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, codeHash_);
+      }
+      if (!creator_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, source_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(builder_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, builder_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.TypesProto.CodeInfo)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.TypesProto.CodeInfo other = (com.secret.compute.v1beta1.TypesProto.CodeInfo) obj;
+
+      if (!getCodeHash()
+          .equals(other.getCodeHash())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (!getBuilder()
+          .equals(other.getBuilder())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getCodeHash().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSource().hashCode();
+      hash = (37 * hash) + BUILDER_FIELD_NUMBER;
+      hash = (53 * hash) + getBuilder().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.TypesProto.CodeInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CodeInfo is data for the uploaded contract WASM code
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.CodeInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.CodeInfo)
+        com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_CodeInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_CodeInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.TypesProto.CodeInfo.class, com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.TypesProto.CodeInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeHash_ = com.google.protobuf.ByteString.EMPTY;
+        creator_ = com.google.protobuf.ByteString.EMPTY;
+        source_ = "";
+        builder_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_CodeInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.CodeInfo getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.CodeInfo build() {
+        com.secret.compute.v1beta1.TypesProto.CodeInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.CodeInfo buildPartial() {
+        com.secret.compute.v1beta1.TypesProto.CodeInfo result = new com.secret.compute.v1beta1.TypesProto.CodeInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.TypesProto.CodeInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeHash_ = codeHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.source_ = source_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.builder_ = builder_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.TypesProto.CodeInfo) {
+          return mergeFrom((com.secret.compute.v1beta1.TypesProto.CodeInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.TypesProto.CodeInfo other) {
+        if (other == com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance()) return this;
+        if (other.getCodeHash() != com.google.protobuf.ByteString.EMPTY) {
+          setCodeHash(other.getCodeHash());
+        }
+        if (other.getCreator() != com.google.protobuf.ByteString.EMPTY) {
+          setCreator(other.getCreator());
+        }
+        if (!other.getSource().isEmpty()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBuilder().isEmpty()) {
+          builder_ = other.builder_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                codeHash_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                creator_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                source_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                builder_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString codeHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes code_hash = 1 [json_name = "codeHash"];</code>
+       * @return The codeHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCodeHash() {
+        return codeHash_;
+      }
+      /**
+       * <code>bytes code_hash = 1 [json_name = "codeHash"];</code>
+       * @param value The codeHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        codeHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes code_hash = 1 [json_name = "codeHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeHash_ = getDefaultInstance().getCodeHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString creator_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The creator.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCreator() {
+        return creator_;
+      }
+      /**
+       * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        creator_ = getDefaultInstance().getCreator();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object source_ = "";
+      /**
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 3 [json_name = "source"];</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        source_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object builder_ = "";
+      /**
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @return The builder.
+       */
+      public java.lang.String getBuilder() {
+        java.lang.Object ref = builder_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          builder_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @return The bytes for builder.
+       */
+      public com.google.protobuf.ByteString
+          getBuilderBytes() {
+        java.lang.Object ref = builder_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          builder_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @param value The builder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuilder(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        builder_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuilder() {
+        builder_ = getDefaultInstance().getBuilder();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string builder = 4 [json_name = "builder"];</code>
+       * @param value The bytes for builder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuilderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        builder_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.CodeInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.CodeInfo)
+    private static final com.secret.compute.v1beta1.TypesProto.CodeInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.TypesProto.CodeInfo();
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.CodeInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CodeInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CodeInfo>() {
+      @java.lang.Override
+      public CodeInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CodeInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CodeInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.CodeInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractCustomInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.ContractCustomInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes enclave_key = 1 [json_name = "enclaveKey", (.gogoproto.customname) = "EnclaveKey"];</code>
+     * @return The enclaveKey.
+     */
+    com.google.protobuf.ByteString getEnclaveKey();
+
+    /**
+     * <code>string label = 2 [json_name = "label"];</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <code>string label = 2 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+  }
+  /**
+   * Protobuf type {@code secret.compute.v1beta1.ContractCustomInfo}
+   */
+  public static final class ContractCustomInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.ContractCustomInfo)
+      ContractCustomInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractCustomInfo.newBuilder() to construct.
+    private ContractCustomInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractCustomInfo() {
+      enclaveKey_ = com.google.protobuf.ByteString.EMPTY;
+      label_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractCustomInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractCustomInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractCustomInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.class, com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder.class);
+    }
+
+    public static final int ENCLAVE_KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString enclaveKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes enclave_key = 1 [json_name = "enclaveKey", (.gogoproto.customname) = "EnclaveKey"];</code>
+     * @return The enclaveKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEnclaveKey() {
+      return enclaveKey_;
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object label_ = "";
+    /**
+     * <code>string label = 2 [json_name = "label"];</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        label_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string label = 2 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        label_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!enclaveKey_.isEmpty()) {
+        output.writeBytes(1, enclaveKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, label_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!enclaveKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, enclaveKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, label_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.TypesProto.ContractCustomInfo)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.TypesProto.ContractCustomInfo other = (com.secret.compute.v1beta1.TypesProto.ContractCustomInfo) obj;
+
+      if (!getEnclaveKey()
+          .equals(other.getEnclaveKey())) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENCLAVE_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getEnclaveKey().hashCode();
+      hash = (37 * hash) + LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLabel().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.TypesProto.ContractCustomInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code secret.compute.v1beta1.ContractCustomInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.ContractCustomInfo)
+        com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractCustomInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractCustomInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.class, com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        enclaveKey_ = com.google.protobuf.ByteString.EMPTY;
+        label_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractCustomInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo build() {
+        com.secret.compute.v1beta1.TypesProto.ContractCustomInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo buildPartial() {
+        com.secret.compute.v1beta1.TypesProto.ContractCustomInfo result = new com.secret.compute.v1beta1.TypesProto.ContractCustomInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.TypesProto.ContractCustomInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enclaveKey_ = enclaveKey_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.label_ = label_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.TypesProto.ContractCustomInfo) {
+          return mergeFrom((com.secret.compute.v1beta1.TypesProto.ContractCustomInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.TypesProto.ContractCustomInfo other) {
+        if (other == com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance()) return this;
+        if (other.getEnclaveKey() != com.google.protobuf.ByteString.EMPTY) {
+          setEnclaveKey(other.getEnclaveKey());
+        }
+        if (!other.getLabel().isEmpty()) {
+          label_ = other.label_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                enclaveKey_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                label_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString enclaveKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes enclave_key = 1 [json_name = "enclaveKey", (.gogoproto.customname) = "EnclaveKey"];</code>
+       * @return The enclaveKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEnclaveKey() {
+        return enclaveKey_;
+      }
+      /**
+       * <code>bytes enclave_key = 1 [json_name = "enclaveKey", (.gogoproto.customname) = "EnclaveKey"];</code>
+       * @param value The enclaveKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnclaveKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        enclaveKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes enclave_key = 1 [json_name = "enclaveKey", (.gogoproto.customname) = "EnclaveKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnclaveKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        enclaveKey_ = getDefaultInstance().getEnclaveKey();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object label_ = "";
+      /**
+       * <code>string label = 2 [json_name = "label"];</code>
+       * @return The label.
+       */
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string label = 2 [json_name = "label"];</code>
+       * @return The bytes for label.
+       */
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string label = 2 [json_name = "label"];</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        label_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string label = 2 [json_name = "label"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        label_ = getDefaultInstance().getLabel();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string label = 2 [json_name = "label"];</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        label_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.ContractCustomInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.ContractCustomInfo)
+    private static final com.secret.compute.v1beta1.TypesProto.ContractCustomInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.TypesProto.ContractCustomInfo();
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractCustomInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractCustomInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ContractCustomInfo>() {
+      @java.lang.Override
+      public ContractCustomInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractCustomInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractCustomInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.ContractInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+
+    /**
+     * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The creator.
+     */
+    com.google.protobuf.ByteString getCreator();
+
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+
+    /**
+     * <pre>
+     * never show this in query results, just use for sorting
+     * (Note: when using json tag "-" amino refused to serialize it...)
+     * </pre>
+     *
+     * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+     * @return Whether the created field is set.
+     */
+    boolean hasCreated();
+    /**
+     * <pre>
+     * never show this in query results, just use for sorting
+     * (Note: when using json tag "-" amino refused to serialize it...)
+     * </pre>
+     *
+     * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+     * @return The created.
+     */
+    com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition getCreated();
+    /**
+     * <pre>
+     * never show this in query results, just use for sorting
+     * (Note: when using json tag "-" amino refused to serialize it...)
+     * </pre>
+     *
+     * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+     */
+    com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder getCreatedOrBuilder();
+
+    /**
+     * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+     * @return The ibcPortId.
+     */
+    java.lang.String getIbcPortId();
+    /**
+     * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+     * @return The bytes for ibcPortId.
+     */
+    com.google.protobuf.ByteString
+        getIbcPortIdBytes();
+  }
+  /**
+   * <pre>
+   * ContractInfo stores a WASM contract instance
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.ContractInfo}
+   */
+  public static final class ContractInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.ContractInfo)
+      ContractInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractInfo.newBuilder() to construct.
+    private ContractInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractInfo() {
+      creator_ = com.google.protobuf.ByteString.EMPTY;
+      label_ = "";
+      ibcPortId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.TypesProto.ContractInfo.class, com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder.class);
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 1;
+    private long codeId_ = 0L;
+    /**
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString creator_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCreator() {
+      return creator_;
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object label_ = "";
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        label_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string label = 4 [json_name = "label"];</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        label_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_FIELD_NUMBER = 5;
+    private com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition created_;
+    /**
+     * <pre>
+     * never show this in query results, just use for sorting
+     * (Note: when using json tag "-" amino refused to serialize it...)
+     * </pre>
+     *
+     * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+     * @return Whether the created field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreated() {
+      return created_ != null;
+    }
+    /**
+     * <pre>
+     * never show this in query results, just use for sorting
+     * (Note: when using json tag "-" amino refused to serialize it...)
+     * </pre>
+     *
+     * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+     * @return The created.
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition getCreated() {
+      return created_ == null ? com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance() : created_;
+    }
+    /**
+     * <pre>
+     * never show this in query results, just use for sorting
+     * (Note: when using json tag "-" amino refused to serialize it...)
+     * </pre>
+     *
+     * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder getCreatedOrBuilder() {
+      return created_ == null ? com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance() : created_;
+    }
+
+    public static final int IBC_PORT_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ibcPortId_ = "";
+    /**
+     * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+     * @return The ibcPortId.
+     */
+    @java.lang.Override
+    public java.lang.String getIbcPortId() {
+      java.lang.Object ref = ibcPortId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ibcPortId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+     * @return The bytes for ibcPortId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIbcPortIdBytes() {
+      java.lang.Object ref = ibcPortId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ibcPortId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (codeId_ != 0L) {
+        output.writeUInt64(1, codeId_);
+      }
+      if (!creator_.isEmpty()) {
+        output.writeBytes(2, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
+      }
+      if (created_ != null) {
+        output.writeMessage(5, getCreated());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, ibcPortId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, codeId_);
+      }
+      if (!creator_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
+      }
+      if (created_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCreated());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ibcPortId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, ibcPortId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.TypesProto.ContractInfo)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.TypesProto.ContractInfo other = (com.secret.compute.v1beta1.TypesProto.ContractInfo) obj;
+
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (hasCreated() != other.hasCreated()) return false;
+      if (hasCreated()) {
+        if (!getCreated()
+            .equals(other.getCreated())) return false;
+      }
+      if (!getIbcPortId()
+          .equals(other.getIbcPortId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLabel().hashCode();
+      if (hasCreated()) {
+        hash = (37 * hash) + CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getCreated().hashCode();
+      }
+      hash = (37 * hash) + IBC_PORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getIbcPortId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.TypesProto.ContractInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ContractInfo stores a WASM contract instance
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.ContractInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.ContractInfo)
+        com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.TypesProto.ContractInfo.class, com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.TypesProto.ContractInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeId_ = 0L;
+        creator_ = com.google.protobuf.ByteString.EMPTY;
+        label_ = "";
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
+          createdBuilder_ = null;
+        }
+        ibcPortId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_ContractInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.ContractInfo getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.ContractInfo build() {
+        com.secret.compute.v1beta1.TypesProto.ContractInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.ContractInfo buildPartial() {
+        com.secret.compute.v1beta1.TypesProto.ContractInfo result = new com.secret.compute.v1beta1.TypesProto.ContractInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.TypesProto.ContractInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeId_ = codeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.label_ = label_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.ibcPortId_ = ibcPortId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.TypesProto.ContractInfo) {
+          return mergeFrom((com.secret.compute.v1beta1.TypesProto.ContractInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.TypesProto.ContractInfo other) {
+        if (other == com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance()) return this;
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        if (other.getCreator() != com.google.protobuf.ByteString.EMPTY) {
+          setCreator(other.getCreator());
+        }
+        if (!other.getLabel().isEmpty()) {
+          label_ = other.label_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasCreated()) {
+          mergeCreated(other.getCreated());
+        }
+        if (!other.getIbcPortId().isEmpty()) {
+          ibcPortId_ = other.ibcPortId_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                creator_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 34: {
+                label_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              case 50: {
+                ibcPortId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long codeId_ ;
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString creator_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The creator.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCreator() {
+        return creator_;
+      }
+      /**
+       * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes creator = 2 [json_name = "creator", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        creator_ = getDefaultInstance().getCreator();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object label_ = "";
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @return The label.
+       */
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @return The bytes for label.
+       */
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        label_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        label_ = getDefaultInstance().getLabel();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string label = 4 [json_name = "label"];</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        label_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition created_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder> createdBuilder_;
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       * @return Whether the created field is set.
+       */
+      public boolean hasCreated() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       * @return The created.
+       */
+      public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition getCreated() {
+        if (createdBuilder_ == null) {
+          return created_ == null ? com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance() : created_;
+        } else {
+          return createdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      public Builder setCreated(com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition value) {
+        if (createdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          created_ = value;
+        } else {
+          createdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      public Builder setCreated(
+          com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder builderForValue) {
+        if (createdBuilder_ == null) {
+          created_ = builderForValue.build();
+        } else {
+          createdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      public Builder mergeCreated(com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition value) {
+        if (createdBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            created_ != null &&
+            created_ != com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
+          } else {
+            created_ = value;
+          }
+        } else {
+          createdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      public Builder clearCreated() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
+          createdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder getCreatedBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder getCreatedOrBuilder() {
+        if (createdBuilder_ != null) {
+          return createdBuilder_.getMessageOrBuilder();
+        } else {
+          return created_ == null ?
+              com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance() : created_;
+        }
+      }
+      /**
+       * <pre>
+       * never show this in query results, just use for sorting
+       * (Note: when using json tag "-" amino refused to serialize it...)
+       * </pre>
+       *
+       * <code>.secret.compute.v1beta1.AbsoluteTxPosition created = 5 [json_name = "created"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder> 
+          getCreatedFieldBuilder() {
+        if (createdBuilder_ == null) {
+          createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder>(
+                  getCreated(),
+                  getParentForChildren(),
+                  isClean());
+          created_ = null;
+        }
+        return createdBuilder_;
+      }
+
+      private java.lang.Object ibcPortId_ = "";
+      /**
+       * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+       * @return The ibcPortId.
+       */
+      public java.lang.String getIbcPortId() {
+        java.lang.Object ref = ibcPortId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ibcPortId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+       * @return The bytes for ibcPortId.
+       */
+      public com.google.protobuf.ByteString
+          getIbcPortIdBytes() {
+        java.lang.Object ref = ibcPortId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ibcPortId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+       * @param value The ibcPortId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcPortId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ibcPortId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIbcPortId() {
+        ibcPortId_ = getDefaultInstance().getIbcPortId();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ibc_port_id = 6 [json_name = "ibcPortId", (.gogoproto.customname) = "IBCPortID"];</code>
+       * @param value The bytes for ibcPortId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIbcPortIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ibcPortId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.ContractInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.ContractInfo)
+    private static final com.secret.compute.v1beta1.TypesProto.ContractInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.TypesProto.ContractInfo();
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.ContractInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ContractInfo>() {
+      @java.lang.Override
+      public ContractInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ContractInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AbsoluteTxPositionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.AbsoluteTxPosition)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * BlockHeight is the block the contract was created at
+     * </pre>
+     *
+     * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <pre>
+     * TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)
+     * </pre>
+     *
+     * <code>uint64 tx_index = 2 [json_name = "txIndex"];</code>
+     * @return The txIndex.
+     */
+    long getTxIndex();
+  }
+  /**
+   * <pre>
+   * AbsoluteTxPosition can be used to sort contracts
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.AbsoluteTxPosition}
+   */
+  public static final class AbsoluteTxPosition extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.AbsoluteTxPosition)
+      AbsoluteTxPositionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AbsoluteTxPosition.newBuilder() to construct.
+    private AbsoluteTxPosition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AbsoluteTxPosition() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AbsoluteTxPosition();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AbsoluteTxPosition_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AbsoluteTxPosition_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.class, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <pre>
+     * BlockHeight is the block the contract was created at
+     * </pre>
+     *
+     * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int TX_INDEX_FIELD_NUMBER = 2;
+    private long txIndex_ = 0L;
+    /**
+     * <pre>
+     * TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)
+     * </pre>
+     *
+     * <code>uint64 tx_index = 2 [json_name = "txIndex"];</code>
+     * @return The txIndex.
+     */
+    @java.lang.Override
+    public long getTxIndex() {
+      return txIndex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeInt64(1, blockHeight_);
+      }
+      if (txIndex_ != 0L) {
+        output.writeUInt64(2, txIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, blockHeight_);
+      }
+      if (txIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, txIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition other = (com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (getTxIndex()
+          != other.getTxIndex()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      hash = (37 * hash) + TX_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTxIndex());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AbsoluteTxPosition can be used to sort contracts
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.AbsoluteTxPosition}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.AbsoluteTxPosition)
+        com.secret.compute.v1beta1.TypesProto.AbsoluteTxPositionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AbsoluteTxPosition_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AbsoluteTxPosition_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.class, com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        txIndex_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_AbsoluteTxPosition_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition build() {
+        com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition buildPartial() {
+        com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition result = new com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.txIndex_ = txIndex_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition) {
+          return mergeFrom((com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition other) {
+        if (other == com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.getTxIndex() != 0L) {
+          setTxIndex(other.getTxIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                txIndex_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <pre>
+       * BlockHeight is the block the contract was created at
+       * </pre>
+       *
+       * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <pre>
+       * BlockHeight is the block the contract was created at
+       * </pre>
+       *
+       * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * BlockHeight is the block the contract was created at
+       * </pre>
+       *
+       * <code>int64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long txIndex_ ;
+      /**
+       * <pre>
+       * TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)
+       * </pre>
+       *
+       * <code>uint64 tx_index = 2 [json_name = "txIndex"];</code>
+       * @return The txIndex.
+       */
+      @java.lang.Override
+      public long getTxIndex() {
+        return txIndex_;
+      }
+      /**
+       * <pre>
+       * TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)
+       * </pre>
+       *
+       * <code>uint64 tx_index = 2 [json_name = "txIndex"];</code>
+       * @param value The txIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxIndex(long value) {
+
+        txIndex_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TxIndex is a monotonic counter within the block (actual transaction index, or gas consumed)
+       * </pre>
+       *
+       * <code>uint64 tx_index = 2 [json_name = "txIndex"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        txIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.AbsoluteTxPosition)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.AbsoluteTxPosition)
+    private static final com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition();
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AbsoluteTxPosition>
+        PARSER = new com.google.protobuf.AbstractParser<AbsoluteTxPosition>() {
+      @java.lang.Override
+      public AbsoluteTxPosition parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AbsoluteTxPosition> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AbsoluteTxPosition> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.AbsoluteTxPosition getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ModelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.Model)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * hex-encode key to read it better (this is often ascii)
+     * </pre>
+     *
+     * <code>bytes Key = 1 [json_name = "Key", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The key.
+     */
+    com.google.protobuf.ByteString getKey();
+
+    /**
+     * <pre>
+     * base64-encode raw value
+     * </pre>
+     *
+     * <code>bytes Value = 2 [json_name = "Value"];</code>
+     * @return The value.
+     */
+    com.google.protobuf.ByteString getValue();
+  }
+  /**
+   * <pre>
+   * Model is a struct that holds a KV pair
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.Model}
+   */
+  public static final class Model extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.Model)
+      ModelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Model.newBuilder() to construct.
+    private Model(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Model() {
+      key_ = com.google.protobuf.ByteString.EMPTY;
+      value_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Model();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_Model_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_Model_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.TypesProto.Model.class, com.secret.compute.v1beta1.TypesProto.Model.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * hex-encode key to read it better (this is often ascii)
+     * </pre>
+     *
+     * <code>bytes Key = 1 [json_name = "Key", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getKey() {
+      return key_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * base64-encode raw value
+     * </pre>
+     *
+     * <code>bytes Value = 2 [json_name = "Value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!key_.isEmpty()) {
+        output.writeBytes(1, key_);
+      }
+      if (!value_.isEmpty()) {
+        output.writeBytes(2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!key_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, key_);
+      }
+      if (!value_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.TypesProto.Model)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.TypesProto.Model other = (com.secret.compute.v1beta1.TypesProto.Model) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.Model parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.Model parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.TypesProto.Model parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.TypesProto.Model prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Model is a struct that holds a KV pair
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.Model}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.Model)
+        com.secret.compute.v1beta1.TypesProto.ModelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_Model_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_Model_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.TypesProto.Model.class, com.secret.compute.v1beta1.TypesProto.Model.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.TypesProto.Model.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        key_ = com.google.protobuf.ByteString.EMPTY;
+        value_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.TypesProto.internal_static_secret_compute_v1beta1_Model_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.Model getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.TypesProto.Model.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.Model build() {
+        com.secret.compute.v1beta1.TypesProto.Model result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.TypesProto.Model buildPartial() {
+        com.secret.compute.v1beta1.TypesProto.Model result = new com.secret.compute.v1beta1.TypesProto.Model(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.TypesProto.Model result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.TypesProto.Model) {
+          return mergeFrom((com.secret.compute.v1beta1.TypesProto.Model)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.TypesProto.Model other) {
+        if (other == com.secret.compute.v1beta1.TypesProto.Model.getDefaultInstance()) return this;
+        if (other.getKey() != com.google.protobuf.ByteString.EMPTY) {
+          setKey(other.getKey());
+        }
+        if (other.getValue() != com.google.protobuf.ByteString.EMPTY) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                key_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                value_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString key_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * hex-encode key to read it better (this is often ascii)
+       * </pre>
+       *
+       * <code>bytes Key = 1 [json_name = "Key", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getKey() {
+        return key_;
+      }
+      /**
+       * <pre>
+       * hex-encode key to read it better (this is often ascii)
+       * </pre>
+       *
+       * <code>bytes Key = 1 [json_name = "Key", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        key_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hex-encode key to read it better (this is often ascii)
+       * </pre>
+       *
+       * <code>bytes Key = 1 [json_name = "Key", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * base64-encode raw value
+       * </pre>
+       *
+       * <code>bytes Value = 2 [json_name = "Value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getValue() {
+        return value_;
+      }
+      /**
+       * <pre>
+       * base64-encode raw value
+       * </pre>
+       *
+       * <code>bytes Value = 2 [json_name = "Value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * base64-encode raw value
+       * </pre>
+       *
+       * <code>bytes Value = 2 [json_name = "Value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.Model)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.Model)
+    private static final com.secret.compute.v1beta1.TypesProto.Model DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.TypesProto.Model();
+    }
+
+    public static com.secret.compute.v1beta1.TypesProto.Model getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Model>
+        PARSER = new com.google.protobuf.AbstractParser<Model>() {
+      @java.lang.Override
+      public Model parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Model> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Model> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.Model getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_AccessTypeParam_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_AccessTypeParam_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_CodeInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_CodeInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_ContractCustomInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_ContractCustomInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_ContractInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_ContractInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_AbsoluteTxPosition_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_AbsoluteTxPosition_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_Model_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_Model_fieldAccessorTable;
 
@@ -80,13 +4515,13 @@ public final class TypesProto {
       "d\022 \n\006NOBODY\020\001\032\024\212\235 \020AccessTypeNobody\022+\n\014O" +
       "NLY_ADDRESS\020\002\032\031\212\235 \025AccessTypeOnlyAddress" +
       "\022&\n\tEVERYBODY\020\003\032\027\212\235 \023AccessTypeEverybody" +
-      "\032\010\210\243\036\000\250\244\036\000B\346\001\n\032com.secret.compute.v1beta" +
-      "1B\nTypesProtoP\001Z:github.com/scrtlabs/Sec" +
-      "retNetwork/x/compute/internal/types\242\002\003SC" +
-      "X\252\002\026Secret.Compute.V1beta1\312\002\026Secret\\Comp" +
-      "ute\\V1beta1\342\002\"Secret\\Compute\\V1beta1\\GPB" +
-      "Metadata\352\002\030Secret::Compute::V1beta1\310\341\036\000\250" +
-      "\342\036\001b\006proto3"
+      "\032\010\210\243\036\000\250\244\036\000B\344\001\n\032com.secret.compute.v1beta" +
+      "1B\nTypesProtoZ:github.com/scrtlabs/Secre" +
+      "tNetwork/x/compute/internal/types\242\002\003SCX\252" +
+      "\002\026Secret.Compute.V1beta1\312\002\026Secret\\Comput" +
+      "e\\V1beta1\342\002\"Secret\\Compute\\V1beta1\\GPBMe" +
+      "tadata\352\002\030Secret::Compute::V1beta1\310\341\036\000\250\342\036" +
+      "\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

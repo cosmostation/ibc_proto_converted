@@ -14,29 +14,4849 @@ public final class OracleProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 vote_period = 1 [json_name = "votePeriod", (.gogoproto.moretags) = "yaml:&#92;"vote_period&#92;""];</code>
+     * @return The votePeriod.
+     */
+    long getVotePeriod();
+
+    /**
+     * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The voteThreshold.
+     */
+    java.lang.String getVoteThreshold();
+    /**
+     * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The bytes for voteThreshold.
+     */
+    com.google.protobuf.ByteString
+        getVoteThresholdBytes();
+
+    /**
+     * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+     * @return The rewardBand.
+     */
+    java.lang.String getRewardBand();
+    /**
+     * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+     * @return The bytes for rewardBand.
+     */
+    com.google.protobuf.ByteString
+        getRewardBandBytes();
+
+    /**
+     * <code>uint64 reward_distribution_window = 4 [json_name = "rewardDistributionWindow", (.gogoproto.moretags) = "yaml:&#92;"reward_distribution_window&#92;""];</code>
+     * @return The rewardDistributionWindow.
+     */
+    long getRewardDistributionWindow();
+
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    java.util.List<com.persistence.oracle.v1beta1.OracleProto.Denom> 
+        getAcceptListList();
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    com.persistence.oracle.v1beta1.OracleProto.Denom getAcceptList(int index);
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    int getAcceptListCount();
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    java.util.List<? extends com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder> 
+        getAcceptListOrBuilderList();
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder getAcceptListOrBuilder(
+        int index);
+
+    /**
+     * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+     * @return The slashFraction.
+     */
+    java.lang.String getSlashFraction();
+    /**
+     * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+     * @return The bytes for slashFraction.
+     */
+    com.google.protobuf.ByteString
+        getSlashFractionBytes();
+
+    /**
+     * <code>uint64 slash_window = 7 [json_name = "slashWindow", (.gogoproto.moretags) = "yaml:&#92;"slash_window&#92;""];</code>
+     * @return The slashWindow.
+     */
+    long getSlashWindow();
+
+    /**
+     * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+     * @return The minValidPerWindow.
+     */
+    java.lang.String getMinValidPerWindow();
+    /**
+     * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+     * @return The bytes for minValidPerWindow.
+     */
+    com.google.protobuf.ByteString
+        getMinValidPerWindowBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the oracle module.
+   * https://classic-docs.terra.money/docs/develop/module-specifications/spec-oracle.html#parameters
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      voteThreshold_ = "";
+      rewardBand_ = "";
+      acceptList_ = java.util.Collections.emptyList();
+      slashFraction_ = "";
+      minValidPerWindow_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.OracleProto.Params.class, com.persistence.oracle.v1beta1.OracleProto.Params.Builder.class);
+    }
+
+    public static final int VOTE_PERIOD_FIELD_NUMBER = 1;
+    private long votePeriod_ = 0L;
+    /**
+     * <code>uint64 vote_period = 1 [json_name = "votePeriod", (.gogoproto.moretags) = "yaml:&#92;"vote_period&#92;""];</code>
+     * @return The votePeriod.
+     */
+    @java.lang.Override
+    public long getVotePeriod() {
+      return votePeriod_;
+    }
+
+    public static final int VOTE_THRESHOLD_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voteThreshold_ = "";
+    /**
+     * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The voteThreshold.
+     */
+    @java.lang.Override
+    public java.lang.String getVoteThreshold() {
+      java.lang.Object ref = voteThreshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voteThreshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+     * @return The bytes for voteThreshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoteThresholdBytes() {
+      java.lang.Object ref = voteThreshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voteThreshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARD_BAND_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardBand_ = "";
+    /**
+     * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+     * @return The rewardBand.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardBand() {
+      java.lang.Object ref = rewardBand_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardBand_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+     * @return The bytes for rewardBand.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardBandBytes() {
+      java.lang.Object ref = rewardBand_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardBand_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARD_DISTRIBUTION_WINDOW_FIELD_NUMBER = 4;
+    private long rewardDistributionWindow_ = 0L;
+    /**
+     * <code>uint64 reward_distribution_window = 4 [json_name = "rewardDistributionWindow", (.gogoproto.moretags) = "yaml:&#92;"reward_distribution_window&#92;""];</code>
+     * @return The rewardDistributionWindow.
+     */
+    @java.lang.Override
+    public long getRewardDistributionWindow() {
+      return rewardDistributionWindow_;
+    }
+
+    public static final int ACCEPT_LIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.persistence.oracle.v1beta1.OracleProto.Denom> acceptList_;
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.persistence.oracle.v1beta1.OracleProto.Denom> getAcceptListList() {
+      return acceptList_;
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder> 
+        getAcceptListOrBuilderList() {
+      return acceptList_;
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    @java.lang.Override
+    public int getAcceptListCount() {
+      return acceptList_.size();
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.Denom getAcceptList(int index) {
+      return acceptList_.get(index);
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+     */
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder getAcceptListOrBuilder(
+        int index) {
+      return acceptList_.get(index);
+    }
+
+    public static final int SLASH_FRACTION_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object slashFraction_ = "";
+    /**
+     * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+     * @return The slashFraction.
+     */
+    @java.lang.Override
+    public java.lang.String getSlashFraction() {
+      java.lang.Object ref = slashFraction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        slashFraction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+     * @return The bytes for slashFraction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSlashFractionBytes() {
+      java.lang.Object ref = slashFraction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        slashFraction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SLASH_WINDOW_FIELD_NUMBER = 7;
+    private long slashWindow_ = 0L;
+    /**
+     * <code>uint64 slash_window = 7 [json_name = "slashWindow", (.gogoproto.moretags) = "yaml:&#92;"slash_window&#92;""];</code>
+     * @return The slashWindow.
+     */
+    @java.lang.Override
+    public long getSlashWindow() {
+      return slashWindow_;
+    }
+
+    public static final int MIN_VALID_PER_WINDOW_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minValidPerWindow_ = "";
+    /**
+     * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+     * @return The minValidPerWindow.
+     */
+    @java.lang.Override
+    public java.lang.String getMinValidPerWindow() {
+      java.lang.Object ref = minValidPerWindow_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minValidPerWindow_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+     * @return The bytes for minValidPerWindow.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinValidPerWindowBytes() {
+      java.lang.Object ref = minValidPerWindow_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minValidPerWindow_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votePeriod_ != 0L) {
+        output.writeUInt64(1, votePeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteThreshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, voteThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardBand_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, rewardBand_);
+      }
+      if (rewardDistributionWindow_ != 0L) {
+        output.writeUInt64(4, rewardDistributionWindow_);
+      }
+      for (int i = 0; i < acceptList_.size(); i++) {
+        output.writeMessage(5, acceptList_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFraction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, slashFraction_);
+      }
+      if (slashWindow_ != 0L) {
+        output.writeUInt64(7, slashWindow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minValidPerWindow_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, minValidPerWindow_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votePeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, votePeriod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voteThreshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, voteThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardBand_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, rewardBand_);
+      }
+      if (rewardDistributionWindow_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, rewardDistributionWindow_);
+      }
+      for (int i = 0; i < acceptList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, acceptList_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFraction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, slashFraction_);
+      }
+      if (slashWindow_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, slashWindow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minValidPerWindow_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, minValidPerWindow_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.OracleProto.Params)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.OracleProto.Params other = (com.persistence.oracle.v1beta1.OracleProto.Params) obj;
+
+      if (getVotePeriod()
+          != other.getVotePeriod()) return false;
+      if (!getVoteThreshold()
+          .equals(other.getVoteThreshold())) return false;
+      if (!getRewardBand()
+          .equals(other.getRewardBand())) return false;
+      if (getRewardDistributionWindow()
+          != other.getRewardDistributionWindow()) return false;
+      if (!getAcceptListList()
+          .equals(other.getAcceptListList())) return false;
+      if (!getSlashFraction()
+          .equals(other.getSlashFraction())) return false;
+      if (getSlashWindow()
+          != other.getSlashWindow()) return false;
+      if (!getMinValidPerWindow()
+          .equals(other.getMinValidPerWindow())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VOTE_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotePeriod());
+      hash = (37 * hash) + VOTE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getVoteThreshold().hashCode();
+      hash = (37 * hash) + REWARD_BAND_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardBand().hashCode();
+      hash = (37 * hash) + REWARD_DISTRIBUTION_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardDistributionWindow());
+      if (getAcceptListCount() > 0) {
+        hash = (37 * hash) + ACCEPT_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getAcceptListList().hashCode();
+      }
+      hash = (37 * hash) + SLASH_FRACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFraction().hashCode();
+      hash = (37 * hash) + SLASH_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSlashWindow());
+      hash = (37 * hash) + MIN_VALID_PER_WINDOW_FIELD_NUMBER;
+      hash = (53 * hash) + getMinValidPerWindow().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.OracleProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the oracle module.
+     * https://classic-docs.terra.money/docs/develop/module-specifications/spec-oracle.html#parameters
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.Params)
+        com.persistence.oracle.v1beta1.OracleProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.OracleProto.Params.class, com.persistence.oracle.v1beta1.OracleProto.Params.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.OracleProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votePeriod_ = 0L;
+        voteThreshold_ = "";
+        rewardBand_ = "";
+        rewardDistributionWindow_ = 0L;
+        if (acceptListBuilder_ == null) {
+          acceptList_ = java.util.Collections.emptyList();
+        } else {
+          acceptList_ = null;
+          acceptListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        slashFraction_ = "";
+        slashWindow_ = 0L;
+        minValidPerWindow_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.Params getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.Params build() {
+        com.persistence.oracle.v1beta1.OracleProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.Params buildPartial() {
+        com.persistence.oracle.v1beta1.OracleProto.Params result = new com.persistence.oracle.v1beta1.OracleProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.persistence.oracle.v1beta1.OracleProto.Params result) {
+        if (acceptListBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            acceptList_ = java.util.Collections.unmodifiableList(acceptList_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.acceptList_ = acceptList_;
+        } else {
+          result.acceptList_ = acceptListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.OracleProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votePeriod_ = votePeriod_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voteThreshold_ = voteThreshold_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.rewardBand_ = rewardBand_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.rewardDistributionWindow_ = rewardDistributionWindow_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.slashFraction_ = slashFraction_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.slashWindow_ = slashWindow_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.minValidPerWindow_ = minValidPerWindow_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.OracleProto.Params) {
+          return mergeFrom((com.persistence.oracle.v1beta1.OracleProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.OracleProto.Params other) {
+        if (other == com.persistence.oracle.v1beta1.OracleProto.Params.getDefaultInstance()) return this;
+        if (other.getVotePeriod() != 0L) {
+          setVotePeriod(other.getVotePeriod());
+        }
+        if (!other.getVoteThreshold().isEmpty()) {
+          voteThreshold_ = other.voteThreshold_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getRewardBand().isEmpty()) {
+          rewardBand_ = other.rewardBand_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getRewardDistributionWindow() != 0L) {
+          setRewardDistributionWindow(other.getRewardDistributionWindow());
+        }
+        if (acceptListBuilder_ == null) {
+          if (!other.acceptList_.isEmpty()) {
+            if (acceptList_.isEmpty()) {
+              acceptList_ = other.acceptList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureAcceptListIsMutable();
+              acceptList_.addAll(other.acceptList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.acceptList_.isEmpty()) {
+            if (acceptListBuilder_.isEmpty()) {
+              acceptListBuilder_.dispose();
+              acceptListBuilder_ = null;
+              acceptList_ = other.acceptList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              acceptListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAcceptListFieldBuilder() : null;
+            } else {
+              acceptListBuilder_.addAllMessages(other.acceptList_);
+            }
+          }
+        }
+        if (!other.getSlashFraction().isEmpty()) {
+          slashFraction_ = other.slashFraction_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.getSlashWindow() != 0L) {
+          setSlashWindow(other.getSlashWindow());
+        }
+        if (!other.getMinValidPerWindow().isEmpty()) {
+          minValidPerWindow_ = other.minValidPerWindow_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                votePeriod_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                voteThreshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                rewardBand_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                rewardDistributionWindow_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                com.persistence.oracle.v1beta1.OracleProto.Denom m =
+                    input.readMessage(
+                        com.persistence.oracle.v1beta1.OracleProto.Denom.parser(),
+                        extensionRegistry);
+                if (acceptListBuilder_ == null) {
+                  ensureAcceptListIsMutable();
+                  acceptList_.add(m);
+                } else {
+                  acceptListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                slashFraction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                slashWindow_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                minValidPerWindow_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long votePeriod_ ;
+      /**
+       * <code>uint64 vote_period = 1 [json_name = "votePeriod", (.gogoproto.moretags) = "yaml:&#92;"vote_period&#92;""];</code>
+       * @return The votePeriod.
+       */
+      @java.lang.Override
+      public long getVotePeriod() {
+        return votePeriod_;
+      }
+      /**
+       * <code>uint64 vote_period = 1 [json_name = "votePeriod", (.gogoproto.moretags) = "yaml:&#92;"vote_period&#92;""];</code>
+       * @param value The votePeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotePeriod(long value) {
+
+        votePeriod_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 vote_period = 1 [json_name = "votePeriod", (.gogoproto.moretags) = "yaml:&#92;"vote_period&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votePeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object voteThreshold_ = "";
+      /**
+       * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @return The voteThreshold.
+       */
+      public java.lang.String getVoteThreshold() {
+        java.lang.Object ref = voteThreshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voteThreshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @return The bytes for voteThreshold.
+       */
+      public com.google.protobuf.ByteString
+          getVoteThresholdBytes() {
+        java.lang.Object ref = voteThreshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voteThreshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @param value The voteThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoteThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voteThreshold_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoteThreshold() {
+        voteThreshold_ = getDefaultInstance().getVoteThreshold();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string vote_threshold = 2 [json_name = "voteThreshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"vote_threshold&#92;""];</code>
+       * @param value The bytes for voteThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoteThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voteThreshold_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardBand_ = "";
+      /**
+       * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+       * @return The rewardBand.
+       */
+      public java.lang.String getRewardBand() {
+        java.lang.Object ref = rewardBand_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardBand_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+       * @return The bytes for rewardBand.
+       */
+      public com.google.protobuf.ByteString
+          getRewardBandBytes() {
+        java.lang.Object ref = rewardBand_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardBand_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+       * @param value The rewardBand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBand(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardBand_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardBand() {
+        rewardBand_ = getDefaultInstance().getRewardBand();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reward_band = 3 [json_name = "rewardBand", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reward_band&#92;""];</code>
+       * @param value The bytes for rewardBand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBandBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardBand_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long rewardDistributionWindow_ ;
+      /**
+       * <code>uint64 reward_distribution_window = 4 [json_name = "rewardDistributionWindow", (.gogoproto.moretags) = "yaml:&#92;"reward_distribution_window&#92;""];</code>
+       * @return The rewardDistributionWindow.
+       */
+      @java.lang.Override
+      public long getRewardDistributionWindow() {
+        return rewardDistributionWindow_;
+      }
+      /**
+       * <code>uint64 reward_distribution_window = 4 [json_name = "rewardDistributionWindow", (.gogoproto.moretags) = "yaml:&#92;"reward_distribution_window&#92;""];</code>
+       * @param value The rewardDistributionWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardDistributionWindow(long value) {
+
+        rewardDistributionWindow_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 reward_distribution_window = 4 [json_name = "rewardDistributionWindow", (.gogoproto.moretags) = "yaml:&#92;"reward_distribution_window&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardDistributionWindow() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        rewardDistributionWindow_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.persistence.oracle.v1beta1.OracleProto.Denom> acceptList_ =
+        java.util.Collections.emptyList();
+      private void ensureAcceptListIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          acceptList_ = new java.util.ArrayList<com.persistence.oracle.v1beta1.OracleProto.Denom>(acceptList_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.persistence.oracle.v1beta1.OracleProto.Denom, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder, com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder> acceptListBuilder_;
+
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public java.util.List<com.persistence.oracle.v1beta1.OracleProto.Denom> getAcceptListList() {
+        if (acceptListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(acceptList_);
+        } else {
+          return acceptListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public int getAcceptListCount() {
+        if (acceptListBuilder_ == null) {
+          return acceptList_.size();
+        } else {
+          return acceptListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.Denom getAcceptList(int index) {
+        if (acceptListBuilder_ == null) {
+          return acceptList_.get(index);
+        } else {
+          return acceptListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder setAcceptList(
+          int index, com.persistence.oracle.v1beta1.OracleProto.Denom value) {
+        if (acceptListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAcceptListIsMutable();
+          acceptList_.set(index, value);
+          onChanged();
+        } else {
+          acceptListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder setAcceptList(
+          int index, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder builderForValue) {
+        if (acceptListBuilder_ == null) {
+          ensureAcceptListIsMutable();
+          acceptList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          acceptListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder addAcceptList(com.persistence.oracle.v1beta1.OracleProto.Denom value) {
+        if (acceptListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAcceptListIsMutable();
+          acceptList_.add(value);
+          onChanged();
+        } else {
+          acceptListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder addAcceptList(
+          int index, com.persistence.oracle.v1beta1.OracleProto.Denom value) {
+        if (acceptListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAcceptListIsMutable();
+          acceptList_.add(index, value);
+          onChanged();
+        } else {
+          acceptListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder addAcceptList(
+          com.persistence.oracle.v1beta1.OracleProto.Denom.Builder builderForValue) {
+        if (acceptListBuilder_ == null) {
+          ensureAcceptListIsMutable();
+          acceptList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          acceptListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder addAcceptList(
+          int index, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder builderForValue) {
+        if (acceptListBuilder_ == null) {
+          ensureAcceptListIsMutable();
+          acceptList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          acceptListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder addAllAcceptList(
+          java.lang.Iterable<? extends com.persistence.oracle.v1beta1.OracleProto.Denom> values) {
+        if (acceptListBuilder_ == null) {
+          ensureAcceptListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, acceptList_);
+          onChanged();
+        } else {
+          acceptListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder clearAcceptList() {
+        if (acceptListBuilder_ == null) {
+          acceptList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          acceptListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public Builder removeAcceptList(int index) {
+        if (acceptListBuilder_ == null) {
+          ensureAcceptListIsMutable();
+          acceptList_.remove(index);
+          onChanged();
+        } else {
+          acceptListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.Denom.Builder getAcceptListBuilder(
+          int index) {
+        return getAcceptListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder getAcceptListOrBuilder(
+          int index) {
+        if (acceptListBuilder_ == null) {
+          return acceptList_.get(index);  } else {
+          return acceptListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public java.util.List<? extends com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder> 
+           getAcceptListOrBuilderList() {
+        if (acceptListBuilder_ != null) {
+          return acceptListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(acceptList_);
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.Denom.Builder addAcceptListBuilder() {
+        return getAcceptListFieldBuilder().addBuilder(
+            com.persistence.oracle.v1beta1.OracleProto.Denom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.Denom.Builder addAcceptListBuilder(
+          int index) {
+        return getAcceptListFieldBuilder().addBuilder(
+            index, com.persistence.oracle.v1beta1.OracleProto.Denom.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.Denom accept_list = 5 [json_name = "acceptList", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"accept_list&#92;"", (.gogoproto.castrepeated) = "DenomList"];</code>
+       */
+      public java.util.List<com.persistence.oracle.v1beta1.OracleProto.Denom.Builder> 
+           getAcceptListBuilderList() {
+        return getAcceptListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.persistence.oracle.v1beta1.OracleProto.Denom, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder, com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder> 
+          getAcceptListFieldBuilder() {
+        if (acceptListBuilder_ == null) {
+          acceptListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.persistence.oracle.v1beta1.OracleProto.Denom, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder, com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder>(
+                  acceptList_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          acceptList_ = null;
+        }
+        return acceptListBuilder_;
+      }
+
+      private java.lang.Object slashFraction_ = "";
+      /**
+       * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+       * @return The slashFraction.
+       */
+      public java.lang.String getSlashFraction() {
+        java.lang.Object ref = slashFraction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          slashFraction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+       * @return The bytes for slashFraction.
+       */
+      public com.google.protobuf.ByteString
+          getSlashFractionBytes() {
+        java.lang.Object ref = slashFraction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          slashFraction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+       * @param value The slashFraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFraction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFraction_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFraction() {
+        slashFraction_ = getDefaultInstance().getSlashFraction();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string slash_fraction = 6 [json_name = "slashFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"slash_fraction&#92;""];</code>
+       * @param value The bytes for slashFraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        slashFraction_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private long slashWindow_ ;
+      /**
+       * <code>uint64 slash_window = 7 [json_name = "slashWindow", (.gogoproto.moretags) = "yaml:&#92;"slash_window&#92;""];</code>
+       * @return The slashWindow.
+       */
+      @java.lang.Override
+      public long getSlashWindow() {
+        return slashWindow_;
+      }
+      /**
+       * <code>uint64 slash_window = 7 [json_name = "slashWindow", (.gogoproto.moretags) = "yaml:&#92;"slash_window&#92;""];</code>
+       * @param value The slashWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashWindow(long value) {
+
+        slashWindow_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 slash_window = 7 [json_name = "slashWindow", (.gogoproto.moretags) = "yaml:&#92;"slash_window&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashWindow() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        slashWindow_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minValidPerWindow_ = "";
+      /**
+       * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+       * @return The minValidPerWindow.
+       */
+      public java.lang.String getMinValidPerWindow() {
+        java.lang.Object ref = minValidPerWindow_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minValidPerWindow_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+       * @return The bytes for minValidPerWindow.
+       */
+      public com.google.protobuf.ByteString
+          getMinValidPerWindowBytes() {
+        java.lang.Object ref = minValidPerWindow_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minValidPerWindow_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+       * @param value The minValidPerWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinValidPerWindow(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minValidPerWindow_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinValidPerWindow() {
+        minValidPerWindow_ = getDefaultInstance().getMinValidPerWindow();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_valid_per_window = 8 [json_name = "minValidPerWindow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"min_valid_per_window&#92;""];</code>
+       * @param value The bytes for minValidPerWindow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinValidPerWindowBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minValidPerWindow_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.Params)
+    private static final com.persistence.oracle.v1beta1.OracleProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.OracleProto.Params();
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DenomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.Denom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    java.lang.String getBaseDenom();
+    /**
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    com.google.protobuf.ByteString
+        getBaseDenomBytes();
+
+    /**
+     * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The symbolDenom.
+     */
+    java.lang.String getSymbolDenom();
+    /**
+     * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The bytes for symbolDenom.
+     */
+    com.google.protobuf.ByteString
+        getSymbolDenomBytes();
+
+    /**
+     * <code>uint32 exponent = 3 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+     * @return The exponent.
+     */
+    int getExponent();
+  }
+  /**
+   * <pre>
+   * Denom - the object to hold configurations of each denom
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.Denom}
+   */
+  public static final class Denom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.Denom)
+      DenomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Denom.newBuilder() to construct.
+    private Denom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Denom() {
+      baseDenom_ = "";
+      symbolDenom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Denom();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Denom_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Denom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.OracleProto.Denom.class, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder.class);
+    }
+
+    public static final int BASE_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baseDenom_ = "";
+    /**
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The baseDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseDenom() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+     * @return The bytes for baseDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseDenomBytes() {
+      java.lang.Object ref = baseDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SYMBOL_DENOM_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbolDenom_ = "";
+    /**
+     * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The symbolDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbolDenom() {
+      java.lang.Object ref = symbolDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbolDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+     * @return The bytes for symbolDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolDenomBytes() {
+      java.lang.Object ref = symbolDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbolDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXPONENT_FIELD_NUMBER = 3;
+    private int exponent_ = 0;
+    /**
+     * <code>uint32 exponent = 3 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+     * @return The exponent.
+     */
+    @java.lang.Override
+    public int getExponent() {
+      return exponent_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbolDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, symbolDenom_);
+      }
+      if (exponent_ != 0) {
+        output.writeUInt32(3, exponent_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, baseDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbolDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, symbolDenom_);
+      }
+      if (exponent_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, exponent_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.OracleProto.Denom)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.OracleProto.Denom other = (com.persistence.oracle.v1beta1.OracleProto.Denom) obj;
+
+      if (!getBaseDenom()
+          .equals(other.getBaseDenom())) return false;
+      if (!getSymbolDenom()
+          .equals(other.getSymbolDenom())) return false;
+      if (getExponent()
+          != other.getExponent()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BASE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseDenom().hashCode();
+      hash = (37 * hash) + SYMBOL_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbolDenom().hashCode();
+      hash = (37 * hash) + EXPONENT_FIELD_NUMBER;
+      hash = (53 * hash) + getExponent();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.OracleProto.Denom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Denom - the object to hold configurations of each denom
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.Denom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.Denom)
+        com.persistence.oracle.v1beta1.OracleProto.DenomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Denom_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Denom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.OracleProto.Denom.class, com.persistence.oracle.v1beta1.OracleProto.Denom.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.OracleProto.Denom.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        baseDenom_ = "";
+        symbolDenom_ = "";
+        exponent_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_Denom_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.Denom getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.Denom.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.Denom build() {
+        com.persistence.oracle.v1beta1.OracleProto.Denom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.Denom buildPartial() {
+        com.persistence.oracle.v1beta1.OracleProto.Denom result = new com.persistence.oracle.v1beta1.OracleProto.Denom(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.OracleProto.Denom result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.baseDenom_ = baseDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.symbolDenom_ = symbolDenom_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.exponent_ = exponent_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.OracleProto.Denom) {
+          return mergeFrom((com.persistence.oracle.v1beta1.OracleProto.Denom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.OracleProto.Denom other) {
+        if (other == com.persistence.oracle.v1beta1.OracleProto.Denom.getDefaultInstance()) return this;
+        if (!other.getBaseDenom().isEmpty()) {
+          baseDenom_ = other.baseDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSymbolDenom().isEmpty()) {
+          symbolDenom_ = other.symbolDenom_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getExponent() != 0) {
+          setExponent(other.getExponent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                baseDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                symbolDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                exponent_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object baseDenom_ = "";
+      /**
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The baseDenom.
+       */
+      public java.lang.String getBaseDenom() {
+        java.lang.Object ref = baseDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return The bytes for baseDenom.
+       */
+      public com.google.protobuf.ByteString
+          getBaseDenomBytes() {
+        java.lang.Object ref = baseDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        baseDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseDenom() {
+        baseDenom_ = getDefaultInstance().getBaseDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_denom = 1 [json_name = "baseDenom", (.gogoproto.moretags) = "yaml:&#92;"base_denom&#92;""];</code>
+       * @param value The bytes for baseDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        baseDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object symbolDenom_ = "";
+      /**
+       * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @return The symbolDenom.
+       */
+      public java.lang.String getSymbolDenom() {
+        java.lang.Object ref = symbolDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbolDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @return The bytes for symbolDenom.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolDenomBytes() {
+        java.lang.Object ref = symbolDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbolDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @param value The symbolDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbolDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbolDenom() {
+        symbolDenom_ = getDefaultInstance().getSymbolDenom();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol_denom = 2 [json_name = "symbolDenom", (.gogoproto.moretags) = "yaml:&#92;"symbol_denom&#92;""];</code>
+       * @param value The bytes for symbolDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbolDenom_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int exponent_ ;
+      /**
+       * <code>uint32 exponent = 3 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+       * @return The exponent.
+       */
+      @java.lang.Override
+      public int getExponent() {
+        return exponent_;
+      }
+      /**
+       * <code>uint32 exponent = 3 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+       * @param value The exponent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExponent(int value) {
+
+        exponent_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 exponent = 3 [json_name = "exponent", (.gogoproto.moretags) = "yaml:&#92;"exponent&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExponent() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        exponent_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.Denom)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.Denom)
+    private static final com.persistence.oracle.v1beta1.OracleProto.Denom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.OracleProto.Denom();
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.Denom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Denom>
+        PARSER = new com.google.protobuf.AbstractParser<Denom>() {
+      @java.lang.Override
+      public Denom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Denom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Denom> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.Denom getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AggregateExchangeRatePrevoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.AggregateExchangeRatePrevote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The hash.
+     */
+    java.lang.String getHash();
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The bytes for hash.
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
+
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The voter.
+     */
+    java.lang.String getVoter();
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for voter.
+     */
+    com.google.protobuf.ByteString
+        getVoterBytes();
+
+    /**
+     * <code>uint64 submit_block = 3 [json_name = "submitBlock", (.gogoproto.moretags) = "yaml:&#92;"submit_block&#92;""];</code>
+     * @return The submitBlock.
+     */
+    long getSubmitBlock();
+  }
+  /**
+   * <pre>
+   * AggregateExchangeRatePrevote -
+   * struct for aggregate prevoting on the ExchangeRateVote.
+   * The purpose of aggregate prevote is to hide vote exchange rates with hash
+   * which is formatted as hex string in SHA256("{salt}:{exchange
+   * rate}{denom},...,{exchange rate}{denom}:{voter}")
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.AggregateExchangeRatePrevote}
+   */
+  public static final class AggregateExchangeRatePrevote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.AggregateExchangeRatePrevote)
+      AggregateExchangeRatePrevoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AggregateExchangeRatePrevote.newBuilder() to construct.
+    private AggregateExchangeRatePrevote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AggregateExchangeRatePrevote() {
+      hash_ = "";
+      voter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AggregateExchangeRatePrevote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.class, com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.Builder.class);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hash_ = "";
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+     * @return The bytes for hash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voter_ = "";
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The voter.
+     */
+    @java.lang.Override
+    public java.lang.String getVoter() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for voter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterBytes() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBMIT_BLOCK_FIELD_NUMBER = 3;
+    private long submitBlock_ = 0L;
+    /**
+     * <code>uint64 submit_block = 3 [json_name = "submitBlock", (.gogoproto.moretags) = "yaml:&#92;"submit_block&#92;""];</code>
+     * @return The submitBlock.
+     */
+    @java.lang.Override
+    public long getSubmitBlock() {
+      return submitBlock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, voter_);
+      }
+      if (submitBlock_ != 0L) {
+        output.writeUInt64(3, submitBlock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, voter_);
+      }
+      if (submitBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, submitBlock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote other = (com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote) obj;
+
+      if (!getHash()
+          .equals(other.getHash())) return false;
+      if (!getVoter()
+          .equals(other.getVoter())) return false;
+      if (getSubmitBlock()
+          != other.getSubmitBlock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
+      hash = (37 * hash) + VOTER_FIELD_NUMBER;
+      hash = (53 * hash) + getVoter().hashCode();
+      hash = (37 * hash) + SUBMIT_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSubmitBlock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AggregateExchangeRatePrevote -
+     * struct for aggregate prevoting on the ExchangeRateVote.
+     * The purpose of aggregate prevote is to hide vote exchange rates with hash
+     * which is formatted as hex string in SHA256("{salt}:{exchange
+     * rate}{denom},...,{exchange rate}{denom}:{voter}")
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.AggregateExchangeRatePrevote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.AggregateExchangeRatePrevote)
+        com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.class, com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hash_ = "";
+        voter_ = "";
+        submitBlock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote build() {
+        com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote buildPartial() {
+        com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote result = new com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hash_ = hash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voter_ = voter_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.submitBlock_ = submitBlock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote) {
+          return mergeFrom((com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote other) {
+        if (other == com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance()) return this;
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getVoter().isEmpty()) {
+          voter_ = other.voter_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getSubmitBlock() != 0L) {
+          setSubmitBlock(other.getSubmitBlock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                hash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                voter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                submitBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return The hash.
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return The bytes for hash.
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHash() {
+        hash_ = getDefaultInstance().getHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 1 [json_name = "hash", (.gogoproto.moretags) = "yaml:&#92;"hash&#92;""];</code>
+       * @param value The bytes for hash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        hash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object voter_ = "";
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The voter.
+       */
+      public java.lang.String getVoter() {
+        java.lang.Object ref = voter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for voter.
+       */
+      public com.google.protobuf.ByteString
+          getVoterBytes() {
+        java.lang.Object ref = voter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoter() {
+        voter_ = getDefaultInstance().getVoter();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long submitBlock_ ;
+      /**
+       * <code>uint64 submit_block = 3 [json_name = "submitBlock", (.gogoproto.moretags) = "yaml:&#92;"submit_block&#92;""];</code>
+       * @return The submitBlock.
+       */
+      @java.lang.Override
+      public long getSubmitBlock() {
+        return submitBlock_;
+      }
+      /**
+       * <code>uint64 submit_block = 3 [json_name = "submitBlock", (.gogoproto.moretags) = "yaml:&#92;"submit_block&#92;""];</code>
+       * @param value The submitBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubmitBlock(long value) {
+
+        submitBlock_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 submit_block = 3 [json_name = "submitBlock", (.gogoproto.moretags) = "yaml:&#92;"submit_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubmitBlock() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        submitBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.AggregateExchangeRatePrevote)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.AggregateExchangeRatePrevote)
+    private static final com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote();
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AggregateExchangeRatePrevote>
+        PARSER = new com.google.protobuf.AbstractParser<AggregateExchangeRatePrevote>() {
+      @java.lang.Override
+      public AggregateExchangeRatePrevote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AggregateExchangeRatePrevote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AggregateExchangeRatePrevote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRatePrevote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AggregateExchangeRateVoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.AggregateExchangeRateVote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    java.util.List<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple> 
+        getExchangeRateTuplesList();
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple getExchangeRateTuples(int index);
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    int getExchangeRateTuplesCount();
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    java.util.List<? extends com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder> 
+        getExchangeRateTuplesOrBuilderList();
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRateTuplesOrBuilder(
+        int index);
+
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The voter.
+     */
+    java.lang.String getVoter();
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for voter.
+     */
+    com.google.protobuf.ByteString
+        getVoterBytes();
+  }
+  /**
+   * <pre>
+   * AggregateExchangeRateVote - struct for voting on
+   * the exchange rates of USD denominated in various assets.
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.AggregateExchangeRateVote}
+   */
+  public static final class AggregateExchangeRateVote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.AggregateExchangeRateVote)
+      AggregateExchangeRateVoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AggregateExchangeRateVote.newBuilder() to construct.
+    private AggregateExchangeRateVote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AggregateExchangeRateVote() {
+      exchangeRateTuples_ = java.util.Collections.emptyList();
+      voter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AggregateExchangeRateVote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.class, com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.Builder.class);
+    }
+
+    public static final int EXCHANGE_RATE_TUPLES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple> exchangeRateTuples_;
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple> getExchangeRateTuplesList() {
+      return exchangeRateTuples_;
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder> 
+        getExchangeRateTuplesOrBuilderList() {
+      return exchangeRateTuples_;
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public int getExchangeRateTuplesCount() {
+      return exchangeRateTuples_.size();
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple getExchangeRateTuples(int index) {
+      return exchangeRateTuples_.get(index);
+    }
+    /**
+     * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRateTuplesOrBuilder(
+        int index) {
+      return exchangeRateTuples_.get(index);
+    }
+
+    public static final int VOTER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voter_ = "";
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The voter.
+     */
+    @java.lang.Override
+    public java.lang.String getVoter() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        voter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for voter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVoterBytes() {
+      java.lang.Object ref = voter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        voter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < exchangeRateTuples_.size(); i++) {
+        output.writeMessage(1, exchangeRateTuples_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, voter_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < exchangeRateTuples_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, exchangeRateTuples_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, voter_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote other = (com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote) obj;
+
+      if (!getExchangeRateTuplesList()
+          .equals(other.getExchangeRateTuplesList())) return false;
+      if (!getVoter()
+          .equals(other.getVoter())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getExchangeRateTuplesCount() > 0) {
+        hash = (37 * hash) + EXCHANGE_RATE_TUPLES_FIELD_NUMBER;
+        hash = (53 * hash) + getExchangeRateTuplesList().hashCode();
+      }
+      hash = (37 * hash) + VOTER_FIELD_NUMBER;
+      hash = (53 * hash) + getVoter().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AggregateExchangeRateVote - struct for voting on
+     * the exchange rates of USD denominated in various assets.
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.AggregateExchangeRateVote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.AggregateExchangeRateVote)
+        com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.class, com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (exchangeRateTuplesBuilder_ == null) {
+          exchangeRateTuples_ = java.util.Collections.emptyList();
+        } else {
+          exchangeRateTuples_ = null;
+          exchangeRateTuplesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        voter_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote build() {
+        com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote buildPartial() {
+        com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote result = new com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote result) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            exchangeRateTuples_ = java.util.Collections.unmodifiableList(exchangeRateTuples_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.exchangeRateTuples_ = exchangeRateTuples_;
+        } else {
+          result.exchangeRateTuples_ = exchangeRateTuplesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voter_ = voter_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote) {
+          return mergeFrom((com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote other) {
+        if (other == com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote.getDefaultInstance()) return this;
+        if (exchangeRateTuplesBuilder_ == null) {
+          if (!other.exchangeRateTuples_.isEmpty()) {
+            if (exchangeRateTuples_.isEmpty()) {
+              exchangeRateTuples_ = other.exchangeRateTuples_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureExchangeRateTuplesIsMutable();
+              exchangeRateTuples_.addAll(other.exchangeRateTuples_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.exchangeRateTuples_.isEmpty()) {
+            if (exchangeRateTuplesBuilder_.isEmpty()) {
+              exchangeRateTuplesBuilder_.dispose();
+              exchangeRateTuplesBuilder_ = null;
+              exchangeRateTuples_ = other.exchangeRateTuples_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              exchangeRateTuplesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getExchangeRateTuplesFieldBuilder() : null;
+            } else {
+              exchangeRateTuplesBuilder_.addAllMessages(other.exchangeRateTuples_);
+            }
+          }
+        }
+        if (!other.getVoter().isEmpty()) {
+          voter_ = other.voter_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple m =
+                    input.readMessage(
+                        com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.parser(),
+                        extensionRegistry);
+                if (exchangeRateTuplesBuilder_ == null) {
+                  ensureExchangeRateTuplesIsMutable();
+                  exchangeRateTuples_.add(m);
+                } else {
+                  exchangeRateTuplesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                voter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple> exchangeRateTuples_ =
+        java.util.Collections.emptyList();
+      private void ensureExchangeRateTuplesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          exchangeRateTuples_ = new java.util.ArrayList<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple>(exchangeRateTuples_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder> exchangeRateTuplesBuilder_;
+
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public java.util.List<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple> getExchangeRateTuplesList() {
+        if (exchangeRateTuplesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(exchangeRateTuples_);
+        } else {
+          return exchangeRateTuplesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public int getExchangeRateTuplesCount() {
+        if (exchangeRateTuplesBuilder_ == null) {
+          return exchangeRateTuples_.size();
+        } else {
+          return exchangeRateTuplesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple getExchangeRateTuples(int index) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          return exchangeRateTuples_.get(index);
+        } else {
+          return exchangeRateTuplesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder setExchangeRateTuples(
+          int index, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.set(index, value);
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder setExchangeRateTuples(
+          int index, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRateTuples(com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.add(value);
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRateTuples(
+          int index, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.add(index, value);
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRateTuples(
+          com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.add(builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRateTuples(
+          int index, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addAllExchangeRateTuples(
+          java.lang.Iterable<? extends com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple> values) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          ensureExchangeRateTuplesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, exchangeRateTuples_);
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder clearExchangeRateTuples() {
+        if (exchangeRateTuplesBuilder_ == null) {
+          exchangeRateTuples_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder removeExchangeRateTuples(int index) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          ensureExchangeRateTuplesIsMutable();
+          exchangeRateTuples_.remove(index);
+          onChanged();
+        } else {
+          exchangeRateTuplesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder getExchangeRateTuplesBuilder(
+          int index) {
+        return getExchangeRateTuplesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRateTuplesOrBuilder(
+          int index) {
+        if (exchangeRateTuplesBuilder_ == null) {
+          return exchangeRateTuples_.get(index);  } else {
+          return exchangeRateTuplesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public java.util.List<? extends com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder> 
+           getExchangeRateTuplesOrBuilderList() {
+        if (exchangeRateTuplesBuilder_ != null) {
+          return exchangeRateTuplesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(exchangeRateTuples_);
+        }
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder addExchangeRateTuplesBuilder() {
+        return getExchangeRateTuplesFieldBuilder().addBuilder(
+            com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder addExchangeRateTuplesBuilder(
+          int index) {
+        return getExchangeRateTuplesFieldBuilder().addBuilder(
+            index, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .persistence.oracle.v1beta1.ExchangeRateTuple exchange_rate_tuples = 1 [json_name = "exchangeRateTuples", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"exchange_rate_tuples&#92;"", (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public java.util.List<com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder> 
+           getExchangeRateTuplesBuilderList() {
+        return getExchangeRateTuplesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder> 
+          getExchangeRateTuplesFieldBuilder() {
+        if (exchangeRateTuplesBuilder_ == null) {
+          exchangeRateTuplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder>(
+                  exchangeRateTuples_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          exchangeRateTuples_ = null;
+        }
+        return exchangeRateTuplesBuilder_;
+      }
+
+      private java.lang.Object voter_ = "";
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The voter.
+       */
+      public java.lang.String getVoter() {
+        java.lang.Object ref = voter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          voter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for voter.
+       */
+      public com.google.protobuf.ByteString
+          getVoterBytes() {
+        java.lang.Object ref = voter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          voter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        voter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVoter() {
+        voter_ = getDefaultInstance().getVoter();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string voter = 2 [json_name = "voter", (.gogoproto.moretags) = "yaml:&#92;"voter&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for voter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVoterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        voter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.AggregateExchangeRateVote)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.AggregateExchangeRateVote)
+    private static final com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote();
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AggregateExchangeRateVote>
+        PARSER = new com.google.protobuf.AbstractParser<AggregateExchangeRateVote>() {
+      @java.lang.Override
+      public AggregateExchangeRateVote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AggregateExchangeRateVote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AggregateExchangeRateVote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.AggregateExchangeRateVote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExchangeRateTupleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.oracle.v1beta1.ExchangeRateTuple)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+     * @return The exchangeRate.
+     */
+    java.lang.String getExchangeRate();
+    /**
+     * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+     * @return The bytes for exchangeRate.
+     */
+    com.google.protobuf.ByteString
+        getExchangeRateBytes();
+  }
+  /**
+   * <pre>
+   * ExchangeRateTuple - struct to store interpreted exchange rates data to store
+   * </pre>
+   *
+   * Protobuf type {@code persistence.oracle.v1beta1.ExchangeRateTuple}
+   */
+  public static final class ExchangeRateTuple extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.oracle.v1beta1.ExchangeRateTuple)
+      ExchangeRateTupleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExchangeRateTuple.newBuilder() to construct.
+    private ExchangeRateTuple(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExchangeRateTuple() {
+      denom_ = "";
+      exchangeRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExchangeRateTuple();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.class, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXCHANGE_RATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object exchangeRate_ = "";
+    /**
+     * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+     * @return The exchangeRate.
+     */
+    @java.lang.Override
+    public java.lang.String getExchangeRate() {
+      java.lang.Object ref = exchangeRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exchangeRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+     * @return The bytes for exchangeRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExchangeRateBytes() {
+      java.lang.Object ref = exchangeRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exchangeRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exchangeRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, exchangeRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exchangeRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, exchangeRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple)) {
+        return super.equals(obj);
+      }
+      com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple other = (com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getExchangeRate()
+          .equals(other.getExchangeRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + EXCHANGE_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getExchangeRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ExchangeRateTuple - struct to store interpreted exchange rates data to store
+     * </pre>
+     *
+     * Protobuf type {@code persistence.oracle.v1beta1.ExchangeRateTuple}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.oracle.v1beta1.ExchangeRateTuple)
+        com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTupleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.class, com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.Builder.class);
+      }
+
+      // Construct using com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        exchangeRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple getDefaultInstanceForType() {
+        return com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple build() {
+        com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple buildPartial() {
+        com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple result = new com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.exchangeRate_ = exchangeRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple) {
+          return mergeFrom((com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple other) {
+        if (other == com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getExchangeRate().isEmpty()) {
+          exchangeRate_ = other.exchangeRate_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                exchangeRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object exchangeRate_ = "";
+      /**
+       * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+       * @return The exchangeRate.
+       */
+      public java.lang.String getExchangeRate() {
+        java.lang.Object ref = exchangeRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exchangeRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+       * @return The bytes for exchangeRate.
+       */
+      public com.google.protobuf.ByteString
+          getExchangeRateBytes() {
+        java.lang.Object ref = exchangeRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exchangeRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+       * @param value The exchangeRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExchangeRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        exchangeRate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExchangeRate() {
+        exchangeRate_ = getDefaultInstance().getExchangeRate();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string exchange_rate = 2 [json_name = "exchangeRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"exchange_rate&#92;""];</code>
+       * @param value The bytes for exchangeRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExchangeRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        exchangeRate_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.oracle.v1beta1.ExchangeRateTuple)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.oracle.v1beta1.ExchangeRateTuple)
+    private static final com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple();
+    }
+
+    public static com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExchangeRateTuple>
+        PARSER = new com.google.protobuf.AbstractParser<ExchangeRateTuple>() {
+      @java.lang.Override
+      public ExchangeRateTuple parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExchangeRateTuple> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExchangeRateTuple> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.oracle.v1beta1.OracleProto.ExchangeRateTuple getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_Denom_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_Denom_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_AggregateExchangeRatePrevote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_AggregateExchangeRateVote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_oracle_v1beta1_ExchangeRateTuple_fieldAccessorTable;
 
@@ -92,13 +4912,13 @@ public final class OracleProto {
       "nom\022k\n\rexchange_rate\030\002 \001(\tBF\310\336\037\000\332\336\037&gith" +
       "ub.com/cosmos/cosmos-sdk/types.Dec\362\336\037\024ya" +
       "ml:\"exchange_rate\"R\014exchangeRate:\014\210\240\037\000\230\240" +
-      "\037\000\350\240\037\000B\364\001\n\036com.persistence.oracle.v1beta" +
-      "1B\013OracleProtoP\001Z;github.com/persistence" +
-      "One/persistence-sdk/v2/x/oracle/types\242\002\003" +
-      "POX\252\002\032Persistence.Oracle.V1beta1\312\002\032Persi" +
-      "stence\\Oracle\\V1beta1\342\002&Persistence\\Orac" +
-      "le\\V1beta1\\GPBMetadata\352\002\034Persistence::Or" +
-      "acle::V1beta1b\006proto3"
+      "\037\000\350\240\037\000B\362\001\n\036com.persistence.oracle.v1beta" +
+      "1B\013OracleProtoZ;github.com/persistenceOn" +
+      "e/persistence-sdk/v2/x/oracle/types\242\002\003PO" +
+      "X\252\002\032Persistence.Oracle.V1beta1\312\002\032Persist" +
+      "ence\\Oracle\\V1beta1\342\002&Persistence\\Oracle" +
+      "\\V1beta1\\GPBMetadata\352\002\034Persistence::Orac" +
+      "le::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

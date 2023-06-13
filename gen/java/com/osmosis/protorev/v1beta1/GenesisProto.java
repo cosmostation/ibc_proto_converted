@@ -14,9 +14,3097 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Parameters for the protorev module.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * Parameters for the protorev module.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.osmosis.protorev.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * Parameters for the protorev module.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.protorev.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> 
+        getTokenPairArbRoutesList();
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getTokenPairArbRoutes(int index);
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    int getTokenPairArbRoutesCount();
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+        getTokenPairArbRoutesOrBuilderList();
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder getTokenPairArbRoutesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> 
+        getBaseDenomsList();
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getBaseDenoms(int index);
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    int getBaseDenomsCount();
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+        getBaseDenomsOrBuilderList();
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder getBaseDenomsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The pool weights that are being used to calculate the weight (compute cost)
+     * of each route.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return Whether the poolWeights field is set.
+     */
+    boolean hasPoolWeights();
+    /**
+     * <pre>
+     * The pool weights that are being used to calculate the weight (compute cost)
+     * of each route.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return The poolWeights.
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights();
+    /**
+     * <pre>
+     * The pool weights that are being used to calculate the weight (compute cost)
+     * of each route.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder();
+
+    /**
+     * <pre>
+     * The number of days since module genesis.
+     * </pre>
+     *
+     * <code>uint64 days_since_module_genesis = 5 [json_name = "daysSinceModuleGenesis", (.gogoproto.moretags) = "yaml:&#92;"days_since_module_genesis&#92;""];</code>
+     * @return The daysSinceModuleGenesis.
+     */
+    long getDaysSinceModuleGenesis();
+
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getDeveloperFeesList();
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDeveloperFees(int index);
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    int getDeveloperFeesCount();
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getDeveloperFeesOrBuilderList();
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDeveloperFeesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The latest block height that the module has processed.
+     * </pre>
+     *
+     * <code>uint64 latest_block_height = 7 [json_name = "latestBlockHeight", (.gogoproto.moretags) = "yaml:&#92;"latest_block_height&#92;""];</code>
+     * @return The latestBlockHeight.
+     */
+    long getLatestBlockHeight();
+
+    /**
+     * <pre>
+     * The developer account address of the module.
+     * </pre>
+     *
+     * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+     * @return The developerAddress.
+     */
+    java.lang.String getDeveloperAddress();
+    /**
+     * <pre>
+     * The developer account address of the module.
+     * </pre>
+     *
+     * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+     * @return The bytes for developerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeveloperAddressBytes();
+
+    /**
+     * <pre>
+     * Max pool points per block i.e. the maximum compute time (in ms)
+     * that protorev can use per block.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_block = 9 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+     * @return The maxPoolPointsPerBlock.
+     */
+    long getMaxPoolPointsPerBlock();
+
+    /**
+     * <pre>
+     * Max pool points per tx i.e. the maximum compute time (in ms) that
+     * protorev can use per tx.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_tx = 10 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+     * @return The maxPoolPointsPerTx.
+     */
+    long getMaxPoolPointsPerTx();
+
+    /**
+     * <pre>
+     * The number of pool points that have been consumed in the current block.
+     * </pre>
+     *
+     * <code>uint64 point_count_for_block = 11 [json_name = "pointCountForBlock", (.gogoproto.moretags) = "yaml:&#92;"point_count_for_block&#92;""];</code>
+     * @return The pointCountForBlock.
+     */
+    long getPointCountForBlock();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the protorev module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      tokenPairArbRoutes_ = java.util.Collections.emptyList();
+      baseDenoms_ = java.util.Collections.emptyList();
+      developerFees_ = java.util.Collections.emptyList();
+      developerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.GenesisProto.internal_static_osmosis_protorev_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.GenesisProto.internal_static_osmosis_protorev_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.class, com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.osmosis.protorev.v1beta1.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * Parameters for the protorev module.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters for the protorev module.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.osmosis.protorev.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * Parameters for the protorev module.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.protorev.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int TOKEN_PAIR_ARB_ROUTES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> tokenPairArbRoutes_;
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> getTokenPairArbRoutesList() {
+      return tokenPairArbRoutes_;
+    }
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+        getTokenPairArbRoutesOrBuilderList() {
+      return tokenPairArbRoutes_;
+    }
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getTokenPairArbRoutesCount() {
+      return tokenPairArbRoutes_.size();
+    }
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getTokenPairArbRoutes(int index) {
+      return tokenPairArbRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * Token pair arb routes for the protorev module (hot routes).
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder getTokenPairArbRoutesOrBuilder(
+        int index) {
+      return tokenPairArbRoutes_.get(index);
+    }
+
+    public static final int BASE_DENOMS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> baseDenoms_;
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> getBaseDenomsList() {
+      return baseDenoms_;
+    }
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+        getBaseDenomsOrBuilderList() {
+      return baseDenoms_;
+    }
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBaseDenomsCount() {
+      return baseDenoms_.size();
+    }
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getBaseDenoms(int index) {
+      return baseDenoms_.get(index);
+    }
+    /**
+     * <pre>
+     * The base denominations being used to create cyclic arbitrage routes via the
+     * highest liquidity method.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder getBaseDenomsOrBuilder(
+        int index) {
+      return baseDenoms_.get(index);
+    }
+
+    public static final int POOL_WEIGHTS_FIELD_NUMBER = 4;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+    /**
+     * <pre>
+     * The pool weights that are being used to calculate the weight (compute cost)
+     * of each route.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return Whether the poolWeights field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolWeights() {
+      return poolWeights_ != null;
+    }
+    /**
+     * <pre>
+     * The pool weights that are being used to calculate the weight (compute cost)
+     * of each route.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return The poolWeights.
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
+      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    }
+    /**
+     * <pre>
+     * The pool weights that are being used to calculate the weight (compute cost)
+     * of each route.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
+      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    }
+
+    public static final int DAYS_SINCE_MODULE_GENESIS_FIELD_NUMBER = 5;
+    private long daysSinceModuleGenesis_ = 0L;
+    /**
+     * <pre>
+     * The number of days since module genesis.
+     * </pre>
+     *
+     * <code>uint64 days_since_module_genesis = 5 [json_name = "daysSinceModuleGenesis", (.gogoproto.moretags) = "yaml:&#92;"days_since_module_genesis&#92;""];</code>
+     * @return The daysSinceModuleGenesis.
+     */
+    @java.lang.Override
+    public long getDaysSinceModuleGenesis() {
+      return daysSinceModuleGenesis_;
+    }
+
+    public static final int DEVELOPER_FEES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> developerFees_;
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getDeveloperFeesList() {
+      return developerFees_;
+    }
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getDeveloperFeesOrBuilderList() {
+      return developerFees_;
+    }
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getDeveloperFeesCount() {
+      return developerFees_.size();
+    }
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDeveloperFees(int index) {
+      return developerFees_.get(index);
+    }
+    /**
+     * <pre>
+     * The fees the developer account has accumulated over time.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDeveloperFeesOrBuilder(
+        int index) {
+      return developerFees_.get(index);
+    }
+
+    public static final int LATEST_BLOCK_HEIGHT_FIELD_NUMBER = 7;
+    private long latestBlockHeight_ = 0L;
+    /**
+     * <pre>
+     * The latest block height that the module has processed.
+     * </pre>
+     *
+     * <code>uint64 latest_block_height = 7 [json_name = "latestBlockHeight", (.gogoproto.moretags) = "yaml:&#92;"latest_block_height&#92;""];</code>
+     * @return The latestBlockHeight.
+     */
+    @java.lang.Override
+    public long getLatestBlockHeight() {
+      return latestBlockHeight_;
+    }
+
+    public static final int DEVELOPER_ADDRESS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object developerAddress_ = "";
+    /**
+     * <pre>
+     * The developer account address of the module.
+     * </pre>
+     *
+     * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+     * @return The developerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeveloperAddress() {
+      java.lang.Object ref = developerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        developerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The developer account address of the module.
+     * </pre>
+     *
+     * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+     * @return The bytes for developerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeveloperAddressBytes() {
+      java.lang.Object ref = developerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        developerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_POOL_POINTS_PER_BLOCK_FIELD_NUMBER = 9;
+    private long maxPoolPointsPerBlock_ = 0L;
+    /**
+     * <pre>
+     * Max pool points per block i.e. the maximum compute time (in ms)
+     * that protorev can use per block.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_block = 9 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+     * @return The maxPoolPointsPerBlock.
+     */
+    @java.lang.Override
+    public long getMaxPoolPointsPerBlock() {
+      return maxPoolPointsPerBlock_;
+    }
+
+    public static final int MAX_POOL_POINTS_PER_TX_FIELD_NUMBER = 10;
+    private long maxPoolPointsPerTx_ = 0L;
+    /**
+     * <pre>
+     * Max pool points per tx i.e. the maximum compute time (in ms) that
+     * protorev can use per tx.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_tx = 10 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+     * @return The maxPoolPointsPerTx.
+     */
+    @java.lang.Override
+    public long getMaxPoolPointsPerTx() {
+      return maxPoolPointsPerTx_;
+    }
+
+    public static final int POINT_COUNT_FOR_BLOCK_FIELD_NUMBER = 11;
+    private long pointCountForBlock_ = 0L;
+    /**
+     * <pre>
+     * The number of pool points that have been consumed in the current block.
+     * </pre>
+     *
+     * <code>uint64 point_count_for_block = 11 [json_name = "pointCountForBlock", (.gogoproto.moretags) = "yaml:&#92;"point_count_for_block&#92;""];</code>
+     * @return The pointCountForBlock.
+     */
+    @java.lang.Override
+    public long getPointCountForBlock() {
+      return pointCountForBlock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < tokenPairArbRoutes_.size(); i++) {
+        output.writeMessage(2, tokenPairArbRoutes_.get(i));
+      }
+      for (int i = 0; i < baseDenoms_.size(); i++) {
+        output.writeMessage(3, baseDenoms_.get(i));
+      }
+      if (poolWeights_ != null) {
+        output.writeMessage(4, getPoolWeights());
+      }
+      if (daysSinceModuleGenesis_ != 0L) {
+        output.writeUInt64(5, daysSinceModuleGenesis_);
+      }
+      for (int i = 0; i < developerFees_.size(); i++) {
+        output.writeMessage(6, developerFees_.get(i));
+      }
+      if (latestBlockHeight_ != 0L) {
+        output.writeUInt64(7, latestBlockHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, developerAddress_);
+      }
+      if (maxPoolPointsPerBlock_ != 0L) {
+        output.writeUInt64(9, maxPoolPointsPerBlock_);
+      }
+      if (maxPoolPointsPerTx_ != 0L) {
+        output.writeUInt64(10, maxPoolPointsPerTx_);
+      }
+      if (pointCountForBlock_ != 0L) {
+        output.writeUInt64(11, pointCountForBlock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < tokenPairArbRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tokenPairArbRoutes_.get(i));
+      }
+      for (int i = 0; i < baseDenoms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, baseDenoms_.get(i));
+      }
+      if (poolWeights_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPoolWeights());
+      }
+      if (daysSinceModuleGenesis_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, daysSinceModuleGenesis_);
+      }
+      for (int i = 0; i < developerFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, developerFees_.get(i));
+      }
+      if (latestBlockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, latestBlockHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, developerAddress_);
+      }
+      if (maxPoolPointsPerBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, maxPoolPointsPerBlock_);
+      }
+      if (maxPoolPointsPerTx_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, maxPoolPointsPerTx_);
+      }
+      if (pointCountForBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(11, pointCountForBlock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.GenesisProto.GenesisState other = (com.osmosis.protorev.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getTokenPairArbRoutesList()
+          .equals(other.getTokenPairArbRoutesList())) return false;
+      if (!getBaseDenomsList()
+          .equals(other.getBaseDenomsList())) return false;
+      if (hasPoolWeights() != other.hasPoolWeights()) return false;
+      if (hasPoolWeights()) {
+        if (!getPoolWeights()
+            .equals(other.getPoolWeights())) return false;
+      }
+      if (getDaysSinceModuleGenesis()
+          != other.getDaysSinceModuleGenesis()) return false;
+      if (!getDeveloperFeesList()
+          .equals(other.getDeveloperFeesList())) return false;
+      if (getLatestBlockHeight()
+          != other.getLatestBlockHeight()) return false;
+      if (!getDeveloperAddress()
+          .equals(other.getDeveloperAddress())) return false;
+      if (getMaxPoolPointsPerBlock()
+          != other.getMaxPoolPointsPerBlock()) return false;
+      if (getMaxPoolPointsPerTx()
+          != other.getMaxPoolPointsPerTx()) return false;
+      if (getPointCountForBlock()
+          != other.getPointCountForBlock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getTokenPairArbRoutesCount() > 0) {
+        hash = (37 * hash) + TOKEN_PAIR_ARB_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenPairArbRoutesList().hashCode();
+      }
+      if (getBaseDenomsCount() > 0) {
+        hash = (37 * hash) + BASE_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getBaseDenomsList().hashCode();
+      }
+      if (hasPoolWeights()) {
+        hash = (37 * hash) + POOL_WEIGHTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolWeights().hashCode();
+      }
+      hash = (37 * hash) + DAYS_SINCE_MODULE_GENESIS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDaysSinceModuleGenesis());
+      if (getDeveloperFeesCount() > 0) {
+        hash = (37 * hash) + DEVELOPER_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getDeveloperFeesList().hashCode();
+      }
+      hash = (37 * hash) + LATEST_BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLatestBlockHeight());
+      hash = (37 * hash) + DEVELOPER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeveloperAddress().hashCode();
+      hash = (37 * hash) + MAX_POOL_POINTS_PER_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxPoolPointsPerBlock());
+      hash = (37 * hash) + MAX_POOL_POINTS_PER_TX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxPoolPointsPerTx());
+      hash = (37 * hash) + POINT_COUNT_FOR_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPointCountForBlock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the protorev module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.GenesisState)
+        com.osmosis.protorev.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.GenesisProto.internal_static_osmosis_protorev_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.GenesisProto.internal_static_osmosis_protorev_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.class, com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (tokenPairArbRoutesBuilder_ == null) {
+          tokenPairArbRoutes_ = java.util.Collections.emptyList();
+        } else {
+          tokenPairArbRoutes_ = null;
+          tokenPairArbRoutesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (baseDenomsBuilder_ == null) {
+          baseDenoms_ = java.util.Collections.emptyList();
+        } else {
+          baseDenoms_ = null;
+          baseDenomsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        poolWeights_ = null;
+        if (poolWeightsBuilder_ != null) {
+          poolWeightsBuilder_.dispose();
+          poolWeightsBuilder_ = null;
+        }
+        daysSinceModuleGenesis_ = 0L;
+        if (developerFeesBuilder_ == null) {
+          developerFees_ = java.util.Collections.emptyList();
+        } else {
+          developerFees_ = null;
+          developerFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        latestBlockHeight_ = 0L;
+        developerAddress_ = "";
+        maxPoolPointsPerBlock_ = 0L;
+        maxPoolPointsPerTx_ = 0L;
+        pointCountForBlock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.GenesisProto.internal_static_osmosis_protorev_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.GenesisProto.GenesisState build() {
+        com.osmosis.protorev.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.osmosis.protorev.v1beta1.GenesisProto.GenesisState result = new com.osmosis.protorev.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.GenesisProto.GenesisState result) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tokenPairArbRoutes_ = java.util.Collections.unmodifiableList(tokenPairArbRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tokenPairArbRoutes_ = tokenPairArbRoutes_;
+        } else {
+          result.tokenPairArbRoutes_ = tokenPairArbRoutesBuilder_.build();
+        }
+        if (baseDenomsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            baseDenoms_ = java.util.Collections.unmodifiableList(baseDenoms_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.baseDenoms_ = baseDenoms_;
+        } else {
+          result.baseDenoms_ = baseDenomsBuilder_.build();
+        }
+        if (developerFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            developerFees_ = java.util.Collections.unmodifiableList(developerFees_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.developerFees_ = developerFees_;
+        } else {
+          result.developerFees_ = developerFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.poolWeights_ = poolWeightsBuilder_ == null
+              ? poolWeights_
+              : poolWeightsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.daysSinceModuleGenesis_ = daysSinceModuleGenesis_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.latestBlockHeight_ = latestBlockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.developerAddress_ = developerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.maxPoolPointsPerBlock_ = maxPoolPointsPerBlock_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.maxPoolPointsPerTx_ = maxPoolPointsPerTx_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.pointCountForBlock_ = pointCountForBlock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.osmosis.protorev.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (tokenPairArbRoutesBuilder_ == null) {
+          if (!other.tokenPairArbRoutes_.isEmpty()) {
+            if (tokenPairArbRoutes_.isEmpty()) {
+              tokenPairArbRoutes_ = other.tokenPairArbRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTokenPairArbRoutesIsMutable();
+              tokenPairArbRoutes_.addAll(other.tokenPairArbRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenPairArbRoutes_.isEmpty()) {
+            if (tokenPairArbRoutesBuilder_.isEmpty()) {
+              tokenPairArbRoutesBuilder_.dispose();
+              tokenPairArbRoutesBuilder_ = null;
+              tokenPairArbRoutes_ = other.tokenPairArbRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tokenPairArbRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenPairArbRoutesFieldBuilder() : null;
+            } else {
+              tokenPairArbRoutesBuilder_.addAllMessages(other.tokenPairArbRoutes_);
+            }
+          }
+        }
+        if (baseDenomsBuilder_ == null) {
+          if (!other.baseDenoms_.isEmpty()) {
+            if (baseDenoms_.isEmpty()) {
+              baseDenoms_ = other.baseDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureBaseDenomsIsMutable();
+              baseDenoms_.addAll(other.baseDenoms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.baseDenoms_.isEmpty()) {
+            if (baseDenomsBuilder_.isEmpty()) {
+              baseDenomsBuilder_.dispose();
+              baseDenomsBuilder_ = null;
+              baseDenoms_ = other.baseDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              baseDenomsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBaseDenomsFieldBuilder() : null;
+            } else {
+              baseDenomsBuilder_.addAllMessages(other.baseDenoms_);
+            }
+          }
+        }
+        if (other.hasPoolWeights()) {
+          mergePoolWeights(other.getPoolWeights());
+        }
+        if (other.getDaysSinceModuleGenesis() != 0L) {
+          setDaysSinceModuleGenesis(other.getDaysSinceModuleGenesis());
+        }
+        if (developerFeesBuilder_ == null) {
+          if (!other.developerFees_.isEmpty()) {
+            if (developerFees_.isEmpty()) {
+              developerFees_ = other.developerFees_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureDeveloperFeesIsMutable();
+              developerFees_.addAll(other.developerFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.developerFees_.isEmpty()) {
+            if (developerFeesBuilder_.isEmpty()) {
+              developerFeesBuilder_.dispose();
+              developerFeesBuilder_ = null;
+              developerFees_ = other.developerFees_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              developerFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeveloperFeesFieldBuilder() : null;
+            } else {
+              developerFeesBuilder_.addAllMessages(other.developerFees_);
+            }
+          }
+        }
+        if (other.getLatestBlockHeight() != 0L) {
+          setLatestBlockHeight(other.getLatestBlockHeight());
+        }
+        if (!other.getDeveloperAddress().isEmpty()) {
+          developerAddress_ = other.developerAddress_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.getMaxPoolPointsPerBlock() != 0L) {
+          setMaxPoolPointsPerBlock(other.getMaxPoolPointsPerBlock());
+        }
+        if (other.getMaxPoolPointsPerTx() != 0L) {
+          setMaxPoolPointsPerTx(other.getMaxPoolPointsPerTx());
+        }
+        if (other.getPointCountForBlock() != 0L) {
+          setPointCountForBlock(other.getPointCountForBlock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes m =
+                    input.readMessage(
+                        com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.parser(),
+                        extensionRegistry);
+                if (tokenPairArbRoutesBuilder_ == null) {
+                  ensureTokenPairArbRoutesIsMutable();
+                  tokenPairArbRoutes_.add(m);
+                } else {
+                  tokenPairArbRoutesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom m =
+                    input.readMessage(
+                        com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.parser(),
+                        extensionRegistry);
+                if (baseDenomsBuilder_ == null) {
+                  ensureBaseDenomsIsMutable();
+                  baseDenoms_.add(m);
+                } else {
+                  baseDenomsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getPoolWeightsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                daysSinceModuleGenesis_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (developerFeesBuilder_ == null) {
+                  ensureDeveloperFeesIsMutable();
+                  developerFees_.add(m);
+                } else {
+                  developerFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 56: {
+                latestBlockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                developerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 72: {
+                maxPoolPointsPerBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                maxPoolPointsPerTx_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                pointCountForBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.osmosis.protorev.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ParamsProto.Params, com.osmosis.protorev.v1beta1.ParamsProto.Params.Builder, com.osmosis.protorev.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.osmosis.protorev.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.osmosis.protorev.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.osmosis.protorev.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.osmosis.protorev.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.osmosis.protorev.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.osmosis.protorev.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.osmosis.protorev.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for the protorev module.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ParamsProto.Params, com.osmosis.protorev.v1beta1.ParamsProto.Params.Builder, com.osmosis.protorev.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ParamsProto.Params, com.osmosis.protorev.v1beta1.ParamsProto.Params.Builder, com.osmosis.protorev.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> tokenPairArbRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenPairArbRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tokenPairArbRoutes_ = new java.util.ArrayList<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes>(tokenPairArbRoutes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> tokenPairArbRoutesBuilder_;
+
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> getTokenPairArbRoutesList() {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenPairArbRoutes_);
+        } else {
+          return tokenPairArbRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public int getTokenPairArbRoutesCount() {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          return tokenPairArbRoutes_.size();
+        } else {
+          return tokenPairArbRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getTokenPairArbRoutes(int index) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          return tokenPairArbRoutes_.get(index);
+        } else {
+          return tokenPairArbRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder setTokenPairArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes value) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.set(index, value);
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder setTokenPairArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder builderForValue) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder addTokenPairArbRoutes(com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes value) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.add(value);
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder addTokenPairArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes value) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.add(index, value);
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder addTokenPairArbRoutes(
+          com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder builderForValue) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder addTokenPairArbRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder builderForValue) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder addAllTokenPairArbRoutes(
+          java.lang.Iterable<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> values) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          ensureTokenPairArbRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenPairArbRoutes_);
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder clearTokenPairArbRoutes() {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          tokenPairArbRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public Builder removeTokenPairArbRoutes(int index) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          ensureTokenPairArbRoutesIsMutable();
+          tokenPairArbRoutes_.remove(index);
+          onChanged();
+        } else {
+          tokenPairArbRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder getTokenPairArbRoutesBuilder(
+          int index) {
+        return getTokenPairArbRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder getTokenPairArbRoutesOrBuilder(
+          int index) {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          return tokenPairArbRoutes_.get(index);  } else {
+          return tokenPairArbRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+           getTokenPairArbRoutesOrBuilderList() {
+        if (tokenPairArbRoutesBuilder_ != null) {
+          return tokenPairArbRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenPairArbRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder addTokenPairArbRoutesBuilder() {
+        return getTokenPairArbRoutesFieldBuilder().addBuilder(
+            com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder addTokenPairArbRoutesBuilder(
+          int index) {
+        return getTokenPairArbRoutesFieldBuilder().addBuilder(
+            index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Token pair arb routes for the protorev module (hot routes).
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes token_pair_arb_routes = 2 [json_name = "tokenPairArbRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"token_pair_arb_routes&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder> 
+           getTokenPairArbRoutesBuilderList() {
+        return getTokenPairArbRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+          getTokenPairArbRoutesFieldBuilder() {
+        if (tokenPairArbRoutesBuilder_ == null) {
+          tokenPairArbRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder>(
+                  tokenPairArbRoutes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenPairArbRoutes_ = null;
+        }
+        return tokenPairArbRoutesBuilder_;
+      }
+
+      private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> baseDenoms_ =
+        java.util.Collections.emptyList();
+      private void ensureBaseDenomsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          baseDenoms_ = new java.util.ArrayList<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom>(baseDenoms_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> baseDenomsBuilder_;
+
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> getBaseDenomsList() {
+        if (baseDenomsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(baseDenoms_);
+        } else {
+          return baseDenomsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public int getBaseDenomsCount() {
+        if (baseDenomsBuilder_ == null) {
+          return baseDenoms_.size();
+        } else {
+          return baseDenomsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getBaseDenoms(int index) {
+        if (baseDenomsBuilder_ == null) {
+          return baseDenoms_.get(index);
+        } else {
+          return baseDenomsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder setBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom value) {
+        if (baseDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.set(index, value);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder setBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder builderForValue) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          baseDenomsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom value) {
+        if (baseDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(value);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom value) {
+        if (baseDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(index, value);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(
+          com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder builderForValue) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder builderForValue) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addAllBaseDenoms(
+          java.lang.Iterable<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> values) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, baseDenoms_);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder clearBaseDenoms() {
+        if (baseDenomsBuilder_ == null) {
+          baseDenoms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder removeBaseDenoms(int index) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.remove(index);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder getBaseDenomsBuilder(
+          int index) {
+        return getBaseDenomsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder getBaseDenomsOrBuilder(
+          int index) {
+        if (baseDenomsBuilder_ == null) {
+          return baseDenoms_.get(index);  } else {
+          return baseDenomsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+           getBaseDenomsOrBuilderList() {
+        if (baseDenomsBuilder_ != null) {
+          return baseDenomsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(baseDenoms_);
+        }
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder addBaseDenomsBuilder() {
+        return getBaseDenomsFieldBuilder().addBuilder(
+            com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder addBaseDenomsBuilder(
+          int index) {
+        return getBaseDenomsFieldBuilder().addBuilder(
+            index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The base denominations being used to create cyclic arbitrage routes via the
+       * highest liquidity method.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 3 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder> 
+           getBaseDenomsBuilderList() {
+        return getBaseDenomsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+          getBaseDenomsFieldBuilder() {
+        if (baseDenomsBuilder_ == null) {
+          baseDenomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder>(
+                  baseDenoms_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          baseDenoms_ = null;
+        }
+        return baseDenomsBuilder_;
+      }
+
+      private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> poolWeightsBuilder_;
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * @return Whether the poolWeights field is set.
+       */
+      public boolean hasPoolWeights() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * @return The poolWeights.
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
+        if (poolWeightsBuilder_ == null) {
+          return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+        } else {
+          return poolWeightsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder setPoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
+        if (poolWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolWeights_ = value;
+        } else {
+          poolWeightsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder setPoolWeights(
+          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder builderForValue) {
+        if (poolWeightsBuilder_ == null) {
+          poolWeights_ = builderForValue.build();
+        } else {
+          poolWeightsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder mergePoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
+        if (poolWeightsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            poolWeights_ != null &&
+            poolWeights_ != com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance()) {
+            getPoolWeightsBuilder().mergeFrom(value);
+          } else {
+            poolWeights_ = value;
+          }
+        } else {
+          poolWeightsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder clearPoolWeights() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        poolWeights_ = null;
+        if (poolWeightsBuilder_ != null) {
+          poolWeightsBuilder_.dispose();
+          poolWeightsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder getPoolWeightsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPoolWeightsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
+        if (poolWeightsBuilder_ != null) {
+          return poolWeightsBuilder_.getMessageOrBuilder();
+        } else {
+          return poolWeights_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+        }
+      }
+      /**
+       * <pre>
+       * The pool weights that are being used to calculate the weight (compute cost)
+       * of each route.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 4 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> 
+          getPoolWeightsFieldBuilder() {
+        if (poolWeightsBuilder_ == null) {
+          poolWeightsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder>(
+                  getPoolWeights(),
+                  getParentForChildren(),
+                  isClean());
+          poolWeights_ = null;
+        }
+        return poolWeightsBuilder_;
+      }
+
+      private long daysSinceModuleGenesis_ ;
+      /**
+       * <pre>
+       * The number of days since module genesis.
+       * </pre>
+       *
+       * <code>uint64 days_since_module_genesis = 5 [json_name = "daysSinceModuleGenesis", (.gogoproto.moretags) = "yaml:&#92;"days_since_module_genesis&#92;""];</code>
+       * @return The daysSinceModuleGenesis.
+       */
+      @java.lang.Override
+      public long getDaysSinceModuleGenesis() {
+        return daysSinceModuleGenesis_;
+      }
+      /**
+       * <pre>
+       * The number of days since module genesis.
+       * </pre>
+       *
+       * <code>uint64 days_since_module_genesis = 5 [json_name = "daysSinceModuleGenesis", (.gogoproto.moretags) = "yaml:&#92;"days_since_module_genesis&#92;""];</code>
+       * @param value The daysSinceModuleGenesis to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDaysSinceModuleGenesis(long value) {
+
+        daysSinceModuleGenesis_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of days since module genesis.
+       * </pre>
+       *
+       * <code>uint64 days_since_module_genesis = 5 [json_name = "daysSinceModuleGenesis", (.gogoproto.moretags) = "yaml:&#92;"days_since_module_genesis&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDaysSinceModuleGenesis() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        daysSinceModuleGenesis_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> developerFees_ =
+        java.util.Collections.emptyList();
+      private void ensureDeveloperFeesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          developerFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(developerFees_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> developerFeesBuilder_;
+
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getDeveloperFeesList() {
+        if (developerFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(developerFees_);
+        } else {
+          return developerFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public int getDeveloperFeesCount() {
+        if (developerFeesBuilder_ == null) {
+          return developerFees_.size();
+        } else {
+          return developerFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDeveloperFees(int index) {
+        if (developerFeesBuilder_ == null) {
+          return developerFees_.get(index);
+        } else {
+          return developerFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder setDeveloperFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (developerFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeveloperFeesIsMutable();
+          developerFees_.set(index, value);
+          onChanged();
+        } else {
+          developerFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder setDeveloperFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (developerFeesBuilder_ == null) {
+          ensureDeveloperFeesIsMutable();
+          developerFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          developerFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder addDeveloperFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (developerFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeveloperFeesIsMutable();
+          developerFees_.add(value);
+          onChanged();
+        } else {
+          developerFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder addDeveloperFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (developerFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeveloperFeesIsMutable();
+          developerFees_.add(index, value);
+          onChanged();
+        } else {
+          developerFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder addDeveloperFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (developerFeesBuilder_ == null) {
+          ensureDeveloperFeesIsMutable();
+          developerFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          developerFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder addDeveloperFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (developerFeesBuilder_ == null) {
+          ensureDeveloperFeesIsMutable();
+          developerFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          developerFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder addAllDeveloperFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (developerFeesBuilder_ == null) {
+          ensureDeveloperFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, developerFees_);
+          onChanged();
+        } else {
+          developerFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder clearDeveloperFees() {
+        if (developerFeesBuilder_ == null) {
+          developerFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          developerFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public Builder removeDeveloperFees(int index) {
+        if (developerFeesBuilder_ == null) {
+          ensureDeveloperFeesIsMutable();
+          developerFees_.remove(index);
+          onChanged();
+        } else {
+          developerFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDeveloperFeesBuilder(
+          int index) {
+        return getDeveloperFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDeveloperFeesOrBuilder(
+          int index) {
+        if (developerFeesBuilder_ == null) {
+          return developerFees_.get(index);  } else {
+          return developerFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getDeveloperFeesOrBuilderList() {
+        if (developerFeesBuilder_ != null) {
+          return developerFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(developerFees_);
+        }
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addDeveloperFeesBuilder() {
+        return getDeveloperFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addDeveloperFeesBuilder(
+          int index) {
+        return getDeveloperFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The fees the developer account has accumulated over time.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin developer_fees = 6 [json_name = "developerFees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_fees&#92;""];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getDeveloperFeesBuilderList() {
+        return getDeveloperFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDeveloperFeesFieldBuilder() {
+        if (developerFeesBuilder_ == null) {
+          developerFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  developerFees_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          developerFees_ = null;
+        }
+        return developerFeesBuilder_;
+      }
+
+      private long latestBlockHeight_ ;
+      /**
+       * <pre>
+       * The latest block height that the module has processed.
+       * </pre>
+       *
+       * <code>uint64 latest_block_height = 7 [json_name = "latestBlockHeight", (.gogoproto.moretags) = "yaml:&#92;"latest_block_height&#92;""];</code>
+       * @return The latestBlockHeight.
+       */
+      @java.lang.Override
+      public long getLatestBlockHeight() {
+        return latestBlockHeight_;
+      }
+      /**
+       * <pre>
+       * The latest block height that the module has processed.
+       * </pre>
+       *
+       * <code>uint64 latest_block_height = 7 [json_name = "latestBlockHeight", (.gogoproto.moretags) = "yaml:&#92;"latest_block_height&#92;""];</code>
+       * @param value The latestBlockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestBlockHeight(long value) {
+
+        latestBlockHeight_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest block height that the module has processed.
+       * </pre>
+       *
+       * <code>uint64 latest_block_height = 7 [json_name = "latestBlockHeight", (.gogoproto.moretags) = "yaml:&#92;"latest_block_height&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        latestBlockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object developerAddress_ = "";
+      /**
+       * <pre>
+       * The developer account address of the module.
+       * </pre>
+       *
+       * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+       * @return The developerAddress.
+       */
+      public java.lang.String getDeveloperAddress() {
+        java.lang.Object ref = developerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          developerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The developer account address of the module.
+       * </pre>
+       *
+       * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+       * @return The bytes for developerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeveloperAddressBytes() {
+        java.lang.Object ref = developerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          developerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The developer account address of the module.
+       * </pre>
+       *
+       * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+       * @param value The developerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        developerAddress_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The developer account address of the module.
+       * </pre>
+       *
+       * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeveloperAddress() {
+        developerAddress_ = getDefaultInstance().getDeveloperAddress();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The developer account address of the module.
+       * </pre>
+       *
+       * <code>string developer_address = 8 [json_name = "developerAddress", (.gogoproto.moretags) = "yaml:&#92;"developer_address&#92;"", (.cosmos_proto.scalar) = "cosmos.Address"];</code>
+       * @param value The bytes for developerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        developerAddress_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private long maxPoolPointsPerBlock_ ;
+      /**
+       * <pre>
+       * Max pool points per block i.e. the maximum compute time (in ms)
+       * that protorev can use per block.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_block = 9 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+       * @return The maxPoolPointsPerBlock.
+       */
+      @java.lang.Override
+      public long getMaxPoolPointsPerBlock() {
+        return maxPoolPointsPerBlock_;
+      }
+      /**
+       * <pre>
+       * Max pool points per block i.e. the maximum compute time (in ms)
+       * that protorev can use per block.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_block = 9 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+       * @param value The maxPoolPointsPerBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPoolPointsPerBlock(long value) {
+
+        maxPoolPointsPerBlock_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max pool points per block i.e. the maximum compute time (in ms)
+       * that protorev can use per block.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_block = 9 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPoolPointsPerBlock() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        maxPoolPointsPerBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxPoolPointsPerTx_ ;
+      /**
+       * <pre>
+       * Max pool points per tx i.e. the maximum compute time (in ms) that
+       * protorev can use per tx.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_tx = 10 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+       * @return The maxPoolPointsPerTx.
+       */
+      @java.lang.Override
+      public long getMaxPoolPointsPerTx() {
+        return maxPoolPointsPerTx_;
+      }
+      /**
+       * <pre>
+       * Max pool points per tx i.e. the maximum compute time (in ms) that
+       * protorev can use per tx.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_tx = 10 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+       * @param value The maxPoolPointsPerTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPoolPointsPerTx(long value) {
+
+        maxPoolPointsPerTx_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Max pool points per tx i.e. the maximum compute time (in ms) that
+       * protorev can use per tx.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_tx = 10 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPoolPointsPerTx() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        maxPoolPointsPerTx_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long pointCountForBlock_ ;
+      /**
+       * <pre>
+       * The number of pool points that have been consumed in the current block.
+       * </pre>
+       *
+       * <code>uint64 point_count_for_block = 11 [json_name = "pointCountForBlock", (.gogoproto.moretags) = "yaml:&#92;"point_count_for_block&#92;""];</code>
+       * @return The pointCountForBlock.
+       */
+      @java.lang.Override
+      public long getPointCountForBlock() {
+        return pointCountForBlock_;
+      }
+      /**
+       * <pre>
+       * The number of pool points that have been consumed in the current block.
+       * </pre>
+       *
+       * <code>uint64 point_count_for_block = 11 [json_name = "pointCountForBlock", (.gogoproto.moretags) = "yaml:&#92;"point_count_for_block&#92;""];</code>
+       * @param value The pointCountForBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPointCountForBlock(long value) {
+
+        pointCountForBlock_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of pool points that have been consumed in the current block.
+       * </pre>
+       *
+       * <code>uint64 point_count_for_block = 11 [json_name = "pointCountForBlock", (.gogoproto.moretags) = "yaml:&#92;"point_count_for_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPointCountForBlock() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        pointCountForBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.GenesisState)
+    private static final com.osmosis.protorev.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.osmosis.protorev.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -60,12 +3148,12 @@ public final class GenesisProto {
       "_points_per_tx\"R\022maxPoolPointsPerTx\022S\n\025p" +
       "oint_count_for_block\030\013 \001(\004B \362\336\037\034yaml:\"po" +
       "int_count_for_block\"R\022pointCountForBlock" +
-      "B\344\001\n\034com.osmosis.protorev.v1beta1B\014Genes" +
-      "isProtoP\001Z4github.com/osmosis-labs/osmos" +
-      "is/v15/x/protorev/types\242\002\003OPX\252\002\030Osmosis." +
-      "Protorev.V1beta1\312\002\030Osmosis\\Protorev\\V1be" +
-      "ta1\342\002$Osmosis\\Protorev\\V1beta1\\GPBMetada" +
-      "ta\352\002\032Osmosis::Protorev::V1beta1b\006proto3"
+      "B\342\001\n\034com.osmosis.protorev.v1beta1B\014Genes" +
+      "isProtoZ4github.com/osmosis-labs/osmosis" +
+      "/v15/x/protorev/types\242\002\003OPX\252\002\030Osmosis.Pr" +
+      "otorev.V1beta1\312\002\030Osmosis\\Protorev\\V1beta" +
+      "1\342\002$Osmosis\\Protorev\\V1beta1\\GPBMetadata" +
+      "\352\002\032Osmosis::Protorev::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

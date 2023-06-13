@@ -14,29 +14,6033 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datadeal.v2alpha2.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal> 
+        getDealsList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.DealProto.Deal getDeals(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    int getDealsCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder> 
+        getDealsOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder getDealsOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 next_deal_number = 2 [json_name = "nextDealNumber"];</code>
+     * @return The nextDealNumber.
+     */
+    long getNextDealNumber();
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale> 
+        getDataSalesList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale getDataSales(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataSalesCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder> 
+        getDataSalesOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder getDataSalesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote> 
+        getDataVerificationVotesList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote getDataVerificationVotes(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataVerificationVotesCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder> 
+        getDataVerificationVotesOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder getDataVerificationVotesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote> 
+        getDataDeliveryVotesList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote getDataDeliveryVotes(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataDeliveryVotesCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder> 
+        getDataDeliveryVotesOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder getDataDeliveryVotesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement> 
+        getDataVerificationQueueElementsList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement getDataVerificationQueueElements(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataVerificationQueueElementsCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder> 
+        getDataVerificationQueueElementsOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder getDataVerificationQueueElementsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement> 
+        getDataDeliveryQueueElementsList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement getDataDeliveryQueueElements(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataDeliveryQueueElementsCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder> 
+        getDataDeliveryQueueElementsOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder getDataDeliveryQueueElementsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement> 
+        getDealQueueElementsList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement getDealQueueElements(int index);
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    int getDealQueueElementsCount();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder> 
+        getDealQueueElementsOrBuilderList();
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder getDealQueueElementsOrBuilder(
+        int index);
+
+    /**
+     * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.Params getParams();
+    /**
+     * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the datadeal module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datadeal.v2alpha2.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datadeal.v2alpha2.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      deals_ = java.util.Collections.emptyList();
+      dataSales_ = java.util.Collections.emptyList();
+      dataVerificationVotes_ = java.util.Collections.emptyList();
+      dataDeliveryVotes_ = java.util.Collections.emptyList();
+      dataVerificationQueueElements_ = java.util.Collections.emptyList();
+      dataDeliveryQueueElements_ = java.util.Collections.emptyList();
+      dealQueueElements_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.class, com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int DEALS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal> deals_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal> getDealsList() {
+      return deals_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder> 
+        getDealsOrBuilderList() {
+      return deals_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDealsCount() {
+      return deals_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.DealProto.Deal getDeals(int index) {
+      return deals_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder getDealsOrBuilder(
+        int index) {
+      return deals_.get(index);
+    }
+
+    public static final int NEXT_DEAL_NUMBER_FIELD_NUMBER = 2;
+    private long nextDealNumber_ = 0L;
+    /**
+     * <code>uint64 next_deal_number = 2 [json_name = "nextDealNumber"];</code>
+     * @return The nextDealNumber.
+     */
+    @java.lang.Override
+    public long getNextDealNumber() {
+      return nextDealNumber_;
+    }
+
+    public static final int DATA_SALES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale> dataSales_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale> getDataSalesList() {
+      return dataSales_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder> 
+        getDataSalesOrBuilderList() {
+      return dataSales_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataSalesCount() {
+      return dataSales_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale getDataSales(int index) {
+      return dataSales_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder getDataSalesOrBuilder(
+        int index) {
+      return dataSales_.get(index);
+    }
+
+    public static final int DATA_VERIFICATION_VOTES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote> dataVerificationVotes_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote> getDataVerificationVotesList() {
+      return dataVerificationVotes_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder> 
+        getDataVerificationVotesOrBuilderList() {
+      return dataVerificationVotes_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataVerificationVotesCount() {
+      return dataVerificationVotes_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote getDataVerificationVotes(int index) {
+      return dataVerificationVotes_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder getDataVerificationVotesOrBuilder(
+        int index) {
+      return dataVerificationVotes_.get(index);
+    }
+
+    public static final int DATA_DELIVERY_VOTES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote> dataDeliveryVotes_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote> getDataDeliveryVotesList() {
+      return dataDeliveryVotes_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder> 
+        getDataDeliveryVotesOrBuilderList() {
+      return dataDeliveryVotes_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataDeliveryVotesCount() {
+      return dataDeliveryVotes_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote getDataDeliveryVotes(int index) {
+      return dataDeliveryVotes_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder getDataDeliveryVotesOrBuilder(
+        int index) {
+      return dataDeliveryVotes_.get(index);
+    }
+
+    public static final int DATA_VERIFICATION_QUEUE_ELEMENTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement> dataVerificationQueueElements_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement> getDataVerificationQueueElementsList() {
+      return dataVerificationQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder> 
+        getDataVerificationQueueElementsOrBuilderList() {
+      return dataVerificationQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataVerificationQueueElementsCount() {
+      return dataVerificationQueueElements_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement getDataVerificationQueueElements(int index) {
+      return dataVerificationQueueElements_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder getDataVerificationQueueElementsOrBuilder(
+        int index) {
+      return dataVerificationQueueElements_.get(index);
+    }
+
+    public static final int DATA_DELIVERY_QUEUE_ELEMENTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement> dataDeliveryQueueElements_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement> getDataDeliveryQueueElementsList() {
+      return dataDeliveryQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder> 
+        getDataDeliveryQueueElementsOrBuilderList() {
+      return dataDeliveryQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataDeliveryQueueElementsCount() {
+      return dataDeliveryQueueElements_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement getDataDeliveryQueueElements(int index) {
+      return dataDeliveryQueueElements_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder getDataDeliveryQueueElementsOrBuilder(
+        int index) {
+      return dataDeliveryQueueElements_.get(index);
+    }
+
+    public static final int DEAL_QUEUE_ELEMENTS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement> dealQueueElements_;
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement> getDealQueueElementsList() {
+      return dealQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder> 
+        getDealQueueElementsOrBuilderList() {
+      return dealQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDealQueueElementsCount() {
+      return dealQueueElements_.size();
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement getDealQueueElements(int index) {
+      return dealQueueElements_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder getDealQueueElementsOrBuilder(
+        int index) {
+      return dealQueueElements_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 9;
+    private com.panacea.datadeal.v2alpha2.GenesisProto.Params params_;
+    /**
+     * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.Params getParams() {
+      return params_ == null ? com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < deals_.size(); i++) {
+        output.writeMessage(1, deals_.get(i));
+      }
+      if (nextDealNumber_ != 0L) {
+        output.writeUInt64(2, nextDealNumber_);
+      }
+      for (int i = 0; i < dataSales_.size(); i++) {
+        output.writeMessage(3, dataSales_.get(i));
+      }
+      for (int i = 0; i < dataVerificationVotes_.size(); i++) {
+        output.writeMessage(4, dataVerificationVotes_.get(i));
+      }
+      for (int i = 0; i < dataDeliveryVotes_.size(); i++) {
+        output.writeMessage(5, dataDeliveryVotes_.get(i));
+      }
+      for (int i = 0; i < dataVerificationQueueElements_.size(); i++) {
+        output.writeMessage(6, dataVerificationQueueElements_.get(i));
+      }
+      for (int i = 0; i < dataDeliveryQueueElements_.size(); i++) {
+        output.writeMessage(7, dataDeliveryQueueElements_.get(i));
+      }
+      for (int i = 0; i < dealQueueElements_.size(); i++) {
+        output.writeMessage(8, dealQueueElements_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(9, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < deals_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, deals_.get(i));
+      }
+      if (nextDealNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, nextDealNumber_);
+      }
+      for (int i = 0; i < dataSales_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dataSales_.get(i));
+      }
+      for (int i = 0; i < dataVerificationVotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, dataVerificationVotes_.get(i));
+      }
+      for (int i = 0; i < dataDeliveryVotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, dataDeliveryVotes_.get(i));
+      }
+      for (int i = 0; i < dataVerificationQueueElements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, dataVerificationQueueElements_.get(i));
+      }
+      for (int i = 0; i < dataDeliveryQueueElements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, dataDeliveryQueueElements_.get(i));
+      }
+      for (int i = 0; i < dealQueueElements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, dealQueueElements_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState other = (com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState) obj;
+
+      if (!getDealsList()
+          .equals(other.getDealsList())) return false;
+      if (getNextDealNumber()
+          != other.getNextDealNumber()) return false;
+      if (!getDataSalesList()
+          .equals(other.getDataSalesList())) return false;
+      if (!getDataVerificationVotesList()
+          .equals(other.getDataVerificationVotesList())) return false;
+      if (!getDataDeliveryVotesList()
+          .equals(other.getDataDeliveryVotesList())) return false;
+      if (!getDataVerificationQueueElementsList()
+          .equals(other.getDataVerificationQueueElementsList())) return false;
+      if (!getDataDeliveryQueueElementsList()
+          .equals(other.getDataDeliveryQueueElementsList())) return false;
+      if (!getDealQueueElementsList()
+          .equals(other.getDealQueueElementsList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDealsCount() > 0) {
+        hash = (37 * hash) + DEALS_FIELD_NUMBER;
+        hash = (53 * hash) + getDealsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_DEAL_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNextDealNumber());
+      if (getDataSalesCount() > 0) {
+        hash = (37 * hash) + DATA_SALES_FIELD_NUMBER;
+        hash = (53 * hash) + getDataSalesList().hashCode();
+      }
+      if (getDataVerificationVotesCount() > 0) {
+        hash = (37 * hash) + DATA_VERIFICATION_VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getDataVerificationVotesList().hashCode();
+      }
+      if (getDataDeliveryVotesCount() > 0) {
+        hash = (37 * hash) + DATA_DELIVERY_VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getDataDeliveryVotesList().hashCode();
+      }
+      if (getDataVerificationQueueElementsCount() > 0) {
+        hash = (37 * hash) + DATA_VERIFICATION_QUEUE_ELEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataVerificationQueueElementsList().hashCode();
+      }
+      if (getDataDeliveryQueueElementsCount() > 0) {
+        hash = (37 * hash) + DATA_DELIVERY_QUEUE_ELEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataDeliveryQueueElementsList().hashCode();
+      }
+      if (getDealQueueElementsCount() > 0) {
+        hash = (37 * hash) + DEAL_QUEUE_ELEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDealQueueElementsList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the datadeal module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datadeal.v2alpha2.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datadeal.v2alpha2.GenesisState)
+        com.panacea.datadeal.v2alpha2.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.class, com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (dealsBuilder_ == null) {
+          deals_ = java.util.Collections.emptyList();
+        } else {
+          deals_ = null;
+          dealsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nextDealNumber_ = 0L;
+        if (dataSalesBuilder_ == null) {
+          dataSales_ = java.util.Collections.emptyList();
+        } else {
+          dataSales_ = null;
+          dataSalesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (dataVerificationVotesBuilder_ == null) {
+          dataVerificationVotes_ = java.util.Collections.emptyList();
+        } else {
+          dataVerificationVotes_ = null;
+          dataVerificationVotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (dataDeliveryVotesBuilder_ == null) {
+          dataDeliveryVotes_ = java.util.Collections.emptyList();
+        } else {
+          dataDeliveryVotes_ = null;
+          dataDeliveryVotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          dataVerificationQueueElements_ = java.util.Collections.emptyList();
+        } else {
+          dataVerificationQueueElements_ = null;
+          dataVerificationQueueElementsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          dataDeliveryQueueElements_ = java.util.Collections.emptyList();
+        } else {
+          dataDeliveryQueueElements_ = null;
+          dataDeliveryQueueElementsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (dealQueueElementsBuilder_ == null) {
+          dealQueueElements_ = java.util.Collections.emptyList();
+        } else {
+          dealQueueElements_ = null;
+          dealQueueElementsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState build() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState buildPartial() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState result = new com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState result) {
+        if (dealsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            deals_ = java.util.Collections.unmodifiableList(deals_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.deals_ = deals_;
+        } else {
+          result.deals_ = dealsBuilder_.build();
+        }
+        if (dataSalesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            dataSales_ = java.util.Collections.unmodifiableList(dataSales_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dataSales_ = dataSales_;
+        } else {
+          result.dataSales_ = dataSalesBuilder_.build();
+        }
+        if (dataVerificationVotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            dataVerificationVotes_ = java.util.Collections.unmodifiableList(dataVerificationVotes_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.dataVerificationVotes_ = dataVerificationVotes_;
+        } else {
+          result.dataVerificationVotes_ = dataVerificationVotesBuilder_.build();
+        }
+        if (dataDeliveryVotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            dataDeliveryVotes_ = java.util.Collections.unmodifiableList(dataDeliveryVotes_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.dataDeliveryVotes_ = dataDeliveryVotes_;
+        } else {
+          result.dataDeliveryVotes_ = dataDeliveryVotesBuilder_.build();
+        }
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            dataVerificationQueueElements_ = java.util.Collections.unmodifiableList(dataVerificationQueueElements_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.dataVerificationQueueElements_ = dataVerificationQueueElements_;
+        } else {
+          result.dataVerificationQueueElements_ = dataVerificationQueueElementsBuilder_.build();
+        }
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            dataDeliveryQueueElements_ = java.util.Collections.unmodifiableList(dataDeliveryQueueElements_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.dataDeliveryQueueElements_ = dataDeliveryQueueElements_;
+        } else {
+          result.dataDeliveryQueueElements_ = dataDeliveryQueueElementsBuilder_.build();
+        }
+        if (dealQueueElementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            dealQueueElements_ = java.util.Collections.unmodifiableList(dealQueueElements_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.dealQueueElements_ = dealQueueElements_;
+        } else {
+          result.dealQueueElements_ = dealQueueElementsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nextDealNumber_ = nextDealNumber_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState) {
+          return mergeFrom((com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState other) {
+        if (other == com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (dealsBuilder_ == null) {
+          if (!other.deals_.isEmpty()) {
+            if (deals_.isEmpty()) {
+              deals_ = other.deals_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDealsIsMutable();
+              deals_.addAll(other.deals_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deals_.isEmpty()) {
+            if (dealsBuilder_.isEmpty()) {
+              dealsBuilder_.dispose();
+              dealsBuilder_ = null;
+              deals_ = other.deals_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              dealsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDealsFieldBuilder() : null;
+            } else {
+              dealsBuilder_.addAllMessages(other.deals_);
+            }
+          }
+        }
+        if (other.getNextDealNumber() != 0L) {
+          setNextDealNumber(other.getNextDealNumber());
+        }
+        if (dataSalesBuilder_ == null) {
+          if (!other.dataSales_.isEmpty()) {
+            if (dataSales_.isEmpty()) {
+              dataSales_ = other.dataSales_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDataSalesIsMutable();
+              dataSales_.addAll(other.dataSales_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataSales_.isEmpty()) {
+            if (dataSalesBuilder_.isEmpty()) {
+              dataSalesBuilder_.dispose();
+              dataSalesBuilder_ = null;
+              dataSales_ = other.dataSales_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dataSalesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataSalesFieldBuilder() : null;
+            } else {
+              dataSalesBuilder_.addAllMessages(other.dataSales_);
+            }
+          }
+        }
+        if (dataVerificationVotesBuilder_ == null) {
+          if (!other.dataVerificationVotes_.isEmpty()) {
+            if (dataVerificationVotes_.isEmpty()) {
+              dataVerificationVotes_ = other.dataVerificationVotes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureDataVerificationVotesIsMutable();
+              dataVerificationVotes_.addAll(other.dataVerificationVotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataVerificationVotes_.isEmpty()) {
+            if (dataVerificationVotesBuilder_.isEmpty()) {
+              dataVerificationVotesBuilder_.dispose();
+              dataVerificationVotesBuilder_ = null;
+              dataVerificationVotes_ = other.dataVerificationVotes_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              dataVerificationVotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataVerificationVotesFieldBuilder() : null;
+            } else {
+              dataVerificationVotesBuilder_.addAllMessages(other.dataVerificationVotes_);
+            }
+          }
+        }
+        if (dataDeliveryVotesBuilder_ == null) {
+          if (!other.dataDeliveryVotes_.isEmpty()) {
+            if (dataDeliveryVotes_.isEmpty()) {
+              dataDeliveryVotes_ = other.dataDeliveryVotes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureDataDeliveryVotesIsMutable();
+              dataDeliveryVotes_.addAll(other.dataDeliveryVotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataDeliveryVotes_.isEmpty()) {
+            if (dataDeliveryVotesBuilder_.isEmpty()) {
+              dataDeliveryVotesBuilder_.dispose();
+              dataDeliveryVotesBuilder_ = null;
+              dataDeliveryVotes_ = other.dataDeliveryVotes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              dataDeliveryVotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataDeliveryVotesFieldBuilder() : null;
+            } else {
+              dataDeliveryVotesBuilder_.addAllMessages(other.dataDeliveryVotes_);
+            }
+          }
+        }
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          if (!other.dataVerificationQueueElements_.isEmpty()) {
+            if (dataVerificationQueueElements_.isEmpty()) {
+              dataVerificationQueueElements_ = other.dataVerificationQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureDataVerificationQueueElementsIsMutable();
+              dataVerificationQueueElements_.addAll(other.dataVerificationQueueElements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataVerificationQueueElements_.isEmpty()) {
+            if (dataVerificationQueueElementsBuilder_.isEmpty()) {
+              dataVerificationQueueElementsBuilder_.dispose();
+              dataVerificationQueueElementsBuilder_ = null;
+              dataVerificationQueueElements_ = other.dataVerificationQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              dataVerificationQueueElementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataVerificationQueueElementsFieldBuilder() : null;
+            } else {
+              dataVerificationQueueElementsBuilder_.addAllMessages(other.dataVerificationQueueElements_);
+            }
+          }
+        }
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          if (!other.dataDeliveryQueueElements_.isEmpty()) {
+            if (dataDeliveryQueueElements_.isEmpty()) {
+              dataDeliveryQueueElements_ = other.dataDeliveryQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureDataDeliveryQueueElementsIsMutable();
+              dataDeliveryQueueElements_.addAll(other.dataDeliveryQueueElements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataDeliveryQueueElements_.isEmpty()) {
+            if (dataDeliveryQueueElementsBuilder_.isEmpty()) {
+              dataDeliveryQueueElementsBuilder_.dispose();
+              dataDeliveryQueueElementsBuilder_ = null;
+              dataDeliveryQueueElements_ = other.dataDeliveryQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              dataDeliveryQueueElementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataDeliveryQueueElementsFieldBuilder() : null;
+            } else {
+              dataDeliveryQueueElementsBuilder_.addAllMessages(other.dataDeliveryQueueElements_);
+            }
+          }
+        }
+        if (dealQueueElementsBuilder_ == null) {
+          if (!other.dealQueueElements_.isEmpty()) {
+            if (dealQueueElements_.isEmpty()) {
+              dealQueueElements_ = other.dealQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureDealQueueElementsIsMutable();
+              dealQueueElements_.addAll(other.dealQueueElements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dealQueueElements_.isEmpty()) {
+            if (dealQueueElementsBuilder_.isEmpty()) {
+              dealQueueElementsBuilder_.dispose();
+              dealQueueElementsBuilder_ = null;
+              dealQueueElements_ = other.dealQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              dealQueueElementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDealQueueElementsFieldBuilder() : null;
+            } else {
+              dealQueueElementsBuilder_.addAllMessages(other.dealQueueElements_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.panacea.datadeal.v2alpha2.DealProto.Deal m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.DealProto.Deal.parser(),
+                        extensionRegistry);
+                if (dealsBuilder_ == null) {
+                  ensureDealsIsMutable();
+                  deals_.add(m);
+                } else {
+                  dealsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                nextDealNumber_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.parser(),
+                        extensionRegistry);
+                if (dataSalesBuilder_ == null) {
+                  ensureDataSalesIsMutable();
+                  dataSales_.add(m);
+                } else {
+                  dataSalesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.parser(),
+                        extensionRegistry);
+                if (dataVerificationVotesBuilder_ == null) {
+                  ensureDataVerificationVotesIsMutable();
+                  dataVerificationVotes_.add(m);
+                } else {
+                  dataVerificationVotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.parser(),
+                        extensionRegistry);
+                if (dataDeliveryVotesBuilder_ == null) {
+                  ensureDataDeliveryVotesIsMutable();
+                  dataDeliveryVotes_.add(m);
+                } else {
+                  dataDeliveryVotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.parser(),
+                        extensionRegistry);
+                if (dataVerificationQueueElementsBuilder_ == null) {
+                  ensureDataVerificationQueueElementsIsMutable();
+                  dataVerificationQueueElements_.add(m);
+                } else {
+                  dataVerificationQueueElementsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.parser(),
+                        extensionRegistry);
+                if (dataDeliveryQueueElementsBuilder_ == null) {
+                  ensureDataDeliveryQueueElementsIsMutable();
+                  dataDeliveryQueueElements_.add(m);
+                } else {
+                  dataDeliveryQueueElementsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement m =
+                    input.readMessage(
+                        com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.parser(),
+                        extensionRegistry);
+                if (dealQueueElementsBuilder_ == null) {
+                  ensureDealQueueElementsIsMutable();
+                  dealQueueElements_.add(m);
+                } else {
+                  dealQueueElementsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal> deals_ =
+        java.util.Collections.emptyList();
+      private void ensureDealsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          deals_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.DealProto.Deal>(deals_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.DealProto.Deal, com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder, com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder> dealsBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal> getDealsList() {
+        if (dealsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deals_);
+        } else {
+          return dealsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDealsCount() {
+        if (dealsBuilder_ == null) {
+          return deals_.size();
+        } else {
+          return dealsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DealProto.Deal getDeals(int index) {
+        if (dealsBuilder_ == null) {
+          return deals_.get(index);
+        } else {
+          return dealsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeals(
+          int index, com.panacea.datadeal.v2alpha2.DealProto.Deal value) {
+        if (dealsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealsIsMutable();
+          deals_.set(index, value);
+          onChanged();
+        } else {
+          dealsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeals(
+          int index, com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder builderForValue) {
+        if (dealsBuilder_ == null) {
+          ensureDealsIsMutable();
+          deals_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dealsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeals(com.panacea.datadeal.v2alpha2.DealProto.Deal value) {
+        if (dealsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealsIsMutable();
+          deals_.add(value);
+          onChanged();
+        } else {
+          dealsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeals(
+          int index, com.panacea.datadeal.v2alpha2.DealProto.Deal value) {
+        if (dealsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealsIsMutable();
+          deals_.add(index, value);
+          onChanged();
+        } else {
+          dealsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeals(
+          com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder builderForValue) {
+        if (dealsBuilder_ == null) {
+          ensureDealsIsMutable();
+          deals_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dealsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeals(
+          int index, com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder builderForValue) {
+        if (dealsBuilder_ == null) {
+          ensureDealsIsMutable();
+          deals_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dealsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDeals(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.DealProto.Deal> values) {
+        if (dealsBuilder_ == null) {
+          ensureDealsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deals_);
+          onChanged();
+        } else {
+          dealsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDeals() {
+        if (dealsBuilder_ == null) {
+          deals_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          dealsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDeals(int index) {
+        if (dealsBuilder_ == null) {
+          ensureDealsIsMutable();
+          deals_.remove(index);
+          onChanged();
+        } else {
+          dealsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder getDealsBuilder(
+          int index) {
+        return getDealsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder getDealsOrBuilder(
+          int index) {
+        if (dealsBuilder_ == null) {
+          return deals_.get(index);  } else {
+          return dealsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder> 
+           getDealsOrBuilderList() {
+        if (dealsBuilder_ != null) {
+          return dealsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deals_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder addDealsBuilder() {
+        return getDealsFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.DealProto.Deal.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder addDealsBuilder(
+          int index) {
+        return getDealsFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.DealProto.Deal.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.Deal deals = 1 [json_name = "deals", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder> 
+           getDealsBuilderList() {
+        return getDealsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.DealProto.Deal, com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder, com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder> 
+          getDealsFieldBuilder() {
+        if (dealsBuilder_ == null) {
+          dealsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.DealProto.Deal, com.panacea.datadeal.v2alpha2.DealProto.Deal.Builder, com.panacea.datadeal.v2alpha2.DealProto.DealOrBuilder>(
+                  deals_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deals_ = null;
+        }
+        return dealsBuilder_;
+      }
+
+      private long nextDealNumber_ ;
+      /**
+       * <code>uint64 next_deal_number = 2 [json_name = "nextDealNumber"];</code>
+       * @return The nextDealNumber.
+       */
+      @java.lang.Override
+      public long getNextDealNumber() {
+        return nextDealNumber_;
+      }
+      /**
+       * <code>uint64 next_deal_number = 2 [json_name = "nextDealNumber"];</code>
+       * @param value The nextDealNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextDealNumber(long value) {
+
+        nextDealNumber_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 next_deal_number = 2 [json_name = "nextDealNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextDealNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nextDealNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale> dataSales_ =
+        java.util.Collections.emptyList();
+      private void ensureDataSalesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          dataSales_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale>(dataSales_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder> dataSalesBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale> getDataSalesList() {
+        if (dataSalesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataSales_);
+        } else {
+          return dataSalesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataSalesCount() {
+        if (dataSalesBuilder_ == null) {
+          return dataSales_.size();
+        } else {
+          return dataSalesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale getDataSales(int index) {
+        if (dataSalesBuilder_ == null) {
+          return dataSales_.get(index);
+        } else {
+          return dataSalesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataSales(
+          int index, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale value) {
+        if (dataSalesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataSalesIsMutable();
+          dataSales_.set(index, value);
+          onChanged();
+        } else {
+          dataSalesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataSales(
+          int index, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder builderForValue) {
+        if (dataSalesBuilder_ == null) {
+          ensureDataSalesIsMutable();
+          dataSales_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataSalesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataSales(com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale value) {
+        if (dataSalesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataSalesIsMutable();
+          dataSales_.add(value);
+          onChanged();
+        } else {
+          dataSalesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataSales(
+          int index, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale value) {
+        if (dataSalesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataSalesIsMutable();
+          dataSales_.add(index, value);
+          onChanged();
+        } else {
+          dataSalesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataSales(
+          com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder builderForValue) {
+        if (dataSalesBuilder_ == null) {
+          ensureDataSalesIsMutable();
+          dataSales_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataSalesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataSales(
+          int index, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder builderForValue) {
+        if (dataSalesBuilder_ == null) {
+          ensureDataSalesIsMutable();
+          dataSales_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataSalesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataSales(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale> values) {
+        if (dataSalesBuilder_ == null) {
+          ensureDataSalesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataSales_);
+          onChanged();
+        } else {
+          dataSalesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataSales() {
+        if (dataSalesBuilder_ == null) {
+          dataSales_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dataSalesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataSales(int index) {
+        if (dataSalesBuilder_ == null) {
+          ensureDataSalesIsMutable();
+          dataSales_.remove(index);
+          onChanged();
+        } else {
+          dataSalesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder getDataSalesBuilder(
+          int index) {
+        return getDataSalesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder getDataSalesOrBuilder(
+          int index) {
+        if (dataSalesBuilder_ == null) {
+          return dataSales_.get(index);  } else {
+          return dataSalesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder> 
+           getDataSalesOrBuilderList() {
+        if (dataSalesBuilder_ != null) {
+          return dataSalesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataSales_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder addDataSalesBuilder() {
+        return getDataSalesFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder addDataSalesBuilder(
+          int index) {
+        return getDataSalesFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataSale data_sales = 3 [json_name = "dataSales", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder> 
+           getDataSalesBuilderList() {
+        return getDataSalesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder> 
+          getDataSalesFieldBuilder() {
+        if (dataSalesBuilder_ == null) {
+          dataSalesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSale.Builder, com.panacea.datadeal.v2alpha2.DatasaleProto.DataSaleOrBuilder>(
+                  dataSales_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataSales_ = null;
+        }
+        return dataSalesBuilder_;
+      }
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote> dataVerificationVotes_ =
+        java.util.Collections.emptyList();
+      private void ensureDataVerificationVotesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          dataVerificationVotes_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote>(dataVerificationVotes_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder> dataVerificationVotesBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote> getDataVerificationVotesList() {
+        if (dataVerificationVotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataVerificationVotes_);
+        } else {
+          return dataVerificationVotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataVerificationVotesCount() {
+        if (dataVerificationVotesBuilder_ == null) {
+          return dataVerificationVotes_.size();
+        } else {
+          return dataVerificationVotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote getDataVerificationVotes(int index) {
+        if (dataVerificationVotesBuilder_ == null) {
+          return dataVerificationVotes_.get(index);
+        } else {
+          return dataVerificationVotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataVerificationVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote value) {
+        if (dataVerificationVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.set(index, value);
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataVerificationVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder builderForValue) {
+        if (dataVerificationVotesBuilder_ == null) {
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationVotes(com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote value) {
+        if (dataVerificationVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.add(value);
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote value) {
+        if (dataVerificationVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.add(index, value);
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationVotes(
+          com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder builderForValue) {
+        if (dataVerificationVotesBuilder_ == null) {
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder builderForValue) {
+        if (dataVerificationVotesBuilder_ == null) {
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataVerificationVotes(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote> values) {
+        if (dataVerificationVotesBuilder_ == null) {
+          ensureDataVerificationVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataVerificationVotes_);
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataVerificationVotes() {
+        if (dataVerificationVotesBuilder_ == null) {
+          dataVerificationVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataVerificationVotes(int index) {
+        if (dataVerificationVotesBuilder_ == null) {
+          ensureDataVerificationVotesIsMutable();
+          dataVerificationVotes_.remove(index);
+          onChanged();
+        } else {
+          dataVerificationVotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder getDataVerificationVotesBuilder(
+          int index) {
+        return getDataVerificationVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder getDataVerificationVotesOrBuilder(
+          int index) {
+        if (dataVerificationVotesBuilder_ == null) {
+          return dataVerificationVotes_.get(index);  } else {
+          return dataVerificationVotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder> 
+           getDataVerificationVotesOrBuilderList() {
+        if (dataVerificationVotesBuilder_ != null) {
+          return dataVerificationVotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataVerificationVotes_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder addDataVerificationVotesBuilder() {
+        return getDataVerificationVotesFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder addDataVerificationVotesBuilder(
+          int index) {
+        return getDataVerificationVotesFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationVote data_verification_votes = 4 [json_name = "dataVerificationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder> 
+           getDataVerificationVotesBuilderList() {
+        return getDataVerificationVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder> 
+          getDataVerificationVotesFieldBuilder() {
+        if (dataVerificationVotesBuilder_ == null) {
+          dataVerificationVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVote.Builder, com.panacea.datadeal.v2alpha2.TxProto.DataVerificationVoteOrBuilder>(
+                  dataVerificationVotes_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataVerificationVotes_ = null;
+        }
+        return dataVerificationVotesBuilder_;
+      }
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote> dataDeliveryVotes_ =
+        java.util.Collections.emptyList();
+      private void ensureDataDeliveryVotesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          dataDeliveryVotes_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote>(dataDeliveryVotes_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder> dataDeliveryVotesBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote> getDataDeliveryVotesList() {
+        if (dataDeliveryVotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataDeliveryVotes_);
+        } else {
+          return dataDeliveryVotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataDeliveryVotesCount() {
+        if (dataDeliveryVotesBuilder_ == null) {
+          return dataDeliveryVotes_.size();
+        } else {
+          return dataDeliveryVotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote getDataDeliveryVotes(int index) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          return dataDeliveryVotes_.get(index);
+        } else {
+          return dataDeliveryVotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataDeliveryVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote value) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.set(index, value);
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataDeliveryVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder builderForValue) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryVotes(com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote value) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.add(value);
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote value) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.add(index, value);
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryVotes(
+          com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder builderForValue) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryVotes(
+          int index, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder builderForValue) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataDeliveryVotes(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote> values) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          ensureDataDeliveryVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataDeliveryVotes_);
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataDeliveryVotes() {
+        if (dataDeliveryVotesBuilder_ == null) {
+          dataDeliveryVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataDeliveryVotes(int index) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          ensureDataDeliveryVotesIsMutable();
+          dataDeliveryVotes_.remove(index);
+          onChanged();
+        } else {
+          dataDeliveryVotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder getDataDeliveryVotesBuilder(
+          int index) {
+        return getDataDeliveryVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder getDataDeliveryVotesOrBuilder(
+          int index) {
+        if (dataDeliveryVotesBuilder_ == null) {
+          return dataDeliveryVotes_.get(index);  } else {
+          return dataDeliveryVotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder> 
+           getDataDeliveryVotesOrBuilderList() {
+        if (dataDeliveryVotesBuilder_ != null) {
+          return dataDeliveryVotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataDeliveryVotes_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder addDataDeliveryVotesBuilder() {
+        return getDataDeliveryVotesFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder addDataDeliveryVotesBuilder(
+          int index) {
+        return getDataDeliveryVotesFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryVote data_delivery_votes = 5 [json_name = "dataDeliveryVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder> 
+           getDataDeliveryVotesBuilderList() {
+        return getDataDeliveryVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder> 
+          getDataDeliveryVotesFieldBuilder() {
+        if (dataDeliveryVotesBuilder_ == null) {
+          dataDeliveryVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVote.Builder, com.panacea.datadeal.v2alpha2.TxProto.DataDeliveryVoteOrBuilder>(
+                  dataDeliveryVotes_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataDeliveryVotes_ = null;
+        }
+        return dataDeliveryVotesBuilder_;
+      }
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement> dataVerificationQueueElements_ =
+        java.util.Collections.emptyList();
+      private void ensureDataVerificationQueueElementsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          dataVerificationQueueElements_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement>(dataVerificationQueueElements_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder> dataVerificationQueueElementsBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement> getDataVerificationQueueElementsList() {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataVerificationQueueElements_);
+        } else {
+          return dataVerificationQueueElementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataVerificationQueueElementsCount() {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          return dataVerificationQueueElements_.size();
+        } else {
+          return dataVerificationQueueElementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement getDataVerificationQueueElements(int index) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          return dataVerificationQueueElements_.get(index);
+        } else {
+          return dataVerificationQueueElementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataVerificationQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement value) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.set(index, value);
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataVerificationQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder builderForValue) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationQueueElements(com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement value) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.add(value);
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement value) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.add(index, value);
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationQueueElements(
+          com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder builderForValue) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataVerificationQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder builderForValue) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataVerificationQueueElements(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement> values) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          ensureDataVerificationQueueElementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataVerificationQueueElements_);
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataVerificationQueueElements() {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          dataVerificationQueueElements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataVerificationQueueElements(int index) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          ensureDataVerificationQueueElementsIsMutable();
+          dataVerificationQueueElements_.remove(index);
+          onChanged();
+        } else {
+          dataVerificationQueueElementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder getDataVerificationQueueElementsBuilder(
+          int index) {
+        return getDataVerificationQueueElementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder getDataVerificationQueueElementsOrBuilder(
+          int index) {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          return dataVerificationQueueElements_.get(index);  } else {
+          return dataVerificationQueueElementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder> 
+           getDataVerificationQueueElementsOrBuilderList() {
+        if (dataVerificationQueueElementsBuilder_ != null) {
+          return dataVerificationQueueElementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataVerificationQueueElements_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder addDataVerificationQueueElementsBuilder() {
+        return getDataVerificationQueueElementsFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder addDataVerificationQueueElementsBuilder(
+          int index) {
+        return getDataVerificationQueueElementsFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataVerificationQueueElement data_verification_queue_elements = 6 [json_name = "dataVerificationQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder> 
+           getDataVerificationQueueElementsBuilderList() {
+        return getDataVerificationQueueElementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder> 
+          getDataVerificationQueueElementsFieldBuilder() {
+        if (dataVerificationQueueElementsBuilder_ == null) {
+          dataVerificationQueueElementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder>(
+                  dataVerificationQueueElements_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataVerificationQueueElements_ = null;
+        }
+        return dataVerificationQueueElementsBuilder_;
+      }
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement> dataDeliveryQueueElements_ =
+        java.util.Collections.emptyList();
+      private void ensureDataDeliveryQueueElementsIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          dataDeliveryQueueElements_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement>(dataDeliveryQueueElements_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder> dataDeliveryQueueElementsBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement> getDataDeliveryQueueElementsList() {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataDeliveryQueueElements_);
+        } else {
+          return dataDeliveryQueueElementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataDeliveryQueueElementsCount() {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          return dataDeliveryQueueElements_.size();
+        } else {
+          return dataDeliveryQueueElementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement getDataDeliveryQueueElements(int index) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          return dataDeliveryQueueElements_.get(index);
+        } else {
+          return dataDeliveryQueueElementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataDeliveryQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement value) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.set(index, value);
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataDeliveryQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder builderForValue) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryQueueElements(com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement value) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.add(value);
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement value) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.add(index, value);
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryQueueElements(
+          com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder builderForValue) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataDeliveryQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder builderForValue) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataDeliveryQueueElements(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement> values) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          ensureDataDeliveryQueueElementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataDeliveryQueueElements_);
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataDeliveryQueueElements() {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          dataDeliveryQueueElements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataDeliveryQueueElements(int index) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          ensureDataDeliveryQueueElementsIsMutable();
+          dataDeliveryQueueElements_.remove(index);
+          onChanged();
+        } else {
+          dataDeliveryQueueElementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder getDataDeliveryQueueElementsBuilder(
+          int index) {
+        return getDataDeliveryQueueElementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder getDataDeliveryQueueElementsOrBuilder(
+          int index) {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          return dataDeliveryQueueElements_.get(index);  } else {
+          return dataDeliveryQueueElementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder> 
+           getDataDeliveryQueueElementsOrBuilderList() {
+        if (dataDeliveryQueueElementsBuilder_ != null) {
+          return dataDeliveryQueueElementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataDeliveryQueueElements_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder addDataDeliveryQueueElementsBuilder() {
+        return getDataDeliveryQueueElementsFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder addDataDeliveryQueueElementsBuilder(
+          int index) {
+        return getDataDeliveryQueueElementsFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DataDeliveryQueueElement data_delivery_queue_elements = 7 [json_name = "dataDeliveryQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder> 
+           getDataDeliveryQueueElementsBuilderList() {
+        return getDataDeliveryQueueElementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder> 
+          getDataDeliveryQueueElementsFieldBuilder() {
+        if (dataDeliveryQueueElementsBuilder_ == null) {
+          dataDeliveryQueueElementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder>(
+                  dataDeliveryQueueElements_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataDeliveryQueueElements_ = null;
+        }
+        return dataDeliveryQueueElementsBuilder_;
+      }
+
+      private java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement> dealQueueElements_ =
+        java.util.Collections.emptyList();
+      private void ensureDealQueueElementsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          dealQueueElements_ = new java.util.ArrayList<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement>(dealQueueElements_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder> dealQueueElementsBuilder_;
+
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement> getDealQueueElementsList() {
+        if (dealQueueElementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dealQueueElements_);
+        } else {
+          return dealQueueElementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDealQueueElementsCount() {
+        if (dealQueueElementsBuilder_ == null) {
+          return dealQueueElements_.size();
+        } else {
+          return dealQueueElementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement getDealQueueElements(int index) {
+        if (dealQueueElementsBuilder_ == null) {
+          return dealQueueElements_.get(index);
+        } else {
+          return dealQueueElementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDealQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement value) {
+        if (dealQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.set(index, value);
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDealQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder builderForValue) {
+        if (dealQueueElementsBuilder_ == null) {
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDealQueueElements(com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement value) {
+        if (dealQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.add(value);
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDealQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement value) {
+        if (dealQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.add(index, value);
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDealQueueElements(
+          com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder builderForValue) {
+        if (dealQueueElementsBuilder_ == null) {
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDealQueueElements(
+          int index, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder builderForValue) {
+        if (dealQueueElementsBuilder_ == null) {
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDealQueueElements(
+          java.lang.Iterable<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement> values) {
+        if (dealQueueElementsBuilder_ == null) {
+          ensureDealQueueElementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dealQueueElements_);
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDealQueueElements() {
+        if (dealQueueElementsBuilder_ == null) {
+          dealQueueElements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDealQueueElements(int index) {
+        if (dealQueueElementsBuilder_ == null) {
+          ensureDealQueueElementsIsMutable();
+          dealQueueElements_.remove(index);
+          onChanged();
+        } else {
+          dealQueueElementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder getDealQueueElementsBuilder(
+          int index) {
+        return getDealQueueElementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder getDealQueueElementsOrBuilder(
+          int index) {
+        if (dealQueueElementsBuilder_ == null) {
+          return dealQueueElements_.get(index);  } else {
+          return dealQueueElementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder> 
+           getDealQueueElementsOrBuilderList() {
+        if (dealQueueElementsBuilder_ != null) {
+          return dealQueueElementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dealQueueElements_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder addDealQueueElementsBuilder() {
+        return getDealQueueElementsFieldBuilder().addBuilder(
+            com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder addDealQueueElementsBuilder(
+          int index) {
+        return getDealQueueElementsFieldBuilder().addBuilder(
+            index, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.datadeal.v2alpha2.DealQueueElement deal_queue_elements = 8 [json_name = "dealQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder> 
+           getDealQueueElementsBuilderList() {
+        return getDealQueueElementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder> 
+          getDealQueueElementsFieldBuilder() {
+        if (dealQueueElementsBuilder_ == null) {
+          dealQueueElementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder>(
+                  dealQueueElements_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dealQueueElements_ = null;
+        }
+        return dealQueueElementsBuilder_;
+      }
+
+      private com.panacea.datadeal.v2alpha2.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.Params, com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.panacea.datadeal.v2alpha2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.panacea.datadeal.v2alpha2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            params_ != null &&
+            params_ != com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.panacea.datadeal.v2alpha2.Params params = 9 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datadeal.v2alpha2.GenesisProto.Params, com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datadeal.v2alpha2.GenesisProto.Params, com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder, com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datadeal.v2alpha2.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datadeal.v2alpha2.GenesisState)
+    private static final com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState();
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datadeal.v2alpha2.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 deal_deactivation_param = 1 [json_name = "dealDeactivationParam"];</code>
+     * @return The dealDeactivationParam.
+     */
+    long getDealDeactivationParam();
+  }
+  /**
+   * <pre>
+   * Params defines the datadeal module's params.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datadeal.v2alpha2.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datadeal.v2alpha2.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datadeal.v2alpha2.GenesisProto.Params.class, com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int DEAL_DEACTIVATION_PARAM_FIELD_NUMBER = 1;
+    private long dealDeactivationParam_ = 0L;
+    /**
+     * <code>int64 deal_deactivation_param = 1 [json_name = "dealDeactivationParam"];</code>
+     * @return The dealDeactivationParam.
+     */
+    @java.lang.Override
+    public long getDealDeactivationParam() {
+      return dealDeactivationParam_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dealDeactivationParam_ != 0L) {
+        output.writeInt64(1, dealDeactivationParam_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dealDeactivationParam_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, dealDeactivationParam_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datadeal.v2alpha2.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.panacea.datadeal.v2alpha2.GenesisProto.Params other = (com.panacea.datadeal.v2alpha2.GenesisProto.Params) obj;
+
+      if (getDealDeactivationParam()
+          != other.getDealDeactivationParam()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEAL_DEACTIVATION_PARAM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDealDeactivationParam());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datadeal.v2alpha2.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the datadeal module's params.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datadeal.v2alpha2.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datadeal.v2alpha2.Params)
+        com.panacea.datadeal.v2alpha2.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datadeal.v2alpha2.GenesisProto.Params.class, com.panacea.datadeal.v2alpha2.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dealDeactivationParam_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.Params getDefaultInstanceForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.Params build() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.Params buildPartial() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.Params result = new com.panacea.datadeal.v2alpha2.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datadeal.v2alpha2.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dealDeactivationParam_ = dealDeactivationParam_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datadeal.v2alpha2.GenesisProto.Params) {
+          return mergeFrom((com.panacea.datadeal.v2alpha2.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datadeal.v2alpha2.GenesisProto.Params other) {
+        if (other == com.panacea.datadeal.v2alpha2.GenesisProto.Params.getDefaultInstance()) return this;
+        if (other.getDealDeactivationParam() != 0L) {
+          setDealDeactivationParam(other.getDealDeactivationParam());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                dealDeactivationParam_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long dealDeactivationParam_ ;
+      /**
+       * <code>int64 deal_deactivation_param = 1 [json_name = "dealDeactivationParam"];</code>
+       * @return The dealDeactivationParam.
+       */
+      @java.lang.Override
+      public long getDealDeactivationParam() {
+        return dealDeactivationParam_;
+      }
+      /**
+       * <code>int64 deal_deactivation_param = 1 [json_name = "dealDeactivationParam"];</code>
+       * @param value The dealDeactivationParam to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDealDeactivationParam(long value) {
+
+        dealDeactivationParam_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 deal_deactivation_param = 1 [json_name = "dealDeactivationParam"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDealDeactivationParam() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dealDeactivationParam_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datadeal.v2alpha2.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datadeal.v2alpha2.Params)
+    private static final com.panacea.datadeal.v2alpha2.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datadeal.v2alpha2.GenesisProto.Params();
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataVerificationQueueElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datadeal.v2alpha2.DataVerificationQueueElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The dataHash.
+     */
+    java.lang.String getDataHash();
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The bytes for dataHash.
+     */
+    com.google.protobuf.ByteString
+        getDataHashBytes();
+
+    /**
+     * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+     * @return The dealId.
+     */
+    long getDealId();
+
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the votingEndTime field is set.
+     */
+    boolean hasVotingEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The votingEndTime.
+     */
+    com.google.protobuf.Timestamp getVotingEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * DataVerificationQueue defines a data verification queue.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datadeal.v2alpha2.DataVerificationQueueElement}
+   */
+  public static final class DataVerificationQueueElement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datadeal.v2alpha2.DataVerificationQueueElement)
+      DataVerificationQueueElementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataVerificationQueueElement.newBuilder() to construct.
+    private DataVerificationQueueElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataVerificationQueueElement() {
+      dataHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataVerificationQueueElement();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder.class);
+    }
+
+    public static final int DATA_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataHash_ = "";
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The dataHash.
+     */
+    @java.lang.Override
+    public java.lang.String getDataHash() {
+      java.lang.Object ref = dataHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The bytes for dataHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataHashBytes() {
+      java.lang.Object ref = dataHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEAL_ID_FIELD_NUMBER = 2;
+    private long dealId_ = 0L;
+    /**
+     * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+     * @return The dealId.
+     */
+    @java.lang.Override
+    public long getDealId() {
+      return dealId_;
+    }
+
+    public static final int VOTING_END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp votingEndTime_;
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the votingEndTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingEndTime() {
+      return votingEndTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The votingEndTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getVotingEndTime() {
+      return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder() {
+      return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataHash_);
+      }
+      if (dealId_ != 0L) {
+        output.writeUInt64(2, dealId_);
+      }
+      if (votingEndTime_ != null) {
+        output.writeMessage(3, getVotingEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataHash_);
+      }
+      if (dealId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, dealId_);
+      }
+      if (votingEndTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVotingEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement)) {
+        return super.equals(obj);
+      }
+      com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement other = (com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement) obj;
+
+      if (!getDataHash()
+          .equals(other.getDataHash())) return false;
+      if (getDealId()
+          != other.getDealId()) return false;
+      if (hasVotingEndTime() != other.hasVotingEndTime()) return false;
+      if (hasVotingEndTime()) {
+        if (!getVotingEndTime()
+            .equals(other.getVotingEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getDataHash().hashCode();
+      hash = (37 * hash) + DEAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDealId());
+      if (hasVotingEndTime()) {
+        hash = (37 * hash) + VOTING_END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DataVerificationQueue defines a data verification queue.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datadeal.v2alpha2.DataVerificationQueueElement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datadeal.v2alpha2.DataVerificationQueueElement)
+        com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.Builder.class);
+      }
+
+      // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dataHash_ = "";
+        dealId_ = 0L;
+        votingEndTime_ = null;
+        if (votingEndTimeBuilder_ != null) {
+          votingEndTimeBuilder_.dispose();
+          votingEndTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement getDefaultInstanceForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement build() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement buildPartial() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement result = new com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataHash_ = dataHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dealId_ = dealId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingEndTime_ = votingEndTimeBuilder_ == null
+              ? votingEndTime_
+              : votingEndTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement) {
+          return mergeFrom((com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement other) {
+        if (other == com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement.getDefaultInstance()) return this;
+        if (!other.getDataHash().isEmpty()) {
+          dataHash_ = other.dataHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getDealId() != 0L) {
+          setDealId(other.getDealId());
+        }
+        if (other.hasVotingEndTime()) {
+          mergeVotingEndTime(other.getVotingEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                dataHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                dealId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getVotingEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dataHash_ = "";
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @return The dataHash.
+       */
+      public java.lang.String getDataHash() {
+        java.lang.Object ref = dataHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @return The bytes for dataHash.
+       */
+      public com.google.protobuf.ByteString
+          getDataHashBytes() {
+        java.lang.Object ref = dataHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @param value The dataHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataHash() {
+        dataHash_ = getDefaultInstance().getDataHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @param value The bytes for dataHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long dealId_ ;
+      /**
+       * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+       * @return The dealId.
+       */
+      @java.lang.Override
+      public long getDealId() {
+        return dealId_;
+      }
+      /**
+       * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+       * @param value The dealId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDealId(long value) {
+
+        dealId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDealId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dealId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp votingEndTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> votingEndTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the votingEndTime field is set.
+       */
+      public boolean hasVotingEndTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The votingEndTime.
+       */
+      public com.google.protobuf.Timestamp getVotingEndTime() {
+        if (votingEndTimeBuilder_ == null) {
+          return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+        } else {
+          return votingEndTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setVotingEndTime(com.google.protobuf.Timestamp value) {
+        if (votingEndTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingEndTime_ = value;
+        } else {
+          votingEndTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setVotingEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (votingEndTimeBuilder_ == null) {
+          votingEndTime_ = builderForValue.build();
+        } else {
+          votingEndTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeVotingEndTime(com.google.protobuf.Timestamp value) {
+        if (votingEndTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            votingEndTime_ != null &&
+            votingEndTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getVotingEndTimeBuilder().mergeFrom(value);
+          } else {
+            votingEndTime_ = value;
+          }
+        } else {
+          votingEndTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearVotingEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingEndTime_ = null;
+        if (votingEndTimeBuilder_ != null) {
+          votingEndTimeBuilder_.dispose();
+          votingEndTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getVotingEndTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVotingEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder() {
+        if (votingEndTimeBuilder_ != null) {
+          return votingEndTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return votingEndTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getVotingEndTimeFieldBuilder() {
+        if (votingEndTimeBuilder_ == null) {
+          votingEndTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getVotingEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          votingEndTime_ = null;
+        }
+        return votingEndTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datadeal.v2alpha2.DataVerificationQueueElement)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datadeal.v2alpha2.DataVerificationQueueElement)
+    private static final com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement();
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataVerificationQueueElement>
+        PARSER = new com.google.protobuf.AbstractParser<DataVerificationQueueElement>() {
+      @java.lang.Override
+      public DataVerificationQueueElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataVerificationQueueElement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataVerificationQueueElement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DataVerificationQueueElement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataDeliveryQueueElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datadeal.v2alpha2.DataDeliveryQueueElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The dataHash.
+     */
+    java.lang.String getDataHash();
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The bytes for dataHash.
+     */
+    com.google.protobuf.ByteString
+        getDataHashBytes();
+
+    /**
+     * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+     * @return The dealId.
+     */
+    long getDealId();
+
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the votingEndTime field is set.
+     */
+    boolean hasVotingEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The votingEndTime.
+     */
+    com.google.protobuf.Timestamp getVotingEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * DataDeliveryQueue defines a data delivery queue.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datadeal.v2alpha2.DataDeliveryQueueElement}
+   */
+  public static final class DataDeliveryQueueElement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datadeal.v2alpha2.DataDeliveryQueueElement)
+      DataDeliveryQueueElementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataDeliveryQueueElement.newBuilder() to construct.
+    private DataDeliveryQueueElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataDeliveryQueueElement() {
+      dataHash_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataDeliveryQueueElement();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder.class);
+    }
+
+    public static final int DATA_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataHash_ = "";
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The dataHash.
+     */
+    @java.lang.Override
+    public java.lang.String getDataHash() {
+      java.lang.Object ref = dataHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+     * @return The bytes for dataHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataHashBytes() {
+      java.lang.Object ref = dataHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEAL_ID_FIELD_NUMBER = 2;
+    private long dealId_ = 0L;
+    /**
+     * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+     * @return The dealId.
+     */
+    @java.lang.Override
+    public long getDealId() {
+      return dealId_;
+    }
+
+    public static final int VOTING_END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp votingEndTime_;
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the votingEndTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingEndTime() {
+      return votingEndTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The votingEndTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getVotingEndTime() {
+      return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder() {
+      return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataHash_);
+      }
+      if (dealId_ != 0L) {
+        output.writeUInt64(2, dealId_);
+      }
+      if (votingEndTime_ != null) {
+        output.writeMessage(3, getVotingEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataHash_);
+      }
+      if (dealId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, dealId_);
+      }
+      if (votingEndTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVotingEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement)) {
+        return super.equals(obj);
+      }
+      com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement other = (com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement) obj;
+
+      if (!getDataHash()
+          .equals(other.getDataHash())) return false;
+      if (getDealId()
+          != other.getDealId()) return false;
+      if (hasVotingEndTime() != other.hasVotingEndTime()) return false;
+      if (hasVotingEndTime()) {
+        if (!getVotingEndTime()
+            .equals(other.getVotingEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getDataHash().hashCode();
+      hash = (37 * hash) + DEAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDealId());
+      if (hasVotingEndTime()) {
+        hash = (37 * hash) + VOTING_END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DataDeliveryQueue defines a data delivery queue.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datadeal.v2alpha2.DataDeliveryQueueElement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datadeal.v2alpha2.DataDeliveryQueueElement)
+        com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.Builder.class);
+      }
+
+      // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dataHash_ = "";
+        dealId_ = 0L;
+        votingEndTime_ = null;
+        if (votingEndTimeBuilder_ != null) {
+          votingEndTimeBuilder_.dispose();
+          votingEndTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement getDefaultInstanceForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement build() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement buildPartial() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement result = new com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataHash_ = dataHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dealId_ = dealId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingEndTime_ = votingEndTimeBuilder_ == null
+              ? votingEndTime_
+              : votingEndTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement) {
+          return mergeFrom((com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement other) {
+        if (other == com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement.getDefaultInstance()) return this;
+        if (!other.getDataHash().isEmpty()) {
+          dataHash_ = other.dataHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getDealId() != 0L) {
+          setDealId(other.getDealId());
+        }
+        if (other.hasVotingEndTime()) {
+          mergeVotingEndTime(other.getVotingEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                dataHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                dealId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getVotingEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dataHash_ = "";
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @return The dataHash.
+       */
+      public java.lang.String getDataHash() {
+        java.lang.Object ref = dataHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @return The bytes for dataHash.
+       */
+      public com.google.protobuf.ByteString
+          getDataHashBytes() {
+        java.lang.Object ref = dataHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @param value The dataHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataHash() {
+        dataHash_ = getDefaultInstance().getDataHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_hash = 1 [json_name = "dataHash"];</code>
+       * @param value The bytes for dataHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long dealId_ ;
+      /**
+       * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+       * @return The dealId.
+       */
+      @java.lang.Override
+      public long getDealId() {
+        return dealId_;
+      }
+      /**
+       * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+       * @param value The dealId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDealId(long value) {
+
+        dealId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 deal_id = 2 [json_name = "dealId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDealId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        dealId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp votingEndTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> votingEndTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the votingEndTime field is set.
+       */
+      public boolean hasVotingEndTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The votingEndTime.
+       */
+      public com.google.protobuf.Timestamp getVotingEndTime() {
+        if (votingEndTimeBuilder_ == null) {
+          return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+        } else {
+          return votingEndTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setVotingEndTime(com.google.protobuf.Timestamp value) {
+        if (votingEndTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingEndTime_ = value;
+        } else {
+          votingEndTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setVotingEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (votingEndTimeBuilder_ == null) {
+          votingEndTime_ = builderForValue.build();
+        } else {
+          votingEndTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeVotingEndTime(com.google.protobuf.Timestamp value) {
+        if (votingEndTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            votingEndTime_ != null &&
+            votingEndTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getVotingEndTimeBuilder().mergeFrom(value);
+          } else {
+            votingEndTime_ = value;
+          }
+        } else {
+          votingEndTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearVotingEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingEndTime_ = null;
+        if (votingEndTimeBuilder_ != null) {
+          votingEndTimeBuilder_.dispose();
+          votingEndTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getVotingEndTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVotingEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder() {
+        if (votingEndTimeBuilder_ != null) {
+          return votingEndTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return votingEndTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getVotingEndTimeFieldBuilder() {
+        if (votingEndTimeBuilder_ == null) {
+          votingEndTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getVotingEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          votingEndTime_ = null;
+        }
+        return votingEndTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datadeal.v2alpha2.DataDeliveryQueueElement)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datadeal.v2alpha2.DataDeliveryQueueElement)
+    private static final com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement();
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataDeliveryQueueElement>
+        PARSER = new com.google.protobuf.AbstractParser<DataDeliveryQueueElement>() {
+      @java.lang.Override
+      public DataDeliveryQueueElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataDeliveryQueueElement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataDeliveryQueueElement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DataDeliveryQueueElement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DealQueueElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datadeal.v2alpha2.DealQueueElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 deal_id = 1 [json_name = "dealId"];</code>
+     * @return The dealId.
+     */
+    long getDealId();
+
+    /**
+     * <code>int64 deactivation_height = 2 [json_name = "deactivationHeight"];</code>
+     * @return The deactivationHeight.
+     */
+    long getDeactivationHeight();
+  }
+  /**
+   * <pre>
+   * DealQueue defines a deal queue.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datadeal.v2alpha2.DealQueueElement}
+   */
+  public static final class DealQueueElement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datadeal.v2alpha2.DealQueueElement)
+      DealQueueElementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DealQueueElement.newBuilder() to construct.
+    private DealQueueElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DealQueueElement() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DealQueueElement();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DealQueueElement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DealQueueElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder.class);
+    }
+
+    public static final int DEAL_ID_FIELD_NUMBER = 1;
+    private long dealId_ = 0L;
+    /**
+     * <code>uint64 deal_id = 1 [json_name = "dealId"];</code>
+     * @return The dealId.
+     */
+    @java.lang.Override
+    public long getDealId() {
+      return dealId_;
+    }
+
+    public static final int DEACTIVATION_HEIGHT_FIELD_NUMBER = 2;
+    private long deactivationHeight_ = 0L;
+    /**
+     * <code>int64 deactivation_height = 2 [json_name = "deactivationHeight"];</code>
+     * @return The deactivationHeight.
+     */
+    @java.lang.Override
+    public long getDeactivationHeight() {
+      return deactivationHeight_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dealId_ != 0L) {
+        output.writeUInt64(1, dealId_);
+      }
+      if (deactivationHeight_ != 0L) {
+        output.writeInt64(2, deactivationHeight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dealId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, dealId_);
+      }
+      if (deactivationHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, deactivationHeight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement)) {
+        return super.equals(obj);
+      }
+      com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement other = (com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement) obj;
+
+      if (getDealId()
+          != other.getDealId()) return false;
+      if (getDeactivationHeight()
+          != other.getDeactivationHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDealId());
+      hash = (37 * hash) + DEACTIVATION_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDeactivationHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DealQueue defines a deal queue.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datadeal.v2alpha2.DealQueueElement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datadeal.v2alpha2.DealQueueElement)
+        com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DealQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DealQueueElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.class, com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.Builder.class);
+      }
+
+      // Construct using com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dealId_ = 0L;
+        deactivationHeight_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.internal_static_panacea_datadeal_v2alpha2_DealQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement getDefaultInstanceForType() {
+        return com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement build() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement buildPartial() {
+        com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement result = new com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dealId_ = dealId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deactivationHeight_ = deactivationHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement) {
+          return mergeFrom((com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement other) {
+        if (other == com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement.getDefaultInstance()) return this;
+        if (other.getDealId() != 0L) {
+          setDealId(other.getDealId());
+        }
+        if (other.getDeactivationHeight() != 0L) {
+          setDeactivationHeight(other.getDeactivationHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                dealId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                deactivationHeight_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long dealId_ ;
+      /**
+       * <code>uint64 deal_id = 1 [json_name = "dealId"];</code>
+       * @return The dealId.
+       */
+      @java.lang.Override
+      public long getDealId() {
+        return dealId_;
+      }
+      /**
+       * <code>uint64 deal_id = 1 [json_name = "dealId"];</code>
+       * @param value The dealId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDealId(long value) {
+
+        dealId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 deal_id = 1 [json_name = "dealId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDealId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dealId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long deactivationHeight_ ;
+      /**
+       * <code>int64 deactivation_height = 2 [json_name = "deactivationHeight"];</code>
+       * @return The deactivationHeight.
+       */
+      @java.lang.Override
+      public long getDeactivationHeight() {
+        return deactivationHeight_;
+      }
+      /**
+       * <code>int64 deactivation_height = 2 [json_name = "deactivationHeight"];</code>
+       * @param value The deactivationHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeactivationHeight(long value) {
+
+        deactivationHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 deactivation_height = 2 [json_name = "deactivationHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeactivationHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        deactivationHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datadeal.v2alpha2.DealQueueElement)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datadeal.v2alpha2.DealQueueElement)
+    private static final com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement();
+    }
+
+    public static com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DealQueueElement>
+        PARSER = new com.google.protobuf.AbstractParser<DealQueueElement>() {
+      @java.lang.Override
+      public DealQueueElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DealQueueElement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DealQueueElement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datadeal.v2alpha2.GenesisProto.DealQueueElement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha2_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha2_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha2_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha2_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha2_DataVerificationQueueElement_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha2_DataDeliveryQueueElement_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datadeal_v2alpha2_DealQueueElement_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datadeal_v2alpha2_DealQueueElement_fieldAccessorTable;
 
@@ -88,13 +6092,13 @@ public final class GenesisProto {
       "ing_end_time\"\220\337\037\001R\rvotingEndTime\"\\\n\020Deal" +
       "QueueElement\022\027\n\007deal_id\030\001 \001(\004R\006dealId\022/\n" +
       "\023deactivation_height\030\002 \001(\003R\022deactivation" +
-      "HeightB\351\001\n\035com.panacea.datadeal.v2alpha2" +
-      "B\014GenesisProtoP\001Z4github.com/medibloc/pa" +
-      "nacea-core/v2/x/datadeal/types\242\002\003PDX\252\002\031P" +
-      "anacea.Datadeal.V2alpha2\312\002\031Panacea\\Datad" +
-      "eal\\V2alpha2\342\002%Panacea\\Datadeal\\V2alpha2" +
-      "\\GPBMetadata\352\002\033Panacea::Datadeal::V2alph" +
-      "a2b\006proto3"
+      "HeightB\347\001\n\035com.panacea.datadeal.v2alpha2" +
+      "B\014GenesisProtoZ4github.com/medibloc/pana" +
+      "cea-core/v2/x/datadeal/types\242\002\003PDX\252\002\031Pan" +
+      "acea.Datadeal.V2alpha2\312\002\031Panacea\\Datadea" +
+      "l\\V2alpha2\342\002%Panacea\\Datadeal\\V2alpha2\\G" +
+      "PBMetadata\352\002\033Panacea::Datadeal::V2alpha2" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

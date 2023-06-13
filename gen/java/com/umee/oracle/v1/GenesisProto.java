@@ -14,24 +14,5656 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.umee.oracle.v1.OracleProto.Params getParams();
+    /**
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.FeederDelegation> 
+        getFeederDelegationsList();
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.FeederDelegation getFeederDelegations(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    int getFeederDelegationsCount();
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder> 
+        getFeederDelegationsOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder getFeederDelegationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    java.util.List<com.umee.oracle.v1.OracleProto.ExchangeRateTuple> 
+        getExchangeRatesList();
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    com.umee.oracle.v1.OracleProto.ExchangeRateTuple getExchangeRates(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    int getExchangeRatesCount();
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> 
+        getExchangeRatesOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRatesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.MissCounter> 
+        getMissCountersList();
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.MissCounter getMissCounters(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    int getMissCountersCount();
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder> 
+        getMissCountersOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder getMissCountersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> 
+        getAggregateExchangeRatePrevotesList();
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregateExchangeRatePrevotes(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getAggregateExchangeRatePrevotesCount();
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+        getAggregateExchangeRatePrevotesOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregateExchangeRatePrevotesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> 
+        getAggregateExchangeRateVotesList();
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateExchangeRateVotes(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getAggregateExchangeRateVotesCount();
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+        getAggregateExchangeRateVotesOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateExchangeRateVotesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.Price> 
+        getMediansList();
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.Price getMedians(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    int getMediansCount();
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMediansOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMediansOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.Price> 
+        getHistoricPricesList();
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.Price getHistoricPrices(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    int getHistoricPricesCount();
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getHistoricPricesOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.PriceOrBuilder getHistoricPricesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.Price> 
+        getMedianDeviationsList();
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.Price getMedianDeviations(int index);
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    int getMedianDeviationsCount();
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMedianDeviationsOrBuilderList();
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMedianDeviationsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the oracle module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      feederDelegations_ = java.util.Collections.emptyList();
+      exchangeRates_ = java.util.Collections.emptyList();
+      missCounters_ = java.util.Collections.emptyList();
+      aggregateExchangeRatePrevotes_ = java.util.Collections.emptyList();
+      aggregateExchangeRateVotes_ = java.util.Collections.emptyList();
+      medians_ = java.util.Collections.emptyList();
+      historicPrices_ = java.util.Collections.emptyList();
+      medianDeviations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.GenesisProto.GenesisState.class, com.umee.oracle.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.umee.oracle.v1.OracleProto.Params params_;
+    /**
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.Params getParams() {
+      return params_ == null ? com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int FEEDER_DELEGATIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.FeederDelegation> feederDelegations_;
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.FeederDelegation> getFeederDelegationsList() {
+      return feederDelegations_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder> 
+        getFeederDelegationsOrBuilderList() {
+      return feederDelegations_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getFeederDelegationsCount() {
+      return feederDelegations_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.FeederDelegation getFeederDelegations(int index) {
+      return feederDelegations_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder getFeederDelegationsOrBuilder(
+        int index) {
+      return feederDelegations_.get(index);
+    }
+
+    public static final int EXCHANGE_RATES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.OracleProto.ExchangeRateTuple> exchangeRates_;
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.OracleProto.ExchangeRateTuple> getExchangeRatesList() {
+      return exchangeRates_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> 
+        getExchangeRatesOrBuilderList() {
+      return exchangeRates_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public int getExchangeRatesCount() {
+      return exchangeRates_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.ExchangeRateTuple getExchangeRates(int index) {
+      return exchangeRates_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRatesOrBuilder(
+        int index) {
+      return exchangeRates_.get(index);
+    }
+
+    public static final int MISS_COUNTERS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.MissCounter> missCounters_;
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.MissCounter> getMissCountersList() {
+      return missCounters_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder> 
+        getMissCountersOrBuilderList() {
+      return missCounters_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMissCountersCount() {
+      return missCounters_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.MissCounter getMissCounters(int index) {
+      return missCounters_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder getMissCountersOrBuilder(
+        int index) {
+      return missCounters_.get(index);
+    }
+
+    public static final int AGGREGATE_EXCHANGE_RATE_PREVOTES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> aggregateExchangeRatePrevotes_;
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> getAggregateExchangeRatePrevotesList() {
+      return aggregateExchangeRatePrevotes_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+        getAggregateExchangeRatePrevotesOrBuilderList() {
+      return aggregateExchangeRatePrevotes_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAggregateExchangeRatePrevotesCount() {
+      return aggregateExchangeRatePrevotes_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregateExchangeRatePrevotes(int index) {
+      return aggregateExchangeRatePrevotes_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregateExchangeRatePrevotesOrBuilder(
+        int index) {
+      return aggregateExchangeRatePrevotes_.get(index);
+    }
+
+    public static final int AGGREGATE_EXCHANGE_RATE_VOTES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> aggregateExchangeRateVotes_;
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> getAggregateExchangeRateVotesList() {
+      return aggregateExchangeRateVotes_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+        getAggregateExchangeRateVotesOrBuilderList() {
+      return aggregateExchangeRateVotes_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAggregateExchangeRateVotesCount() {
+      return aggregateExchangeRateVotes_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateExchangeRateVotes(int index) {
+      return aggregateExchangeRateVotes_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateExchangeRateVotesOrBuilder(
+        int index) {
+      return aggregateExchangeRateVotes_.get(index);
+    }
+
+    public static final int MEDIANS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medians_;
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMediansList() {
+      return medians_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMediansOrBuilderList() {
+      return medians_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMediansCount() {
+      return medians_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.Price getMedians(int index) {
+      return medians_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMediansOrBuilder(
+        int index) {
+      return medians_.get(index);
+    }
+
+    public static final int HISTORIC_PRICES_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.Price> historicPrices_;
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getHistoricPricesList() {
+      return historicPrices_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getHistoricPricesOrBuilderList() {
+      return historicPrices_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getHistoricPricesCount() {
+      return historicPrices_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.Price getHistoricPrices(int index) {
+      return historicPrices_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getHistoricPricesOrBuilder(
+        int index) {
+      return historicPrices_.get(index);
+    }
+
+    public static final int MEDIANDEVIATIONS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medianDeviations_;
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMedianDeviationsList() {
+      return medianDeviations_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMedianDeviationsOrBuilderList() {
+      return medianDeviations_;
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMedianDeviationsCount() {
+      return medianDeviations_.size();
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.Price getMedianDeviations(int index) {
+      return medianDeviations_.get(index);
+    }
+    /**
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMedianDeviationsOrBuilder(
+        int index) {
+      return medianDeviations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < feederDelegations_.size(); i++) {
+        output.writeMessage(2, feederDelegations_.get(i));
+      }
+      for (int i = 0; i < exchangeRates_.size(); i++) {
+        output.writeMessage(3, exchangeRates_.get(i));
+      }
+      for (int i = 0; i < missCounters_.size(); i++) {
+        output.writeMessage(4, missCounters_.get(i));
+      }
+      for (int i = 0; i < aggregateExchangeRatePrevotes_.size(); i++) {
+        output.writeMessage(5, aggregateExchangeRatePrevotes_.get(i));
+      }
+      for (int i = 0; i < aggregateExchangeRateVotes_.size(); i++) {
+        output.writeMessage(6, aggregateExchangeRateVotes_.get(i));
+      }
+      for (int i = 0; i < medians_.size(); i++) {
+        output.writeMessage(7, medians_.get(i));
+      }
+      for (int i = 0; i < historicPrices_.size(); i++) {
+        output.writeMessage(8, historicPrices_.get(i));
+      }
+      for (int i = 0; i < medianDeviations_.size(); i++) {
+        output.writeMessage(9, medianDeviations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < feederDelegations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, feederDelegations_.get(i));
+      }
+      for (int i = 0; i < exchangeRates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, exchangeRates_.get(i));
+      }
+      for (int i = 0; i < missCounters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, missCounters_.get(i));
+      }
+      for (int i = 0; i < aggregateExchangeRatePrevotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, aggregateExchangeRatePrevotes_.get(i));
+      }
+      for (int i = 0; i < aggregateExchangeRateVotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, aggregateExchangeRateVotes_.get(i));
+      }
+      for (int i = 0; i < medians_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, medians_.get(i));
+      }
+      for (int i = 0; i < historicPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, historicPrices_.get(i));
+      }
+      for (int i = 0; i < medianDeviations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, medianDeviations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.GenesisProto.GenesisState other = (com.umee.oracle.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getFeederDelegationsList()
+          .equals(other.getFeederDelegationsList())) return false;
+      if (!getExchangeRatesList()
+          .equals(other.getExchangeRatesList())) return false;
+      if (!getMissCountersList()
+          .equals(other.getMissCountersList())) return false;
+      if (!getAggregateExchangeRatePrevotesList()
+          .equals(other.getAggregateExchangeRatePrevotesList())) return false;
+      if (!getAggregateExchangeRateVotesList()
+          .equals(other.getAggregateExchangeRateVotesList())) return false;
+      if (!getMediansList()
+          .equals(other.getMediansList())) return false;
+      if (!getHistoricPricesList()
+          .equals(other.getHistoricPricesList())) return false;
+      if (!getMedianDeviationsList()
+          .equals(other.getMedianDeviationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getFeederDelegationsCount() > 0) {
+        hash = (37 * hash) + FEEDER_DELEGATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeederDelegationsList().hashCode();
+      }
+      if (getExchangeRatesCount() > 0) {
+        hash = (37 * hash) + EXCHANGE_RATES_FIELD_NUMBER;
+        hash = (53 * hash) + getExchangeRatesList().hashCode();
+      }
+      if (getMissCountersCount() > 0) {
+        hash = (37 * hash) + MISS_COUNTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMissCountersList().hashCode();
+      }
+      if (getAggregateExchangeRatePrevotesCount() > 0) {
+        hash = (37 * hash) + AGGREGATE_EXCHANGE_RATE_PREVOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregateExchangeRatePrevotesList().hashCode();
+      }
+      if (getAggregateExchangeRateVotesCount() > 0) {
+        hash = (37 * hash) + AGGREGATE_EXCHANGE_RATE_VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregateExchangeRateVotesList().hashCode();
+      }
+      if (getMediansCount() > 0) {
+        hash = (37 * hash) + MEDIANS_FIELD_NUMBER;
+        hash = (53 * hash) + getMediansList().hashCode();
+      }
+      if (getHistoricPricesCount() > 0) {
+        hash = (37 * hash) + HISTORIC_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getHistoricPricesList().hashCode();
+      }
+      if (getMedianDeviationsCount() > 0) {
+        hash = (37 * hash) + MEDIANDEVIATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMedianDeviationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the oracle module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.GenesisState)
+        com.umee.oracle.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.GenesisProto.GenesisState.class, com.umee.oracle.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (feederDelegationsBuilder_ == null) {
+          feederDelegations_ = java.util.Collections.emptyList();
+        } else {
+          feederDelegations_ = null;
+          feederDelegationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (exchangeRatesBuilder_ == null) {
+          exchangeRates_ = java.util.Collections.emptyList();
+        } else {
+          exchangeRates_ = null;
+          exchangeRatesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (missCountersBuilder_ == null) {
+          missCounters_ = java.util.Collections.emptyList();
+        } else {
+          missCounters_ = null;
+          missCountersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          aggregateExchangeRatePrevotes_ = java.util.Collections.emptyList();
+        } else {
+          aggregateExchangeRatePrevotes_ = null;
+          aggregateExchangeRatePrevotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          aggregateExchangeRateVotes_ = java.util.Collections.emptyList();
+        } else {
+          aggregateExchangeRateVotes_ = null;
+          aggregateExchangeRateVotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (mediansBuilder_ == null) {
+          medians_ = java.util.Collections.emptyList();
+        } else {
+          medians_ = null;
+          mediansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (historicPricesBuilder_ == null) {
+          historicPrices_ = java.util.Collections.emptyList();
+        } else {
+          historicPrices_ = null;
+          historicPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        if (medianDeviationsBuilder_ == null) {
+          medianDeviations_ = java.util.Collections.emptyList();
+        } else {
+          medianDeviations_ = null;
+          medianDeviationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.umee.oracle.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.GenesisState build() {
+        com.umee.oracle.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.GenesisState buildPartial() {
+        com.umee.oracle.v1.GenesisProto.GenesisState result = new com.umee.oracle.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.oracle.v1.GenesisProto.GenesisState result) {
+        if (feederDelegationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            feederDelegations_ = java.util.Collections.unmodifiableList(feederDelegations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.feederDelegations_ = feederDelegations_;
+        } else {
+          result.feederDelegations_ = feederDelegationsBuilder_.build();
+        }
+        if (exchangeRatesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            exchangeRates_ = java.util.Collections.unmodifiableList(exchangeRates_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.exchangeRates_ = exchangeRates_;
+        } else {
+          result.exchangeRates_ = exchangeRatesBuilder_.build();
+        }
+        if (missCountersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            missCounters_ = java.util.Collections.unmodifiableList(missCounters_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.missCounters_ = missCounters_;
+        } else {
+          result.missCounters_ = missCountersBuilder_.build();
+        }
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            aggregateExchangeRatePrevotes_ = java.util.Collections.unmodifiableList(aggregateExchangeRatePrevotes_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.aggregateExchangeRatePrevotes_ = aggregateExchangeRatePrevotes_;
+        } else {
+          result.aggregateExchangeRatePrevotes_ = aggregateExchangeRatePrevotesBuilder_.build();
+        }
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            aggregateExchangeRateVotes_ = java.util.Collections.unmodifiableList(aggregateExchangeRateVotes_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.aggregateExchangeRateVotes_ = aggregateExchangeRateVotes_;
+        } else {
+          result.aggregateExchangeRateVotes_ = aggregateExchangeRateVotesBuilder_.build();
+        }
+        if (mediansBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            medians_ = java.util.Collections.unmodifiableList(medians_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.medians_ = medians_;
+        } else {
+          result.medians_ = mediansBuilder_.build();
+        }
+        if (historicPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            historicPrices_ = java.util.Collections.unmodifiableList(historicPrices_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.historicPrices_ = historicPrices_;
+        } else {
+          result.historicPrices_ = historicPricesBuilder_.build();
+        }
+        if (medianDeviationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            medianDeviations_ = java.util.Collections.unmodifiableList(medianDeviations_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.medianDeviations_ = medianDeviations_;
+        } else {
+          result.medianDeviations_ = medianDeviationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.umee.oracle.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.GenesisProto.GenesisState other) {
+        if (other == com.umee.oracle.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (feederDelegationsBuilder_ == null) {
+          if (!other.feederDelegations_.isEmpty()) {
+            if (feederDelegations_.isEmpty()) {
+              feederDelegations_ = other.feederDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureFeederDelegationsIsMutable();
+              feederDelegations_.addAll(other.feederDelegations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.feederDelegations_.isEmpty()) {
+            if (feederDelegationsBuilder_.isEmpty()) {
+              feederDelegationsBuilder_.dispose();
+              feederDelegationsBuilder_ = null;
+              feederDelegations_ = other.feederDelegations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              feederDelegationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeederDelegationsFieldBuilder() : null;
+            } else {
+              feederDelegationsBuilder_.addAllMessages(other.feederDelegations_);
+            }
+          }
+        }
+        if (exchangeRatesBuilder_ == null) {
+          if (!other.exchangeRates_.isEmpty()) {
+            if (exchangeRates_.isEmpty()) {
+              exchangeRates_ = other.exchangeRates_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureExchangeRatesIsMutable();
+              exchangeRates_.addAll(other.exchangeRates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.exchangeRates_.isEmpty()) {
+            if (exchangeRatesBuilder_.isEmpty()) {
+              exchangeRatesBuilder_.dispose();
+              exchangeRatesBuilder_ = null;
+              exchangeRates_ = other.exchangeRates_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              exchangeRatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getExchangeRatesFieldBuilder() : null;
+            } else {
+              exchangeRatesBuilder_.addAllMessages(other.exchangeRates_);
+            }
+          }
+        }
+        if (missCountersBuilder_ == null) {
+          if (!other.missCounters_.isEmpty()) {
+            if (missCounters_.isEmpty()) {
+              missCounters_ = other.missCounters_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureMissCountersIsMutable();
+              missCounters_.addAll(other.missCounters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.missCounters_.isEmpty()) {
+            if (missCountersBuilder_.isEmpty()) {
+              missCountersBuilder_.dispose();
+              missCountersBuilder_ = null;
+              missCounters_ = other.missCounters_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              missCountersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMissCountersFieldBuilder() : null;
+            } else {
+              missCountersBuilder_.addAllMessages(other.missCounters_);
+            }
+          }
+        }
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          if (!other.aggregateExchangeRatePrevotes_.isEmpty()) {
+            if (aggregateExchangeRatePrevotes_.isEmpty()) {
+              aggregateExchangeRatePrevotes_ = other.aggregateExchangeRatePrevotes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureAggregateExchangeRatePrevotesIsMutable();
+              aggregateExchangeRatePrevotes_.addAll(other.aggregateExchangeRatePrevotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.aggregateExchangeRatePrevotes_.isEmpty()) {
+            if (aggregateExchangeRatePrevotesBuilder_.isEmpty()) {
+              aggregateExchangeRatePrevotesBuilder_.dispose();
+              aggregateExchangeRatePrevotesBuilder_ = null;
+              aggregateExchangeRatePrevotes_ = other.aggregateExchangeRatePrevotes_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              aggregateExchangeRatePrevotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAggregateExchangeRatePrevotesFieldBuilder() : null;
+            } else {
+              aggregateExchangeRatePrevotesBuilder_.addAllMessages(other.aggregateExchangeRatePrevotes_);
+            }
+          }
+        }
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          if (!other.aggregateExchangeRateVotes_.isEmpty()) {
+            if (aggregateExchangeRateVotes_.isEmpty()) {
+              aggregateExchangeRateVotes_ = other.aggregateExchangeRateVotes_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureAggregateExchangeRateVotesIsMutable();
+              aggregateExchangeRateVotes_.addAll(other.aggregateExchangeRateVotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.aggregateExchangeRateVotes_.isEmpty()) {
+            if (aggregateExchangeRateVotesBuilder_.isEmpty()) {
+              aggregateExchangeRateVotesBuilder_.dispose();
+              aggregateExchangeRateVotesBuilder_ = null;
+              aggregateExchangeRateVotes_ = other.aggregateExchangeRateVotes_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              aggregateExchangeRateVotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAggregateExchangeRateVotesFieldBuilder() : null;
+            } else {
+              aggregateExchangeRateVotesBuilder_.addAllMessages(other.aggregateExchangeRateVotes_);
+            }
+          }
+        }
+        if (mediansBuilder_ == null) {
+          if (!other.medians_.isEmpty()) {
+            if (medians_.isEmpty()) {
+              medians_ = other.medians_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureMediansIsMutable();
+              medians_.addAll(other.medians_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.medians_.isEmpty()) {
+            if (mediansBuilder_.isEmpty()) {
+              mediansBuilder_.dispose();
+              mediansBuilder_ = null;
+              medians_ = other.medians_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              mediansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMediansFieldBuilder() : null;
+            } else {
+              mediansBuilder_.addAllMessages(other.medians_);
+            }
+          }
+        }
+        if (historicPricesBuilder_ == null) {
+          if (!other.historicPrices_.isEmpty()) {
+            if (historicPrices_.isEmpty()) {
+              historicPrices_ = other.historicPrices_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureHistoricPricesIsMutable();
+              historicPrices_.addAll(other.historicPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.historicPrices_.isEmpty()) {
+            if (historicPricesBuilder_.isEmpty()) {
+              historicPricesBuilder_.dispose();
+              historicPricesBuilder_ = null;
+              historicPrices_ = other.historicPrices_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              historicPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHistoricPricesFieldBuilder() : null;
+            } else {
+              historicPricesBuilder_.addAllMessages(other.historicPrices_);
+            }
+          }
+        }
+        if (medianDeviationsBuilder_ == null) {
+          if (!other.medianDeviations_.isEmpty()) {
+            if (medianDeviations_.isEmpty()) {
+              medianDeviations_ = other.medianDeviations_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureMedianDeviationsIsMutable();
+              medianDeviations_.addAll(other.medianDeviations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.medianDeviations_.isEmpty()) {
+            if (medianDeviationsBuilder_.isEmpty()) {
+              medianDeviationsBuilder_.dispose();
+              medianDeviationsBuilder_ = null;
+              medianDeviations_ = other.medianDeviations_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              medianDeviationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMedianDeviationsFieldBuilder() : null;
+            } else {
+              medianDeviationsBuilder_.addAllMessages(other.medianDeviations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.umee.oracle.v1.GenesisProto.FeederDelegation m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.FeederDelegation.parser(),
+                        extensionRegistry);
+                if (feederDelegationsBuilder_ == null) {
+                  ensureFeederDelegationsIsMutable();
+                  feederDelegations_.add(m);
+                } else {
+                  feederDelegationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.umee.oracle.v1.OracleProto.ExchangeRateTuple m =
+                    input.readMessage(
+                        com.umee.oracle.v1.OracleProto.ExchangeRateTuple.parser(),
+                        extensionRegistry);
+                if (exchangeRatesBuilder_ == null) {
+                  ensureExchangeRatesIsMutable();
+                  exchangeRates_.add(m);
+                } else {
+                  exchangeRatesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.umee.oracle.v1.GenesisProto.MissCounter m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.MissCounter.parser(),
+                        extensionRegistry);
+                if (missCountersBuilder_ == null) {
+                  ensureMissCountersIsMutable();
+                  missCounters_.add(m);
+                } else {
+                  missCountersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote m =
+                    input.readMessage(
+                        com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.parser(),
+                        extensionRegistry);
+                if (aggregateExchangeRatePrevotesBuilder_ == null) {
+                  ensureAggregateExchangeRatePrevotesIsMutable();
+                  aggregateExchangeRatePrevotes_.add(m);
+                } else {
+                  aggregateExchangeRatePrevotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote m =
+                    input.readMessage(
+                        com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.parser(),
+                        extensionRegistry);
+                if (aggregateExchangeRateVotesBuilder_ == null) {
+                  ensureAggregateExchangeRateVotesIsMutable();
+                  aggregateExchangeRateVotes_.add(m);
+                } else {
+                  aggregateExchangeRateVotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.umee.oracle.v1.GenesisProto.Price m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.Price.parser(),
+                        extensionRegistry);
+                if (mediansBuilder_ == null) {
+                  ensureMediansIsMutable();
+                  medians_.add(m);
+                } else {
+                  mediansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 66: {
+                com.umee.oracle.v1.GenesisProto.Price m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.Price.parser(),
+                        extensionRegistry);
+                if (historicPricesBuilder_ == null) {
+                  ensureHistoricPricesIsMutable();
+                  historicPrices_.add(m);
+                } else {
+                  historicPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                com.umee.oracle.v1.GenesisProto.Price m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.Price.parser(),
+                        extensionRegistry);
+                if (medianDeviationsBuilder_ == null) {
+                  ensureMedianDeviationsIsMutable();
+                  medianDeviations_.add(m);
+                } else {
+                  medianDeviationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.oracle.v1.OracleProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.Params, com.umee.oracle.v1.OracleProto.Params.Builder, com.umee.oracle.v1.OracleProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.umee.oracle.v1.OracleProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.umee.oracle.v1.OracleProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.umee.oracle.v1.OracleProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.umee.oracle.v1.OracleProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.umee.oracle.v1.OracleProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.Params, com.umee.oracle.v1.OracleProto.Params.Builder, com.umee.oracle.v1.OracleProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.Params, com.umee.oracle.v1.OracleProto.Params.Builder, com.umee.oracle.v1.OracleProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.FeederDelegation> feederDelegations_ =
+        java.util.Collections.emptyList();
+      private void ensureFeederDelegationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          feederDelegations_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.FeederDelegation>(feederDelegations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.FeederDelegation, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder, com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder> feederDelegationsBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.FeederDelegation> getFeederDelegationsList() {
+        if (feederDelegationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(feederDelegations_);
+        } else {
+          return feederDelegationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public int getFeederDelegationsCount() {
+        if (feederDelegationsBuilder_ == null) {
+          return feederDelegations_.size();
+        } else {
+          return feederDelegationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation getFeederDelegations(int index) {
+        if (feederDelegationsBuilder_ == null) {
+          return feederDelegations_.get(index);
+        } else {
+          return feederDelegationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeederDelegations(
+          int index, com.umee.oracle.v1.GenesisProto.FeederDelegation value) {
+        if (feederDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.set(index, value);
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeederDelegations(
+          int index, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder builderForValue) {
+        if (feederDelegationsBuilder_ == null) {
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeederDelegations(com.umee.oracle.v1.GenesisProto.FeederDelegation value) {
+        if (feederDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.add(value);
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeederDelegations(
+          int index, com.umee.oracle.v1.GenesisProto.FeederDelegation value) {
+        if (feederDelegationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.add(index, value);
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeederDelegations(
+          com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder builderForValue) {
+        if (feederDelegationsBuilder_ == null) {
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addFeederDelegations(
+          int index, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder builderForValue) {
+        if (feederDelegationsBuilder_ == null) {
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllFeederDelegations(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.FeederDelegation> values) {
+        if (feederDelegationsBuilder_ == null) {
+          ensureFeederDelegationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, feederDelegations_);
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFeederDelegations() {
+        if (feederDelegationsBuilder_ == null) {
+          feederDelegations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeFeederDelegations(int index) {
+        if (feederDelegationsBuilder_ == null) {
+          ensureFeederDelegationsIsMutable();
+          feederDelegations_.remove(index);
+          onChanged();
+        } else {
+          feederDelegationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder getFeederDelegationsBuilder(
+          int index) {
+        return getFeederDelegationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder getFeederDelegationsOrBuilder(
+          int index) {
+        if (feederDelegationsBuilder_ == null) {
+          return feederDelegations_.get(index);  } else {
+          return feederDelegationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder> 
+           getFeederDelegationsOrBuilderList() {
+        if (feederDelegationsBuilder_ != null) {
+          return feederDelegationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(feederDelegations_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder addFeederDelegationsBuilder() {
+        return getFeederDelegationsFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.FeederDelegation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder addFeederDelegationsBuilder(
+          int index) {
+        return getFeederDelegationsFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.FeederDelegation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.FeederDelegation feeder_delegations = 2 [json_name = "feederDelegations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder> 
+           getFeederDelegationsBuilderList() {
+        return getFeederDelegationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.FeederDelegation, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder, com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder> 
+          getFeederDelegationsFieldBuilder() {
+        if (feederDelegationsBuilder_ == null) {
+          feederDelegationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.FeederDelegation, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder, com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder>(
+                  feederDelegations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          feederDelegations_ = null;
+        }
+        return feederDelegationsBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.OracleProto.ExchangeRateTuple> exchangeRates_ =
+        java.util.Collections.emptyList();
+      private void ensureExchangeRatesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          exchangeRates_ = new java.util.ArrayList<com.umee.oracle.v1.OracleProto.ExchangeRateTuple>(exchangeRates_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.ExchangeRateTuple, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder, com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> exchangeRatesBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.ExchangeRateTuple> getExchangeRatesList() {
+        if (exchangeRatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(exchangeRates_);
+        } else {
+          return exchangeRatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public int getExchangeRatesCount() {
+        if (exchangeRatesBuilder_ == null) {
+          return exchangeRates_.size();
+        } else {
+          return exchangeRatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTuple getExchangeRates(int index) {
+        if (exchangeRatesBuilder_ == null) {
+          return exchangeRates_.get(index);
+        } else {
+          return exchangeRatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder setExchangeRates(
+          int index, com.umee.oracle.v1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.set(index, value);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder setExchangeRates(
+          int index, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRates(com.umee.oracle.v1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(value);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRates(
+          int index, com.umee.oracle.v1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(index, value);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRates(
+          com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addExchangeRates(
+          int index, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder addAllExchangeRates(
+          java.lang.Iterable<? extends com.umee.oracle.v1.OracleProto.ExchangeRateTuple> values) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, exchangeRates_);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder clearExchangeRates() {
+        if (exchangeRatesBuilder_ == null) {
+          exchangeRates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public Builder removeExchangeRates(int index) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.remove(index);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder getExchangeRatesBuilder(
+          int index) {
+        return getExchangeRatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRatesOrBuilder(
+          int index) {
+        if (exchangeRatesBuilder_ == null) {
+          return exchangeRates_.get(index);  } else {
+          return exchangeRatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> 
+           getExchangeRatesOrBuilderList() {
+        if (exchangeRatesBuilder_ != null) {
+          return exchangeRatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(exchangeRates_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder addExchangeRatesBuilder() {
+        return getExchangeRatesFieldBuilder().addBuilder(
+            com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder addExchangeRatesBuilder(
+          int index) {
+        return getExchangeRatesFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.ExchangeRateTuple exchange_rates = 3 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "ExchangeRateTuples"];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder> 
+           getExchangeRatesBuilderList() {
+        return getExchangeRatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.ExchangeRateTuple, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder, com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> 
+          getExchangeRatesFieldBuilder() {
+        if (exchangeRatesBuilder_ == null) {
+          exchangeRatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.ExchangeRateTuple, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder, com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder>(
+                  exchangeRates_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          exchangeRates_ = null;
+        }
+        return exchangeRatesBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.MissCounter> missCounters_ =
+        java.util.Collections.emptyList();
+      private void ensureMissCountersIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          missCounters_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.MissCounter>(missCounters_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.MissCounter, com.umee.oracle.v1.GenesisProto.MissCounter.Builder, com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder> missCountersBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.MissCounter> getMissCountersList() {
+        if (missCountersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(missCounters_);
+        } else {
+          return missCountersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMissCountersCount() {
+        if (missCountersBuilder_ == null) {
+          return missCounters_.size();
+        } else {
+          return missCountersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.MissCounter getMissCounters(int index) {
+        if (missCountersBuilder_ == null) {
+          return missCounters_.get(index);
+        } else {
+          return missCountersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMissCounters(
+          int index, com.umee.oracle.v1.GenesisProto.MissCounter value) {
+        if (missCountersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMissCountersIsMutable();
+          missCounters_.set(index, value);
+          onChanged();
+        } else {
+          missCountersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMissCounters(
+          int index, com.umee.oracle.v1.GenesisProto.MissCounter.Builder builderForValue) {
+        if (missCountersBuilder_ == null) {
+          ensureMissCountersIsMutable();
+          missCounters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          missCountersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMissCounters(com.umee.oracle.v1.GenesisProto.MissCounter value) {
+        if (missCountersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMissCountersIsMutable();
+          missCounters_.add(value);
+          onChanged();
+        } else {
+          missCountersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMissCounters(
+          int index, com.umee.oracle.v1.GenesisProto.MissCounter value) {
+        if (missCountersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMissCountersIsMutable();
+          missCounters_.add(index, value);
+          onChanged();
+        } else {
+          missCountersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMissCounters(
+          com.umee.oracle.v1.GenesisProto.MissCounter.Builder builderForValue) {
+        if (missCountersBuilder_ == null) {
+          ensureMissCountersIsMutable();
+          missCounters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          missCountersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMissCounters(
+          int index, com.umee.oracle.v1.GenesisProto.MissCounter.Builder builderForValue) {
+        if (missCountersBuilder_ == null) {
+          ensureMissCountersIsMutable();
+          missCounters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          missCountersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMissCounters(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.MissCounter> values) {
+        if (missCountersBuilder_ == null) {
+          ensureMissCountersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, missCounters_);
+          onChanged();
+        } else {
+          missCountersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMissCounters() {
+        if (missCountersBuilder_ == null) {
+          missCounters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          missCountersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMissCounters(int index) {
+        if (missCountersBuilder_ == null) {
+          ensureMissCountersIsMutable();
+          missCounters_.remove(index);
+          onChanged();
+        } else {
+          missCountersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.MissCounter.Builder getMissCountersBuilder(
+          int index) {
+        return getMissCountersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder getMissCountersOrBuilder(
+          int index) {
+        if (missCountersBuilder_ == null) {
+          return missCounters_.get(index);  } else {
+          return missCountersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder> 
+           getMissCountersOrBuilderList() {
+        if (missCountersBuilder_ != null) {
+          return missCountersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(missCounters_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.MissCounter.Builder addMissCountersBuilder() {
+        return getMissCountersFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.MissCounter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.MissCounter.Builder addMissCountersBuilder(
+          int index) {
+        return getMissCountersFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.MissCounter.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.MissCounter miss_counters = 4 [json_name = "missCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.MissCounter.Builder> 
+           getMissCountersBuilderList() {
+        return getMissCountersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.MissCounter, com.umee.oracle.v1.GenesisProto.MissCounter.Builder, com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder> 
+          getMissCountersFieldBuilder() {
+        if (missCountersBuilder_ == null) {
+          missCountersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.MissCounter, com.umee.oracle.v1.GenesisProto.MissCounter.Builder, com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder>(
+                  missCounters_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          missCounters_ = null;
+        }
+        return missCountersBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> aggregateExchangeRatePrevotes_ =
+        java.util.Collections.emptyList();
+      private void ensureAggregateExchangeRatePrevotesIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          aggregateExchangeRatePrevotes_ = new java.util.ArrayList<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote>(aggregateExchangeRatePrevotes_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> aggregateExchangeRatePrevotesBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> getAggregateExchangeRatePrevotesList() {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(aggregateExchangeRatePrevotes_);
+        } else {
+          return aggregateExchangeRatePrevotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAggregateExchangeRatePrevotesCount() {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          return aggregateExchangeRatePrevotes_.size();
+        } else {
+          return aggregateExchangeRatePrevotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregateExchangeRatePrevotes(int index) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          return aggregateExchangeRatePrevotes_.get(index);
+        } else {
+          return aggregateExchangeRatePrevotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateExchangeRatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.set(index, value);
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateExchangeRatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRatePrevotes(com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.add(value);
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.add(index, value);
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRatePrevotes(
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAggregateExchangeRatePrevotes(
+          java.lang.Iterable<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> values) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, aggregateExchangeRatePrevotes_);
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAggregateExchangeRatePrevotes() {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          aggregateExchangeRatePrevotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAggregateExchangeRatePrevotes(int index) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          ensureAggregateExchangeRatePrevotesIsMutable();
+          aggregateExchangeRatePrevotes_.remove(index);
+          onChanged();
+        } else {
+          aggregateExchangeRatePrevotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder getAggregateExchangeRatePrevotesBuilder(
+          int index) {
+        return getAggregateExchangeRatePrevotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregateExchangeRatePrevotesOrBuilder(
+          int index) {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          return aggregateExchangeRatePrevotes_.get(index);  } else {
+          return aggregateExchangeRatePrevotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+           getAggregateExchangeRatePrevotesOrBuilderList() {
+        if (aggregateExchangeRatePrevotesBuilder_ != null) {
+          return aggregateExchangeRatePrevotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(aggregateExchangeRatePrevotes_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder addAggregateExchangeRatePrevotesBuilder() {
+        return getAggregateExchangeRatePrevotesFieldBuilder().addBuilder(
+            com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder addAggregateExchangeRatePrevotesBuilder(
+          int index) {
+        return getAggregateExchangeRatePrevotesFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_exchange_rate_prevotes = 5 [json_name = "aggregateExchangeRatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder> 
+           getAggregateExchangeRatePrevotesBuilderList() {
+        return getAggregateExchangeRatePrevotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+          getAggregateExchangeRatePrevotesFieldBuilder() {
+        if (aggregateExchangeRatePrevotesBuilder_ == null) {
+          aggregateExchangeRatePrevotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder>(
+                  aggregateExchangeRatePrevotes_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          aggregateExchangeRatePrevotes_ = null;
+        }
+        return aggregateExchangeRatePrevotesBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> aggregateExchangeRateVotes_ =
+        java.util.Collections.emptyList();
+      private void ensureAggregateExchangeRateVotesIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          aggregateExchangeRateVotes_ = new java.util.ArrayList<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote>(aggregateExchangeRateVotes_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> aggregateExchangeRateVotesBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> getAggregateExchangeRateVotesList() {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(aggregateExchangeRateVotes_);
+        } else {
+          return aggregateExchangeRateVotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAggregateExchangeRateVotesCount() {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          return aggregateExchangeRateVotes_.size();
+        } else {
+          return aggregateExchangeRateVotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateExchangeRateVotes(int index) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          return aggregateExchangeRateVotes_.get(index);
+        } else {
+          return aggregateExchangeRateVotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateExchangeRateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.set(index, value);
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateExchangeRateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRateVotes(com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.add(value);
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.add(index, value);
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRateVotes(
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateExchangeRateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAggregateExchangeRateVotes(
+          java.lang.Iterable<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> values) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          ensureAggregateExchangeRateVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, aggregateExchangeRateVotes_);
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAggregateExchangeRateVotes() {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          aggregateExchangeRateVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAggregateExchangeRateVotes(int index) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          ensureAggregateExchangeRateVotesIsMutable();
+          aggregateExchangeRateVotes_.remove(index);
+          onChanged();
+        } else {
+          aggregateExchangeRateVotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder getAggregateExchangeRateVotesBuilder(
+          int index) {
+        return getAggregateExchangeRateVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateExchangeRateVotesOrBuilder(
+          int index) {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          return aggregateExchangeRateVotes_.get(index);  } else {
+          return aggregateExchangeRateVotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+           getAggregateExchangeRateVotesOrBuilderList() {
+        if (aggregateExchangeRateVotesBuilder_ != null) {
+          return aggregateExchangeRateVotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(aggregateExchangeRateVotes_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder addAggregateExchangeRateVotesBuilder() {
+        return getAggregateExchangeRateVotesFieldBuilder().addBuilder(
+            com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder addAggregateExchangeRateVotesBuilder(
+          int index) {
+        return getAggregateExchangeRateVotesFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_exchange_rate_votes = 6 [json_name = "aggregateExchangeRateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder> 
+           getAggregateExchangeRateVotesBuilderList() {
+        return getAggregateExchangeRateVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+          getAggregateExchangeRateVotesFieldBuilder() {
+        if (aggregateExchangeRateVotesBuilder_ == null) {
+          aggregateExchangeRateVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder>(
+                  aggregateExchangeRateVotes_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          aggregateExchangeRateVotes_ = null;
+        }
+        return aggregateExchangeRateVotesBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medians_ =
+        java.util.Collections.emptyList();
+      private void ensureMediansIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          medians_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.Price>(medians_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> mediansBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMediansList() {
+        if (mediansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(medians_);
+        } else {
+          return mediansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMediansCount() {
+        if (mediansBuilder_ == null) {
+          return medians_.size();
+        } else {
+          return mediansBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price getMedians(int index) {
+        if (mediansBuilder_ == null) {
+          return medians_.get(index);
+        } else {
+          return mediansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (mediansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediansIsMutable();
+          medians_.set(index, value);
+          onChanged();
+        } else {
+          mediansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mediansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(com.umee.oracle.v1.GenesisProto.Price value) {
+        if (mediansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediansIsMutable();
+          medians_.add(value);
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (mediansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediansIsMutable();
+          medians_.add(index, value);
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(
+          com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMedians(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.Price> values) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, medians_);
+          onChanged();
+        } else {
+          mediansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMedians() {
+        if (mediansBuilder_ == null) {
+          medians_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          mediansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMedians(int index) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.remove(index);
+          onChanged();
+        } else {
+          mediansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder getMediansBuilder(
+          int index) {
+        return getMediansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMediansOrBuilder(
+          int index) {
+        if (mediansBuilder_ == null) {
+          return medians_.get(index);  } else {
+          return mediansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+           getMediansOrBuilderList() {
+        if (mediansBuilder_ != null) {
+          return mediansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(medians_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMediansBuilder() {
+        return getMediansFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMediansBuilder(
+          int index) {
+        return getMediansFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medians = 7 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price.Builder> 
+           getMediansBuilderList() {
+        return getMediansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+          getMediansFieldBuilder() {
+        if (mediansBuilder_ == null) {
+          mediansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder>(
+                  medians_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          medians_ = null;
+        }
+        return mediansBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.Price> historicPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureHistoricPricesIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          historicPrices_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.Price>(historicPrices_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> historicPricesBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getHistoricPricesList() {
+        if (historicPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(historicPrices_);
+        } else {
+          return historicPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public int getHistoricPricesCount() {
+        if (historicPricesBuilder_ == null) {
+          return historicPrices_.size();
+        } else {
+          return historicPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price getHistoricPrices(int index) {
+        if (historicPricesBuilder_ == null) {
+          return historicPrices_.get(index);
+        } else {
+          return historicPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricPrices(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (historicPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricPricesIsMutable();
+          historicPrices_.set(index, value);
+          onChanged();
+        } else {
+          historicPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setHistoricPrices(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (historicPricesBuilder_ == null) {
+          ensureHistoricPricesIsMutable();
+          historicPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          historicPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricPrices(com.umee.oracle.v1.GenesisProto.Price value) {
+        if (historicPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricPricesIsMutable();
+          historicPrices_.add(value);
+          onChanged();
+        } else {
+          historicPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricPrices(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (historicPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHistoricPricesIsMutable();
+          historicPrices_.add(index, value);
+          onChanged();
+        } else {
+          historicPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricPrices(
+          com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (historicPricesBuilder_ == null) {
+          ensureHistoricPricesIsMutable();
+          historicPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          historicPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addHistoricPrices(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (historicPricesBuilder_ == null) {
+          ensureHistoricPricesIsMutable();
+          historicPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          historicPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllHistoricPrices(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.Price> values) {
+        if (historicPricesBuilder_ == null) {
+          ensureHistoricPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, historicPrices_);
+          onChanged();
+        } else {
+          historicPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearHistoricPrices() {
+        if (historicPricesBuilder_ == null) {
+          historicPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          historicPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeHistoricPrices(int index) {
+        if (historicPricesBuilder_ == null) {
+          ensureHistoricPricesIsMutable();
+          historicPrices_.remove(index);
+          onChanged();
+        } else {
+          historicPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder getHistoricPricesBuilder(
+          int index) {
+        return getHistoricPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getHistoricPricesOrBuilder(
+          int index) {
+        if (historicPricesBuilder_ == null) {
+          return historicPrices_.get(index);  } else {
+          return historicPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+           getHistoricPricesOrBuilderList() {
+        if (historicPricesBuilder_ != null) {
+          return historicPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(historicPrices_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addHistoricPricesBuilder() {
+        return getHistoricPricesFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addHistoricPricesBuilder(
+          int index) {
+        return getHistoricPricesFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price historic_prices = 8 [json_name = "historicPrices", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price.Builder> 
+           getHistoricPricesBuilderList() {
+        return getHistoricPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+          getHistoricPricesFieldBuilder() {
+        if (historicPricesBuilder_ == null) {
+          historicPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder>(
+                  historicPrices_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          historicPrices_ = null;
+        }
+        return historicPricesBuilder_;
+      }
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medianDeviations_ =
+        java.util.Collections.emptyList();
+      private void ensureMedianDeviationsIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          medianDeviations_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.Price>(medianDeviations_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> medianDeviationsBuilder_;
+
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMedianDeviationsList() {
+        if (medianDeviationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(medianDeviations_);
+        } else {
+          return medianDeviationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMedianDeviationsCount() {
+        if (medianDeviationsBuilder_ == null) {
+          return medianDeviations_.size();
+        } else {
+          return medianDeviationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price getMedianDeviations(int index) {
+        if (medianDeviationsBuilder_ == null) {
+          return medianDeviations_.get(index);
+        } else {
+          return medianDeviationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (medianDeviationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.set(index, value);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(com.umee.oracle.v1.GenesisProto.Price value) {
+        if (medianDeviationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(value);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (medianDeviationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(index, value);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(
+          com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMedianDeviations(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.Price> values) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, medianDeviations_);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMedianDeviations() {
+        if (medianDeviationsBuilder_ == null) {
+          medianDeviations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMedianDeviations(int index) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.remove(index);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder getMedianDeviationsBuilder(
+          int index) {
+        return getMedianDeviationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMedianDeviationsOrBuilder(
+          int index) {
+        if (medianDeviationsBuilder_ == null) {
+          return medianDeviations_.get(index);  } else {
+          return medianDeviationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+           getMedianDeviationsOrBuilderList() {
+        if (medianDeviationsBuilder_ != null) {
+          return medianDeviationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(medianDeviations_);
+        }
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMedianDeviationsBuilder() {
+        return getMedianDeviationsFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMedianDeviationsBuilder(
+          int index) {
+        return getMedianDeviationsFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 9 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price.Builder> 
+           getMedianDeviationsBuilderList() {
+        return getMedianDeviationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+          getMedianDeviationsFieldBuilder() {
+        if (medianDeviationsBuilder_ == null) {
+          medianDeviationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder>(
+                  medianDeviations_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          medianDeviations_ = null;
+        }
+        return medianDeviationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.GenesisState)
+    private static final com.umee.oracle.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeederDelegationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.FeederDelegation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+     * @return The feederAddress.
+     */
+    java.lang.String getFeederAddress();
+    /**
+     * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+     * @return The bytes for feederAddress.
+     */
+    com.google.protobuf.ByteString
+        getFeederAddressBytes();
+
+    /**
+     * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+  }
+  /**
+   * <pre>
+   * FeederDelegation is the address for where oracle feeder authority are
+   * delegated to. By default this struct is only used at genesis to feed in
+   * default feeder addresses.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.FeederDelegation}
+   */
+  public static final class FeederDelegation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.FeederDelegation)
+      FeederDelegationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeederDelegation.newBuilder() to construct.
+    private FeederDelegation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeederDelegation() {
+      feederAddress_ = "";
+      validatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FeederDelegation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_FeederDelegation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_FeederDelegation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.GenesisProto.FeederDelegation.class, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder.class);
+    }
+
+    public static final int FEEDER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feederAddress_ = "";
+    /**
+     * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+     * @return The feederAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFeederAddress() {
+      java.lang.Object ref = feederAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feederAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+     * @return The bytes for feederAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeederAddressBytes() {
+      java.lang.Object ref = feederAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feederAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feederAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feederAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validatorAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feederAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feederAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validatorAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.GenesisProto.FeederDelegation)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.GenesisProto.FeederDelegation other = (com.umee.oracle.v1.GenesisProto.FeederDelegation) obj;
+
+      if (!getFeederAddress()
+          .equals(other.getFeederAddress())) return false;
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEEDER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFeederAddress().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.GenesisProto.FeederDelegation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * FeederDelegation is the address for where oracle feeder authority are
+     * delegated to. By default this struct is only used at genesis to feed in
+     * default feeder addresses.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.FeederDelegation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.FeederDelegation)
+        com.umee.oracle.v1.GenesisProto.FeederDelegationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_FeederDelegation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_FeederDelegation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.GenesisProto.FeederDelegation.class, com.umee.oracle.v1.GenesisProto.FeederDelegation.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.GenesisProto.FeederDelegation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feederAddress_ = "";
+        validatorAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_FeederDelegation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation getDefaultInstanceForType() {
+        return com.umee.oracle.v1.GenesisProto.FeederDelegation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation build() {
+        com.umee.oracle.v1.GenesisProto.FeederDelegation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.FeederDelegation buildPartial() {
+        com.umee.oracle.v1.GenesisProto.FeederDelegation result = new com.umee.oracle.v1.GenesisProto.FeederDelegation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.GenesisProto.FeederDelegation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feederAddress_ = feederAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.GenesisProto.FeederDelegation) {
+          return mergeFrom((com.umee.oracle.v1.GenesisProto.FeederDelegation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.GenesisProto.FeederDelegation other) {
+        if (other == com.umee.oracle.v1.GenesisProto.FeederDelegation.getDefaultInstance()) return this;
+        if (!other.getFeederAddress().isEmpty()) {
+          feederAddress_ = other.feederAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feederAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feederAddress_ = "";
+      /**
+       * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+       * @return The feederAddress.
+       */
+      public java.lang.String getFeederAddress() {
+        java.lang.Object ref = feederAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feederAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+       * @return The bytes for feederAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFeederAddressBytes() {
+        java.lang.Object ref = feederAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feederAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+       * @param value The feederAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeederAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feederAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeederAddress() {
+        feederAddress_ = getDefaultInstance().getFeederAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feeder_address = 1 [json_name = "feederAddress"];</code>
+       * @param value The bytes for feederAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeederAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feederAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 2 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.FeederDelegation)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.FeederDelegation)
+    private static final com.umee.oracle.v1.GenesisProto.FeederDelegation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.GenesisProto.FeederDelegation();
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.FeederDelegation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeederDelegation>
+        PARSER = new com.google.protobuf.AbstractParser<FeederDelegation>() {
+      @java.lang.Override
+      public FeederDelegation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeederDelegation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeederDelegation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.FeederDelegation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MissCounterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.MissCounter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    java.lang.String getValidatorAddress();
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddressBytes();
+
+    /**
+     * <code>uint64 miss_counter = 2 [json_name = "missCounter"];</code>
+     * @return The missCounter.
+     */
+    long getMissCounter();
+  }
+  /**
+   * <pre>
+   * MissCounter defines an miss counter and validator address pair used in
+   * oracle module's genesis state
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.MissCounter}
+   */
+  public static final class MissCounter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.MissCounter)
+      MissCounterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MissCounter.newBuilder() to construct.
+    private MissCounter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MissCounter() {
+      validatorAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MissCounter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_MissCounter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_MissCounter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.GenesisProto.MissCounter.class, com.umee.oracle.v1.GenesisProto.MissCounter.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddress_ = "";
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The validatorAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddress() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+     * @return The bytes for validatorAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddressBytes() {
+      java.lang.Object ref = validatorAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MISS_COUNTER_FIELD_NUMBER = 2;
+    private long missCounter_ = 0L;
+    /**
+     * <code>uint64 miss_counter = 2 [json_name = "missCounter"];</code>
+     * @return The missCounter.
+     */
+    @java.lang.Override
+    public long getMissCounter() {
+      return missCounter_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddress_);
+      }
+      if (missCounter_ != 0L) {
+        output.writeUInt64(2, missCounter_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddress_);
+      }
+      if (missCounter_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, missCounter_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.GenesisProto.MissCounter)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.GenesisProto.MissCounter other = (com.umee.oracle.v1.GenesisProto.MissCounter) obj;
+
+      if (!getValidatorAddress()
+          .equals(other.getValidatorAddress())) return false;
+      if (getMissCounter()
+          != other.getMissCounter()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddress().hashCode();
+      hash = (37 * hash) + MISS_COUNTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMissCounter());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.MissCounter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.GenesisProto.MissCounter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MissCounter defines an miss counter and validator address pair used in
+     * oracle module's genesis state
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.MissCounter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.MissCounter)
+        com.umee.oracle.v1.GenesisProto.MissCounterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_MissCounter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_MissCounter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.GenesisProto.MissCounter.class, com.umee.oracle.v1.GenesisProto.MissCounter.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.GenesisProto.MissCounter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddress_ = "";
+        missCounter_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_MissCounter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.MissCounter getDefaultInstanceForType() {
+        return com.umee.oracle.v1.GenesisProto.MissCounter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.MissCounter build() {
+        com.umee.oracle.v1.GenesisProto.MissCounter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.MissCounter buildPartial() {
+        com.umee.oracle.v1.GenesisProto.MissCounter result = new com.umee.oracle.v1.GenesisProto.MissCounter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.GenesisProto.MissCounter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddress_ = validatorAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.missCounter_ = missCounter_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.GenesisProto.MissCounter) {
+          return mergeFrom((com.umee.oracle.v1.GenesisProto.MissCounter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.GenesisProto.MissCounter other) {
+        if (other == com.umee.oracle.v1.GenesisProto.MissCounter.getDefaultInstance()) return this;
+        if (!other.getValidatorAddress().isEmpty()) {
+          validatorAddress_ = other.validatorAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getMissCounter() != 0L) {
+          setMissCounter(other.getMissCounter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                missCounter_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddress_ = "";
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The validatorAddress.
+       */
+      public java.lang.String getValidatorAddress() {
+        java.lang.Object ref = validatorAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return The bytes for validatorAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddressBytes() {
+        java.lang.Object ref = validatorAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddress() {
+        validatorAddress_ = getDefaultInstance().getValidatorAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string validator_address = 1 [json_name = "validatorAddress"];</code>
+       * @param value The bytes for validatorAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long missCounter_ ;
+      /**
+       * <code>uint64 miss_counter = 2 [json_name = "missCounter"];</code>
+       * @return The missCounter.
+       */
+      @java.lang.Override
+      public long getMissCounter() {
+        return missCounter_;
+      }
+      /**
+       * <code>uint64 miss_counter = 2 [json_name = "missCounter"];</code>
+       * @param value The missCounter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMissCounter(long value) {
+
+        missCounter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 miss_counter = 2 [json_name = "missCounter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMissCounter() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        missCounter_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.MissCounter)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.MissCounter)
+    private static final com.umee.oracle.v1.GenesisProto.MissCounter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.GenesisProto.MissCounter();
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.MissCounter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MissCounter>
+        PARSER = new com.google.protobuf.AbstractParser<MissCounter>() {
+      @java.lang.Override
+      public MissCounter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MissCounter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MissCounter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.MissCounter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PriceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.Price)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+     * @return Whether the exchangeRateTuple field is set.
+     */
+    boolean hasExchangeRateTuple();
+    /**
+     * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+     * @return The exchangeRateTuple.
+     */
+    com.umee.oracle.v1.OracleProto.ExchangeRateTuple getExchangeRateTuple();
+    /**
+     * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRateTupleOrBuilder();
+
+    /**
+     * <code>uint64 block_num = 2 [json_name = "blockNum"];</code>
+     * @return The blockNum.
+     */
+    long getBlockNum();
+  }
+  /**
+   * <pre>
+   * Price is an instance of a price "stamp"
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.Price}
+   */
+  public static final class Price extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.Price)
+      PriceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Price.newBuilder() to construct.
+    private Price(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Price() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Price();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_Price_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_Price_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.GenesisProto.Price.class, com.umee.oracle.v1.GenesisProto.Price.Builder.class);
+    }
+
+    public static final int EXCHANGE_RATE_TUPLE_FIELD_NUMBER = 1;
+    private com.umee.oracle.v1.OracleProto.ExchangeRateTuple exchangeRateTuple_;
+    /**
+     * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+     * @return Whether the exchangeRateTuple field is set.
+     */
+    @java.lang.Override
+    public boolean hasExchangeRateTuple() {
+      return exchangeRateTuple_ != null;
+    }
+    /**
+     * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+     * @return The exchangeRateTuple.
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.ExchangeRateTuple getExchangeRateTuple() {
+      return exchangeRateTuple_ == null ? com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance() : exchangeRateTuple_;
+    }
+    /**
+     * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRateTupleOrBuilder() {
+      return exchangeRateTuple_ == null ? com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance() : exchangeRateTuple_;
+    }
+
+    public static final int BLOCK_NUM_FIELD_NUMBER = 2;
+    private long blockNum_ = 0L;
+    /**
+     * <code>uint64 block_num = 2 [json_name = "blockNum"];</code>
+     * @return The blockNum.
+     */
+    @java.lang.Override
+    public long getBlockNum() {
+      return blockNum_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (exchangeRateTuple_ != null) {
+        output.writeMessage(1, getExchangeRateTuple());
+      }
+      if (blockNum_ != 0L) {
+        output.writeUInt64(2, blockNum_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (exchangeRateTuple_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getExchangeRateTuple());
+      }
+      if (blockNum_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, blockNum_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.GenesisProto.Price)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.GenesisProto.Price other = (com.umee.oracle.v1.GenesisProto.Price) obj;
+
+      if (hasExchangeRateTuple() != other.hasExchangeRateTuple()) return false;
+      if (hasExchangeRateTuple()) {
+        if (!getExchangeRateTuple()
+            .equals(other.getExchangeRateTuple())) return false;
+      }
+      if (getBlockNum()
+          != other.getBlockNum()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExchangeRateTuple()) {
+        hash = (37 * hash) + EXCHANGE_RATE_TUPLE_FIELD_NUMBER;
+        hash = (53 * hash) + getExchangeRateTuple().hashCode();
+      }
+      hash = (37 * hash) + BLOCK_NUM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockNum());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.Price parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.Price parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.GenesisProto.Price parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.GenesisProto.Price prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Price is an instance of a price "stamp"
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.Price}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.Price)
+        com.umee.oracle.v1.GenesisProto.PriceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_Price_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_Price_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.GenesisProto.Price.class, com.umee.oracle.v1.GenesisProto.Price.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.GenesisProto.Price.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        exchangeRateTuple_ = null;
+        if (exchangeRateTupleBuilder_ != null) {
+          exchangeRateTupleBuilder_.dispose();
+          exchangeRateTupleBuilder_ = null;
+        }
+        blockNum_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.GenesisProto.internal_static_umee_oracle_v1_Price_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.Price getDefaultInstanceForType() {
+        return com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.Price build() {
+        com.umee.oracle.v1.GenesisProto.Price result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.GenesisProto.Price buildPartial() {
+        com.umee.oracle.v1.GenesisProto.Price result = new com.umee.oracle.v1.GenesisProto.Price(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.GenesisProto.Price result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.exchangeRateTuple_ = exchangeRateTupleBuilder_ == null
+              ? exchangeRateTuple_
+              : exchangeRateTupleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.blockNum_ = blockNum_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.GenesisProto.Price) {
+          return mergeFrom((com.umee.oracle.v1.GenesisProto.Price)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.GenesisProto.Price other) {
+        if (other == com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance()) return this;
+        if (other.hasExchangeRateTuple()) {
+          mergeExchangeRateTuple(other.getExchangeRateTuple());
+        }
+        if (other.getBlockNum() != 0L) {
+          setBlockNum(other.getBlockNum());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getExchangeRateTupleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                blockNum_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.oracle.v1.OracleProto.ExchangeRateTuple exchangeRateTuple_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.ExchangeRateTuple, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder, com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> exchangeRateTupleBuilder_;
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       * @return Whether the exchangeRateTuple field is set.
+       */
+      public boolean hasExchangeRateTuple() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       * @return The exchangeRateTuple.
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTuple getExchangeRateTuple() {
+        if (exchangeRateTupleBuilder_ == null) {
+          return exchangeRateTuple_ == null ? com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance() : exchangeRateTuple_;
+        } else {
+          return exchangeRateTupleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExchangeRateTuple(com.umee.oracle.v1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRateTupleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          exchangeRateTuple_ = value;
+        } else {
+          exchangeRateTupleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setExchangeRateTuple(
+          com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder builderForValue) {
+        if (exchangeRateTupleBuilder_ == null) {
+          exchangeRateTuple_ = builderForValue.build();
+        } else {
+          exchangeRateTupleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeExchangeRateTuple(com.umee.oracle.v1.OracleProto.ExchangeRateTuple value) {
+        if (exchangeRateTupleBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            exchangeRateTuple_ != null &&
+            exchangeRateTuple_ != com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance()) {
+            getExchangeRateTupleBuilder().mergeFrom(value);
+          } else {
+            exchangeRateTuple_ = value;
+          }
+        } else {
+          exchangeRateTupleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearExchangeRateTuple() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        exchangeRateTuple_ = null;
+        if (exchangeRateTupleBuilder_ != null) {
+          exchangeRateTupleBuilder_.dispose();
+          exchangeRateTupleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder getExchangeRateTupleBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getExchangeRateTupleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder getExchangeRateTupleOrBuilder() {
+        if (exchangeRateTupleBuilder_ != null) {
+          return exchangeRateTupleBuilder_.getMessageOrBuilder();
+        } else {
+          return exchangeRateTuple_ == null ?
+              com.umee.oracle.v1.OracleProto.ExchangeRateTuple.getDefaultInstance() : exchangeRateTuple_;
+        }
+      }
+      /**
+       * <code>.umee.oracle.v1.ExchangeRateTuple exchange_rate_tuple = 1 [json_name = "exchangeRateTuple", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.ExchangeRateTuple, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder, com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder> 
+          getExchangeRateTupleFieldBuilder() {
+        if (exchangeRateTupleBuilder_ == null) {
+          exchangeRateTupleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.ExchangeRateTuple, com.umee.oracle.v1.OracleProto.ExchangeRateTuple.Builder, com.umee.oracle.v1.OracleProto.ExchangeRateTupleOrBuilder>(
+                  getExchangeRateTuple(),
+                  getParentForChildren(),
+                  isClean());
+          exchangeRateTuple_ = null;
+        }
+        return exchangeRateTupleBuilder_;
+      }
+
+      private long blockNum_ ;
+      /**
+       * <code>uint64 block_num = 2 [json_name = "blockNum"];</code>
+       * @return The blockNum.
+       */
+      @java.lang.Override
+      public long getBlockNum() {
+        return blockNum_;
+      }
+      /**
+       * <code>uint64 block_num = 2 [json_name = "blockNum"];</code>
+       * @param value The blockNum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockNum(long value) {
+
+        blockNum_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 block_num = 2 [json_name = "blockNum"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockNum() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        blockNum_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.Price)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.Price)
+    private static final com.umee.oracle.v1.GenesisProto.Price DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.GenesisProto.Price();
+    }
+
+    public static com.umee.oracle.v1.GenesisProto.Price getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Price>
+        PARSER = new com.google.protobuf.AbstractParser<Price>() {
+      @java.lang.Override
+      public Price parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Price> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Price> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.Price getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_FeederDelegation_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_FeederDelegation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_MissCounter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_MissCounter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_Price_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_Price_fieldAccessorTable;
 
@@ -72,12 +5704,12 @@ public final class GenesisProto {
       "_counter\030\002 \001(\004R\013missCounter\"}\n\005Price\022W\n\023" +
       "exchange_rate_tuple\030\001 \001(\0132!.umee.oracle." +
       "v1.ExchangeRateTupleB\004\310\336\037\000R\021exchangeRate" +
-      "Tuple\022\033\n\tblock_num\030\002 \001(\004R\010blockNumB\260\001\n\022c" +
-      "om.umee.oracle.v1B\014GenesisProtoP\001Z.githu" +
-      "b.com/umee-network/umee/v5/x/oracle/type" +
-      "s\242\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle\\V" +
-      "1\342\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee::O" +
-      "racle::V1\310\341\036\000b\006proto3"
+      "Tuple\022\033\n\tblock_num\030\002 \001(\004R\010blockNumB\256\001\n\022c" +
+      "om.umee.oracle.v1B\014GenesisProtoZ.github." +
+      "com/umee-network/umee/v5/x/oracle/types\242" +
+      "\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle\\V1\342" +
+      "\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee::Ora" +
+      "cle::V1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

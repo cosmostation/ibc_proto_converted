@@ -14,39 +14,6683 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventUpdateParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventUpdateParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * old_params is the module's old parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the oldParams field is set.
+     */
+    boolean hasOldParams();
+    /**
+     * <pre>
+     * old_params is the module's old parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+     * @return The oldParams.
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.Params getOldParams();
+    /**
+     * <pre>
+     * old_params is the module's old parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getOldParamsOrBuilder();
+
+    /**
+     * <pre>
+     * new_params is the module's new parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the newParams field is set.
+     */
+    boolean hasNewParams();
+    /**
+     * <pre>
+     * new_params is the module's new parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+     * @return The newParams.
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.Params getNewParams();
+    /**
+     * <pre>
+     * new_params is the module's new parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getNewParamsOrBuilder();
+
+    /**
+     * <pre>
+     * payload is the parameter updates that were performed.
+     * </pre>
+     *
+     * <code>string payload = 3 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    java.lang.String getPayload();
+    /**
+     * <pre>
+     * payload is the parameter updates that were performed.
+     * </pre>
+     *
+     * <code>string payload = 3 [json_name = "payload"];</code>
+     * @return The bytes for payload.
+     */
+    com.google.protobuf.ByteString
+        getPayloadBytes();
+  }
+  /**
+   * <pre>
+   * EventUpdateParams is an event emitted when the module parameters are updated.
+   * emitted_by: MsgUpdateParams
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventUpdateParams}
+   */
+  public static final class EventUpdateParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventUpdateParams)
+      EventUpdateParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateParams.newBuilder() to construct.
+    private EventUpdateParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateParams() {
+      payload_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.class, com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.Builder.class);
+    }
+
+    public static final int OLD_PARAMS_FIELD_NUMBER = 1;
+    private com.kyve.stakers.v1beta1.ParamsProto.Params oldParams_;
+    /**
+     * <pre>
+     * old_params is the module's old parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the oldParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasOldParams() {
+      return oldParams_ != null;
+    }
+    /**
+     * <pre>
+     * old_params is the module's old parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+     * @return The oldParams.
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.Params getOldParams() {
+      return oldParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : oldParams_;
+    }
+    /**
+     * <pre>
+     * old_params is the module's old parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getOldParamsOrBuilder() {
+      return oldParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : oldParams_;
+    }
+
+    public static final int NEW_PARAMS_FIELD_NUMBER = 2;
+    private com.kyve.stakers.v1beta1.ParamsProto.Params newParams_;
+    /**
+     * <pre>
+     * new_params is the module's new parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the newParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewParams() {
+      return newParams_ != null;
+    }
+    /**
+     * <pre>
+     * new_params is the module's new parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+     * @return The newParams.
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.Params getNewParams() {
+      return newParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : newParams_;
+    }
+    /**
+     * <pre>
+     * new_params is the module's new parameters.
+     * </pre>
+     *
+     * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getNewParamsOrBuilder() {
+      return newParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : newParams_;
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object payload_ = "";
+    /**
+     * <pre>
+     * payload is the parameter updates that were performed.
+     * </pre>
+     *
+     * <code>string payload = 3 [json_name = "payload"];</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public java.lang.String getPayload() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payload_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * payload is the parameter updates that were performed.
+     * </pre>
+     *
+     * <code>string payload = 3 [json_name = "payload"];</code>
+     * @return The bytes for payload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayloadBytes() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payload_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (oldParams_ != null) {
+        output.writeMessage(1, getOldParams());
+      }
+      if (newParams_ != null) {
+        output.writeMessage(2, getNewParams());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payload_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (oldParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOldParams());
+      }
+      if (newParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getNewParams());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payload_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams other = (com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams) obj;
+
+      if (hasOldParams() != other.hasOldParams()) return false;
+      if (hasOldParams()) {
+        if (!getOldParams()
+            .equals(other.getOldParams())) return false;
+      }
+      if (hasNewParams() != other.hasNewParams()) return false;
+      if (hasNewParams()) {
+        if (!getNewParams()
+            .equals(other.getNewParams())) return false;
+      }
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOldParams()) {
+        hash = (37 * hash) + OLD_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getOldParams().hashCode();
+      }
+      if (hasNewParams()) {
+        hash = (37 * hash) + NEW_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getNewParams().hashCode();
+      }
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventUpdateParams is an event emitted when the module parameters are updated.
+     * emitted_by: MsgUpdateParams
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventUpdateParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventUpdateParams)
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.class, com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oldParams_ = null;
+        if (oldParamsBuilder_ != null) {
+          oldParamsBuilder_.dispose();
+          oldParamsBuilder_ = null;
+        }
+        newParams_ = null;
+        if (newParamsBuilder_ != null) {
+          newParamsBuilder_.dispose();
+          newParamsBuilder_ = null;
+        }
+        payload_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams result = new com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oldParams_ = oldParamsBuilder_ == null
+              ? oldParams_
+              : oldParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newParams_ = newParamsBuilder_ == null
+              ? newParams_
+              : newParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.payload_ = payload_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams.getDefaultInstance()) return this;
+        if (other.hasOldParams()) {
+          mergeOldParams(other.getOldParams());
+        }
+        if (other.hasNewParams()) {
+          mergeNewParams(other.getNewParams());
+        }
+        if (!other.getPayload().isEmpty()) {
+          payload_ = other.payload_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOldParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getNewParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                payload_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.stakers.v1beta1.ParamsProto.Params oldParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> oldParamsBuilder_;
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the oldParams field is set.
+       */
+      public boolean hasOldParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       * @return The oldParams.
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params getOldParams() {
+        if (oldParamsBuilder_ == null) {
+          return oldParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : oldParams_;
+        } else {
+          return oldParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOldParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (oldParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oldParams_ = value;
+        } else {
+          oldParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOldParams(
+          com.kyve.stakers.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (oldParamsBuilder_ == null) {
+          oldParams_ = builderForValue.build();
+        } else {
+          oldParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOldParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (oldParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            oldParams_ != null &&
+            oldParams_ != com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getOldParamsBuilder().mergeFrom(value);
+          } else {
+            oldParams_ = value;
+          }
+        } else {
+          oldParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOldParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oldParams_ = null;
+        if (oldParamsBuilder_ != null) {
+          oldParamsBuilder_.dispose();
+          oldParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params.Builder getOldParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOldParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getOldParamsOrBuilder() {
+        if (oldParamsBuilder_ != null) {
+          return oldParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return oldParams_ == null ?
+              com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : oldParams_;
+        }
+      }
+      /**
+       * <pre>
+       * old_params is the module's old parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params old_params = 1 [json_name = "oldParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getOldParamsFieldBuilder() {
+        if (oldParamsBuilder_ == null) {
+          oldParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getOldParams(),
+                  getParentForChildren(),
+                  isClean());
+          oldParams_ = null;
+        }
+        return oldParamsBuilder_;
+      }
+
+      private com.kyve.stakers.v1beta1.ParamsProto.Params newParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> newParamsBuilder_;
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the newParams field is set.
+       */
+      public boolean hasNewParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       * @return The newParams.
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params getNewParams() {
+        if (newParamsBuilder_ == null) {
+          return newParams_ == null ? com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : newParams_;
+        } else {
+          return newParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNewParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (newParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          newParams_ = value;
+        } else {
+          newParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNewParams(
+          com.kyve.stakers.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (newParamsBuilder_ == null) {
+          newParams_ = builderForValue.build();
+        } else {
+          newParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeNewParams(com.kyve.stakers.v1beta1.ParamsProto.Params value) {
+        if (newParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            newParams_ != null &&
+            newParams_ != com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getNewParamsBuilder().mergeFrom(value);
+          } else {
+            newParams_ = value;
+          }
+        } else {
+          newParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearNewParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        newParams_ = null;
+        if (newParamsBuilder_ != null) {
+          newParamsBuilder_.dispose();
+          newParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.Params.Builder getNewParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getNewParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder getNewParamsOrBuilder() {
+        if (newParamsBuilder_ != null) {
+          return newParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return newParams_ == null ?
+              com.kyve.stakers.v1beta1.ParamsProto.Params.getDefaultInstance() : newParams_;
+        }
+      }
+      /**
+       * <pre>
+       * new_params is the module's new parameters.
+       * </pre>
+       *
+       * <code>.kyve.stakers.v1beta1.Params new_params = 2 [json_name = "newParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getNewParamsFieldBuilder() {
+        if (newParamsBuilder_ == null) {
+          newParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.stakers.v1beta1.ParamsProto.Params, com.kyve.stakers.v1beta1.ParamsProto.Params.Builder, com.kyve.stakers.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getNewParams(),
+                  getParentForChildren(),
+                  isClean());
+          newParams_ = null;
+        }
+        return newParamsBuilder_;
+      }
+
+      private java.lang.Object payload_ = "";
+      /**
+       * <pre>
+       * payload is the parameter updates that were performed.
+       * </pre>
+       *
+       * <code>string payload = 3 [json_name = "payload"];</code>
+       * @return The payload.
+       */
+      public java.lang.String getPayload() {
+        java.lang.Object ref = payload_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payload_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * payload is the parameter updates that were performed.
+       * </pre>
+       *
+       * <code>string payload = 3 [json_name = "payload"];</code>
+       * @return The bytes for payload.
+       */
+      public com.google.protobuf.ByteString
+          getPayloadBytes() {
+        java.lang.Object ref = payload_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payload_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * payload is the parameter updates that were performed.
+       * </pre>
+       *
+       * <code>string payload = 3 [json_name = "payload"];</code>
+       * @param value The payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayload(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        payload_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payload is the parameter updates that were performed.
+       * </pre>
+       *
+       * <code>string payload = 3 [json_name = "payload"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayload() {
+        payload_ = getDefaultInstance().getPayload();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payload is the parameter updates that were performed.
+       * </pre>
+       *
+       * <code>string payload = 3 [json_name = "payload"];</code>
+       * @param value The bytes for payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayloadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        payload_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventUpdateParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventUpdateParams)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateParams>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateParams>() {
+      @java.lang.Override
+      public EventUpdateParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventUpdateParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventCreateStakerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventCreateStaker)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * amount ...
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     * commission
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The commission.
+     */
+    java.lang.String getCommission();
+    /**
+     * <pre>
+     * commission
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for commission.
+     */
+    com.google.protobuf.ByteString
+        getCommissionBytes();
+  }
+  /**
+   * <pre>
+   * EventCreateStaker is an event emitted when a protocol node stakes in a pool.
+   * emitted_by: MsgCreateStaker
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventCreateStaker}
+   */
+  public static final class EventCreateStaker extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventCreateStaker)
+      EventCreateStakerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventCreateStaker.newBuilder() to construct.
+    private EventCreateStaker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventCreateStaker() {
+      staker_ = "";
+      commission_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventCreateStaker();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventCreateStaker_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventCreateStaker_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.class, com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount ...
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int COMMISSION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commission_ = "";
+    /**
+     * <pre>
+     * commission
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The commission.
+     */
+    @java.lang.Override
+    public java.lang.String getCommission() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * commission
+     * </pre>
+     *
+     * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for commission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommissionBytes() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(2, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, commission_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, commission_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker other = (com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getCommission()
+          .equals(other.getCommission())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCommission().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventCreateStaker is an event emitted when a protocol node stakes in a pool.
+     * emitted_by: MsgCreateStaker
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventCreateStaker}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventCreateStaker)
+        com.kyve.stakers.v1beta1.EventsProto.EventCreateStakerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventCreateStaker_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventCreateStaker_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.class, com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        amount_ = 0L;
+        commission_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventCreateStaker_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker result = new com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.commission_ = commission_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (!other.getCommission().isEmpty()) {
+          commission_ = other.commission_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                commission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object commission_ = "";
+      /**
+       * <pre>
+       * commission
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The commission.
+       */
+      public java.lang.String getCommission() {
+        java.lang.Object ref = commission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          commission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for commission.
+       */
+      public com.google.protobuf.ByteString
+          getCommissionBytes() {
+        java.lang.Object ref = commission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          commission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        commission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommission() {
+        commission_ = getDefaultInstance().getCommission();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission
+       * </pre>
+       *
+       * <code>string commission = 3 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        commission_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventCreateStaker)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventCreateStaker)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventCreateStaker>
+        PARSER = new com.google.protobuf.AbstractParser<EventCreateStaker>() {
+      @java.lang.Override
+      public EventCreateStaker parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventCreateStaker> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventCreateStaker> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventCreateStaker getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventUpdateMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * moniker ...
+     * </pre>
+     *
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    java.lang.String getMoniker();
+    /**
+     * <pre>
+     * moniker ...
+     * </pre>
+     *
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    com.google.protobuf.ByteString
+        getMonikerBytes();
+
+    /**
+     * <pre>
+     * website ...
+     * </pre>
+     *
+     * <code>string website = 3 [json_name = "website"];</code>
+     * @return The website.
+     */
+    java.lang.String getWebsite();
+    /**
+     * <pre>
+     * website ...
+     * </pre>
+     *
+     * <code>string website = 3 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    com.google.protobuf.ByteString
+        getWebsiteBytes();
+
+    /**
+     * <pre>
+     * identity ...
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    java.lang.String getIdentity();
+    /**
+     * <pre>
+     * identity ...
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    com.google.protobuf.ByteString
+        getIdentityBytes();
+
+    /**
+     * <pre>
+     * security_contact ...
+     * </pre>
+     *
+     * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+     * @return The securityContact.
+     */
+    java.lang.String getSecurityContact();
+    /**
+     * <pre>
+     * security_contact ...
+     * </pre>
+     *
+     * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+     * @return The bytes for securityContact.
+     */
+    com.google.protobuf.ByteString
+        getSecurityContactBytes();
+
+    /**
+     * <pre>
+     * details ...
+     * </pre>
+     *
+     * <code>string details = 6 [json_name = "details"];</code>
+     * @return The details.
+     */
+    java.lang.String getDetails();
+    /**
+     * <pre>
+     * details ...
+     * </pre>
+     *
+     * <code>string details = 6 [json_name = "details"];</code>
+     * @return The bytes for details.
+     */
+    com.google.protobuf.ByteString
+        getDetailsBytes();
+  }
+  /**
+   * <pre>
+   * EventUpdateMetadata is an event emitted when a protocol node updates their metadata.
+   * emitted_by: MsgUpdateMetadata
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventUpdateMetadata}
+   */
+  public static final class EventUpdateMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventUpdateMetadata)
+      EventUpdateMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateMetadata.newBuilder() to construct.
+    private EventUpdateMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateMetadata() {
+      staker_ = "";
+      moniker_ = "";
+      website_ = "";
+      identity_ = "";
+      securityContact_ = "";
+      details_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.class, com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MONIKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object moniker_ = "";
+    /**
+     * <pre>
+     * moniker ...
+     * </pre>
+     *
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The moniker.
+     */
+    @java.lang.Override
+    public java.lang.String getMoniker() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moniker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * moniker ...
+     * </pre>
+     *
+     * <code>string moniker = 2 [json_name = "moniker"];</code>
+     * @return The bytes for moniker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMonikerBytes() {
+      java.lang.Object ref = moniker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moniker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEBSITE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object website_ = "";
+    /**
+     * <pre>
+     * website ...
+     * </pre>
+     *
+     * <code>string website = 3 [json_name = "website"];</code>
+     * @return The website.
+     */
+    @java.lang.Override
+    public java.lang.String getWebsite() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        website_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * website ...
+     * </pre>
+     *
+     * <code>string website = 3 [json_name = "website"];</code>
+     * @return The bytes for website.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebsiteBytes() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        website_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDENTITY_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identity_ = "";
+    /**
+     * <pre>
+     * identity ...
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The identity.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentity() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * identity ...
+     * </pre>
+     *
+     * <code>string identity = 4 [json_name = "identity"];</code>
+     * @return The bytes for identity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentityBytes() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_CONTACT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object securityContact_ = "";
+    /**
+     * <pre>
+     * security_contact ...
+     * </pre>
+     *
+     * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+     * @return The securityContact.
+     */
+    @java.lang.Override
+    public java.lang.String getSecurityContact() {
+      java.lang.Object ref = securityContact_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        securityContact_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * security_contact ...
+     * </pre>
+     *
+     * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+     * @return The bytes for securityContact.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecurityContactBytes() {
+      java.lang.Object ref = securityContact_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        securityContact_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DETAILS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object details_ = "";
+    /**
+     * <pre>
+     * details ...
+     * </pre>
+     *
+     * <code>string details = 6 [json_name = "details"];</code>
+     * @return The details.
+     */
+    @java.lang.Override
+    public java.lang.String getDetails() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        details_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * details ...
+     * </pre>
+     *
+     * <code>string details = 6 [json_name = "details"];</code>
+     * @return The bytes for details.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDetailsBytes() {
+      java.lang.Object ref = details_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        details_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityContact_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, securityContact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, details_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moniker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, moniker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(website_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, website_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, identity_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityContact_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, securityContact_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(details_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, details_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata other = (com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getMoniker()
+          .equals(other.getMoniker())) return false;
+      if (!getWebsite()
+          .equals(other.getWebsite())) return false;
+      if (!getIdentity()
+          .equals(other.getIdentity())) return false;
+      if (!getSecurityContact()
+          .equals(other.getSecurityContact())) return false;
+      if (!getDetails()
+          .equals(other.getDetails())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + MONIKER_FIELD_NUMBER;
+      hash = (53 * hash) + getMoniker().hashCode();
+      hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsite().hashCode();
+      hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdentity().hashCode();
+      hash = (37 * hash) + SECURITY_CONTACT_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityContact().hashCode();
+      hash = (37 * hash) + DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getDetails().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventUpdateMetadata is an event emitted when a protocol node updates their metadata.
+     * emitted_by: MsgUpdateMetadata
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventUpdateMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventUpdateMetadata)
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.class, com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        moniker_ = "";
+        website_ = "";
+        identity_ = "";
+        securityContact_ = "";
+        details_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata result = new com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.moniker_ = moniker_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.website_ = website_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.identity_ = identity_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.securityContact_ = securityContact_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.details_ = details_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMoniker().isEmpty()) {
+          moniker_ = other.moniker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWebsite().isEmpty()) {
+          website_ = other.website_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getIdentity().isEmpty()) {
+          identity_ = other.identity_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getSecurityContact().isEmpty()) {
+          securityContact_ = other.securityContact_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getDetails().isEmpty()) {
+          details_ = other.details_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                moniker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                website_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                identity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                securityContact_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                details_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object moniker_ = "";
+      /**
+       * <pre>
+       * moniker ...
+       * </pre>
+       *
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The moniker.
+       */
+      public java.lang.String getMoniker() {
+        java.lang.Object ref = moniker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moniker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * moniker ...
+       * </pre>
+       *
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return The bytes for moniker.
+       */
+      public com.google.protobuf.ByteString
+          getMonikerBytes() {
+        java.lang.Object ref = moniker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moniker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * moniker ...
+       * </pre>
+       *
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @param value The moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoniker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        moniker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * moniker ...
+       * </pre>
+       *
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoniker() {
+        moniker_ = getDefaultInstance().getMoniker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * moniker ...
+       * </pre>
+       *
+       * <code>string moniker = 2 [json_name = "moniker"];</code>
+       * @param value The bytes for moniker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonikerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        moniker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object website_ = "";
+      /**
+       * <pre>
+       * website ...
+       * </pre>
+       *
+       * <code>string website = 3 [json_name = "website"];</code>
+       * @return The website.
+       */
+      public java.lang.String getWebsite() {
+        java.lang.Object ref = website_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          website_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * website ...
+       * </pre>
+       *
+       * <code>string website = 3 [json_name = "website"];</code>
+       * @return The bytes for website.
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteBytes() {
+        java.lang.Object ref = website_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          website_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * website ...
+       * </pre>
+       *
+       * <code>string website = 3 [json_name = "website"];</code>
+       * @param value The website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsite(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        website_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * website ...
+       * </pre>
+       *
+       * <code>string website = 3 [json_name = "website"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebsite() {
+        website_ = getDefaultInstance().getWebsite();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * website ...
+       * </pre>
+       *
+       * <code>string website = 3 [json_name = "website"];</code>
+       * @param value The bytes for website to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebsiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        website_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object identity_ = "";
+      /**
+       * <pre>
+       * identity ...
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @return The identity.
+       */
+      public java.lang.String getIdentity() {
+        java.lang.Object ref = identity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          identity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identity ...
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @return The bytes for identity.
+       */
+      public com.google.protobuf.ByteString
+          getIdentityBytes() {
+        java.lang.Object ref = identity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * identity ...
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @param value The identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identity ...
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentity() {
+        identity_ = getDefaultInstance().getIdentity();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * identity ...
+       * </pre>
+       *
+       * <code>string identity = 4 [json_name = "identity"];</code>
+       * @param value The bytes for identity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        identity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object securityContact_ = "";
+      /**
+       * <pre>
+       * security_contact ...
+       * </pre>
+       *
+       * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+       * @return The securityContact.
+       */
+      public java.lang.String getSecurityContact() {
+        java.lang.Object ref = securityContact_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          securityContact_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * security_contact ...
+       * </pre>
+       *
+       * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+       * @return The bytes for securityContact.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityContactBytes() {
+        java.lang.Object ref = securityContact_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          securityContact_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * security_contact ...
+       * </pre>
+       *
+       * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+       * @param value The securityContact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityContact(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        securityContact_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * security_contact ...
+       * </pre>
+       *
+       * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityContact() {
+        securityContact_ = getDefaultInstance().getSecurityContact();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * security_contact ...
+       * </pre>
+       *
+       * <code>string security_contact = 5 [json_name = "securityContact"];</code>
+       * @param value The bytes for securityContact to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityContactBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        securityContact_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object details_ = "";
+      /**
+       * <pre>
+       * details ...
+       * </pre>
+       *
+       * <code>string details = 6 [json_name = "details"];</code>
+       * @return The details.
+       */
+      public java.lang.String getDetails() {
+        java.lang.Object ref = details_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          details_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * details ...
+       * </pre>
+       *
+       * <code>string details = 6 [json_name = "details"];</code>
+       * @return The bytes for details.
+       */
+      public com.google.protobuf.ByteString
+          getDetailsBytes() {
+        java.lang.Object ref = details_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          details_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * details ...
+       * </pre>
+       *
+       * <code>string details = 6 [json_name = "details"];</code>
+       * @param value The details to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetails(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        details_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details ...
+       * </pre>
+       *
+       * <code>string details = 6 [json_name = "details"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDetails() {
+        details_ = getDefaultInstance().getDetails();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details ...
+       * </pre>
+       *
+       * <code>string details = 6 [json_name = "details"];</code>
+       * @param value The bytes for details to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDetailsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        details_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventUpdateMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventUpdateMetadata)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateMetadata>() {
+      @java.lang.Override
+      public EventUpdateMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventUpdateMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventUpdateCommissionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventUpdateCommission)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * commission ...
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The commission.
+     */
+    java.lang.String getCommission();
+    /**
+     * <pre>
+     * commission ...
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for commission.
+     */
+    com.google.protobuf.ByteString
+        getCommissionBytes();
+  }
+  /**
+   * <pre>
+   * EventUpdateCommission ...
+   * emitted_by: EndBlock
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventUpdateCommission}
+   */
+  public static final class EventUpdateCommission extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventUpdateCommission)
+      EventUpdateCommissionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventUpdateCommission.newBuilder() to construct.
+    private EventUpdateCommission(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventUpdateCommission() {
+      staker_ = "";
+      commission_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventUpdateCommission();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateCommission_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateCommission_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.class, com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMISSION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commission_ = "";
+    /**
+     * <pre>
+     * commission ...
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The commission.
+     */
+    @java.lang.Override
+    public java.lang.String getCommission() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * commission ...
+     * </pre>
+     *
+     * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for commission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommissionBytes() {
+      java.lang.Object ref = commission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, commission_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, commission_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission other = (com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getCommission()
+          .equals(other.getCommission())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getCommission().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventUpdateCommission ...
+     * emitted_by: EndBlock
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventUpdateCommission}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventUpdateCommission)
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommissionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateCommission_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateCommission_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.class, com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        commission_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventUpdateCommission_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission result = new com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.commission_ = commission_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCommission().isEmpty()) {
+          commission_ = other.commission_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                commission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object commission_ = "";
+      /**
+       * <pre>
+       * commission ...
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The commission.
+       */
+      public java.lang.String getCommission() {
+        java.lang.Object ref = commission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          commission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission ...
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for commission.
+       */
+      public com.google.protobuf.ByteString
+          getCommissionBytes() {
+        java.lang.Object ref = commission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          commission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commission ...
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        commission_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission ...
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommission() {
+        commission_ = getDefaultInstance().getCommission();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commission ...
+       * </pre>
+       *
+       * <code>string commission = 2 [json_name = "commission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for commission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        commission_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventUpdateCommission)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventUpdateCommission)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventUpdateCommission>
+        PARSER = new com.google.protobuf.AbstractParser<EventUpdateCommission>() {
+      @java.lang.Override
+      public EventUpdateCommission parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventUpdateCommission> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventUpdateCommission> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventUpdateCommission getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventClaimCommissionRewardsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventClaimCommissionRewards)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * amount ...
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * EventClaimCommissionRewards ...
+   * emitted_by: MsgClaimCommissionRewards
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventClaimCommissionRewards}
+   */
+  public static final class EventClaimCommissionRewards extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventClaimCommissionRewards)
+      EventClaimCommissionRewardsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventClaimCommissionRewards.newBuilder() to construct.
+    private EventClaimCommissionRewards(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventClaimCommissionRewards() {
+      staker_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventClaimCommissionRewards();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.class, com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.Builder.class);
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker is the account address of the protocol node.
+     * </pre>
+     *
+     * <code>string staker = 1 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount ...
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staker_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(2, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staker_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards other = (com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards) obj;
+
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventClaimCommissionRewards ...
+     * emitted_by: MsgClaimCommissionRewards
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventClaimCommissionRewards}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventClaimCommissionRewards)
+        com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewardsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.class, com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staker_ = "";
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards result = new com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards.getDefaultInstance()) return this;
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the account address of the protocol node.
+       * </pre>
+       *
+       * <code>string staker = 1 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount ...
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventClaimCommissionRewards)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventClaimCommissionRewards)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventClaimCommissionRewards>
+        PARSER = new com.google.protobuf.AbstractParser<EventClaimCommissionRewards>() {
+      @java.lang.Override
+      public EventClaimCommissionRewards parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventClaimCommissionRewards> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventClaimCommissionRewards> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventClaimCommissionRewards getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventJoinPoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventJoinPool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id is the pool the staker joined
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * staker is the address of the staker
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker is the address of the staker
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+
+    /**
+     * <pre>
+     * valaddress is the address of the protocol node which
+     * votes in favor of the staker
+     * </pre>
+     *
+     * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+     * @return The valaddress.
+     */
+    java.lang.String getValaddress();
+    /**
+     * <pre>
+     * valaddress is the address of the protocol node which
+     * votes in favor of the staker
+     * </pre>
+     *
+     * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+     * @return The bytes for valaddress.
+     */
+    com.google.protobuf.ByteString
+        getValaddressBytes();
+
+    /**
+     * <pre>
+     * amount is the amount of funds transferred to the valaddress
+     * </pre>
+     *
+     * <code>uint64 amount = 4 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * EventJoinPool ...
+   * emitted_by: MsgJoinPool
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventJoinPool}
+   */
+  public static final class EventJoinPool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventJoinPool)
+      EventJoinPoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventJoinPool.newBuilder() to construct.
+    private EventJoinPool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventJoinPool() {
+      staker_ = "";
+      valaddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventJoinPool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventJoinPool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventJoinPool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.class, com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id is the pool the staker joined
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker is the address of the staker
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker is the address of the staker
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valaddress_ = "";
+    /**
+     * <pre>
+     * valaddress is the address of the protocol node which
+     * votes in favor of the staker
+     * </pre>
+     *
+     * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+     * @return The valaddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValaddress() {
+      java.lang.Object ref = valaddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valaddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * valaddress is the address of the protocol node which
+     * votes in favor of the staker
+     * </pre>
+     *
+     * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+     * @return The bytes for valaddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValaddressBytes() {
+      java.lang.Object ref = valaddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valaddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount is the amount of funds transferred to the valaddress
+     * </pre>
+     *
+     * <code>uint64 amount = 4 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valaddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valaddress_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(4, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, staker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valaddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valaddress_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventJoinPool)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventJoinPool other = (com.kyve.stakers.v1beta1.EventsProto.EventJoinPool) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getValaddress()
+          .equals(other.getValaddress())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (37 * hash) + VALADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValaddress().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventJoinPool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventJoinPool ...
+     * emitted_by: MsgJoinPool
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventJoinPool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventJoinPool)
+        com.kyve.stakers.v1beta1.EventsProto.EventJoinPoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventJoinPool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventJoinPool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.class, com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        staker_ = "";
+        valaddress_ = "";
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventJoinPool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventJoinPool getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventJoinPool build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventJoinPool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventJoinPool buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventJoinPool result = new com.kyve.stakers.v1beta1.EventsProto.EventJoinPool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventJoinPool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.staker_ = staker_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.valaddress_ = valaddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventJoinPool) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventJoinPool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventJoinPool other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventJoinPool.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValaddress().isEmpty()) {
+          valaddress_ = other.valaddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                valaddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id is the pool the staker joined
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id is the pool the staker joined
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id is the pool the staker joined
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker is the address of the staker
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the address of the staker
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker is the address of the staker
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the address of the staker
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker is the address of the staker
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valaddress_ = "";
+      /**
+       * <pre>
+       * valaddress is the address of the protocol node which
+       * votes in favor of the staker
+       * </pre>
+       *
+       * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+       * @return The valaddress.
+       */
+      public java.lang.String getValaddress() {
+        java.lang.Object ref = valaddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valaddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * valaddress is the address of the protocol node which
+       * votes in favor of the staker
+       * </pre>
+       *
+       * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+       * @return The bytes for valaddress.
+       */
+      public com.google.protobuf.ByteString
+          getValaddressBytes() {
+        java.lang.Object ref = valaddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valaddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * valaddress is the address of the protocol node which
+       * votes in favor of the staker
+       * </pre>
+       *
+       * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+       * @param value The valaddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValaddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valaddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * valaddress is the address of the protocol node which
+       * votes in favor of the staker
+       * </pre>
+       *
+       * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValaddress() {
+        valaddress_ = getDefaultInstance().getValaddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * valaddress is the address of the protocol node which
+       * votes in favor of the staker
+       * </pre>
+       *
+       * <code>string valaddress = 3 [json_name = "valaddress"];</code>
+       * @param value The bytes for valaddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValaddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valaddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount is the amount of funds transferred to the valaddress
+       * </pre>
+       *
+       * <code>uint64 amount = 4 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount is the amount of funds transferred to the valaddress
+       * </pre>
+       *
+       * <code>uint64 amount = 4 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of funds transferred to the valaddress
+       * </pre>
+       *
+       * <code>uint64 amount = 4 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventJoinPool)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventJoinPool)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventJoinPool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventJoinPool();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventJoinPool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventJoinPool>
+        PARSER = new com.google.protobuf.AbstractParser<EventJoinPool>() {
+      @java.lang.Override
+      public EventJoinPool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventJoinPool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventJoinPool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventJoinPool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EventLeavePoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.stakers.v1beta1.EventLeavePool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    java.lang.String getStaker();
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    com.google.protobuf.ByteString
+        getStakerBytes();
+  }
+  /**
+   * <pre>
+   * EventLeavePool ...
+   * emitted_by: EndBlock
+   * </pre>
+   *
+   * Protobuf type {@code kyve.stakers.v1beta1.EventLeavePool}
+   */
+  public static final class EventLeavePool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.stakers.v1beta1.EventLeavePool)
+      EventLeavePoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventLeavePool.newBuilder() to construct.
+    private EventLeavePool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventLeavePool() {
+      staker_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventLeavePool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventLeavePool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventLeavePool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.class, com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool_id ...
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int STAKER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staker_ = "";
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The staker.
+     */
+    @java.lang.Override
+    public java.lang.String getStaker() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staker ...
+     * </pre>
+     *
+     * <code>string staker = 2 [json_name = "staker"];</code>
+     * @return The bytes for staker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakerBytes() {
+      java.lang.Object ref = staker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, staker_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, staker_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.stakers.v1beta1.EventsProto.EventLeavePool)) {
+        return super.equals(obj);
+      }
+      com.kyve.stakers.v1beta1.EventsProto.EventLeavePool other = (com.kyve.stakers.v1beta1.EventsProto.EventLeavePool) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getStaker()
+          .equals(other.getStaker())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + STAKER_FIELD_NUMBER;
+      hash = (53 * hash) + getStaker().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.stakers.v1beta1.EventsProto.EventLeavePool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventLeavePool ...
+     * emitted_by: EndBlock
+     * </pre>
+     *
+     * Protobuf type {@code kyve.stakers.v1beta1.EventLeavePool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.stakers.v1beta1.EventLeavePool)
+        com.kyve.stakers.v1beta1.EventsProto.EventLeavePoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventLeavePool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventLeavePool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.class, com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.Builder.class);
+      }
+
+      // Construct using com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        staker_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.internal_static_kyve_stakers_v1beta1_EventLeavePool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventLeavePool getDefaultInstanceForType() {
+        return com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventLeavePool build() {
+        com.kyve.stakers.v1beta1.EventsProto.EventLeavePool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.stakers.v1beta1.EventsProto.EventLeavePool buildPartial() {
+        com.kyve.stakers.v1beta1.EventsProto.EventLeavePool result = new com.kyve.stakers.v1beta1.EventsProto.EventLeavePool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.stakers.v1beta1.EventsProto.EventLeavePool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.staker_ = staker_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.stakers.v1beta1.EventsProto.EventLeavePool) {
+          return mergeFrom((com.kyve.stakers.v1beta1.EventsProto.EventLeavePool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.stakers.v1beta1.EventsProto.EventLeavePool other) {
+        if (other == com.kyve.stakers.v1beta1.EventsProto.EventLeavePool.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getStaker().isEmpty()) {
+          staker_ = other.staker_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                staker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_id ...
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object staker_ = "";
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The staker.
+       */
+      public java.lang.String getStaker() {
+        java.lang.Object ref = staker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return The bytes for staker.
+       */
+      public com.google.protobuf.ByteString
+          getStakerBytes() {
+        java.lang.Object ref = staker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaker() {
+        staker_ = getDefaultInstance().getStaker();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staker ...
+       * </pre>
+       *
+       * <code>string staker = 2 [json_name = "staker"];</code>
+       * @param value The bytes for staker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staker_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.stakers.v1beta1.EventLeavePool)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.stakers.v1beta1.EventLeavePool)
+    private static final com.kyve.stakers.v1beta1.EventsProto.EventLeavePool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.stakers.v1beta1.EventsProto.EventLeavePool();
+    }
+
+    public static com.kyve.stakers.v1beta1.EventsProto.EventLeavePool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventLeavePool>
+        PARSER = new com.google.protobuf.AbstractParser<EventLeavePool>() {
+      @java.lang.Override
+      public EventLeavePool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventLeavePool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventLeavePool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.stakers.v1beta1.EventsProto.EventLeavePool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventUpdateParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventUpdateParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventCreateStaker_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventCreateStaker_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventUpdateMetadata_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventUpdateCommission_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventUpdateCommission_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventClaimCommissionRewards_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventJoinPool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventJoinPool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_stakers_v1beta1_EventLeavePool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_stakers_v1beta1_EventLeavePool_fieldAccessorTable;
 
@@ -84,12 +6728,12 @@ public final class EventsProto {
       "\nvaladdress\030\003 \001(\tR\nvaladdress\022\026\n\006amount\030" +
       "\004 \001(\004R\006amount\"A\n\016EventLeavePool\022\027\n\007pool_" +
       "id\030\001 \001(\004R\006poolId\022\026\n\006staker\030\002 \001(\tR\006staker" +
-      "B\307\001\n\030com.kyve.stakers.v1beta1B\013EventsPro" +
-      "toP\001Z,github.com/KYVENetwork/chain/x/sta" +
-      "kers/types\242\002\003KSX\252\002\024Kyve.Stakers.V1beta1\312" +
-      "\002\024Kyve\\Stakers\\V1beta1\342\002 Kyve\\Stakers\\V1" +
-      "beta1\\GPBMetadata\352\002\026Kyve::Stakers::V1bet" +
-      "a1b\006proto3"
+      "B\305\001\n\030com.kyve.stakers.v1beta1B\013EventsPro" +
+      "toZ,github.com/KYVENetwork/chain/x/stake" +
+      "rs/types\242\002\003KSX\252\002\024Kyve.Stakers.V1beta1\312\002\024" +
+      "Kyve\\Stakers\\V1beta1\342\002 Kyve\\Stakers\\V1be" +
+      "ta1\\GPBMetadata\352\002\026Kyve::Stakers::V1beta1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

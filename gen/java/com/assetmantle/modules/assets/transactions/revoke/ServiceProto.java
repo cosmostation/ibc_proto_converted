@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.assets.transactions.r" +
       "evoke.Message\032C.assetmantle.modules.asse" +
       "ts.transactions.revoke.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/assets/revokeB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/assets/revokeB\236\002\n2co" +
       "m.assetmantle.modules.assets.transaction" +
-      "s.revokeB\014ServiceProtoP\001\242\002\005AMATR\252\002.Asset" +
-      "mantle.Modules.Assets.Transactions.Revok" +
-      "e\312\002.Assetmantle\\Modules\\Assets\\Transacti" +
-      "ons\\Revoke\342\002:Assetmantle\\Modules\\Assets\\" +
-      "Transactions\\Revoke\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Assets::Transactions::Re" +
-      "vokeb\006proto3"
+      "s.revokeB\014ServiceProto\242\002\005AMATR\252\002.Assetma" +
+      "ntle.Modules.Assets.Transactions.Revoke\312" +
+      "\002.Assetmantle\\Modules\\Assets\\Transaction" +
+      "s\\Revoke\342\002:Assetmantle\\Modules\\Assets\\Tr" +
+      "ansactions\\Revoke\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Assets::Transactions::Revo" +
+      "keb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

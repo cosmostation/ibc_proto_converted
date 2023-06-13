@@ -14,19 +14,2868 @@ public final class GlobalfeeProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @return A list containing the privilegedAddresses.
+     */
+    java.util.List<java.lang.String>
+        getPrivilegedAddressesList();
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @return The count of privilegedAddresses.
+     */
+    int getPrivilegedAddressesCount();
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The privilegedAddresses at the given index.
+     */
+    java.lang.String getPrivilegedAddresses(int index);
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privilegedAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegedAddressesBytes(int index);
+
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getMinimumGasPricesList();
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimumGasPrices(int index);
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getMinimumGasPricesCount();
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinimumGasPricesOrBuilderList();
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumGasPricesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the globalfee module.
+   * </pre>
+   *
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      privilegedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      minimumGasPrices_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.class, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder.class);
+    }
+
+    public static final int PRIVILEGED_ADDRESSES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList privilegedAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @return A list containing the privilegedAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPrivilegedAddressesList() {
+      return privilegedAddresses_;
+    }
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @return The count of privilegedAddresses.
+     */
+    public int getPrivilegedAddressesCount() {
+      return privilegedAddresses_.size();
+    }
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The privilegedAddresses at the given index.
+     */
+    public java.lang.String getPrivilegedAddresses(int index) {
+      return privilegedAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * Addresses which are whitelisted to modify the gas free operations
+     * </pre>
+     *
+     * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the privilegedAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPrivilegedAddressesBytes(int index) {
+      return privilegedAddresses_.getByteString(index);
+    }
+
+    public static final int MINIMUM_GAS_PRICES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minimumGasPrices_;
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinimumGasPricesList() {
+      return minimumGasPrices_;
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinimumGasPricesOrBuilderList() {
+      return minimumGasPrices_;
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getMinimumGasPricesCount() {
+      return minimumGasPrices_.size();
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimumGasPrices(int index) {
+      return minimumGasPrices_.get(index);
+    }
+    /**
+     * <pre>
+     * Minimum stores the minimum gas price(s) for all TX on the chain.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumGasPricesOrBuilder(
+        int index) {
+      return minimumGasPrices_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < privilegedAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privilegedAddresses_.getRaw(i));
+      }
+      for (int i = 0; i < minimumGasPrices_.size(); i++) {
+        output.writeMessage(2, minimumGasPrices_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < privilegedAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(privilegedAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPrivilegedAddressesList().size();
+      }
+      for (int i = 0; i < minimumGasPrices_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, minimumGasPrices_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params other = (com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params) obj;
+
+      if (!getPrivilegedAddressesList()
+          .equals(other.getPrivilegedAddressesList())) return false;
+      if (!getMinimumGasPricesList()
+          .equals(other.getMinimumGasPricesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPrivilegedAddressesCount() > 0) {
+        hash = (37 * hash) + PRIVILEGED_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getPrivilegedAddressesList().hashCode();
+      }
+      if (getMinimumGasPricesCount() > 0) {
+        hash = (37 * hash) + MINIMUM_GAS_PRICES_FIELD_NUMBER;
+        hash = (53 * hash) + getMinimumGasPricesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the globalfee module.
+     * </pre>
+     *
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.Params)
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.class, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        privilegedAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        if (minimumGasPricesBuilder_ == null) {
+          minimumGasPrices_ = java.util.Collections.emptyList();
+        } else {
+          minimumGasPrices_ = null;
+          minimumGasPricesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params build() {
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params result = new com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params result) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            minimumGasPrices_ = java.util.Collections.unmodifiableList(minimumGasPrices_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.minimumGasPrices_ = minimumGasPrices_;
+        } else {
+          result.minimumGasPrices_ = minimumGasPricesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          privilegedAddresses_.makeImmutable();
+          result.privilegedAddresses_ = privilegedAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params.getDefaultInstance()) return this;
+        if (!other.privilegedAddresses_.isEmpty()) {
+          if (privilegedAddresses_.isEmpty()) {
+            privilegedAddresses_ = other.privilegedAddresses_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensurePrivilegedAddressesIsMutable();
+            privilegedAddresses_.addAll(other.privilegedAddresses_);
+          }
+          onChanged();
+        }
+        if (minimumGasPricesBuilder_ == null) {
+          if (!other.minimumGasPrices_.isEmpty()) {
+            if (minimumGasPrices_.isEmpty()) {
+              minimumGasPrices_ = other.minimumGasPrices_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureMinimumGasPricesIsMutable();
+              minimumGasPrices_.addAll(other.minimumGasPrices_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minimumGasPrices_.isEmpty()) {
+            if (minimumGasPricesBuilder_.isEmpty()) {
+              minimumGasPricesBuilder_.dispose();
+              minimumGasPricesBuilder_ = null;
+              minimumGasPrices_ = other.minimumGasPrices_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              minimumGasPricesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinimumGasPricesFieldBuilder() : null;
+            } else {
+              minimumGasPricesBuilder_.addAllMessages(other.minimumGasPrices_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePrivilegedAddressesIsMutable();
+                privilegedAddresses_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (minimumGasPricesBuilder_ == null) {
+                  ensureMinimumGasPricesIsMutable();
+                  minimumGasPrices_.add(m);
+                } else {
+                  minimumGasPricesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList privilegedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePrivilegedAddressesIsMutable() {
+        if (!privilegedAddresses_.isModifiable()) {
+          privilegedAddresses_ = new com.google.protobuf.LazyStringArrayList(privilegedAddresses_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @return A list containing the privilegedAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPrivilegedAddressesList() {
+        privilegedAddresses_.makeImmutable();
+        return privilegedAddresses_;
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @return The count of privilegedAddresses.
+       */
+      public int getPrivilegedAddressesCount() {
+        return privilegedAddresses_.size();
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @param index The index of the element to return.
+       * @return The privilegedAddresses at the given index.
+       */
+      public java.lang.String getPrivilegedAddresses(int index) {
+        return privilegedAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the privilegedAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegedAddressesBytes(int index) {
+        return privilegedAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @param index The index to set the value at.
+       * @param value The privilegedAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegedAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrivilegedAddressesIsMutable();
+        privilegedAddresses_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @param value The privilegedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivilegedAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePrivilegedAddressesIsMutable();
+        privilegedAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @param values The privilegedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPrivilegedAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePrivilegedAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, privilegedAddresses_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegedAddresses() {
+        privilegedAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Addresses which are whitelisted to modify the gas free operations
+       * </pre>
+       *
+       * <code>repeated string privileged_addresses = 1 [json_name = "privilegedAddresses"];</code>
+       * @param value The bytes of the privilegedAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPrivilegedAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePrivilegedAddressesIsMutable();
+        privilegedAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minimumGasPrices_ =
+        java.util.Collections.emptyList();
+      private void ensureMinimumGasPricesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          minimumGasPrices_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(minimumGasPrices_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> minimumGasPricesBuilder_;
+
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinimumGasPricesList() {
+        if (minimumGasPricesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minimumGasPrices_);
+        } else {
+          return minimumGasPricesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getMinimumGasPricesCount() {
+        if (minimumGasPricesBuilder_ == null) {
+          return minimumGasPrices_.size();
+        } else {
+          return minimumGasPricesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinimumGasPrices(int index) {
+        if (minimumGasPricesBuilder_ == null) {
+          return minimumGasPrices_.get(index);
+        } else {
+          return minimumGasPricesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.set(index, value);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(value);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minimumGasPricesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(index, value);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addMinimumGasPrices(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllMinimumGasPrices(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minimumGasPrices_);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearMinimumGasPrices() {
+        if (minimumGasPricesBuilder_ == null) {
+          minimumGasPrices_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeMinimumGasPrices(int index) {
+        if (minimumGasPricesBuilder_ == null) {
+          ensureMinimumGasPricesIsMutable();
+          minimumGasPrices_.remove(index);
+          onChanged();
+        } else {
+          minimumGasPricesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getMinimumGasPricesBuilder(
+          int index) {
+        return getMinimumGasPricesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinimumGasPricesOrBuilder(
+          int index) {
+        if (minimumGasPricesBuilder_ == null) {
+          return minimumGasPrices_.get(index);  } else {
+          return minimumGasPricesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getMinimumGasPricesOrBuilderList() {
+        if (minimumGasPricesBuilder_ != null) {
+          return minimumGasPricesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minimumGasPrices_);
+        }
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinimumGasPricesBuilder() {
+        return getMinimumGasPricesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinimumGasPricesBuilder(
+          int index) {
+        return getMinimumGasPricesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Minimum stores the minimum gas price(s) for all TX on the chain.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 2 [json_name = "minimumGasPrices", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "minimum_gas_prices,omitempty", (.gogoproto.moretags) = "yaml:&#92;"minimum_gas_prices&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getMinimumGasPricesBuilderList() {
+        return getMinimumGasPricesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getMinimumGasPricesFieldBuilder() {
+        if (minimumGasPricesBuilder_ == null) {
+          minimumGasPricesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  minimumGasPrices_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minimumGasPrices_ = null;
+        }
+        return minimumGasPricesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.Params)
+    private static final com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CodeAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.CodeAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authorized code ids
+     * </pre>
+     *
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID", (.gogoproto.moretags) = "yaml:&#92;"code_id&#92;""];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return A list containing the methods.
+     */
+    java.util.List<java.lang.String>
+        getMethodsList();
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return The count of methods.
+     */
+    int getMethodsCount();
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    java.lang.String getMethods(int index);
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMethodsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Configuration for code Ids which can have zero gas operations
+   * </pre>
+   *
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.CodeAuthorization}
+   */
+  public static final class CodeAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.CodeAuthorization)
+      CodeAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CodeAuthorization.newBuilder() to construct.
+    private CodeAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CodeAuthorization() {
+      methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CodeAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.class, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder.class);
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 1;
+    private long codeId_ = 0L;
+    /**
+     * <pre>
+     * authorized code ids
+     * </pre>
+     *
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID", (.gogoproto.moretags) = "yaml:&#92;"code_id&#92;""];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    public static final int METHODS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList methods_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return A list containing the methods.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMethodsList() {
+      return methods_;
+    }
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return The count of methods.
+     */
+    public int getMethodsCount() {
+      return methods_.size();
+    }
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    public java.lang.String getMethods(int index) {
+      return methods_.get(index);
+    }
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMethodsBytes(int index) {
+      return methods_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (codeId_ != 0L) {
+        output.writeUInt64(1, codeId_);
+      }
+      for (int i = 0; i < methods_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, methods_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, codeId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < methods_.size(); i++) {
+          dataSize += computeStringSizeNoTag(methods_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMethodsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization other = (com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization) obj;
+
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (!getMethodsList()
+          .equals(other.getMethodsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      if (getMethodsCount() > 0) {
+        hash = (37 * hash) + METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getMethodsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Configuration for code Ids which can have zero gas operations
+     * </pre>
+     *
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.CodeAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.CodeAuthorization)
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.class, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeId_ = 0L;
+        methods_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization build() {
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization result = new com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeId_ = codeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          methods_.makeImmutable();
+          result.methods_ = methods_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance()) return this;
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        if (!other.methods_.isEmpty()) {
+          if (methods_.isEmpty()) {
+            methods_ = other.methods_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureMethodsIsMutable();
+            methods_.addAll(other.methods_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMethodsIsMutable();
+                methods_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long codeId_ ;
+      /**
+       * <pre>
+       * authorized code ids
+       * </pre>
+       *
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID", (.gogoproto.moretags) = "yaml:&#92;"code_id&#92;""];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <pre>
+       * authorized code ids
+       * </pre>
+       *
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID", (.gogoproto.moretags) = "yaml:&#92;"code_id&#92;""];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized code ids
+       * </pre>
+       *
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID", (.gogoproto.moretags) = "yaml:&#92;"code_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMethodsIsMutable() {
+        if (!methods_.isModifiable()) {
+          methods_ = new com.google.protobuf.LazyStringArrayList(methods_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @return A list containing the methods.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMethodsList() {
+        methods_.makeImmutable();
+        return methods_;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @return The count of methods.
+       */
+      public int getMethodsCount() {
+        return methods_.size();
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The methods at the given index.
+       */
+      public java.lang.String getMethods(int index) {
+        return methods_.get(index);
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the methods at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMethodsBytes(int index) {
+        return methods_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The methods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethods(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param value The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethods(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param values The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethods(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMethodsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, methods_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethods() {
+        methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param value The bytes of the methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.CodeAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.CodeAuthorization)
+    private static final com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CodeAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<CodeAuthorization>() {
+      @java.lang.Override
+      public CodeAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CodeAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CodeAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.ContractAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * authorized contract addresses
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * authorized contract addresses
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return A list containing the methods.
+     */
+    java.util.List<java.lang.String>
+        getMethodsList();
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return The count of methods.
+     */
+    int getMethodsCount();
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    java.lang.String getMethods(int index);
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMethodsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Configuration for contract addresses which can have zero gas operations
+   * </pre>
+   *
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.ContractAuthorization}
+   */
+  public static final class ContractAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.ContractAuthorization)
+      ContractAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractAuthorization.newBuilder() to construct.
+    private ContractAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractAuthorization() {
+      contractAddress_ = "";
+      methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.class, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * authorized contract addresses
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authorized contract addresses
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METHODS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList methods_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return A list containing the methods.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMethodsList() {
+      return methods_;
+    }
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @return The count of methods.
+     */
+    public int getMethodsCount() {
+      return methods_.size();
+    }
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    public java.lang.String getMethods(int index) {
+      return methods_.get(index);
+    }
+    /**
+     * <pre>
+     * authorized contract operation methods
+     * </pre>
+     *
+     * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the methods at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMethodsBytes(int index) {
+      return methods_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      for (int i = 0; i < methods_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, methods_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < methods_.size(); i++) {
+          dataSize += computeStringSizeNoTag(methods_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMethodsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization other = (com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getMethodsList()
+          .equals(other.getMethodsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      if (getMethodsCount() > 0) {
+        hash = (37 * hash) + METHODS_FIELD_NUMBER;
+        hash = (53 * hash) + getMethodsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Configuration for contract addresses which can have zero gas operations
+     * </pre>
+     *
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.ContractAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.ContractAuthorization)
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.class, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        methods_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization build() {
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization result = new com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          methods_.makeImmutable();
+          result.methods_ = methods_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.methods_.isEmpty()) {
+          if (methods_.isEmpty()) {
+            methods_ = other.methods_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureMethodsIsMutable();
+            methods_.addAll(other.methods_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureMethodsIsMutable();
+                methods_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * authorized contract addresses
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authorized contract addresses
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authorized contract addresses
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract addresses
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract addresses
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_address&#92;""];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureMethodsIsMutable() {
+        if (!methods_.isModifiable()) {
+          methods_ = new com.google.protobuf.LazyStringArrayList(methods_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @return A list containing the methods.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMethodsList() {
+        methods_.makeImmutable();
+        return methods_;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @return The count of methods.
+       */
+      public int getMethodsCount() {
+        return methods_.size();
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The methods at the given index.
+       */
+      public java.lang.String getMethods(int index) {
+        return methods_.get(index);
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the methods at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMethodsBytes(int index) {
+        return methods_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The methods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethods(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param value The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethods(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param values The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethods(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMethodsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, methods_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethods() {
+        methods_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorized contract operation methods
+       * </pre>
+       *
+       * <code>repeated string methods = 2 [json_name = "methods", (.gogoproto.moretags) = "yaml:&#92;"methods&#92;""];</code>
+       * @param value The bytes of the methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureMethodsIsMutable();
+        methods_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.ContractAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.ContractAuthorization)
+    private static final com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<ContractAuthorization>() {
+      @java.lang.Override
+      public ContractAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_CodeAuthorization_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_ContractAuthorization_fieldAccessorTable;
 
@@ -54,14 +2903,14 @@ public final class GlobalfeeProto {
       "ractAuthorization\022F\n\020contract_address\030\001 " +
       "\001(\tB\033\362\336\037\027yaml:\"contract_address\"R\017contra" +
       "ctAddress\022,\n\007methods\030\002 \003(\tB\022\362\336\037\016yaml:\"me" +
-      "thods\"R\007methodsB\242\002\n\'com.publicawesome.st" +
-      "argaze.globalfee.v1B\016GlobalfeeProtoP\001Z8g" +
-      "ithub.com/public-awesome/stargaze/v11/x/" +
-      "globalfee/types\242\002\003PSG\252\002#Publicawesome.St" +
-      "argaze.Globalfee.V1\312\002#Publicawesome\\Star" +
-      "gaze\\Globalfee\\V1\342\002/Publicawesome\\Starga" +
-      "ze\\Globalfee\\V1\\GPBMetadata\352\002&Publicawes" +
-      "ome::Stargaze::Globalfee::V1b\006proto3"
+      "thods\"R\007methodsB\240\002\n\'com.publicawesome.st" +
+      "argaze.globalfee.v1B\016GlobalfeeProtoZ8git" +
+      "hub.com/public-awesome/stargaze/v11/x/gl" +
+      "obalfee/types\242\002\003PSG\252\002#Publicawesome.Star" +
+      "gaze.Globalfee.V1\312\002#Publicawesome\\Starga" +
+      "ze\\Globalfee\\V1\342\002/Publicawesome\\Stargaze" +
+      "\\Globalfee\\V1\\GPBMetadata\352\002&Publicawesom" +
+      "e::Stargaze::Globalfee::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

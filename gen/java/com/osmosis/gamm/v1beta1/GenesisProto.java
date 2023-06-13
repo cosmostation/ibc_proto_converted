@@ -14,24 +14,3449 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.gamm.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getPoolCreationFeeList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPoolCreationFee(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getPoolCreationFeeCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getPoolCreationFeeOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCreationFeeOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the incentives module
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.gamm.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.gamm.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      poolCreationFee_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.gamm.v1beta1.GenesisProto.Params.class, com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int POOL_CREATION_FEE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> poolCreationFee_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getPoolCreationFeeList() {
+      return poolCreationFee_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getPoolCreationFeeOrBuilderList() {
+      return poolCreationFee_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getPoolCreationFeeCount() {
+      return poolCreationFee_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPoolCreationFee(int index) {
+      return poolCreationFee_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCreationFeeOrBuilder(
+        int index) {
+      return poolCreationFee_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < poolCreationFee_.size(); i++) {
+        output.writeMessage(1, poolCreationFee_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < poolCreationFee_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, poolCreationFee_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.gamm.v1beta1.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.osmosis.gamm.v1beta1.GenesisProto.Params other = (com.osmosis.gamm.v1beta1.GenesisProto.Params) obj;
+
+      if (!getPoolCreationFeeList()
+          .equals(other.getPoolCreationFeeList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolCreationFeeCount() > 0) {
+        hash = (37 * hash) + POOL_CREATION_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolCreationFeeList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.gamm.v1beta1.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the incentives module
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.gamm.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.gamm.v1beta1.Params)
+        com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.gamm.v1beta1.GenesisProto.Params.class, com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.osmosis.gamm.v1beta1.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (poolCreationFeeBuilder_ == null) {
+          poolCreationFee_ = java.util.Collections.emptyList();
+        } else {
+          poolCreationFee_ = null;
+          poolCreationFeeBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.Params getDefaultInstanceForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.Params build() {
+        com.osmosis.gamm.v1beta1.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.Params buildPartial() {
+        com.osmosis.gamm.v1beta1.GenesisProto.Params result = new com.osmosis.gamm.v1beta1.GenesisProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.gamm.v1beta1.GenesisProto.Params result) {
+        if (poolCreationFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            poolCreationFee_ = java.util.Collections.unmodifiableList(poolCreationFee_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.poolCreationFee_ = poolCreationFee_;
+        } else {
+          result.poolCreationFee_ = poolCreationFeeBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.gamm.v1beta1.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.gamm.v1beta1.GenesisProto.Params) {
+          return mergeFrom((com.osmosis.gamm.v1beta1.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.gamm.v1beta1.GenesisProto.Params other) {
+        if (other == com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance()) return this;
+        if (poolCreationFeeBuilder_ == null) {
+          if (!other.poolCreationFee_.isEmpty()) {
+            if (poolCreationFee_.isEmpty()) {
+              poolCreationFee_ = other.poolCreationFee_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePoolCreationFeeIsMutable();
+              poolCreationFee_.addAll(other.poolCreationFee_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.poolCreationFee_.isEmpty()) {
+            if (poolCreationFeeBuilder_.isEmpty()) {
+              poolCreationFeeBuilder_.dispose();
+              poolCreationFeeBuilder_ = null;
+              poolCreationFee_ = other.poolCreationFee_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              poolCreationFeeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolCreationFeeFieldBuilder() : null;
+            } else {
+              poolCreationFeeBuilder_.addAllMessages(other.poolCreationFee_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (poolCreationFeeBuilder_ == null) {
+                  ensurePoolCreationFeeIsMutable();
+                  poolCreationFee_.add(m);
+                } else {
+                  poolCreationFeeBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> poolCreationFee_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolCreationFeeIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          poolCreationFee_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(poolCreationFee_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> poolCreationFeeBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getPoolCreationFeeList() {
+        if (poolCreationFeeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(poolCreationFee_);
+        } else {
+          return poolCreationFeeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getPoolCreationFeeCount() {
+        if (poolCreationFeeBuilder_ == null) {
+          return poolCreationFee_.size();
+        } else {
+          return poolCreationFeeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPoolCreationFee(int index) {
+        if (poolCreationFeeBuilder_ == null) {
+          return poolCreationFee_.get(index);
+        } else {
+          return poolCreationFeeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPoolCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.set(index, value);
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPoolCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolCreationFeeBuilder_ == null) {
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolCreationFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.add(value);
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (poolCreationFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.add(index, value);
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolCreationFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolCreationFeeBuilder_ == null) {
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPoolCreationFee(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (poolCreationFeeBuilder_ == null) {
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllPoolCreationFee(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (poolCreationFeeBuilder_ == null) {
+          ensurePoolCreationFeeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, poolCreationFee_);
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearPoolCreationFee() {
+        if (poolCreationFeeBuilder_ == null) {
+          poolCreationFee_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removePoolCreationFee(int index) {
+        if (poolCreationFeeBuilder_ == null) {
+          ensurePoolCreationFeeIsMutable();
+          poolCreationFee_.remove(index);
+          onChanged();
+        } else {
+          poolCreationFeeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPoolCreationFeeBuilder(
+          int index) {
+        return getPoolCreationFeeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPoolCreationFeeOrBuilder(
+          int index) {
+        if (poolCreationFeeBuilder_ == null) {
+          return poolCreationFee_.get(index);  } else {
+          return poolCreationFeeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getPoolCreationFeeOrBuilderList() {
+        if (poolCreationFeeBuilder_ != null) {
+          return poolCreationFeeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(poolCreationFee_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addPoolCreationFeeBuilder() {
+        return getPoolCreationFeeFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addPoolCreationFeeBuilder(
+          int index) {
+        return getPoolCreationFeeFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin pool_creation_fee = 1 [json_name = "poolCreationFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_creation_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getPoolCreationFeeBuilderList() {
+        return getPoolCreationFeeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPoolCreationFeeFieldBuilder() {
+        if (poolCreationFeeBuilder_ == null) {
+          poolCreationFeeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  poolCreationFee_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          poolCreationFee_ = null;
+        }
+        return poolCreationFeeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.gamm.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.gamm.v1beta1.Params)
+    private static final com.osmosis.gamm.v1beta1.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.gamm.v1beta1.GenesisProto.Params();
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.gamm.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    java.util.List<com.google.protobuf.Any> 
+        getPoolsList();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    com.google.protobuf.Any getPools(int index);
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    int getPoolsCount();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPoolsOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * will be renamed to next_pool_id in an upcoming version
+     * </pre>
+     *
+     * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+     * @return The nextPoolNumber.
+     */
+    long getNextPoolNumber();
+
+    /**
+     * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.osmosis.gamm.v1beta1.GenesisProto.Params getParams();
+    /**
+     * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+     * @return Whether the migrationRecords field is set.
+     */
+    boolean hasMigrationRecords();
+    /**
+     * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+     * @return The migrationRecords.
+     */
+    com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords getMigrationRecords();
+    /**
+     * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+     */
+    com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder getMigrationRecordsOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the gamm module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.gamm.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.gamm.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      pools_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.class, com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int POOLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.Any> pools_;
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Any> getPoolsList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+        getPoolsOrBuilderList() {
+      return pools_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public int getPoolsCount() {
+      return pools_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getPools(int index) {
+      return pools_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+        int index) {
+      return pools_.get(index);
+    }
+
+    public static final int NEXT_POOL_NUMBER_FIELD_NUMBER = 2;
+    private long nextPoolNumber_ = 0L;
+    /**
+     * <pre>
+     * will be renamed to next_pool_id in an upcoming version
+     * </pre>
+     *
+     * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+     * @return The nextPoolNumber.
+     */
+    @java.lang.Override
+    public long getNextPoolNumber() {
+      return nextPoolNumber_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 3;
+    private com.osmosis.gamm.v1beta1.GenesisProto.Params params_;
+    /**
+     * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.Params getParams() {
+      return params_ == null ? com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int MIGRATION_RECORDS_FIELD_NUMBER = 4;
+    private com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords migrationRecords_;
+    /**
+     * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+     * @return Whether the migrationRecords field is set.
+     */
+    @java.lang.Override
+    public boolean hasMigrationRecords() {
+      return migrationRecords_ != null;
+    }
+    /**
+     * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+     * @return The migrationRecords.
+     */
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords getMigrationRecords() {
+      return migrationRecords_ == null ? com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance() : migrationRecords_;
+    }
+    /**
+     * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder getMigrationRecordsOrBuilder() {
+      return migrationRecords_ == null ? com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance() : migrationRecords_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pools_.size(); i++) {
+        output.writeMessage(1, pools_.get(i));
+      }
+      if (nextPoolNumber_ != 0L) {
+        output.writeUInt64(2, nextPoolNumber_);
+      }
+      if (params_ != null) {
+        output.writeMessage(3, getParams());
+      }
+      if (migrationRecords_ != null) {
+        output.writeMessage(4, getMigrationRecords());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pools_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pools_.get(i));
+      }
+      if (nextPoolNumber_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, nextPoolNumber_);
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getParams());
+      }
+      if (migrationRecords_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getMigrationRecords());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.gamm.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.osmosis.gamm.v1beta1.GenesisProto.GenesisState other = (com.osmosis.gamm.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getPoolsList()
+          .equals(other.getPoolsList())) return false;
+      if (getNextPoolNumber()
+          != other.getNextPoolNumber()) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasMigrationRecords() != other.hasMigrationRecords()) return false;
+      if (hasMigrationRecords()) {
+        if (!getMigrationRecords()
+            .equals(other.getMigrationRecords())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolsCount() > 0) {
+        hash = (37 * hash) + POOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_POOL_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNextPoolNumber());
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasMigrationRecords()) {
+        hash = (37 * hash) + MIGRATION_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getMigrationRecords().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.gamm.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the gamm module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.gamm.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.gamm.v1beta1.GenesisState)
+        com.osmosis.gamm.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.class, com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+        } else {
+          pools_ = null;
+          poolsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nextPoolNumber_ = 0L;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        migrationRecords_ = null;
+        if (migrationRecordsBuilder_ != null) {
+          migrationRecordsBuilder_.dispose();
+          migrationRecordsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.GenesisState build() {
+        com.osmosis.gamm.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.osmosis.gamm.v1beta1.GenesisProto.GenesisState result = new com.osmosis.gamm.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.gamm.v1beta1.GenesisProto.GenesisState result) {
+        if (poolsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pools_ = java.util.Collections.unmodifiableList(pools_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pools_ = pools_;
+        } else {
+          result.pools_ = poolsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.gamm.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.nextPoolNumber_ = nextPoolNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.migrationRecords_ = migrationRecordsBuilder_ == null
+              ? migrationRecords_
+              : migrationRecordsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.gamm.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.osmosis.gamm.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.gamm.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.osmosis.gamm.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (poolsBuilder_ == null) {
+          if (!other.pools_.isEmpty()) {
+            if (pools_.isEmpty()) {
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePoolsIsMutable();
+              pools_.addAll(other.pools_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pools_.isEmpty()) {
+            if (poolsBuilder_.isEmpty()) {
+              poolsBuilder_.dispose();
+              poolsBuilder_ = null;
+              pools_ = other.pools_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              poolsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPoolsFieldBuilder() : null;
+            } else {
+              poolsBuilder_.addAllMessages(other.pools_);
+            }
+          }
+        }
+        if (other.getNextPoolNumber() != 0L) {
+          setNextPoolNumber(other.getNextPoolNumber());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasMigrationRecords()) {
+          mergeMigrationRecords(other.getMigrationRecords());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Any m =
+                    input.readMessage(
+                        com.google.protobuf.Any.parser(),
+                        extensionRegistry);
+                if (poolsBuilder_ == null) {
+                  ensurePoolsIsMutable();
+                  pools_.add(m);
+                } else {
+                  poolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                nextPoolNumber_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getMigrationRecordsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.protobuf.Any> pools_ =
+        java.util.Collections.emptyList();
+      private void ensurePoolsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pools_ = new java.util.ArrayList<com.google.protobuf.Any>(pools_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> poolsBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any> getPoolsList() {
+        if (poolsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pools_);
+        } else {
+          return poolsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public int getPoolsCount() {
+        if (poolsBuilder_ == null) {
+          return pools_.size();
+        } else {
+          return poolsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any getPools(int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);
+        } else {
+          return poolsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder setPools(
+          int index, com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.set(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder setPools(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          int index, com.google.protobuf.Any value) {
+        if (poolsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePoolsIsMutable();
+          pools_.add(index, value);
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addPools(
+          int index, com.google.protobuf.Any.Builder builderForValue) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          poolsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder addAllPools(
+          java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pools_);
+          onChanged();
+        } else {
+          poolsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder clearPools() {
+        if (poolsBuilder_ == null) {
+          pools_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          poolsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public Builder removePools(int index) {
+        if (poolsBuilder_ == null) {
+          ensurePoolsIsMutable();
+          pools_.remove(index);
+          onChanged();
+        } else {
+          poolsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder getPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getPoolsOrBuilder(
+          int index) {
+        if (poolsBuilder_ == null) {
+          return pools_.get(index);  } else {
+          return poolsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+           getPoolsOrBuilderList() {
+        if (poolsBuilder_ != null) {
+          return poolsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pools_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPoolsBuilder() {
+        return getPoolsFieldBuilder().addBuilder(
+            com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public com.google.protobuf.Any.Builder addPoolsBuilder(
+          int index) {
+        return getPoolsFieldBuilder().addBuilder(
+            index, com.google.protobuf.Any.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.Any pools = 1 [json_name = "pools", (.cosmos_proto.accepts_interface) = "PoolI"];</code>
+       */
+      public java.util.List<com.google.protobuf.Any.Builder> 
+           getPoolsBuilderList() {
+        return getPoolsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getPoolsFieldBuilder() {
+        if (poolsBuilder_ == null) {
+          poolsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  pools_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pools_ = null;
+        }
+        return poolsBuilder_;
+      }
+
+      private long nextPoolNumber_ ;
+      /**
+       * <pre>
+       * will be renamed to next_pool_id in an upcoming version
+       * </pre>
+       *
+       * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+       * @return The nextPoolNumber.
+       */
+      @java.lang.Override
+      public long getNextPoolNumber() {
+        return nextPoolNumber_;
+      }
+      /**
+       * <pre>
+       * will be renamed to next_pool_id in an upcoming version
+       * </pre>
+       *
+       * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+       * @param value The nextPoolNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPoolNumber(long value) {
+
+        nextPoolNumber_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * will be renamed to next_pool_id in an upcoming version
+       * </pre>
+       *
+       * <code>uint64 next_pool_number = 2 [json_name = "nextPoolNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPoolNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nextPoolNumber_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.gamm.v1beta1.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.gamm.v1beta1.GenesisProto.Params, com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder, com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.osmosis.gamm.v1beta1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.osmosis.gamm.v1beta1.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            params_ != null &&
+            params_ != com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.osmosis.gamm.v1beta1.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.Params params = 3 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.gamm.v1beta1.GenesisProto.Params, com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder, com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.gamm.v1beta1.GenesisProto.Params, com.osmosis.gamm.v1beta1.GenesisProto.Params.Builder, com.osmosis.gamm.v1beta1.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords migrationRecords_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder> migrationRecordsBuilder_;
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       * @return Whether the migrationRecords field is set.
+       */
+      public boolean hasMigrationRecords() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       * @return The migrationRecords.
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords getMigrationRecords() {
+        if (migrationRecordsBuilder_ == null) {
+          return migrationRecords_ == null ? com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance() : migrationRecords_;
+        } else {
+          return migrationRecordsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      public Builder setMigrationRecords(com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords value) {
+        if (migrationRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          migrationRecords_ = value;
+        } else {
+          migrationRecordsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      public Builder setMigrationRecords(
+          com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder builderForValue) {
+        if (migrationRecordsBuilder_ == null) {
+          migrationRecords_ = builderForValue.build();
+        } else {
+          migrationRecordsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      public Builder mergeMigrationRecords(com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords value) {
+        if (migrationRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            migrationRecords_ != null &&
+            migrationRecords_ != com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance()) {
+            getMigrationRecordsBuilder().mergeFrom(value);
+          } else {
+            migrationRecords_ = value;
+          }
+        } else {
+          migrationRecordsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      public Builder clearMigrationRecords() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        migrationRecords_ = null;
+        if (migrationRecordsBuilder_ != null) {
+          migrationRecordsBuilder_.dispose();
+          migrationRecordsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder getMigrationRecordsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getMigrationRecordsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder getMigrationRecordsOrBuilder() {
+        if (migrationRecordsBuilder_ != null) {
+          return migrationRecordsBuilder_.getMessageOrBuilder();
+        } else {
+          return migrationRecords_ == null ?
+              com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance() : migrationRecords_;
+        }
+      }
+      /**
+       * <code>.osmosis.gamm.v1beta1.MigrationRecords migration_records = 4 [json_name = "migrationRecords"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder> 
+          getMigrationRecordsFieldBuilder() {
+        if (migrationRecordsBuilder_ == null) {
+          migrationRecordsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder>(
+                  getMigrationRecords(),
+                  getParentForChildren(),
+                  isClean());
+          migrationRecords_ = null;
+        }
+        return migrationRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.gamm.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.gamm.v1beta1.GenesisState)
+    private static final com.osmosis.gamm.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.gamm.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MigrationRecordsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.gamm.v1beta1.MigrationRecords)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink> 
+        getBalancerToConcentratedPoolLinksList();
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink getBalancerToConcentratedPoolLinks(int index);
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    int getBalancerToConcentratedPoolLinksCount();
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder> 
+        getBalancerToConcentratedPoolLinksOrBuilderList();
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder getBalancerToConcentratedPoolLinksOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MigrationRecords contains all the links between balancer and concentrated
+   * pools
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.gamm.v1beta1.MigrationRecords}
+   */
+  public static final class MigrationRecords extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.gamm.v1beta1.MigrationRecords)
+      MigrationRecordsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MigrationRecords.newBuilder() to construct.
+    private MigrationRecords(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MigrationRecords() {
+      balancerToConcentratedPoolLinks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MigrationRecords();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_MigrationRecords_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_MigrationRecords_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.class, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder.class);
+    }
+
+    public static final int BALANCER_TO_CONCENTRATED_POOL_LINKS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink> balancerToConcentratedPoolLinks_;
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink> getBalancerToConcentratedPoolLinksList() {
+      return balancerToConcentratedPoolLinks_;
+    }
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder> 
+        getBalancerToConcentratedPoolLinksOrBuilderList() {
+      return balancerToConcentratedPoolLinks_;
+    }
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBalancerToConcentratedPoolLinksCount() {
+      return balancerToConcentratedPoolLinks_.size();
+    }
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink getBalancerToConcentratedPoolLinks(int index) {
+      return balancerToConcentratedPoolLinks_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder getBalancerToConcentratedPoolLinksOrBuilder(
+        int index) {
+      return balancerToConcentratedPoolLinks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < balancerToConcentratedPoolLinks_.size(); i++) {
+        output.writeMessage(1, balancerToConcentratedPoolLinks_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < balancerToConcentratedPoolLinks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, balancerToConcentratedPoolLinks_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords)) {
+        return super.equals(obj);
+      }
+      com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords other = (com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords) obj;
+
+      if (!getBalancerToConcentratedPoolLinksList()
+          .equals(other.getBalancerToConcentratedPoolLinksList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBalancerToConcentratedPoolLinksCount() > 0) {
+        hash = (37 * hash) + BALANCER_TO_CONCENTRATED_POOL_LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getBalancerToConcentratedPoolLinksList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MigrationRecords contains all the links between balancer and concentrated
+     * pools
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.gamm.v1beta1.MigrationRecords}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.gamm.v1beta1.MigrationRecords)
+        com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecordsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_MigrationRecords_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_MigrationRecords_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.class, com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.Builder.class);
+      }
+
+      // Construct using com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          balancerToConcentratedPoolLinks_ = java.util.Collections.emptyList();
+        } else {
+          balancerToConcentratedPoolLinks_ = null;
+          balancerToConcentratedPoolLinksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_MigrationRecords_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords getDefaultInstanceForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords build() {
+        com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords buildPartial() {
+        com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords result = new com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords result) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            balancerToConcentratedPoolLinks_ = java.util.Collections.unmodifiableList(balancerToConcentratedPoolLinks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.balancerToConcentratedPoolLinks_ = balancerToConcentratedPoolLinks_;
+        } else {
+          result.balancerToConcentratedPoolLinks_ = balancerToConcentratedPoolLinksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords) {
+          return mergeFrom((com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords other) {
+        if (other == com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords.getDefaultInstance()) return this;
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          if (!other.balancerToConcentratedPoolLinks_.isEmpty()) {
+            if (balancerToConcentratedPoolLinks_.isEmpty()) {
+              balancerToConcentratedPoolLinks_ = other.balancerToConcentratedPoolLinks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBalancerToConcentratedPoolLinksIsMutable();
+              balancerToConcentratedPoolLinks_.addAll(other.balancerToConcentratedPoolLinks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.balancerToConcentratedPoolLinks_.isEmpty()) {
+            if (balancerToConcentratedPoolLinksBuilder_.isEmpty()) {
+              balancerToConcentratedPoolLinksBuilder_.dispose();
+              balancerToConcentratedPoolLinksBuilder_ = null;
+              balancerToConcentratedPoolLinks_ = other.balancerToConcentratedPoolLinks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              balancerToConcentratedPoolLinksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBalancerToConcentratedPoolLinksFieldBuilder() : null;
+            } else {
+              balancerToConcentratedPoolLinksBuilder_.addAllMessages(other.balancerToConcentratedPoolLinks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink m =
+                    input.readMessage(
+                        com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.parser(),
+                        extensionRegistry);
+                if (balancerToConcentratedPoolLinksBuilder_ == null) {
+                  ensureBalancerToConcentratedPoolLinksIsMutable();
+                  balancerToConcentratedPoolLinks_.add(m);
+                } else {
+                  balancerToConcentratedPoolLinksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink> balancerToConcentratedPoolLinks_ =
+        java.util.Collections.emptyList();
+      private void ensureBalancerToConcentratedPoolLinksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          balancerToConcentratedPoolLinks_ = new java.util.ArrayList<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink>(balancerToConcentratedPoolLinks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder> balancerToConcentratedPoolLinksBuilder_;
+
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink> getBalancerToConcentratedPoolLinksList() {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(balancerToConcentratedPoolLinks_);
+        } else {
+          return balancerToConcentratedPoolLinksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBalancerToConcentratedPoolLinksCount() {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          return balancerToConcentratedPoolLinks_.size();
+        } else {
+          return balancerToConcentratedPoolLinksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink getBalancerToConcentratedPoolLinks(int index) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          return balancerToConcentratedPoolLinks_.get(index);
+        } else {
+          return balancerToConcentratedPoolLinksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalancerToConcentratedPoolLinks(
+          int index, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink value) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.set(index, value);
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBalancerToConcentratedPoolLinks(
+          int index, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder builderForValue) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBalancerToConcentratedPoolLinks(com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink value) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.add(value);
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBalancerToConcentratedPoolLinks(
+          int index, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink value) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.add(index, value);
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBalancerToConcentratedPoolLinks(
+          com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder builderForValue) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBalancerToConcentratedPoolLinks(
+          int index, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder builderForValue) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBalancerToConcentratedPoolLinks(
+          java.lang.Iterable<? extends com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink> values) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, balancerToConcentratedPoolLinks_);
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBalancerToConcentratedPoolLinks() {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          balancerToConcentratedPoolLinks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBalancerToConcentratedPoolLinks(int index) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          ensureBalancerToConcentratedPoolLinksIsMutable();
+          balancerToConcentratedPoolLinks_.remove(index);
+          onChanged();
+        } else {
+          balancerToConcentratedPoolLinksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder getBalancerToConcentratedPoolLinksBuilder(
+          int index) {
+        return getBalancerToConcentratedPoolLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder getBalancerToConcentratedPoolLinksOrBuilder(
+          int index) {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          return balancerToConcentratedPoolLinks_.get(index);  } else {
+          return balancerToConcentratedPoolLinksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder> 
+           getBalancerToConcentratedPoolLinksOrBuilderList() {
+        if (balancerToConcentratedPoolLinksBuilder_ != null) {
+          return balancerToConcentratedPoolLinksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(balancerToConcentratedPoolLinks_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder addBalancerToConcentratedPoolLinksBuilder() {
+        return getBalancerToConcentratedPoolLinksFieldBuilder().addBuilder(
+            com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder addBalancerToConcentratedPoolLinksBuilder(
+          int index) {
+        return getBalancerToConcentratedPoolLinksFieldBuilder().addBuilder(
+            index, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink balancer_to_concentrated_pool_links = 1 [json_name = "balancerToConcentratedPoolLinks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder> 
+           getBalancerToConcentratedPoolLinksBuilderList() {
+        return getBalancerToConcentratedPoolLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder> 
+          getBalancerToConcentratedPoolLinksFieldBuilder() {
+        if (balancerToConcentratedPoolLinksBuilder_ == null) {
+          balancerToConcentratedPoolLinksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder>(
+                  balancerToConcentratedPoolLinks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          balancerToConcentratedPoolLinks_ = null;
+        }
+        return balancerToConcentratedPoolLinksBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.gamm.v1beta1.MigrationRecords)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.gamm.v1beta1.MigrationRecords)
+    private static final com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords();
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MigrationRecords>
+        PARSER = new com.google.protobuf.AbstractParser<MigrationRecords>() {
+      @java.lang.Override
+      public MigrationRecords parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MigrationRecords> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MigrationRecords> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.MigrationRecords getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BalancerToConcentratedPoolLinkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 balancer_pool_id = 1 [json_name = "balancerPoolId"];</code>
+     * @return The balancerPoolId.
+     */
+    long getBalancerPoolId();
+
+    /**
+     * <code>uint64 cl_pool_id = 2 [json_name = "clPoolId"];</code>
+     * @return The clPoolId.
+     */
+    long getClPoolId();
+  }
+  /**
+   * <pre>
+   * BalancerToConcentratedPoolLink defines a single link between a single
+   * balancer pool and a single concentrated liquidity pool. This link is used to
+   * allow a balancer pool to migrate to a single canonical full range
+   * concentrated liquidity pool position
+   * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
+   * be linked to a maximum of one balancer pool.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink}
+   */
+  public static final class BalancerToConcentratedPoolLink extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink)
+      BalancerToConcentratedPoolLinkOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BalancerToConcentratedPoolLink.newBuilder() to construct.
+    private BalancerToConcentratedPoolLink(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BalancerToConcentratedPoolLink() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BalancerToConcentratedPoolLink();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.class, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder.class);
+    }
+
+    public static final int BALANCER_POOL_ID_FIELD_NUMBER = 1;
+    private long balancerPoolId_ = 0L;
+    /**
+     * <code>uint64 balancer_pool_id = 1 [json_name = "balancerPoolId"];</code>
+     * @return The balancerPoolId.
+     */
+    @java.lang.Override
+    public long getBalancerPoolId() {
+      return balancerPoolId_;
+    }
+
+    public static final int CL_POOL_ID_FIELD_NUMBER = 2;
+    private long clPoolId_ = 0L;
+    /**
+     * <code>uint64 cl_pool_id = 2 [json_name = "clPoolId"];</code>
+     * @return The clPoolId.
+     */
+    @java.lang.Override
+    public long getClPoolId() {
+      return clPoolId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (balancerPoolId_ != 0L) {
+        output.writeUInt64(1, balancerPoolId_);
+      }
+      if (clPoolId_ != 0L) {
+        output.writeUInt64(2, clPoolId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (balancerPoolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, balancerPoolId_);
+      }
+      if (clPoolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, clPoolId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink)) {
+        return super.equals(obj);
+      }
+      com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink other = (com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink) obj;
+
+      if (getBalancerPoolId()
+          != other.getBalancerPoolId()) return false;
+      if (getClPoolId()
+          != other.getClPoolId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BALANCER_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBalancerPoolId());
+      hash = (37 * hash) + CL_POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClPoolId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BalancerToConcentratedPoolLink defines a single link between a single
+     * balancer pool and a single concentrated liquidity pool. This link is used to
+     * allow a balancer pool to migrate to a single canonical full range
+     * concentrated liquidity pool position
+     * A balancer pool can be linked to a maximum of one cl pool, and a cl pool can
+     * be linked to a maximum of one balancer pool.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink)
+        com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLinkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.class, com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.Builder.class);
+      }
+
+      // Construct using com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        balancerPoolId_ = 0L;
+        clPoolId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink getDefaultInstanceForType() {
+        return com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink build() {
+        com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink buildPartial() {
+        com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink result = new com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.balancerPoolId_ = balancerPoolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clPoolId_ = clPoolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink) {
+          return mergeFrom((com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink other) {
+        if (other == com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink.getDefaultInstance()) return this;
+        if (other.getBalancerPoolId() != 0L) {
+          setBalancerPoolId(other.getBalancerPoolId());
+        }
+        if (other.getClPoolId() != 0L) {
+          setClPoolId(other.getClPoolId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                balancerPoolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                clPoolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long balancerPoolId_ ;
+      /**
+       * <code>uint64 balancer_pool_id = 1 [json_name = "balancerPoolId"];</code>
+       * @return The balancerPoolId.
+       */
+      @java.lang.Override
+      public long getBalancerPoolId() {
+        return balancerPoolId_;
+      }
+      /**
+       * <code>uint64 balancer_pool_id = 1 [json_name = "balancerPoolId"];</code>
+       * @param value The balancerPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBalancerPoolId(long value) {
+
+        balancerPoolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 balancer_pool_id = 1 [json_name = "balancerPoolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBalancerPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        balancerPoolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long clPoolId_ ;
+      /**
+       * <code>uint64 cl_pool_id = 2 [json_name = "clPoolId"];</code>
+       * @return The clPoolId.
+       */
+      @java.lang.Override
+      public long getClPoolId() {
+        return clPoolId_;
+      }
+      /**
+       * <code>uint64 cl_pool_id = 2 [json_name = "clPoolId"];</code>
+       * @param value The clPoolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClPoolId(long value) {
+
+        clPoolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cl_pool_id = 2 [json_name = "clPoolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        clPoolId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.gamm.v1beta1.BalancerToConcentratedPoolLink)
+    private static final com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink();
+    }
+
+    public static com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BalancerToConcentratedPoolLink>
+        PARSER = new com.google.protobuf.AbstractParser<BalancerToConcentratedPoolLink>() {
+      @java.lang.Override
+      public BalancerToConcentratedPoolLink parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BalancerToConcentratedPoolLink> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BalancerToConcentratedPoolLink> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.gamm.v1beta1.GenesisProto.BalancerToConcentratedPoolLink getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_gamm_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_gamm_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_gamm_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_gamm_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_gamm_v1beta1_MigrationRecords_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_gamm_v1beta1_MigrationRecords_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_gamm_v1beta1_BalancerToConcentratedPoolLink_fieldAccessorTable;
 
@@ -64,12 +3489,12 @@ public final class GenesisProto {
       "cerToConcentratedPoolLinks\"n\n\036BalancerTo" +
       "ConcentratedPoolLink\022(\n\020balancer_pool_id" +
       "\030\001 \001(\004R\016balancerPoolId\022\034\n\ncl_pool_id\030\002 \001" +
-      "(\004R\010clPoolId:\004\350\240\037\001B\314\001\n\030com.osmosis.gamm." +
-      "v1beta1B\014GenesisProtoP\001Z0github.com/osmo" +
-      "sis-labs/osmosis/v15/x/gamm/types\242\002\003OGX\252" +
-      "\002\024Osmosis.Gamm.V1beta1\312\002\024Osmosis\\Gamm\\V1" +
-      "beta1\342\002 Osmosis\\Gamm\\V1beta1\\GPBMetadata" +
-      "\352\002\026Osmosis::Gamm::V1beta1b\006proto3"
+      "(\004R\010clPoolId:\004\350\240\037\001B\312\001\n\030com.osmosis.gamm." +
+      "v1beta1B\014GenesisProtoZ0github.com/osmosi" +
+      "s-labs/osmosis/v15/x/gamm/types\242\002\003OGX\252\002\024" +
+      "Osmosis.Gamm.V1beta1\312\002\024Osmosis\\Gamm\\V1be" +
+      "ta1\342\002 Osmosis\\Gamm\\V1beta1\\GPBMetadata\352\002" +
+      "\026Osmosis::Gamm::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

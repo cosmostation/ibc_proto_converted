@@ -33,14 +33,14 @@ public final class ServiceProto {
       "rders.queries.orders.QueryRequest\0328.asse" +
       "tmantle.modules.orders.queries.orders.Qu" +
       "eryResponse\"%\202\323\344\223\002\037\022\035/mantle/orders/v1be" +
-      "ta1/ordersB\207\002\n-com.assetmantle.modules.o" +
-      "rders.queries.ordersB\014ServiceProtoP\001\242\002\005A" +
-      "MOQO\252\002)Assetmantle.Modules.Orders.Querie" +
-      "s.Orders\312\002)Assetmantle\\Modules\\Orders\\Qu" +
-      "eries\\Orders\342\0025Assetmantle\\Modules\\Order" +
-      "s\\Queries\\Orders\\GPBMetadata\352\002-Assetmant" +
-      "le::Modules::Orders::Queries::Ordersb\006pr" +
-      "oto3"
+      "ta1/ordersB\205\002\n-com.assetmantle.modules.o" +
+      "rders.queries.ordersB\014ServiceProto\242\002\005AMO" +
+      "QO\252\002)Assetmantle.Modules.Orders.Queries." +
+      "Orders\312\002)Assetmantle\\Modules\\Orders\\Quer" +
+      "ies\\Orders\342\0025Assetmantle\\Modules\\Orders\\" +
+      "Queries\\Orders\\GPBMetadata\352\002-Assetmantle" +
+      "::Modules::Orders::Queries::Ordersb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

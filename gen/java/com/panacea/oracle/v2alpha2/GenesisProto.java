@@ -14,29 +14,6380 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> 
+        getOraclesList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracles(int index);
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    int getOraclesCount();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+        getOraclesOrBuilderList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOraclesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration> 
+        getOracleRegistrationsList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration getOracleRegistrations(int index);
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    int getOracleRegistrationsCount();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> 
+        getOracleRegistrationsOrBuilderList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder getOracleRegistrationsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote> 
+        getOracleRegistrationVotesList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote getOracleRegistrationVotes(int index);
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getOracleRegistrationVotesCount();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> 
+        getOracleRegistrationVotesOrBuilderList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder getOracleRegistrationVotesOrBuilder(
+        int index);
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.Params getParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+     * @return Whether the oracleUpgradeInfo field is set.
+     */
+    boolean hasOracleUpgradeInfo();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+     * @return The oracleUpgradeInfo.
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo getOracleUpgradeInfo();
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+     */
+    com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder getOracleUpgradeInfoOrBuilder();
+
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement> 
+        getOracleRegistrationVoteQueueElementsList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement getOracleRegistrationVoteQueueElements(int index);
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    int getOracleRegistrationVoteQueueElementsCount();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder> 
+        getOracleRegistrationVoteQueueElementsOrBuilderList();
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder getOracleRegistrationVoteQueueElementsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the oracle module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      oracles_ = java.util.Collections.emptyList();
+      oracleRegistrations_ = java.util.Collections.emptyList();
+      oracleRegistrationVotes_ = java.util.Collections.emptyList();
+      oracleRegistrationVoteQueueElements_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.class, com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int ORACLES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> oracles_;
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> getOraclesList() {
+      return oracles_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+        getOraclesOrBuilderList() {
+      return oracles_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOraclesCount() {
+      return oracles_.size();
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracles(int index) {
+      return oracles_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOraclesOrBuilder(
+        int index) {
+      return oracles_.get(index);
+    }
+
+    public static final int ORACLE_REGISTRATIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration> oracleRegistrations_;
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration> getOracleRegistrationsList() {
+      return oracleRegistrations_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> 
+        getOracleRegistrationsOrBuilderList() {
+      return oracleRegistrations_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOracleRegistrationsCount() {
+      return oracleRegistrations_.size();
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration getOracleRegistrations(int index) {
+      return oracleRegistrations_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder getOracleRegistrationsOrBuilder(
+        int index) {
+      return oracleRegistrations_.get(index);
+    }
+
+    public static final int ORACLE_REGISTRATION_VOTES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote> oracleRegistrationVotes_;
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote> getOracleRegistrationVotesList() {
+      return oracleRegistrationVotes_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> 
+        getOracleRegistrationVotesOrBuilderList() {
+      return oracleRegistrationVotes_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOracleRegistrationVotesCount() {
+      return oracleRegistrationVotes_.size();
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote getOracleRegistrationVotes(int index) {
+      return oracleRegistrationVotes_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder getOracleRegistrationVotesOrBuilder(
+        int index) {
+      return oracleRegistrationVotes_.get(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 4;
+    private com.panacea.oracle.v2alpha2.GenesisProto.Params params_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.Params getParams() {
+      return params_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int ORACLE_UPGRADE_INFO_FIELD_NUMBER = 5;
+    private com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo oracleUpgradeInfo_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+     * @return Whether the oracleUpgradeInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracleUpgradeInfo() {
+      return oracleUpgradeInfo_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+     * @return The oracleUpgradeInfo.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo getOracleUpgradeInfo() {
+      return oracleUpgradeInfo_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder getOracleUpgradeInfoOrBuilder() {
+      return oracleUpgradeInfo_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+    }
+
+    public static final int ORACLE_REGISTRATION_VOTE_QUEUE_ELEMENTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement> oracleRegistrationVoteQueueElements_;
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement> getOracleRegistrationVoteQueueElementsList() {
+      return oracleRegistrationVoteQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder> 
+        getOracleRegistrationVoteQueueElementsOrBuilderList() {
+      return oracleRegistrationVoteQueueElements_;
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOracleRegistrationVoteQueueElementsCount() {
+      return oracleRegistrationVoteQueueElements_.size();
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement getOracleRegistrationVoteQueueElements(int index) {
+      return oracleRegistrationVoteQueueElements_.get(index);
+    }
+    /**
+     * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder getOracleRegistrationVoteQueueElementsOrBuilder(
+        int index) {
+      return oracleRegistrationVoteQueueElements_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < oracles_.size(); i++) {
+        output.writeMessage(1, oracles_.get(i));
+      }
+      for (int i = 0; i < oracleRegistrations_.size(); i++) {
+        output.writeMessage(2, oracleRegistrations_.get(i));
+      }
+      for (int i = 0; i < oracleRegistrationVotes_.size(); i++) {
+        output.writeMessage(3, oracleRegistrationVotes_.get(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(4, getParams());
+      }
+      if (oracleUpgradeInfo_ != null) {
+        output.writeMessage(5, getOracleUpgradeInfo());
+      }
+      for (int i = 0; i < oracleRegistrationVoteQueueElements_.size(); i++) {
+        output.writeMessage(6, oracleRegistrationVoteQueueElements_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < oracles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, oracles_.get(i));
+      }
+      for (int i = 0; i < oracleRegistrations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, oracleRegistrations_.get(i));
+      }
+      for (int i = 0; i < oracleRegistrationVotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, oracleRegistrationVotes_.get(i));
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getParams());
+      }
+      if (oracleUpgradeInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getOracleUpgradeInfo());
+      }
+      for (int i = 0; i < oracleRegistrationVoteQueueElements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, oracleRegistrationVoteQueueElements_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.GenesisProto.GenesisState other = (com.panacea.oracle.v2alpha2.GenesisProto.GenesisState) obj;
+
+      if (!getOraclesList()
+          .equals(other.getOraclesList())) return false;
+      if (!getOracleRegistrationsList()
+          .equals(other.getOracleRegistrationsList())) return false;
+      if (!getOracleRegistrationVotesList()
+          .equals(other.getOracleRegistrationVotesList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasOracleUpgradeInfo() != other.hasOracleUpgradeInfo()) return false;
+      if (hasOracleUpgradeInfo()) {
+        if (!getOracleUpgradeInfo()
+            .equals(other.getOracleUpgradeInfo())) return false;
+      }
+      if (!getOracleRegistrationVoteQueueElementsList()
+          .equals(other.getOracleRegistrationVoteQueueElementsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOraclesCount() > 0) {
+        hash = (37 * hash) + ORACLES_FIELD_NUMBER;
+        hash = (53 * hash) + getOraclesList().hashCode();
+      }
+      if (getOracleRegistrationsCount() > 0) {
+        hash = (37 * hash) + ORACLE_REGISTRATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleRegistrationsList().hashCode();
+      }
+      if (getOracleRegistrationVotesCount() > 0) {
+        hash = (37 * hash) + ORACLE_REGISTRATION_VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleRegistrationVotesList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasOracleUpgradeInfo()) {
+        hash = (37 * hash) + ORACLE_UPGRADE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleUpgradeInfo().hashCode();
+      }
+      if (getOracleRegistrationVoteQueueElementsCount() > 0) {
+        hash = (37 * hash) + ORACLE_REGISTRATION_VOTE_QUEUE_ELEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleRegistrationVoteQueueElementsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the oracle module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.GenesisState)
+        com.panacea.oracle.v2alpha2.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.class, com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (oraclesBuilder_ == null) {
+          oracles_ = java.util.Collections.emptyList();
+        } else {
+          oracles_ = null;
+          oraclesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (oracleRegistrationsBuilder_ == null) {
+          oracleRegistrations_ = java.util.Collections.emptyList();
+        } else {
+          oracleRegistrations_ = null;
+          oracleRegistrationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (oracleRegistrationVotesBuilder_ == null) {
+          oracleRegistrationVotes_ = java.util.Collections.emptyList();
+        } else {
+          oracleRegistrationVotes_ = null;
+          oracleRegistrationVotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        oracleUpgradeInfo_ = null;
+        if (oracleUpgradeInfoBuilder_ != null) {
+          oracleUpgradeInfoBuilder_.dispose();
+          oracleUpgradeInfoBuilder_ = null;
+        }
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          oracleRegistrationVoteQueueElements_ = java.util.Collections.emptyList();
+        } else {
+          oracleRegistrationVoteQueueElements_ = null;
+          oracleRegistrationVoteQueueElementsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.GenesisState build() {
+        com.panacea.oracle.v2alpha2.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.GenesisState buildPartial() {
+        com.panacea.oracle.v2alpha2.GenesisProto.GenesisState result = new com.panacea.oracle.v2alpha2.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.oracle.v2alpha2.GenesisProto.GenesisState result) {
+        if (oraclesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            oracles_ = java.util.Collections.unmodifiableList(oracles_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.oracles_ = oracles_;
+        } else {
+          result.oracles_ = oraclesBuilder_.build();
+        }
+        if (oracleRegistrationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            oracleRegistrations_ = java.util.Collections.unmodifiableList(oracleRegistrations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.oracleRegistrations_ = oracleRegistrations_;
+        } else {
+          result.oracleRegistrations_ = oracleRegistrationsBuilder_.build();
+        }
+        if (oracleRegistrationVotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            oracleRegistrationVotes_ = java.util.Collections.unmodifiableList(oracleRegistrationVotes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.oracleRegistrationVotes_ = oracleRegistrationVotes_;
+        } else {
+          result.oracleRegistrationVotes_ = oracleRegistrationVotesBuilder_.build();
+        }
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            oracleRegistrationVoteQueueElements_ = java.util.Collections.unmodifiableList(oracleRegistrationVoteQueueElements_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.oracleRegistrationVoteQueueElements_ = oracleRegistrationVoteQueueElements_;
+        } else {
+          result.oracleRegistrationVoteQueueElements_ = oracleRegistrationVoteQueueElementsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.oracleUpgradeInfo_ = oracleUpgradeInfoBuilder_ == null
+              ? oracleUpgradeInfo_
+              : oracleUpgradeInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.GenesisProto.GenesisState) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.GenesisProto.GenesisState other) {
+        if (other == com.panacea.oracle.v2alpha2.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (oraclesBuilder_ == null) {
+          if (!other.oracles_.isEmpty()) {
+            if (oracles_.isEmpty()) {
+              oracles_ = other.oracles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOraclesIsMutable();
+              oracles_.addAll(other.oracles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oracles_.isEmpty()) {
+            if (oraclesBuilder_.isEmpty()) {
+              oraclesBuilder_.dispose();
+              oraclesBuilder_ = null;
+              oracles_ = other.oracles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              oraclesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOraclesFieldBuilder() : null;
+            } else {
+              oraclesBuilder_.addAllMessages(other.oracles_);
+            }
+          }
+        }
+        if (oracleRegistrationsBuilder_ == null) {
+          if (!other.oracleRegistrations_.isEmpty()) {
+            if (oracleRegistrations_.isEmpty()) {
+              oracleRegistrations_ = other.oracleRegistrations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureOracleRegistrationsIsMutable();
+              oracleRegistrations_.addAll(other.oracleRegistrations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oracleRegistrations_.isEmpty()) {
+            if (oracleRegistrationsBuilder_.isEmpty()) {
+              oracleRegistrationsBuilder_.dispose();
+              oracleRegistrationsBuilder_ = null;
+              oracleRegistrations_ = other.oracleRegistrations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              oracleRegistrationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOracleRegistrationsFieldBuilder() : null;
+            } else {
+              oracleRegistrationsBuilder_.addAllMessages(other.oracleRegistrations_);
+            }
+          }
+        }
+        if (oracleRegistrationVotesBuilder_ == null) {
+          if (!other.oracleRegistrationVotes_.isEmpty()) {
+            if (oracleRegistrationVotes_.isEmpty()) {
+              oracleRegistrationVotes_ = other.oracleRegistrationVotes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureOracleRegistrationVotesIsMutable();
+              oracleRegistrationVotes_.addAll(other.oracleRegistrationVotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oracleRegistrationVotes_.isEmpty()) {
+            if (oracleRegistrationVotesBuilder_.isEmpty()) {
+              oracleRegistrationVotesBuilder_.dispose();
+              oracleRegistrationVotesBuilder_ = null;
+              oracleRegistrationVotes_ = other.oracleRegistrationVotes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              oracleRegistrationVotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOracleRegistrationVotesFieldBuilder() : null;
+            } else {
+              oracleRegistrationVotesBuilder_.addAllMessages(other.oracleRegistrationVotes_);
+            }
+          }
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasOracleUpgradeInfo()) {
+          mergeOracleUpgradeInfo(other.getOracleUpgradeInfo());
+        }
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          if (!other.oracleRegistrationVoteQueueElements_.isEmpty()) {
+            if (oracleRegistrationVoteQueueElements_.isEmpty()) {
+              oracleRegistrationVoteQueueElements_ = other.oracleRegistrationVoteQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureOracleRegistrationVoteQueueElementsIsMutable();
+              oracleRegistrationVoteQueueElements_.addAll(other.oracleRegistrationVoteQueueElements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oracleRegistrationVoteQueueElements_.isEmpty()) {
+            if (oracleRegistrationVoteQueueElementsBuilder_.isEmpty()) {
+              oracleRegistrationVoteQueueElementsBuilder_.dispose();
+              oracleRegistrationVoteQueueElementsBuilder_ = null;
+              oracleRegistrationVoteQueueElements_ = other.oracleRegistrationVoteQueueElements_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              oracleRegistrationVoteQueueElementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOracleRegistrationVoteQueueElementsFieldBuilder() : null;
+            } else {
+              oracleRegistrationVoteQueueElementsBuilder_.addAllMessages(other.oracleRegistrationVoteQueueElements_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.panacea.oracle.v2alpha2.OracleProto.Oracle m =
+                    input.readMessage(
+                        com.panacea.oracle.v2alpha2.OracleProto.Oracle.parser(),
+                        extensionRegistry);
+                if (oraclesBuilder_ == null) {
+                  ensureOraclesIsMutable();
+                  oracles_.add(m);
+                } else {
+                  oraclesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration m =
+                    input.readMessage(
+                        com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.parser(),
+                        extensionRegistry);
+                if (oracleRegistrationsBuilder_ == null) {
+                  ensureOracleRegistrationsIsMutable();
+                  oracleRegistrations_.add(m);
+                } else {
+                  oracleRegistrationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote m =
+                    input.readMessage(
+                        com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.parser(),
+                        extensionRegistry);
+                if (oracleRegistrationVotesBuilder_ == null) {
+                  ensureOracleRegistrationVotesIsMutable();
+                  oracleRegistrationVotes_.add(m);
+                } else {
+                  oracleRegistrationVotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getOracleUpgradeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement m =
+                    input.readMessage(
+                        com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.parser(),
+                        extensionRegistry);
+                if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+                  ensureOracleRegistrationVoteQueueElementsIsMutable();
+                  oracleRegistrationVoteQueueElements_.add(m);
+                } else {
+                  oracleRegistrationVoteQueueElementsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> oracles_ =
+        java.util.Collections.emptyList();
+      private void ensureOraclesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          oracles_ = new java.util.ArrayList<com.panacea.oracle.v2alpha2.OracleProto.Oracle>(oracles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> oraclesBuilder_;
+
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle> getOraclesList() {
+        if (oraclesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oracles_);
+        } else {
+          return oraclesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOraclesCount() {
+        if (oraclesBuilder_ == null) {
+          return oracles_.size();
+        } else {
+          return oraclesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle getOracles(int index) {
+        if (oraclesBuilder_ == null) {
+          return oracles_.get(index);
+        } else {
+          return oraclesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oraclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOraclesIsMutable();
+          oracles_.set(index, value);
+          onChanged();
+        } else {
+          oraclesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          oraclesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracles(com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oraclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOraclesIsMutable();
+          oracles_.add(value);
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle value) {
+        if (oraclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOraclesIsMutable();
+          oracles_.add(index, value);
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracles(
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracles(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder builderForValue) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          oraclesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOracles(
+          java.lang.Iterable<? extends com.panacea.oracle.v2alpha2.OracleProto.Oracle> values) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oracles_);
+          onChanged();
+        } else {
+          oraclesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOracles() {
+        if (oraclesBuilder_ == null) {
+          oracles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          oraclesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOracles(int index) {
+        if (oraclesBuilder_ == null) {
+          ensureOraclesIsMutable();
+          oracles_.remove(index);
+          onChanged();
+        } else {
+          oraclesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder getOraclesBuilder(
+          int index) {
+        return getOraclesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder getOraclesOrBuilder(
+          int index) {
+        if (oraclesBuilder_ == null) {
+          return oracles_.get(index);  } else {
+          return oraclesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+           getOraclesOrBuilderList() {
+        if (oraclesBuilder_ != null) {
+          return oraclesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oracles_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder addOraclesBuilder() {
+        return getOraclesFieldBuilder().addBuilder(
+            com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder addOraclesBuilder(
+          int index) {
+        return getOraclesFieldBuilder().addBuilder(
+            index, com.panacea.oracle.v2alpha2.OracleProto.Oracle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.Oracle oracles = 1 [json_name = "oracles", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder> 
+           getOraclesBuilderList() {
+        return getOraclesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder> 
+          getOraclesFieldBuilder() {
+        if (oraclesBuilder_ == null) {
+          oraclesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.Oracle, com.panacea.oracle.v2alpha2.OracleProto.Oracle.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleOrBuilder>(
+                  oracles_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          oracles_ = null;
+        }
+        return oraclesBuilder_;
+      }
+
+      private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration> oracleRegistrations_ =
+        java.util.Collections.emptyList();
+      private void ensureOracleRegistrationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          oracleRegistrations_ = new java.util.ArrayList<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration>(oracleRegistrations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> oracleRegistrationsBuilder_;
+
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration> getOracleRegistrationsList() {
+        if (oracleRegistrationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oracleRegistrations_);
+        } else {
+          return oracleRegistrationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOracleRegistrationsCount() {
+        if (oracleRegistrationsBuilder_ == null) {
+          return oracleRegistrations_.size();
+        } else {
+          return oracleRegistrationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration getOracleRegistrations(int index) {
+        if (oracleRegistrationsBuilder_ == null) {
+          return oracleRegistrations_.get(index);
+        } else {
+          return oracleRegistrationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleRegistrations(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration value) {
+        if (oracleRegistrationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.set(index, value);
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleRegistrations(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder builderForValue) {
+        if (oracleRegistrationsBuilder_ == null) {
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrations(com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration value) {
+        if (oracleRegistrationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.add(value);
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrations(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration value) {
+        if (oracleRegistrationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.add(index, value);
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrations(
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder builderForValue) {
+        if (oracleRegistrationsBuilder_ == null) {
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrations(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder builderForValue) {
+        if (oracleRegistrationsBuilder_ == null) {
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOracleRegistrations(
+          java.lang.Iterable<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration> values) {
+        if (oracleRegistrationsBuilder_ == null) {
+          ensureOracleRegistrationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oracleRegistrations_);
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOracleRegistrations() {
+        if (oracleRegistrationsBuilder_ == null) {
+          oracleRegistrations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOracleRegistrations(int index) {
+        if (oracleRegistrationsBuilder_ == null) {
+          ensureOracleRegistrationsIsMutable();
+          oracleRegistrations_.remove(index);
+          onChanged();
+        } else {
+          oracleRegistrationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder getOracleRegistrationsBuilder(
+          int index) {
+        return getOracleRegistrationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder getOracleRegistrationsOrBuilder(
+          int index) {
+        if (oracleRegistrationsBuilder_ == null) {
+          return oracleRegistrations_.get(index);  } else {
+          return oracleRegistrationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> 
+           getOracleRegistrationsOrBuilderList() {
+        if (oracleRegistrationsBuilder_ != null) {
+          return oracleRegistrationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oracleRegistrations_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder addOracleRegistrationsBuilder() {
+        return getOracleRegistrationsFieldBuilder().addBuilder(
+            com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder addOracleRegistrationsBuilder(
+          int index) {
+        return getOracleRegistrationsFieldBuilder().addBuilder(
+            index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistration oracle_registrations = 2 [json_name = "oracleRegistrations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder> 
+           getOracleRegistrationsBuilderList() {
+        return getOracleRegistrationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder> 
+          getOracleRegistrationsFieldBuilder() {
+        if (oracleRegistrationsBuilder_ == null) {
+          oracleRegistrationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistration.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationOrBuilder>(
+                  oracleRegistrations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          oracleRegistrations_ = null;
+        }
+        return oracleRegistrationsBuilder_;
+      }
+
+      private java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote> oracleRegistrationVotes_ =
+        java.util.Collections.emptyList();
+      private void ensureOracleRegistrationVotesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          oracleRegistrationVotes_ = new java.util.ArrayList<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote>(oracleRegistrationVotes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> oracleRegistrationVotesBuilder_;
+
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote> getOracleRegistrationVotesList() {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oracleRegistrationVotes_);
+        } else {
+          return oracleRegistrationVotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOracleRegistrationVotesCount() {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          return oracleRegistrationVotes_.size();
+        } else {
+          return oracleRegistrationVotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote getOracleRegistrationVotes(int index) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          return oracleRegistrationVotes_.get(index);
+        } else {
+          return oracleRegistrationVotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleRegistrationVotes(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote value) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.set(index, value);
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleRegistrationVotes(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder builderForValue) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVotes(com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote value) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.add(value);
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVotes(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote value) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.add(index, value);
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVotes(
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder builderForValue) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVotes(
+          int index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder builderForValue) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOracleRegistrationVotes(
+          java.lang.Iterable<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote> values) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          ensureOracleRegistrationVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oracleRegistrationVotes_);
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOracleRegistrationVotes() {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          oracleRegistrationVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOracleRegistrationVotes(int index) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          ensureOracleRegistrationVotesIsMutable();
+          oracleRegistrationVotes_.remove(index);
+          onChanged();
+        } else {
+          oracleRegistrationVotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder getOracleRegistrationVotesBuilder(
+          int index) {
+        return getOracleRegistrationVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder getOracleRegistrationVotesOrBuilder(
+          int index) {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          return oracleRegistrationVotes_.get(index);  } else {
+          return oracleRegistrationVotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> 
+           getOracleRegistrationVotesOrBuilderList() {
+        if (oracleRegistrationVotesBuilder_ != null) {
+          return oracleRegistrationVotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oracleRegistrationVotes_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder addOracleRegistrationVotesBuilder() {
+        return getOracleRegistrationVotesFieldBuilder().addBuilder(
+            com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder addOracleRegistrationVotesBuilder(
+          int index) {
+        return getOracleRegistrationVotesFieldBuilder().addBuilder(
+            index, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVote oracle_registration_votes = 3 [json_name = "oracleRegistrationVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder> 
+           getOracleRegistrationVotesBuilderList() {
+        return getOracleRegistrationVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder> 
+          getOracleRegistrationVotesFieldBuilder() {
+        if (oracleRegistrationVotesBuilder_ == null) {
+          oracleRegistrationVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVote.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleRegistrationVoteOrBuilder>(
+                  oracleRegistrationVotes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          oracleRegistrationVotes_ = null;
+        }
+        return oracleRegistrationVotesBuilder_;
+      }
+
+      private com.panacea.oracle.v2alpha2.GenesisProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.Params, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder, com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.panacea.oracle.v2alpha2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.panacea.oracle.v2alpha2.GenesisProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            params_ != null &&
+            params_ != com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.Params params = 4 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.Params, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder, com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.GenesisProto.Params, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder, com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo oracleUpgradeInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder> oracleUpgradeInfoBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       * @return Whether the oracleUpgradeInfo field is set.
+       */
+      public boolean hasOracleUpgradeInfo() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       * @return The oracleUpgradeInfo.
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo getOracleUpgradeInfo() {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          return oracleUpgradeInfo_ == null ? com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+        } else {
+          return oracleUpgradeInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder setOracleUpgradeInfo(com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo value) {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracleUpgradeInfo_ = value;
+        } else {
+          oracleUpgradeInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder setOracleUpgradeInfo(
+          com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder builderForValue) {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          oracleUpgradeInfo_ = builderForValue.build();
+        } else {
+          oracleUpgradeInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder mergeOracleUpgradeInfo(com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo value) {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            oracleUpgradeInfo_ != null &&
+            oracleUpgradeInfo_ != com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance()) {
+            getOracleUpgradeInfoBuilder().mergeFrom(value);
+          } else {
+            oracleUpgradeInfo_ = value;
+          }
+        } else {
+          oracleUpgradeInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public Builder clearOracleUpgradeInfo() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        oracleUpgradeInfo_ = null;
+        if (oracleUpgradeInfoBuilder_ != null) {
+          oracleUpgradeInfoBuilder_.dispose();
+          oracleUpgradeInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder getOracleUpgradeInfoBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getOracleUpgradeInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      public com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder getOracleUpgradeInfoOrBuilder() {
+        if (oracleUpgradeInfoBuilder_ != null) {
+          return oracleUpgradeInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return oracleUpgradeInfo_ == null ?
+              com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.getDefaultInstance() : oracleUpgradeInfo_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.OracleUpgradeInfo oracle_upgrade_info = 5 [json_name = "oracleUpgradeInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder> 
+          getOracleUpgradeInfoFieldBuilder() {
+        if (oracleUpgradeInfoBuilder_ == null) {
+          oracleUpgradeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfo.Builder, com.panacea.oracle.v2alpha2.OracleProto.OracleUpgradeInfoOrBuilder>(
+                  getOracleUpgradeInfo(),
+                  getParentForChildren(),
+                  isClean());
+          oracleUpgradeInfo_ = null;
+        }
+        return oracleUpgradeInfoBuilder_;
+      }
+
+      private java.util.List<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement> oracleRegistrationVoteQueueElements_ =
+        java.util.Collections.emptyList();
+      private void ensureOracleRegistrationVoteQueueElementsIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          oracleRegistrationVoteQueueElements_ = new java.util.ArrayList<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement>(oracleRegistrationVoteQueueElements_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder> oracleRegistrationVoteQueueElementsBuilder_;
+
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement> getOracleRegistrationVoteQueueElementsList() {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oracleRegistrationVoteQueueElements_);
+        } else {
+          return oracleRegistrationVoteQueueElementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOracleRegistrationVoteQueueElementsCount() {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          return oracleRegistrationVoteQueueElements_.size();
+        } else {
+          return oracleRegistrationVoteQueueElementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement getOracleRegistrationVoteQueueElements(int index) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          return oracleRegistrationVoteQueueElements_.get(index);
+        } else {
+          return oracleRegistrationVoteQueueElementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleRegistrationVoteQueueElements(
+          int index, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement value) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.set(index, value);
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleRegistrationVoteQueueElements(
+          int index, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder builderForValue) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVoteQueueElements(com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement value) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.add(value);
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVoteQueueElements(
+          int index, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement value) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.add(index, value);
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVoteQueueElements(
+          com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder builderForValue) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleRegistrationVoteQueueElements(
+          int index, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder builderForValue) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOracleRegistrationVoteQueueElements(
+          java.lang.Iterable<? extends com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement> values) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oracleRegistrationVoteQueueElements_);
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOracleRegistrationVoteQueueElements() {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          oracleRegistrationVoteQueueElements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOracleRegistrationVoteQueueElements(int index) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          ensureOracleRegistrationVoteQueueElementsIsMutable();
+          oracleRegistrationVoteQueueElements_.remove(index);
+          onChanged();
+        } else {
+          oracleRegistrationVoteQueueElementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder getOracleRegistrationVoteQueueElementsBuilder(
+          int index) {
+        return getOracleRegistrationVoteQueueElementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder getOracleRegistrationVoteQueueElementsOrBuilder(
+          int index) {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          return oracleRegistrationVoteQueueElements_.get(index);  } else {
+          return oracleRegistrationVoteQueueElementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder> 
+           getOracleRegistrationVoteQueueElementsOrBuilderList() {
+        if (oracleRegistrationVoteQueueElementsBuilder_ != null) {
+          return oracleRegistrationVoteQueueElementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oracleRegistrationVoteQueueElements_);
+        }
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder addOracleRegistrationVoteQueueElementsBuilder() {
+        return getOracleRegistrationVoteQueueElementsFieldBuilder().addBuilder(
+            com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder addOracleRegistrationVoteQueueElementsBuilder(
+          int index) {
+        return getOracleRegistrationVoteQueueElementsFieldBuilder().addBuilder(
+            index, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement oracle_registration_vote_queue_elements = 6 [json_name = "oracleRegistrationVoteQueueElements", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder> 
+           getOracleRegistrationVoteQueueElementsBuilderList() {
+        return getOracleRegistrationVoteQueueElementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder> 
+          getOracleRegistrationVoteQueueElementsFieldBuilder() {
+        if (oracleRegistrationVoteQueueElementsBuilder_ == null) {
+          oracleRegistrationVoteQueueElementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder>(
+                  oracleRegistrationVoteQueueElements_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          oracleRegistrationVoteQueueElements_ = null;
+        }
+        return oracleRegistrationVoteQueueElementsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.GenesisState)
+    private static final com.panacea.oracle.v2alpha2.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.GenesisProto.GenesisState();
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+     * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+     * </pre>
+     *
+     * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+     * @return The oraclePublicKey.
+     */
+    java.lang.String getOraclePublicKey();
+    /**
+     * <pre>
+     * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+     * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+     * </pre>
+     *
+     * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+     * @return The bytes for oraclePublicKey.
+     */
+    com.google.protobuf.ByteString
+        getOraclePublicKeyBytes();
+
+    /**
+     * <pre>
+     * A base64-encoded SGX remote report which contains an oracle public key.
+     * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+     * </pre>
+     *
+     * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+     * @return The oraclePubKeyRemoteReport.
+     */
+    java.lang.String getOraclePubKeyRemoteReport();
+    /**
+     * <pre>
+     * A base64-encoded SGX remote report which contains an oracle public key.
+     * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+     * </pre>
+     *
+     * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+     * @return The bytes for oraclePubKeyRemoteReport.
+     */
+    com.google.protobuf.ByteString
+        getOraclePubKeyRemoteReportBytes();
+
+    /**
+     * <pre>
+     * The unique ID of current version of oracle.
+     * </pre>
+     *
+     * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    java.lang.String getUniqueId();
+    /**
+     * <pre>
+     * The unique ID of current version of oracle.
+     * </pre>
+     *
+     * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    com.google.protobuf.ByteString
+        getUniqueIdBytes();
+
+    /**
+     * <pre>
+     * Oracle commission rate on validating and delivering data
+     * </pre>
+     *
+     * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The oracleCommissionRate.
+     */
+    java.lang.String getOracleCommissionRate();
+    /**
+     * <pre>
+     * Oracle commission rate on validating and delivering data
+     * </pre>
+     *
+     * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for oracleCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getOracleCommissionRateBytes();
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the voteParams field is set.
+     */
+    boolean hasVoteParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+     * @return The voteParams.
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.VoteParams getVoteParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder getVoteParamsOrBuilder();
+
+    /**
+     * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the slashParams field is set.
+     */
+    boolean hasSlashParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+     * @return The slashParams.
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.SlashParams getSlashParams();
+    /**
+     * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder getSlashParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params defines the oracle module's params.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      oraclePublicKey_ = "";
+      oraclePubKeyRemoteReport_ = "";
+      uniqueId_ = "";
+      oracleCommissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.GenesisProto.Params.class, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder.class);
+    }
+
+    public static final int ORACLE_PUBLIC_KEY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oraclePublicKey_ = "";
+    /**
+     * <pre>
+     * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+     * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+     * </pre>
+     *
+     * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+     * @return The oraclePublicKey.
+     */
+    @java.lang.Override
+    public java.lang.String getOraclePublicKey() {
+      java.lang.Object ref = oraclePublicKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oraclePublicKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+     * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+     * </pre>
+     *
+     * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+     * @return The bytes for oraclePublicKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOraclePublicKeyBytes() {
+      java.lang.Object ref = oraclePublicKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oraclePublicKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORACLE_PUB_KEY_REMOTE_REPORT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oraclePubKeyRemoteReport_ = "";
+    /**
+     * <pre>
+     * A base64-encoded SGX remote report which contains an oracle public key.
+     * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+     * </pre>
+     *
+     * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+     * @return The oraclePubKeyRemoteReport.
+     */
+    @java.lang.Override
+    public java.lang.String getOraclePubKeyRemoteReport() {
+      java.lang.Object ref = oraclePubKeyRemoteReport_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oraclePubKeyRemoteReport_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A base64-encoded SGX remote report which contains an oracle public key.
+     * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+     * </pre>
+     *
+     * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+     * @return The bytes for oraclePubKeyRemoteReport.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOraclePubKeyRemoteReportBytes() {
+      java.lang.Object ref = oraclePubKeyRemoteReport_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oraclePubKeyRemoteReport_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNIQUE_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uniqueId_ = "";
+    /**
+     * <pre>
+     * The unique ID of current version of oracle.
+     * </pre>
+     *
+     * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    @java.lang.Override
+    public java.lang.String getUniqueId() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique ID of current version of oracle.
+     * </pre>
+     *
+     * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUniqueIdBytes() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORACLE_COMMISSION_RATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oracleCommissionRate_ = "";
+    /**
+     * <pre>
+     * Oracle commission rate on validating and delivering data
+     * </pre>
+     *
+     * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The oracleCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getOracleCommissionRate() {
+      java.lang.Object ref = oracleCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oracleCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Oracle commission rate on validating and delivering data
+     * </pre>
+     *
+     * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for oracleCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOracleCommissionRateBytes() {
+      java.lang.Object ref = oracleCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oracleCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VOTE_PARAMS_FIELD_NUMBER = 5;
+    private com.panacea.oracle.v2alpha2.GenesisProto.VoteParams voteParams_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the voteParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasVoteParams() {
+      return voteParams_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+     * @return The voteParams.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams getVoteParams() {
+      return voteParams_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance() : voteParams_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder getVoteParamsOrBuilder() {
+      return voteParams_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance() : voteParams_;
+    }
+
+    public static final int SLASH_PARAMS_FIELD_NUMBER = 6;
+    private com.panacea.oracle.v2alpha2.GenesisProto.SlashParams slashParams_;
+    /**
+     * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the slashParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasSlashParams() {
+      return slashParams_ != null;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+     * @return The slashParams.
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams getSlashParams() {
+      return slashParams_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance() : slashParams_;
+    }
+    /**
+     * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder getSlashParamsOrBuilder() {
+      return slashParams_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance() : slashParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oraclePublicKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, oraclePublicKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oraclePubKeyRemoteReport_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, oraclePubKeyRemoteReport_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uniqueId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracleCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oracleCommissionRate_);
+      }
+      if (voteParams_ != null) {
+        output.writeMessage(5, getVoteParams());
+      }
+      if (slashParams_ != null) {
+        output.writeMessage(6, getSlashParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oraclePublicKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, oraclePublicKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oraclePubKeyRemoteReport_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, oraclePubKeyRemoteReport_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uniqueId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracleCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oracleCommissionRate_);
+      }
+      if (voteParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getVoteParams());
+      }
+      if (slashParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSlashParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.GenesisProto.Params)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.GenesisProto.Params other = (com.panacea.oracle.v2alpha2.GenesisProto.Params) obj;
+
+      if (!getOraclePublicKey()
+          .equals(other.getOraclePublicKey())) return false;
+      if (!getOraclePubKeyRemoteReport()
+          .equals(other.getOraclePubKeyRemoteReport())) return false;
+      if (!getUniqueId()
+          .equals(other.getUniqueId())) return false;
+      if (!getOracleCommissionRate()
+          .equals(other.getOracleCommissionRate())) return false;
+      if (hasVoteParams() != other.hasVoteParams()) return false;
+      if (hasVoteParams()) {
+        if (!getVoteParams()
+            .equals(other.getVoteParams())) return false;
+      }
+      if (hasSlashParams() != other.hasSlashParams()) return false;
+      if (hasSlashParams()) {
+        if (!getSlashParams()
+            .equals(other.getSlashParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORACLE_PUBLIC_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getOraclePublicKey().hashCode();
+      hash = (37 * hash) + ORACLE_PUB_KEY_REMOTE_REPORT_FIELD_NUMBER;
+      hash = (53 * hash) + getOraclePubKeyRemoteReport().hashCode();
+      hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueId().hashCode();
+      hash = (37 * hash) + ORACLE_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getOracleCommissionRate().hashCode();
+      if (hasVoteParams()) {
+        hash = (37 * hash) + VOTE_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getVoteParams().hashCode();
+      }
+      if (hasSlashParams()) {
+        hash = (37 * hash) + SLASH_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getSlashParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.GenesisProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the oracle module's params.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.Params)
+        com.panacea.oracle.v2alpha2.GenesisProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.GenesisProto.Params.class, com.panacea.oracle.v2alpha2.GenesisProto.Params.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.GenesisProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oraclePublicKey_ = "";
+        oraclePubKeyRemoteReport_ = "";
+        uniqueId_ = "";
+        oracleCommissionRate_ = "";
+        voteParams_ = null;
+        if (voteParamsBuilder_ != null) {
+          voteParamsBuilder_.dispose();
+          voteParamsBuilder_ = null;
+        }
+        slashParams_ = null;
+        if (slashParamsBuilder_ != null) {
+          slashParamsBuilder_.dispose();
+          slashParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params build() {
+        com.panacea.oracle.v2alpha2.GenesisProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.Params buildPartial() {
+        com.panacea.oracle.v2alpha2.GenesisProto.Params result = new com.panacea.oracle.v2alpha2.GenesisProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oraclePublicKey_ = oraclePublicKey_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.oraclePubKeyRemoteReport_ = oraclePubKeyRemoteReport_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.uniqueId_ = uniqueId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.oracleCommissionRate_ = oracleCommissionRate_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.voteParams_ = voteParamsBuilder_ == null
+              ? voteParams_
+              : voteParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.slashParams_ = slashParamsBuilder_ == null
+              ? slashParams_
+              : slashParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.GenesisProto.Params) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.GenesisProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.GenesisProto.Params other) {
+        if (other == com.panacea.oracle.v2alpha2.GenesisProto.Params.getDefaultInstance()) return this;
+        if (!other.getOraclePublicKey().isEmpty()) {
+          oraclePublicKey_ = other.oraclePublicKey_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOraclePubKeyRemoteReport().isEmpty()) {
+          oraclePubKeyRemoteReport_ = other.oraclePubKeyRemoteReport_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getUniqueId().isEmpty()) {
+          uniqueId_ = other.uniqueId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getOracleCommissionRate().isEmpty()) {
+          oracleCommissionRate_ = other.oracleCommissionRate_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasVoteParams()) {
+          mergeVoteParams(other.getVoteParams());
+        }
+        if (other.hasSlashParams()) {
+          mergeSlashParams(other.getSlashParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oraclePublicKey_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                oraclePubKeyRemoteReport_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                uniqueId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                oracleCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getVoteParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getSlashParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object oraclePublicKey_ = "";
+      /**
+       * <pre>
+       * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+       * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+       * </pre>
+       *
+       * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+       * @return The oraclePublicKey.
+       */
+      public java.lang.String getOraclePublicKey() {
+        java.lang.Object ref = oraclePublicKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oraclePublicKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+       * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+       * </pre>
+       *
+       * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+       * @return The bytes for oraclePublicKey.
+       */
+      public com.google.protobuf.ByteString
+          getOraclePublicKeyBytes() {
+        java.lang.Object ref = oraclePublicKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oraclePublicKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+       * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+       * </pre>
+       *
+       * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+       * @param value The oraclePublicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOraclePublicKey(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oraclePublicKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+       * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+       * </pre>
+       *
+       * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOraclePublicKey() {
+        oraclePublicKey_ = getDefaultInstance().getOraclePublicKey();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A base64-encoded oracle public key which is paired with an oracle private key generated in SGX by the first oracle.
+       * This key is used to encrypt data, so that the data can be decrypted and verified securely only in SGX
+       * </pre>
+       *
+       * <code>string oracle_public_key = 1 [json_name = "oraclePublicKey"];</code>
+       * @param value The bytes for oraclePublicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOraclePublicKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oraclePublicKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oraclePubKeyRemoteReport_ = "";
+      /**
+       * <pre>
+       * A base64-encoded SGX remote report which contains an oracle public key.
+       * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+       * </pre>
+       *
+       * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+       * @return The oraclePubKeyRemoteReport.
+       */
+      public java.lang.String getOraclePubKeyRemoteReport() {
+        java.lang.Object ref = oraclePubKeyRemoteReport_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oraclePubKeyRemoteReport_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A base64-encoded SGX remote report which contains an oracle public key.
+       * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+       * </pre>
+       *
+       * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+       * @return The bytes for oraclePubKeyRemoteReport.
+       */
+      public com.google.protobuf.ByteString
+          getOraclePubKeyRemoteReportBytes() {
+        java.lang.Object ref = oraclePubKeyRemoteReport_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oraclePubKeyRemoteReport_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A base64-encoded SGX remote report which contains an oracle public key.
+       * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+       * </pre>
+       *
+       * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+       * @param value The oraclePubKeyRemoteReport to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOraclePubKeyRemoteReport(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oraclePubKeyRemoteReport_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A base64-encoded SGX remote report which contains an oracle public key.
+       * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+       * </pre>
+       *
+       * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOraclePubKeyRemoteReport() {
+        oraclePubKeyRemoteReport_ = getDefaultInstance().getOraclePubKeyRemoteReport();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A base64-encoded SGX remote report which contains an oracle public key.
+       * Using this report, anyone can validate that the oracle key pair was generated in SGX.
+       * </pre>
+       *
+       * <code>string oracle_pub_key_remote_report = 2 [json_name = "oraclePubKeyRemoteReport"];</code>
+       * @param value The bytes for oraclePubKeyRemoteReport to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOraclePubKeyRemoteReportBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oraclePubKeyRemoteReport_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object uniqueId_ = "";
+      /**
+       * <pre>
+       * The unique ID of current version of oracle.
+       * </pre>
+       *
+       * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+       * @return The uniqueId.
+       */
+      public java.lang.String getUniqueId() {
+        java.lang.Object ref = uniqueId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique ID of current version of oracle.
+       * </pre>
+       *
+       * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+       * @return The bytes for uniqueId.
+       */
+      public com.google.protobuf.ByteString
+          getUniqueIdBytes() {
+        java.lang.Object ref = uniqueId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique ID of current version of oracle.
+       * </pre>
+       *
+       * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+       * @param value The uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uniqueId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique ID of current version of oracle.
+       * </pre>
+       *
+       * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUniqueId() {
+        uniqueId_ = getDefaultInstance().getUniqueId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique ID of current version of oracle.
+       * </pre>
+       *
+       * <code>string unique_id = 3 [json_name = "uniqueId"];</code>
+       * @param value The bytes for uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uniqueId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oracleCommissionRate_ = "";
+      /**
+       * <pre>
+       * Oracle commission rate on validating and delivering data
+       * </pre>
+       *
+       * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The oracleCommissionRate.
+       */
+      public java.lang.String getOracleCommissionRate() {
+        java.lang.Object ref = oracleCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oracleCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Oracle commission rate on validating and delivering data
+       * </pre>
+       *
+       * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for oracleCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getOracleCommissionRateBytes() {
+        java.lang.Object ref = oracleCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oracleCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Oracle commission rate on validating and delivering data
+       * </pre>
+       *
+       * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The oracleCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oracleCommissionRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Oracle commission rate on validating and delivering data
+       * </pre>
+       *
+       * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracleCommissionRate() {
+        oracleCommissionRate_ = getDefaultInstance().getOracleCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Oracle commission rate on validating and delivering data
+       * </pre>
+       *
+       * <code>string oracle_commission_rate = 4 [json_name = "oracleCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for oracleCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oracleCommissionRate_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.panacea.oracle.v2alpha2.GenesisProto.VoteParams voteParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.VoteParams, com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder, com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder> voteParamsBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the voteParams field is set.
+       */
+      public boolean hasVoteParams() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       * @return The voteParams.
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams getVoteParams() {
+        if (voteParamsBuilder_ == null) {
+          return voteParams_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance() : voteParams_;
+        } else {
+          return voteParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVoteParams(com.panacea.oracle.v2alpha2.GenesisProto.VoteParams value) {
+        if (voteParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          voteParams_ = value;
+        } else {
+          voteParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVoteParams(
+          com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder builderForValue) {
+        if (voteParamsBuilder_ == null) {
+          voteParams_ = builderForValue.build();
+        } else {
+          voteParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVoteParams(com.panacea.oracle.v2alpha2.GenesisProto.VoteParams value) {
+        if (voteParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            voteParams_ != null &&
+            voteParams_ != com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance()) {
+            getVoteParamsBuilder().mergeFrom(value);
+          } else {
+            voteParams_ = value;
+          }
+        } else {
+          voteParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVoteParams() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        voteParams_ = null;
+        if (voteParamsBuilder_ != null) {
+          voteParamsBuilder_.dispose();
+          voteParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder getVoteParamsBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getVoteParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder getVoteParamsOrBuilder() {
+        if (voteParamsBuilder_ != null) {
+          return voteParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return voteParams_ == null ?
+              com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance() : voteParams_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.VoteParams vote_params = 5 [json_name = "voteParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.VoteParams, com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder, com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder> 
+          getVoteParamsFieldBuilder() {
+        if (voteParamsBuilder_ == null) {
+          voteParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.GenesisProto.VoteParams, com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder, com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder>(
+                  getVoteParams(),
+                  getParentForChildren(),
+                  isClean());
+          voteParams_ = null;
+        }
+        return voteParamsBuilder_;
+      }
+
+      private com.panacea.oracle.v2alpha2.GenesisProto.SlashParams slashParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.SlashParams, com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder, com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder> slashParamsBuilder_;
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the slashParams field is set.
+       */
+      public boolean hasSlashParams() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       * @return The slashParams.
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams getSlashParams() {
+        if (slashParamsBuilder_ == null) {
+          return slashParams_ == null ? com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance() : slashParams_;
+        } else {
+          return slashParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSlashParams(com.panacea.oracle.v2alpha2.GenesisProto.SlashParams value) {
+        if (slashParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          slashParams_ = value;
+        } else {
+          slashParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSlashParams(
+          com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder builderForValue) {
+        if (slashParamsBuilder_ == null) {
+          slashParams_ = builderForValue.build();
+        } else {
+          slashParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeSlashParams(com.panacea.oracle.v2alpha2.GenesisProto.SlashParams value) {
+        if (slashParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            slashParams_ != null &&
+            slashParams_ != com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance()) {
+            getSlashParamsBuilder().mergeFrom(value);
+          } else {
+            slashParams_ = value;
+          }
+        } else {
+          slashParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSlashParams() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        slashParams_ = null;
+        if (slashParamsBuilder_ != null) {
+          slashParamsBuilder_.dispose();
+          slashParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder getSlashParamsBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getSlashParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder getSlashParamsOrBuilder() {
+        if (slashParamsBuilder_ != null) {
+          return slashParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return slashParams_ == null ?
+              com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance() : slashParams_;
+        }
+      }
+      /**
+       * <code>.panacea.oracle.v2alpha2.SlashParams slash_params = 6 [json_name = "slashParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.oracle.v2alpha2.GenesisProto.SlashParams, com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder, com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder> 
+          getSlashParamsFieldBuilder() {
+        if (slashParamsBuilder_ == null) {
+          slashParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.oracle.v2alpha2.GenesisProto.SlashParams, com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder, com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder>(
+                  getSlashParams(),
+                  getParentForChildren(),
+                  isClean());
+          slashParams_ = null;
+        }
+        return slashParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.Params)
+    private static final com.panacea.oracle.v2alpha2.GenesisProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.GenesisProto.Params();
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VoteParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.VoteParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the votingPeriod field is set.
+     */
+    boolean hasVotingPeriod();
+    /**
+     * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The votingPeriod.
+     */
+    com.google.protobuf.Duration getVotingPeriod();
+    /**
+     * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getVotingPeriodOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the jailPeriod field is set.
+     */
+    boolean hasJailPeriod();
+    /**
+     * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The jailPeriod.
+     */
+    com.google.protobuf.Duration getJailPeriod();
+    /**
+     * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getJailPeriodOrBuilder();
+
+    /**
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The threshold.
+     */
+    java.lang.String getThreshold();
+    /**
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for threshold.
+     */
+    com.google.protobuf.ByteString
+        getThresholdBytes();
+  }
+  /**
+   * <pre>
+   * Vote Params defines the params related to voting.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.VoteParams}
+   */
+  public static final class VoteParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.VoteParams)
+      VoteParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VoteParams.newBuilder() to construct.
+    private VoteParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VoteParams() {
+      threshold_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VoteParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_VoteParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_VoteParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.class, com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder.class);
+    }
+
+    public static final int VOTING_PERIOD_FIELD_NUMBER = 1;
+    private com.google.protobuf.Duration votingPeriod_;
+    /**
+     * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the votingPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingPeriod() {
+      return votingPeriod_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The votingPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getVotingPeriod() {
+      return votingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : votingPeriod_;
+    }
+    /**
+     * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getVotingPeriodOrBuilder() {
+      return votingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : votingPeriod_;
+    }
+
+    public static final int JAIL_PERIOD_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration jailPeriod_;
+    /**
+     * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the jailPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasJailPeriod() {
+      return jailPeriod_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The jailPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getJailPeriod() {
+      return jailPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : jailPeriod_;
+    }
+    /**
+     * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getJailPeriodOrBuilder() {
+      return jailPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : jailPeriod_;
+    }
+
+    public static final int THRESHOLD_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object threshold_ = "";
+    /**
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The threshold.
+     */
+    @java.lang.Override
+    public java.lang.String getThreshold() {
+      java.lang.Object ref = threshold_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        threshold_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for threshold.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getThresholdBytes() {
+      java.lang.Object ref = threshold_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        threshold_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votingPeriod_ != null) {
+        output.writeMessage(1, getVotingPeriod());
+      }
+      if (jailPeriod_ != null) {
+        output.writeMessage(2, getJailPeriod());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, threshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votingPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVotingPeriod());
+      }
+      if (jailPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getJailPeriod());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(threshold_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, threshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.GenesisProto.VoteParams)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.GenesisProto.VoteParams other = (com.panacea.oracle.v2alpha2.GenesisProto.VoteParams) obj;
+
+      if (hasVotingPeriod() != other.hasVotingPeriod()) return false;
+      if (hasVotingPeriod()) {
+        if (!getVotingPeriod()
+            .equals(other.getVotingPeriod())) return false;
+      }
+      if (hasJailPeriod() != other.hasJailPeriod()) return false;
+      if (hasJailPeriod()) {
+        if (!getJailPeriod()
+            .equals(other.getJailPeriod())) return false;
+      }
+      if (!getThreshold()
+          .equals(other.getThreshold())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVotingPeriod()) {
+        hash = (37 * hash) + VOTING_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingPeriod().hashCode();
+      }
+      if (hasJailPeriod()) {
+        hash = (37 * hash) + JAIL_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getJailPeriod().hashCode();
+      }
+      hash = (37 * hash) + THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getThreshold().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.GenesisProto.VoteParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Vote Params defines the params related to voting.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.VoteParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.VoteParams)
+        com.panacea.oracle.v2alpha2.GenesisProto.VoteParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_VoteParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_VoteParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.class, com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votingPeriod_ = null;
+        if (votingPeriodBuilder_ != null) {
+          votingPeriodBuilder_.dispose();
+          votingPeriodBuilder_ = null;
+        }
+        jailPeriod_ = null;
+        if (jailPeriodBuilder_ != null) {
+          jailPeriodBuilder_.dispose();
+          jailPeriodBuilder_ = null;
+        }
+        threshold_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_VoteParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams build() {
+        com.panacea.oracle.v2alpha2.GenesisProto.VoteParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams buildPartial() {
+        com.panacea.oracle.v2alpha2.GenesisProto.VoteParams result = new com.panacea.oracle.v2alpha2.GenesisProto.VoteParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.VoteParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votingPeriod_ = votingPeriodBuilder_ == null
+              ? votingPeriod_
+              : votingPeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.jailPeriod_ = jailPeriodBuilder_ == null
+              ? jailPeriod_
+              : jailPeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.threshold_ = threshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.GenesisProto.VoteParams) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.GenesisProto.VoteParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.GenesisProto.VoteParams other) {
+        if (other == com.panacea.oracle.v2alpha2.GenesisProto.VoteParams.getDefaultInstance()) return this;
+        if (other.hasVotingPeriod()) {
+          mergeVotingPeriod(other.getVotingPeriod());
+        }
+        if (other.hasJailPeriod()) {
+          mergeJailPeriod(other.getJailPeriod());
+        }
+        if (!other.getThreshold().isEmpty()) {
+          threshold_ = other.threshold_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getVotingPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getJailPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                threshold_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Duration votingPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> votingPeriodBuilder_;
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the votingPeriod field is set.
+       */
+      public boolean hasVotingPeriod() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The votingPeriod.
+       */
+      public com.google.protobuf.Duration getVotingPeriod() {
+        if (votingPeriodBuilder_ == null) {
+          return votingPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : votingPeriod_;
+        } else {
+          return votingPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setVotingPeriod(com.google.protobuf.Duration value) {
+        if (votingPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingPeriod_ = value;
+        } else {
+          votingPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setVotingPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (votingPeriodBuilder_ == null) {
+          votingPeriod_ = builderForValue.build();
+        } else {
+          votingPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeVotingPeriod(com.google.protobuf.Duration value) {
+        if (votingPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            votingPeriod_ != null &&
+            votingPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getVotingPeriodBuilder().mergeFrom(value);
+          } else {
+            votingPeriod_ = value;
+          }
+        } else {
+          votingPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearVotingPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votingPeriod_ = null;
+        if (votingPeriodBuilder_ != null) {
+          votingPeriodBuilder_.dispose();
+          votingPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getVotingPeriodBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getVotingPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getVotingPeriodOrBuilder() {
+        if (votingPeriodBuilder_ != null) {
+          return votingPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return votingPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : votingPeriod_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration voting_period = 1 [json_name = "votingPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getVotingPeriodFieldBuilder() {
+        if (votingPeriodBuilder_ == null) {
+          votingPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getVotingPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          votingPeriod_ = null;
+        }
+        return votingPeriodBuilder_;
+      }
+
+      private com.google.protobuf.Duration jailPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> jailPeriodBuilder_;
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the jailPeriod field is set.
+       */
+      public boolean hasJailPeriod() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The jailPeriod.
+       */
+      public com.google.protobuf.Duration getJailPeriod() {
+        if (jailPeriodBuilder_ == null) {
+          return jailPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : jailPeriod_;
+        } else {
+          return jailPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setJailPeriod(com.google.protobuf.Duration value) {
+        if (jailPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jailPeriod_ = value;
+        } else {
+          jailPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setJailPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (jailPeriodBuilder_ == null) {
+          jailPeriod_ = builderForValue.build();
+        } else {
+          jailPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeJailPeriod(com.google.protobuf.Duration value) {
+        if (jailPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            jailPeriod_ != null &&
+            jailPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getJailPeriodBuilder().mergeFrom(value);
+          } else {
+            jailPeriod_ = value;
+          }
+        } else {
+          jailPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearJailPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        jailPeriod_ = null;
+        if (jailPeriodBuilder_ != null) {
+          jailPeriodBuilder_.dispose();
+          jailPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getJailPeriodBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getJailPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getJailPeriodOrBuilder() {
+        if (jailPeriodBuilder_ != null) {
+          return jailPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return jailPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : jailPeriod_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration jail_period = 2 [json_name = "jailPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"jail_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getJailPeriodFieldBuilder() {
+        if (jailPeriodBuilder_ == null) {
+          jailPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getJailPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          jailPeriod_ = null;
+        }
+        return jailPeriodBuilder_;
+      }
+
+      private java.lang.Object threshold_ = "";
+      /**
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The threshold.
+       */
+      public java.lang.String getThreshold() {
+        java.lang.Object ref = threshold_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          threshold_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for threshold.
+       */
+      public com.google.protobuf.ByteString
+          getThresholdBytes() {
+        java.lang.Object ref = threshold_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          threshold_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThreshold(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        threshold_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearThreshold() {
+        threshold_ = getDefaultInstance().getThreshold();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string threshold = 3 [json_name = "threshold", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for threshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setThresholdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        threshold_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.VoteParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.VoteParams)
+    private static final com.panacea.oracle.v2alpha2.GenesisProto.VoteParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.GenesisProto.VoteParams();
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.VoteParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VoteParams>
+        PARSER = new com.google.protobuf.AbstractParser<VoteParams>() {
+      @java.lang.Override
+      public VoteParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<VoteParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VoteParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.VoteParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SlashParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.SlashParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionDowntime.
+     */
+    java.lang.String getSlashFractionDowntime();
+    /**
+     * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for slashFractionDowntime.
+     */
+    com.google.protobuf.ByteString
+        getSlashFractionDowntimeBytes();
+
+    /**
+     * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionForgery.
+     */
+    java.lang.String getSlashFractionForgery();
+    /**
+     * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for slashFractionForgery.
+     */
+    com.google.protobuf.ByteString
+        getSlashFractionForgeryBytes();
+  }
+  /**
+   * <pre>
+   * SlashParams defines the params related to slashing of oracle.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.SlashParams}
+   */
+  public static final class SlashParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.SlashParams)
+      SlashParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SlashParams.newBuilder() to construct.
+    private SlashParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SlashParams() {
+      slashFractionDowntime_ = "";
+      slashFractionForgery_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SlashParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_SlashParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_SlashParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.class, com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder.class);
+    }
+
+    public static final int SLASH_FRACTION_DOWNTIME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object slashFractionDowntime_ = "";
+    /**
+     * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionDowntime.
+     */
+    @java.lang.Override
+    public java.lang.String getSlashFractionDowntime() {
+      java.lang.Object ref = slashFractionDowntime_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        slashFractionDowntime_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for slashFractionDowntime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSlashFractionDowntimeBytes() {
+      java.lang.Object ref = slashFractionDowntime_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        slashFractionDowntime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SLASH_FRACTION_FORGERY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object slashFractionForgery_ = "";
+    /**
+     * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The slashFractionForgery.
+     */
+    @java.lang.Override
+    public java.lang.String getSlashFractionForgery() {
+      java.lang.Object ref = slashFractionForgery_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        slashFractionForgery_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for slashFractionForgery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSlashFractionForgeryBytes() {
+      java.lang.Object ref = slashFractionForgery_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        slashFractionForgery_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFractionDowntime_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, slashFractionDowntime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFractionForgery_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, slashFractionForgery_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFractionDowntime_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, slashFractionDowntime_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(slashFractionForgery_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, slashFractionForgery_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.GenesisProto.SlashParams)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.GenesisProto.SlashParams other = (com.panacea.oracle.v2alpha2.GenesisProto.SlashParams) obj;
+
+      if (!getSlashFractionDowntime()
+          .equals(other.getSlashFractionDowntime())) return false;
+      if (!getSlashFractionForgery()
+          .equals(other.getSlashFractionForgery())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SLASH_FRACTION_DOWNTIME_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFractionDowntime().hashCode();
+      hash = (37 * hash) + SLASH_FRACTION_FORGERY_FIELD_NUMBER;
+      hash = (53 * hash) + getSlashFractionForgery().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.GenesisProto.SlashParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SlashParams defines the params related to slashing of oracle.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.SlashParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.SlashParams)
+        com.panacea.oracle.v2alpha2.GenesisProto.SlashParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_SlashParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_SlashParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.class, com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        slashFractionDowntime_ = "";
+        slashFractionForgery_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_SlashParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams build() {
+        com.panacea.oracle.v2alpha2.GenesisProto.SlashParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams buildPartial() {
+        com.panacea.oracle.v2alpha2.GenesisProto.SlashParams result = new com.panacea.oracle.v2alpha2.GenesisProto.SlashParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.SlashParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.slashFractionDowntime_ = slashFractionDowntime_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.slashFractionForgery_ = slashFractionForgery_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.GenesisProto.SlashParams) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.GenesisProto.SlashParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.GenesisProto.SlashParams other) {
+        if (other == com.panacea.oracle.v2alpha2.GenesisProto.SlashParams.getDefaultInstance()) return this;
+        if (!other.getSlashFractionDowntime().isEmpty()) {
+          slashFractionDowntime_ = other.slashFractionDowntime_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSlashFractionForgery().isEmpty()) {
+          slashFractionForgery_ = other.slashFractionForgery_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                slashFractionDowntime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                slashFractionForgery_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object slashFractionDowntime_ = "";
+      /**
+       * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The slashFractionDowntime.
+       */
+      public java.lang.String getSlashFractionDowntime() {
+        java.lang.Object ref = slashFractionDowntime_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          slashFractionDowntime_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for slashFractionDowntime.
+       */
+      public com.google.protobuf.ByteString
+          getSlashFractionDowntimeBytes() {
+        java.lang.Object ref = slashFractionDowntime_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          slashFractionDowntime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The slashFractionDowntime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionDowntime(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFractionDowntime_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFractionDowntime() {
+        slashFractionDowntime_ = getDefaultInstance().getSlashFractionDowntime();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string slash_fraction_downtime = 1 [json_name = "slashFractionDowntime", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for slashFractionDowntime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionDowntimeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        slashFractionDowntime_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object slashFractionForgery_ = "";
+      /**
+       * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The slashFractionForgery.
+       */
+      public java.lang.String getSlashFractionForgery() {
+        java.lang.Object ref = slashFractionForgery_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          slashFractionForgery_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for slashFractionForgery.
+       */
+      public com.google.protobuf.ByteString
+          getSlashFractionForgeryBytes() {
+        java.lang.Object ref = slashFractionForgery_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          slashFractionForgery_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The slashFractionForgery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionForgery(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        slashFractionForgery_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlashFractionForgery() {
+        slashFractionForgery_ = getDefaultInstance().getSlashFractionForgery();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string slash_fraction_forgery = 2 [json_name = "slashFractionForgery", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for slashFractionForgery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlashFractionForgeryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        slashFractionForgery_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.SlashParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.SlashParams)
+    private static final com.panacea.oracle.v2alpha2.GenesisProto.SlashParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.GenesisProto.SlashParams();
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.SlashParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SlashParams>
+        PARSER = new com.google.protobuf.AbstractParser<SlashParams>() {
+      @java.lang.Override
+      public SlashParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SlashParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SlashParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.SlashParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OracleRegistrationVoteQueueElementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    java.lang.String getUniqueId();
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    com.google.protobuf.ByteString
+        getUniqueIdBytes();
+
+    /**
+     * <code>bytes address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    com.google.protobuf.ByteString getAddress();
+
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the votingEndTime field is set.
+     */
+    boolean hasVotingEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The votingEndTime.
+     */
+    com.google.protobuf.Timestamp getVotingEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder();
+  }
+  /**
+   * <pre>
+   * OracleRegistrationVoteQueueElement defines a oracle registration vote queue.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement}
+   */
+  public static final class OracleRegistrationVoteQueueElement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement)
+      OracleRegistrationVoteQueueElementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OracleRegistrationVoteQueueElement.newBuilder() to construct.
+    private OracleRegistrationVoteQueueElement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OracleRegistrationVoteQueueElement() {
+      uniqueId_ = "";
+      address_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OracleRegistrationVoteQueueElement();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.class, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder.class);
+    }
+
+    public static final int UNIQUE_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uniqueId_ = "";
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The uniqueId.
+     */
+    @java.lang.Override
+    public java.lang.String getUniqueId() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+     * @return The bytes for uniqueId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUniqueIdBytes() {
+      java.lang.Object ref = uniqueId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes address = 2 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddress() {
+      return address_;
+    }
+
+    public static final int VOTING_END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp votingEndTime_;
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the votingEndTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingEndTime() {
+      return votingEndTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The votingEndTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getVotingEndTime() {
+      return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder() {
+      return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueId_);
+      }
+      if (!address_.isEmpty()) {
+        output.writeBytes(2, address_);
+      }
+      if (votingEndTime_ != null) {
+        output.writeMessage(3, getVotingEndTime());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueId_);
+      }
+      if (!address_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, address_);
+      }
+      if (votingEndTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVotingEndTime());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement)) {
+        return super.equals(obj);
+      }
+      com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement other = (com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement) obj;
+
+      if (!getUniqueId()
+          .equals(other.getUniqueId())) return false;
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (hasVotingEndTime() != other.hasVotingEndTime()) return false;
+      if (hasVotingEndTime()) {
+        if (!getVotingEndTime()
+            .equals(other.getVotingEndTime())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNIQUE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueId().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (hasVotingEndTime()) {
+        hash = (37 * hash) + VOTING_END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingEndTime().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * OracleRegistrationVoteQueueElement defines a oracle registration vote queue.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement)
+        com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.class, com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.Builder.class);
+      }
+
+      // Construct using com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        uniqueId_ = "";
+        address_ = com.google.protobuf.ByteString.EMPTY;
+        votingEndTime_ = null;
+        if (votingEndTimeBuilder_ != null) {
+          votingEndTimeBuilder_.dispose();
+          votingEndTimeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement getDefaultInstanceForType() {
+        return com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement build() {
+        com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement buildPartial() {
+        com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement result = new com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uniqueId_ = uniqueId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.votingEndTime_ = votingEndTimeBuilder_ == null
+              ? votingEndTime_
+              : votingEndTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement) {
+          return mergeFrom((com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement other) {
+        if (other == com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement.getDefaultInstance()) return this;
+        if (!other.getUniqueId().isEmpty()) {
+          uniqueId_ = other.uniqueId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setAddress(other.getAddress());
+        }
+        if (other.hasVotingEndTime()) {
+          mergeVotingEndTime(other.getVotingEndTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uniqueId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                address_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getVotingEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uniqueId_ = "";
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The uniqueId.
+       */
+      public java.lang.String getUniqueId() {
+        java.lang.Object ref = uniqueId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return The bytes for uniqueId.
+       */
+      public com.google.protobuf.ByteString
+          getUniqueIdBytes() {
+        java.lang.Object ref = uniqueId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUniqueId() {
+        uniqueId_ = getDefaultInstance().getUniqueId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unique_id = 1 [json_name = "uniqueId"];</code>
+       * @param value The bytes for uniqueId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        uniqueId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString address_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes address = 2 [json_name = "address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddress() {
+        return address_;
+      }
+      /**
+       * <code>bytes address = 2 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes address = 2 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp votingEndTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> votingEndTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the votingEndTime field is set.
+       */
+      public boolean hasVotingEndTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The votingEndTime.
+       */
+      public com.google.protobuf.Timestamp getVotingEndTime() {
+        if (votingEndTimeBuilder_ == null) {
+          return votingEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+        } else {
+          return votingEndTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setVotingEndTime(com.google.protobuf.Timestamp value) {
+        if (votingEndTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingEndTime_ = value;
+        } else {
+          votingEndTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setVotingEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (votingEndTimeBuilder_ == null) {
+          votingEndTime_ = builderForValue.build();
+        } else {
+          votingEndTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeVotingEndTime(com.google.protobuf.Timestamp value) {
+        if (votingEndTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            votingEndTime_ != null &&
+            votingEndTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getVotingEndTimeBuilder().mergeFrom(value);
+          } else {
+            votingEndTime_ = value;
+          }
+        } else {
+          votingEndTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearVotingEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        votingEndTime_ = null;
+        if (votingEndTimeBuilder_ != null) {
+          votingEndTimeBuilder_.dispose();
+          votingEndTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getVotingEndTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getVotingEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getVotingEndTimeOrBuilder() {
+        if (votingEndTimeBuilder_ != null) {
+          return votingEndTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return votingEndTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : votingEndTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp voting_end_time = 3 [json_name = "votingEndTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"voting_end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getVotingEndTimeFieldBuilder() {
+        if (votingEndTimeBuilder_ == null) {
+          votingEndTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getVotingEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          votingEndTime_ = null;
+        }
+        return votingEndTimeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.oracle.v2alpha2.OracleRegistrationVoteQueueElement)
+    private static final com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement();
+    }
+
+    public static com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OracleRegistrationVoteQueueElement>
+        PARSER = new com.google.protobuf.AbstractParser<OracleRegistrationVoteQueueElement>() {
+      @java.lang.Override
+      public OracleRegistrationVoteQueueElement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OracleRegistrationVoteQueueElement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OracleRegistrationVoteQueueElement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.oracle.v2alpha2.GenesisProto.OracleRegistrationVoteQueueElement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_VoteParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_VoteParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_SlashParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_SlashParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_oracle_v2alpha2_OracleRegistrationVoteQueueElement_fieldAccessorTable;
 
@@ -95,13 +6446,13 @@ public final class GenesisProto {
       "\001 \001(\tR\010uniqueId\022\030\n\007address\030\002 \001(\014R\007addres" +
       "s\022f\n\017voting_end_time\030\003 \001(\0132\032.google.prot" +
       "obuf.TimestampB\"\310\336\037\000\362\336\037\026yaml:\"voting_end" +
-      "_time\"\220\337\037\001R\rvotingEndTimeB\335\001\n\033com.panace" +
-      "a.oracle.v2alpha2B\014GenesisProtoP\001Z2githu" +
-      "b.com/medibloc/panacea-core/v2/x/oracle/" +
-      "types\242\002\003POX\252\002\027Panacea.Oracle.V2alpha2\312\002\027" +
-      "Panacea\\Oracle\\V2alpha2\342\002#Panacea\\Oracle" +
-      "\\V2alpha2\\GPBMetadata\352\002\031Panacea::Oracle:" +
-      ":V2alpha2b\006proto3"
+      "_time\"\220\337\037\001R\rvotingEndTimeB\333\001\n\033com.panace" +
+      "a.oracle.v2alpha2B\014GenesisProtoZ2github." +
+      "com/medibloc/panacea-core/v2/x/oracle/ty" +
+      "pes\242\002\003POX\252\002\027Panacea.Oracle.V2alpha2\312\002\027Pa" +
+      "nacea\\Oracle\\V2alpha2\342\002#Panacea\\Oracle\\V" +
+      "2alpha2\\GPBMetadata\352\002\031Panacea::Oracle::V" +
+      "2alpha2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

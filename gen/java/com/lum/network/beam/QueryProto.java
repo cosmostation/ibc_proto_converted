@@ -14,34 +14,4283 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryGetBeamRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.beam.QueryGetBeamRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code lum.network.beam.QueryGetBeamRequest}
+   */
+  public static final class QueryGetBeamRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.beam.QueryGetBeamRequest)
+      QueryGetBeamRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetBeamRequest.newBuilder() to construct.
+    private QueryGetBeamRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetBeamRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetBeamRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.beam.QueryProto.QueryGetBeamRequest.class, com.lum.network.beam.QueryProto.QueryGetBeamRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.beam.QueryProto.QueryGetBeamRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.beam.QueryProto.QueryGetBeamRequest other = (com.lum.network.beam.QueryProto.QueryGetBeamRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.beam.QueryProto.QueryGetBeamRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.beam.QueryGetBeamRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.beam.QueryGetBeamRequest)
+        com.lum.network.beam.QueryProto.QueryGetBeamRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.beam.QueryProto.QueryGetBeamRequest.class, com.lum.network.beam.QueryProto.QueryGetBeamRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.beam.QueryProto.QueryGetBeamRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryGetBeamRequest getDefaultInstanceForType() {
+        return com.lum.network.beam.QueryProto.QueryGetBeamRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryGetBeamRequest build() {
+        com.lum.network.beam.QueryProto.QueryGetBeamRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryGetBeamRequest buildPartial() {
+        com.lum.network.beam.QueryProto.QueryGetBeamRequest result = new com.lum.network.beam.QueryProto.QueryGetBeamRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.beam.QueryProto.QueryGetBeamRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.beam.QueryProto.QueryGetBeamRequest) {
+          return mergeFrom((com.lum.network.beam.QueryProto.QueryGetBeamRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.beam.QueryProto.QueryGetBeamRequest other) {
+        if (other == com.lum.network.beam.QueryProto.QueryGetBeamRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.beam.QueryGetBeamRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.beam.QueryGetBeamRequest)
+    private static final com.lum.network.beam.QueryProto.QueryGetBeamRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.beam.QueryProto.QueryGetBeamRequest();
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetBeamRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetBeamRequest>() {
+      @java.lang.Override
+      public QueryGetBeamRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetBeamRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetBeamRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.beam.QueryProto.QueryGetBeamRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetBeamResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.beam.QueryGetBeamResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+     * @return Whether the beam field is set.
+     */
+    boolean hasBeam();
+    /**
+     * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+     * @return The beam.
+     */
+    com.lum.network.beam.BeamProto.Beam getBeam();
+    /**
+     * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+     */
+    com.lum.network.beam.BeamProto.BeamOrBuilder getBeamOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.beam.QueryGetBeamResponse}
+   */
+  public static final class QueryGetBeamResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.beam.QueryGetBeamResponse)
+      QueryGetBeamResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetBeamResponse.newBuilder() to construct.
+    private QueryGetBeamResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetBeamResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetBeamResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.beam.QueryProto.QueryGetBeamResponse.class, com.lum.network.beam.QueryProto.QueryGetBeamResponse.Builder.class);
+    }
+
+    public static final int BEAM_FIELD_NUMBER = 1;
+    private com.lum.network.beam.BeamProto.Beam beam_;
+    /**
+     * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+     * @return Whether the beam field is set.
+     */
+    @java.lang.Override
+    public boolean hasBeam() {
+      return beam_ != null;
+    }
+    /**
+     * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+     * @return The beam.
+     */
+    @java.lang.Override
+    public com.lum.network.beam.BeamProto.Beam getBeam() {
+      return beam_ == null ? com.lum.network.beam.BeamProto.Beam.getDefaultInstance() : beam_;
+    }
+    /**
+     * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.beam.BeamProto.BeamOrBuilder getBeamOrBuilder() {
+      return beam_ == null ? com.lum.network.beam.BeamProto.Beam.getDefaultInstance() : beam_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (beam_ != null) {
+        output.writeMessage(1, getBeam());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (beam_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBeam());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.beam.QueryProto.QueryGetBeamResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.beam.QueryProto.QueryGetBeamResponse other = (com.lum.network.beam.QueryProto.QueryGetBeamResponse) obj;
+
+      if (hasBeam() != other.hasBeam()) return false;
+      if (hasBeam()) {
+        if (!getBeam()
+            .equals(other.getBeam())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBeam()) {
+        hash = (37 * hash) + BEAM_FIELD_NUMBER;
+        hash = (53 * hash) + getBeam().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.beam.QueryProto.QueryGetBeamResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.beam.QueryGetBeamResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.beam.QueryGetBeamResponse)
+        com.lum.network.beam.QueryProto.QueryGetBeamResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.beam.QueryProto.QueryGetBeamResponse.class, com.lum.network.beam.QueryProto.QueryGetBeamResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.beam.QueryProto.QueryGetBeamResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        beam_ = null;
+        if (beamBuilder_ != null) {
+          beamBuilder_.dispose();
+          beamBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryGetBeamResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryGetBeamResponse getDefaultInstanceForType() {
+        return com.lum.network.beam.QueryProto.QueryGetBeamResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryGetBeamResponse build() {
+        com.lum.network.beam.QueryProto.QueryGetBeamResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryGetBeamResponse buildPartial() {
+        com.lum.network.beam.QueryProto.QueryGetBeamResponse result = new com.lum.network.beam.QueryProto.QueryGetBeamResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.beam.QueryProto.QueryGetBeamResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.beam_ = beamBuilder_ == null
+              ? beam_
+              : beamBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.beam.QueryProto.QueryGetBeamResponse) {
+          return mergeFrom((com.lum.network.beam.QueryProto.QueryGetBeamResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.beam.QueryProto.QueryGetBeamResponse other) {
+        if (other == com.lum.network.beam.QueryProto.QueryGetBeamResponse.getDefaultInstance()) return this;
+        if (other.hasBeam()) {
+          mergeBeam(other.getBeam());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBeamFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.lum.network.beam.BeamProto.Beam beam_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.beam.BeamProto.Beam, com.lum.network.beam.BeamProto.Beam.Builder, com.lum.network.beam.BeamProto.BeamOrBuilder> beamBuilder_;
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       * @return Whether the beam field is set.
+       */
+      public boolean hasBeam() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       * @return The beam.
+       */
+      public com.lum.network.beam.BeamProto.Beam getBeam() {
+        if (beamBuilder_ == null) {
+          return beam_ == null ? com.lum.network.beam.BeamProto.Beam.getDefaultInstance() : beam_;
+        } else {
+          return beamBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      public Builder setBeam(com.lum.network.beam.BeamProto.Beam value) {
+        if (beamBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          beam_ = value;
+        } else {
+          beamBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      public Builder setBeam(
+          com.lum.network.beam.BeamProto.Beam.Builder builderForValue) {
+        if (beamBuilder_ == null) {
+          beam_ = builderForValue.build();
+        } else {
+          beamBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      public Builder mergeBeam(com.lum.network.beam.BeamProto.Beam value) {
+        if (beamBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            beam_ != null &&
+            beam_ != com.lum.network.beam.BeamProto.Beam.getDefaultInstance()) {
+            getBeamBuilder().mergeFrom(value);
+          } else {
+            beam_ = value;
+          }
+        } else {
+          beamBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      public Builder clearBeam() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        beam_ = null;
+        if (beamBuilder_ != null) {
+          beamBuilder_.dispose();
+          beamBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      public com.lum.network.beam.BeamProto.Beam.Builder getBeamBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBeamFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      public com.lum.network.beam.BeamProto.BeamOrBuilder getBeamOrBuilder() {
+        if (beamBuilder_ != null) {
+          return beamBuilder_.getMessageOrBuilder();
+        } else {
+          return beam_ == null ?
+              com.lum.network.beam.BeamProto.Beam.getDefaultInstance() : beam_;
+        }
+      }
+      /**
+       * <code>.lum.network.beam.Beam beam = 1 [json_name = "beam"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.beam.BeamProto.Beam, com.lum.network.beam.BeamProto.Beam.Builder, com.lum.network.beam.BeamProto.BeamOrBuilder> 
+          getBeamFieldBuilder() {
+        if (beamBuilder_ == null) {
+          beamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.beam.BeamProto.Beam, com.lum.network.beam.BeamProto.Beam.Builder, com.lum.network.beam.BeamProto.BeamOrBuilder>(
+                  getBeam(),
+                  getParentForChildren(),
+                  isClean());
+          beam_ = null;
+        }
+        return beamBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.beam.QueryGetBeamResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.beam.QueryGetBeamResponse)
+    private static final com.lum.network.beam.QueryProto.QueryGetBeamResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.beam.QueryProto.QueryGetBeamResponse();
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryGetBeamResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetBeamResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetBeamResponse>() {
+      @java.lang.Override
+      public QueryGetBeamResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetBeamResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetBeamResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.beam.QueryProto.QueryGetBeamResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFetchBeamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.beam.QueryFetchBeamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+
+    /**
+     * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.lum.network.beam.BeamProto.BeamState getState();
+  }
+  /**
+   * Protobuf type {@code lum.network.beam.QueryFetchBeamsRequest}
+   */
+  public static final class QueryFetchBeamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.beam.QueryFetchBeamsRequest)
+      QueryFetchBeamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFetchBeamsRequest.newBuilder() to construct.
+    private QueryFetchBeamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFetchBeamsRequest() {
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFetchBeamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.class, com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_ = 0;
+    /**
+     * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.lum.network.beam.BeamProto.BeamState getState() {
+      com.lum.network.beam.BeamProto.BeamState result = com.lum.network.beam.BeamProto.BeamState.forNumber(state_);
+      return result == null ? com.lum.network.beam.BeamProto.BeamState.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      if (state_ != com.lum.network.beam.BeamProto.BeamState.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, state_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      if (state_ != com.lum.network.beam.BeamProto.BeamState.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, state_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.beam.QueryProto.QueryFetchBeamsRequest other = (com.lum.network.beam.QueryProto.QueryFetchBeamsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (state_ != other.state_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.beam.QueryProto.QueryFetchBeamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.beam.QueryFetchBeamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.beam.QueryFetchBeamsRequest)
+        com.lum.network.beam.QueryProto.QueryFetchBeamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.class, com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        state_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsRequest getDefaultInstanceForType() {
+        return com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsRequest build() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsRequest buildPartial() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsRequest result = new com.lum.network.beam.QueryProto.QueryFetchBeamsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.state_ = state_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsRequest) {
+          return mergeFrom((com.lum.network.beam.QueryProto.QueryFetchBeamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.beam.QueryProto.QueryFetchBeamsRequest other) {
+        if (other == com.lum.network.beam.QueryProto.QueryFetchBeamsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.lum.network.beam.BeamProto.BeamState getState() {
+        com.lum.network.beam.BeamProto.BeamState result = com.lum.network.beam.BeamProto.BeamState.forNumber(state_);
+        return result == null ? com.lum.network.beam.BeamProto.BeamState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.lum.network.beam.BeamProto.BeamState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.beam.BeamState state = 2 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.beam.QueryFetchBeamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.beam.QueryFetchBeamsRequest)
+    private static final com.lum.network.beam.QueryProto.QueryFetchBeamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.beam.QueryProto.QueryFetchBeamsRequest();
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFetchBeamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFetchBeamsRequest>() {
+      @java.lang.Override
+      public QueryFetchBeamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFetchBeamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFetchBeamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.beam.QueryProto.QueryFetchBeamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFetchBeamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.beam.QueryFetchBeamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    java.util.List<com.lum.network.beam.BeamProto.Beam> 
+        getBeamsList();
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    com.lum.network.beam.BeamProto.Beam getBeams(int index);
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    int getBeamsCount();
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    java.util.List<? extends com.lum.network.beam.BeamProto.BeamOrBuilder> 
+        getBeamsOrBuilderList();
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    com.lum.network.beam.BeamProto.BeamOrBuilder getBeamsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.beam.QueryFetchBeamsResponse}
+   */
+  public static final class QueryFetchBeamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.beam.QueryFetchBeamsResponse)
+      QueryFetchBeamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFetchBeamsResponse.newBuilder() to construct.
+    private QueryFetchBeamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFetchBeamsResponse() {
+      beams_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFetchBeamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.class, com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.Builder.class);
+    }
+
+    public static final int BEAMS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.beam.BeamProto.Beam> beams_;
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.beam.BeamProto.Beam> getBeamsList() {
+      return beams_;
+    }
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.beam.BeamProto.BeamOrBuilder> 
+        getBeamsOrBuilderList() {
+      return beams_;
+    }
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    @java.lang.Override
+    public int getBeamsCount() {
+      return beams_.size();
+    }
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.beam.BeamProto.Beam getBeams(int index) {
+      return beams_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.beam.BeamProto.BeamOrBuilder getBeamsOrBuilder(
+        int index) {
+      return beams_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < beams_.size(); i++) {
+        output.writeMessage(1, beams_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < beams_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, beams_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.beam.QueryProto.QueryFetchBeamsResponse other = (com.lum.network.beam.QueryProto.QueryFetchBeamsResponse) obj;
+
+      if (!getBeamsList()
+          .equals(other.getBeamsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBeamsCount() > 0) {
+        hash = (37 * hash) + BEAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getBeamsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.beam.QueryProto.QueryFetchBeamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.beam.QueryFetchBeamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.beam.QueryFetchBeamsResponse)
+        com.lum.network.beam.QueryProto.QueryFetchBeamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.class, com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (beamsBuilder_ == null) {
+          beams_ = java.util.Collections.emptyList();
+        } else {
+          beams_ = null;
+          beamsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsResponse getDefaultInstanceForType() {
+        return com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsResponse build() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsResponse buildPartial() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsResponse result = new com.lum.network.beam.QueryProto.QueryFetchBeamsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.beam.QueryProto.QueryFetchBeamsResponse result) {
+        if (beamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            beams_ = java.util.Collections.unmodifiableList(beams_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.beams_ = beams_;
+        } else {
+          result.beams_ = beamsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsResponse) {
+          return mergeFrom((com.lum.network.beam.QueryProto.QueryFetchBeamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.beam.QueryProto.QueryFetchBeamsResponse other) {
+        if (other == com.lum.network.beam.QueryProto.QueryFetchBeamsResponse.getDefaultInstance()) return this;
+        if (beamsBuilder_ == null) {
+          if (!other.beams_.isEmpty()) {
+            if (beams_.isEmpty()) {
+              beams_ = other.beams_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBeamsIsMutable();
+              beams_.addAll(other.beams_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.beams_.isEmpty()) {
+            if (beamsBuilder_.isEmpty()) {
+              beamsBuilder_.dispose();
+              beamsBuilder_ = null;
+              beams_ = other.beams_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              beamsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBeamsFieldBuilder() : null;
+            } else {
+              beamsBuilder_.addAllMessages(other.beams_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.beam.BeamProto.Beam m =
+                    input.readMessage(
+                        com.lum.network.beam.BeamProto.Beam.parser(),
+                        extensionRegistry);
+                if (beamsBuilder_ == null) {
+                  ensureBeamsIsMutable();
+                  beams_.add(m);
+                } else {
+                  beamsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.beam.BeamProto.Beam> beams_ =
+        java.util.Collections.emptyList();
+      private void ensureBeamsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          beams_ = new java.util.ArrayList<com.lum.network.beam.BeamProto.Beam>(beams_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.beam.BeamProto.Beam, com.lum.network.beam.BeamProto.Beam.Builder, com.lum.network.beam.BeamProto.BeamOrBuilder> beamsBuilder_;
+
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public java.util.List<com.lum.network.beam.BeamProto.Beam> getBeamsList() {
+        if (beamsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(beams_);
+        } else {
+          return beamsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public int getBeamsCount() {
+        if (beamsBuilder_ == null) {
+          return beams_.size();
+        } else {
+          return beamsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public com.lum.network.beam.BeamProto.Beam getBeams(int index) {
+        if (beamsBuilder_ == null) {
+          return beams_.get(index);
+        } else {
+          return beamsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder setBeams(
+          int index, com.lum.network.beam.BeamProto.Beam value) {
+        if (beamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBeamsIsMutable();
+          beams_.set(index, value);
+          onChanged();
+        } else {
+          beamsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder setBeams(
+          int index, com.lum.network.beam.BeamProto.Beam.Builder builderForValue) {
+        if (beamsBuilder_ == null) {
+          ensureBeamsIsMutable();
+          beams_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          beamsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder addBeams(com.lum.network.beam.BeamProto.Beam value) {
+        if (beamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBeamsIsMutable();
+          beams_.add(value);
+          onChanged();
+        } else {
+          beamsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder addBeams(
+          int index, com.lum.network.beam.BeamProto.Beam value) {
+        if (beamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBeamsIsMutable();
+          beams_.add(index, value);
+          onChanged();
+        } else {
+          beamsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder addBeams(
+          com.lum.network.beam.BeamProto.Beam.Builder builderForValue) {
+        if (beamsBuilder_ == null) {
+          ensureBeamsIsMutable();
+          beams_.add(builderForValue.build());
+          onChanged();
+        } else {
+          beamsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder addBeams(
+          int index, com.lum.network.beam.BeamProto.Beam.Builder builderForValue) {
+        if (beamsBuilder_ == null) {
+          ensureBeamsIsMutable();
+          beams_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          beamsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder addAllBeams(
+          java.lang.Iterable<? extends com.lum.network.beam.BeamProto.Beam> values) {
+        if (beamsBuilder_ == null) {
+          ensureBeamsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, beams_);
+          onChanged();
+        } else {
+          beamsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder clearBeams() {
+        if (beamsBuilder_ == null) {
+          beams_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          beamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public Builder removeBeams(int index) {
+        if (beamsBuilder_ == null) {
+          ensureBeamsIsMutable();
+          beams_.remove(index);
+          onChanged();
+        } else {
+          beamsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public com.lum.network.beam.BeamProto.Beam.Builder getBeamsBuilder(
+          int index) {
+        return getBeamsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public com.lum.network.beam.BeamProto.BeamOrBuilder getBeamsOrBuilder(
+          int index) {
+        if (beamsBuilder_ == null) {
+          return beams_.get(index);  } else {
+          return beamsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public java.util.List<? extends com.lum.network.beam.BeamProto.BeamOrBuilder> 
+           getBeamsOrBuilderList() {
+        if (beamsBuilder_ != null) {
+          return beamsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(beams_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public com.lum.network.beam.BeamProto.Beam.Builder addBeamsBuilder() {
+        return getBeamsFieldBuilder().addBuilder(
+            com.lum.network.beam.BeamProto.Beam.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public com.lum.network.beam.BeamProto.Beam.Builder addBeamsBuilder(
+          int index) {
+        return getBeamsFieldBuilder().addBuilder(
+            index, com.lum.network.beam.BeamProto.Beam.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.beam.Beam beams = 1 [json_name = "beams"];</code>
+       */
+      public java.util.List<com.lum.network.beam.BeamProto.Beam.Builder> 
+           getBeamsBuilderList() {
+        return getBeamsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.beam.BeamProto.Beam, com.lum.network.beam.BeamProto.Beam.Builder, com.lum.network.beam.BeamProto.BeamOrBuilder> 
+          getBeamsFieldBuilder() {
+        if (beamsBuilder_ == null) {
+          beamsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.beam.BeamProto.Beam, com.lum.network.beam.BeamProto.Beam.Builder, com.lum.network.beam.BeamProto.BeamOrBuilder>(
+                  beams_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          beams_ = null;
+        }
+        return beamsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.beam.QueryFetchBeamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.beam.QueryFetchBeamsResponse)
+    private static final com.lum.network.beam.QueryProto.QueryFetchBeamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.beam.QueryProto.QueryFetchBeamsResponse();
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFetchBeamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFetchBeamsResponse>() {
+      @java.lang.Override
+      public QueryFetchBeamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFetchBeamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFetchBeamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.beam.QueryProto.QueryFetchBeamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFetchBeamsOpenQueueRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.beam.QueryFetchBeamsOpenQueueRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.beam.QueryFetchBeamsOpenQueueRequest}
+   */
+  public static final class QueryFetchBeamsOpenQueueRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.beam.QueryFetchBeamsOpenQueueRequest)
+      QueryFetchBeamsOpenQueueRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFetchBeamsOpenQueueRequest.newBuilder() to construct.
+    private QueryFetchBeamsOpenQueueRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFetchBeamsOpenQueueRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFetchBeamsOpenQueueRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.class, com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest other = (com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.beam.QueryFetchBeamsOpenQueueRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.beam.QueryFetchBeamsOpenQueueRequest)
+        com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.class, com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest getDefaultInstanceForType() {
+        return com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest build() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest buildPartial() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest result = new com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest) {
+          return mergeFrom((com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest other) {
+        if (other == com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.beam.QueryFetchBeamsOpenQueueRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.beam.QueryFetchBeamsOpenQueueRequest)
+    private static final com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest();
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFetchBeamsOpenQueueRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFetchBeamsOpenQueueRequest>() {
+      @java.lang.Override
+      public QueryFetchBeamsOpenQueueRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFetchBeamsOpenQueueRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFetchBeamsOpenQueueRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFetchBeamsOpenQueueResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.beam.QueryFetchBeamsOpenQueueResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @return A list containing the beamIds.
+     */
+    java.util.List<java.lang.String>
+        getBeamIdsList();
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @return The count of beamIds.
+     */
+    int getBeamIdsCount();
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @param index The index of the element to return.
+     * @return The beamIds at the given index.
+     */
+    java.lang.String getBeamIds(int index);
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the beamIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBeamIdsBytes(int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.beam.QueryFetchBeamsOpenQueueResponse}
+   */
+  public static final class QueryFetchBeamsOpenQueueResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.beam.QueryFetchBeamsOpenQueueResponse)
+      QueryFetchBeamsOpenQueueResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFetchBeamsOpenQueueResponse.newBuilder() to construct.
+    private QueryFetchBeamsOpenQueueResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFetchBeamsOpenQueueResponse() {
+      beamIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFetchBeamsOpenQueueResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.class, com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.Builder.class);
+    }
+
+    public static final int BEAM_IDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList beamIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @return A list containing the beamIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getBeamIdsList() {
+      return beamIds_;
+    }
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @return The count of beamIds.
+     */
+    public int getBeamIdsCount() {
+      return beamIds_.size();
+    }
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @param index The index of the element to return.
+     * @return The beamIds at the given index.
+     */
+    public java.lang.String getBeamIds(int index) {
+      return beamIds_.get(index);
+    }
+    /**
+     * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the beamIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getBeamIdsBytes(int index) {
+      return beamIds_.getByteString(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < beamIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, beamIds_.getRaw(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < beamIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(beamIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getBeamIdsList().size();
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse other = (com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse) obj;
+
+      if (!getBeamIdsList()
+          .equals(other.getBeamIdsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBeamIdsCount() > 0) {
+        hash = (37 * hash) + BEAM_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBeamIdsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.beam.QueryFetchBeamsOpenQueueResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.beam.QueryFetchBeamsOpenQueueResponse)
+        com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.class, com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        beamIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.beam.QueryProto.internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse getDefaultInstanceForType() {
+        return com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse build() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse buildPartial() {
+        com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse result = new com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          beamIds_.makeImmutable();
+          result.beamIds_ = beamIds_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse) {
+          return mergeFrom((com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse other) {
+        if (other == com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse.getDefaultInstance()) return this;
+        if (!other.beamIds_.isEmpty()) {
+          if (beamIds_.isEmpty()) {
+            beamIds_ = other.beamIds_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureBeamIdsIsMutable();
+            beamIds_.addAll(other.beamIds_);
+          }
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureBeamIdsIsMutable();
+                beamIds_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList beamIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureBeamIdsIsMutable() {
+        if (!beamIds_.isModifiable()) {
+          beamIds_ = new com.google.protobuf.LazyStringArrayList(beamIds_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @return A list containing the beamIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getBeamIdsList() {
+        beamIds_.makeImmutable();
+        return beamIds_;
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @return The count of beamIds.
+       */
+      public int getBeamIdsCount() {
+        return beamIds_.size();
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @param index The index of the element to return.
+       * @return The beamIds at the given index.
+       */
+      public java.lang.String getBeamIds(int index) {
+        return beamIds_.get(index);
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the beamIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getBeamIdsBytes(int index) {
+        return beamIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The beamIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBeamIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureBeamIdsIsMutable();
+        beamIds_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @param value The beamIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBeamIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureBeamIdsIsMutable();
+        beamIds_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @param values The beamIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBeamIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureBeamIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, beamIds_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBeamIds() {
+        beamIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string beam_ids = 1 [json_name = "beamIds"];</code>
+       * @param value The bytes of the beamIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBeamIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureBeamIdsIsMutable();
+        beamIds_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.beam.QueryFetchBeamsOpenQueueResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.beam.QueryFetchBeamsOpenQueueResponse)
+    private static final com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse();
+    }
+
+    public static com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFetchBeamsOpenQueueResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFetchBeamsOpenQueueResponse>() {
+      @java.lang.Override
+      public QueryFetchBeamsOpenQueueResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFetchBeamsOpenQueueResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFetchBeamsOpenQueueResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.beam.QueryProto.QueryFetchBeamsOpenQueueResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_beam_QueryGetBeamRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_beam_QueryGetBeamRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_beam_QueryGetBeamResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_beam_QueryGetBeamResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_beam_QueryFetchBeamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_beam_QueryFetchBeamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_beam_QueryFetchBeamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_beam_QueryFetchBeamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_beam_QueryFetchBeamsOpenQueueRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_beam_QueryFetchBeamsOpenQueueResponse_fieldAccessorTable;
 
@@ -83,11 +4332,11 @@ public final class QueryProto {
       "work.beam.QueryFetchBeamsOpenQueueReques" +
       "t\0322.lum.network.beam.QueryFetchBeamsOpen" +
       "QueueResponse\"%\202\323\344\223\002\037\022\035/lum-network/beam" +
-      "s-open-queueB\257\001\n\024com.lum.network.beamB\nQ" +
-      "ueryProtoP\001Z)github.com/lum-network/chai" +
-      "n/x/beam/types\242\002\003LNB\252\002\020Lum.Network.Beam\312" +
-      "\002\020Lum\\Network\\Beam\342\002\034Lum\\Network\\Beam\\GP" +
-      "BMetadata\352\002\022Lum::Network::Beamb\006proto3"
+      "s-open-queueB\255\001\n\024com.lum.network.beamB\nQ" +
+      "ueryProtoZ)github.com/lum-network/chain/" +
+      "x/beam/types\242\002\003LNB\252\002\020Lum.Network.Beam\312\002\020" +
+      "Lum\\Network\\Beam\342\002\034Lum\\Network\\Beam\\GPBM" +
+      "etadata\352\002\022Lum::Network::Beamb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

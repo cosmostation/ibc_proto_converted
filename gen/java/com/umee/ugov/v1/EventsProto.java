@@ -14,9 +14,799 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface EventMinTxFeesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.ugov.v1.EventMinTxFees)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getMinTxFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getMinTxFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    int getMinTxFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinTxFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinTxFeesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * EventMinTxFees is emitted when MsgGovUpdateMinFees is correctly executed.
+   * </pre>
+   *
+   * Protobuf type {@code umee.ugov.v1.EventMinTxFees}
+   */
+  public static final class EventMinTxFees extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.ugov.v1.EventMinTxFees)
+      EventMinTxFeesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EventMinTxFees.newBuilder() to construct.
+    private EventMinTxFees(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EventMinTxFees() {
+      minTxFees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EventMinTxFees();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.ugov.v1.EventsProto.internal_static_umee_ugov_v1_EventMinTxFees_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.ugov.v1.EventsProto.internal_static_umee_ugov_v1_EventMinTxFees_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.ugov.v1.EventsProto.EventMinTxFees.class, com.umee.ugov.v1.EventsProto.EventMinTxFees.Builder.class);
+    }
+
+    public static final int MIN_TX_FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minTxFees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinTxFeesList() {
+      return minTxFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getMinTxFeesOrBuilderList() {
+      return minTxFees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMinTxFeesCount() {
+      return minTxFees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinTxFees(int index) {
+      return minTxFees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinTxFeesOrBuilder(
+        int index) {
+      return minTxFees_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < minTxFees_.size(); i++) {
+        output.writeMessage(1, minTxFees_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < minTxFees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, minTxFees_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.ugov.v1.EventsProto.EventMinTxFees)) {
+        return super.equals(obj);
+      }
+      com.umee.ugov.v1.EventsProto.EventMinTxFees other = (com.umee.ugov.v1.EventsProto.EventMinTxFees) obj;
+
+      if (!getMinTxFeesList()
+          .equals(other.getMinTxFeesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMinTxFeesCount() > 0) {
+        hash = (37 * hash) + MIN_TX_FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getMinTxFeesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.ugov.v1.EventsProto.EventMinTxFees prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EventMinTxFees is emitted when MsgGovUpdateMinFees is correctly executed.
+     * </pre>
+     *
+     * Protobuf type {@code umee.ugov.v1.EventMinTxFees}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.ugov.v1.EventMinTxFees)
+        com.umee.ugov.v1.EventsProto.EventMinTxFeesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.ugov.v1.EventsProto.internal_static_umee_ugov_v1_EventMinTxFees_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.ugov.v1.EventsProto.internal_static_umee_ugov_v1_EventMinTxFees_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.ugov.v1.EventsProto.EventMinTxFees.class, com.umee.ugov.v1.EventsProto.EventMinTxFees.Builder.class);
+      }
+
+      // Construct using com.umee.ugov.v1.EventsProto.EventMinTxFees.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (minTxFeesBuilder_ == null) {
+          minTxFees_ = java.util.Collections.emptyList();
+        } else {
+          minTxFees_ = null;
+          minTxFeesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.ugov.v1.EventsProto.internal_static_umee_ugov_v1_EventMinTxFees_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.EventsProto.EventMinTxFees getDefaultInstanceForType() {
+        return com.umee.ugov.v1.EventsProto.EventMinTxFees.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.EventsProto.EventMinTxFees build() {
+        com.umee.ugov.v1.EventsProto.EventMinTxFees result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.ugov.v1.EventsProto.EventMinTxFees buildPartial() {
+        com.umee.ugov.v1.EventsProto.EventMinTxFees result = new com.umee.ugov.v1.EventsProto.EventMinTxFees(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.ugov.v1.EventsProto.EventMinTxFees result) {
+        if (minTxFeesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            minTxFees_ = java.util.Collections.unmodifiableList(minTxFees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.minTxFees_ = minTxFees_;
+        } else {
+          result.minTxFees_ = minTxFeesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.ugov.v1.EventsProto.EventMinTxFees result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.ugov.v1.EventsProto.EventMinTxFees) {
+          return mergeFrom((com.umee.ugov.v1.EventsProto.EventMinTxFees)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.ugov.v1.EventsProto.EventMinTxFees other) {
+        if (other == com.umee.ugov.v1.EventsProto.EventMinTxFees.getDefaultInstance()) return this;
+        if (minTxFeesBuilder_ == null) {
+          if (!other.minTxFees_.isEmpty()) {
+            if (minTxFees_.isEmpty()) {
+              minTxFees_ = other.minTxFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMinTxFeesIsMutable();
+              minTxFees_.addAll(other.minTxFees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.minTxFees_.isEmpty()) {
+            if (minTxFeesBuilder_.isEmpty()) {
+              minTxFeesBuilder_.dispose();
+              minTxFeesBuilder_ = null;
+              minTxFees_ = other.minTxFees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              minTxFeesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMinTxFeesFieldBuilder() : null;
+            } else {
+              minTxFeesBuilder_.addAllMessages(other.minTxFees_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (minTxFeesBuilder_ == null) {
+                  ensureMinTxFeesIsMutable();
+                  minTxFees_.add(m);
+                } else {
+                  minTxFeesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> minTxFees_ =
+        java.util.Collections.emptyList();
+      private void ensureMinTxFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          minTxFees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(minTxFees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> minTxFeesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getMinTxFeesList() {
+        if (minTxFeesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(minTxFees_);
+        } else {
+          return minTxFeesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMinTxFeesCount() {
+        if (minTxFeesBuilder_ == null) {
+          return minTxFees_.size();
+        } else {
+          return minTxFeesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getMinTxFees(int index) {
+        if (minTxFeesBuilder_ == null) {
+          return minTxFees_.get(index);
+        } else {
+          return minTxFeesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minTxFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinTxFeesIsMutable();
+          minTxFees_.set(index, value);
+          onChanged();
+        } else {
+          minTxFeesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minTxFeesBuilder_ == null) {
+          ensureMinTxFeesIsMutable();
+          minTxFees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          minTxFeesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinTxFees(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minTxFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinTxFeesIsMutable();
+          minTxFees_.add(value);
+          onChanged();
+        } else {
+          minTxFeesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (minTxFeesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMinTxFeesIsMutable();
+          minTxFees_.add(index, value);
+          onChanged();
+        } else {
+          minTxFeesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinTxFees(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minTxFeesBuilder_ == null) {
+          ensureMinTxFeesIsMutable();
+          minTxFees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          minTxFeesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMinTxFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (minTxFeesBuilder_ == null) {
+          ensureMinTxFeesIsMutable();
+          minTxFees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          minTxFeesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMinTxFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (minTxFeesBuilder_ == null) {
+          ensureMinTxFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, minTxFees_);
+          onChanged();
+        } else {
+          minTxFeesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinTxFees() {
+        if (minTxFeesBuilder_ == null) {
+          minTxFees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          minTxFeesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMinTxFees(int index) {
+        if (minTxFeesBuilder_ == null) {
+          ensureMinTxFeesIsMutable();
+          minTxFees_.remove(index);
+          onChanged();
+        } else {
+          minTxFeesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getMinTxFeesBuilder(
+          int index) {
+        return getMinTxFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getMinTxFeesOrBuilder(
+          int index) {
+        if (minTxFeesBuilder_ == null) {
+          return minTxFees_.get(index);  } else {
+          return minTxFeesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getMinTxFeesOrBuilderList() {
+        if (minTxFeesBuilder_ != null) {
+          return minTxFeesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(minTxFees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinTxFeesBuilder() {
+        return getMinTxFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addMinTxFeesBuilder(
+          int index) {
+        return getMinTxFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin min_tx_fees = 1 [json_name = "minTxFees", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getMinTxFeesBuilderList() {
+        return getMinTxFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getMinTxFeesFieldBuilder() {
+        if (minTxFeesBuilder_ == null) {
+          minTxFeesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  minTxFees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          minTxFees_ = null;
+        }
+        return minTxFeesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.ugov.v1.EventMinTxFees)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.ugov.v1.EventMinTxFees)
+    private static final com.umee.ugov.v1.EventsProto.EventMinTxFees DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.ugov.v1.EventsProto.EventMinTxFees();
+    }
+
+    public static com.umee.ugov.v1.EventsProto.EventMinTxFees getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EventMinTxFees>
+        PARSER = new com.google.protobuf.AbstractParser<EventMinTxFees>() {
+      @java.lang.Override
+      public EventMinTxFees parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EventMinTxFees> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EventMinTxFees> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.ugov.v1.EventsProto.EventMinTxFees getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_ugov_v1_EventMinTxFees_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_ugov_v1_EventMinTxFees_fieldAccessorTable;
 
@@ -32,11 +822,11 @@ public final class EventsProto {
       "1\032\024gogoproto/gogo.proto\032\036cosmos/base/v1b" +
       "eta1/coin.proto\"T\n\016EventMinTxFees\022B\n\013min" +
       "_tx_fees\030\001 \003(\0132\034.cosmos.base.v1beta1.Dec" +
-      "CoinB\004\310\336\037\000R\tminTxFeesB\235\001\n\020com.umee.ugov." +
-      "v1B\013EventsProtoP\001Z&github.com/umee-netwo" +
-      "rk/umee/v5/x/ugov\242\002\003UUX\252\002\014Umee.Ugov.V1\312\002" +
-      "\014Umee\\Ugov\\V1\342\002\030Umee\\Ugov\\V1\\GPBMetadata" +
-      "\352\002\016Umee::Ugov::V1\310\341\036\000b\006proto3"
+      "CoinB\004\310\336\037\000R\tminTxFeesB\233\001\n\020com.umee.ugov." +
+      "v1B\013EventsProtoZ&github.com/umee-network" +
+      "/umee/v5/x/ugov\242\002\003UUX\252\002\014Umee.Ugov.V1\312\002\014U" +
+      "mee\\Ugov\\V1\342\002\030Umee\\Ugov\\V1\\GPBMetadata\352\002" +
+      "\016Umee::Ugov::V1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

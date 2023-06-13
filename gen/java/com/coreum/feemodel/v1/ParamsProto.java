@@ -14,14 +14,2133 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ModelParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.feemodel.v1.ModelParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+     * </pre>
+     *
+     * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+     * @return The initialGasPrice.
+     */
+    java.lang.String getInitialGasPrice();
+    /**
+     * <pre>
+     * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+     * </pre>
+     *
+     * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+     * @return The bytes for initialGasPrice.
+     */
+    com.google.protobuf.ByteString
+        getInitialGasPriceBytes();
+
+    /**
+     * <pre>
+     * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+     * </pre>
+     *
+     * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+     * @return The maxGasPriceMultiplier.
+     */
+    java.lang.String getMaxGasPriceMultiplier();
+    /**
+     * <pre>
+     * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+     * </pre>
+     *
+     * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+     * @return The bytes for maxGasPriceMultiplier.
+     */
+    com.google.protobuf.ByteString
+        getMaxGasPriceMultiplierBytes();
+
+    /**
+     * <pre>
+     * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+     * </pre>
+     *
+     * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+     * @return The maxDiscount.
+     */
+    java.lang.String getMaxDiscount();
+    /**
+     * <pre>
+     * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+     * </pre>
+     *
+     * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+     * @return The bytes for maxDiscount.
+     */
+    com.google.protobuf.ByteString
+        getMaxDiscountBytes();
+
+    /**
+     * <pre>
+     * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+     * </pre>
+     *
+     * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+     * @return The escalationStartFraction.
+     */
+    java.lang.String getEscalationStartFraction();
+    /**
+     * <pre>
+     * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+     * </pre>
+     *
+     * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+     * @return The bytes for escalationStartFraction.
+     */
+    com.google.protobuf.ByteString
+        getEscalationStartFractionBytes();
+
+    /**
+     * <pre>
+     * max_block_gas sets the maximum capacity of block. This is enforced on tendermint level in genesis configuration. Once short average block gas goes above this value, gas price is a flat line equal to MaxGasPrice.
+     * </pre>
+     *
+     * <code>int64 max_block_gas = 5 [json_name = "maxBlockGas", (.gogoproto.moretags) = "yaml:&#92;"max_block_gas&#92;""];</code>
+     * @return The maxBlockGas.
+     */
+    long getMaxBlockGas();
+
+    /**
+     * <pre>
+     * short_ema_block_length defines inertia for short average long gas in EMA model. The equation is: NewAverage = ((ShortAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / ShortAverageBlockLength
+     * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+     * </pre>
+     *
+     * <code>uint32 short_ema_block_length = 6 [json_name = "shortEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"short_ema_block_length&#92;""];</code>
+     * @return The shortEmaBlockLength.
+     */
+    int getShortEmaBlockLength();
+
+    /**
+     * <pre>
+     * long_ema_block_length defines inertia for long average block gas in EMA model. The equation is: NewAverage = ((LongAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / LongAverageBlockLength
+     * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+     * </pre>
+     *
+     * <code>uint32 long_ema_block_length = 7 [json_name = "longEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"long_ema_block_length&#92;""];</code>
+     * @return The longEmaBlockLength.
+     */
+    int getLongEmaBlockLength();
+  }
+  /**
+   * <pre>
+   * ModelParams define fee model params.
+   * There are four regions on the fee model curve
+   * - between 0 and "long average block gas" where gas price goes down exponentially from InitialGasPrice to gas price with maximum discount (InitialGasPrice * (1 - MaxDiscount))
+   * - between "long average block gas" and EscalationStartBlockGas (EscalationStartBlockGas = MaxBlockGas * EscalationStartFraction) where we offer gas price with maximum discount all the time
+   * - between EscalationStartBlockGas (EscalationStartBlockGas = MaxBlockGas * EscalationStartFraction) and MaxBlockGas where price goes up rapidly (being an output of a power function) from gas price with maximum discount to MaxGasPrice  (MaxGasPrice = InitialGasPrice * MaxGasMultiplier)
+   * - above MaxBlockGas (if it happens for any reason) where price is equal to MaxGasPrice (MaxGasPrice = InitialGasPrice * MaxGasMultiplier)
+   *
+   * The input (x value) for that function is calculated by taking short block gas average.
+   * Price (y value) being an output of the fee model is used as the minimum gas price for next block.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.feemodel.v1.ModelParams}
+   */
+  public static final class ModelParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.feemodel.v1.ModelParams)
+      ModelParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ModelParams.newBuilder() to construct.
+    private ModelParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ModelParams() {
+      initialGasPrice_ = "";
+      maxGasPriceMultiplier_ = "";
+      maxDiscount_ = "";
+      escalationStartFraction_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ModelParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_ModelParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_ModelParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.feemodel.v1.ParamsProto.ModelParams.class, com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder.class);
+    }
+
+    public static final int INITIAL_GAS_PRICE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object initialGasPrice_ = "";
+    /**
+     * <pre>
+     * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+     * </pre>
+     *
+     * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+     * @return The initialGasPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getInitialGasPrice() {
+      java.lang.Object ref = initialGasPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        initialGasPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+     * </pre>
+     *
+     * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+     * @return The bytes for initialGasPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInitialGasPriceBytes() {
+      java.lang.Object ref = initialGasPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        initialGasPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_GAS_PRICE_MULTIPLIER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxGasPriceMultiplier_ = "";
+    /**
+     * <pre>
+     * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+     * </pre>
+     *
+     * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+     * @return The maxGasPriceMultiplier.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxGasPriceMultiplier() {
+      java.lang.Object ref = maxGasPriceMultiplier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxGasPriceMultiplier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+     * </pre>
+     *
+     * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+     * @return The bytes for maxGasPriceMultiplier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxGasPriceMultiplierBytes() {
+      java.lang.Object ref = maxGasPriceMultiplier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxGasPriceMultiplier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_DISCOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxDiscount_ = "";
+    /**
+     * <pre>
+     * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+     * </pre>
+     *
+     * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+     * @return The maxDiscount.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxDiscount() {
+      java.lang.Object ref = maxDiscount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxDiscount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+     * </pre>
+     *
+     * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+     * @return The bytes for maxDiscount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxDiscountBytes() {
+      java.lang.Object ref = maxDiscount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxDiscount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCALATION_START_FRACTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object escalationStartFraction_ = "";
+    /**
+     * <pre>
+     * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+     * </pre>
+     *
+     * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+     * @return The escalationStartFraction.
+     */
+    @java.lang.Override
+    public java.lang.String getEscalationStartFraction() {
+      java.lang.Object ref = escalationStartFraction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        escalationStartFraction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+     * </pre>
+     *
+     * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+     * @return The bytes for escalationStartFraction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEscalationStartFractionBytes() {
+      java.lang.Object ref = escalationStartFraction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        escalationStartFraction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_BLOCK_GAS_FIELD_NUMBER = 5;
+    private long maxBlockGas_ = 0L;
+    /**
+     * <pre>
+     * max_block_gas sets the maximum capacity of block. This is enforced on tendermint level in genesis configuration. Once short average block gas goes above this value, gas price is a flat line equal to MaxGasPrice.
+     * </pre>
+     *
+     * <code>int64 max_block_gas = 5 [json_name = "maxBlockGas", (.gogoproto.moretags) = "yaml:&#92;"max_block_gas&#92;""];</code>
+     * @return The maxBlockGas.
+     */
+    @java.lang.Override
+    public long getMaxBlockGas() {
+      return maxBlockGas_;
+    }
+
+    public static final int SHORT_EMA_BLOCK_LENGTH_FIELD_NUMBER = 6;
+    private int shortEmaBlockLength_ = 0;
+    /**
+     * <pre>
+     * short_ema_block_length defines inertia for short average long gas in EMA model. The equation is: NewAverage = ((ShortAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / ShortAverageBlockLength
+     * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+     * </pre>
+     *
+     * <code>uint32 short_ema_block_length = 6 [json_name = "shortEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"short_ema_block_length&#92;""];</code>
+     * @return The shortEmaBlockLength.
+     */
+    @java.lang.Override
+    public int getShortEmaBlockLength() {
+      return shortEmaBlockLength_;
+    }
+
+    public static final int LONG_EMA_BLOCK_LENGTH_FIELD_NUMBER = 7;
+    private int longEmaBlockLength_ = 0;
+    /**
+     * <pre>
+     * long_ema_block_length defines inertia for long average block gas in EMA model. The equation is: NewAverage = ((LongAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / LongAverageBlockLength
+     * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+     * </pre>
+     *
+     * <code>uint32 long_ema_block_length = 7 [json_name = "longEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"long_ema_block_length&#92;""];</code>
+     * @return The longEmaBlockLength.
+     */
+    @java.lang.Override
+    public int getLongEmaBlockLength() {
+      return longEmaBlockLength_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialGasPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, initialGasPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxGasPriceMultiplier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, maxGasPriceMultiplier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxDiscount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, maxDiscount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escalationStartFraction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, escalationStartFraction_);
+      }
+      if (maxBlockGas_ != 0L) {
+        output.writeInt64(5, maxBlockGas_);
+      }
+      if (shortEmaBlockLength_ != 0) {
+        output.writeUInt32(6, shortEmaBlockLength_);
+      }
+      if (longEmaBlockLength_ != 0) {
+        output.writeUInt32(7, longEmaBlockLength_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(initialGasPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, initialGasPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxGasPriceMultiplier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, maxGasPriceMultiplier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxDiscount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, maxDiscount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escalationStartFraction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, escalationStartFraction_);
+      }
+      if (maxBlockGas_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, maxBlockGas_);
+      }
+      if (shortEmaBlockLength_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, shortEmaBlockLength_);
+      }
+      if (longEmaBlockLength_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, longEmaBlockLength_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.feemodel.v1.ParamsProto.ModelParams)) {
+        return super.equals(obj);
+      }
+      com.coreum.feemodel.v1.ParamsProto.ModelParams other = (com.coreum.feemodel.v1.ParamsProto.ModelParams) obj;
+
+      if (!getInitialGasPrice()
+          .equals(other.getInitialGasPrice())) return false;
+      if (!getMaxGasPriceMultiplier()
+          .equals(other.getMaxGasPriceMultiplier())) return false;
+      if (!getMaxDiscount()
+          .equals(other.getMaxDiscount())) return false;
+      if (!getEscalationStartFraction()
+          .equals(other.getEscalationStartFraction())) return false;
+      if (getMaxBlockGas()
+          != other.getMaxBlockGas()) return false;
+      if (getShortEmaBlockLength()
+          != other.getShortEmaBlockLength()) return false;
+      if (getLongEmaBlockLength()
+          != other.getLongEmaBlockLength()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INITIAL_GAS_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getInitialGasPrice().hashCode();
+      hash = (37 * hash) + MAX_GAS_PRICE_MULTIPLIER_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxGasPriceMultiplier().hashCode();
+      hash = (37 * hash) + MAX_DISCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxDiscount().hashCode();
+      hash = (37 * hash) + ESCALATION_START_FRACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getEscalationStartFraction().hashCode();
+      hash = (37 * hash) + MAX_BLOCK_GAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxBlockGas());
+      hash = (37 * hash) + SHORT_EMA_BLOCK_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + getShortEmaBlockLength();
+      hash = (37 * hash) + LONG_EMA_BLOCK_LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + getLongEmaBlockLength();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.feemodel.v1.ParamsProto.ModelParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ModelParams define fee model params.
+     * There are four regions on the fee model curve
+     * - between 0 and "long average block gas" where gas price goes down exponentially from InitialGasPrice to gas price with maximum discount (InitialGasPrice * (1 - MaxDiscount))
+     * - between "long average block gas" and EscalationStartBlockGas (EscalationStartBlockGas = MaxBlockGas * EscalationStartFraction) where we offer gas price with maximum discount all the time
+     * - between EscalationStartBlockGas (EscalationStartBlockGas = MaxBlockGas * EscalationStartFraction) and MaxBlockGas where price goes up rapidly (being an output of a power function) from gas price with maximum discount to MaxGasPrice  (MaxGasPrice = InitialGasPrice * MaxGasMultiplier)
+     * - above MaxBlockGas (if it happens for any reason) where price is equal to MaxGasPrice (MaxGasPrice = InitialGasPrice * MaxGasMultiplier)
+     *
+     * The input (x value) for that function is calculated by taking short block gas average.
+     * Price (y value) being an output of the fee model is used as the minimum gas price for next block.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.feemodel.v1.ModelParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.feemodel.v1.ModelParams)
+        com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_ModelParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_ModelParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.feemodel.v1.ParamsProto.ModelParams.class, com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder.class);
+      }
+
+      // Construct using com.coreum.feemodel.v1.ParamsProto.ModelParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        initialGasPrice_ = "";
+        maxGasPriceMultiplier_ = "";
+        maxDiscount_ = "";
+        escalationStartFraction_ = "";
+        maxBlockGas_ = 0L;
+        shortEmaBlockLength_ = 0;
+        longEmaBlockLength_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_ModelParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.ParamsProto.ModelParams getDefaultInstanceForType() {
+        return com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.ParamsProto.ModelParams build() {
+        com.coreum.feemodel.v1.ParamsProto.ModelParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.ParamsProto.ModelParams buildPartial() {
+        com.coreum.feemodel.v1.ParamsProto.ModelParams result = new com.coreum.feemodel.v1.ParamsProto.ModelParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.feemodel.v1.ParamsProto.ModelParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.initialGasPrice_ = initialGasPrice_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxGasPriceMultiplier_ = maxGasPriceMultiplier_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxDiscount_ = maxDiscount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.escalationStartFraction_ = escalationStartFraction_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.maxBlockGas_ = maxBlockGas_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.shortEmaBlockLength_ = shortEmaBlockLength_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.longEmaBlockLength_ = longEmaBlockLength_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.feemodel.v1.ParamsProto.ModelParams) {
+          return mergeFrom((com.coreum.feemodel.v1.ParamsProto.ModelParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.feemodel.v1.ParamsProto.ModelParams other) {
+        if (other == com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance()) return this;
+        if (!other.getInitialGasPrice().isEmpty()) {
+          initialGasPrice_ = other.initialGasPrice_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getMaxGasPriceMultiplier().isEmpty()) {
+          maxGasPriceMultiplier_ = other.maxGasPriceMultiplier_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMaxDiscount().isEmpty()) {
+          maxDiscount_ = other.maxDiscount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getEscalationStartFraction().isEmpty()) {
+          escalationStartFraction_ = other.escalationStartFraction_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.getMaxBlockGas() != 0L) {
+          setMaxBlockGas(other.getMaxBlockGas());
+        }
+        if (other.getShortEmaBlockLength() != 0) {
+          setShortEmaBlockLength(other.getShortEmaBlockLength());
+        }
+        if (other.getLongEmaBlockLength() != 0) {
+          setLongEmaBlockLength(other.getLongEmaBlockLength());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                initialGasPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                maxGasPriceMultiplier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                maxDiscount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                escalationStartFraction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                maxBlockGas_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                shortEmaBlockLength_ = input.readUInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                longEmaBlockLength_ = input.readUInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object initialGasPrice_ = "";
+      /**
+       * <pre>
+       * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+       * </pre>
+       *
+       * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+       * @return The initialGasPrice.
+       */
+      public java.lang.String getInitialGasPrice() {
+        java.lang.Object ref = initialGasPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          initialGasPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+       * </pre>
+       *
+       * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+       * @return The bytes for initialGasPrice.
+       */
+      public com.google.protobuf.ByteString
+          getInitialGasPriceBytes() {
+        java.lang.Object ref = initialGasPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          initialGasPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+       * </pre>
+       *
+       * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+       * @param value The initialGasPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialGasPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        initialGasPrice_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+       * </pre>
+       *
+       * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInitialGasPrice() {
+        initialGasPrice_ = getDefaultInstance().getInitialGasPrice();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * initial_gas_price is used when block gas short average is 0. It happens when there are no transactions being broadcasted. This value is also used to initialize gas price on brand-new chain.
+       * </pre>
+       *
+       * <code>string initial_gas_price = 1 [json_name = "initialGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"initial_gas_price&#92;""];</code>
+       * @param value The bytes for initialGasPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInitialGasPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        initialGasPrice_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxGasPriceMultiplier_ = "";
+      /**
+       * <pre>
+       * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+       * </pre>
+       *
+       * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+       * @return The maxGasPriceMultiplier.
+       */
+      public java.lang.String getMaxGasPriceMultiplier() {
+        java.lang.Object ref = maxGasPriceMultiplier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxGasPriceMultiplier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+       * </pre>
+       *
+       * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+       * @return The bytes for maxGasPriceMultiplier.
+       */
+      public com.google.protobuf.ByteString
+          getMaxGasPriceMultiplierBytes() {
+        java.lang.Object ref = maxGasPriceMultiplier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxGasPriceMultiplier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+       * </pre>
+       *
+       * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+       * @param value The maxGasPriceMultiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxGasPriceMultiplier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxGasPriceMultiplier_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+       * </pre>
+       *
+       * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxGasPriceMultiplier() {
+        maxGasPriceMultiplier_ = getDefaultInstance().getMaxGasPriceMultiplier();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_gas_price_multiplier is used to compute max_gas_price (max_gas_price = initial_gas_price * max_gas_price_multiplier). Max gas price is charged when block gas short average is greater than or equal to MaxBlockGas. This value is used to limit gas price escalation to avoid having possible infinity GasPrice value otherwise.
+       * </pre>
+       *
+       * <code>string max_gas_price_multiplier = 2 [json_name = "maxGasPriceMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_gas_price_multiplier&#92;""];</code>
+       * @param value The bytes for maxGasPriceMultiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxGasPriceMultiplierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxGasPriceMultiplier_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxDiscount_ = "";
+      /**
+       * <pre>
+       * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+       * </pre>
+       *
+       * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+       * @return The maxDiscount.
+       */
+      public java.lang.String getMaxDiscount() {
+        java.lang.Object ref = maxDiscount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxDiscount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+       * </pre>
+       *
+       * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+       * @return The bytes for maxDiscount.
+       */
+      public com.google.protobuf.ByteString
+          getMaxDiscountBytes() {
+        java.lang.Object ref = maxDiscount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxDiscount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+       * </pre>
+       *
+       * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+       * @param value The maxDiscount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxDiscount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxDiscount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+       * </pre>
+       *
+       * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxDiscount() {
+        maxDiscount_ = getDefaultInstance().getMaxDiscount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_discount is th maximum discount we offer on top of initial gas price if short average block gas is between long average block gas and escalation start block gas.
+       * </pre>
+       *
+       * <code>string max_discount = 3 [json_name = "maxDiscount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"max_discount&#92;""];</code>
+       * @param value The bytes for maxDiscount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxDiscountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxDiscount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object escalationStartFraction_ = "";
+      /**
+       * <pre>
+       * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+       * </pre>
+       *
+       * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+       * @return The escalationStartFraction.
+       */
+      public java.lang.String getEscalationStartFraction() {
+        java.lang.Object ref = escalationStartFraction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          escalationStartFraction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+       * </pre>
+       *
+       * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+       * @return The bytes for escalationStartFraction.
+       */
+      public com.google.protobuf.ByteString
+          getEscalationStartFractionBytes() {
+        java.lang.Object ref = escalationStartFraction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          escalationStartFraction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+       * </pre>
+       *
+       * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+       * @param value The escalationStartFraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscalationStartFraction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        escalationStartFraction_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+       * </pre>
+       *
+       * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEscalationStartFraction() {
+        escalationStartFraction_ = getDefaultInstance().getEscalationStartFraction();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * escalation_start_fraction defines fraction of max block gas usage where gas price escalation starts if short average block gas is higher than this value.
+       * </pre>
+       *
+       * <code>string escalation_start_fraction = 4 [json_name = "escalationStartFraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escalation_start_fraction&#92;""];</code>
+       * @param value The bytes for escalationStartFraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscalationStartFractionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        escalationStartFraction_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long maxBlockGas_ ;
+      /**
+       * <pre>
+       * max_block_gas sets the maximum capacity of block. This is enforced on tendermint level in genesis configuration. Once short average block gas goes above this value, gas price is a flat line equal to MaxGasPrice.
+       * </pre>
+       *
+       * <code>int64 max_block_gas = 5 [json_name = "maxBlockGas", (.gogoproto.moretags) = "yaml:&#92;"max_block_gas&#92;""];</code>
+       * @return The maxBlockGas.
+       */
+      @java.lang.Override
+      public long getMaxBlockGas() {
+        return maxBlockGas_;
+      }
+      /**
+       * <pre>
+       * max_block_gas sets the maximum capacity of block. This is enforced on tendermint level in genesis configuration. Once short average block gas goes above this value, gas price is a flat line equal to MaxGasPrice.
+       * </pre>
+       *
+       * <code>int64 max_block_gas = 5 [json_name = "maxBlockGas", (.gogoproto.moretags) = "yaml:&#92;"max_block_gas&#92;""];</code>
+       * @param value The maxBlockGas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxBlockGas(long value) {
+
+        maxBlockGas_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_block_gas sets the maximum capacity of block. This is enforced on tendermint level in genesis configuration. Once short average block gas goes above this value, gas price is a flat line equal to MaxGasPrice.
+       * </pre>
+       *
+       * <code>int64 max_block_gas = 5 [json_name = "maxBlockGas", (.gogoproto.moretags) = "yaml:&#92;"max_block_gas&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxBlockGas() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        maxBlockGas_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int shortEmaBlockLength_ ;
+      /**
+       * <pre>
+       * short_ema_block_length defines inertia for short average long gas in EMA model. The equation is: NewAverage = ((ShortAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / ShortAverageBlockLength
+       * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+       * </pre>
+       *
+       * <code>uint32 short_ema_block_length = 6 [json_name = "shortEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"short_ema_block_length&#92;""];</code>
+       * @return The shortEmaBlockLength.
+       */
+      @java.lang.Override
+      public int getShortEmaBlockLength() {
+        return shortEmaBlockLength_;
+      }
+      /**
+       * <pre>
+       * short_ema_block_length defines inertia for short average long gas in EMA model. The equation is: NewAverage = ((ShortAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / ShortAverageBlockLength
+       * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+       * </pre>
+       *
+       * <code>uint32 short_ema_block_length = 6 [json_name = "shortEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"short_ema_block_length&#92;""];</code>
+       * @param value The shortEmaBlockLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShortEmaBlockLength(int value) {
+
+        shortEmaBlockLength_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * short_ema_block_length defines inertia for short average long gas in EMA model. The equation is: NewAverage = ((ShortAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / ShortAverageBlockLength
+       * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+       * </pre>
+       *
+       * <code>uint32 short_ema_block_length = 6 [json_name = "shortEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"short_ema_block_length&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShortEmaBlockLength() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        shortEmaBlockLength_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int longEmaBlockLength_ ;
+      /**
+       * <pre>
+       * long_ema_block_length defines inertia for long average block gas in EMA model. The equation is: NewAverage = ((LongAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / LongAverageBlockLength
+       * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+       * </pre>
+       *
+       * <code>uint32 long_ema_block_length = 7 [json_name = "longEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"long_ema_block_length&#92;""];</code>
+       * @return The longEmaBlockLength.
+       */
+      @java.lang.Override
+      public int getLongEmaBlockLength() {
+        return longEmaBlockLength_;
+      }
+      /**
+       * <pre>
+       * long_ema_block_length defines inertia for long average block gas in EMA model. The equation is: NewAverage = ((LongAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / LongAverageBlockLength
+       * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+       * </pre>
+       *
+       * <code>uint32 long_ema_block_length = 7 [json_name = "longEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"long_ema_block_length&#92;""];</code>
+       * @param value The longEmaBlockLength to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLongEmaBlockLength(int value) {
+
+        longEmaBlockLength_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * long_ema_block_length defines inertia for long average block gas in EMA model. The equation is: NewAverage = ((LongAverageBlockLength - 1)*PreviousAverage + GasUsedByCurrentBlock) / LongAverageBlockLength
+       * The value might be interpreted as the number of blocks which are taken to calculate the average. It would be exactly like that in SMA model, in EMA this is an approximation.
+       * </pre>
+       *
+       * <code>uint32 long_ema_block_length = 7 [json_name = "longEmaBlockLength", (.gogoproto.moretags) = "yaml:&#92;"long_ema_block_length&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLongEmaBlockLength() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        longEmaBlockLength_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.feemodel.v1.ModelParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.feemodel.v1.ModelParams)
+    private static final com.coreum.feemodel.v1.ParamsProto.ModelParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.feemodel.v1.ParamsProto.ModelParams();
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.ModelParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ModelParams>
+        PARSER = new com.google.protobuf.AbstractParser<ModelParams>() {
+      @java.lang.Override
+      public ModelParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ModelParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ModelParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.feemodel.v1.ParamsProto.ModelParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.feemodel.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * model is a fee model params.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+     * @return Whether the model field is set.
+     */
+    boolean hasModel();
+    /**
+     * <pre>
+     * model is a fee model params.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+     * @return The model.
+     */
+    com.coreum.feemodel.v1.ParamsProto.ModelParams getModel();
+    /**
+     * <pre>
+     * model is a fee model params.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+     */
+    com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder getModelOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params store gov manageable feemodel parameters.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.feemodel.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.feemodel.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.feemodel.v1.ParamsProto.Params.class, com.coreum.feemodel.v1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 1;
+    private com.coreum.feemodel.v1.ParamsProto.ModelParams model_;
+    /**
+     * <pre>
+     * model is a fee model params.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+     * @return Whether the model field is set.
+     */
+    @java.lang.Override
+    public boolean hasModel() {
+      return model_ != null;
+    }
+    /**
+     * <pre>
+     * model is a fee model params.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+     * @return The model.
+     */
+    @java.lang.Override
+    public com.coreum.feemodel.v1.ParamsProto.ModelParams getModel() {
+      return model_ == null ? com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance() : model_;
+    }
+    /**
+     * <pre>
+     * model is a fee model params.
+     * </pre>
+     *
+     * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder getModelOrBuilder() {
+      return model_ == null ? com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance() : model_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (model_ != null) {
+        output.writeMessage(1, getModel());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (model_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getModel());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.feemodel.v1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.coreum.feemodel.v1.ParamsProto.Params other = (com.coreum.feemodel.v1.ParamsProto.Params) obj;
+
+      if (hasModel() != other.hasModel()) return false;
+      if (hasModel()) {
+        if (!getModel()
+            .equals(other.getModel())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasModel()) {
+        hash = (37 * hash) + MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getModel().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.feemodel.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.feemodel.v1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params store gov manageable feemodel parameters.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.feemodel.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.feemodel.v1.Params)
+        com.coreum.feemodel.v1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.feemodel.v1.ParamsProto.Params.class, com.coreum.feemodel.v1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.coreum.feemodel.v1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
+          modelBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.feemodel.v1.ParamsProto.internal_static_coreum_feemodel_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.ParamsProto.Params build() {
+        com.coreum.feemodel.v1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.feemodel.v1.ParamsProto.Params buildPartial() {
+        com.coreum.feemodel.v1.ParamsProto.Params result = new com.coreum.feemodel.v1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.feemodel.v1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.model_ = modelBuilder_ == null
+              ? model_
+              : modelBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.feemodel.v1.ParamsProto.Params) {
+          return mergeFrom((com.coreum.feemodel.v1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.feemodel.v1.ParamsProto.Params other) {
+        if (other == com.coreum.feemodel.v1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.hasModel()) {
+          mergeModel(other.getModel());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getModelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.coreum.feemodel.v1.ParamsProto.ModelParams model_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.feemodel.v1.ParamsProto.ModelParams, com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder, com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder> modelBuilder_;
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       * @return Whether the model field is set.
+       */
+      public boolean hasModel() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       * @return The model.
+       */
+      public com.coreum.feemodel.v1.ParamsProto.ModelParams getModel() {
+        if (modelBuilder_ == null) {
+          return model_ == null ? com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance() : model_;
+        } else {
+          return modelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      public Builder setModel(com.coreum.feemodel.v1.ParamsProto.ModelParams value) {
+        if (modelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          model_ = value;
+        } else {
+          modelBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      public Builder setModel(
+          com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder builderForValue) {
+        if (modelBuilder_ == null) {
+          model_ = builderForValue.build();
+        } else {
+          modelBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      public Builder mergeModel(com.coreum.feemodel.v1.ParamsProto.ModelParams value) {
+        if (modelBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            model_ != null &&
+            model_ != com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance()) {
+            getModelBuilder().mergeFrom(value);
+          } else {
+            model_ = value;
+          }
+        } else {
+          modelBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      public Builder clearModel() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
+          modelBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      public com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder getModelBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      public com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder getModelOrBuilder() {
+        if (modelBuilder_ != null) {
+          return modelBuilder_.getMessageOrBuilder();
+        } else {
+          return model_ == null ?
+              com.coreum.feemodel.v1.ParamsProto.ModelParams.getDefaultInstance() : model_;
+        }
+      }
+      /**
+       * <pre>
+       * model is a fee model params.
+       * </pre>
+       *
+       * <code>.coreum.feemodel.v1.ModelParams model = 1 [json_name = "model", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"model&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.coreum.feemodel.v1.ParamsProto.ModelParams, com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder, com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder> 
+          getModelFieldBuilder() {
+        if (modelBuilder_ == null) {
+          modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.coreum.feemodel.v1.ParamsProto.ModelParams, com.coreum.feemodel.v1.ParamsProto.ModelParams.Builder, com.coreum.feemodel.v1.ParamsProto.ModelParamsOrBuilder>(
+                  getModel(),
+                  getParentForChildren(),
+                  isClean());
+          model_ = null;
+        }
+        return modelBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.feemodel.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.feemodel.v1.Params)
+    private static final com.coreum.feemodel.v1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.feemodel.v1.ParamsProto.Params();
+    }
+
+    public static com.coreum.feemodel.v1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.feemodel.v1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_feemodel_v1_ModelParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_feemodel_v1_ModelParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_feemodel_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_feemodel_v1_Params_fieldAccessorTable;
 
@@ -56,12 +2175,12 @@ public final class ParamsProto {
       "ength\030\007 \001(\rB \362\336\037\034yaml:\"long_ema_block_le" +
       "ngth\"R\022longEmaBlockLength\"U\n\006Params\022K\n\005m" +
       "odel\030\001 \001(\0132\037.coreum.feemodel.v1.ModelPar" +
-      "amsB\024\310\336\037\000\362\336\037\014yaml:\"model\"R\005modelB\304\001\n\026com" +
-      ".coreum.feemodel.v1B\013ParamsProtoP\001Z3gith" +
-      "ub.com/CoreumFoundation/coreum/x/feemode" +
-      "l/types\242\002\003CFX\252\002\022Coreum.Feemodel.V1\312\002\022Cor" +
-      "eum\\Feemodel\\V1\342\002\036Coreum\\Feemodel\\V1\\GPB" +
-      "Metadata\352\002\024Coreum::Feemodel::V1b\006proto3"
+      "amsB\024\310\336\037\000\362\336\037\014yaml:\"model\"R\005modelB\302\001\n\026com" +
+      ".coreum.feemodel.v1B\013ParamsProtoZ3github" +
+      ".com/CoreumFoundation/coreum/x/feemodel/" +
+      "types\242\002\003CFX\252\002\022Coreum.Feemodel.V1\312\002\022Coreu" +
+      "m\\Feemodel\\V1\342\002\036Coreum\\Feemodel\\V1\\GPBMe" +
+      "tadata\352\002\024Coreum::Feemodel::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

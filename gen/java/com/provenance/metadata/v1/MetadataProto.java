@@ -14,39 +14,7477 @@ public final class MetadataProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * Params defines the set of params for the metadata module.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.Params.class, com.provenance.metadata.v1.MetadataProto.Params.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.Params)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.Params other = (com.provenance.metadata.v1.MetadataProto.Params) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the set of params for the metadata module.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.Params)
+        com.provenance.metadata.v1.MetadataProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.Params.class, com.provenance.metadata.v1.MetadataProto.Params.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.Params getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.Params build() {
+        com.provenance.metadata.v1.MetadataProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.Params buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.Params result = new com.provenance.metadata.v1.MetadataProto.Params(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.Params) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.Params other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.Params.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.Params)
+    private static final com.provenance.metadata.v1.MetadataProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.Params();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ScopeIdInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.ScopeIdInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_id is the raw bytes of the scope address.
+     * </pre>
+     *
+     * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+     * @return The scopeId.
+     */
+    com.google.protobuf.ByteString getScopeId();
+
+    /**
+     * <pre>
+     * scope_id_prefix is the prefix portion of the scope_id.
+     * </pre>
+     *
+     * <code>bytes scope_id_prefix = 2 [json_name = "scopeIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_id_prefix&#92;""];</code>
+     * @return The scopeIdPrefix.
+     */
+    com.google.protobuf.ByteString getScopeIdPrefix();
+
+    /**
+     * <pre>
+     * scope_id_scope_uuid is the scope_uuid portion of the scope_id.
+     * </pre>
+     *
+     * <code>bytes scope_id_scope_uuid = 3 [json_name = "scopeIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_id_scope_uuid&#92;""];</code>
+     * @return The scopeIdScopeUuid.
+     */
+    com.google.protobuf.ByteString getScopeIdScopeUuid();
+
+    /**
+     * <pre>
+     * scope_addr is the bech32 string version of the scope_id.
+     * </pre>
+     *
+     * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+     * @return The scopeAddr.
+     */
+    java.lang.String getScopeAddr();
+    /**
+     * <pre>
+     * scope_addr is the bech32 string version of the scope_id.
+     * </pre>
+     *
+     * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+     * @return The bytes for scopeAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeAddrBytes();
+
+    /**
+     * <pre>
+     * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+     * </pre>
+     *
+     * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+     * @return The scopeUuid.
+     */
+    java.lang.String getScopeUuid();
+    /**
+     * <pre>
+     * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+     * </pre>
+     *
+     * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+     * @return The bytes for scopeUuid.
+     */
+    com.google.protobuf.ByteString
+        getScopeUuidBytes();
+  }
+  /**
+   * <pre>
+   * ScopeIdInfo contains various info regarding a scope id.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.ScopeIdInfo}
+   */
+  public static final class ScopeIdInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.ScopeIdInfo)
+      ScopeIdInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScopeIdInfo.newBuilder() to construct.
+    private ScopeIdInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScopeIdInfo() {
+      scopeId_ = com.google.protobuf.ByteString.EMPTY;
+      scopeIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      scopeIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+      scopeAddr_ = "";
+      scopeUuid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScopeIdInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeIdInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeIdInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.class, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder.class);
+    }
+
+    public static final int SCOPE_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString scopeId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * scope_id is the raw bytes of the scope address.
+     * </pre>
+     *
+     * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+     * @return The scopeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeId() {
+      return scopeId_;
+    }
+
+    public static final int SCOPE_ID_PREFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString scopeIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * scope_id_prefix is the prefix portion of the scope_id.
+     * </pre>
+     *
+     * <code>bytes scope_id_prefix = 2 [json_name = "scopeIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_id_prefix&#92;""];</code>
+     * @return The scopeIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeIdPrefix() {
+      return scopeIdPrefix_;
+    }
+
+    public static final int SCOPE_ID_SCOPE_UUID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString scopeIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * scope_id_scope_uuid is the scope_uuid portion of the scope_id.
+     * </pre>
+     *
+     * <code>bytes scope_id_scope_uuid = 3 [json_name = "scopeIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_id_scope_uuid&#92;""];</code>
+     * @return The scopeIdScopeUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeIdScopeUuid() {
+      return scopeIdScopeUuid_;
+    }
+
+    public static final int SCOPE_ADDR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeAddr_ = "";
+    /**
+     * <pre>
+     * scope_addr is the bech32 string version of the scope_id.
+     * </pre>
+     *
+     * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+     * @return The scopeAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeAddr() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_addr is the bech32 string version of the scope_id.
+     * </pre>
+     *
+     * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+     * @return The bytes for scopeAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeAddrBytes() {
+      java.lang.Object ref = scopeAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_UUID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeUuid_ = "";
+    /**
+     * <pre>
+     * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+     * </pre>
+     *
+     * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+     * @return The scopeUuid.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeUuid() {
+      java.lang.Object ref = scopeUuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeUuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+     * </pre>
+     *
+     * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+     * @return The bytes for scopeUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeUuidBytes() {
+      java.lang.Object ref = scopeUuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!scopeId_.isEmpty()) {
+        output.writeBytes(1, scopeId_);
+      }
+      if (!scopeIdPrefix_.isEmpty()) {
+        output.writeBytes(2, scopeIdPrefix_);
+      }
+      if (!scopeIdScopeUuid_.isEmpty()) {
+        output.writeBytes(3, scopeIdScopeUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, scopeAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeUuid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, scopeUuid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!scopeId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, scopeId_);
+      }
+      if (!scopeIdPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, scopeIdPrefix_);
+      }
+      if (!scopeIdScopeUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, scopeIdScopeUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, scopeAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeUuid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, scopeUuid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.ScopeIdInfo)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.ScopeIdInfo other = (com.provenance.metadata.v1.MetadataProto.ScopeIdInfo) obj;
+
+      if (!getScopeId()
+          .equals(other.getScopeId())) return false;
+      if (!getScopeIdPrefix()
+          .equals(other.getScopeIdPrefix())) return false;
+      if (!getScopeIdScopeUuid()
+          .equals(other.getScopeIdScopeUuid())) return false;
+      if (!getScopeAddr()
+          .equals(other.getScopeAddr())) return false;
+      if (!getScopeUuid()
+          .equals(other.getScopeUuid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeId().hashCode();
+      hash = (37 * hash) + SCOPE_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeIdPrefix().hashCode();
+      hash = (37 * hash) + SCOPE_ID_SCOPE_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeIdScopeUuid().hashCode();
+      hash = (37 * hash) + SCOPE_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeAddr().hashCode();
+      hash = (37 * hash) + SCOPE_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeUuid().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ScopeIdInfo contains various info regarding a scope id.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.ScopeIdInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.ScopeIdInfo)
+        com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeIdInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.class, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeId_ = com.google.protobuf.ByteString.EMPTY;
+        scopeIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        scopeIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+        scopeAddr_ = "";
+        scopeUuid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo build() {
+        com.provenance.metadata.v1.MetadataProto.ScopeIdInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.ScopeIdInfo result = new com.provenance.metadata.v1.MetadataProto.ScopeIdInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeId_ = scopeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scopeIdPrefix_ = scopeIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.scopeIdScopeUuid_ = scopeIdScopeUuid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.scopeAddr_ = scopeAddr_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.scopeUuid_ = scopeUuid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.ScopeIdInfo) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.ScopeIdInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance()) return this;
+        if (other.getScopeId() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeId(other.getScopeId());
+        }
+        if (other.getScopeIdPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeIdPrefix(other.getScopeIdPrefix());
+        }
+        if (other.getScopeIdScopeUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeIdScopeUuid(other.getScopeIdScopeUuid());
+        }
+        if (!other.getScopeAddr().isEmpty()) {
+          scopeAddr_ = other.scopeAddr_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getScopeUuid().isEmpty()) {
+          scopeUuid_ = other.scopeUuid_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                scopeIdPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                scopeIdScopeUuid_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                scopeAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                scopeUuid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString scopeId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * scope_id is the raw bytes of the scope address.
+       * </pre>
+       *
+       * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+       * @return The scopeId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeId() {
+        return scopeId_;
+      }
+      /**
+       * <pre>
+       * scope_id is the raw bytes of the scope address.
+       * </pre>
+       *
+       * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+       * @param value The scopeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id is the raw bytes of the scope address.
+       * </pre>
+       *
+       * <code>bytes scope_id = 1 [json_name = "scopeId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        scopeId_ = getDefaultInstance().getScopeId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString scopeIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * scope_id_prefix is the prefix portion of the scope_id.
+       * </pre>
+       *
+       * <code>bytes scope_id_prefix = 2 [json_name = "scopeIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_id_prefix&#92;""];</code>
+       * @return The scopeIdPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeIdPrefix() {
+        return scopeIdPrefix_;
+      }
+      /**
+       * <pre>
+       * scope_id_prefix is the prefix portion of the scope_id.
+       * </pre>
+       *
+       * <code>bytes scope_id_prefix = 2 [json_name = "scopeIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_id_prefix&#92;""];</code>
+       * @param value The scopeIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeIdPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_prefix is the prefix portion of the scope_id.
+       * </pre>
+       *
+       * <code>bytes scope_id_prefix = 2 [json_name = "scopeIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_id_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeIdPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        scopeIdPrefix_ = getDefaultInstance().getScopeIdPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString scopeIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * scope_id_scope_uuid is the scope_uuid portion of the scope_id.
+       * </pre>
+       *
+       * <code>bytes scope_id_scope_uuid = 3 [json_name = "scopeIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_id_scope_uuid&#92;""];</code>
+       * @return The scopeIdScopeUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeIdScopeUuid() {
+        return scopeIdScopeUuid_;
+      }
+      /**
+       * <pre>
+       * scope_id_scope_uuid is the scope_uuid portion of the scope_id.
+       * </pre>
+       *
+       * <code>bytes scope_id_scope_uuid = 3 [json_name = "scopeIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_id_scope_uuid&#92;""];</code>
+       * @param value The scopeIdScopeUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeIdScopeUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeIdScopeUuid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_scope_uuid is the scope_uuid portion of the scope_id.
+       * </pre>
+       *
+       * <code>bytes scope_id_scope_uuid = 3 [json_name = "scopeIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_id_scope_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeIdScopeUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        scopeIdScopeUuid_ = getDefaultInstance().getScopeIdScopeUuid();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeAddr_ = "";
+      /**
+       * <pre>
+       * scope_addr is the bech32 string version of the scope_id.
+       * </pre>
+       *
+       * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+       * @return The scopeAddr.
+       */
+      public java.lang.String getScopeAddr() {
+        java.lang.Object ref = scopeAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 string version of the scope_id.
+       * </pre>
+       *
+       * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+       * @return The bytes for scopeAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeAddrBytes() {
+        java.lang.Object ref = scopeAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 string version of the scope_id.
+       * </pre>
+       *
+       * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+       * @param value The scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 string version of the scope_id.
+       * </pre>
+       *
+       * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeAddr() {
+        scopeAddr_ = getDefaultInstance().getScopeAddr();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_addr is the bech32 string version of the scope_id.
+       * </pre>
+       *
+       * <code>string scope_addr = 4 [json_name = "scopeAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_addr&#92;""];</code>
+       * @param value The bytes for scopeAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeAddr_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeUuid_ = "";
+      /**
+       * <pre>
+       * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+       * </pre>
+       *
+       * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+       * @return The scopeUuid.
+       */
+      public java.lang.String getScopeUuid() {
+        java.lang.Object ref = scopeUuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeUuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+       * </pre>
+       *
+       * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+       * @return The bytes for scopeUuid.
+       */
+      public com.google.protobuf.ByteString
+          getScopeUuidBytes() {
+        java.lang.Object ref = scopeUuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeUuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+       * </pre>
+       *
+       * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+       * @param value The scopeUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeUuid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeUuid_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+       * </pre>
+       *
+       * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeUuid() {
+        scopeUuid_ = getDefaultInstance().getScopeUuid();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_uuid is the uuid hex string of the scope_id_scope_uuid.
+       * </pre>
+       *
+       * <code>string scope_uuid = 5 [json_name = "scopeUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_uuid&#92;""];</code>
+       * @param value The bytes for scopeUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeUuid_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.ScopeIdInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.ScopeIdInfo)
+    private static final com.provenance.metadata.v1.MetadataProto.ScopeIdInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.ScopeIdInfo();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScopeIdInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ScopeIdInfo>() {
+      @java.lang.Override
+      public ScopeIdInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScopeIdInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScopeIdInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SessionIdInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.SessionIdInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * session_id is the raw bytes of the session address.
+     * </pre>
+     *
+     * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+     * @return The sessionId.
+     */
+    com.google.protobuf.ByteString getSessionId();
+
+    /**
+     * <pre>
+     * session_id_prefix is the prefix portion of the session_id.
+     * </pre>
+     *
+     * <code>bytes session_id_prefix = 2 [json_name = "sessionIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"session_id_prefix&#92;""];</code>
+     * @return The sessionIdPrefix.
+     */
+    com.google.protobuf.ByteString getSessionIdPrefix();
+
+    /**
+     * <pre>
+     * session_id_scope_uuid is the scope_uuid portion of the session_id.
+     * </pre>
+     *
+     * <code>bytes session_id_scope_uuid = 3 [json_name = "sessionIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_scope_uuid&#92;""];</code>
+     * @return The sessionIdScopeUuid.
+     */
+    com.google.protobuf.ByteString getSessionIdScopeUuid();
+
+    /**
+     * <pre>
+     * session_id_session_uuid is the session_uuid portion of the session_id.
+     * </pre>
+     *
+     * <code>bytes session_id_session_uuid = 4 [json_name = "sessionIdSessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_session_uuid&#92;""];</code>
+     * @return The sessionIdSessionUuid.
+     */
+    com.google.protobuf.ByteString getSessionIdSessionUuid();
+
+    /**
+     * <pre>
+     * session_addr is the bech32 string version of the session_id.
+     * </pre>
+     *
+     * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+     * @return The sessionAddr.
+     */
+    java.lang.String getSessionAddr();
+    /**
+     * <pre>
+     * session_addr is the bech32 string version of the session_id.
+     * </pre>
+     *
+     * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+     * @return The bytes for sessionAddr.
+     */
+    com.google.protobuf.ByteString
+        getSessionAddrBytes();
+
+    /**
+     * <pre>
+     * session_uuid is the uuid hex string of the session_id_session_uuid.
+     * </pre>
+     *
+     * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+     * @return The sessionUuid.
+     */
+    java.lang.String getSessionUuid();
+    /**
+     * <pre>
+     * session_uuid is the uuid hex string of the session_id_session_uuid.
+     * </pre>
+     *
+     * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+     * @return The bytes for sessionUuid.
+     */
+    com.google.protobuf.ByteString
+        getSessionUuidBytes();
+
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the session_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return Whether the scopeIdInfo field is set.
+     */
+    boolean hasScopeIdInfo();
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the session_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return The scopeIdInfo.
+     */
+    com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getScopeIdInfo();
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the session_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     */
+    com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder getScopeIdInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * SessionIdInfo contains various info regarding a session id.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.SessionIdInfo}
+   */
+  public static final class SessionIdInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.SessionIdInfo)
+      SessionIdInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SessionIdInfo.newBuilder() to construct.
+    private SessionIdInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SessionIdInfo() {
+      sessionId_ = com.google.protobuf.ByteString.EMPTY;
+      sessionIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      sessionIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+      sessionIdSessionUuid_ = com.google.protobuf.ByteString.EMPTY;
+      sessionAddr_ = "";
+      sessionUuid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SessionIdInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_SessionIdInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_SessionIdInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.SessionIdInfo.class, com.provenance.metadata.v1.MetadataProto.SessionIdInfo.Builder.class);
+    }
+
+    public static final int SESSION_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * session_id is the raw bytes of the session address.
+     * </pre>
+     *
+     * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+     * @return The sessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSessionId() {
+      return sessionId_;
+    }
+
+    public static final int SESSION_ID_PREFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString sessionIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * session_id_prefix is the prefix portion of the session_id.
+     * </pre>
+     *
+     * <code>bytes session_id_prefix = 2 [json_name = "sessionIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"session_id_prefix&#92;""];</code>
+     * @return The sessionIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSessionIdPrefix() {
+      return sessionIdPrefix_;
+    }
+
+    public static final int SESSION_ID_SCOPE_UUID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString sessionIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * session_id_scope_uuid is the scope_uuid portion of the session_id.
+     * </pre>
+     *
+     * <code>bytes session_id_scope_uuid = 3 [json_name = "sessionIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_scope_uuid&#92;""];</code>
+     * @return The sessionIdScopeUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSessionIdScopeUuid() {
+      return sessionIdScopeUuid_;
+    }
+
+    public static final int SESSION_ID_SESSION_UUID_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString sessionIdSessionUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * session_id_session_uuid is the session_uuid portion of the session_id.
+     * </pre>
+     *
+     * <code>bytes session_id_session_uuid = 4 [json_name = "sessionIdSessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_session_uuid&#92;""];</code>
+     * @return The sessionIdSessionUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSessionIdSessionUuid() {
+      return sessionIdSessionUuid_;
+    }
+
+    public static final int SESSION_ADDR_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionAddr_ = "";
+    /**
+     * <pre>
+     * session_addr is the bech32 string version of the session_id.
+     * </pre>
+     *
+     * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+     * @return The sessionAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionAddr() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_addr is the bech32 string version of the session_id.
+     * </pre>
+     *
+     * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+     * @return The bytes for sessionAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionAddrBytes() {
+      java.lang.Object ref = sessionAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSION_UUID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionUuid_ = "";
+    /**
+     * <pre>
+     * session_uuid is the uuid hex string of the session_id_session_uuid.
+     * </pre>
+     *
+     * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+     * @return The sessionUuid.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionUuid() {
+      java.lang.Object ref = sessionUuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionUuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * session_uuid is the uuid hex string of the session_id_session_uuid.
+     * </pre>
+     *
+     * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+     * @return The bytes for sessionUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionUuidBytes() {
+      java.lang.Object ref = sessionUuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ID_INFO_FIELD_NUMBER = 7;
+    private com.provenance.metadata.v1.MetadataProto.ScopeIdInfo scopeIdInfo_;
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the session_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return Whether the scopeIdInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasScopeIdInfo() {
+      return scopeIdInfo_ != null;
+    }
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the session_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return The scopeIdInfo.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getScopeIdInfo() {
+      return scopeIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+    }
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the session_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder getScopeIdInfoOrBuilder() {
+      return scopeIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!sessionId_.isEmpty()) {
+        output.writeBytes(1, sessionId_);
+      }
+      if (!sessionIdPrefix_.isEmpty()) {
+        output.writeBytes(2, sessionIdPrefix_);
+      }
+      if (!sessionIdScopeUuid_.isEmpty()) {
+        output.writeBytes(3, sessionIdScopeUuid_);
+      }
+      if (!sessionIdSessionUuid_.isEmpty()) {
+        output.writeBytes(4, sessionIdSessionUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionUuid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sessionUuid_);
+      }
+      if (scopeIdInfo_ != null) {
+        output.writeMessage(7, getScopeIdInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!sessionId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, sessionId_);
+      }
+      if (!sessionIdPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, sessionIdPrefix_);
+      }
+      if (!sessionIdScopeUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, sessionIdScopeUuid_);
+      }
+      if (!sessionIdSessionUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, sessionIdSessionUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sessionAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sessionUuid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sessionUuid_);
+      }
+      if (scopeIdInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getScopeIdInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.SessionIdInfo)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.SessionIdInfo other = (com.provenance.metadata.v1.MetadataProto.SessionIdInfo) obj;
+
+      if (!getSessionId()
+          .equals(other.getSessionId())) return false;
+      if (!getSessionIdPrefix()
+          .equals(other.getSessionIdPrefix())) return false;
+      if (!getSessionIdScopeUuid()
+          .equals(other.getSessionIdScopeUuid())) return false;
+      if (!getSessionIdSessionUuid()
+          .equals(other.getSessionIdSessionUuid())) return false;
+      if (!getSessionAddr()
+          .equals(other.getSessionAddr())) return false;
+      if (!getSessionUuid()
+          .equals(other.getSessionUuid())) return false;
+      if (hasScopeIdInfo() != other.hasScopeIdInfo()) return false;
+      if (hasScopeIdInfo()) {
+        if (!getScopeIdInfo()
+            .equals(other.getScopeIdInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionId().hashCode();
+      hash = (37 * hash) + SESSION_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionIdPrefix().hashCode();
+      hash = (37 * hash) + SESSION_ID_SCOPE_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionIdScopeUuid().hashCode();
+      hash = (37 * hash) + SESSION_ID_SESSION_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionIdSessionUuid().hashCode();
+      hash = (37 * hash) + SESSION_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAddr().hashCode();
+      hash = (37 * hash) + SESSION_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionUuid().hashCode();
+      if (hasScopeIdInfo()) {
+        hash = (37 * hash) + SCOPE_ID_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getScopeIdInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.SessionIdInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SessionIdInfo contains various info regarding a session id.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.SessionIdInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.SessionIdInfo)
+        com.provenance.metadata.v1.MetadataProto.SessionIdInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_SessionIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_SessionIdInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.SessionIdInfo.class, com.provenance.metadata.v1.MetadataProto.SessionIdInfo.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.SessionIdInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionId_ = com.google.protobuf.ByteString.EMPTY;
+        sessionIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        sessionIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+        sessionIdSessionUuid_ = com.google.protobuf.ByteString.EMPTY;
+        sessionAddr_ = "";
+        sessionUuid_ = "";
+        scopeIdInfo_ = null;
+        if (scopeIdInfoBuilder_ != null) {
+          scopeIdInfoBuilder_.dispose();
+          scopeIdInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_SessionIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.SessionIdInfo getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.SessionIdInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.SessionIdInfo build() {
+        com.provenance.metadata.v1.MetadataProto.SessionIdInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.SessionIdInfo buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.SessionIdInfo result = new com.provenance.metadata.v1.MetadataProto.SessionIdInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.MetadataProto.SessionIdInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionId_ = sessionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sessionIdPrefix_ = sessionIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sessionIdScopeUuid_ = sessionIdScopeUuid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sessionIdSessionUuid_ = sessionIdSessionUuid_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sessionAddr_ = sessionAddr_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.sessionUuid_ = sessionUuid_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
+              ? scopeIdInfo_
+              : scopeIdInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.SessionIdInfo) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.SessionIdInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.SessionIdInfo other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.SessionIdInfo.getDefaultInstance()) return this;
+        if (other.getSessionId() != com.google.protobuf.ByteString.EMPTY) {
+          setSessionId(other.getSessionId());
+        }
+        if (other.getSessionIdPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setSessionIdPrefix(other.getSessionIdPrefix());
+        }
+        if (other.getSessionIdScopeUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setSessionIdScopeUuid(other.getSessionIdScopeUuid());
+        }
+        if (other.getSessionIdSessionUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setSessionIdSessionUuid(other.getSessionIdSessionUuid());
+        }
+        if (!other.getSessionAddr().isEmpty()) {
+          sessionAddr_ = other.sessionAddr_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getSessionUuid().isEmpty()) {
+          sessionUuid_ = other.sessionUuid_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.hasScopeIdInfo()) {
+          mergeScopeIdInfo(other.getScopeIdInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                sessionIdPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                sessionIdScopeUuid_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                sessionIdSessionUuid_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                sessionAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                sessionUuid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getScopeIdInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString sessionId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * session_id is the raw bytes of the session address.
+       * </pre>
+       *
+       * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @return The sessionId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSessionId() {
+        return sessionId_;
+      }
+      /**
+       * <pre>
+       * session_id is the raw bytes of the session address.
+       * </pre>
+       *
+       * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @param value The sessionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_id is the raw bytes of the session address.
+       * </pre>
+       *
+       * <code>bytes session_id = 1 [json_name = "sessionId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"session_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sessionId_ = getDefaultInstance().getSessionId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString sessionIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * session_id_prefix is the prefix portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_prefix = 2 [json_name = "sessionIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"session_id_prefix&#92;""];</code>
+       * @return The sessionIdPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSessionIdPrefix() {
+        return sessionIdPrefix_;
+      }
+      /**
+       * <pre>
+       * session_id_prefix is the prefix portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_prefix = 2 [json_name = "sessionIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"session_id_prefix&#92;""];</code>
+       * @param value The sessionIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_id_prefix is the prefix portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_prefix = 2 [json_name = "sessionIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"session_id_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionIdPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sessionIdPrefix_ = getDefaultInstance().getSessionIdPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString sessionIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * session_id_scope_uuid is the scope_uuid portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_scope_uuid = 3 [json_name = "sessionIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_scope_uuid&#92;""];</code>
+       * @return The sessionIdScopeUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSessionIdScopeUuid() {
+        return sessionIdScopeUuid_;
+      }
+      /**
+       * <pre>
+       * session_id_scope_uuid is the scope_uuid portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_scope_uuid = 3 [json_name = "sessionIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_scope_uuid&#92;""];</code>
+       * @param value The sessionIdScopeUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdScopeUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionIdScopeUuid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_id_scope_uuid is the scope_uuid portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_scope_uuid = 3 [json_name = "sessionIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_scope_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionIdScopeUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        sessionIdScopeUuid_ = getDefaultInstance().getSessionIdScopeUuid();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString sessionIdSessionUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * session_id_session_uuid is the session_uuid portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_session_uuid = 4 [json_name = "sessionIdSessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_session_uuid&#92;""];</code>
+       * @return The sessionIdSessionUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSessionIdSessionUuid() {
+        return sessionIdSessionUuid_;
+      }
+      /**
+       * <pre>
+       * session_id_session_uuid is the session_uuid portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_session_uuid = 4 [json_name = "sessionIdSessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_session_uuid&#92;""];</code>
+       * @param value The sessionIdSessionUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIdSessionUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionIdSessionUuid_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_id_session_uuid is the session_uuid portion of the session_id.
+       * </pre>
+       *
+       * <code>bytes session_id_session_uuid = 4 [json_name = "sessionIdSessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_id_session_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionIdSessionUuid() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sessionIdSessionUuid_ = getDefaultInstance().getSessionIdSessionUuid();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sessionAddr_ = "";
+      /**
+       * <pre>
+       * session_addr is the bech32 string version of the session_id.
+       * </pre>
+       *
+       * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+       * @return The sessionAddr.
+       */
+      public java.lang.String getSessionAddr() {
+        java.lang.Object ref = sessionAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 string version of the session_id.
+       * </pre>
+       *
+       * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+       * @return The bytes for sessionAddr.
+       */
+      public com.google.protobuf.ByteString
+          getSessionAddrBytes() {
+        java.lang.Object ref = sessionAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 string version of the session_id.
+       * </pre>
+       *
+       * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+       * @param value The sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 string version of the session_id.
+       * </pre>
+       *
+       * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionAddr() {
+        sessionAddr_ = getDefaultInstance().getSessionAddr();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_addr is the bech32 string version of the session_id.
+       * </pre>
+       *
+       * <code>string session_addr = 5 [json_name = "sessionAddr", (.gogoproto.moretags) = "yaml:&#92;"session_addr&#92;""];</code>
+       * @param value The bytes for sessionAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionAddr_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sessionUuid_ = "";
+      /**
+       * <pre>
+       * session_uuid is the uuid hex string of the session_id_session_uuid.
+       * </pre>
+       *
+       * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+       * @return The sessionUuid.
+       */
+      public java.lang.String getSessionUuid() {
+        java.lang.Object ref = sessionUuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionUuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_uuid is the uuid hex string of the session_id_session_uuid.
+       * </pre>
+       *
+       * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+       * @return The bytes for sessionUuid.
+       */
+      public com.google.protobuf.ByteString
+          getSessionUuidBytes() {
+        java.lang.Object ref = sessionUuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionUuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * session_uuid is the uuid hex string of the session_id_session_uuid.
+       * </pre>
+       *
+       * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+       * @param value The sessionUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionUuid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionUuid_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_uuid is the uuid hex string of the session_id_session_uuid.
+       * </pre>
+       *
+       * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionUuid() {
+        sessionUuid_ = getDefaultInstance().getSessionUuid();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * session_uuid is the uuid hex string of the session_id_session_uuid.
+       * </pre>
+       *
+       * <code>string session_uuid = 6 [json_name = "sessionUuid", (.gogoproto.moretags) = "yaml:&#92;"session_uuid&#92;""];</code>
+       * @param value The bytes for sessionUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionUuid_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.MetadataProto.ScopeIdInfo scopeIdInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.ScopeIdInfo, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder> scopeIdInfoBuilder_;
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       * @return Whether the scopeIdInfo field is set.
+       */
+      public boolean hasScopeIdInfo() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       * @return The scopeIdInfo.
+       */
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getScopeIdInfo() {
+        if (scopeIdInfoBuilder_ == null) {
+          return scopeIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+        } else {
+          return scopeIdInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder setScopeIdInfo(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo value) {
+        if (scopeIdInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scopeIdInfo_ = value;
+        } else {
+          scopeIdInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder setScopeIdInfo(
+          com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder builderForValue) {
+        if (scopeIdInfoBuilder_ == null) {
+          scopeIdInfo_ = builderForValue.build();
+        } else {
+          scopeIdInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder mergeScopeIdInfo(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo value) {
+        if (scopeIdInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            scopeIdInfo_ != null &&
+            scopeIdInfo_ != com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance()) {
+            getScopeIdInfoBuilder().mergeFrom(value);
+          } else {
+            scopeIdInfo_ = value;
+          }
+        } else {
+          scopeIdInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder clearScopeIdInfo() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        scopeIdInfo_ = null;
+        if (scopeIdInfoBuilder_ != null) {
+          scopeIdInfoBuilder_.dispose();
+          scopeIdInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder getScopeIdInfoBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getScopeIdInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder getScopeIdInfoOrBuilder() {
+        if (scopeIdInfoBuilder_ != null) {
+          return scopeIdInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return scopeIdInfo_ == null ?
+              com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the session_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 7 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.ScopeIdInfo, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder> 
+          getScopeIdInfoFieldBuilder() {
+        if (scopeIdInfoBuilder_ == null) {
+          scopeIdInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.MetadataProto.ScopeIdInfo, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder>(
+                  getScopeIdInfo(),
+                  getParentForChildren(),
+                  isClean());
+          scopeIdInfo_ = null;
+        }
+        return scopeIdInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.SessionIdInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.SessionIdInfo)
+    private static final com.provenance.metadata.v1.MetadataProto.SessionIdInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.SessionIdInfo();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.SessionIdInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SessionIdInfo>
+        PARSER = new com.google.protobuf.AbstractParser<SessionIdInfo>() {
+      @java.lang.Override
+      public SessionIdInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SessionIdInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SessionIdInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.SessionIdInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordIdInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.RecordIdInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_id is the raw bytes of the record address.
+     * </pre>
+     *
+     * <code>bytes record_id = 1 [json_name = "recordId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return The recordId.
+     */
+    com.google.protobuf.ByteString getRecordId();
+
+    /**
+     * <pre>
+     * record_id_prefix is the prefix portion of the record_id.
+     * </pre>
+     *
+     * <code>bytes record_id_prefix = 2 [json_name = "recordIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_id_prefix&#92;""];</code>
+     * @return The recordIdPrefix.
+     */
+    com.google.protobuf.ByteString getRecordIdPrefix();
+
+    /**
+     * <pre>
+     * record_id_scope_uuid is the scope_uuid portion of the record_id.
+     * </pre>
+     *
+     * <code>bytes record_id_scope_uuid = 3 [json_name = "recordIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"record_id_scope_uuid&#92;""];</code>
+     * @return The recordIdScopeUuid.
+     */
+    com.google.protobuf.ByteString getRecordIdScopeUuid();
+
+    /**
+     * <pre>
+     * record_id_hashed_name is the hashed name portion of the record_id.
+     * </pre>
+     *
+     * <code>bytes record_id_hashed_name = 4 [json_name = "recordIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_id_hashed_name&#92;""];</code>
+     * @return The recordIdHashedName.
+     */
+    com.google.protobuf.ByteString getRecordIdHashedName();
+
+    /**
+     * <pre>
+     * record_addr is the bech32 string version of the record_id.
+     * </pre>
+     *
+     * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+     * @return The recordAddr.
+     */
+    java.lang.String getRecordAddr();
+    /**
+     * <pre>
+     * record_addr is the bech32 string version of the record_id.
+     * </pre>
+     *
+     * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+     * @return The bytes for recordAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordAddrBytes();
+
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the record_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return Whether the scopeIdInfo field is set.
+     */
+    boolean hasScopeIdInfo();
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the record_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return The scopeIdInfo.
+     */
+    com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getScopeIdInfo();
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the record_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     */
+    com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder getScopeIdInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * RecordIdInfo contains various info regarding a record id.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.RecordIdInfo}
+   */
+  public static final class RecordIdInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.RecordIdInfo)
+      RecordIdInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecordIdInfo.newBuilder() to construct.
+    private RecordIdInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecordIdInfo() {
+      recordId_ = com.google.protobuf.ByteString.EMPTY;
+      recordIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      recordIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+      recordIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+      recordAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordIdInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordIdInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordIdInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.RecordIdInfo.class, com.provenance.metadata.v1.MetadataProto.RecordIdInfo.Builder.class);
+    }
+
+    public static final int RECORD_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString recordId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_id is the raw bytes of the record address.
+     * </pre>
+     *
+     * <code>bytes record_id = 1 [json_name = "recordId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+     * @return The recordId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordId() {
+      return recordId_;
+    }
+
+    public static final int RECORD_ID_PREFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString recordIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_id_prefix is the prefix portion of the record_id.
+     * </pre>
+     *
+     * <code>bytes record_id_prefix = 2 [json_name = "recordIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_id_prefix&#92;""];</code>
+     * @return The recordIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordIdPrefix() {
+      return recordIdPrefix_;
+    }
+
+    public static final int RECORD_ID_SCOPE_UUID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString recordIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_id_scope_uuid is the scope_uuid portion of the record_id.
+     * </pre>
+     *
+     * <code>bytes record_id_scope_uuid = 3 [json_name = "recordIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"record_id_scope_uuid&#92;""];</code>
+     * @return The recordIdScopeUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordIdScopeUuid() {
+      return recordIdScopeUuid_;
+    }
+
+    public static final int RECORD_ID_HASHED_NAME_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString recordIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_id_hashed_name is the hashed name portion of the record_id.
+     * </pre>
+     *
+     * <code>bytes record_id_hashed_name = 4 [json_name = "recordIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_id_hashed_name&#92;""];</code>
+     * @return The recordIdHashedName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordIdHashedName() {
+      return recordIdHashedName_;
+    }
+
+    public static final int RECORD_ADDR_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordAddr_ = "";
+    /**
+     * <pre>
+     * record_addr is the bech32 string version of the record_id.
+     * </pre>
+     *
+     * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+     * @return The recordAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordAddr() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_addr is the bech32 string version of the record_id.
+     * </pre>
+     *
+     * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+     * @return The bytes for recordAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordAddrBytes() {
+      java.lang.Object ref = recordAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_ID_INFO_FIELD_NUMBER = 6;
+    private com.provenance.metadata.v1.MetadataProto.ScopeIdInfo scopeIdInfo_;
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the record_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return Whether the scopeIdInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasScopeIdInfo() {
+      return scopeIdInfo_ != null;
+    }
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the record_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     * @return The scopeIdInfo.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getScopeIdInfo() {
+      return scopeIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+    }
+    /**
+     * <pre>
+     * scope_id_info is information about the scope id referenced in the record_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder getScopeIdInfoOrBuilder() {
+      return scopeIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!recordId_.isEmpty()) {
+        output.writeBytes(1, recordId_);
+      }
+      if (!recordIdPrefix_.isEmpty()) {
+        output.writeBytes(2, recordIdPrefix_);
+      }
+      if (!recordIdScopeUuid_.isEmpty()) {
+        output.writeBytes(3, recordIdScopeUuid_);
+      }
+      if (!recordIdHashedName_.isEmpty()) {
+        output.writeBytes(4, recordIdHashedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, recordAddr_);
+      }
+      if (scopeIdInfo_ != null) {
+        output.writeMessage(6, getScopeIdInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!recordId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, recordId_);
+      }
+      if (!recordIdPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, recordIdPrefix_);
+      }
+      if (!recordIdScopeUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, recordIdScopeUuid_);
+      }
+      if (!recordIdHashedName_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, recordIdHashedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, recordAddr_);
+      }
+      if (scopeIdInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getScopeIdInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.RecordIdInfo)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.RecordIdInfo other = (com.provenance.metadata.v1.MetadataProto.RecordIdInfo) obj;
+
+      if (!getRecordId()
+          .equals(other.getRecordId())) return false;
+      if (!getRecordIdPrefix()
+          .equals(other.getRecordIdPrefix())) return false;
+      if (!getRecordIdScopeUuid()
+          .equals(other.getRecordIdScopeUuid())) return false;
+      if (!getRecordIdHashedName()
+          .equals(other.getRecordIdHashedName())) return false;
+      if (!getRecordAddr()
+          .equals(other.getRecordAddr())) return false;
+      if (hasScopeIdInfo() != other.hasScopeIdInfo()) return false;
+      if (hasScopeIdInfo()) {
+        if (!getScopeIdInfo()
+            .equals(other.getScopeIdInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordId().hashCode();
+      hash = (37 * hash) + RECORD_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordIdPrefix().hashCode();
+      hash = (37 * hash) + RECORD_ID_SCOPE_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordIdScopeUuid().hashCode();
+      hash = (37 * hash) + RECORD_ID_HASHED_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordIdHashedName().hashCode();
+      hash = (37 * hash) + RECORD_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordAddr().hashCode();
+      if (hasScopeIdInfo()) {
+        hash = (37 * hash) + SCOPE_ID_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getScopeIdInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.RecordIdInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RecordIdInfo contains various info regarding a record id.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.RecordIdInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.RecordIdInfo)
+        com.provenance.metadata.v1.MetadataProto.RecordIdInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordIdInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.RecordIdInfo.class, com.provenance.metadata.v1.MetadataProto.RecordIdInfo.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.RecordIdInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordId_ = com.google.protobuf.ByteString.EMPTY;
+        recordIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        recordIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+        recordIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+        recordAddr_ = "";
+        scopeIdInfo_ = null;
+        if (scopeIdInfoBuilder_ != null) {
+          scopeIdInfoBuilder_.dispose();
+          scopeIdInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.RecordIdInfo getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.RecordIdInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.RecordIdInfo build() {
+        com.provenance.metadata.v1.MetadataProto.RecordIdInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.RecordIdInfo buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.RecordIdInfo result = new com.provenance.metadata.v1.MetadataProto.RecordIdInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.MetadataProto.RecordIdInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordId_ = recordId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recordIdPrefix_ = recordIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.recordIdScopeUuid_ = recordIdScopeUuid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recordIdHashedName_ = recordIdHashedName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.recordAddr_ = recordAddr_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.scopeIdInfo_ = scopeIdInfoBuilder_ == null
+              ? scopeIdInfo_
+              : scopeIdInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.RecordIdInfo) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.RecordIdInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.RecordIdInfo other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.RecordIdInfo.getDefaultInstance()) return this;
+        if (other.getRecordId() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordId(other.getRecordId());
+        }
+        if (other.getRecordIdPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordIdPrefix(other.getRecordIdPrefix());
+        }
+        if (other.getRecordIdScopeUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordIdScopeUuid(other.getRecordIdScopeUuid());
+        }
+        if (other.getRecordIdHashedName() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordIdHashedName(other.getRecordIdHashedName());
+        }
+        if (!other.getRecordAddr().isEmpty()) {
+          recordAddr_ = other.recordAddr_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasScopeIdInfo()) {
+          mergeScopeIdInfo(other.getScopeIdInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recordIdPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                recordIdScopeUuid_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                recordIdHashedName_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                recordAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getScopeIdInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString recordId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_id is the raw bytes of the record address.
+       * </pre>
+       *
+       * <code>bytes record_id = 1 [json_name = "recordId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return The recordId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordId() {
+        return recordId_;
+      }
+      /**
+       * <pre>
+       * record_id is the raw bytes of the record address.
+       * </pre>
+       *
+       * <code>bytes record_id = 1 [json_name = "recordId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @param value The recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_id is the raw bytes of the record address.
+       * </pre>
+       *
+       * <code>bytes record_id = 1 [json_name = "recordId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        recordId_ = getDefaultInstance().getRecordId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recordIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_id_prefix is the prefix portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_prefix = 2 [json_name = "recordIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_id_prefix&#92;""];</code>
+       * @return The recordIdPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordIdPrefix() {
+        return recordIdPrefix_;
+      }
+      /**
+       * <pre>
+       * record_id_prefix is the prefix portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_prefix = 2 [json_name = "recordIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_id_prefix&#92;""];</code>
+       * @param value The recordIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIdPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_id_prefix is the prefix portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_prefix = 2 [json_name = "recordIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_id_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordIdPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recordIdPrefix_ = getDefaultInstance().getRecordIdPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recordIdScopeUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_id_scope_uuid is the scope_uuid portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_scope_uuid = 3 [json_name = "recordIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"record_id_scope_uuid&#92;""];</code>
+       * @return The recordIdScopeUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordIdScopeUuid() {
+        return recordIdScopeUuid_;
+      }
+      /**
+       * <pre>
+       * record_id_scope_uuid is the scope_uuid portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_scope_uuid = 3 [json_name = "recordIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"record_id_scope_uuid&#92;""];</code>
+       * @param value The recordIdScopeUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIdScopeUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordIdScopeUuid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_id_scope_uuid is the scope_uuid portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_scope_uuid = 3 [json_name = "recordIdScopeUuid", (.gogoproto.moretags) = "yaml:&#92;"record_id_scope_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordIdScopeUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        recordIdScopeUuid_ = getDefaultInstance().getRecordIdScopeUuid();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recordIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_id_hashed_name is the hashed name portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_hashed_name = 4 [json_name = "recordIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_id_hashed_name&#92;""];</code>
+       * @return The recordIdHashedName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordIdHashedName() {
+        return recordIdHashedName_;
+      }
+      /**
+       * <pre>
+       * record_id_hashed_name is the hashed name portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_hashed_name = 4 [json_name = "recordIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_id_hashed_name&#92;""];</code>
+       * @param value The recordIdHashedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIdHashedName(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordIdHashedName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_id_hashed_name is the hashed name portion of the record_id.
+       * </pre>
+       *
+       * <code>bytes record_id_hashed_name = 4 [json_name = "recordIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_id_hashed_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordIdHashedName() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        recordIdHashedName_ = getDefaultInstance().getRecordIdHashedName();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recordAddr_ = "";
+      /**
+       * <pre>
+       * record_addr is the bech32 string version of the record_id.
+       * </pre>
+       *
+       * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+       * @return The recordAddr.
+       */
+      public java.lang.String getRecordAddr() {
+        java.lang.Object ref = recordAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 string version of the record_id.
+       * </pre>
+       *
+       * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+       * @return The bytes for recordAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordAddrBytes() {
+        java.lang.Object ref = recordAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 string version of the record_id.
+       * </pre>
+       *
+       * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+       * @param value The recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordAddr_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 string version of the record_id.
+       * </pre>
+       *
+       * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordAddr() {
+        recordAddr_ = getDefaultInstance().getRecordAddr();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_addr is the bech32 string version of the record_id.
+       * </pre>
+       *
+       * <code>string record_addr = 5 [json_name = "recordAddr", (.gogoproto.moretags) = "yaml:&#92;"record_addr&#92;""];</code>
+       * @param value The bytes for recordAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordAddr_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.MetadataProto.ScopeIdInfo scopeIdInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.ScopeIdInfo, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder> scopeIdInfoBuilder_;
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       * @return Whether the scopeIdInfo field is set.
+       */
+      public boolean hasScopeIdInfo() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       * @return The scopeIdInfo.
+       */
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo getScopeIdInfo() {
+        if (scopeIdInfoBuilder_ == null) {
+          return scopeIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+        } else {
+          return scopeIdInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder setScopeIdInfo(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo value) {
+        if (scopeIdInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          scopeIdInfo_ = value;
+        } else {
+          scopeIdInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder setScopeIdInfo(
+          com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder builderForValue) {
+        if (scopeIdInfoBuilder_ == null) {
+          scopeIdInfo_ = builderForValue.build();
+        } else {
+          scopeIdInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder mergeScopeIdInfo(com.provenance.metadata.v1.MetadataProto.ScopeIdInfo value) {
+        if (scopeIdInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            scopeIdInfo_ != null &&
+            scopeIdInfo_ != com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance()) {
+            getScopeIdInfoBuilder().mergeFrom(value);
+          } else {
+            scopeIdInfo_ = value;
+          }
+        } else {
+          scopeIdInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public Builder clearScopeIdInfo() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        scopeIdInfo_ = null;
+        if (scopeIdInfoBuilder_ != null) {
+          scopeIdInfoBuilder_.dispose();
+          scopeIdInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder getScopeIdInfoBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getScopeIdInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder getScopeIdInfoOrBuilder() {
+        if (scopeIdInfoBuilder_ != null) {
+          return scopeIdInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return scopeIdInfo_ == null ?
+              com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.getDefaultInstance() : scopeIdInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * scope_id_info is information about the scope id referenced in the record_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ScopeIdInfo scope_id_info = 6 [json_name = "scopeIdInfo", (.gogoproto.moretags) = "yaml:&#92;"scope_id_info&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.ScopeIdInfo, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder> 
+          getScopeIdInfoFieldBuilder() {
+        if (scopeIdInfoBuilder_ == null) {
+          scopeIdInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.MetadataProto.ScopeIdInfo, com.provenance.metadata.v1.MetadataProto.ScopeIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ScopeIdInfoOrBuilder>(
+                  getScopeIdInfo(),
+                  getParentForChildren(),
+                  isClean());
+          scopeIdInfo_ = null;
+        }
+        return scopeIdInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.RecordIdInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.RecordIdInfo)
+    private static final com.provenance.metadata.v1.MetadataProto.RecordIdInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.RecordIdInfo();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordIdInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecordIdInfo>
+        PARSER = new com.google.protobuf.AbstractParser<RecordIdInfo>() {
+      @java.lang.Override
+      public RecordIdInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecordIdInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecordIdInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.RecordIdInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ScopeSpecIdInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.ScopeSpecIdInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * scope_spec_id is the raw bytes of the scope specification address.
+     * </pre>
+     *
+     * <code>bytes scope_spec_id = 1 [json_name = "scopeSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id&#92;""];</code>
+     * @return The scopeSpecId.
+     */
+    com.google.protobuf.ByteString getScopeSpecId();
+
+    /**
+     * <pre>
+     * scope_spec_id_prefix is the prefix portion of the scope_spec_id.
+     * </pre>
+     *
+     * <code>bytes scope_spec_id_prefix = 2 [json_name = "scopeSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_prefix&#92;""];</code>
+     * @return The scopeSpecIdPrefix.
+     */
+    com.google.protobuf.ByteString getScopeSpecIdPrefix();
+
+    /**
+     * <pre>
+     * scope_spec_id_scope_spec_uuid is the scope_spec_uuid portion of the scope_spec_id.
+     * </pre>
+     *
+     * <code>bytes scope_spec_id_scope_spec_uuid = 3 [json_name = "scopeSpecIdScopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_scope_spec_uuid&#92;""];</code>
+     * @return The scopeSpecIdScopeSpecUuid.
+     */
+    com.google.protobuf.ByteString getScopeSpecIdScopeSpecUuid();
+
+    /**
+     * <pre>
+     * scope_spec_addr is the bech32 string version of the scope_spec_id.
+     * </pre>
+     *
+     * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+     * @return The scopeSpecAddr.
+     */
+    java.lang.String getScopeSpecAddr();
+    /**
+     * <pre>
+     * scope_spec_addr is the bech32 string version of the scope_spec_id.
+     * </pre>
+     *
+     * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+     * @return The bytes for scopeSpecAddr.
+     */
+    com.google.protobuf.ByteString
+        getScopeSpecAddrBytes();
+
+    /**
+     * <pre>
+     * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+     * </pre>
+     *
+     * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+     * @return The scopeSpecUuid.
+     */
+    java.lang.String getScopeSpecUuid();
+    /**
+     * <pre>
+     * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+     * </pre>
+     *
+     * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+     * @return The bytes for scopeSpecUuid.
+     */
+    com.google.protobuf.ByteString
+        getScopeSpecUuidBytes();
+  }
+  /**
+   * <pre>
+   * ScopeSpecIdInfo contains various info regarding a scope specification id.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.ScopeSpecIdInfo}
+   */
+  public static final class ScopeSpecIdInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.ScopeSpecIdInfo)
+      ScopeSpecIdInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScopeSpecIdInfo.newBuilder() to construct.
+    private ScopeSpecIdInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScopeSpecIdInfo() {
+      scopeSpecId_ = com.google.protobuf.ByteString.EMPTY;
+      scopeSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      scopeSpecIdScopeSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+      scopeSpecAddr_ = "";
+      scopeSpecUuid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScopeSpecIdInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeSpecIdInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeSpecIdInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.Builder.class);
+    }
+
+    public static final int SCOPE_SPEC_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString scopeSpecId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * scope_spec_id is the raw bytes of the scope specification address.
+     * </pre>
+     *
+     * <code>bytes scope_spec_id = 1 [json_name = "scopeSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id&#92;""];</code>
+     * @return The scopeSpecId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeSpecId() {
+      return scopeSpecId_;
+    }
+
+    public static final int SCOPE_SPEC_ID_PREFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString scopeSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * scope_spec_id_prefix is the prefix portion of the scope_spec_id.
+     * </pre>
+     *
+     * <code>bytes scope_spec_id_prefix = 2 [json_name = "scopeSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_prefix&#92;""];</code>
+     * @return The scopeSpecIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeSpecIdPrefix() {
+      return scopeSpecIdPrefix_;
+    }
+
+    public static final int SCOPE_SPEC_ID_SCOPE_SPEC_UUID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString scopeSpecIdScopeSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * scope_spec_id_scope_spec_uuid is the scope_spec_uuid portion of the scope_spec_id.
+     * </pre>
+     *
+     * <code>bytes scope_spec_id_scope_spec_uuid = 3 [json_name = "scopeSpecIdScopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_scope_spec_uuid&#92;""];</code>
+     * @return The scopeSpecIdScopeSpecUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getScopeSpecIdScopeSpecUuid() {
+      return scopeSpecIdScopeSpecUuid_;
+    }
+
+    public static final int SCOPE_SPEC_ADDR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeSpecAddr_ = "";
+    /**
+     * <pre>
+     * scope_spec_addr is the bech32 string version of the scope_spec_id.
+     * </pre>
+     *
+     * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+     * @return The scopeSpecAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeSpecAddr() {
+      java.lang.Object ref = scopeSpecAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeSpecAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_spec_addr is the bech32 string version of the scope_spec_id.
+     * </pre>
+     *
+     * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+     * @return The bytes for scopeSpecAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeSpecAddrBytes() {
+      java.lang.Object ref = scopeSpecAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeSpecAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCOPE_SPEC_UUID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object scopeSpecUuid_ = "";
+    /**
+     * <pre>
+     * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+     * </pre>
+     *
+     * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+     * @return The scopeSpecUuid.
+     */
+    @java.lang.Override
+    public java.lang.String getScopeSpecUuid() {
+      java.lang.Object ref = scopeSpecUuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scopeSpecUuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+     * </pre>
+     *
+     * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+     * @return The bytes for scopeSpecUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScopeSpecUuidBytes() {
+      java.lang.Object ref = scopeSpecUuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scopeSpecUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!scopeSpecId_.isEmpty()) {
+        output.writeBytes(1, scopeSpecId_);
+      }
+      if (!scopeSpecIdPrefix_.isEmpty()) {
+        output.writeBytes(2, scopeSpecIdPrefix_);
+      }
+      if (!scopeSpecIdScopeSpecUuid_.isEmpty()) {
+        output.writeBytes(3, scopeSpecIdScopeSpecUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, scopeSpecAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecUuid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, scopeSpecUuid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!scopeSpecId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, scopeSpecId_);
+      }
+      if (!scopeSpecIdPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, scopeSpecIdPrefix_);
+      }
+      if (!scopeSpecIdScopeSpecUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, scopeSpecIdScopeSpecUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, scopeSpecAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scopeSpecUuid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, scopeSpecUuid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo other = (com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo) obj;
+
+      if (!getScopeSpecId()
+          .equals(other.getScopeSpecId())) return false;
+      if (!getScopeSpecIdPrefix()
+          .equals(other.getScopeSpecIdPrefix())) return false;
+      if (!getScopeSpecIdScopeSpecUuid()
+          .equals(other.getScopeSpecIdScopeSpecUuid())) return false;
+      if (!getScopeSpecAddr()
+          .equals(other.getScopeSpecAddr())) return false;
+      if (!getScopeSpecUuid()
+          .equals(other.getScopeSpecUuid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCOPE_SPEC_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecId().hashCode();
+      hash = (37 * hash) + SCOPE_SPEC_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecIdPrefix().hashCode();
+      hash = (37 * hash) + SCOPE_SPEC_ID_SCOPE_SPEC_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecIdScopeSpecUuid().hashCode();
+      hash = (37 * hash) + SCOPE_SPEC_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecAddr().hashCode();
+      hash = (37 * hash) + SCOPE_SPEC_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeSpecUuid().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ScopeSpecIdInfo contains various info regarding a scope specification id.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.ScopeSpecIdInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.ScopeSpecIdInfo)
+        com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeSpecIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeSpecIdInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        scopeSpecId_ = com.google.protobuf.ByteString.EMPTY;
+        scopeSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        scopeSpecIdScopeSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+        scopeSpecAddr_ = "";
+        scopeSpecUuid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ScopeSpecIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo build() {
+        com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo result = new com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.scopeSpecId_ = scopeSpecId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scopeSpecIdPrefix_ = scopeSpecIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.scopeSpecIdScopeSpecUuid_ = scopeSpecIdScopeSpecUuid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.scopeSpecAddr_ = scopeSpecAddr_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.scopeSpecUuid_ = scopeSpecUuid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo.getDefaultInstance()) return this;
+        if (other.getScopeSpecId() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeSpecId(other.getScopeSpecId());
+        }
+        if (other.getScopeSpecIdPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeSpecIdPrefix(other.getScopeSpecIdPrefix());
+        }
+        if (other.getScopeSpecIdScopeSpecUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setScopeSpecIdScopeSpecUuid(other.getScopeSpecIdScopeSpecUuid());
+        }
+        if (!other.getScopeSpecAddr().isEmpty()) {
+          scopeSpecAddr_ = other.scopeSpecAddr_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getScopeSpecUuid().isEmpty()) {
+          scopeSpecUuid_ = other.scopeSpecUuid_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                scopeSpecId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                scopeSpecIdPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                scopeSpecIdScopeSpecUuid_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                scopeSpecAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                scopeSpecUuid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString scopeSpecId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * scope_spec_id is the raw bytes of the scope specification address.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id = 1 [json_name = "scopeSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id&#92;""];</code>
+       * @return The scopeSpecId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeSpecId() {
+        return scopeSpecId_;
+      }
+      /**
+       * <pre>
+       * scope_spec_id is the raw bytes of the scope specification address.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id = 1 [json_name = "scopeSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id&#92;""];</code>
+       * @param value The scopeSpecId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_id is the raw bytes of the scope specification address.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id = 1 [json_name = "scopeSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        scopeSpecId_ = getDefaultInstance().getScopeSpecId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString scopeSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * scope_spec_id_prefix is the prefix portion of the scope_spec_id.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id_prefix = 2 [json_name = "scopeSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_prefix&#92;""];</code>
+       * @return The scopeSpecIdPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeSpecIdPrefix() {
+        return scopeSpecIdPrefix_;
+      }
+      /**
+       * <pre>
+       * scope_spec_id_prefix is the prefix portion of the scope_spec_id.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id_prefix = 2 [json_name = "scopeSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_prefix&#92;""];</code>
+       * @param value The scopeSpecIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecIdPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_id_prefix is the prefix portion of the scope_spec_id.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id_prefix = 2 [json_name = "scopeSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecIdPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        scopeSpecIdPrefix_ = getDefaultInstance().getScopeSpecIdPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString scopeSpecIdScopeSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * scope_spec_id_scope_spec_uuid is the scope_spec_uuid portion of the scope_spec_id.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id_scope_spec_uuid = 3 [json_name = "scopeSpecIdScopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_scope_spec_uuid&#92;""];</code>
+       * @return The scopeSpecIdScopeSpecUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getScopeSpecIdScopeSpecUuid() {
+        return scopeSpecIdScopeSpecUuid_;
+      }
+      /**
+       * <pre>
+       * scope_spec_id_scope_spec_uuid is the scope_spec_uuid portion of the scope_spec_id.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id_scope_spec_uuid = 3 [json_name = "scopeSpecIdScopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_scope_spec_uuid&#92;""];</code>
+       * @param value The scopeSpecIdScopeSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecIdScopeSpecUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecIdScopeSpecUuid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_id_scope_spec_uuid is the scope_spec_uuid portion of the scope_spec_id.
+       * </pre>
+       *
+       * <code>bytes scope_spec_id_scope_spec_uuid = 3 [json_name = "scopeSpecIdScopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_id_scope_spec_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecIdScopeSpecUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        scopeSpecIdScopeSpecUuid_ = getDefaultInstance().getScopeSpecIdScopeSpecUuid();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeSpecAddr_ = "";
+      /**
+       * <pre>
+       * scope_spec_addr is the bech32 string version of the scope_spec_id.
+       * </pre>
+       *
+       * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+       * @return The scopeSpecAddr.
+       */
+      public java.lang.String getScopeSpecAddr() {
+        java.lang.Object ref = scopeSpecAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeSpecAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_spec_addr is the bech32 string version of the scope_spec_id.
+       * </pre>
+       *
+       * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+       * @return The bytes for scopeSpecAddr.
+       */
+      public com.google.protobuf.ByteString
+          getScopeSpecAddrBytes() {
+        java.lang.Object ref = scopeSpecAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeSpecAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_spec_addr is the bech32 string version of the scope_spec_id.
+       * </pre>
+       *
+       * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+       * @param value The scopeSpecAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecAddr_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_addr is the bech32 string version of the scope_spec_id.
+       * </pre>
+       *
+       * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecAddr() {
+        scopeSpecAddr_ = getDefaultInstance().getScopeSpecAddr();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_addr is the bech32 string version of the scope_spec_id.
+       * </pre>
+       *
+       * <code>string scope_spec_addr = 4 [json_name = "scopeSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_addr&#92;""];</code>
+       * @param value The bytes for scopeSpecAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeSpecAddr_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object scopeSpecUuid_ = "";
+      /**
+       * <pre>
+       * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+       * </pre>
+       *
+       * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+       * @return The scopeSpecUuid.
+       */
+      public java.lang.String getScopeSpecUuid() {
+        java.lang.Object ref = scopeSpecUuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          scopeSpecUuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+       * </pre>
+       *
+       * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+       * @return The bytes for scopeSpecUuid.
+       */
+      public com.google.protobuf.ByteString
+          getScopeSpecUuidBytes() {
+        java.lang.Object ref = scopeSpecUuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          scopeSpecUuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+       * </pre>
+       *
+       * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+       * @param value The scopeSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecUuid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        scopeSpecUuid_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+       * </pre>
+       *
+       * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScopeSpecUuid() {
+        scopeSpecUuid_ = getDefaultInstance().getScopeSpecUuid();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * scope_spec_uuid is the uuid hex string of the scope_spec_id_scope_spec_uuid.
+       * </pre>
+       *
+       * <code>string scope_spec_uuid = 5 [json_name = "scopeSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"scope_spec_uuid&#92;""];</code>
+       * @param value The bytes for scopeSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScopeSpecUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        scopeSpecUuid_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.ScopeSpecIdInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.ScopeSpecIdInfo)
+    private static final com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScopeSpecIdInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ScopeSpecIdInfo>() {
+      @java.lang.Override
+      public ScopeSpecIdInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScopeSpecIdInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScopeSpecIdInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ScopeSpecIdInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractSpecIdInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.ContractSpecIdInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_spec_id is the raw bytes of the contract specification address.
+     * </pre>
+     *
+     * <code>bytes contract_spec_id = 1 [json_name = "contractSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id&#92;""];</code>
+     * @return The contractSpecId.
+     */
+    com.google.protobuf.ByteString getContractSpecId();
+
+    /**
+     * <pre>
+     * contract_spec_id_prefix is the prefix portion of the contract_spec_id.
+     * </pre>
+     *
+     * <code>bytes contract_spec_id_prefix = 2 [json_name = "contractSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_prefix&#92;""];</code>
+     * @return The contractSpecIdPrefix.
+     */
+    com.google.protobuf.ByteString getContractSpecIdPrefix();
+
+    /**
+     * <pre>
+     * contract_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the contract_spec_id.
+     * </pre>
+     *
+     * <code>bytes contract_spec_id_contract_spec_uuid = 3 [json_name = "contractSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_contract_spec_uuid&#92;""];</code>
+     * @return The contractSpecIdContractSpecUuid.
+     */
+    com.google.protobuf.ByteString getContractSpecIdContractSpecUuid();
+
+    /**
+     * <pre>
+     * contract_spec_addr is the bech32 string version of the contract_spec_id.
+     * </pre>
+     *
+     * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+     * @return The contractSpecAddr.
+     */
+    java.lang.String getContractSpecAddr();
+    /**
+     * <pre>
+     * contract_spec_addr is the bech32 string version of the contract_spec_id.
+     * </pre>
+     *
+     * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+     * @return The bytes for contractSpecAddr.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecAddrBytes();
+
+    /**
+     * <pre>
+     * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+     * </pre>
+     *
+     * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+     * @return The contractSpecUuid.
+     */
+    java.lang.String getContractSpecUuid();
+    /**
+     * <pre>
+     * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+     * </pre>
+     *
+     * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+     * @return The bytes for contractSpecUuid.
+     */
+    com.google.protobuf.ByteString
+        getContractSpecUuidBytes();
+  }
+  /**
+   * <pre>
+   * ContractSpecIdInfo contains various info regarding a contract specification id.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.ContractSpecIdInfo}
+   */
+  public static final class ContractSpecIdInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.ContractSpecIdInfo)
+      ContractSpecIdInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ContractSpecIdInfo.newBuilder() to construct.
+    private ContractSpecIdInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ContractSpecIdInfo() {
+      contractSpecId_ = com.google.protobuf.ByteString.EMPTY;
+      contractSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      contractSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+      contractSpecAddr_ = "";
+      contractSpecUuid_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ContractSpecIdInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ContractSpecIdInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ContractSpecIdInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder.class);
+    }
+
+    public static final int CONTRACT_SPEC_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString contractSpecId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * contract_spec_id is the raw bytes of the contract specification address.
+     * </pre>
+     *
+     * <code>bytes contract_spec_id = 1 [json_name = "contractSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id&#92;""];</code>
+     * @return The contractSpecId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContractSpecId() {
+      return contractSpecId_;
+    }
+
+    public static final int CONTRACT_SPEC_ID_PREFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString contractSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * contract_spec_id_prefix is the prefix portion of the contract_spec_id.
+     * </pre>
+     *
+     * <code>bytes contract_spec_id_prefix = 2 [json_name = "contractSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_prefix&#92;""];</code>
+     * @return The contractSpecIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContractSpecIdPrefix() {
+      return contractSpecIdPrefix_;
+    }
+
+    public static final int CONTRACT_SPEC_ID_CONTRACT_SPEC_UUID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString contractSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * contract_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the contract_spec_id.
+     * </pre>
+     *
+     * <code>bytes contract_spec_id_contract_spec_uuid = 3 [json_name = "contractSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_contract_spec_uuid&#92;""];</code>
+     * @return The contractSpecIdContractSpecUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContractSpecIdContractSpecUuid() {
+      return contractSpecIdContractSpecUuid_;
+    }
+
+    public static final int CONTRACT_SPEC_ADDR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecAddr_ = "";
+    /**
+     * <pre>
+     * contract_spec_addr is the bech32 string version of the contract_spec_id.
+     * </pre>
+     *
+     * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+     * @return The contractSpecAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecAddr() {
+      java.lang.Object ref = contractSpecAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_spec_addr is the bech32 string version of the contract_spec_id.
+     * </pre>
+     *
+     * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+     * @return The bytes for contractSpecAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecAddrBytes() {
+      java.lang.Object ref = contractSpecAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_SPEC_UUID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractSpecUuid_ = "";
+    /**
+     * <pre>
+     * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+     * </pre>
+     *
+     * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+     * @return The contractSpecUuid.
+     */
+    @java.lang.Override
+    public java.lang.String getContractSpecUuid() {
+      java.lang.Object ref = contractSpecUuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractSpecUuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+     * </pre>
+     *
+     * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+     * @return The bytes for contractSpecUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractSpecUuidBytes() {
+      java.lang.Object ref = contractSpecUuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractSpecUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!contractSpecId_.isEmpty()) {
+        output.writeBytes(1, contractSpecId_);
+      }
+      if (!contractSpecIdPrefix_.isEmpty()) {
+        output.writeBytes(2, contractSpecIdPrefix_);
+      }
+      if (!contractSpecIdContractSpecUuid_.isEmpty()) {
+        output.writeBytes(3, contractSpecIdContractSpecUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, contractSpecAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecUuid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, contractSpecUuid_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!contractSpecId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, contractSpecId_);
+      }
+      if (!contractSpecIdPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, contractSpecIdPrefix_);
+      }
+      if (!contractSpecIdContractSpecUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, contractSpecIdContractSpecUuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, contractSpecAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractSpecUuid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, contractSpecUuid_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo other = (com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo) obj;
+
+      if (!getContractSpecId()
+          .equals(other.getContractSpecId())) return false;
+      if (!getContractSpecIdPrefix()
+          .equals(other.getContractSpecIdPrefix())) return false;
+      if (!getContractSpecIdContractSpecUuid()
+          .equals(other.getContractSpecIdContractSpecUuid())) return false;
+      if (!getContractSpecAddr()
+          .equals(other.getContractSpecAddr())) return false;
+      if (!getContractSpecUuid()
+          .equals(other.getContractSpecUuid())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_SPEC_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecId().hashCode();
+      hash = (37 * hash) + CONTRACT_SPEC_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecIdPrefix().hashCode();
+      hash = (37 * hash) + CONTRACT_SPEC_ID_CONTRACT_SPEC_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecIdContractSpecUuid().hashCode();
+      hash = (37 * hash) + CONTRACT_SPEC_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecAddr().hashCode();
+      hash = (37 * hash) + CONTRACT_SPEC_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getContractSpecUuid().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ContractSpecIdInfo contains various info regarding a contract specification id.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.ContractSpecIdInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.ContractSpecIdInfo)
+        com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ContractSpecIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ContractSpecIdInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractSpecId_ = com.google.protobuf.ByteString.EMPTY;
+        contractSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        contractSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+        contractSpecAddr_ = "";
+        contractSpecUuid_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_ContractSpecIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo build() {
+        com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo result = new com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractSpecId_ = contractSpecId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractSpecIdPrefix_ = contractSpecIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.contractSpecIdContractSpecUuid_ = contractSpecIdContractSpecUuid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contractSpecAddr_ = contractSpecAddr_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.contractSpecUuid_ = contractSpecUuid_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance()) return this;
+        if (other.getContractSpecId() != com.google.protobuf.ByteString.EMPTY) {
+          setContractSpecId(other.getContractSpecId());
+        }
+        if (other.getContractSpecIdPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setContractSpecIdPrefix(other.getContractSpecIdPrefix());
+        }
+        if (other.getContractSpecIdContractSpecUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setContractSpecIdContractSpecUuid(other.getContractSpecIdContractSpecUuid());
+        }
+        if (!other.getContractSpecAddr().isEmpty()) {
+          contractSpecAddr_ = other.contractSpecAddr_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getContractSpecUuid().isEmpty()) {
+          contractSpecUuid_ = other.contractSpecUuid_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractSpecId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractSpecIdPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                contractSpecIdContractSpecUuid_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                contractSpecAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                contractSpecUuid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString contractSpecId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * contract_spec_id is the raw bytes of the contract specification address.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id = 1 [json_name = "contractSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id&#92;""];</code>
+       * @return The contractSpecId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContractSpecId() {
+        return contractSpecId_;
+      }
+      /**
+       * <pre>
+       * contract_spec_id is the raw bytes of the contract specification address.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id = 1 [json_name = "contractSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id&#92;""];</code>
+       * @param value The contractSpecId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id is the raw bytes of the contract specification address.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id = 1 [json_name = "contractSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contractSpecId_ = getDefaultInstance().getContractSpecId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString contractSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * contract_spec_id_prefix is the prefix portion of the contract_spec_id.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id_prefix = 2 [json_name = "contractSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_prefix&#92;""];</code>
+       * @return The contractSpecIdPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContractSpecIdPrefix() {
+        return contractSpecIdPrefix_;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_prefix is the prefix portion of the contract_spec_id.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id_prefix = 2 [json_name = "contractSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_prefix&#92;""];</code>
+       * @param value The contractSpecIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecIdPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_prefix is the prefix portion of the contract_spec_id.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id_prefix = 2 [json_name = "contractSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecIdPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contractSpecIdPrefix_ = getDefaultInstance().getContractSpecIdPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString contractSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * contract_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the contract_spec_id.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id_contract_spec_uuid = 3 [json_name = "contractSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_contract_spec_uuid&#92;""];</code>
+       * @return The contractSpecIdContractSpecUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContractSpecIdContractSpecUuid() {
+        return contractSpecIdContractSpecUuid_;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the contract_spec_id.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id_contract_spec_uuid = 3 [json_name = "contractSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_contract_spec_uuid&#92;""];</code>
+       * @param value The contractSpecIdContractSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecIdContractSpecUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecIdContractSpecUuid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the contract_spec_id.
+       * </pre>
+       *
+       * <code>bytes contract_spec_id_contract_spec_uuid = 3 [json_name = "contractSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_contract_spec_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecIdContractSpecUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contractSpecIdContractSpecUuid_ = getDefaultInstance().getContractSpecIdContractSpecUuid();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractSpecAddr_ = "";
+      /**
+       * <pre>
+       * contract_spec_addr is the bech32 string version of the contract_spec_id.
+       * </pre>
+       *
+       * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+       * @return The contractSpecAddr.
+       */
+      public java.lang.String getContractSpecAddr() {
+        java.lang.Object ref = contractSpecAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_spec_addr is the bech32 string version of the contract_spec_id.
+       * </pre>
+       *
+       * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+       * @return The bytes for contractSpecAddr.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecAddrBytes() {
+        java.lang.Object ref = contractSpecAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_spec_addr is the bech32 string version of the contract_spec_id.
+       * </pre>
+       *
+       * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+       * @param value The contractSpecAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecAddr_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_addr is the bech32 string version of the contract_spec_id.
+       * </pre>
+       *
+       * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecAddr() {
+        contractSpecAddr_ = getDefaultInstance().getContractSpecAddr();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_addr is the bech32 string version of the contract_spec_id.
+       * </pre>
+       *
+       * <code>string contract_spec_addr = 4 [json_name = "contractSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_addr&#92;""];</code>
+       * @param value The bytes for contractSpecAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecAddr_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractSpecUuid_ = "";
+      /**
+       * <pre>
+       * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+       * </pre>
+       *
+       * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+       * @return The contractSpecUuid.
+       */
+      public java.lang.String getContractSpecUuid() {
+        java.lang.Object ref = contractSpecUuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractSpecUuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+       * </pre>
+       *
+       * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+       * @return The bytes for contractSpecUuid.
+       */
+      public com.google.protobuf.ByteString
+          getContractSpecUuidBytes() {
+        java.lang.Object ref = contractSpecUuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractSpecUuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+       * </pre>
+       *
+       * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+       * @param value The contractSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecUuid(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractSpecUuid_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+       * </pre>
+       *
+       * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractSpecUuid() {
+        contractSpecUuid_ = getDefaultInstance().getContractSpecUuid();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_uuid is the uuid hex string of the contract_spec_id_contract_spec_uuid.
+       * </pre>
+       *
+       * <code>string contract_spec_uuid = 5 [json_name = "contractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_uuid&#92;""];</code>
+       * @param value The bytes for contractSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractSpecUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractSpecUuid_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.ContractSpecIdInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.ContractSpecIdInfo)
+    private static final com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ContractSpecIdInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ContractSpecIdInfo>() {
+      @java.lang.Override
+      public ContractSpecIdInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ContractSpecIdInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ContractSpecIdInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecordSpecIdInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.metadata.v1.RecordSpecIdInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * record_spec_id is the raw bytes of the record specification address.
+     * </pre>
+     *
+     * <code>bytes record_spec_id = 1 [json_name = "recordSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id&#92;""];</code>
+     * @return The recordSpecId.
+     */
+    com.google.protobuf.ByteString getRecordSpecId();
+
+    /**
+     * <pre>
+     * record_spec_id_prefix is the prefix portion of the record_spec_id.
+     * </pre>
+     *
+     * <code>bytes record_spec_id_prefix = 2 [json_name = "recordSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_prefix&#92;""];</code>
+     * @return The recordSpecIdPrefix.
+     */
+    com.google.protobuf.ByteString getRecordSpecIdPrefix();
+
+    /**
+     * <pre>
+     * record_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the record_spec_id.
+     * </pre>
+     *
+     * <code>bytes record_spec_id_contract_spec_uuid = 3 [json_name = "recordSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_contract_spec_uuid&#92;""];</code>
+     * @return The recordSpecIdContractSpecUuid.
+     */
+    com.google.protobuf.ByteString getRecordSpecIdContractSpecUuid();
+
+    /**
+     * <pre>
+     * record_spec_id_hashed_name is the hashed name portion of the record_spec_id.
+     * </pre>
+     *
+     * <code>bytes record_spec_id_hashed_name = 4 [json_name = "recordSpecIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_hashed_name&#92;""];</code>
+     * @return The recordSpecIdHashedName.
+     */
+    com.google.protobuf.ByteString getRecordSpecIdHashedName();
+
+    /**
+     * <pre>
+     * record_spec_addr is the bech32 string version of the record_spec_id.
+     * </pre>
+     *
+     * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+     * @return The recordSpecAddr.
+     */
+    java.lang.String getRecordSpecAddr();
+    /**
+     * <pre>
+     * record_spec_addr is the bech32 string version of the record_spec_id.
+     * </pre>
+     *
+     * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+     * @return The bytes for recordSpecAddr.
+     */
+    com.google.protobuf.ByteString
+        getRecordSpecAddrBytes();
+
+    /**
+     * <pre>
+     * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+     * @return Whether the contractSpecIdInfo field is set.
+     */
+    boolean hasContractSpecIdInfo();
+    /**
+     * <pre>
+     * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+     * @return The contractSpecIdInfo.
+     */
+    com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo getContractSpecIdInfo();
+    /**
+     * <pre>
+     * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+     */
+    com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder getContractSpecIdInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * RecordSpecIdInfo contains various info regarding a record specification id.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.metadata.v1.RecordSpecIdInfo}
+   */
+  public static final class RecordSpecIdInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.metadata.v1.RecordSpecIdInfo)
+      RecordSpecIdInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecordSpecIdInfo.newBuilder() to construct.
+    private RecordSpecIdInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecordSpecIdInfo() {
+      recordSpecId_ = com.google.protobuf.ByteString.EMPTY;
+      recordSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      recordSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+      recordSpecIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+      recordSpecAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecordSpecIdInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordSpecIdInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordSpecIdInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.Builder.class);
+    }
+
+    public static final int RECORD_SPEC_ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString recordSpecId_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_spec_id is the raw bytes of the record specification address.
+     * </pre>
+     *
+     * <code>bytes record_spec_id = 1 [json_name = "recordSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id&#92;""];</code>
+     * @return The recordSpecId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordSpecId() {
+      return recordSpecId_;
+    }
+
+    public static final int RECORD_SPEC_ID_PREFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString recordSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_spec_id_prefix is the prefix portion of the record_spec_id.
+     * </pre>
+     *
+     * <code>bytes record_spec_id_prefix = 2 [json_name = "recordSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_prefix&#92;""];</code>
+     * @return The recordSpecIdPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordSpecIdPrefix() {
+      return recordSpecIdPrefix_;
+    }
+
+    public static final int RECORD_SPEC_ID_CONTRACT_SPEC_UUID_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString recordSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the record_spec_id.
+     * </pre>
+     *
+     * <code>bytes record_spec_id_contract_spec_uuid = 3 [json_name = "recordSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_contract_spec_uuid&#92;""];</code>
+     * @return The recordSpecIdContractSpecUuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordSpecIdContractSpecUuid() {
+      return recordSpecIdContractSpecUuid_;
+    }
+
+    public static final int RECORD_SPEC_ID_HASHED_NAME_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString recordSpecIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * record_spec_id_hashed_name is the hashed name portion of the record_spec_id.
+     * </pre>
+     *
+     * <code>bytes record_spec_id_hashed_name = 4 [json_name = "recordSpecIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_hashed_name&#92;""];</code>
+     * @return The recordSpecIdHashedName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecordSpecIdHashedName() {
+      return recordSpecIdHashedName_;
+    }
+
+    public static final int RECORD_SPEC_ADDR_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordSpecAddr_ = "";
+    /**
+     * <pre>
+     * record_spec_addr is the bech32 string version of the record_spec_id.
+     * </pre>
+     *
+     * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+     * @return The recordSpecAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordSpecAddr() {
+      java.lang.Object ref = recordSpecAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordSpecAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * record_spec_addr is the bech32 string version of the record_spec_id.
+     * </pre>
+     *
+     * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+     * @return The bytes for recordSpecAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordSpecAddrBytes() {
+      java.lang.Object ref = recordSpecAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordSpecAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_SPEC_ID_INFO_FIELD_NUMBER = 6;
+    private com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo contractSpecIdInfo_;
+    /**
+     * <pre>
+     * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+     * @return Whether the contractSpecIdInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractSpecIdInfo() {
+      return contractSpecIdInfo_ != null;
+    }
+    /**
+     * <pre>
+     * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+     * @return The contractSpecIdInfo.
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo getContractSpecIdInfo() {
+      return contractSpecIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance() : contractSpecIdInfo_;
+    }
+    /**
+     * <pre>
+     * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+     * </pre>
+     *
+     * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder getContractSpecIdInfoOrBuilder() {
+      return contractSpecIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance() : contractSpecIdInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!recordSpecId_.isEmpty()) {
+        output.writeBytes(1, recordSpecId_);
+      }
+      if (!recordSpecIdPrefix_.isEmpty()) {
+        output.writeBytes(2, recordSpecIdPrefix_);
+      }
+      if (!recordSpecIdContractSpecUuid_.isEmpty()) {
+        output.writeBytes(3, recordSpecIdContractSpecUuid_);
+      }
+      if (!recordSpecIdHashedName_.isEmpty()) {
+        output.writeBytes(4, recordSpecIdHashedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, recordSpecAddr_);
+      }
+      if (contractSpecIdInfo_ != null) {
+        output.writeMessage(6, getContractSpecIdInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!recordSpecId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, recordSpecId_);
+      }
+      if (!recordSpecIdPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, recordSpecIdPrefix_);
+      }
+      if (!recordSpecIdContractSpecUuid_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, recordSpecIdContractSpecUuid_);
+      }
+      if (!recordSpecIdHashedName_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, recordSpecIdHashedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordSpecAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, recordSpecAddr_);
+      }
+      if (contractSpecIdInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getContractSpecIdInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo)) {
+        return super.equals(obj);
+      }
+      com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo other = (com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo) obj;
+
+      if (!getRecordSpecId()
+          .equals(other.getRecordSpecId())) return false;
+      if (!getRecordSpecIdPrefix()
+          .equals(other.getRecordSpecIdPrefix())) return false;
+      if (!getRecordSpecIdContractSpecUuid()
+          .equals(other.getRecordSpecIdContractSpecUuid())) return false;
+      if (!getRecordSpecIdHashedName()
+          .equals(other.getRecordSpecIdHashedName())) return false;
+      if (!getRecordSpecAddr()
+          .equals(other.getRecordSpecAddr())) return false;
+      if (hasContractSpecIdInfo() != other.hasContractSpecIdInfo()) return false;
+      if (hasContractSpecIdInfo()) {
+        if (!getContractSpecIdInfo()
+            .equals(other.getContractSpecIdInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_SPEC_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecId().hashCode();
+      hash = (37 * hash) + RECORD_SPEC_ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecIdPrefix().hashCode();
+      hash = (37 * hash) + RECORD_SPEC_ID_CONTRACT_SPEC_UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecIdContractSpecUuid().hashCode();
+      hash = (37 * hash) + RECORD_SPEC_ID_HASHED_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecIdHashedName().hashCode();
+      hash = (37 * hash) + RECORD_SPEC_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordSpecAddr().hashCode();
+      if (hasContractSpecIdInfo()) {
+        hash = (37 * hash) + CONTRACT_SPEC_ID_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getContractSpecIdInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RecordSpecIdInfo contains various info regarding a record specification id.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.metadata.v1.RecordSpecIdInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.metadata.v1.RecordSpecIdInfo)
+        com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordSpecIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordSpecIdInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.class, com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.Builder.class);
+      }
+
+      // Construct using com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        recordSpecId_ = com.google.protobuf.ByteString.EMPTY;
+        recordSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        recordSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+        recordSpecIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+        recordSpecAddr_ = "";
+        contractSpecIdInfo_ = null;
+        if (contractSpecIdInfoBuilder_ != null) {
+          contractSpecIdInfoBuilder_.dispose();
+          contractSpecIdInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.metadata.v1.MetadataProto.internal_static_provenance_metadata_v1_RecordSpecIdInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo getDefaultInstanceForType() {
+        return com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo build() {
+        com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo buildPartial() {
+        com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo result = new com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recordSpecId_ = recordSpecId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recordSpecIdPrefix_ = recordSpecIdPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.recordSpecIdContractSpecUuid_ = recordSpecIdContractSpecUuid_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.recordSpecIdHashedName_ = recordSpecIdHashedName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.recordSpecAddr_ = recordSpecAddr_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.contractSpecIdInfo_ = contractSpecIdInfoBuilder_ == null
+              ? contractSpecIdInfo_
+              : contractSpecIdInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo) {
+          return mergeFrom((com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo other) {
+        if (other == com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo.getDefaultInstance()) return this;
+        if (other.getRecordSpecId() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordSpecId(other.getRecordSpecId());
+        }
+        if (other.getRecordSpecIdPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordSpecIdPrefix(other.getRecordSpecIdPrefix());
+        }
+        if (other.getRecordSpecIdContractSpecUuid() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordSpecIdContractSpecUuid(other.getRecordSpecIdContractSpecUuid());
+        }
+        if (other.getRecordSpecIdHashedName() != com.google.protobuf.ByteString.EMPTY) {
+          setRecordSpecIdHashedName(other.getRecordSpecIdHashedName());
+        }
+        if (!other.getRecordSpecAddr().isEmpty()) {
+          recordSpecAddr_ = other.recordSpecAddr_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasContractSpecIdInfo()) {
+          mergeContractSpecIdInfo(other.getContractSpecIdInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                recordSpecId_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recordSpecIdPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                recordSpecIdContractSpecUuid_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                recordSpecIdHashedName_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                recordSpecAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getContractSpecIdInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString recordSpecId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_spec_id is the raw bytes of the record specification address.
+       * </pre>
+       *
+       * <code>bytes record_spec_id = 1 [json_name = "recordSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id&#92;""];</code>
+       * @return The recordSpecId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordSpecId() {
+        return recordSpecId_;
+      }
+      /**
+       * <pre>
+       * record_spec_id is the raw bytes of the record specification address.
+       * </pre>
+       *
+       * <code>bytes record_spec_id = 1 [json_name = "recordSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id&#92;""];</code>
+       * @param value The recordSpecId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecId(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_spec_id is the raw bytes of the record specification address.
+       * </pre>
+       *
+       * <code>bytes record_spec_id = 1 [json_name = "recordSpecId", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "MetadataAddress", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        recordSpecId_ = getDefaultInstance().getRecordSpecId();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recordSpecIdPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_spec_id_prefix is the prefix portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_prefix = 2 [json_name = "recordSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_prefix&#92;""];</code>
+       * @return The recordSpecIdPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordSpecIdPrefix() {
+        return recordSpecIdPrefix_;
+      }
+      /**
+       * <pre>
+       * record_spec_id_prefix is the prefix portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_prefix = 2 [json_name = "recordSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_prefix&#92;""];</code>
+       * @param value The recordSpecIdPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecIdPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecIdPrefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_spec_id_prefix is the prefix portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_prefix = 2 [json_name = "recordSpecIdPrefix", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_prefix&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecIdPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recordSpecIdPrefix_ = getDefaultInstance().getRecordSpecIdPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recordSpecIdContractSpecUuid_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_contract_spec_uuid = 3 [json_name = "recordSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_contract_spec_uuid&#92;""];</code>
+       * @return The recordSpecIdContractSpecUuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordSpecIdContractSpecUuid() {
+        return recordSpecIdContractSpecUuid_;
+      }
+      /**
+       * <pre>
+       * record_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_contract_spec_uuid = 3 [json_name = "recordSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_contract_spec_uuid&#92;""];</code>
+       * @param value The recordSpecIdContractSpecUuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecIdContractSpecUuid(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecIdContractSpecUuid_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_spec_id_contract_spec_uuid is the contract_spec_uuid portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_contract_spec_uuid = 3 [json_name = "recordSpecIdContractSpecUuid", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_contract_spec_uuid&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecIdContractSpecUuid() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        recordSpecIdContractSpecUuid_ = getDefaultInstance().getRecordSpecIdContractSpecUuid();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString recordSpecIdHashedName_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * record_spec_id_hashed_name is the hashed name portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_hashed_name = 4 [json_name = "recordSpecIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_hashed_name&#92;""];</code>
+       * @return The recordSpecIdHashedName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecordSpecIdHashedName() {
+        return recordSpecIdHashedName_;
+      }
+      /**
+       * <pre>
+       * record_spec_id_hashed_name is the hashed name portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_hashed_name = 4 [json_name = "recordSpecIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_hashed_name&#92;""];</code>
+       * @param value The recordSpecIdHashedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecIdHashedName(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecIdHashedName_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_spec_id_hashed_name is the hashed name portion of the record_spec_id.
+       * </pre>
+       *
+       * <code>bytes record_spec_id_hashed_name = 4 [json_name = "recordSpecIdHashedName", (.gogoproto.moretags) = "yaml:&#92;"record_spec_id_hashed_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecIdHashedName() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        recordSpecIdHashedName_ = getDefaultInstance().getRecordSpecIdHashedName();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recordSpecAddr_ = "";
+      /**
+       * <pre>
+       * record_spec_addr is the bech32 string version of the record_spec_id.
+       * </pre>
+       *
+       * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+       * @return The recordSpecAddr.
+       */
+      public java.lang.String getRecordSpecAddr() {
+        java.lang.Object ref = recordSpecAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordSpecAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_spec_addr is the bech32 string version of the record_spec_id.
+       * </pre>
+       *
+       * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+       * @return The bytes for recordSpecAddr.
+       */
+      public com.google.protobuf.ByteString
+          getRecordSpecAddrBytes() {
+        java.lang.Object ref = recordSpecAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordSpecAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * record_spec_addr is the bech32 string version of the record_spec_id.
+       * </pre>
+       *
+       * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+       * @param value The recordSpecAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordSpecAddr_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_spec_addr is the bech32 string version of the record_spec_id.
+       * </pre>
+       *
+       * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordSpecAddr() {
+        recordSpecAddr_ = getDefaultInstance().getRecordSpecAddr();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * record_spec_addr is the bech32 string version of the record_spec_id.
+       * </pre>
+       *
+       * <code>string record_spec_addr = 5 [json_name = "recordSpecAddr", (.gogoproto.moretags) = "yaml:&#92;"record_spec_addr&#92;""];</code>
+       * @param value The bytes for recordSpecAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordSpecAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordSpecAddr_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo contractSpecIdInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder> contractSpecIdInfoBuilder_;
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       * @return Whether the contractSpecIdInfo field is set.
+       */
+      public boolean hasContractSpecIdInfo() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       * @return The contractSpecIdInfo.
+       */
+      public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo getContractSpecIdInfo() {
+        if (contractSpecIdInfoBuilder_ == null) {
+          return contractSpecIdInfo_ == null ? com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance() : contractSpecIdInfo_;
+        } else {
+          return contractSpecIdInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      public Builder setContractSpecIdInfo(com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo value) {
+        if (contractSpecIdInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractSpecIdInfo_ = value;
+        } else {
+          contractSpecIdInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      public Builder setContractSpecIdInfo(
+          com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder builderForValue) {
+        if (contractSpecIdInfoBuilder_ == null) {
+          contractSpecIdInfo_ = builderForValue.build();
+        } else {
+          contractSpecIdInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      public Builder mergeContractSpecIdInfo(com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo value) {
+        if (contractSpecIdInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            contractSpecIdInfo_ != null &&
+            contractSpecIdInfo_ != com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance()) {
+            getContractSpecIdInfoBuilder().mergeFrom(value);
+          } else {
+            contractSpecIdInfo_ = value;
+          }
+        } else {
+          contractSpecIdInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      public Builder clearContractSpecIdInfo() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        contractSpecIdInfo_ = null;
+        if (contractSpecIdInfoBuilder_ != null) {
+          contractSpecIdInfoBuilder_.dispose();
+          contractSpecIdInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder getContractSpecIdInfoBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getContractSpecIdInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      public com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder getContractSpecIdInfoOrBuilder() {
+        if (contractSpecIdInfoBuilder_ != null) {
+          return contractSpecIdInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return contractSpecIdInfo_ == null ?
+              com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.getDefaultInstance() : contractSpecIdInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * contract_spec_id_info is information about the contract spec id referenced in the record_spec_id.
+       * </pre>
+       *
+       * <code>.provenance.metadata.v1.ContractSpecIdInfo contract_spec_id_info = 6 [json_name = "contractSpecIdInfo", (.gogoproto.moretags) = "yaml:&#92;"contract_spec_id_info&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder> 
+          getContractSpecIdInfoFieldBuilder() {
+        if (contractSpecIdInfoBuilder_ == null) {
+          contractSpecIdInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfo.Builder, com.provenance.metadata.v1.MetadataProto.ContractSpecIdInfoOrBuilder>(
+                  getContractSpecIdInfo(),
+                  getParentForChildren(),
+                  isClean());
+          contractSpecIdInfo_ = null;
+        }
+        return contractSpecIdInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.metadata.v1.RecordSpecIdInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.metadata.v1.RecordSpecIdInfo)
+    private static final com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo();
+    }
+
+    public static com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecordSpecIdInfo>
+        PARSER = new com.google.protobuf.AbstractParser<RecordSpecIdInfo>() {
+      @java.lang.Override
+      public RecordSpecIdInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecordSpecIdInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecordSpecIdInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.metadata.v1.MetadataProto.RecordSpecIdInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_ScopeIdInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_ScopeIdInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_SessionIdInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_SessionIdInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_RecordIdInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_RecordIdInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_ScopeSpecIdInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_ScopeSpecIdInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_ContractSpecIdInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_ContractSpecIdInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_metadata_v1_RecordSpecIdInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_metadata_v1_RecordSpecIdInfo_fieldAccessorTable;
 
@@ -134,7 +7572,7 @@ public final class MetadataProto {
       "o\030\006 \001(\0132*.provenance.metadata.v1.Contrac" +
       "tSpecIdInfoB \362\336\037\034yaml:\"contract_spec_id_" +
       "info\"R\022contractSpecIdInfoB\333\001\n\032com.proven" +
-      "ance.metadata.v1B\rMetadataProtoP\001Z4githu" +
+      "ance.metadata.v1B\rMetadataProtoP\000Z4githu" +
       "b.com/provenance-io/provenance/x/metadat" +
       "a/types\242\002\003PMX\252\002\026Provenance.Metadata.V1\312\002" +
       "\026Provenance\\Metadata\\V1\342\002\"Provenance\\Met" +

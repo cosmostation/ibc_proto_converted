@@ -14,54 +14,8023 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgAddLimitOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgAddLimitOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    java.lang.String getClientOrderId();
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getClientOrderIdBytes();
+
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    int getTimeInForceValue();
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    com.em.market.v1.MarketProto.TimeInForce getTimeInForce();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return Whether the source field is set.
+     */
+    boolean hasSource();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSource();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSourceOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    boolean hasDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgAddLimitOrder}
+   */
+  public static final class MsgAddLimitOrder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgAddLimitOrder)
+      MsgAddLimitOrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddLimitOrder.newBuilder() to construct.
+    private MsgAddLimitOrder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddLimitOrder() {
+      owner_ = "";
+      clientOrderId_ = "";
+      timeInForce_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddLimitOrder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgAddLimitOrder.class, com.em.market.v1.TxProto.MsgAddLimitOrder.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_ORDER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientOrderId_ = "";
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientOrderId() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientOrderIdBytes() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_IN_FORCE_FIELD_NUMBER = 3;
+    private int timeInForce_ = 0;
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    @java.lang.Override public int getTimeInForceValue() {
+      return timeInForce_;
+    }
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    @java.lang.Override public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+      com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+      return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin source_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return Whether the source field is set.
+     */
+    @java.lang.Override
+    public boolean hasSource() {
+      return source_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSource() {
+      return source_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSourceOrBuilder() {
+      return source_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    @java.lang.Override
+    public boolean hasDestination() {
+      return destination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, timeInForce_);
+      }
+      if (source_ != null) {
+        output.writeMessage(4, getSource());
+      }
+      if (destination_ != null) {
+        output.writeMessage(5, getDestination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, timeInForce_);
+      }
+      if (source_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSource());
+      }
+      if (destination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDestination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgAddLimitOrder)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgAddLimitOrder other = (com.em.market.v1.TxProto.MsgAddLimitOrder) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getClientOrderId()
+          .equals(other.getClientOrderId())) return false;
+      if (timeInForce_ != other.timeInForce_) return false;
+      if (hasSource() != other.hasSource()) return false;
+      if (hasSource()) {
+        if (!getSource()
+            .equals(other.getSource())) return false;
+      }
+      if (hasDestination() != other.hasDestination()) return false;
+      if (hasDestination()) {
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientOrderId().hashCode();
+      hash = (37 * hash) + TIME_IN_FORCE_FIELD_NUMBER;
+      hash = (53 * hash) + timeInForce_;
+      if (hasSource()) {
+        hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getSource().hashCode();
+      }
+      if (hasDestination()) {
+        hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDestination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgAddLimitOrder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgAddLimitOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgAddLimitOrder)
+        com.em.market.v1.TxProto.MsgAddLimitOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgAddLimitOrder.class, com.em.market.v1.TxProto.MsgAddLimitOrder.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgAddLimitOrder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        clientOrderId_ = "";
+        timeInForce_ = 0;
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
+          sourceBuilder_ = null;
+        }
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddLimitOrder getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgAddLimitOrder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddLimitOrder build() {
+        com.em.market.v1.TxProto.MsgAddLimitOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddLimitOrder buildPartial() {
+        com.em.market.v1.TxProto.MsgAddLimitOrder result = new com.em.market.v1.TxProto.MsgAddLimitOrder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.TxProto.MsgAddLimitOrder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clientOrderId_ = clientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timeInForce_ = timeInForce_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.source_ = sourceBuilder_ == null
+              ? source_
+              : sourceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.destination_ = destinationBuilder_ == null
+              ? destination_
+              : destinationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgAddLimitOrder) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgAddLimitOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgAddLimitOrder other) {
+        if (other == com.em.market.v1.TxProto.MsgAddLimitOrder.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClientOrderId().isEmpty()) {
+          clientOrderId_ = other.clientOrderId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.timeInForce_ != 0) {
+          setTimeInForceValue(other.getTimeInForceValue());
+        }
+        if (other.hasSource()) {
+          mergeSource(other.getSource());
+        }
+        if (other.hasDestination()) {
+          mergeDestination(other.getDestination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                clientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                timeInForce_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getSourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDestinationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientOrderId_ = "";
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The clientOrderId.
+       */
+      public java.lang.String getClientOrderId() {
+        java.lang.Object ref = clientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The bytes for clientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getClientOrderIdBytes() {
+        java.lang.Object ref = clientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientOrderId() {
+        clientOrderId_ = getDefaultInstance().getClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The bytes for clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int timeInForce_ = 0;
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The enum numeric value on the wire for timeInForce.
+       */
+      @java.lang.Override public int getTimeInForceValue() {
+        return timeInForce_;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The enum numeric value on the wire for timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForceValue(int value) {
+        timeInForce_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The timeInForce.
+       */
+      @java.lang.Override
+      public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+        com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+        return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForce(com.em.market.v1.MarketProto.TimeInForce value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        timeInForce_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeInForce() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timeInForce_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin source_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> sourceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return Whether the source field is set.
+       */
+      public boolean hasSource() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSource() {
+        if (sourceBuilder_ == null) {
+          return source_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+        } else {
+          return sourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder setSource(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          source_ = value;
+        } else {
+          sourceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder setSource(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sourceBuilder_ == null) {
+          source_ = builderForValue.build();
+        } else {
+          sourceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder mergeSource(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            source_ != null &&
+            source_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getSourceBuilder().mergeFrom(value);
+          } else {
+            source_ = value;
+          }
+        } else {
+          sourceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder clearSource() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
+          sourceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSourceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSourceOrBuilder() {
+        if (sourceBuilder_ != null) {
+          return sourceBuilder_.getMessageOrBuilder();
+        } else {
+          return source_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 4 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSourceFieldBuilder() {
+        if (sourceBuilder_ == null) {
+          sourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getSource(),
+                  getParentForChildren(),
+                  isClean());
+          source_ = null;
+        }
+        return sourceBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> destinationBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return Whether the destination field is set.
+       */
+      public boolean hasDestination() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+        if (destinationBuilder_ == null) {
+          return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        } else {
+          return destinationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          destination_ = value;
+        } else {
+          destinationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (destinationBuilder_ == null) {
+          destination_ = builderForValue.build();
+        } else {
+          destinationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder mergeDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            destination_ != null &&
+            destination_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDestinationBuilder().mergeFrom(value);
+          } else {
+            destination_ = value;
+          }
+        } else {
+          destinationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder clearDestination() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDestinationBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDestinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+        if (destinationBuilder_ != null) {
+          return destinationBuilder_.getMessageOrBuilder();
+        } else {
+          return destination_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDestinationFieldBuilder() {
+        if (destinationBuilder_ == null) {
+          destinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDestination(),
+                  getParentForChildren(),
+                  isClean());
+          destination_ = null;
+        }
+        return destinationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgAddLimitOrder)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgAddLimitOrder)
+    private static final com.em.market.v1.TxProto.MsgAddLimitOrder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgAddLimitOrder();
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddLimitOrder>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddLimitOrder>() {
+      @java.lang.Override
+      public MsgAddLimitOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddLimitOrder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddLimitOrder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgAddLimitOrder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddLimitOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgAddLimitOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgAddLimitOrderResponse}
+   */
+  public static final class MsgAddLimitOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgAddLimitOrderResponse)
+      MsgAddLimitOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddLimitOrderResponse.newBuilder() to construct.
+    private MsgAddLimitOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddLimitOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddLimitOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgAddLimitOrderResponse.class, com.em.market.v1.TxProto.MsgAddLimitOrderResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgAddLimitOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgAddLimitOrderResponse other = (com.em.market.v1.TxProto.MsgAddLimitOrderResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgAddLimitOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgAddLimitOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgAddLimitOrderResponse)
+        com.em.market.v1.TxProto.MsgAddLimitOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgAddLimitOrderResponse.class, com.em.market.v1.TxProto.MsgAddLimitOrderResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgAddLimitOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddLimitOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddLimitOrderResponse getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgAddLimitOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddLimitOrderResponse build() {
+        com.em.market.v1.TxProto.MsgAddLimitOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddLimitOrderResponse buildPartial() {
+        com.em.market.v1.TxProto.MsgAddLimitOrderResponse result = new com.em.market.v1.TxProto.MsgAddLimitOrderResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgAddLimitOrderResponse) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgAddLimitOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgAddLimitOrderResponse other) {
+        if (other == com.em.market.v1.TxProto.MsgAddLimitOrderResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgAddLimitOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgAddLimitOrderResponse)
+    private static final com.em.market.v1.TxProto.MsgAddLimitOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgAddLimitOrderResponse();
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddLimitOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddLimitOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddLimitOrderResponse>() {
+      @java.lang.Override
+      public MsgAddLimitOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddLimitOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddLimitOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgAddLimitOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddMarketOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgAddMarketOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    java.lang.String getClientOrderId();
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getClientOrderIdBytes();
+
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    int getTimeInForceValue();
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    com.em.market.v1.MarketProto.TimeInForce getTimeInForce();
+
+    /**
+     * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    boolean hasDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder();
+
+    /**
+     * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The maximumSlippage.
+     */
+    java.lang.String getMaximumSlippage();
+    /**
+     * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The bytes for maximumSlippage.
+     */
+    com.google.protobuf.ByteString
+        getMaximumSlippageBytes();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgAddMarketOrder}
+   */
+  public static final class MsgAddMarketOrder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgAddMarketOrder)
+      MsgAddMarketOrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddMarketOrder.newBuilder() to construct.
+    private MsgAddMarketOrder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddMarketOrder() {
+      owner_ = "";
+      clientOrderId_ = "";
+      timeInForce_ = 0;
+      source_ = "";
+      maximumSlippage_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddMarketOrder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgAddMarketOrder.class, com.em.market.v1.TxProto.MsgAddMarketOrder.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_ORDER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientOrderId_ = "";
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientOrderId() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientOrderIdBytes() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_IN_FORCE_FIELD_NUMBER = 3;
+    private int timeInForce_ = 0;
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    @java.lang.Override public int getTimeInForceValue() {
+      return timeInForce_;
+    }
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    @java.lang.Override public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+      com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+      return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        source_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    @java.lang.Override
+    public boolean hasDestination() {
+      return destination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+
+    public static final int MAXIMUM_SLIPPAGE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maximumSlippage_ = "";
+    /**
+     * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The maximumSlippage.
+     */
+    @java.lang.Override
+    public java.lang.String getMaximumSlippage() {
+      java.lang.Object ref = maximumSlippage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maximumSlippage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The bytes for maximumSlippage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaximumSlippageBytes() {
+      java.lang.Object ref = maximumSlippage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maximumSlippage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, timeInForce_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, source_);
+      }
+      if (destination_ != null) {
+        output.writeMessage(5, getDestination());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maximumSlippage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, maximumSlippage_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, timeInForce_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, source_);
+      }
+      if (destination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDestination());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maximumSlippage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, maximumSlippage_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgAddMarketOrder)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgAddMarketOrder other = (com.em.market.v1.TxProto.MsgAddMarketOrder) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getClientOrderId()
+          .equals(other.getClientOrderId())) return false;
+      if (timeInForce_ != other.timeInForce_) return false;
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (hasDestination() != other.hasDestination()) return false;
+      if (hasDestination()) {
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
+      }
+      if (!getMaximumSlippage()
+          .equals(other.getMaximumSlippage())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientOrderId().hashCode();
+      hash = (37 * hash) + TIME_IN_FORCE_FIELD_NUMBER;
+      hash = (53 * hash) + timeInForce_;
+      hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSource().hashCode();
+      if (hasDestination()) {
+        hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDestination().hashCode();
+      }
+      hash = (37 * hash) + MAXIMUM_SLIPPAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaximumSlippage().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgAddMarketOrder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgAddMarketOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgAddMarketOrder)
+        com.em.market.v1.TxProto.MsgAddMarketOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgAddMarketOrder.class, com.em.market.v1.TxProto.MsgAddMarketOrder.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgAddMarketOrder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        clientOrderId_ = "";
+        timeInForce_ = 0;
+        source_ = "";
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        maximumSlippage_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddMarketOrder getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgAddMarketOrder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddMarketOrder build() {
+        com.em.market.v1.TxProto.MsgAddMarketOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddMarketOrder buildPartial() {
+        com.em.market.v1.TxProto.MsgAddMarketOrder result = new com.em.market.v1.TxProto.MsgAddMarketOrder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.TxProto.MsgAddMarketOrder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clientOrderId_ = clientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timeInForce_ = timeInForce_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.source_ = source_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.destination_ = destinationBuilder_ == null
+              ? destination_
+              : destinationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.maximumSlippage_ = maximumSlippage_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgAddMarketOrder) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgAddMarketOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgAddMarketOrder other) {
+        if (other == com.em.market.v1.TxProto.MsgAddMarketOrder.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClientOrderId().isEmpty()) {
+          clientOrderId_ = other.clientOrderId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.timeInForce_ != 0) {
+          setTimeInForceValue(other.getTimeInForceValue());
+        }
+        if (!other.getSource().isEmpty()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (other.hasDestination()) {
+          mergeDestination(other.getDestination());
+        }
+        if (!other.getMaximumSlippage().isEmpty()) {
+          maximumSlippage_ = other.maximumSlippage_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                clientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                timeInForce_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                source_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDestinationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                maximumSlippage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientOrderId_ = "";
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The clientOrderId.
+       */
+      public java.lang.String getClientOrderId() {
+        java.lang.Object ref = clientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The bytes for clientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getClientOrderIdBytes() {
+        java.lang.Object ref = clientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientOrderId() {
+        clientOrderId_ = getDefaultInstance().getClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The bytes for clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int timeInForce_ = 0;
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The enum numeric value on the wire for timeInForce.
+       */
+      @java.lang.Override public int getTimeInForceValue() {
+        return timeInForce_;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The enum numeric value on the wire for timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForceValue(int value) {
+        timeInForce_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The timeInForce.
+       */
+      @java.lang.Override
+      public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+        com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+        return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForce(com.em.market.v1.MarketProto.TimeInForce value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        timeInForce_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 3 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeInForce() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timeInForce_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object source_ = "";
+      /**
+       * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 4 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        source_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> destinationBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return Whether the destination field is set.
+       */
+      public boolean hasDestination() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+        if (destinationBuilder_ == null) {
+          return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        } else {
+          return destinationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          destination_ = value;
+        } else {
+          destinationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (destinationBuilder_ == null) {
+          destination_ = builderForValue.build();
+        } else {
+          destinationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder mergeDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            destination_ != null &&
+            destination_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDestinationBuilder().mergeFrom(value);
+          } else {
+            destination_ = value;
+          }
+        } else {
+          destinationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder clearDestination() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDestinationBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getDestinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+        if (destinationBuilder_ != null) {
+          return destinationBuilder_.getMessageOrBuilder();
+        } else {
+          return destination_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 5 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDestinationFieldBuilder() {
+        if (destinationBuilder_ == null) {
+          destinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDestination(),
+                  getParentForChildren(),
+                  isClean());
+          destination_ = null;
+        }
+        return destinationBuilder_;
+      }
+
+      private java.lang.Object maximumSlippage_ = "";
+      /**
+       * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @return The maximumSlippage.
+       */
+      public java.lang.String getMaximumSlippage() {
+        java.lang.Object ref = maximumSlippage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maximumSlippage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @return The bytes for maximumSlippage.
+       */
+      public com.google.protobuf.ByteString
+          getMaximumSlippageBytes() {
+        java.lang.Object ref = maximumSlippage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maximumSlippage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @param value The maximumSlippage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaximumSlippage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maximumSlippage_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaximumSlippage() {
+        maximumSlippage_ = getDefaultInstance().getMaximumSlippage();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string maximum_slippage = 6 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @param value The bytes for maximumSlippage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaximumSlippageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maximumSlippage_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgAddMarketOrder)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgAddMarketOrder)
+    private static final com.em.market.v1.TxProto.MsgAddMarketOrder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgAddMarketOrder();
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddMarketOrder>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddMarketOrder>() {
+      @java.lang.Override
+      public MsgAddMarketOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddMarketOrder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddMarketOrder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgAddMarketOrder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAddMarketOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgAddMarketOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgAddMarketOrderResponse}
+   */
+  public static final class MsgAddMarketOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgAddMarketOrderResponse)
+      MsgAddMarketOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAddMarketOrderResponse.newBuilder() to construct.
+    private MsgAddMarketOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAddMarketOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAddMarketOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgAddMarketOrderResponse.class, com.em.market.v1.TxProto.MsgAddMarketOrderResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgAddMarketOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgAddMarketOrderResponse other = (com.em.market.v1.TxProto.MsgAddMarketOrderResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgAddMarketOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgAddMarketOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgAddMarketOrderResponse)
+        com.em.market.v1.TxProto.MsgAddMarketOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgAddMarketOrderResponse.class, com.em.market.v1.TxProto.MsgAddMarketOrderResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgAddMarketOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgAddMarketOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddMarketOrderResponse getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgAddMarketOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddMarketOrderResponse build() {
+        com.em.market.v1.TxProto.MsgAddMarketOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgAddMarketOrderResponse buildPartial() {
+        com.em.market.v1.TxProto.MsgAddMarketOrderResponse result = new com.em.market.v1.TxProto.MsgAddMarketOrderResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgAddMarketOrderResponse) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgAddMarketOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgAddMarketOrderResponse other) {
+        if (other == com.em.market.v1.TxProto.MsgAddMarketOrderResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgAddMarketOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgAddMarketOrderResponse)
+    private static final com.em.market.v1.TxProto.MsgAddMarketOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgAddMarketOrderResponse();
+    }
+
+    public static com.em.market.v1.TxProto.MsgAddMarketOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAddMarketOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAddMarketOrderResponse>() {
+      @java.lang.Override
+      public MsgAddMarketOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAddMarketOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAddMarketOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgAddMarketOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgCancelOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    java.lang.String getClientOrderId();
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getClientOrderIdBytes();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgCancelOrder}
+   */
+  public static final class MsgCancelOrder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgCancelOrder)
+      MsgCancelOrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelOrder.newBuilder() to construct.
+    private MsgCancelOrder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelOrder() {
+      owner_ = "";
+      clientOrderId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelOrder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgCancelOrder.class, com.em.market.v1.TxProto.MsgCancelOrder.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_ORDER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientOrderId_ = "";
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The clientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientOrderId() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+     * @return The bytes for clientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientOrderIdBytes() {
+      java.lang.Object ref = clientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientOrderId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientOrderId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgCancelOrder)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgCancelOrder other = (com.em.market.v1.TxProto.MsgCancelOrder) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getClientOrderId()
+          .equals(other.getClientOrderId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientOrderId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgCancelOrder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgCancelOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgCancelOrder)
+        com.em.market.v1.TxProto.MsgCancelOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgCancelOrder.class, com.em.market.v1.TxProto.MsgCancelOrder.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgCancelOrder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        clientOrderId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelOrder getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgCancelOrder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelOrder build() {
+        com.em.market.v1.TxProto.MsgCancelOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelOrder buildPartial() {
+        com.em.market.v1.TxProto.MsgCancelOrder result = new com.em.market.v1.TxProto.MsgCancelOrder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.TxProto.MsgCancelOrder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.clientOrderId_ = clientOrderId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgCancelOrder) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgCancelOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgCancelOrder other) {
+        if (other == com.em.market.v1.TxProto.MsgCancelOrder.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClientOrderId().isEmpty()) {
+          clientOrderId_ = other.clientOrderId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                clientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientOrderId_ = "";
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The clientOrderId.
+       */
+      public java.lang.String getClientOrderId() {
+        java.lang.Object ref = clientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return The bytes for clientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getClientOrderIdBytes() {
+        java.lang.Object ref = clientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientOrderId() {
+        clientOrderId_ = getDefaultInstance().getClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_order_id = 2 [json_name = "clientOrderId", (.gogoproto.moretags) = "yaml:&#92;"client_order_id&#92;""];</code>
+       * @param value The bytes for clientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgCancelOrder)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgCancelOrder)
+    private static final com.em.market.v1.TxProto.MsgCancelOrder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgCancelOrder();
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelOrder>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelOrder>() {
+      @java.lang.Override
+      public MsgCancelOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelOrder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelOrder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgCancelOrder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgCancelOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgCancelOrderResponse}
+   */
+  public static final class MsgCancelOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgCancelOrderResponse)
+      MsgCancelOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelOrderResponse.newBuilder() to construct.
+    private MsgCancelOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgCancelOrderResponse.class, com.em.market.v1.TxProto.MsgCancelOrderResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgCancelOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgCancelOrderResponse other = (com.em.market.v1.TxProto.MsgCancelOrderResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgCancelOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgCancelOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgCancelOrderResponse)
+        com.em.market.v1.TxProto.MsgCancelOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgCancelOrderResponse.class, com.em.market.v1.TxProto.MsgCancelOrderResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgCancelOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelOrderResponse getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgCancelOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelOrderResponse build() {
+        com.em.market.v1.TxProto.MsgCancelOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelOrderResponse buildPartial() {
+        com.em.market.v1.TxProto.MsgCancelOrderResponse result = new com.em.market.v1.TxProto.MsgCancelOrderResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgCancelOrderResponse) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgCancelOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgCancelOrderResponse other) {
+        if (other == com.em.market.v1.TxProto.MsgCancelOrderResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgCancelOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgCancelOrderResponse)
+    private static final com.em.market.v1.TxProto.MsgCancelOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgCancelOrderResponse();
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelOrderResponse>() {
+      @java.lang.Override
+      public MsgCancelOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgCancelOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelReplaceLimitOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgCancelReplaceLimitOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The originalClientOrderId.
+     */
+    java.lang.String getOriginalClientOrderId();
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The bytes for originalClientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getOriginalClientOrderIdBytes();
+
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The newClientOrderId.
+     */
+    java.lang.String getNewClientOrderId();
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The bytes for newClientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getNewClientOrderIdBytes();
+
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    int getTimeInForceValue();
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    com.em.market.v1.MarketProto.TimeInForce getTimeInForce();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return Whether the source field is set.
+     */
+    boolean hasSource();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSource();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSourceOrBuilder();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    boolean hasDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgCancelReplaceLimitOrder}
+   */
+  public static final class MsgCancelReplaceLimitOrder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgCancelReplaceLimitOrder)
+      MsgCancelReplaceLimitOrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelReplaceLimitOrder.newBuilder() to construct.
+    private MsgCancelReplaceLimitOrder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelReplaceLimitOrder() {
+      owner_ = "";
+      originalClientOrderId_ = "";
+      newClientOrderId_ = "";
+      timeInForce_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelReplaceLimitOrder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.class, com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINAL_CLIENT_ORDER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object originalClientOrderId_ = "";
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The originalClientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getOriginalClientOrderId() {
+      java.lang.Object ref = originalClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        originalClientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The bytes for originalClientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginalClientOrderIdBytes() {
+      java.lang.Object ref = originalClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalClientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_CLIENT_ORDER_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newClientOrderId_ = "";
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The newClientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getNewClientOrderId() {
+      java.lang.Object ref = newClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newClientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The bytes for newClientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewClientOrderIdBytes() {
+      java.lang.Object ref = newClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newClientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_IN_FORCE_FIELD_NUMBER = 4;
+    private int timeInForce_ = 0;
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    @java.lang.Override public int getTimeInForceValue() {
+      return timeInForce_;
+    }
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    @java.lang.Override public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+      com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+      return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin source_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return Whether the source field is set.
+     */
+    @java.lang.Override
+    public boolean hasSource() {
+      return source_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSource() {
+      return source_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSourceOrBuilder() {
+      return source_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    @java.lang.Override
+    public boolean hasDestination() {
+      return destination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalClientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, originalClientOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newClientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newClientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, timeInForce_);
+      }
+      if (source_ != null) {
+        output.writeMessage(5, getSource());
+      }
+      if (destination_ != null) {
+        output.writeMessage(6, getDestination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalClientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, originalClientOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newClientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newClientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, timeInForce_);
+      }
+      if (source_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSource());
+      }
+      if (destination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDestination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder other = (com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getOriginalClientOrderId()
+          .equals(other.getOriginalClientOrderId())) return false;
+      if (!getNewClientOrderId()
+          .equals(other.getNewClientOrderId())) return false;
+      if (timeInForce_ != other.timeInForce_) return false;
+      if (hasSource() != other.hasSource()) return false;
+      if (hasSource()) {
+        if (!getSource()
+            .equals(other.getSource())) return false;
+      }
+      if (hasDestination() != other.hasDestination()) return false;
+      if (hasDestination()) {
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + ORIGINAL_CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOriginalClientOrderId().hashCode();
+      hash = (37 * hash) + NEW_CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNewClientOrderId().hashCode();
+      hash = (37 * hash) + TIME_IN_FORCE_FIELD_NUMBER;
+      hash = (53 * hash) + timeInForce_;
+      if (hasSource()) {
+        hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getSource().hashCode();
+      }
+      if (hasDestination()) {
+        hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDestination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgCancelReplaceLimitOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgCancelReplaceLimitOrder)
+        com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.class, com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        originalClientOrderId_ = "";
+        newClientOrderId_ = "";
+        timeInForce_ = 0;
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
+          sourceBuilder_ = null;
+        }
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder build() {
+        com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder buildPartial() {
+        com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder result = new com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.originalClientOrderId_ = originalClientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newClientOrderId_ = newClientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timeInForce_ = timeInForce_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.source_ = sourceBuilder_ == null
+              ? source_
+              : sourceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.destination_ = destinationBuilder_ == null
+              ? destination_
+              : destinationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder other) {
+        if (other == com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOriginalClientOrderId().isEmpty()) {
+          originalClientOrderId_ = other.originalClientOrderId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNewClientOrderId().isEmpty()) {
+          newClientOrderId_ = other.newClientOrderId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.timeInForce_ != 0) {
+          setTimeInForceValue(other.getTimeInForceValue());
+        }
+        if (other.hasSource()) {
+          mergeSource(other.getSource());
+        }
+        if (other.hasDestination()) {
+          mergeDestination(other.getDestination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                originalClientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                newClientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                timeInForce_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getSourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDestinationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalClientOrderId_ = "";
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @return The originalClientOrderId.
+       */
+      public java.lang.String getOriginalClientOrderId() {
+        java.lang.Object ref = originalClientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          originalClientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @return The bytes for originalClientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getOriginalClientOrderIdBytes() {
+        java.lang.Object ref = originalClientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalClientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @param value The originalClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        originalClientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginalClientOrderId() {
+        originalClientOrderId_ = getDefaultInstance().getOriginalClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @param value The bytes for originalClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        originalClientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newClientOrderId_ = "";
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @return The newClientOrderId.
+       */
+      public java.lang.String getNewClientOrderId() {
+        java.lang.Object ref = newClientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newClientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @return The bytes for newClientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getNewClientOrderIdBytes() {
+        java.lang.Object ref = newClientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newClientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @param value The newClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newClientOrderId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewClientOrderId() {
+        newClientOrderId_ = getDefaultInstance().getNewClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @param value The bytes for newClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newClientOrderId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int timeInForce_ = 0;
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The enum numeric value on the wire for timeInForce.
+       */
+      @java.lang.Override public int getTimeInForceValue() {
+        return timeInForce_;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The enum numeric value on the wire for timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForceValue(int value) {
+        timeInForce_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The timeInForce.
+       */
+      @java.lang.Override
+      public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+        com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+        return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForce(com.em.market.v1.MarketProto.TimeInForce value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        timeInForce_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeInForce() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        timeInForce_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin source_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> sourceBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return Whether the source field is set.
+       */
+      public boolean hasSource() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSource() {
+        if (sourceBuilder_ == null) {
+          return source_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+        } else {
+          return sourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder setSource(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          source_ = value;
+        } else {
+          sourceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder setSource(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (sourceBuilder_ == null) {
+          source_ = builderForValue.build();
+        } else {
+          sourceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder mergeSource(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (sourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            source_ != null &&
+            source_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getSourceBuilder().mergeFrom(value);
+          } else {
+            source_ = value;
+          }
+        } else {
+          sourceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public Builder clearSource() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
+          sourceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSourceBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSourceOrBuilder() {
+        if (sourceBuilder_ != null) {
+          return sourceBuilder_.getMessageOrBuilder();
+        } else {
+          return source_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : source_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin source = 5 [json_name = "source", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSourceFieldBuilder() {
+        if (sourceBuilder_ == null) {
+          sourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getSource(),
+                  getParentForChildren(),
+                  isClean());
+          source_ = null;
+        }
+        return sourceBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> destinationBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return Whether the destination field is set.
+       */
+      public boolean hasDestination() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+        if (destinationBuilder_ == null) {
+          return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        } else {
+          return destinationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          destination_ = value;
+        } else {
+          destinationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (destinationBuilder_ == null) {
+          destination_ = builderForValue.build();
+        } else {
+          destinationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder mergeDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            destination_ != null &&
+            destination_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDestinationBuilder().mergeFrom(value);
+          } else {
+            destination_ = value;
+          }
+        } else {
+          destinationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder clearDestination() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDestinationBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDestinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+        if (destinationBuilder_ != null) {
+          return destinationBuilder_.getMessageOrBuilder();
+        } else {
+          return destination_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDestinationFieldBuilder() {
+        if (destinationBuilder_ == null) {
+          destinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDestination(),
+                  getParentForChildren(),
+                  isClean());
+          destination_ = null;
+        }
+        return destinationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgCancelReplaceLimitOrder)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgCancelReplaceLimitOrder)
+    private static final com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder();
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelReplaceLimitOrder>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelReplaceLimitOrder>() {
+      @java.lang.Override
+      public MsgCancelReplaceLimitOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelReplaceLimitOrder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelReplaceLimitOrder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelReplaceLimitOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgCancelReplaceLimitOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgCancelReplaceLimitOrderResponse}
+   */
+  public static final class MsgCancelReplaceLimitOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgCancelReplaceLimitOrderResponse)
+      MsgCancelReplaceLimitOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelReplaceLimitOrderResponse.newBuilder() to construct.
+    private MsgCancelReplaceLimitOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelReplaceLimitOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelReplaceLimitOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.class, com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse other = (com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgCancelReplaceLimitOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgCancelReplaceLimitOrderResponse)
+        com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.class, com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse build() {
+        com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse buildPartial() {
+        com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse result = new com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse other) {
+        if (other == com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgCancelReplaceLimitOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgCancelReplaceLimitOrderResponse)
+    private static final com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse();
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelReplaceLimitOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelReplaceLimitOrderResponse>() {
+      @java.lang.Override
+      public MsgCancelReplaceLimitOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelReplaceLimitOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelReplaceLimitOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgCancelReplaceLimitOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelReplaceMarketOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgCancelReplaceMarketOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The originalClientOrderId.
+     */
+    java.lang.String getOriginalClientOrderId();
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The bytes for originalClientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getOriginalClientOrderIdBytes();
+
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The newClientOrderId.
+     */
+    java.lang.String getNewClientOrderId();
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The bytes for newClientOrderId.
+     */
+    com.google.protobuf.ByteString
+        getNewClientOrderIdBytes();
+
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    int getTimeInForceValue();
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    com.em.market.v1.MarketProto.TimeInForce getTimeInForce();
+
+    /**
+     * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    java.lang.String getSource();
+    /**
+     * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The bytes for source.
+     */
+    com.google.protobuf.ByteString
+        getSourceBytes();
+
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    boolean hasDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDestination();
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder();
+
+    /**
+     * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The maximumSlippage.
+     */
+    java.lang.String getMaximumSlippage();
+    /**
+     * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The bytes for maximumSlippage.
+     */
+    com.google.protobuf.ByteString
+        getMaximumSlippageBytes();
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgCancelReplaceMarketOrder}
+   */
+  public static final class MsgCancelReplaceMarketOrder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgCancelReplaceMarketOrder)
+      MsgCancelReplaceMarketOrderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelReplaceMarketOrder.newBuilder() to construct.
+    private MsgCancelReplaceMarketOrder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelReplaceMarketOrder() {
+      owner_ = "";
+      originalClientOrderId_ = "";
+      newClientOrderId_ = "";
+      timeInForce_ = 0;
+      source_ = "";
+      maximumSlippage_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelReplaceMarketOrder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.class, com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGINAL_CLIENT_ORDER_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object originalClientOrderId_ = "";
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The originalClientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getOriginalClientOrderId() {
+      java.lang.Object ref = originalClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        originalClientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+     * @return The bytes for originalClientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginalClientOrderIdBytes() {
+      java.lang.Object ref = originalClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        originalClientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_CLIENT_ORDER_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newClientOrderId_ = "";
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The newClientOrderId.
+     */
+    @java.lang.Override
+    public java.lang.String getNewClientOrderId() {
+      java.lang.Object ref = newClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newClientOrderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+     * @return The bytes for newClientOrderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewClientOrderIdBytes() {
+      java.lang.Object ref = newClientOrderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newClientOrderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_IN_FORCE_FIELD_NUMBER = 4;
+    private int timeInForce_ = 0;
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The enum numeric value on the wire for timeInForce.
+     */
+    @java.lang.Override public int getTimeInForceValue() {
+      return timeInForce_;
+    }
+    /**
+     * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+     * @return The timeInForce.
+     */
+    @java.lang.Override public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+      com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+      return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object source_ = "";
+    /**
+     * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The source.
+     */
+    @java.lang.Override
+    public java.lang.String getSource() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        source_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+     * @return The bytes for source.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSourceBytes() {
+      java.lang.Object ref = source_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        source_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FIELD_NUMBER = 6;
+    private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return Whether the destination field is set.
+     */
+    @java.lang.Override
+    public boolean hasDestination() {
+      return destination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     * @return The destination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+    /**
+     * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+      return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+    }
+
+    public static final int MAXIMUM_SLIPPAGE_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maximumSlippage_ = "";
+    /**
+     * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The maximumSlippage.
+     */
+    @java.lang.Override
+    public java.lang.String getMaximumSlippage() {
+      java.lang.Object ref = maximumSlippage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maximumSlippage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+     * @return The bytes for maximumSlippage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaximumSlippageBytes() {
+      java.lang.Object ref = maximumSlippage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maximumSlippage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalClientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, originalClientOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newClientOrderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newClientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, timeInForce_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, source_);
+      }
+      if (destination_ != null) {
+        output.writeMessage(6, getDestination());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maximumSlippage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, maximumSlippage_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(originalClientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, originalClientOrderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newClientOrderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newClientOrderId_);
+      }
+      if (timeInForce_ != com.em.market.v1.MarketProto.TimeInForce.TIME_IN_FORCE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, timeInForce_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(source_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, source_);
+      }
+      if (destination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDestination());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maximumSlippage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, maximumSlippage_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder other = (com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getOriginalClientOrderId()
+          .equals(other.getOriginalClientOrderId())) return false;
+      if (!getNewClientOrderId()
+          .equals(other.getNewClientOrderId())) return false;
+      if (timeInForce_ != other.timeInForce_) return false;
+      if (!getSource()
+          .equals(other.getSource())) return false;
+      if (hasDestination() != other.hasDestination()) return false;
+      if (hasDestination()) {
+        if (!getDestination()
+            .equals(other.getDestination())) return false;
+      }
+      if (!getMaximumSlippage()
+          .equals(other.getMaximumSlippage())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + ORIGINAL_CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOriginalClientOrderId().hashCode();
+      hash = (37 * hash) + NEW_CLIENT_ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNewClientOrderId().hashCode();
+      hash = (37 * hash) + TIME_IN_FORCE_FIELD_NUMBER;
+      hash = (53 * hash) + timeInForce_;
+      hash = (37 * hash) + SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getSource().hashCode();
+      if (hasDestination()) {
+        hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDestination().hashCode();
+      }
+      hash = (37 * hash) + MAXIMUM_SLIPPAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaximumSlippage().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgCancelReplaceMarketOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgCancelReplaceMarketOrder)
+        com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.class, com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        originalClientOrderId_ = "";
+        newClientOrderId_ = "";
+        timeInForce_ = 0;
+        source_ = "";
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        maximumSlippage_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder build() {
+        com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder buildPartial() {
+        com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder result = new com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.originalClientOrderId_ = originalClientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newClientOrderId_ = newClientOrderId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timeInForce_ = timeInForce_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.source_ = source_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.destination_ = destinationBuilder_ == null
+              ? destination_
+              : destinationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.maximumSlippage_ = maximumSlippage_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder other) {
+        if (other == com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOriginalClientOrderId().isEmpty()) {
+          originalClientOrderId_ = other.originalClientOrderId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getNewClientOrderId().isEmpty()) {
+          newClientOrderId_ = other.newClientOrderId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.timeInForce_ != 0) {
+          setTimeInForceValue(other.getTimeInForceValue());
+        }
+        if (!other.getSource().isEmpty()) {
+          source_ = other.source_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasDestination()) {
+          mergeDestination(other.getDestination());
+        }
+        if (!other.getMaximumSlippage().isEmpty()) {
+          maximumSlippage_ = other.maximumSlippage_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                originalClientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                newClientOrderId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                timeInForce_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                source_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDestinationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                maximumSlippage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner", (.gogoproto.moretags) = "yaml:&#92;"owner&#92;""];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object originalClientOrderId_ = "";
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @return The originalClientOrderId.
+       */
+      public java.lang.String getOriginalClientOrderId() {
+        java.lang.Object ref = originalClientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          originalClientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @return The bytes for originalClientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getOriginalClientOrderIdBytes() {
+        java.lang.Object ref = originalClientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          originalClientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @param value The originalClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        originalClientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginalClientOrderId() {
+        originalClientOrderId_ = getDefaultInstance().getOriginalClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string original_client_order_id = 2 [json_name = "originalClientOrderId", (.gogoproto.customname) = "OrigClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"original_client_order_id&#92;""];</code>
+       * @param value The bytes for originalClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        originalClientOrderId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newClientOrderId_ = "";
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @return The newClientOrderId.
+       */
+      public java.lang.String getNewClientOrderId() {
+        java.lang.Object ref = newClientOrderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newClientOrderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @return The bytes for newClientOrderId.
+       */
+      public com.google.protobuf.ByteString
+          getNewClientOrderIdBytes() {
+        java.lang.Object ref = newClientOrderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newClientOrderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @param value The newClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewClientOrderId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newClientOrderId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewClientOrderId() {
+        newClientOrderId_ = getDefaultInstance().getNewClientOrderId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string new_client_order_id = 3 [json_name = "newClientOrderId", (.gogoproto.customname) = "NewClientOrderId", (.gogoproto.moretags) = "yaml:&#92;"new_client_order_id&#92;""];</code>
+       * @param value The bytes for newClientOrderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewClientOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newClientOrderId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private int timeInForce_ = 0;
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The enum numeric value on the wire for timeInForce.
+       */
+      @java.lang.Override public int getTimeInForceValue() {
+        return timeInForce_;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The enum numeric value on the wire for timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForceValue(int value) {
+        timeInForce_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return The timeInForce.
+       */
+      @java.lang.Override
+      public com.em.market.v1.MarketProto.TimeInForce getTimeInForce() {
+        com.em.market.v1.MarketProto.TimeInForce result = com.em.market.v1.MarketProto.TimeInForce.forNumber(timeInForce_);
+        return result == null ? com.em.market.v1.MarketProto.TimeInForce.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @param value The timeInForce to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeInForce(com.em.market.v1.MarketProto.TimeInForce value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        timeInForce_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.em.market.v1.TimeInForce time_in_force = 4 [json_name = "timeInForce", (.gogoproto.moretags) = "yaml:&#92;"time_in_force&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeInForce() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        timeInForce_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object source_ = "";
+      /**
+       * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The source.
+       */
+      public java.lang.String getSource() {
+        java.lang.Object ref = source_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          source_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return The bytes for source.
+       */
+      public com.google.protobuf.ByteString
+          getSourceBytes() {
+        java.lang.Object ref = source_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          source_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @param value The source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        source_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSource() {
+        source_ = getDefaultInstance().getSource();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string source = 5 [json_name = "source", (.gogoproto.moretags) = "yaml:&#92;"source&#92;""];</code>
+       * @param value The bytes for source to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        source_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin destination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> destinationBuilder_;
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return Whether the destination field is set.
+       */
+      public boolean hasDestination() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       * @return The destination.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDestination() {
+        if (destinationBuilder_ == null) {
+          return destination_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        } else {
+          return destinationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          destination_ = value;
+        } else {
+          destinationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder setDestination(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (destinationBuilder_ == null) {
+          destination_ = builderForValue.build();
+        } else {
+          destinationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder mergeDestination(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (destinationBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            destination_ != null &&
+            destination_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDestinationBuilder().mergeFrom(value);
+          } else {
+            destination_ = value;
+          }
+        } else {
+          destinationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public Builder clearDestination() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        destination_ = null;
+        if (destinationBuilder_ != null) {
+          destinationBuilder_.dispose();
+          destinationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDestinationBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDestinationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDestinationOrBuilder() {
+        if (destinationBuilder_ != null) {
+          return destinationBuilder_.getMessageOrBuilder();
+        } else {
+          return destination_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : destination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.v1beta1.Coin destination = 6 [json_name = "destination", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"destination&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDestinationFieldBuilder() {
+        if (destinationBuilder_ == null) {
+          destinationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDestination(),
+                  getParentForChildren(),
+                  isClean());
+          destination_ = null;
+        }
+        return destinationBuilder_;
+      }
+
+      private java.lang.Object maximumSlippage_ = "";
+      /**
+       * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @return The maximumSlippage.
+       */
+      public java.lang.String getMaximumSlippage() {
+        java.lang.Object ref = maximumSlippage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maximumSlippage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @return The bytes for maximumSlippage.
+       */
+      public com.google.protobuf.ByteString
+          getMaximumSlippageBytes() {
+        java.lang.Object ref = maximumSlippage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maximumSlippage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @param value The maximumSlippage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaximumSlippage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maximumSlippage_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaximumSlippage() {
+        maximumSlippage_ = getDefaultInstance().getMaximumSlippage();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string maximum_slippage = 7 [json_name = "maximumSlippage", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "MaxSlippage", (.gogoproto.moretags) = "yaml:&#92;"maximum_slippage&#92;""];</code>
+       * @param value The bytes for maximumSlippage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaximumSlippageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maximumSlippage_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgCancelReplaceMarketOrder)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgCancelReplaceMarketOrder)
+    private static final com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder();
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelReplaceMarketOrder>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelReplaceMarketOrder>() {
+      @java.lang.Override
+      public MsgCancelReplaceMarketOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelReplaceMarketOrder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelReplaceMarketOrder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelReplaceMarketOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.market.v1.MsgCancelReplaceMarketOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code em.market.v1.MsgCancelReplaceMarketOrderResponse}
+   */
+  public static final class MsgCancelReplaceMarketOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.market.v1.MsgCancelReplaceMarketOrderResponse)
+      MsgCancelReplaceMarketOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelReplaceMarketOrderResponse.newBuilder() to construct.
+    private MsgCancelReplaceMarketOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelReplaceMarketOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelReplaceMarketOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.class, com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse other = (com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.market.v1.MsgCancelReplaceMarketOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.market.v1.MsgCancelReplaceMarketOrderResponse)
+        com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.class, com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.Builder.class);
+      }
+
+      // Construct using com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.market.v1.TxProto.internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse getDefaultInstanceForType() {
+        return com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse build() {
+        com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse buildPartial() {
+        com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse result = new com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse) {
+          return mergeFrom((com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse other) {
+        if (other == com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.market.v1.MsgCancelReplaceMarketOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.market.v1.MsgCancelReplaceMarketOrderResponse)
+    private static final com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse();
+    }
+
+    public static com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelReplaceMarketOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelReplaceMarketOrderResponse>() {
+      @java.lang.Override
+      public MsgCancelReplaceMarketOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelReplaceMarketOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelReplaceMarketOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.market.v1.TxProto.MsgCancelReplaceMarketOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgAddLimitOrder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgAddLimitOrder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgAddLimitOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgAddLimitOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgAddMarketOrder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgAddMarketOrder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgAddMarketOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgAddMarketOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgCancelOrder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgCancelOrder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgCancelOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgCancelOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgCancelReplaceLimitOrder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgCancelReplaceLimitOrder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgCancelReplaceLimitOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgCancelReplaceMarketOrder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgCancelReplaceMarketOrder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_market_v1_MsgCancelReplaceMarketOrderResponse_fieldAccessorTable;
 
@@ -147,11 +8116,11 @@ public final class TxProto {
       "gCancelReplaceLimitOrderResponse\022x\n\030Canc" +
       "elReplaceMarketOrder\022).em.market.v1.MsgC" +
       "ancelReplaceMarketOrder\0321.em.market.v1.M" +
-      "sgCancelReplaceMarketOrderResponseB\232\001\n\020c" +
-      "om.em.market.v1B\007TxProtoP\001Z+github.com/e" +
-      "-money/em-ledger/x/market/types\242\002\003EMX\252\002\014" +
-      "Em.Market.V1\312\002\014Em\\Market\\V1\342\002\030Em\\Market\\" +
-      "V1\\GPBMetadata\352\002\016Em::Market::V1b\006proto3"
+      "sgCancelReplaceMarketOrderResponseB\230\001\n\020c" +
+      "om.em.market.v1B\007TxProtoZ+github.com/e-m" +
+      "oney/em-ledger/x/market/types\242\002\003EMX\252\002\014Em" +
+      ".Market.V1\312\002\014Em\\Market\\V1\342\002\030Em\\Market\\V1" +
+      "\\GPBMetadata\352\002\016Em::Market::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,64 +14,7712 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgSetHotRoutesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetHotRoutes)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the hot routes.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the hot routes.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> 
+        getHotRoutesList();
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getHotRoutes(int index);
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    int getHotRoutesCount();
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+        getHotRoutesOrBuilderList();
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder getHotRoutesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetHotRoutes}
+   */
+  public static final class MsgSetHotRoutes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetHotRoutes)
+      MsgSetHotRoutesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetHotRoutes.newBuilder() to construct.
+    private MsgSetHotRoutes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetHotRoutes() {
+      admin_ = "";
+      hotRoutes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetHotRoutes();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.Builder.class);
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the hot routes.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the hot routes.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOT_ROUTES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> hotRoutes_;
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> getHotRoutesList() {
+      return hotRoutes_;
+    }
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+        getHotRoutesOrBuilderList() {
+      return hotRoutes_;
+    }
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getHotRoutesCount() {
+      return hotRoutes_.size();
+    }
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getHotRoutes(int index) {
+      return hotRoutes_.get(index);
+    }
+    /**
+     * <pre>
+     * hot_routes is the list of hot routes to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder getHotRoutesOrBuilder(
+        int index) {
+      return hotRoutes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
+      }
+      for (int i = 0; i < hotRoutes_.size(); i++) {
+        output.writeMessage(2, hotRoutes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
+      }
+      for (int i = 0; i < hotRoutes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, hotRoutes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes) obj;
+
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getHotRoutesList()
+          .equals(other.getHotRoutesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      if (getHotRoutesCount() > 0) {
+        hash = (37 * hash) + HOT_ROUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getHotRoutesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetHotRoutes defines the Msg/SetHotRoutes request type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetHotRoutes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetHotRoutes)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        admin_ = "";
+        if (hotRoutesBuilder_ == null) {
+          hotRoutes_ = java.util.Collections.emptyList();
+        } else {
+          hotRoutes_ = null;
+          hotRoutesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes result) {
+        if (hotRoutesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            hotRoutes_ = java.util.Collections.unmodifiableList(hotRoutes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.hotRoutes_ = hotRoutes_;
+        } else {
+          result.hotRoutes_ = hotRoutesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.admin_ = admin_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes.getDefaultInstance()) return this;
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (hotRoutesBuilder_ == null) {
+          if (!other.hotRoutes_.isEmpty()) {
+            if (hotRoutes_.isEmpty()) {
+              hotRoutes_ = other.hotRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureHotRoutesIsMutable();
+              hotRoutes_.addAll(other.hotRoutes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.hotRoutes_.isEmpty()) {
+            if (hotRoutesBuilder_.isEmpty()) {
+              hotRoutesBuilder_.dispose();
+              hotRoutesBuilder_ = null;
+              hotRoutes_ = other.hotRoutes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              hotRoutesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHotRoutesFieldBuilder() : null;
+            } else {
+              hotRoutesBuilder_.addAllMessages(other.hotRoutes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes m =
+                    input.readMessage(
+                        com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.parser(),
+                        extensionRegistry);
+                if (hotRoutesBuilder_ == null) {
+                  ensureHotRoutesIsMutable();
+                  hotRoutes_.add(m);
+                } else {
+                  hotRoutesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the hot routes.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the hot routes.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the hot routes.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the hot routes.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the hot routes.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> hotRoutes_ =
+        java.util.Collections.emptyList();
+      private void ensureHotRoutesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          hotRoutes_ = new java.util.ArrayList<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes>(hotRoutes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> hotRoutesBuilder_;
+
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> getHotRoutesList() {
+        if (hotRoutesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(hotRoutes_);
+        } else {
+          return hotRoutesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public int getHotRoutesCount() {
+        if (hotRoutesBuilder_ == null) {
+          return hotRoutes_.size();
+        } else {
+          return hotRoutesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes getHotRoutes(int index) {
+        if (hotRoutesBuilder_ == null) {
+          return hotRoutes_.get(index);
+        } else {
+          return hotRoutesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder setHotRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes value) {
+        if (hotRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHotRoutesIsMutable();
+          hotRoutes_.set(index, value);
+          onChanged();
+        } else {
+          hotRoutesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder setHotRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder builderForValue) {
+        if (hotRoutesBuilder_ == null) {
+          ensureHotRoutesIsMutable();
+          hotRoutes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          hotRoutesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder addHotRoutes(com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes value) {
+        if (hotRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHotRoutesIsMutable();
+          hotRoutes_.add(value);
+          onChanged();
+        } else {
+          hotRoutesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder addHotRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes value) {
+        if (hotRoutesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHotRoutesIsMutable();
+          hotRoutes_.add(index, value);
+          onChanged();
+        } else {
+          hotRoutesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder addHotRoutes(
+          com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder builderForValue) {
+        if (hotRoutesBuilder_ == null) {
+          ensureHotRoutesIsMutable();
+          hotRoutes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          hotRoutesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder addHotRoutes(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder builderForValue) {
+        if (hotRoutesBuilder_ == null) {
+          ensureHotRoutesIsMutable();
+          hotRoutes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          hotRoutesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder addAllHotRoutes(
+          java.lang.Iterable<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes> values) {
+        if (hotRoutesBuilder_ == null) {
+          ensureHotRoutesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, hotRoutes_);
+          onChanged();
+        } else {
+          hotRoutesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder clearHotRoutes() {
+        if (hotRoutesBuilder_ == null) {
+          hotRoutes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          hotRoutesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public Builder removeHotRoutes(int index) {
+        if (hotRoutesBuilder_ == null) {
+          ensureHotRoutesIsMutable();
+          hotRoutes_.remove(index);
+          onChanged();
+        } else {
+          hotRoutesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder getHotRoutesBuilder(
+          int index) {
+        return getHotRoutesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder getHotRoutesOrBuilder(
+          int index) {
+        if (hotRoutesBuilder_ == null) {
+          return hotRoutes_.get(index);  } else {
+          return hotRoutesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+           getHotRoutesOrBuilderList() {
+        if (hotRoutesBuilder_ != null) {
+          return hotRoutesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(hotRoutes_);
+        }
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder addHotRoutesBuilder() {
+        return getHotRoutesFieldBuilder().addBuilder(
+            com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder addHotRoutesBuilder(
+          int index) {
+        return getHotRoutesFieldBuilder().addBuilder(
+            index, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * hot_routes is the list of hot routes to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.TokenPairArbRoutes hot_routes = 2 [json_name = "hotRoutes", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"hot_routes&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder> 
+           getHotRoutesBuilderList() {
+        return getHotRoutesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder> 
+          getHotRoutesFieldBuilder() {
+        if (hotRoutesBuilder_ == null) {
+          hotRoutesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutes.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.TokenPairArbRoutesOrBuilder>(
+                  hotRoutes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          hotRoutes_ = null;
+        }
+        return hotRoutesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetHotRoutes)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetHotRoutes)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetHotRoutes>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetHotRoutes>() {
+      @java.lang.Override
+      public MsgSetHotRoutes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetHotRoutes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetHotRoutes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetHotRoutesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetHotRoutesResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetHotRoutesResponse}
+   */
+  public static final class MsgSetHotRoutesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetHotRoutesResponse)
+      MsgSetHotRoutesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetHotRoutesResponse.newBuilder() to construct.
+    private MsgSetHotRoutesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetHotRoutesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetHotRoutesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetHotRoutesResponse defines the Msg/SetHotRoutes response type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetHotRoutesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetHotRoutesResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetHotRoutesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetHotRoutesResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetHotRoutesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetHotRoutesResponse>() {
+      @java.lang.Override
+      public MsgSetHotRoutesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetHotRoutesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetHotRoutesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetHotRoutesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetDeveloperAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetDeveloperAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the developer account.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the developer account.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * developer_account is the account that will receive a portion of the profits
+     * from the protorev module.
+     * </pre>
+     *
+     * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+     * @return The developerAccount.
+     */
+    java.lang.String getDeveloperAccount();
+    /**
+     * <pre>
+     * developer_account is the account that will receive a portion of the profits
+     * from the protorev module.
+     * </pre>
+     *
+     * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+     * @return The bytes for developerAccount.
+     */
+    com.google.protobuf.ByteString
+        getDeveloperAccountBytes();
+  }
+  /**
+   * <pre>
+   * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetDeveloperAccount}
+   */
+  public static final class MsgSetDeveloperAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetDeveloperAccount)
+      MsgSetDeveloperAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetDeveloperAccount.newBuilder() to construct.
+    private MsgSetDeveloperAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetDeveloperAccount() {
+      admin_ = "";
+      developerAccount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetDeveloperAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.Builder.class);
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the developer account.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the developer account.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVELOPER_ACCOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object developerAccount_ = "";
+    /**
+     * <pre>
+     * developer_account is the account that will receive a portion of the profits
+     * from the protorev module.
+     * </pre>
+     *
+     * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+     * @return The developerAccount.
+     */
+    @java.lang.Override
+    public java.lang.String getDeveloperAccount() {
+      java.lang.Object ref = developerAccount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        developerAccount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * developer_account is the account that will receive a portion of the profits
+     * from the protorev module.
+     * </pre>
+     *
+     * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+     * @return The bytes for developerAccount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeveloperAccountBytes() {
+      java.lang.Object ref = developerAccount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        developerAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerAccount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, developerAccount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerAccount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, developerAccount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount) obj;
+
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getDeveloperAccount()
+          .equals(other.getDeveloperAccount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (37 * hash) + DEVELOPER_ACCOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getDeveloperAccount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetDeveloperAccount defines the Msg/SetDeveloperAccount request type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetDeveloperAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetDeveloperAccount)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        admin_ = "";
+        developerAccount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.developerAccount_ = developerAccount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount.getDefaultInstance()) return this;
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeveloperAccount().isEmpty()) {
+          developerAccount_ = other.developerAccount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                developerAccount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the developer account.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the developer account.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the developer account.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the developer account.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the developer account.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object developerAccount_ = "";
+      /**
+       * <pre>
+       * developer_account is the account that will receive a portion of the profits
+       * from the protorev module.
+       * </pre>
+       *
+       * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+       * @return The developerAccount.
+       */
+      public java.lang.String getDeveloperAccount() {
+        java.lang.Object ref = developerAccount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          developerAccount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_account is the account that will receive a portion of the profits
+       * from the protorev module.
+       * </pre>
+       *
+       * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+       * @return The bytes for developerAccount.
+       */
+      public com.google.protobuf.ByteString
+          getDeveloperAccountBytes() {
+        java.lang.Object ref = developerAccount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          developerAccount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_account is the account that will receive a portion of the profits
+       * from the protorev module.
+       * </pre>
+       *
+       * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+       * @param value The developerAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        developerAccount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_account is the account that will receive a portion of the profits
+       * from the protorev module.
+       * </pre>
+       *
+       * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeveloperAccount() {
+        developerAccount_ = getDefaultInstance().getDeveloperAccount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_account is the account that will receive a portion of the profits
+       * from the protorev module.
+       * </pre>
+       *
+       * <code>string developer_account = 2 [json_name = "developerAccount", (.gogoproto.moretags) = "yaml:&#92;"developer_account&#92;""];</code>
+       * @param value The bytes for developerAccount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        developerAccount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetDeveloperAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetDeveloperAccount)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetDeveloperAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetDeveloperAccount>() {
+      @java.lang.Override
+      public MsgSetDeveloperAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetDeveloperAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetDeveloperAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetDeveloperAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
+   * type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse}
+   */
+  public static final class MsgSetDeveloperAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse)
+      MsgSetDeveloperAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetDeveloperAccountResponse.newBuilder() to construct.
+    private MsgSetDeveloperAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetDeveloperAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetDeveloperAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetDeveloperAccountResponse defines the Msg/SetDeveloperAccount response
+     * type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetDeveloperAccountResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetDeveloperAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetDeveloperAccountResponse>() {
+      @java.lang.Override
+      public MsgSetDeveloperAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetDeveloperAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetDeveloperAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetDeveloperAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetPoolWeightsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the pool weights.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the pool weights.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * pool_weights is the list of pool weights to set.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return Whether the poolWeights field is set.
+     */
+    boolean hasPoolWeights();
+    /**
+     * <pre>
+     * pool_weights is the list of pool weights to set.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return The poolWeights.
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights();
+    /**
+     * <pre>
+     * pool_weights is the list of pool weights to set.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeights}
+   */
+  public static final class MsgSetPoolWeights extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+      MsgSetPoolWeightsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetPoolWeights.newBuilder() to construct.
+    private MsgSetPoolWeights(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetPoolWeights() {
+      admin_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetPoolWeights();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.Builder.class);
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the pool weights.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the pool weights.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_WEIGHTS_FIELD_NUMBER = 2;
+    private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+    /**
+     * <pre>
+     * pool_weights is the list of pool weights to set.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return Whether the poolWeights field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolWeights() {
+      return poolWeights_ != null;
+    }
+    /**
+     * <pre>
+     * pool_weights is the list of pool weights to set.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     * @return The poolWeights.
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
+      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    }
+    /**
+     * <pre>
+     * pool_weights is the list of pool weights to set.
+     * </pre>
+     *
+     * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
+      return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
+      }
+      if (poolWeights_ != null) {
+        output.writeMessage(2, getPoolWeights());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
+      }
+      if (poolWeights_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPoolWeights());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights) obj;
+
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (hasPoolWeights() != other.hasPoolWeights()) return false;
+      if (hasPoolWeights()) {
+        if (!getPoolWeights()
+            .equals(other.getPoolWeights())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      if (hasPoolWeights()) {
+        hash = (37 * hash) + POOL_WEIGHTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolWeights().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeights}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        admin_ = "";
+        poolWeights_ = null;
+        if (poolWeightsBuilder_ != null) {
+          poolWeightsBuilder_.dispose();
+          poolWeightsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolWeights_ = poolWeightsBuilder_ == null
+              ? poolWeights_
+              : poolWeightsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights.getDefaultInstance()) return this;
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPoolWeights()) {
+          mergePoolWeights(other.getPoolWeights());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPoolWeightsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the pool weights.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the pool weights.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the pool weights.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the pool weights.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the pool weights.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights poolWeights_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> poolWeightsBuilder_;
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * @return Whether the poolWeights field is set.
+       */
+      public boolean hasPoolWeights() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       * @return The poolWeights.
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights getPoolWeights() {
+        if (poolWeightsBuilder_ == null) {
+          return poolWeights_ == null ? com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+        } else {
+          return poolWeightsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder setPoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
+        if (poolWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolWeights_ = value;
+        } else {
+          poolWeightsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder setPoolWeights(
+          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder builderForValue) {
+        if (poolWeightsBuilder_ == null) {
+          poolWeights_ = builderForValue.build();
+        } else {
+          poolWeightsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder mergePoolWeights(com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights value) {
+        if (poolWeightsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            poolWeights_ != null &&
+            poolWeights_ != com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance()) {
+            getPoolWeightsBuilder().mergeFrom(value);
+          } else {
+            poolWeights_ = value;
+          }
+        } else {
+          poolWeightsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public Builder clearPoolWeights() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolWeights_ = null;
+        if (poolWeightsBuilder_ != null) {
+          poolWeightsBuilder_.dispose();
+          poolWeightsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder getPoolWeightsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPoolWeightsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder getPoolWeightsOrBuilder() {
+        if (poolWeightsBuilder_ != null) {
+          return poolWeightsBuilder_.getMessageOrBuilder();
+        } else {
+          return poolWeights_ == null ?
+              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.getDefaultInstance() : poolWeights_;
+        }
+      }
+      /**
+       * <pre>
+       * pool_weights is the list of pool weights to set.
+       * </pre>
+       *
+       * <code>.osmosis.protorev.v1beta1.PoolWeights pool_weights = 2 [json_name = "poolWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"pool_weights&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder> 
+          getPoolWeightsFieldBuilder() {
+        if (poolWeightsBuilder_ == null) {
+          poolWeightsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeights.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.PoolWeightsOrBuilder>(
+                  getPoolWeights(),
+                  getParentForChildren(),
+                  isClean());
+          poolWeights_ = null;
+        }
+        return poolWeightsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetPoolWeights)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetPoolWeights>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetPoolWeights>() {
+      @java.lang.Override
+      public MsgSetPoolWeights parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetPoolWeights> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetPoolWeights> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeights getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetPoolWeightsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse}
+   */
+  public static final class MsgSetPoolWeightsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+      MsgSetPoolWeightsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetPoolWeightsResponse.newBuilder() to construct.
+    private MsgSetPoolWeightsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetPoolWeightsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetPoolWeightsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetPoolWeightsResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetPoolWeightsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetPoolWeightsResponse>() {
+      @java.lang.Override
+      public MsgSetPoolWeightsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetPoolWeightsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetPoolWeightsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetPoolWeightsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetMaxPoolPointsPerTxOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per tx.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per tx.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * max_pool_points_per_tx is the maximum number of pool points that can be
+     * consumed per transaction.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_tx = 2 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+     * @return The maxPoolPointsPerTx.
+     */
+    long getMaxPoolPointsPerTx();
+  }
+  /**
+   * <pre>
+   * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx}
+   */
+  public static final class MsgSetMaxPoolPointsPerTx extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx)
+      MsgSetMaxPoolPointsPerTxOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetMaxPoolPointsPerTx.newBuilder() to construct.
+    private MsgSetMaxPoolPointsPerTx(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetMaxPoolPointsPerTx() {
+      admin_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetMaxPoolPointsPerTx();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.Builder.class);
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per tx.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per tx.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_POOL_POINTS_PER_TX_FIELD_NUMBER = 2;
+    private long maxPoolPointsPerTx_ = 0L;
+    /**
+     * <pre>
+     * max_pool_points_per_tx is the maximum number of pool points that can be
+     * consumed per transaction.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_tx = 2 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+     * @return The maxPoolPointsPerTx.
+     */
+    @java.lang.Override
+    public long getMaxPoolPointsPerTx() {
+      return maxPoolPointsPerTx_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
+      }
+      if (maxPoolPointsPerTx_ != 0L) {
+        output.writeUInt64(2, maxPoolPointsPerTx_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
+      }
+      if (maxPoolPointsPerTx_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, maxPoolPointsPerTx_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx) obj;
+
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (getMaxPoolPointsPerTx()
+          != other.getMaxPoolPointsPerTx()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (37 * hash) + MAX_POOL_POINTS_PER_TX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxPoolPointsPerTx());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetMaxPoolPointsPerTx defines the Msg/SetMaxPoolPointsPerTx request type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        admin_ = "";
+        maxPoolPointsPerTx_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxPoolPointsPerTx_ = maxPoolPointsPerTx_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx.getDefaultInstance()) return this;
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getMaxPoolPointsPerTx() != 0L) {
+          setMaxPoolPointsPerTx(other.getMaxPoolPointsPerTx());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                maxPoolPointsPerTx_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per tx.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per tx.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per tx.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per tx.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per tx.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long maxPoolPointsPerTx_ ;
+      /**
+       * <pre>
+       * max_pool_points_per_tx is the maximum number of pool points that can be
+       * consumed per transaction.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_tx = 2 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+       * @return The maxPoolPointsPerTx.
+       */
+      @java.lang.Override
+      public long getMaxPoolPointsPerTx() {
+        return maxPoolPointsPerTx_;
+      }
+      /**
+       * <pre>
+       * max_pool_points_per_tx is the maximum number of pool points that can be
+       * consumed per transaction.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_tx = 2 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+       * @param value The maxPoolPointsPerTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPoolPointsPerTx(long value) {
+
+        maxPoolPointsPerTx_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_pool_points_per_tx is the maximum number of pool points that can be
+       * consumed per transaction.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_tx = 2 [json_name = "maxPoolPointsPerTx", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_tx&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPoolPointsPerTx() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxPoolPointsPerTx_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTx)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetMaxPoolPointsPerTx>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetMaxPoolPointsPerTx>() {
+      @java.lang.Override
+      public MsgSetMaxPoolPointsPerTx parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetMaxPoolPointsPerTx> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetMaxPoolPointsPerTx> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTx getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetMaxPoolPointsPerTxResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
+   * response type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse}
+   */
+  public static final class MsgSetMaxPoolPointsPerTxResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse)
+      MsgSetMaxPoolPointsPerTxResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetMaxPoolPointsPerTxResponse.newBuilder() to construct.
+    private MsgSetMaxPoolPointsPerTxResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetMaxPoolPointsPerTxResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetMaxPoolPointsPerTxResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetMaxPoolPointsPerTxResponse defines the Msg/SetMaxPoolPointsPerTx
+     * response type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerTxResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetMaxPoolPointsPerTxResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetMaxPoolPointsPerTxResponse>() {
+      @java.lang.Override
+      public MsgSetMaxPoolPointsPerTxResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetMaxPoolPointsPerTxResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetMaxPoolPointsPerTxResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerTxResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetMaxPoolPointsPerBlockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per
+     * block.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per
+     * block.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * max_pool_points_per_block is the maximum number of pool points that can be
+     * consumed per block.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_block = 2 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+     * @return The maxPoolPointsPerBlock.
+     */
+    long getMaxPoolPointsPerBlock();
+  }
+  /**
+   * <pre>
+   * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
+   * type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock}
+   */
+  public static final class MsgSetMaxPoolPointsPerBlock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock)
+      MsgSetMaxPoolPointsPerBlockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetMaxPoolPointsPerBlock.newBuilder() to construct.
+    private MsgSetMaxPoolPointsPerBlock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetMaxPoolPointsPerBlock() {
+      admin_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetMaxPoolPointsPerBlock();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.Builder.class);
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per
+     * block.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the max pool points per
+     * block.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_POOL_POINTS_PER_BLOCK_FIELD_NUMBER = 2;
+    private long maxPoolPointsPerBlock_ = 0L;
+    /**
+     * <pre>
+     * max_pool_points_per_block is the maximum number of pool points that can be
+     * consumed per block.
+     * </pre>
+     *
+     * <code>uint64 max_pool_points_per_block = 2 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+     * @return The maxPoolPointsPerBlock.
+     */
+    @java.lang.Override
+    public long getMaxPoolPointsPerBlock() {
+      return maxPoolPointsPerBlock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
+      }
+      if (maxPoolPointsPerBlock_ != 0L) {
+        output.writeUInt64(2, maxPoolPointsPerBlock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
+      }
+      if (maxPoolPointsPerBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, maxPoolPointsPerBlock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock) obj;
+
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (getMaxPoolPointsPerBlock()
+          != other.getMaxPoolPointsPerBlock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      hash = (37 * hash) + MAX_POOL_POINTS_PER_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxPoolPointsPerBlock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetMaxPoolPointsPerBlock defines the Msg/SetMaxPoolPointsPerBlock request
+     * type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        admin_ = "";
+        maxPoolPointsPerBlock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.admin_ = admin_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxPoolPointsPerBlock_ = maxPoolPointsPerBlock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock.getDefaultInstance()) return this;
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getMaxPoolPointsPerBlock() != 0L) {
+          setMaxPoolPointsPerBlock(other.getMaxPoolPointsPerBlock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                maxPoolPointsPerBlock_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per
+       * block.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per
+       * block.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per
+       * block.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per
+       * block.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the max pool points per
+       * block.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long maxPoolPointsPerBlock_ ;
+      /**
+       * <pre>
+       * max_pool_points_per_block is the maximum number of pool points that can be
+       * consumed per block.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_block = 2 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+       * @return The maxPoolPointsPerBlock.
+       */
+      @java.lang.Override
+      public long getMaxPoolPointsPerBlock() {
+        return maxPoolPointsPerBlock_;
+      }
+      /**
+       * <pre>
+       * max_pool_points_per_block is the maximum number of pool points that can be
+       * consumed per block.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_block = 2 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+       * @param value The maxPoolPointsPerBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPoolPointsPerBlock(long value) {
+
+        maxPoolPointsPerBlock_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_pool_points_per_block is the maximum number of pool points that can be
+       * consumed per block.
+       * </pre>
+       *
+       * <code>uint64 max_pool_points_per_block = 2 [json_name = "maxPoolPointsPerBlock", (.gogoproto.moretags) = "yaml:&#92;"max_pool_points_per_block&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPoolPointsPerBlock() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maxPoolPointsPerBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlock)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetMaxPoolPointsPerBlock>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetMaxPoolPointsPerBlock>() {
+      @java.lang.Override
+      public MsgSetMaxPoolPointsPerBlock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetMaxPoolPointsPerBlock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetMaxPoolPointsPerBlock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetMaxPoolPointsPerBlockResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetMaxPoolPointsPerBlockResponse defines the
+   * Msg/SetMaxPoolPointsPerBlock response type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse}
+   */
+  public static final class MsgSetMaxPoolPointsPerBlockResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse)
+      MsgSetMaxPoolPointsPerBlockResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetMaxPoolPointsPerBlockResponse.newBuilder() to construct.
+    private MsgSetMaxPoolPointsPerBlockResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetMaxPoolPointsPerBlockResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetMaxPoolPointsPerBlockResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetMaxPoolPointsPerBlockResponse defines the
+     * Msg/SetMaxPoolPointsPerBlock response type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetMaxPoolPointsPerBlockResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetMaxPoolPointsPerBlockResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetMaxPoolPointsPerBlockResponse>() {
+      @java.lang.Override
+      public MsgSetMaxPoolPointsPerBlockResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetMaxPoolPointsPerBlockResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetMaxPoolPointsPerBlockResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetMaxPoolPointsPerBlockResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetBaseDenomsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetBaseDenoms)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the base denoms.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    java.lang.String getAdmin();
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the base denoms.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    com.google.protobuf.ByteString
+        getAdminBytes();
+
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> 
+        getBaseDenomsList();
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getBaseDenoms(int index);
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    int getBaseDenomsCount();
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+        getBaseDenomsOrBuilderList();
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder getBaseDenomsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetBaseDenoms}
+   */
+  public static final class MsgSetBaseDenoms extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetBaseDenoms)
+      MsgSetBaseDenomsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetBaseDenoms.newBuilder() to construct.
+    private MsgSetBaseDenoms(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetBaseDenoms() {
+      admin_ = "";
+      baseDenoms_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetBaseDenoms();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.Builder.class);
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object admin_ = "";
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the base denoms.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The admin.
+     */
+    @java.lang.Override
+    public java.lang.String getAdmin() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        admin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * admin is the account that is authorized to set the base denoms.
+     * </pre>
+     *
+     * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+     * @return The bytes for admin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminBytes() {
+      java.lang.Object ref = admin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        admin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE_DENOMS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> baseDenoms_;
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> getBaseDenomsList() {
+      return baseDenoms_;
+    }
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+        getBaseDenomsOrBuilderList() {
+      return baseDenoms_;
+    }
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getBaseDenomsCount() {
+      return baseDenoms_.size();
+    }
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getBaseDenoms(int index) {
+      return baseDenoms_.get(index);
+    }
+    /**
+     * <pre>
+     * base_denoms is the list of base denoms to set.
+     * </pre>
+     *
+     * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder getBaseDenomsOrBuilder(
+        int index) {
+      return baseDenoms_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, admin_);
+      }
+      for (int i = 0; i < baseDenoms_.size(); i++) {
+        output.writeMessage(2, baseDenoms_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(admin_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, admin_);
+      }
+      for (int i = 0; i < baseDenoms_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, baseDenoms_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms) obj;
+
+      if (!getAdmin()
+          .equals(other.getAdmin())) return false;
+      if (!getBaseDenomsList()
+          .equals(other.getBaseDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+      hash = (53 * hash) + getAdmin().hashCode();
+      if (getBaseDenomsCount() > 0) {
+        hash = (37 * hash) + BASE_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getBaseDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetBaseDenoms}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetBaseDenoms)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        admin_ = "";
+        if (baseDenomsBuilder_ == null) {
+          baseDenoms_ = java.util.Collections.emptyList();
+        } else {
+          baseDenoms_ = null;
+          baseDenomsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms result) {
+        if (baseDenomsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            baseDenoms_ = java.util.Collections.unmodifiableList(baseDenoms_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.baseDenoms_ = baseDenoms_;
+        } else {
+          result.baseDenoms_ = baseDenomsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.admin_ = admin_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms.getDefaultInstance()) return this;
+        if (!other.getAdmin().isEmpty()) {
+          admin_ = other.admin_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (baseDenomsBuilder_ == null) {
+          if (!other.baseDenoms_.isEmpty()) {
+            if (baseDenoms_.isEmpty()) {
+              baseDenoms_ = other.baseDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureBaseDenomsIsMutable();
+              baseDenoms_.addAll(other.baseDenoms_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.baseDenoms_.isEmpty()) {
+            if (baseDenomsBuilder_.isEmpty()) {
+              baseDenomsBuilder_.dispose();
+              baseDenomsBuilder_ = null;
+              baseDenoms_ = other.baseDenoms_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              baseDenomsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBaseDenomsFieldBuilder() : null;
+            } else {
+              baseDenomsBuilder_.addAllMessages(other.baseDenoms_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                admin_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom m =
+                    input.readMessage(
+                        com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.parser(),
+                        extensionRegistry);
+                if (baseDenomsBuilder_ == null) {
+                  ensureBaseDenomsIsMutable();
+                  baseDenoms_.add(m);
+                } else {
+                  baseDenomsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object admin_ = "";
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the base denoms.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The admin.
+       */
+      public java.lang.String getAdmin() {
+        java.lang.Object ref = admin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          admin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the base denoms.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return The bytes for admin.
+       */
+      public com.google.protobuf.ByteString
+          getAdminBytes() {
+        java.lang.Object ref = admin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          admin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the base denoms.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdmin(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the base denoms.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdmin() {
+        admin_ = getDefaultInstance().getAdmin();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * admin is the account that is authorized to set the base denoms.
+       * </pre>
+       *
+       * <code>string admin = 1 [json_name = "admin", (.gogoproto.moretags) = "yaml:&#92;"admin&#92;"", (.cosmos_proto.scalar) = "cosmos.AddressString"];</code>
+       * @param value The bytes for admin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        admin_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> baseDenoms_ =
+        java.util.Collections.emptyList();
+      private void ensureBaseDenomsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          baseDenoms_ = new java.util.ArrayList<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom>(baseDenoms_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> baseDenomsBuilder_;
+
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> getBaseDenomsList() {
+        if (baseDenomsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(baseDenoms_);
+        } else {
+          return baseDenomsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public int getBaseDenomsCount() {
+        if (baseDenomsBuilder_ == null) {
+          return baseDenoms_.size();
+        } else {
+          return baseDenomsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom getBaseDenoms(int index) {
+        if (baseDenomsBuilder_ == null) {
+          return baseDenoms_.get(index);
+        } else {
+          return baseDenomsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder setBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom value) {
+        if (baseDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.set(index, value);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder setBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder builderForValue) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          baseDenomsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom value) {
+        if (baseDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(value);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom value) {
+        if (baseDenomsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(index, value);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(
+          com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder builderForValue) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(builderForValue.build());
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addBaseDenoms(
+          int index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder builderForValue) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder addAllBaseDenoms(
+          java.lang.Iterable<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom> values) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, baseDenoms_);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder clearBaseDenoms() {
+        if (baseDenomsBuilder_ == null) {
+          baseDenoms_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public Builder removeBaseDenoms(int index) {
+        if (baseDenomsBuilder_ == null) {
+          ensureBaseDenomsIsMutable();
+          baseDenoms_.remove(index);
+          onChanged();
+        } else {
+          baseDenomsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder getBaseDenomsBuilder(
+          int index) {
+        return getBaseDenomsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder getBaseDenomsOrBuilder(
+          int index) {
+        if (baseDenomsBuilder_ == null) {
+          return baseDenoms_.get(index);  } else {
+          return baseDenomsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+           getBaseDenomsOrBuilderList() {
+        if (baseDenomsBuilder_ != null) {
+          return baseDenomsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(baseDenoms_);
+        }
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder addBaseDenomsBuilder() {
+        return getBaseDenomsFieldBuilder().addBuilder(
+            com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder addBaseDenomsBuilder(
+          int index) {
+        return getBaseDenomsFieldBuilder().addBuilder(
+            index, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * base_denoms is the list of base denoms to set.
+       * </pre>
+       *
+       * <code>repeated .osmosis.protorev.v1beta1.BaseDenom base_denoms = 2 [json_name = "baseDenoms", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"base_denoms&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder> 
+           getBaseDenomsBuilderList() {
+        return getBaseDenomsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder> 
+          getBaseDenomsFieldBuilder() {
+        if (baseDenomsBuilder_ == null) {
+          baseDenomsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenom.Builder, com.osmosis.protorev.v1beta1.ProtorevProto.BaseDenomOrBuilder>(
+                  baseDenoms_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          baseDenoms_ = null;
+        }
+        return baseDenomsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetBaseDenoms)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetBaseDenoms)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetBaseDenoms>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetBaseDenoms>() {
+      @java.lang.Override
+      public MsgSetBaseDenoms parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetBaseDenoms> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetBaseDenoms> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenoms getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetBaseDenomsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse}
+   */
+  public static final class MsgSetBaseDenomsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse)
+      MsgSetBaseDenomsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetBaseDenomsResponse.newBuilder() to construct.
+    private MsgSetBaseDenomsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetBaseDenomsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetBaseDenomsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse other = (com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgSetBaseDenomsResponse defines the Msg/SetBaseDenoms response type.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse)
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.class, com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse getDefaultInstanceForType() {
+        return com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse build() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse buildPartial() {
+        com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse result = new com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse) {
+          return mergeFrom((com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse other) {
+        if (other == com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.protorev.v1beta1.MsgSetBaseDenomsResponse)
+    private static final com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse();
+    }
+
+    public static com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetBaseDenomsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetBaseDenomsResponse>() {
+      @java.lang.Override
+      public MsgSetBaseDenomsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetBaseDenomsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetBaseDenomsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.protorev.v1beta1.TxProto.MsgSetBaseDenomsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetHotRoutesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetDeveloperAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeights_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetPoolWeightsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTx_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerTxResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlock_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetMaxPoolPointsPerBlockResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenoms_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_protorev_v1beta1_MsgSetBaseDenomsResponse_fieldAccessorTable;
 
@@ -148,13 +7796,13 @@ public final class TxProto {
       "\n\rSetBaseDenoms\022*.osmosis.protorev.v1bet" +
       "a1.MsgSetBaseDenoms\0322.osmosis.protorev.v" +
       "1beta1.MsgSetBaseDenomsResponse\"-\202\323\344\223\002\'\"" +
-      "%/osmosis/v14/protorev/set_base_denomsB\337" +
+      "%/osmosis/v14/protorev/set_base_denomsB\335" +
       "\001\n\034com.osmosis.protorev.v1beta1B\007TxProto" +
-      "P\001Z4github.com/osmosis-labs/osmosis/v15/" +
-      "x/protorev/types\242\002\003OPX\252\002\030Osmosis.Protore" +
-      "v.V1beta1\312\002\030Osmosis\\Protorev\\V1beta1\342\002$O" +
-      "smosis\\Protorev\\V1beta1\\GPBMetadata\352\002\032Os" +
-      "mosis::Protorev::V1beta1b\006proto3"
+      "Z4github.com/osmosis-labs/osmosis/v15/x/" +
+      "protorev/types\242\002\003OPX\252\002\030Osmosis.Protorev." +
+      "V1beta1\312\002\030Osmosis\\Protorev\\V1beta1\342\002$Osm" +
+      "osis\\Protorev\\V1beta1\\GPBMetadata\352\002\032Osmo" +
+      "sis::Protorev::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,134 +14,16538 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryExchangeRatesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryExchangeRates)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryExchangeRates is the request type for the Query/ExchangeRate RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryExchangeRates}
+   */
+  public static final class QueryExchangeRates extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryExchangeRates)
+      QueryExchangeRatesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExchangeRates.newBuilder() to construct.
+    private QueryExchangeRates(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExchangeRates() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExchangeRates();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRates_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRates_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryExchangeRates.class, com.umee.oracle.v1.QueryProto.QueryExchangeRates.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryExchangeRates)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryExchangeRates other = (com.umee.oracle.v1.QueryProto.QueryExchangeRates) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryExchangeRates prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryExchangeRates is the request type for the Query/ExchangeRate RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryExchangeRates}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryExchangeRates)
+        com.umee.oracle.v1.QueryProto.QueryExchangeRatesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRates_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRates_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryExchangeRates.class, com.umee.oracle.v1.QueryProto.QueryExchangeRates.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryExchangeRates.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRates_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryExchangeRates getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryExchangeRates.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryExchangeRates build() {
+        com.umee.oracle.v1.QueryProto.QueryExchangeRates result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryExchangeRates buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryExchangeRates result = new com.umee.oracle.v1.QueryProto.QueryExchangeRates(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryExchangeRates result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryExchangeRates) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryExchangeRates)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryExchangeRates other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryExchangeRates.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryExchangeRates)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryExchangeRates)
+    private static final com.umee.oracle.v1.QueryProto.QueryExchangeRates DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryExchangeRates();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRates getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExchangeRates>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExchangeRates>() {
+      @java.lang.Override
+      public QueryExchangeRates parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExchangeRates> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExchangeRates> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryExchangeRates getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryExchangeRatesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryExchangeRatesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getExchangeRatesList();
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getExchangeRates(int index);
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getExchangeRatesCount();
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getExchangeRatesOrBuilderList();
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getExchangeRatesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryExchangeRatesResponse is response type for the
+   * Query/ExchangeRates RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryExchangeRatesResponse}
+   */
+  public static final class QueryExchangeRatesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryExchangeRatesResponse)
+      QueryExchangeRatesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryExchangeRatesResponse.newBuilder() to construct.
+    private QueryExchangeRatesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryExchangeRatesResponse() {
+      exchangeRates_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryExchangeRatesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRatesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRatesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.class, com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.Builder.class);
+    }
+
+    public static final int EXCHANGE_RATES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> exchangeRates_;
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getExchangeRatesList() {
+      return exchangeRates_;
+    }
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getExchangeRatesOrBuilderList() {
+      return exchangeRates_;
+    }
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getExchangeRatesCount() {
+      return exchangeRates_.size();
+    }
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getExchangeRates(int index) {
+      return exchangeRates_.get(index);
+    }
+    /**
+     * <pre>
+     * exchange_rates defines a list of the exchange rate for all whitelisted
+     * denoms.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getExchangeRatesOrBuilder(
+        int index) {
+      return exchangeRates_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < exchangeRates_.size(); i++) {
+        output.writeMessage(1, exchangeRates_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < exchangeRates_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, exchangeRates_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse other = (com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse) obj;
+
+      if (!getExchangeRatesList()
+          .equals(other.getExchangeRatesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getExchangeRatesCount() > 0) {
+        hash = (37 * hash) + EXCHANGE_RATES_FIELD_NUMBER;
+        hash = (53 * hash) + getExchangeRatesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryExchangeRatesResponse is response type for the
+     * Query/ExchangeRates RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryExchangeRatesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryExchangeRatesResponse)
+        com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRatesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.class, com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (exchangeRatesBuilder_ == null) {
+          exchangeRates_ = java.util.Collections.emptyList();
+        } else {
+          exchangeRates_ = null;
+          exchangeRatesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryExchangeRatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse result = new com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse result) {
+        if (exchangeRatesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            exchangeRates_ = java.util.Collections.unmodifiableList(exchangeRates_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.exchangeRates_ = exchangeRates_;
+        } else {
+          result.exchangeRates_ = exchangeRatesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse.getDefaultInstance()) return this;
+        if (exchangeRatesBuilder_ == null) {
+          if (!other.exchangeRates_.isEmpty()) {
+            if (exchangeRates_.isEmpty()) {
+              exchangeRates_ = other.exchangeRates_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureExchangeRatesIsMutable();
+              exchangeRates_.addAll(other.exchangeRates_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.exchangeRates_.isEmpty()) {
+            if (exchangeRatesBuilder_.isEmpty()) {
+              exchangeRatesBuilder_.dispose();
+              exchangeRatesBuilder_ = null;
+              exchangeRates_ = other.exchangeRates_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              exchangeRatesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getExchangeRatesFieldBuilder() : null;
+            } else {
+              exchangeRatesBuilder_.addAllMessages(other.exchangeRates_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (exchangeRatesBuilder_ == null) {
+                  ensureExchangeRatesIsMutable();
+                  exchangeRates_.add(m);
+                } else {
+                  exchangeRatesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> exchangeRates_ =
+        java.util.Collections.emptyList();
+      private void ensureExchangeRatesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          exchangeRates_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(exchangeRates_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> exchangeRatesBuilder_;
+
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getExchangeRatesList() {
+        if (exchangeRatesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(exchangeRates_);
+        } else {
+          return exchangeRatesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getExchangeRatesCount() {
+        if (exchangeRatesBuilder_ == null) {
+          return exchangeRates_.size();
+        } else {
+          return exchangeRatesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getExchangeRates(int index) {
+        if (exchangeRatesBuilder_ == null) {
+          return exchangeRates_.get(index);
+        } else {
+          return exchangeRatesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setExchangeRates(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (exchangeRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.set(index, value);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setExchangeRates(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addExchangeRates(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (exchangeRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(value);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addExchangeRates(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (exchangeRatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(index, value);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addExchangeRates(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addExchangeRates(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllExchangeRates(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, exchangeRates_);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearExchangeRates() {
+        if (exchangeRatesBuilder_ == null) {
+          exchangeRates_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeExchangeRates(int index) {
+        if (exchangeRatesBuilder_ == null) {
+          ensureExchangeRatesIsMutable();
+          exchangeRates_.remove(index);
+          onChanged();
+        } else {
+          exchangeRatesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getExchangeRatesBuilder(
+          int index) {
+        return getExchangeRatesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getExchangeRatesOrBuilder(
+          int index) {
+        if (exchangeRatesBuilder_ == null) {
+          return exchangeRates_.get(index);  } else {
+          return exchangeRatesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getExchangeRatesOrBuilderList() {
+        if (exchangeRatesBuilder_ != null) {
+          return exchangeRatesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(exchangeRates_);
+        }
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addExchangeRatesBuilder() {
+        return getExchangeRatesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addExchangeRatesBuilder(
+          int index) {
+        return getExchangeRatesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * exchange_rates defines a list of the exchange rate for all whitelisted
+       * denoms.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin exchange_rates = 1 [json_name = "exchangeRates", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getExchangeRatesBuilderList() {
+        return getExchangeRatesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getExchangeRatesFieldBuilder() {
+        if (exchangeRatesBuilder_ == null) {
+          exchangeRatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  exchangeRates_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          exchangeRates_ = null;
+        }
+        return exchangeRatesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryExchangeRatesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryExchangeRatesResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryExchangeRatesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryExchangeRatesResponse>() {
+      @java.lang.Override
+      public QueryExchangeRatesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryExchangeRatesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryExchangeRatesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryExchangeRatesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryActiveExchangeRatesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryActiveExchangeRates)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryActiveExchangeRates is the request type for the
+   * Query/ActiveExchangeRates RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryActiveExchangeRates}
+   */
+  public static final class QueryActiveExchangeRates extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryActiveExchangeRates)
+      QueryActiveExchangeRatesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryActiveExchangeRates.newBuilder() to construct.
+    private QueryActiveExchangeRates(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryActiveExchangeRates() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryActiveExchangeRates();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRates_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRates_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.class, com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates other = (com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryActiveExchangeRates is the request type for the
+     * Query/ActiveExchangeRates RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryActiveExchangeRates}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryActiveExchangeRates)
+        com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRates_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRates_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.class, com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRates_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates build() {
+        com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates result = new com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryActiveExchangeRates)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryActiveExchangeRates)
+    private static final com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryActiveExchangeRates>
+        PARSER = new com.google.protobuf.AbstractParser<QueryActiveExchangeRates>() {
+      @java.lang.Override
+      public QueryActiveExchangeRates parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryActiveExchangeRates> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryActiveExchangeRates> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRates getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryActiveExchangeRatesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryActiveExchangeRatesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @return A list containing the activeRates.
+     */
+    java.util.List<java.lang.String>
+        getActiveRatesList();
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @return The count of activeRates.
+     */
+    int getActiveRatesCount();
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @param index The index of the element to return.
+     * @return The activeRates at the given index.
+     */
+    java.lang.String getActiveRates(int index);
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the activeRates at the given index.
+     */
+    com.google.protobuf.ByteString
+        getActiveRatesBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryActiveExchangeRatesResponse is response type for the
+   * Query/ActiveExchangeRates RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryActiveExchangeRatesResponse}
+   */
+  public static final class QueryActiveExchangeRatesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryActiveExchangeRatesResponse)
+      QueryActiveExchangeRatesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryActiveExchangeRatesResponse.newBuilder() to construct.
+    private QueryActiveExchangeRatesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryActiveExchangeRatesResponse() {
+      activeRates_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryActiveExchangeRatesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.class, com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.Builder.class);
+    }
+
+    public static final int ACTIVE_RATES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList activeRates_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @return A list containing the activeRates.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getActiveRatesList() {
+      return activeRates_;
+    }
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @return The count of activeRates.
+     */
+    public int getActiveRatesCount() {
+      return activeRates_.size();
+    }
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @param index The index of the element to return.
+     * @return The activeRates at the given index.
+     */
+    public java.lang.String getActiveRates(int index) {
+      return activeRates_.get(index);
+    }
+    /**
+     * <pre>
+     * activeRates defines a list of the denomination which oracle prices agreed
+     * upon.
+     * </pre>
+     *
+     * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the activeRates at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getActiveRatesBytes(int index) {
+      return activeRates_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < activeRates_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, activeRates_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < activeRates_.size(); i++) {
+          dataSize += computeStringSizeNoTag(activeRates_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getActiveRatesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse other = (com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse) obj;
+
+      if (!getActiveRatesList()
+          .equals(other.getActiveRatesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getActiveRatesCount() > 0) {
+        hash = (37 * hash) + ACTIVE_RATES_FIELD_NUMBER;
+        hash = (53 * hash) + getActiveRatesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryActiveExchangeRatesResponse is response type for the
+     * Query/ActiveExchangeRates RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryActiveExchangeRatesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryActiveExchangeRatesResponse)
+        com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.class, com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        activeRates_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse result = new com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          activeRates_.makeImmutable();
+          result.activeRates_ = activeRates_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse.getDefaultInstance()) return this;
+        if (!other.activeRates_.isEmpty()) {
+          if (activeRates_.isEmpty()) {
+            activeRates_ = other.activeRates_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureActiveRatesIsMutable();
+            activeRates_.addAll(other.activeRates_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureActiveRatesIsMutable();
+                activeRates_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList activeRates_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureActiveRatesIsMutable() {
+        if (!activeRates_.isModifiable()) {
+          activeRates_ = new com.google.protobuf.LazyStringArrayList(activeRates_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @return A list containing the activeRates.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getActiveRatesList() {
+        activeRates_.makeImmutable();
+        return activeRates_;
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @return The count of activeRates.
+       */
+      public int getActiveRatesCount() {
+        return activeRates_.size();
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @param index The index of the element to return.
+       * @return The activeRates at the given index.
+       */
+      public java.lang.String getActiveRates(int index) {
+        return activeRates_.get(index);
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the activeRates at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getActiveRatesBytes(int index) {
+        return activeRates_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @param index The index to set the value at.
+       * @param value The activeRates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActiveRates(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureActiveRatesIsMutable();
+        activeRates_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @param value The activeRates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addActiveRates(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureActiveRatesIsMutable();
+        activeRates_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @param values The activeRates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllActiveRates(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureActiveRatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, activeRates_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActiveRates() {
+        activeRates_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * activeRates defines a list of the denomination which oracle prices agreed
+       * upon.
+       * </pre>
+       *
+       * <code>repeated string active_rates = 1 [json_name = "activeRates"];</code>
+       * @param value The bytes of the activeRates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addActiveRatesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureActiveRatesIsMutable();
+        activeRates_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryActiveExchangeRatesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryActiveExchangeRatesResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryActiveExchangeRatesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryActiveExchangeRatesResponse>() {
+      @java.lang.Override
+      public QueryActiveExchangeRatesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryActiveExchangeRatesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryActiveExchangeRatesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryActiveExchangeRatesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeederDelegationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryFeederDelegation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    java.lang.String getValidatorAddr();
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddrBytes();
+  }
+  /**
+   * <pre>
+   * QueryFeederDelegation is the request type for the
+   * Query/FeederDelegation RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryFeederDelegation}
+   */
+  public static final class QueryFeederDelegation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryFeederDelegation)
+      QueryFeederDelegationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeederDelegation.newBuilder() to construct.
+    private QueryFeederDelegation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeederDelegation() {
+      validatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeederDelegation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryFeederDelegation.class, com.umee.oracle.v1.QueryProto.QueryFeederDelegation.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddr_ = "";
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddr() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddrBytes() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryFeederDelegation)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryFeederDelegation other = (com.umee.oracle.v1.QueryProto.QueryFeederDelegation) obj;
+
+      if (!getValidatorAddr()
+          .equals(other.getValidatorAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryFeederDelegation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeederDelegation is the request type for the
+     * Query/FeederDelegation RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryFeederDelegation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryFeederDelegation)
+        com.umee.oracle.v1.QueryProto.QueryFeederDelegationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryFeederDelegation.class, com.umee.oracle.v1.QueryProto.QueryFeederDelegation.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryFeederDelegation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryFeederDelegation getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryFeederDelegation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryFeederDelegation build() {
+        com.umee.oracle.v1.QueryProto.QueryFeederDelegation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryFeederDelegation buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryFeederDelegation result = new com.umee.oracle.v1.QueryProto.QueryFeederDelegation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryFeederDelegation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddr_ = validatorAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryFeederDelegation) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryFeederDelegation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryFeederDelegation other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryFeederDelegation.getDefaultInstance()) return this;
+        if (!other.getValidatorAddr().isEmpty()) {
+          validatorAddr_ = other.validatorAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddr_ = "";
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The validatorAddr.
+       */
+      public java.lang.String getValidatorAddr() {
+        java.lang.Object ref = validatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The bytes for validatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddrBytes() {
+        java.lang.Object ref = validatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddr() {
+        validatorAddr_ = getDefaultInstance().getValidatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The bytes for validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryFeederDelegation)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryFeederDelegation)
+    private static final com.umee.oracle.v1.QueryProto.QueryFeederDelegation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryFeederDelegation();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeederDelegation>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeederDelegation>() {
+      @java.lang.Override
+      public QueryFeederDelegation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeederDelegation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeederDelegation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryFeederDelegation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeederDelegationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryFeederDelegationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * feeder_addr defines the feeder delegation of a validator
+     * </pre>
+     *
+     * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+     * @return The feederAddr.
+     */
+    java.lang.String getFeederAddr();
+    /**
+     * <pre>
+     * feeder_addr defines the feeder delegation of a validator
+     * </pre>
+     *
+     * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+     * @return The bytes for feederAddr.
+     */
+    com.google.protobuf.ByteString
+        getFeederAddrBytes();
+  }
+  /**
+   * <pre>
+   * QueryFeederDelegationResponse is response type for the
+   * Query/FeederDelegation RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryFeederDelegationResponse}
+   */
+  public static final class QueryFeederDelegationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryFeederDelegationResponse)
+      QueryFeederDelegationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeederDelegationResponse.newBuilder() to construct.
+    private QueryFeederDelegationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeederDelegationResponse() {
+      feederAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeederDelegationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.class, com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.Builder.class);
+    }
+
+    public static final int FEEDER_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feederAddr_ = "";
+    /**
+     * <pre>
+     * feeder_addr defines the feeder delegation of a validator
+     * </pre>
+     *
+     * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+     * @return The feederAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getFeederAddr() {
+      java.lang.Object ref = feederAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feederAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * feeder_addr defines the feeder delegation of a validator
+     * </pre>
+     *
+     * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+     * @return The bytes for feederAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeederAddrBytes() {
+      java.lang.Object ref = feederAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feederAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feederAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feederAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feederAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feederAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse other = (com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse) obj;
+
+      if (!getFeederAddr()
+          .equals(other.getFeederAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEEDER_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getFeederAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeederDelegationResponse is response type for the
+     * Query/FeederDelegation RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryFeederDelegationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryFeederDelegationResponse)
+        com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.class, com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feederAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryFeederDelegationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse result = new com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feederAddr_ = feederAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse.getDefaultInstance()) return this;
+        if (!other.getFeederAddr().isEmpty()) {
+          feederAddr_ = other.feederAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feederAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feederAddr_ = "";
+      /**
+       * <pre>
+       * feeder_addr defines the feeder delegation of a validator
+       * </pre>
+       *
+       * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+       * @return The feederAddr.
+       */
+      public java.lang.String getFeederAddr() {
+        java.lang.Object ref = feederAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feederAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * feeder_addr defines the feeder delegation of a validator
+       * </pre>
+       *
+       * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+       * @return The bytes for feederAddr.
+       */
+      public com.google.protobuf.ByteString
+          getFeederAddrBytes() {
+        java.lang.Object ref = feederAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feederAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * feeder_addr defines the feeder delegation of a validator
+       * </pre>
+       *
+       * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+       * @param value The feederAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeederAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feederAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * feeder_addr defines the feeder delegation of a validator
+       * </pre>
+       *
+       * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeederAddr() {
+        feederAddr_ = getDefaultInstance().getFeederAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * feeder_addr defines the feeder delegation of a validator
+       * </pre>
+       *
+       * <code>string feeder_addr = 1 [json_name = "feederAddr"];</code>
+       * @param value The bytes for feederAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeederAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feederAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryFeederDelegationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryFeederDelegationResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeederDelegationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeederDelegationResponse>() {
+      @java.lang.Override
+      public QueryFeederDelegationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeederDelegationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeederDelegationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryFeederDelegationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMissCounterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryMissCounter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    java.lang.String getValidatorAddr();
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddrBytes();
+  }
+  /**
+   * <pre>
+   * QueryMissCounter is the request type for the Query/MissCounter RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryMissCounter}
+   */
+  public static final class QueryMissCounter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryMissCounter)
+      QueryMissCounterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMissCounter.newBuilder() to construct.
+    private QueryMissCounter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMissCounter() {
+      validatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMissCounter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryMissCounter.class, com.umee.oracle.v1.QueryProto.QueryMissCounter.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddr_ = "";
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddr() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddrBytes() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryMissCounter)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryMissCounter other = (com.umee.oracle.v1.QueryProto.QueryMissCounter) obj;
+
+      if (!getValidatorAddr()
+          .equals(other.getValidatorAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryMissCounter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMissCounter is the request type for the Query/MissCounter RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryMissCounter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryMissCounter)
+        com.umee.oracle.v1.QueryProto.QueryMissCounterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryMissCounter.class, com.umee.oracle.v1.QueryProto.QueryMissCounter.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryMissCounter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMissCounter getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryMissCounter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMissCounter build() {
+        com.umee.oracle.v1.QueryProto.QueryMissCounter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMissCounter buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryMissCounter result = new com.umee.oracle.v1.QueryProto.QueryMissCounter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryMissCounter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddr_ = validatorAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryMissCounter) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryMissCounter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryMissCounter other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryMissCounter.getDefaultInstance()) return this;
+        if (!other.getValidatorAddr().isEmpty()) {
+          validatorAddr_ = other.validatorAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddr_ = "";
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The validatorAddr.
+       */
+      public java.lang.String getValidatorAddr() {
+        java.lang.Object ref = validatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The bytes for validatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddrBytes() {
+        java.lang.Object ref = validatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddr() {
+        validatorAddr_ = getDefaultInstance().getValidatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The bytes for validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryMissCounter)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryMissCounter)
+    private static final com.umee.oracle.v1.QueryProto.QueryMissCounter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryMissCounter();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMissCounter>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMissCounter>() {
+      @java.lang.Override
+      public QueryMissCounter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMissCounter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMissCounter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryMissCounter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMissCounterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryMissCounterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * miss_counter defines the oracle miss counter of a validator
+     * </pre>
+     *
+     * <code>uint64 miss_counter = 1 [json_name = "missCounter"];</code>
+     * @return The missCounter.
+     */
+    long getMissCounter();
+  }
+  /**
+   * <pre>
+   * QueryMissCounterResponse is response type for the
+   * Query/MissCounter RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryMissCounterResponse}
+   */
+  public static final class QueryMissCounterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryMissCounterResponse)
+      QueryMissCounterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMissCounterResponse.newBuilder() to construct.
+    private QueryMissCounterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMissCounterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMissCounterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.class, com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.Builder.class);
+    }
+
+    public static final int MISS_COUNTER_FIELD_NUMBER = 1;
+    private long missCounter_ = 0L;
+    /**
+     * <pre>
+     * miss_counter defines the oracle miss counter of a validator
+     * </pre>
+     *
+     * <code>uint64 miss_counter = 1 [json_name = "missCounter"];</code>
+     * @return The missCounter.
+     */
+    @java.lang.Override
+    public long getMissCounter() {
+      return missCounter_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (missCounter_ != 0L) {
+        output.writeUInt64(1, missCounter_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (missCounter_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, missCounter_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryMissCounterResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryMissCounterResponse other = (com.umee.oracle.v1.QueryProto.QueryMissCounterResponse) obj;
+
+      if (getMissCounter()
+          != other.getMissCounter()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MISS_COUNTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMissCounter());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryMissCounterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMissCounterResponse is response type for the
+     * Query/MissCounter RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryMissCounterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryMissCounterResponse)
+        com.umee.oracle.v1.QueryProto.QueryMissCounterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.class, com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        missCounter_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMissCounterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMissCounterResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMissCounterResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryMissCounterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMissCounterResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryMissCounterResponse result = new com.umee.oracle.v1.QueryProto.QueryMissCounterResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryMissCounterResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.missCounter_ = missCounter_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryMissCounterResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryMissCounterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryMissCounterResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryMissCounterResponse.getDefaultInstance()) return this;
+        if (other.getMissCounter() != 0L) {
+          setMissCounter(other.getMissCounter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                missCounter_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long missCounter_ ;
+      /**
+       * <pre>
+       * miss_counter defines the oracle miss counter of a validator
+       * </pre>
+       *
+       * <code>uint64 miss_counter = 1 [json_name = "missCounter"];</code>
+       * @return The missCounter.
+       */
+      @java.lang.Override
+      public long getMissCounter() {
+        return missCounter_;
+      }
+      /**
+       * <pre>
+       * miss_counter defines the oracle miss counter of a validator
+       * </pre>
+       *
+       * <code>uint64 miss_counter = 1 [json_name = "missCounter"];</code>
+       * @param value The missCounter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMissCounter(long value) {
+
+        missCounter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * miss_counter defines the oracle miss counter of a validator
+       * </pre>
+       *
+       * <code>uint64 miss_counter = 1 [json_name = "missCounter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMissCounter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        missCounter_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryMissCounterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryMissCounterResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryMissCounterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryMissCounterResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMissCounterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMissCounterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMissCounterResponse>() {
+      @java.lang.Override
+      public QueryMissCounterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMissCounterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMissCounterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryMissCounterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySlashWindowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QuerySlashWindow)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QuerySlashWindow is the request type for the
+   * Query/SlashWindow RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QuerySlashWindow}
+   */
+  public static final class QuerySlashWindow extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QuerySlashWindow)
+      QuerySlashWindowOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySlashWindow.newBuilder() to construct.
+    private QuerySlashWindow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySlashWindow() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySlashWindow();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindow_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QuerySlashWindow.class, com.umee.oracle.v1.QueryProto.QuerySlashWindow.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QuerySlashWindow)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QuerySlashWindow other = (com.umee.oracle.v1.QueryProto.QuerySlashWindow) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QuerySlashWindow prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySlashWindow is the request type for the
+     * Query/SlashWindow RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QuerySlashWindow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QuerySlashWindow)
+        com.umee.oracle.v1.QueryProto.QuerySlashWindowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QuerySlashWindow.class, com.umee.oracle.v1.QueryProto.QuerySlashWindow.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QuerySlashWindow.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindow_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QuerySlashWindow getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QuerySlashWindow.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QuerySlashWindow build() {
+        com.umee.oracle.v1.QueryProto.QuerySlashWindow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QuerySlashWindow buildPartial() {
+        com.umee.oracle.v1.QueryProto.QuerySlashWindow result = new com.umee.oracle.v1.QueryProto.QuerySlashWindow(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QuerySlashWindow) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QuerySlashWindow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QuerySlashWindow other) {
+        if (other == com.umee.oracle.v1.QueryProto.QuerySlashWindow.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QuerySlashWindow)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QuerySlashWindow)
+    private static final com.umee.oracle.v1.QueryProto.QuerySlashWindow DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QuerySlashWindow();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindow getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySlashWindow>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySlashWindow>() {
+      @java.lang.Override
+      public QuerySlashWindow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySlashWindow> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySlashWindow> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QuerySlashWindow getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySlashWindowResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QuerySlashWindowResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * window_progress defines the number of voting periods
+     * since the last slashing event would have taken place.
+     * </pre>
+     *
+     * <code>uint64 window_progress = 1 [json_name = "windowProgress"];</code>
+     * @return The windowProgress.
+     */
+    long getWindowProgress();
+  }
+  /**
+   * <pre>
+   * QuerySlashWindowResponse is response type for the
+   * Query/SlashWindow RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QuerySlashWindowResponse}
+   */
+  public static final class QuerySlashWindowResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QuerySlashWindowResponse)
+      QuerySlashWindowResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySlashWindowResponse.newBuilder() to construct.
+    private QuerySlashWindowResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySlashWindowResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySlashWindowResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindowResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindowResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.class, com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.Builder.class);
+    }
+
+    public static final int WINDOW_PROGRESS_FIELD_NUMBER = 1;
+    private long windowProgress_ = 0L;
+    /**
+     * <pre>
+     * window_progress defines the number of voting periods
+     * since the last slashing event would have taken place.
+     * </pre>
+     *
+     * <code>uint64 window_progress = 1 [json_name = "windowProgress"];</code>
+     * @return The windowProgress.
+     */
+    @java.lang.Override
+    public long getWindowProgress() {
+      return windowProgress_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (windowProgress_ != 0L) {
+        output.writeUInt64(1, windowProgress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (windowProgress_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, windowProgress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse other = (com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse) obj;
+
+      if (getWindowProgress()
+          != other.getWindowProgress()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WINDOW_PROGRESS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWindowProgress());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySlashWindowResponse is response type for the
+     * Query/SlashWindow RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QuerySlashWindowResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QuerySlashWindowResponse)
+        com.umee.oracle.v1.QueryProto.QuerySlashWindowResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindowResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindowResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.class, com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        windowProgress_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QuerySlashWindowResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse build() {
+        com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse result = new com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.windowProgress_ = windowProgress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse.getDefaultInstance()) return this;
+        if (other.getWindowProgress() != 0L) {
+          setWindowProgress(other.getWindowProgress());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                windowProgress_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long windowProgress_ ;
+      /**
+       * <pre>
+       * window_progress defines the number of voting periods
+       * since the last slashing event would have taken place.
+       * </pre>
+       *
+       * <code>uint64 window_progress = 1 [json_name = "windowProgress"];</code>
+       * @return The windowProgress.
+       */
+      @java.lang.Override
+      public long getWindowProgress() {
+        return windowProgress_;
+      }
+      /**
+       * <pre>
+       * window_progress defines the number of voting periods
+       * since the last slashing event would have taken place.
+       * </pre>
+       *
+       * <code>uint64 window_progress = 1 [json_name = "windowProgress"];</code>
+       * @param value The windowProgress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWindowProgress(long value) {
+
+        windowProgress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * window_progress defines the number of voting periods
+       * since the last slashing event would have taken place.
+       * </pre>
+       *
+       * <code>uint64 window_progress = 1 [json_name = "windowProgress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWindowProgress() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        windowProgress_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QuerySlashWindowResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QuerySlashWindowResponse)
+    private static final com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySlashWindowResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySlashWindowResponse>() {
+      @java.lang.Override
+      public QuerySlashWindowResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySlashWindowResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySlashWindowResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QuerySlashWindowResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregatePrevoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregatePrevote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    java.lang.String getValidatorAddr();
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddrBytes();
+  }
+  /**
+   * <pre>
+   * QueryAggregatePrevote is the request type for the
+   * Query/AggregatePrevote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevote}
+   */
+  public static final class QueryAggregatePrevote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregatePrevote)
+      QueryAggregatePrevoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregatePrevote.newBuilder() to construct.
+    private QueryAggregatePrevote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregatePrevote() {
+      validatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregatePrevote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddr_ = "";
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddr() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddrBytes() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevote)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregatePrevote other = (com.umee.oracle.v1.QueryProto.QueryAggregatePrevote) obj;
+
+      if (!getValidatorAddr()
+          .equals(other.getValidatorAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregatePrevote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregatePrevote is the request type for the
+     * Query/AggregatePrevote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregatePrevote)
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevote getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevote build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevote buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevote result = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAggregatePrevote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddr_ = validatorAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevote) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregatePrevote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregatePrevote other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregatePrevote.getDefaultInstance()) return this;
+        if (!other.getValidatorAddr().isEmpty()) {
+          validatorAddr_ = other.validatorAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddr_ = "";
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The validatorAddr.
+       */
+      public java.lang.String getValidatorAddr() {
+        java.lang.Object ref = validatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The bytes for validatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddrBytes() {
+        java.lang.Object ref = validatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddr() {
+        validatorAddr_ = getDefaultInstance().getValidatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The bytes for validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregatePrevote)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregatePrevote)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregatePrevote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevote();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregatePrevote>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregatePrevote>() {
+      @java.lang.Override
+      public QueryAggregatePrevote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregatePrevote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregatePrevote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregatePrevote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregatePrevoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregatePrevoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+     * in the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+     * @return Whether the aggregatePrevote field is set.
+     */
+    boolean hasAggregatePrevote();
+    /**
+     * <pre>
+     * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+     * in the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+     * @return The aggregatePrevote.
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregatePrevote();
+    /**
+     * <pre>
+     * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+     * in the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregatePrevoteOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAggregatePrevoteResponse is response type for the
+   * Query/AggregatePrevote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevoteResponse}
+   */
+  public static final class QueryAggregatePrevoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregatePrevoteResponse)
+      QueryAggregatePrevoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregatePrevoteResponse.newBuilder() to construct.
+    private QueryAggregatePrevoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregatePrevoteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregatePrevoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.Builder.class);
+    }
+
+    public static final int AGGREGATE_PREVOTE_FIELD_NUMBER = 1;
+    private com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote aggregatePrevote_;
+    /**
+     * <pre>
+     * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+     * in the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+     * @return Whether the aggregatePrevote field is set.
+     */
+    @java.lang.Override
+    public boolean hasAggregatePrevote() {
+      return aggregatePrevote_ != null;
+    }
+    /**
+     * <pre>
+     * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+     * in the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+     * @return The aggregatePrevote.
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregatePrevote() {
+      return aggregatePrevote_ == null ? com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance() : aggregatePrevote_;
+    }
+    /**
+     * <pre>
+     * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+     * in the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregatePrevoteOrBuilder() {
+      return aggregatePrevote_ == null ? com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance() : aggregatePrevote_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (aggregatePrevote_ != null) {
+        output.writeMessage(1, getAggregatePrevote());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (aggregatePrevote_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAggregatePrevote());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse other = (com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse) obj;
+
+      if (hasAggregatePrevote() != other.hasAggregatePrevote()) return false;
+      if (hasAggregatePrevote()) {
+        if (!getAggregatePrevote()
+            .equals(other.getAggregatePrevote())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAggregatePrevote()) {
+        hash = (37 * hash) + AGGREGATE_PREVOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregatePrevote().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregatePrevoteResponse is response type for the
+     * Query/AggregatePrevote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregatePrevoteResponse)
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        aggregatePrevote_ = null;
+        if (aggregatePrevoteBuilder_ != null) {
+          aggregatePrevoteBuilder_.dispose();
+          aggregatePrevoteBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse result = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.aggregatePrevote_ = aggregatePrevoteBuilder_ == null
+              ? aggregatePrevote_
+              : aggregatePrevoteBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse.getDefaultInstance()) return this;
+        if (other.hasAggregatePrevote()) {
+          mergeAggregatePrevote(other.getAggregatePrevote());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAggregatePrevoteFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote aggregatePrevote_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> aggregatePrevoteBuilder_;
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       * @return Whether the aggregatePrevote field is set.
+       */
+      public boolean hasAggregatePrevote() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       * @return The aggregatePrevote.
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregatePrevote() {
+        if (aggregatePrevoteBuilder_ == null) {
+          return aggregatePrevote_ == null ? com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance() : aggregatePrevote_;
+        } else {
+          return aggregatePrevoteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregatePrevote(com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregatePrevoteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          aggregatePrevote_ = value;
+        } else {
+          aggregatePrevoteBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregatePrevote(
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregatePrevoteBuilder_ == null) {
+          aggregatePrevote_ = builderForValue.build();
+        } else {
+          aggregatePrevoteBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAggregatePrevote(com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregatePrevoteBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            aggregatePrevote_ != null &&
+            aggregatePrevote_ != com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance()) {
+            getAggregatePrevoteBuilder().mergeFrom(value);
+          } else {
+            aggregatePrevote_ = value;
+          }
+        } else {
+          aggregatePrevoteBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAggregatePrevote() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        aggregatePrevote_ = null;
+        if (aggregatePrevoteBuilder_ != null) {
+          aggregatePrevoteBuilder_.dispose();
+          aggregatePrevoteBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder getAggregatePrevoteBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAggregatePrevoteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregatePrevoteOrBuilder() {
+        if (aggregatePrevoteBuilder_ != null) {
+          return aggregatePrevoteBuilder_.getMessageOrBuilder();
+        } else {
+          return aggregatePrevote_ == null ?
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance() : aggregatePrevote_;
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevote defines oracle aggregate prevote submitted by a validator
+       * in the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevote = 1 [json_name = "aggregatePrevote", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+          getAggregatePrevoteFieldBuilder() {
+        if (aggregatePrevoteBuilder_ == null) {
+          aggregatePrevoteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder>(
+                  getAggregatePrevote(),
+                  getParentForChildren(),
+                  isClean());
+          aggregatePrevote_ = null;
+        }
+        return aggregatePrevoteBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregatePrevoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregatePrevoteResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregatePrevoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregatePrevoteResponse>() {
+      @java.lang.Override
+      public QueryAggregatePrevoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregatePrevoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregatePrevoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregatePrevoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregatePrevotesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregatePrevotes)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryAggregatePrevotes is the request type for the
+   * Query/AggregatePrevotes RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevotes}
+   */
+  public static final class QueryAggregatePrevotes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregatePrevotes)
+      QueryAggregatePrevotesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregatePrevotes.newBuilder() to construct.
+    private QueryAggregatePrevotes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregatePrevotes() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregatePrevotes();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes other = (com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregatePrevotes is the request type for the
+     * Query/AggregatePrevotes RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevotes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregatePrevotes)
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotes_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes result = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregatePrevotes)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregatePrevotes)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregatePrevotes>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregatePrevotes>() {
+      @java.lang.Override
+      public QueryAggregatePrevotes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregatePrevotes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregatePrevotes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregatePrevotesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregatePrevotesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> 
+        getAggregatePrevotesList();
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregatePrevotes(int index);
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getAggregatePrevotesCount();
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+        getAggregatePrevotesOrBuilderList();
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregatePrevotesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryAggregatePrevotesResponse is response type for the
+   * Query/AggregatePrevotes RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevotesResponse}
+   */
+  public static final class QueryAggregatePrevotesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregatePrevotesResponse)
+      QueryAggregatePrevotesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregatePrevotesResponse.newBuilder() to construct.
+    private QueryAggregatePrevotesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregatePrevotesResponse() {
+      aggregatePrevotes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregatePrevotesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.Builder.class);
+    }
+
+    public static final int AGGREGATE_PREVOTES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> aggregatePrevotes_;
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> getAggregatePrevotesList() {
+      return aggregatePrevotes_;
+    }
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+        getAggregatePrevotesOrBuilderList() {
+      return aggregatePrevotes_;
+    }
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAggregatePrevotesCount() {
+      return aggregatePrevotes_.size();
+    }
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregatePrevotes(int index) {
+      return aggregatePrevotes_.get(index);
+    }
+    /**
+     * <pre>
+     * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+     * current vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregatePrevotesOrBuilder(
+        int index) {
+      return aggregatePrevotes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < aggregatePrevotes_.size(); i++) {
+        output.writeMessage(1, aggregatePrevotes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < aggregatePrevotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, aggregatePrevotes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse other = (com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse) obj;
+
+      if (!getAggregatePrevotesList()
+          .equals(other.getAggregatePrevotesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAggregatePrevotesCount() > 0) {
+        hash = (37 * hash) + AGGREGATE_PREVOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregatePrevotesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregatePrevotesResponse is response type for the
+     * Query/AggregatePrevotes RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregatePrevotesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregatePrevotesResponse)
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (aggregatePrevotesBuilder_ == null) {
+          aggregatePrevotes_ = java.util.Collections.emptyList();
+        } else {
+          aggregatePrevotes_ = null;
+          aggregatePrevotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse result = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse result) {
+        if (aggregatePrevotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            aggregatePrevotes_ = java.util.Collections.unmodifiableList(aggregatePrevotes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.aggregatePrevotes_ = aggregatePrevotes_;
+        } else {
+          result.aggregatePrevotes_ = aggregatePrevotesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse.getDefaultInstance()) return this;
+        if (aggregatePrevotesBuilder_ == null) {
+          if (!other.aggregatePrevotes_.isEmpty()) {
+            if (aggregatePrevotes_.isEmpty()) {
+              aggregatePrevotes_ = other.aggregatePrevotes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAggregatePrevotesIsMutable();
+              aggregatePrevotes_.addAll(other.aggregatePrevotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.aggregatePrevotes_.isEmpty()) {
+            if (aggregatePrevotesBuilder_.isEmpty()) {
+              aggregatePrevotesBuilder_.dispose();
+              aggregatePrevotesBuilder_ = null;
+              aggregatePrevotes_ = other.aggregatePrevotes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              aggregatePrevotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAggregatePrevotesFieldBuilder() : null;
+            } else {
+              aggregatePrevotesBuilder_.addAllMessages(other.aggregatePrevotes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote m =
+                    input.readMessage(
+                        com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.parser(),
+                        extensionRegistry);
+                if (aggregatePrevotesBuilder_ == null) {
+                  ensureAggregatePrevotesIsMutable();
+                  aggregatePrevotes_.add(m);
+                } else {
+                  aggregatePrevotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> aggregatePrevotes_ =
+        java.util.Collections.emptyList();
+      private void ensureAggregatePrevotesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          aggregatePrevotes_ = new java.util.ArrayList<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote>(aggregatePrevotes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> aggregatePrevotesBuilder_;
+
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> getAggregatePrevotesList() {
+        if (aggregatePrevotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(aggregatePrevotes_);
+        } else {
+          return aggregatePrevotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAggregatePrevotesCount() {
+        if (aggregatePrevotesBuilder_ == null) {
+          return aggregatePrevotes_.size();
+        } else {
+          return aggregatePrevotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote getAggregatePrevotes(int index) {
+        if (aggregatePrevotesBuilder_ == null) {
+          return aggregatePrevotes_.get(index);
+        } else {
+          return aggregatePrevotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregatePrevotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.set(index, value);
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregatePrevotesBuilder_ == null) {
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregatePrevotes(com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregatePrevotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.add(value);
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote value) {
+        if (aggregatePrevotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.add(index, value);
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregatePrevotes(
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregatePrevotesBuilder_ == null) {
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregatePrevotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder builderForValue) {
+        if (aggregatePrevotesBuilder_ == null) {
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAggregatePrevotes(
+          java.lang.Iterable<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote> values) {
+        if (aggregatePrevotesBuilder_ == null) {
+          ensureAggregatePrevotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, aggregatePrevotes_);
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAggregatePrevotes() {
+        if (aggregatePrevotesBuilder_ == null) {
+          aggregatePrevotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAggregatePrevotes(int index) {
+        if (aggregatePrevotesBuilder_ == null) {
+          ensureAggregatePrevotesIsMutable();
+          aggregatePrevotes_.remove(index);
+          onChanged();
+        } else {
+          aggregatePrevotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder getAggregatePrevotesBuilder(
+          int index) {
+        return getAggregatePrevotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder getAggregatePrevotesOrBuilder(
+          int index) {
+        if (aggregatePrevotesBuilder_ == null) {
+          return aggregatePrevotes_.get(index);  } else {
+          return aggregatePrevotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+           getAggregatePrevotesOrBuilderList() {
+        if (aggregatePrevotesBuilder_ != null) {
+          return aggregatePrevotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(aggregatePrevotes_);
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder addAggregatePrevotesBuilder() {
+        return getAggregatePrevotesFieldBuilder().addBuilder(
+            com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder addAggregatePrevotesBuilder(
+          int index) {
+        return getAggregatePrevotesFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * aggregate_prevotes defines all oracle aggregate prevotes submitted in the
+       * current vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRatePrevote aggregate_prevotes = 1 [json_name = "aggregatePrevotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder> 
+           getAggregatePrevotesBuilderList() {
+        return getAggregatePrevotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder> 
+          getAggregatePrevotesFieldBuilder() {
+        if (aggregatePrevotesBuilder_ == null) {
+          aggregatePrevotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRatePrevoteOrBuilder>(
+                  aggregatePrevotes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          aggregatePrevotes_ = null;
+        }
+        return aggregatePrevotesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregatePrevotesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregatePrevotesResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregatePrevotesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregatePrevotesResponse>() {
+      @java.lang.Override
+      public QueryAggregatePrevotesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregatePrevotesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregatePrevotesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregatePrevotesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregateVoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregateVote)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    java.lang.String getValidatorAddr();
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    com.google.protobuf.ByteString
+        getValidatorAddrBytes();
+  }
+  /**
+   * <pre>
+   * QueryAggregateVote is the request type for the Query/AggregateVote RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregateVote}
+   */
+  public static final class QueryAggregateVote extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregateVote)
+      QueryAggregateVoteOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregateVote.newBuilder() to construct.
+    private QueryAggregateVote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregateVote() {
+      validatorAddr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregateVote();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVote_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregateVote.class, com.umee.oracle.v1.QueryProto.QueryAggregateVote.Builder.class);
+    }
+
+    public static final int VALIDATOR_ADDR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validatorAddr_ = "";
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The validatorAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getValidatorAddr() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validatorAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * validator defines the validator address to query for.
+     * </pre>
+     *
+     * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+     * @return The bytes for validatorAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidatorAddrBytes() {
+      java.lang.Object ref = validatorAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validatorAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, validatorAddr_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validatorAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, validatorAddr_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVote)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregateVote other = (com.umee.oracle.v1.QueryProto.QueryAggregateVote) obj;
+
+      if (!getValidatorAddr()
+          .equals(other.getValidatorAddr())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALIDATOR_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getValidatorAddr().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregateVote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregateVote is the request type for the Query/AggregateVote RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregateVote}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregateVote)
+        com.umee.oracle.v1.QueryProto.QueryAggregateVoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVote_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregateVote.class, com.umee.oracle.v1.QueryProto.QueryAggregateVote.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregateVote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        validatorAddr_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVote getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregateVote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVote build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVote buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVote result = new com.umee.oracle.v1.QueryProto.QueryAggregateVote(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAggregateVote result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validatorAddr_ = validatorAddr_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVote) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregateVote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregateVote other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregateVote.getDefaultInstance()) return this;
+        if (!other.getValidatorAddr().isEmpty()) {
+          validatorAddr_ = other.validatorAddr_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                validatorAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object validatorAddr_ = "";
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The validatorAddr.
+       */
+      public java.lang.String getValidatorAddr() {
+        java.lang.Object ref = validatorAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validatorAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return The bytes for validatorAddr.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorAddrBytes() {
+        java.lang.Object ref = validatorAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validatorAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidatorAddr() {
+        validatorAddr_ = getDefaultInstance().getValidatorAddr();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * validator defines the validator address to query for.
+       * </pre>
+       *
+       * <code>string validator_addr = 1 [json_name = "validatorAddr"];</code>
+       * @param value The bytes for validatorAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidatorAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validatorAddr_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregateVote)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregateVote)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregateVote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregateVote();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregateVote>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregateVote>() {
+      @java.lang.Override
+      public QueryAggregateVote parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregateVote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregateVote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregateVote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregateVoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregateVoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * aggregate_vote defines oracle aggregate vote submitted by a validator in
+     * the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+     * @return Whether the aggregateVote field is set.
+     */
+    boolean hasAggregateVote();
+    /**
+     * <pre>
+     * aggregate_vote defines oracle aggregate vote submitted by a validator in
+     * the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+     * @return The aggregateVote.
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateVote();
+    /**
+     * <pre>
+     * aggregate_vote defines oracle aggregate vote submitted by a validator in
+     * the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateVoteOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAggregateVoteResponse is response type for the
+   * Query/AggregateVote RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregateVoteResponse}
+   */
+  public static final class QueryAggregateVoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregateVoteResponse)
+      QueryAggregateVoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregateVoteResponse.newBuilder() to construct.
+    private QueryAggregateVoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregateVoteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregateVoteResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.Builder.class);
+    }
+
+    public static final int AGGREGATE_VOTE_FIELD_NUMBER = 1;
+    private com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote aggregateVote_;
+    /**
+     * <pre>
+     * aggregate_vote defines oracle aggregate vote submitted by a validator in
+     * the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+     * @return Whether the aggregateVote field is set.
+     */
+    @java.lang.Override
+    public boolean hasAggregateVote() {
+      return aggregateVote_ != null;
+    }
+    /**
+     * <pre>
+     * aggregate_vote defines oracle aggregate vote submitted by a validator in
+     * the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+     * @return The aggregateVote.
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateVote() {
+      return aggregateVote_ == null ? com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance() : aggregateVote_;
+    }
+    /**
+     * <pre>
+     * aggregate_vote defines oracle aggregate vote submitted by a validator in
+     * the current vote period
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateVoteOrBuilder() {
+      return aggregateVote_ == null ? com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance() : aggregateVote_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (aggregateVote_ != null) {
+        output.writeMessage(1, getAggregateVote());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (aggregateVote_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAggregateVote());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse other = (com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse) obj;
+
+      if (hasAggregateVote() != other.hasAggregateVote()) return false;
+      if (hasAggregateVote()) {
+        if (!getAggregateVote()
+            .equals(other.getAggregateVote())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAggregateVote()) {
+        hash = (37 * hash) + AGGREGATE_VOTE_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregateVote().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregateVoteResponse is response type for the
+     * Query/AggregateVote RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregateVoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregateVoteResponse)
+        com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        aggregateVote_ = null;
+        if (aggregateVoteBuilder_ != null) {
+          aggregateVoteBuilder_.dispose();
+          aggregateVoteBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse result = new com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.aggregateVote_ = aggregateVoteBuilder_ == null
+              ? aggregateVote_
+              : aggregateVoteBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse.getDefaultInstance()) return this;
+        if (other.hasAggregateVote()) {
+          mergeAggregateVote(other.getAggregateVote());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAggregateVoteFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote aggregateVote_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> aggregateVoteBuilder_;
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       * @return Whether the aggregateVote field is set.
+       */
+      public boolean hasAggregateVote() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       * @return The aggregateVote.
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateVote() {
+        if (aggregateVoteBuilder_ == null) {
+          return aggregateVote_ == null ? com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance() : aggregateVote_;
+        } else {
+          return aggregateVoteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateVote(com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateVoteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          aggregateVote_ = value;
+        } else {
+          aggregateVoteBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateVote(
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateVoteBuilder_ == null) {
+          aggregateVote_ = builderForValue.build();
+        } else {
+          aggregateVoteBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAggregateVote(com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateVoteBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            aggregateVote_ != null &&
+            aggregateVote_ != com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance()) {
+            getAggregateVoteBuilder().mergeFrom(value);
+          } else {
+            aggregateVote_ = value;
+          }
+        } else {
+          aggregateVoteBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAggregateVote() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        aggregateVote_ = null;
+        if (aggregateVoteBuilder_ != null) {
+          aggregateVoteBuilder_.dispose();
+          aggregateVoteBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder getAggregateVoteBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAggregateVoteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateVoteOrBuilder() {
+        if (aggregateVoteBuilder_ != null) {
+          return aggregateVoteBuilder_.getMessageOrBuilder();
+        } else {
+          return aggregateVote_ == null ?
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance() : aggregateVote_;
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_vote defines oracle aggregate vote submitted by a validator in
+       * the current vote period
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.AggregateExchangeRateVote aggregate_vote = 1 [json_name = "aggregateVote", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+          getAggregateVoteFieldBuilder() {
+        if (aggregateVoteBuilder_ == null) {
+          aggregateVoteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder>(
+                  getAggregateVote(),
+                  getParentForChildren(),
+                  isClean());
+          aggregateVote_ = null;
+        }
+        return aggregateVoteBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregateVoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregateVoteResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregateVoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregateVoteResponse>() {
+      @java.lang.Override
+      public QueryAggregateVoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregateVoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregateVoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregateVoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregateVotesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregateVotes)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryAggregateVotes is the request type for the Query/AggregateVotes
+   * RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregateVotes}
+   */
+  public static final class QueryAggregateVotes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregateVotes)
+      QueryAggregateVotesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregateVotes.newBuilder() to construct.
+    private QueryAggregateVotes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregateVotes() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregateVotes();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregateVotes.class, com.umee.oracle.v1.QueryProto.QueryAggregateVotes.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVotes)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregateVotes other = (com.umee.oracle.v1.QueryProto.QueryAggregateVotes) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregateVotes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregateVotes is the request type for the Query/AggregateVotes
+     * RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregateVotes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregateVotes)
+        com.umee.oracle.v1.QueryProto.QueryAggregateVotesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregateVotes.class, com.umee.oracle.v1.QueryProto.QueryAggregateVotes.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregateVotes.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotes_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVotes getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregateVotes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVotes build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVotes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVotes buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVotes result = new com.umee.oracle.v1.QueryProto.QueryAggregateVotes(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVotes) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregateVotes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregateVotes other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregateVotes.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregateVotes)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregateVotes)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregateVotes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregateVotes();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregateVotes>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregateVotes>() {
+      @java.lang.Override
+      public QueryAggregateVotes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregateVotes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregateVotes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregateVotes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAggregateVotesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAggregateVotesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> 
+        getAggregateVotesList();
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateVotes(int index);
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    int getAggregateVotesCount();
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+        getAggregateVotesOrBuilderList();
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateVotesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryAggregateVotesResponse is response type for the
+   * Query/AggregateVotes RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAggregateVotesResponse}
+   */
+  public static final class QueryAggregateVotesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAggregateVotesResponse)
+      QueryAggregateVotesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAggregateVotesResponse.newBuilder() to construct.
+    private QueryAggregateVotesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAggregateVotesResponse() {
+      aggregateVotes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAggregateVotesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.Builder.class);
+    }
+
+    public static final int AGGREGATE_VOTES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> aggregateVotes_;
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> getAggregateVotesList() {
+      return aggregateVotes_;
+    }
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+        getAggregateVotesOrBuilderList() {
+      return aggregateVotes_;
+    }
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAggregateVotesCount() {
+      return aggregateVotes_.size();
+    }
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateVotes(int index) {
+      return aggregateVotes_.get(index);
+    }
+    /**
+     * <pre>
+     * aggregate_votes defines all oracle aggregate votes submitted in the current
+     * vote period
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateVotesOrBuilder(
+        int index) {
+      return aggregateVotes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < aggregateVotes_.size(); i++) {
+        output.writeMessage(1, aggregateVotes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < aggregateVotes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, aggregateVotes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse other = (com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse) obj;
+
+      if (!getAggregateVotesList()
+          .equals(other.getAggregateVotesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAggregateVotesCount() > 0) {
+        hash = (37 * hash) + AGGREGATE_VOTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAggregateVotesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAggregateVotesResponse is response type for the
+     * Query/AggregateVotes RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAggregateVotesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAggregateVotesResponse)
+        com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.class, com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (aggregateVotesBuilder_ == null) {
+          aggregateVotes_ = java.util.Collections.emptyList();
+        } else {
+          aggregateVotes_ = null;
+          aggregateVotesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAggregateVotesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse result = new com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse result) {
+        if (aggregateVotesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            aggregateVotes_ = java.util.Collections.unmodifiableList(aggregateVotes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.aggregateVotes_ = aggregateVotes_;
+        } else {
+          result.aggregateVotes_ = aggregateVotesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse.getDefaultInstance()) return this;
+        if (aggregateVotesBuilder_ == null) {
+          if (!other.aggregateVotes_.isEmpty()) {
+            if (aggregateVotes_.isEmpty()) {
+              aggregateVotes_ = other.aggregateVotes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAggregateVotesIsMutable();
+              aggregateVotes_.addAll(other.aggregateVotes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.aggregateVotes_.isEmpty()) {
+            if (aggregateVotesBuilder_.isEmpty()) {
+              aggregateVotesBuilder_.dispose();
+              aggregateVotesBuilder_ = null;
+              aggregateVotes_ = other.aggregateVotes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              aggregateVotesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAggregateVotesFieldBuilder() : null;
+            } else {
+              aggregateVotesBuilder_.addAllMessages(other.aggregateVotes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote m =
+                    input.readMessage(
+                        com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.parser(),
+                        extensionRegistry);
+                if (aggregateVotesBuilder_ == null) {
+                  ensureAggregateVotesIsMutable();
+                  aggregateVotes_.add(m);
+                } else {
+                  aggregateVotesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> aggregateVotes_ =
+        java.util.Collections.emptyList();
+      private void ensureAggregateVotesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          aggregateVotes_ = new java.util.ArrayList<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote>(aggregateVotes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> aggregateVotesBuilder_;
+
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> getAggregateVotesList() {
+        if (aggregateVotesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(aggregateVotes_);
+        } else {
+          return aggregateVotesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAggregateVotesCount() {
+        if (aggregateVotesBuilder_ == null) {
+          return aggregateVotes_.size();
+        } else {
+          return aggregateVotesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote getAggregateVotes(int index) {
+        if (aggregateVotesBuilder_ == null) {
+          return aggregateVotes_.get(index);
+        } else {
+          return aggregateVotesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.set(index, value);
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAggregateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateVotesBuilder_ == null) {
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateVotes(com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.add(value);
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote value) {
+        if (aggregateVotesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.add(index, value);
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateVotes(
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateVotesBuilder_ == null) {
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAggregateVotes(
+          int index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder builderForValue) {
+        if (aggregateVotesBuilder_ == null) {
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAggregateVotes(
+          java.lang.Iterable<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote> values) {
+        if (aggregateVotesBuilder_ == null) {
+          ensureAggregateVotesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, aggregateVotes_);
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAggregateVotes() {
+        if (aggregateVotesBuilder_ == null) {
+          aggregateVotes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAggregateVotes(int index) {
+        if (aggregateVotesBuilder_ == null) {
+          ensureAggregateVotesIsMutable();
+          aggregateVotes_.remove(index);
+          onChanged();
+        } else {
+          aggregateVotesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder getAggregateVotesBuilder(
+          int index) {
+        return getAggregateVotesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder getAggregateVotesOrBuilder(
+          int index) {
+        if (aggregateVotesBuilder_ == null) {
+          return aggregateVotes_.get(index);  } else {
+          return aggregateVotesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+           getAggregateVotesOrBuilderList() {
+        if (aggregateVotesBuilder_ != null) {
+          return aggregateVotesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(aggregateVotes_);
+        }
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder addAggregateVotesBuilder() {
+        return getAggregateVotesFieldBuilder().addBuilder(
+            com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder addAggregateVotesBuilder(
+          int index) {
+        return getAggregateVotesFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * aggregate_votes defines all oracle aggregate votes submitted in the current
+       * vote period
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.AggregateExchangeRateVote aggregate_votes = 1 [json_name = "aggregateVotes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder> 
+           getAggregateVotesBuilderList() {
+        return getAggregateVotesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder> 
+          getAggregateVotesFieldBuilder() {
+        if (aggregateVotesBuilder_ == null) {
+          aggregateVotesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVote.Builder, com.umee.oracle.v1.OracleProto.AggregateExchangeRateVoteOrBuilder>(
+                  aggregateVotes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          aggregateVotes_ = null;
+        }
+        return aggregateVotesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAggregateVotesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAggregateVotesResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAggregateVotesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAggregateVotesResponse>() {
+      @java.lang.Override
+      public QueryAggregateVotesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAggregateVotesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAggregateVotesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAggregateVotesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryParams)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParams is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryParams}
+   */
+  public static final class QueryParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryParams)
+      QueryParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParams.newBuilder() to construct.
+    private QueryParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryParams.class, com.umee.oracle.v1.QueryProto.QueryParams.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryParams)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryParams other = (com.umee.oracle.v1.QueryProto.QueryParams) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParams is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryParams)
+        com.umee.oracle.v1.QueryProto.QueryParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryParams.class, com.umee.oracle.v1.QueryProto.QueryParams.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryParams getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryParams build() {
+        com.umee.oracle.v1.QueryProto.QueryParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryParams buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryParams result = new com.umee.oracle.v1.QueryProto.QueryParams(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryParams) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryParams other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryParams.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryParams)
+    private static final com.umee.oracle.v1.QueryProto.QueryParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryParams();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParams>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParams>() {
+      @java.lang.Override
+      public QueryParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.umee.oracle.v1.OracleProto.Params getParams();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.OracleProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryParamsResponse.class, com.umee.oracle.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.umee.oracle.v1.OracleProto.Params params_;
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.Params getParams() {
+      return params_ == null ? com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.OracleProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryParamsResponse other = (com.umee.oracle.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryParamsResponse)
+        com.umee.oracle.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryParamsResponse.class, com.umee.oracle.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryParamsResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryParamsResponse result = new com.umee.oracle.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.umee.oracle.v1.OracleProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.Params, com.umee.oracle.v1.OracleProto.Params.Builder, com.umee.oracle.v1.OracleProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.umee.oracle.v1.OracleProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.umee.oracle.v1.OracleProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.umee.oracle.v1.OracleProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.umee.oracle.v1.OracleProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.umee.oracle.v1.OracleProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.OracleProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.umee.oracle.v1.OracleProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>.umee.oracle.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.umee.oracle.v1.OracleProto.Params, com.umee.oracle.v1.OracleProto.Params.Builder, com.umee.oracle.v1.OracleProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.umee.oracle.v1.OracleProto.Params, com.umee.oracle.v1.OracleProto.Params.Builder, com.umee.oracle.v1.OracleProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryParamsResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMediansOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryMedians)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * numStamps defines the number of median stamps to query for. numStamps
+     * must be greater than 0.
+     * </pre>
+     *
+     * <code>uint32 numStamps = 2 [json_name = "numStamps"];</code>
+     * @return The numStamps.
+     */
+    int getNumStamps();
+  }
+  /**
+   * <pre>
+   * QueryMedians is the request type for the Query/Medians RPC Response.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryMedians}
+   */
+  public static final class QueryMedians extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryMedians)
+      QueryMediansOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMedians.newBuilder() to construct.
+    private QueryMedians(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMedians() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMedians();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedians_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedians_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryMedians.class, com.umee.oracle.v1.QueryProto.QueryMedians.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NUMSTAMPS_FIELD_NUMBER = 2;
+    private int numStamps_ = 0;
+    /**
+     * <pre>
+     * numStamps defines the number of median stamps to query for. numStamps
+     * must be greater than 0.
+     * </pre>
+     *
+     * <code>uint32 numStamps = 2 [json_name = "numStamps"];</code>
+     * @return The numStamps.
+     */
+    @java.lang.Override
+    public int getNumStamps() {
+      return numStamps_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (numStamps_ != 0) {
+        output.writeUInt32(2, numStamps_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (numStamps_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, numStamps_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryMedians)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryMedians other = (com.umee.oracle.v1.QueryProto.QueryMedians) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getNumStamps()
+          != other.getNumStamps()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + NUMSTAMPS_FIELD_NUMBER;
+      hash = (53 * hash) + getNumStamps();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedians parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryMedians prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMedians is the request type for the Query/Medians RPC Response.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryMedians}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryMedians)
+        com.umee.oracle.v1.QueryProto.QueryMediansOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedians_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedians_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryMedians.class, com.umee.oracle.v1.QueryProto.QueryMedians.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryMedians.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        numStamps_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedians_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedians getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryMedians.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedians build() {
+        com.umee.oracle.v1.QueryProto.QueryMedians result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedians buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryMedians result = new com.umee.oracle.v1.QueryProto.QueryMedians(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryMedians result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.numStamps_ = numStamps_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryMedians) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryMedians)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryMedians other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryMedians.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getNumStamps() != 0) {
+          setNumStamps(other.getNumStamps());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                numStamps_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int numStamps_ ;
+      /**
+       * <pre>
+       * numStamps defines the number of median stamps to query for. numStamps
+       * must be greater than 0.
+       * </pre>
+       *
+       * <code>uint32 numStamps = 2 [json_name = "numStamps"];</code>
+       * @return The numStamps.
+       */
+      @java.lang.Override
+      public int getNumStamps() {
+        return numStamps_;
+      }
+      /**
+       * <pre>
+       * numStamps defines the number of median stamps to query for. numStamps
+       * must be greater than 0.
+       * </pre>
+       *
+       * <code>uint32 numStamps = 2 [json_name = "numStamps"];</code>
+       * @param value The numStamps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumStamps(int value) {
+
+        numStamps_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * numStamps defines the number of median stamps to query for. numStamps
+       * must be greater than 0.
+       * </pre>
+       *
+       * <code>uint32 numStamps = 2 [json_name = "numStamps"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumStamps() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        numStamps_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryMedians)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryMedians)
+    private static final com.umee.oracle.v1.QueryProto.QueryMedians DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryMedians();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedians getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMedians>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMedians>() {
+      @java.lang.Override
+      public QueryMedians parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMedians> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMedians> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryMedians getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMediansResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryMediansResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.Price> 
+        getMediansList();
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.Price getMedians(int index);
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    int getMediansCount();
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMediansOrBuilderList();
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMediansOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryMediansResponse is response type for the
+   * Query/Medians RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryMediansResponse}
+   */
+  public static final class QueryMediansResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryMediansResponse)
+      QueryMediansResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMediansResponse.newBuilder() to construct.
+    private QueryMediansResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMediansResponse() {
+      medians_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMediansResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMediansResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMediansResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryMediansResponse.class, com.umee.oracle.v1.QueryProto.QueryMediansResponse.Builder.class);
+    }
+
+    public static final int MEDIANS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medians_;
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMediansList() {
+      return medians_;
+    }
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMediansOrBuilderList() {
+      return medians_;
+    }
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMediansCount() {
+      return medians_.size();
+    }
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.Price getMedians(int index) {
+      return medians_.get(index);
+    }
+    /**
+     * <pre>
+     * medians defines a list of the medians for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMediansOrBuilder(
+        int index) {
+      return medians_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < medians_.size(); i++) {
+        output.writeMessage(1, medians_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < medians_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, medians_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryMediansResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryMediansResponse other = (com.umee.oracle.v1.QueryProto.QueryMediansResponse) obj;
+
+      if (!getMediansList()
+          .equals(other.getMediansList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMediansCount() > 0) {
+        hash = (37 * hash) + MEDIANS_FIELD_NUMBER;
+        hash = (53 * hash) + getMediansList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryMediansResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMediansResponse is response type for the
+     * Query/Medians RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryMediansResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryMediansResponse)
+        com.umee.oracle.v1.QueryProto.QueryMediansResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMediansResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMediansResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryMediansResponse.class, com.umee.oracle.v1.QueryProto.QueryMediansResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryMediansResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (mediansBuilder_ == null) {
+          medians_ = java.util.Collections.emptyList();
+        } else {
+          medians_ = null;
+          mediansBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMediansResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMediansResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryMediansResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMediansResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryMediansResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMediansResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryMediansResponse result = new com.umee.oracle.v1.QueryProto.QueryMediansResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.oracle.v1.QueryProto.QueryMediansResponse result) {
+        if (mediansBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            medians_ = java.util.Collections.unmodifiableList(medians_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.medians_ = medians_;
+        } else {
+          result.medians_ = mediansBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryMediansResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryMediansResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryMediansResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryMediansResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryMediansResponse.getDefaultInstance()) return this;
+        if (mediansBuilder_ == null) {
+          if (!other.medians_.isEmpty()) {
+            if (medians_.isEmpty()) {
+              medians_ = other.medians_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMediansIsMutable();
+              medians_.addAll(other.medians_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.medians_.isEmpty()) {
+            if (mediansBuilder_.isEmpty()) {
+              mediansBuilder_.dispose();
+              mediansBuilder_ = null;
+              medians_ = other.medians_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              mediansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMediansFieldBuilder() : null;
+            } else {
+              mediansBuilder_.addAllMessages(other.medians_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.umee.oracle.v1.GenesisProto.Price m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.Price.parser(),
+                        extensionRegistry);
+                if (mediansBuilder_ == null) {
+                  ensureMediansIsMutable();
+                  medians_.add(m);
+                } else {
+                  mediansBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medians_ =
+        java.util.Collections.emptyList();
+      private void ensureMediansIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          medians_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.Price>(medians_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> mediansBuilder_;
+
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMediansList() {
+        if (mediansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(medians_);
+        } else {
+          return mediansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMediansCount() {
+        if (mediansBuilder_ == null) {
+          return medians_.size();
+        } else {
+          return mediansBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price getMedians(int index) {
+        if (mediansBuilder_ == null) {
+          return medians_.get(index);
+        } else {
+          return mediansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (mediansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediansIsMutable();
+          medians_.set(index, value);
+          onChanged();
+        } else {
+          mediansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mediansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(com.umee.oracle.v1.GenesisProto.Price value) {
+        if (mediansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediansIsMutable();
+          medians_.add(value);
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (mediansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediansIsMutable();
+          medians_.add(index, value);
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(
+          com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedians(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mediansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMedians(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.Price> values) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, medians_);
+          onChanged();
+        } else {
+          mediansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMedians() {
+        if (mediansBuilder_ == null) {
+          medians_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          mediansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMedians(int index) {
+        if (mediansBuilder_ == null) {
+          ensureMediansIsMutable();
+          medians_.remove(index);
+          onChanged();
+        } else {
+          mediansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder getMediansBuilder(
+          int index) {
+        return getMediansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMediansOrBuilder(
+          int index) {
+        if (mediansBuilder_ == null) {
+          return medians_.get(index);  } else {
+          return mediansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+           getMediansOrBuilderList() {
+        if (mediansBuilder_ != null) {
+          return mediansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(medians_);
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMediansBuilder() {
+        return getMediansFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMediansBuilder(
+          int index) {
+        return getMediansFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * medians defines a list of the medians for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medians = 1 [json_name = "medians", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price.Builder> 
+           getMediansBuilderList() {
+        return getMediansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+          getMediansFieldBuilder() {
+        if (mediansBuilder_ == null) {
+          mediansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder>(
+                  medians_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          medians_ = null;
+        }
+        return mediansBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryMediansResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryMediansResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryMediansResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryMediansResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMediansResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMediansResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMediansResponse>() {
+      @java.lang.Override
+      public QueryMediansResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMediansResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMediansResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryMediansResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMedianDeviationsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryMedianDeviations)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryMedianDeviations is the request type for the Query/MedianDeviations RPC Response.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryMedianDeviations}
+   */
+  public static final class QueryMedianDeviations extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryMedianDeviations)
+      QueryMedianDeviationsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMedianDeviations.newBuilder() to construct.
+    private QueryMedianDeviations(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMedianDeviations() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMedianDeviations();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviations_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviations_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryMedianDeviations.class, com.umee.oracle.v1.QueryProto.QueryMedianDeviations.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom defines the denomination to query for.
+     * </pre>
+     *
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryMedianDeviations)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryMedianDeviations other = (com.umee.oracle.v1.QueryProto.QueryMedianDeviations) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryMedianDeviations prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMedianDeviations is the request type for the Query/MedianDeviations RPC Response.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryMedianDeviations}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryMedianDeviations)
+        com.umee.oracle.v1.QueryProto.QueryMedianDeviationsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviations_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviations_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryMedianDeviations.class, com.umee.oracle.v1.QueryProto.QueryMedianDeviations.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryMedianDeviations.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviations_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedianDeviations getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryMedianDeviations.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedianDeviations build() {
+        com.umee.oracle.v1.QueryProto.QueryMedianDeviations result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedianDeviations buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryMedianDeviations result = new com.umee.oracle.v1.QueryProto.QueryMedianDeviations(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryMedianDeviations result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryMedianDeviations) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryMedianDeviations)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryMedianDeviations other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryMedianDeviations.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom defines the denomination to query for.
+       * </pre>
+       *
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryMedianDeviations)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryMedianDeviations)
+    private static final com.umee.oracle.v1.QueryProto.QueryMedianDeviations DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryMedianDeviations();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviations getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMedianDeviations>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMedianDeviations>() {
+      @java.lang.Override
+      public QueryMedianDeviations parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMedianDeviations> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMedianDeviations> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryMedianDeviations getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMedianDeviationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryMedianDeviationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.umee.oracle.v1.GenesisProto.Price> 
+        getMedianDeviationsList();
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.Price getMedianDeviations(int index);
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    int getMedianDeviationsCount();
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMedianDeviationsOrBuilderList();
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMedianDeviationsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryMedianDeviationsResponse is response type for the
+   * Query/MedianDeviations RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryMedianDeviationsResponse}
+   */
+  public static final class QueryMedianDeviationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryMedianDeviationsResponse)
+      QueryMedianDeviationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMedianDeviationsResponse.newBuilder() to construct.
+    private QueryMedianDeviationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMedianDeviationsResponse() {
+      medianDeviations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMedianDeviationsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.class, com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.Builder.class);
+    }
+
+    public static final int MEDIANDEVIATIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medianDeviations_;
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMedianDeviationsList() {
+      return medianDeviations_;
+    }
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+        getMedianDeviationsOrBuilderList() {
+      return medianDeviations_;
+    }
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMedianDeviationsCount() {
+      return medianDeviations_.size();
+    }
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.Price getMedianDeviations(int index) {
+      return medianDeviations_.get(index);
+    }
+    /**
+     * <pre>
+     * medians defines a list of the median deviations for all stamped denoms.
+     * </pre>
+     *
+     * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMedianDeviationsOrBuilder(
+        int index) {
+      return medianDeviations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < medianDeviations_.size(); i++) {
+        output.writeMessage(1, medianDeviations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < medianDeviations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, medianDeviations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse other = (com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse) obj;
+
+      if (!getMedianDeviationsList()
+          .equals(other.getMedianDeviationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMedianDeviationsCount() > 0) {
+        hash = (37 * hash) + MEDIANDEVIATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMedianDeviationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMedianDeviationsResponse is response type for the
+     * Query/MedianDeviations RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryMedianDeviationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryMedianDeviationsResponse)
+        com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.class, com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (medianDeviationsBuilder_ == null) {
+          medianDeviations_ = java.util.Collections.emptyList();
+        } else {
+          medianDeviations_ = null;
+          medianDeviationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse result = new com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse result) {
+        if (medianDeviationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            medianDeviations_ = java.util.Collections.unmodifiableList(medianDeviations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.medianDeviations_ = medianDeviations_;
+        } else {
+          result.medianDeviations_ = medianDeviationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse.getDefaultInstance()) return this;
+        if (medianDeviationsBuilder_ == null) {
+          if (!other.medianDeviations_.isEmpty()) {
+            if (medianDeviations_.isEmpty()) {
+              medianDeviations_ = other.medianDeviations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMedianDeviationsIsMutable();
+              medianDeviations_.addAll(other.medianDeviations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.medianDeviations_.isEmpty()) {
+            if (medianDeviationsBuilder_.isEmpty()) {
+              medianDeviationsBuilder_.dispose();
+              medianDeviationsBuilder_ = null;
+              medianDeviations_ = other.medianDeviations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              medianDeviationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMedianDeviationsFieldBuilder() : null;
+            } else {
+              medianDeviationsBuilder_.addAllMessages(other.medianDeviations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.umee.oracle.v1.GenesisProto.Price m =
+                    input.readMessage(
+                        com.umee.oracle.v1.GenesisProto.Price.parser(),
+                        extensionRegistry);
+                if (medianDeviationsBuilder_ == null) {
+                  ensureMedianDeviationsIsMutable();
+                  medianDeviations_.add(m);
+                } else {
+                  medianDeviationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.umee.oracle.v1.GenesisProto.Price> medianDeviations_ =
+        java.util.Collections.emptyList();
+      private void ensureMedianDeviationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          medianDeviations_ = new java.util.ArrayList<com.umee.oracle.v1.GenesisProto.Price>(medianDeviations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> medianDeviationsBuilder_;
+
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price> getMedianDeviationsList() {
+        if (medianDeviationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(medianDeviations_);
+        } else {
+          return medianDeviationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMedianDeviationsCount() {
+        if (medianDeviationsBuilder_ == null) {
+          return medianDeviations_.size();
+        } else {
+          return medianDeviationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price getMedianDeviations(int index) {
+        if (medianDeviationsBuilder_ == null) {
+          return medianDeviations_.get(index);
+        } else {
+          return medianDeviationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (medianDeviationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.set(index, value);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(com.umee.oracle.v1.GenesisProto.Price value) {
+        if (medianDeviationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(value);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price value) {
+        if (medianDeviationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(index, value);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(
+          com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMedianDeviations(
+          int index, com.umee.oracle.v1.GenesisProto.Price.Builder builderForValue) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMedianDeviations(
+          java.lang.Iterable<? extends com.umee.oracle.v1.GenesisProto.Price> values) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, medianDeviations_);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMedianDeviations() {
+        if (medianDeviationsBuilder_ == null) {
+          medianDeviations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMedianDeviations(int index) {
+        if (medianDeviationsBuilder_ == null) {
+          ensureMedianDeviationsIsMutable();
+          medianDeviations_.remove(index);
+          onChanged();
+        } else {
+          medianDeviationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder getMedianDeviationsBuilder(
+          int index) {
+        return getMedianDeviationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.PriceOrBuilder getMedianDeviationsOrBuilder(
+          int index) {
+        if (medianDeviationsBuilder_ == null) {
+          return medianDeviations_.get(index);  } else {
+          return medianDeviationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+           getMedianDeviationsOrBuilderList() {
+        if (medianDeviationsBuilder_ != null) {
+          return medianDeviationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(medianDeviations_);
+        }
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMedianDeviationsBuilder() {
+        return getMedianDeviationsFieldBuilder().addBuilder(
+            com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public com.umee.oracle.v1.GenesisProto.Price.Builder addMedianDeviationsBuilder(
+          int index) {
+        return getMedianDeviationsFieldBuilder().addBuilder(
+            index, com.umee.oracle.v1.GenesisProto.Price.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * medians defines a list of the median deviations for all stamped denoms.
+       * </pre>
+       *
+       * <code>repeated .umee.oracle.v1.Price medianDeviations = 1 [json_name = "medianDeviations", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.umee.oracle.v1.GenesisProto.Price.Builder> 
+           getMedianDeviationsBuilderList() {
+        return getMedianDeviationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder> 
+          getMedianDeviationsFieldBuilder() {
+        if (medianDeviationsBuilder_ == null) {
+          medianDeviationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.umee.oracle.v1.GenesisProto.Price, com.umee.oracle.v1.GenesisProto.Price.Builder, com.umee.oracle.v1.GenesisProto.PriceOrBuilder>(
+                  medianDeviations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          medianDeviations_ = null;
+        }
+        return medianDeviationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryMedianDeviationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryMedianDeviationsResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMedianDeviationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMedianDeviationsResponse>() {
+      @java.lang.Override
+      public QueryMedianDeviationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMedianDeviationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMedianDeviationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryMedianDeviationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAvgPriceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAvgPrice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryAvgPrice is a request type for AvgPrice method
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAvgPrice}
+   */
+  public static final class QueryAvgPrice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAvgPrice)
+      QueryAvgPriceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAvgPrice.newBuilder() to construct.
+    private QueryAvgPrice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAvgPrice() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAvgPrice();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPrice_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPrice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAvgPrice.class, com.umee.oracle.v1.QueryProto.QueryAvgPrice.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAvgPrice)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAvgPrice other = (com.umee.oracle.v1.QueryProto.QueryAvgPrice) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAvgPrice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAvgPrice is a request type for AvgPrice method
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAvgPrice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAvgPrice)
+        com.umee.oracle.v1.QueryProto.QueryAvgPriceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPrice_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPrice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAvgPrice.class, com.umee.oracle.v1.QueryProto.QueryAvgPrice.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAvgPrice.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPrice_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAvgPrice getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAvgPrice.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAvgPrice build() {
+        com.umee.oracle.v1.QueryProto.QueryAvgPrice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAvgPrice buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAvgPrice result = new com.umee.oracle.v1.QueryProto.QueryAvgPrice(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAvgPrice result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAvgPrice) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAvgPrice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAvgPrice other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAvgPrice.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAvgPrice)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAvgPrice)
+    private static final com.umee.oracle.v1.QueryProto.QueryAvgPrice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAvgPrice();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPrice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAvgPrice>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAvgPrice>() {
+      @java.lang.Override
+      public QueryAvgPrice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAvgPrice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAvgPrice> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAvgPrice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAvgPriceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:umee.oracle.v1.QueryAvgPriceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The price.
+     */
+    java.lang.String getPrice();
+    /**
+     * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for price.
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
+  }
+  /**
+   * <pre>
+   * QueryAvgPriceResponse is a response type for AvgPrice method
+   * </pre>
+   *
+   * Protobuf type {@code umee.oracle.v1.QueryAvgPriceResponse}
+   */
+  public static final class QueryAvgPriceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:umee.oracle.v1.QueryAvgPriceResponse)
+      QueryAvgPriceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAvgPriceResponse.newBuilder() to construct.
+    private QueryAvgPriceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAvgPriceResponse() {
+      price_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAvgPriceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPriceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPriceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.class, com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.Builder.class);
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object price_ = "";
+    /**
+     * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public java.lang.String getPrice() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        price_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for price.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        price_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, price_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, price_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse)) {
+        return super.equals(obj);
+      }
+      com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse other = (com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse) obj;
+
+      if (!getPrice()
+          .equals(other.getPrice())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrice().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAvgPriceResponse is a response type for AvgPrice method
+     * </pre>
+     *
+     * Protobuf type {@code umee.oracle.v1.QueryAvgPriceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:umee.oracle.v1.QueryAvgPriceResponse)
+        com.umee.oracle.v1.QueryProto.QueryAvgPriceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPriceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.class, com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.Builder.class);
+      }
+
+      // Construct using com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        price_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.umee.oracle.v1.QueryProto.internal_static_umee_oracle_v1_QueryAvgPriceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse getDefaultInstanceForType() {
+        return com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse build() {
+        com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse buildPartial() {
+        com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse result = new com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.price_ = price_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse) {
+          return mergeFrom((com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse other) {
+        if (other == com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse.getDefaultInstance()) return this;
+        if (!other.getPrice().isEmpty()) {
+          price_ = other.price_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                price_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object price_ = "";
+      /**
+       * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The price.
+       */
+      public java.lang.String getPrice() {
+        java.lang.Object ref = price_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          price_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for price.
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        price_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+        price_ = getDefaultInstance().getPrice();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string price = 1 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        price_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:umee.oracle.v1.QueryAvgPriceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:umee.oracle.v1.QueryAvgPriceResponse)
+    private static final com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse();
+    }
+
+    public static com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAvgPriceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAvgPriceResponse>() {
+      @java.lang.Override
+      public QueryAvgPriceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAvgPriceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAvgPriceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.umee.oracle.v1.QueryProto.QueryAvgPriceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryExchangeRates_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryExchangeRates_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryExchangeRatesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryExchangeRatesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryActiveExchangeRates_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryActiveExchangeRates_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryActiveExchangeRatesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryFeederDelegation_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryFeederDelegation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryFeederDelegationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryFeederDelegationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryMissCounter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryMissCounter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryMissCounterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryMissCounterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QuerySlashWindow_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QuerySlashWindow_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QuerySlashWindowResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QuerySlashWindowResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregatePrevote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregatePrevote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregatePrevoteResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregatePrevotes_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregatePrevotes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregatePrevotesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregateVote_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregateVote_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregateVoteResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregateVoteResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregateVotes_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregateVotes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAggregateVotesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAggregateVotesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryMedians_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryMedians_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryMediansResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryMediansResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryMedianDeviations_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryMedianDeviations_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryMedianDeviationsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAvgPrice_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAvgPrice_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_umee_oracle_v1_QueryAvgPriceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_umee_oracle_v1_QueryAvgPriceResponse_fieldAccessorTable;
 
@@ -255,11 +16659,11 @@ public final class QueryProto {
       "ice\022\035.umee.oracle.v1.QueryAvgPrice\032%.ume" +
       "e.oracle.v1.QueryAvgPriceResponse\"-\202\323\344\223\002" +
       "\'\022%/umee/historacle/v1/avg_price/{denom}" +
-      "B\256\001\n\022com.umee.oracle.v1B\nQueryProtoP\001Z.g" +
-      "ithub.com/umee-network/umee/v5/x/oracle/" +
-      "types\242\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Orac" +
-      "le\\V1\342\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Ume" +
-      "e::Oracle::V1\310\341\036\000b\006proto3"
+      "B\254\001\n\022com.umee.oracle.v1B\nQueryProtoZ.git" +
+      "hub.com/umee-network/umee/v5/x/oracle/ty" +
+      "pes\242\002\003UOX\252\002\016Umee.Oracle.V1\312\002\016Umee\\Oracle" +
+      "\\V1\342\002\032Umee\\Oracle\\V1\\GPBMetadata\352\002\020Umee:" +
+      ":Oracle::V1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

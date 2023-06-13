@@ -14,9 +14,694 @@ public final class AuthzProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface DepositDeploymentAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.deployment.v1beta3.DepositDeploymentAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+     * the purpose of deployment.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+     * @return Whether the spendLimit field is set.
+     */
+    boolean hasSpendLimit();
+    /**
+     * <pre>
+     * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+     * the purpose of deployment.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+     * @return The spendLimit.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getSpendLimit();
+    /**
+     * <pre>
+     * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+     * the purpose of deployment.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSpendLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * DepositDeploymentAuthorization allows the grantee to deposit up to spend_limit coins from
+   * the granter's account for a deployment.
+   * </pre>
+   *
+   * Protobuf type {@code akash.deployment.v1beta3.DepositDeploymentAuthorization}
+   */
+  public static final class DepositDeploymentAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.deployment.v1beta3.DepositDeploymentAuthorization)
+      DepositDeploymentAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DepositDeploymentAuthorization.newBuilder() to construct.
+    private DepositDeploymentAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DepositDeploymentAuthorization() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DepositDeploymentAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.deployment.v1beta3.AuthzProto.internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.deployment.v1beta3.AuthzProto.internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.class, com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.Builder.class);
+    }
+
+    public static final int SPEND_LIMIT_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin spendLimit_;
+    /**
+     * <pre>
+     * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+     * the purpose of deployment.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+     * @return Whether the spendLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpendLimit() {
+      return spendLimit_ != null;
+    }
+    /**
+     * <pre>
+     * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+     * the purpose of deployment.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+     * @return The spendLimit.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getSpendLimit() {
+      return spendLimit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : spendLimit_;
+    }
+    /**
+     * <pre>
+     * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+     * the purpose of deployment.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSpendLimitOrBuilder() {
+      return spendLimit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : spendLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (spendLimit_ != null) {
+        output.writeMessage(1, getSpendLimit());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (spendLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSpendLimit());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization)) {
+        return super.equals(obj);
+      }
+      com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization other = (com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization) obj;
+
+      if (hasSpendLimit() != other.hasSpendLimit()) return false;
+      if (hasSpendLimit()) {
+        if (!getSpendLimit()
+            .equals(other.getSpendLimit())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSpendLimit()) {
+        hash = (37 * hash) + SPEND_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getSpendLimit().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DepositDeploymentAuthorization allows the grantee to deposit up to spend_limit coins from
+     * the granter's account for a deployment.
+     * </pre>
+     *
+     * Protobuf type {@code akash.deployment.v1beta3.DepositDeploymentAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.deployment.v1beta3.DepositDeploymentAuthorization)
+        com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.deployment.v1beta3.AuthzProto.internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.deployment.v1beta3.AuthzProto.internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.class, com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.Builder.class);
+      }
+
+      // Construct using com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        spendLimit_ = null;
+        if (spendLimitBuilder_ != null) {
+          spendLimitBuilder_.dispose();
+          spendLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.deployment.v1beta3.AuthzProto.internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization getDefaultInstanceForType() {
+        return com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization build() {
+        com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization buildPartial() {
+        com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization result = new com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.spendLimit_ = spendLimitBuilder_ == null
+              ? spendLimit_
+              : spendLimitBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization) {
+          return mergeFrom((com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization other) {
+        if (other == com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization.getDefaultInstance()) return this;
+        if (other.hasSpendLimit()) {
+          mergeSpendLimit(other.getSpendLimit());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSpendLimitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin spendLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> spendLimitBuilder_;
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       * @return Whether the spendLimit field is set.
+       */
+      public boolean hasSpendLimit() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       * @return The spendLimit.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getSpendLimit() {
+        if (spendLimitBuilder_ == null) {
+          return spendLimit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : spendLimit_;
+        } else {
+          return spendLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      public Builder setSpendLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (spendLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spendLimit_ = value;
+        } else {
+          spendLimitBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      public Builder setSpendLimit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (spendLimitBuilder_ == null) {
+          spendLimit_ = builderForValue.build();
+        } else {
+          spendLimitBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      public Builder mergeSpendLimit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (spendLimitBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            spendLimit_ != null &&
+            spendLimit_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getSpendLimitBuilder().mergeFrom(value);
+          } else {
+            spendLimit_ = value;
+          }
+        } else {
+          spendLimitBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      public Builder clearSpendLimit() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        spendLimit_ = null;
+        if (spendLimitBuilder_ != null) {
+          spendLimitBuilder_.dispose();
+          spendLimitBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getSpendLimitBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSpendLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getSpendLimitOrBuilder() {
+        if (spendLimitBuilder_ != null) {
+          return spendLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return spendLimit_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : spendLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * SpendLimit is the amount the grantee is authorized to spend from the granter's account for
+       * the purpose of deployment.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin spend_limit = 1 [json_name = "spendLimit", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "spend_limit"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getSpendLimitFieldBuilder() {
+        if (spendLimitBuilder_ == null) {
+          spendLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getSpendLimit(),
+                  getParentForChildren(),
+                  isClean());
+          spendLimit_ = null;
+        }
+        return spendLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.deployment.v1beta3.DepositDeploymentAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.deployment.v1beta3.DepositDeploymentAuthorization)
+    private static final com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization();
+    }
+
+    public static com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DepositDeploymentAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<DepositDeploymentAuthorization>() {
+      @java.lang.Override
+      public DepositDeploymentAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DepositDeploymentAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DepositDeploymentAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.deployment.v1beta3.AuthzProto.DepositDeploymentAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_deployment_v1beta3_DepositDeploymentAuthorization_fieldAccessorTable;
 
@@ -35,13 +720,13 @@ public final class AuthzProto {
       "loymentAuthorization\022O\n\013spend_limit\030\001 \001(" +
       "\0132\031.cosmos.base.v1beta1.CoinB\023\310\336\037\000\352\336\037\013sp" +
       "end_limitR\nspendLimit:\021\312\264-\rAuthorization" +
-      "B\353\001\n\034com.akash.deployment.v1beta3B\nAuthz" +
-      "ProtoP\001Z=github.com/akash-network/akash-" +
-      "api/go/node/deployment/v1beta3\242\002\003ADX\252\002\030A" +
-      "kash.Deployment.V1beta3\312\002\030Akash\\Deployme" +
-      "nt\\V1beta3\342\002$Akash\\Deployment\\V1beta3\\GP" +
-      "BMetadata\352\002\032Akash::Deployment::V1beta3b\006" +
-      "proto3"
+      "B\351\001\n\034com.akash.deployment.v1beta3B\nAuthz" +
+      "ProtoZ=github.com/akash-network/akash-ap" +
+      "i/go/node/deployment/v1beta3\242\002\003ADX\252\002\030Aka" +
+      "sh.Deployment.V1beta3\312\002\030Akash\\Deployment" +
+      "\\V1beta3\342\002$Akash\\Deployment\\V1beta3\\GPBM" +
+      "etadata\352\002\032Akash::Deployment::V1beta3b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

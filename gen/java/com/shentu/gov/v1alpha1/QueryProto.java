@@ -14,19 +14,2437 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryCertVotedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.gov.v1alpha1.QueryCertVotedRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * proposal_id defines the unique id of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    long getProposalId();
+  }
+  /**
+   * Protobuf type {@code shentu.gov.v1alpha1.QueryCertVotedRequest}
+   */
+  public static final class QueryCertVotedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.gov.v1alpha1.QueryCertVotedRequest)
+      QueryCertVotedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCertVotedRequest.newBuilder() to construct.
+    private QueryCertVotedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCertVotedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCertVotedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.class, com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.Builder.class);
+    }
+
+    public static final int PROPOSAL_ID_FIELD_NUMBER = 1;
+    private long proposalId_ = 0L;
+    /**
+     * <pre>
+     * proposal_id defines the unique id of the proposal.
+     * </pre>
+     *
+     * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+     * @return The proposalId.
+     */
+    @java.lang.Override
+    public long getProposalId() {
+      return proposalId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proposalId_ != 0L) {
+        output.writeUInt64(1, proposalId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proposalId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, proposalId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest)) {
+        return super.equals(obj);
+      }
+      com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest other = (com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest) obj;
+
+      if (getProposalId()
+          != other.getProposalId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPOSAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProposalId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.gov.v1alpha1.QueryCertVotedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.gov.v1alpha1.QueryCertVotedRequest)
+        com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.class, com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.Builder.class);
+      }
+
+      // Construct using com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proposalId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest getDefaultInstanceForType() {
+        return com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest build() {
+        com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest buildPartial() {
+        com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest result = new com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proposalId_ = proposalId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest) {
+          return mergeFrom((com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest other) {
+        if (other == com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest.getDefaultInstance()) return this;
+        if (other.getProposalId() != 0L) {
+          setProposalId(other.getProposalId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                proposalId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long proposalId_ ;
+      /**
+       * <pre>
+       * proposal_id defines the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return The proposalId.
+       */
+      @java.lang.Override
+      public long getProposalId() {
+        return proposalId_;
+      }
+      /**
+       * <pre>
+       * proposal_id defines the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @param value The proposalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProposalId(long value) {
+
+        proposalId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proposal_id defines the unique id of the proposal.
+       * </pre>
+       *
+       * <code>uint64 proposal_id = 1 [json_name = "proposalId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProposalId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proposalId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.gov.v1alpha1.QueryCertVotedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.gov.v1alpha1.QueryCertVotedRequest)
+    private static final com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest();
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCertVotedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCertVotedRequest>() {
+      @java.lang.Override
+      public QueryCertVotedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCertVotedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCertVotedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCertVotedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.gov.v1alpha1.QueryCertVotedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool cert_voted = 1 [json_name = "certVoted"];</code>
+     * @return The certVoted.
+     */
+    boolean getCertVoted();
+  }
+  /**
+   * <pre>
+   * QueryProposalResponse is the response type for the Query/Proposal RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code shentu.gov.v1alpha1.QueryCertVotedResponse}
+   */
+  public static final class QueryCertVotedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.gov.v1alpha1.QueryCertVotedResponse)
+      QueryCertVotedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCertVotedResponse.newBuilder() to construct.
+    private QueryCertVotedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCertVotedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCertVotedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.class, com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.Builder.class);
+    }
+
+    public static final int CERT_VOTED_FIELD_NUMBER = 1;
+    private boolean certVoted_ = false;
+    /**
+     * <code>bool cert_voted = 1 [json_name = "certVoted"];</code>
+     * @return The certVoted.
+     */
+    @java.lang.Override
+    public boolean getCertVoted() {
+      return certVoted_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (certVoted_ != false) {
+        output.writeBool(1, certVoted_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (certVoted_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, certVoted_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse other = (com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse) obj;
+
+      if (getCertVoted()
+          != other.getCertVoted()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CERT_VOTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCertVoted());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryProposalResponse is the response type for the Query/Proposal RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code shentu.gov.v1alpha1.QueryCertVotedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.gov.v1alpha1.QueryCertVotedResponse)
+        com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.class, com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        certVoted_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse getDefaultInstanceForType() {
+        return com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse build() {
+        com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse buildPartial() {
+        com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse result = new com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.certVoted_ = certVoted_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse) {
+          return mergeFrom((com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse other) {
+        if (other == com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse.getDefaultInstance()) return this;
+        if (other.getCertVoted() != false) {
+          setCertVoted(other.getCertVoted());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                certVoted_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean certVoted_ ;
+      /**
+       * <code>bool cert_voted = 1 [json_name = "certVoted"];</code>
+       * @return The certVoted.
+       */
+      @java.lang.Override
+      public boolean getCertVoted() {
+        return certVoted_;
+      }
+      /**
+       * <code>bool cert_voted = 1 [json_name = "certVoted"];</code>
+       * @param value The certVoted to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertVoted(boolean value) {
+
+        certVoted_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool cert_voted = 1 [json_name = "certVoted"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertVoted() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        certVoted_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.gov.v1alpha1.QueryCertVotedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.gov.v1alpha1.QueryCertVotedResponse)
+    private static final com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse();
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCertVotedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCertVotedResponse>() {
+      @java.lang.Override
+      public QueryCertVotedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCertVotedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCertVotedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.QueryProto.QueryCertVotedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.gov.v1alpha1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * voting_params defines the parameters related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingParams field is set.
+     */
+    boolean hasVotingParams();
+    /**
+     * <pre>
+     * voting_params defines the parameters related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+     * @return The votingParams.
+     */
+    com.cosmos.gov.v1beta1.GovProto.VotingParams getVotingParams();
+    /**
+     * <pre>
+     * voting_params defines the parameters related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder getVotingParamsOrBuilder();
+
+    /**
+     * <pre>
+     * deposit_params defines the parameters related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the depositParams field is set.
+     */
+    boolean hasDepositParams();
+    /**
+     * <pre>
+     * deposit_params defines the parameters related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+     * @return The depositParams.
+     */
+    com.cosmos.gov.v1beta1.GovProto.DepositParams getDepositParams();
+    /**
+     * <pre>
+     * deposit_params defines the parameters related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder getDepositParamsOrBuilder();
+
+    /**
+     * <pre>
+     * tally_params defines the parameters related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tallyParams field is set.
+     */
+    boolean hasTallyParams();
+    /**
+     * <pre>
+     * tally_params defines the parameters related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+     * @return The tallyParams.
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParams getTallyParams();
+    /**
+     * <pre>
+     * tally_params defines the parameters related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getTallyParamsOrBuilder();
+
+    /**
+     * <pre>
+     * custom_params defines the parameters related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the customParams field is set.
+     */
+    boolean hasCustomParams();
+    /**
+     * <pre>
+     * custom_params defines the parameters related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+     * @return The customParams.
+     */
+    com.shentu.gov.v1alpha1.GovProto.CustomParams getCustomParams();
+    /**
+     * <pre>
+     * custom_params defines the parameters related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+     */
+    com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder getCustomParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code shentu.gov.v1alpha1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.gov.v1alpha1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.class, com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int VOTING_PARAMS_FIELD_NUMBER = 1;
+    private com.cosmos.gov.v1beta1.GovProto.VotingParams votingParams_;
+    /**
+     * <pre>
+     * voting_params defines the parameters related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingParams() {
+      return votingParams_ != null;
+    }
+    /**
+     * <pre>
+     * voting_params defines the parameters related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+     * @return The votingParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.VotingParams getVotingParams() {
+      return votingParams_ == null ? com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+    }
+    /**
+     * <pre>
+     * voting_params defines the parameters related to voting.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder getVotingParamsOrBuilder() {
+      return votingParams_ == null ? com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+    }
+
+    public static final int DEPOSIT_PARAMS_FIELD_NUMBER = 2;
+    private com.cosmos.gov.v1beta1.GovProto.DepositParams depositParams_;
+    /**
+     * <pre>
+     * deposit_params defines the parameters related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the depositParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepositParams() {
+      return depositParams_ != null;
+    }
+    /**
+     * <pre>
+     * deposit_params defines the parameters related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+     * @return The depositParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.DepositParams getDepositParams() {
+      return depositParams_ == null ? com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+    }
+    /**
+     * <pre>
+     * deposit_params defines the parameters related to deposit.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder getDepositParamsOrBuilder() {
+      return depositParams_ == null ? com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+    }
+
+    public static final int TALLY_PARAMS_FIELD_NUMBER = 3;
+    private com.cosmos.gov.v1beta1.GovProto.TallyParams tallyParams_;
+    /**
+     * <pre>
+     * tally_params defines the parameters related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the tallyParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTallyParams() {
+      return tallyParams_ != null;
+    }
+    /**
+     * <pre>
+     * tally_params defines the parameters related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+     * @return The tallyParams.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParams getTallyParams() {
+      return tallyParams_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+    }
+    /**
+     * <pre>
+     * tally_params defines the parameters related to tally.
+     * </pre>
+     *
+     * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getTallyParamsOrBuilder() {
+      return tallyParams_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+    }
+
+    public static final int CUSTOM_PARAMS_FIELD_NUMBER = 4;
+    private com.shentu.gov.v1alpha1.GovProto.CustomParams customParams_;
+    /**
+     * <pre>
+     * custom_params defines the parameters related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+     * @return Whether the customParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomParams() {
+      return customParams_ != null;
+    }
+    /**
+     * <pre>
+     * custom_params defines the parameters related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+     * @return The customParams.
+     */
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.GovProto.CustomParams getCustomParams() {
+      return customParams_ == null ? com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+    }
+    /**
+     * <pre>
+     * custom_params defines the parameters related to custom.
+     * </pre>
+     *
+     * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder getCustomParamsOrBuilder() {
+      return customParams_ == null ? com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (votingParams_ != null) {
+        output.writeMessage(1, getVotingParams());
+      }
+      if (depositParams_ != null) {
+        output.writeMessage(2, getDepositParams());
+      }
+      if (tallyParams_ != null) {
+        output.writeMessage(3, getTallyParams());
+      }
+      if (customParams_ != null) {
+        output.writeMessage(4, getCustomParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (votingParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVotingParams());
+      }
+      if (depositParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDepositParams());
+      }
+      if (tallyParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTallyParams());
+      }
+      if (customParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCustomParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse other = (com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasVotingParams() != other.hasVotingParams()) return false;
+      if (hasVotingParams()) {
+        if (!getVotingParams()
+            .equals(other.getVotingParams())) return false;
+      }
+      if (hasDepositParams() != other.hasDepositParams()) return false;
+      if (hasDepositParams()) {
+        if (!getDepositParams()
+            .equals(other.getDepositParams())) return false;
+      }
+      if (hasTallyParams() != other.hasTallyParams()) return false;
+      if (hasTallyParams()) {
+        if (!getTallyParams()
+            .equals(other.getTallyParams())) return false;
+      }
+      if (hasCustomParams() != other.hasCustomParams()) return false;
+      if (hasCustomParams()) {
+        if (!getCustomParams()
+            .equals(other.getCustomParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVotingParams()) {
+        hash = (37 * hash) + VOTING_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingParams().hashCode();
+      }
+      if (hasDepositParams()) {
+        hash = (37 * hash) + DEPOSIT_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositParams().hashCode();
+      }
+      if (hasTallyParams()) {
+        hash = (37 * hash) + TALLY_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getTallyParams().hashCode();
+      }
+      if (hasCustomParams()) {
+        hash = (37 * hash) + CUSTOM_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code shentu.gov.v1alpha1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.gov.v1alpha1.QueryParamsResponse)
+        com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.class, com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        votingParams_ = null;
+        if (votingParamsBuilder_ != null) {
+          votingParamsBuilder_.dispose();
+          votingParamsBuilder_ = null;
+        }
+        depositParams_ = null;
+        if (depositParamsBuilder_ != null) {
+          depositParamsBuilder_.dispose();
+          depositParamsBuilder_ = null;
+        }
+        tallyParams_ = null;
+        if (tallyParamsBuilder_ != null) {
+          tallyParamsBuilder_.dispose();
+          tallyParamsBuilder_ = null;
+        }
+        customParams_ = null;
+        if (customParamsBuilder_ != null) {
+          customParamsBuilder_.dispose();
+          customParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.gov.v1alpha1.QueryProto.internal_static_shentu_gov_v1alpha1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse build() {
+        com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse buildPartial() {
+        com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse result = new com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.votingParams_ = votingParamsBuilder_ == null
+              ? votingParams_
+              : votingParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depositParams_ = depositParamsBuilder_ == null
+              ? depositParams_
+              : depositParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tallyParams_ = tallyParamsBuilder_ == null
+              ? tallyParams_
+              : tallyParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.customParams_ = customParamsBuilder_ == null
+              ? customParams_
+              : customParamsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse other) {
+        if (other == com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasVotingParams()) {
+          mergeVotingParams(other.getVotingParams());
+        }
+        if (other.hasDepositParams()) {
+          mergeDepositParams(other.getDepositParams());
+        }
+        if (other.hasTallyParams()) {
+          mergeTallyParams(other.getTallyParams());
+        }
+        if (other.hasCustomParams()) {
+          mergeCustomParams(other.getCustomParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getVotingParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDepositParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getTallyParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCustomParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.gov.v1beta1.GovProto.VotingParams votingParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.VotingParams, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder, com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder> votingParamsBuilder_;
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingParams field is set.
+       */
+      public boolean hasVotingParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       * @return The votingParams.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VotingParams getVotingParams() {
+        if (votingParamsBuilder_ == null) {
+          return votingParams_ == null ? com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+        } else {
+          return votingParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingParams(com.cosmos.gov.v1beta1.GovProto.VotingParams value) {
+        if (votingParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingParams_ = value;
+        } else {
+          votingParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingParams(
+          com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder builderForValue) {
+        if (votingParamsBuilder_ == null) {
+          votingParams_ = builderForValue.build();
+        } else {
+          votingParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingParams(com.cosmos.gov.v1beta1.GovProto.VotingParams value) {
+        if (votingParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            votingParams_ != null &&
+            votingParams_ != com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance()) {
+            getVotingParamsBuilder().mergeFrom(value);
+          } else {
+            votingParams_ = value;
+          }
+        } else {
+          votingParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        votingParams_ = null;
+        if (votingParamsBuilder_ != null) {
+          votingParamsBuilder_.dispose();
+          votingParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder getVotingParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getVotingParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder getVotingParamsOrBuilder() {
+        if (votingParamsBuilder_ != null) {
+          return votingParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return votingParams_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.VotingParams.getDefaultInstance() : votingParams_;
+        }
+      }
+      /**
+       * <pre>
+       * voting_params defines the parameters related to voting.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.VotingParams voting_params = 1 [json_name = "votingParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.VotingParams, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder, com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder> 
+          getVotingParamsFieldBuilder() {
+        if (votingParamsBuilder_ == null) {
+          votingParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.VotingParams, com.cosmos.gov.v1beta1.GovProto.VotingParams.Builder, com.cosmos.gov.v1beta1.GovProto.VotingParamsOrBuilder>(
+                  getVotingParams(),
+                  getParentForChildren(),
+                  isClean());
+          votingParams_ = null;
+        }
+        return votingParamsBuilder_;
+      }
+
+      private com.cosmos.gov.v1beta1.GovProto.DepositParams depositParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.DepositParams, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder, com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder> depositParamsBuilder_;
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the depositParams field is set.
+       */
+      public boolean hasDepositParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       * @return The depositParams.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositParams getDepositParams() {
+        if (depositParamsBuilder_ == null) {
+          return depositParams_ == null ? com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+        } else {
+          return depositParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDepositParams(com.cosmos.gov.v1beta1.GovProto.DepositParams value) {
+        if (depositParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          depositParams_ = value;
+        } else {
+          depositParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDepositParams(
+          com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder builderForValue) {
+        if (depositParamsBuilder_ == null) {
+          depositParams_ = builderForValue.build();
+        } else {
+          depositParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDepositParams(com.cosmos.gov.v1beta1.GovProto.DepositParams value) {
+        if (depositParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            depositParams_ != null &&
+            depositParams_ != com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance()) {
+            getDepositParamsBuilder().mergeFrom(value);
+          } else {
+            depositParams_ = value;
+          }
+        } else {
+          depositParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDepositParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depositParams_ = null;
+        if (depositParamsBuilder_ != null) {
+          depositParamsBuilder_.dispose();
+          depositParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder getDepositParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDepositParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder getDepositParamsOrBuilder() {
+        if (depositParamsBuilder_ != null) {
+          return depositParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return depositParams_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.DepositParams.getDefaultInstance() : depositParams_;
+        }
+      }
+      /**
+       * <pre>
+       * deposit_params defines the parameters related to deposit.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.DepositParams deposit_params = 2 [json_name = "depositParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.DepositParams, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder, com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder> 
+          getDepositParamsFieldBuilder() {
+        if (depositParamsBuilder_ == null) {
+          depositParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.DepositParams, com.cosmos.gov.v1beta1.GovProto.DepositParams.Builder, com.cosmos.gov.v1beta1.GovProto.DepositParamsOrBuilder>(
+                  getDepositParams(),
+                  getParentForChildren(),
+                  isClean());
+          depositParams_ = null;
+        }
+        return depositParamsBuilder_;
+      }
+
+      private com.cosmos.gov.v1beta1.GovProto.TallyParams tallyParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> tallyParamsBuilder_;
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the tallyParams field is set.
+       */
+      public boolean hasTallyParams() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       * @return The tallyParams.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams getTallyParams() {
+        if (tallyParamsBuilder_ == null) {
+          return tallyParams_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+        } else {
+          return tallyParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTallyParams(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (tallyParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tallyParams_ = value;
+        } else {
+          tallyParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTallyParams(
+          com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder builderForValue) {
+        if (tallyParamsBuilder_ == null) {
+          tallyParams_ = builderForValue.build();
+        } else {
+          tallyParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTallyParams(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (tallyParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            tallyParams_ != null &&
+            tallyParams_ != com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance()) {
+            getTallyParamsBuilder().mergeFrom(value);
+          } else {
+            tallyParams_ = value;
+          }
+        } else {
+          tallyParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTallyParams() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        tallyParams_ = null;
+        if (tallyParamsBuilder_ != null) {
+          tallyParamsBuilder_.dispose();
+          tallyParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder getTallyParamsBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getTallyParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getTallyParamsOrBuilder() {
+        if (tallyParamsBuilder_ != null) {
+          return tallyParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return tallyParams_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : tallyParams_;
+        }
+      }
+      /**
+       * <pre>
+       * tally_params defines the parameters related to tally.
+       * </pre>
+       *
+       * <code>.cosmos.gov.v1beta1.TallyParams tally_params = 3 [json_name = "tallyParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> 
+          getTallyParamsFieldBuilder() {
+        if (tallyParamsBuilder_ == null) {
+          tallyParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder>(
+                  getTallyParams(),
+                  getParentForChildren(),
+                  isClean());
+          tallyParams_ = null;
+        }
+        return tallyParamsBuilder_;
+      }
+
+      private com.shentu.gov.v1alpha1.GovProto.CustomParams customParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.gov.v1alpha1.GovProto.CustomParams, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder, com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder> customParamsBuilder_;
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       * @return Whether the customParams field is set.
+       */
+      public boolean hasCustomParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       * @return The customParams.
+       */
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams getCustomParams() {
+        if (customParamsBuilder_ == null) {
+          return customParams_ == null ? com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+        } else {
+          return customParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCustomParams(com.shentu.gov.v1alpha1.GovProto.CustomParams value) {
+        if (customParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customParams_ = value;
+        } else {
+          customParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCustomParams(
+          com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder builderForValue) {
+        if (customParamsBuilder_ == null) {
+          customParams_ = builderForValue.build();
+        } else {
+          customParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCustomParams(com.shentu.gov.v1alpha1.GovProto.CustomParams value) {
+        if (customParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            customParams_ != null &&
+            customParams_ != com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance()) {
+            getCustomParamsBuilder().mergeFrom(value);
+          } else {
+            customParams_ = value;
+          }
+        } else {
+          customParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCustomParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        customParams_ = null;
+        if (customParamsBuilder_ != null) {
+          customParamsBuilder_.dispose();
+          customParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder getCustomParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getCustomParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      public com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder getCustomParamsOrBuilder() {
+        if (customParamsBuilder_ != null) {
+          return customParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return customParams_ == null ?
+              com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance() : customParams_;
+        }
+      }
+      /**
+       * <pre>
+       * custom_params defines the parameters related to custom.
+       * </pre>
+       *
+       * <code>.shentu.gov.v1alpha1.CustomParams custom_params = 4 [json_name = "customParams", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.shentu.gov.v1alpha1.GovProto.CustomParams, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder, com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder> 
+          getCustomParamsFieldBuilder() {
+        if (customParamsBuilder_ == null) {
+          customParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.shentu.gov.v1alpha1.GovProto.CustomParams, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder, com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder>(
+                  getCustomParams(),
+                  getParentForChildren(),
+                  isClean());
+          customParams_ = null;
+        }
+        return customParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.gov.v1alpha1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.gov.v1alpha1.QueryParamsResponse)
+    private static final com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_gov_v1alpha1_QueryCertVotedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_gov_v1alpha1_QueryCertVotedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_gov_v1alpha1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_gov_v1alpha1_QueryParamsResponse_fieldAccessorTable;
 
@@ -89,12 +2507,12 @@ public final class QueryProto {
       "ha1.QueryCertVotedRequest\032+.shentu.gov.v" +
       "1alpha1.QueryCertVotedResponse\"5\202\323\344\223\002/\022-" +
       "/shentu/gov/v1alpha1/cert_voted/{proposa" +
-      "l_id}B\303\001\n\027com.shentu.gov.v1alpha1B\nQuery" +
-      "ProtoP\001Z.github.com/shentufoundation/she" +
-      "ntu/x/gov/types\242\002\003SGX\252\002\023Shentu.Gov.V1alp" +
-      "ha1\312\002\023Shentu\\Gov\\V1alpha1\342\002\037Shentu\\Gov\\V" +
-      "1alpha1\\GPBMetadata\352\002\025Shentu::Gov::V1alp" +
-      "ha1b\006proto3"
+      "l_id}B\301\001\n\027com.shentu.gov.v1alpha1B\nQuery" +
+      "ProtoZ.github.com/shentufoundation/shent" +
+      "u/x/gov/types\242\002\003SGX\252\002\023Shentu.Gov.V1alpha" +
+      "1\312\002\023Shentu\\Gov\\V1alpha1\342\002\037Shentu\\Gov\\V1a" +
+      "lpha1\\GPBMetadata\352\002\025Shentu::Gov::V1alpha" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

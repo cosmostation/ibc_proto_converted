@@ -38,12 +38,12 @@ public final class ServiceProto {
       "h.market.v1beta2.MsgCreateLeaseResponse\022" +
       "^\n\nCloseLease\022#.akash.market.v1beta2.Msg" +
       "CloseLease\032+.akash.market.v1beta2.MsgClo" +
-      "seLeaseResponseB\325\001\n\030com.akash.market.v1b" +
-      "eta2B\014ServiceProtoP\001Z9github.com/akash-n" +
-      "etwork/akash-api/go/node/market/v1beta2\242" +
-      "\002\003AMX\252\002\024Akash.Market.V1beta2\312\002\024Akash\\Mar" +
-      "ket\\V1beta2\342\002 Akash\\Market\\V1beta2\\GPBMe" +
-      "tadata\352\002\026Akash::Market::V1beta2b\006proto3"
+      "seLeaseResponseB\323\001\n\030com.akash.market.v1b" +
+      "eta2B\014ServiceProtoZ9github.com/akash-net" +
+      "work/akash-api/go/node/market/v1beta2\242\002\003" +
+      "AMX\252\002\024Akash.Market.V1beta2\312\002\024Akash\\Marke" +
+      "t\\V1beta2\342\002 Akash\\Market\\V1beta2\\GPBMeta" +
+      "data\352\002\026Akash::Market::V1beta2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -127,13 +127,13 @@ public final class ServiceProto {
       "_tokens/{chain}\022\210\001\n\tTokenInfo\022$.axelar.e" +
       "vm.v1beta1.TokenInfoRequest\032%.axelar.evm" +
       ".v1beta1.TokenInfoResponse\".\202\323\344\223\002(\022&/axe" +
-      "lar/evm/v1beta1/token_info/{chain}B\306\001\n\026c" +
-      "om.axelar.evm.v1beta1B\014ServiceProtoP\001Z0g" +
-      "ithub.com/axelarnetwork/axelar-core/x/ev" +
-      "m/types\242\002\003AEX\252\002\022Axelar.Evm.V1beta1\312\002\022Axe" +
-      "lar\\Evm\\V1beta1\342\002\036Axelar\\Evm\\V1beta1\\GPB" +
-      "Metadata\352\002\024Axelar::Evm::V1beta1\300\343\036\001b\006pro" +
-      "to3"
+      "lar/evm/v1beta1/token_info/{chain}B\304\001\n\026c" +
+      "om.axelar.evm.v1beta1B\014ServiceProtoZ0git" +
+      "hub.com/axelarnetwork/axelar-core/x/evm/" +
+      "types\242\002\003AEX\252\002\022Axelar.Evm.V1beta1\312\002\022Axela" +
+      "r\\Evm\\V1beta1\342\002\036Axelar\\Evm\\V1beta1\\GPBMe" +
+      "tadata\352\002\024Axelar::Evm::V1beta1\300\343\036\001b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

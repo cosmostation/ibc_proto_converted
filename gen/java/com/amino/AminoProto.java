@@ -183,10 +183,10 @@ public final class AminoProto {
       "me:G\n\016dont_omitempty\022\035.google.protobuf.F" +
       "ieldOptions\030\365\214\246\005 \001(\010R\rdontOmitempty:?\n\no" +
       "neof_name\022\035.google.protobuf.FieldOptions" +
-      "\030\366\214\246\005 \001(\tR\toneofNameBx\n\tcom.aminoB\nAmino" +
-      "ProtoP\001Z+github.com/cosmos/cosmos-sdk/ty" +
-      "pes/tx/amino\242\002\003AXX\252\002\005Amino\312\002\005Amino\342\002\021Ami" +
-      "no\\GPBMetadata\352\002\005Aminob\006proto3"
+      "\030\366\214\246\005 \001(\tR\toneofNameBv\n\tcom.aminoB\nAmino" +
+      "ProtoZ+github.com/cosmos/cosmos-sdk/type" +
+      "s/tx/amino\242\002\003AXX\252\002\005Amino\312\002\005Amino\342\002\021Amino" +
+      "\\GPBMetadata\352\002\005Aminob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

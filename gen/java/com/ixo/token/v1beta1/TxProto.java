@@ -14,84 +14,13908 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgCreateToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    java.lang.String getMinter();
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    com.google.protobuf.ByteString
+        getMinterBytes();
+
+    /**
+     * <pre>
+     * class is the token protocol entity DID (validated)
+     * </pre>
+     *
+     * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The class.
+     */
+    java.lang.String getClass_();
+    /**
+     * <pre>
+     * class is the token protocol entity DID (validated)
+     * </pre>
+     *
+     * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for class.
+     */
+    com.google.protobuf.ByteString
+        getClass_Bytes();
+
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * description is any arbitrary description
+     * </pre>
+     *
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * description is any arbitrary description
+     * </pre>
+     *
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * image is the image url for the token
+     * </pre>
+     *
+     * <code>string image = 5 [json_name = "image"];</code>
+     * @return The image.
+     */
+    java.lang.String getImage();
+    /**
+     * <pre>
+     * image is the image url for the token
+     * </pre>
+     *
+     * <code>string image = 5 [json_name = "image"];</code>
+     * @return The bytes for image.
+     */
+    com.google.protobuf.ByteString
+        getImageBytes();
+
+    /**
+     * <pre>
+     * type is the token type (eg ixo1155)
+     * </pre>
+     *
+     * <code>string token_type = 6 [json_name = "tokenType"];</code>
+     * @return The tokenType.
+     */
+    java.lang.String getTokenType();
+    /**
+     * <pre>
+     * type is the token type (eg ixo1155)
+     * </pre>
+     *
+     * <code>string token_type = 6 [json_name = "tokenType"];</code>
+     * @return The bytes for tokenType.
+     */
+    com.google.protobuf.ByteString
+        getTokenTypeBytes();
+
+    /**
+     * <pre>
+     * cap is the maximum number of tokens with this name that can be minted, 0 is
+     * unlimited
+     * </pre>
+     *
+     * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The cap.
+     */
+    java.lang.String getCap();
+    /**
+     * <pre>
+     * cap is the maximum number of tokens with this name that can be minted, 0 is
+     * unlimited
+     * </pre>
+     *
+     * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The bytes for cap.
+     */
+    com.google.protobuf.ByteString
+        getCapBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgCreateToken}
+   */
+  public static final class MsgCreateToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgCreateToken)
+      MsgCreateTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateToken.newBuilder() to construct.
+    private MsgCreateToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateToken() {
+      minter_ = "";
+      class__ = "";
+      name_ = "";
+      description_ = "";
+      image_ = "";
+      tokenType_ = "";
+      cap_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgCreateToken.class, com.ixo.token.v1beta1.TxProto.MsgCreateToken.Builder.class);
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minter_ = "";
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public java.lang.String getMinter() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinterBytes() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object class__ = "";
+    /**
+     * <pre>
+     * class is the token protocol entity DID (validated)
+     * </pre>
+     *
+     * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The class.
+     */
+    @java.lang.Override
+    public java.lang.String getClass_() {
+      java.lang.Object ref = class__;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        class__ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * class is the token protocol entity DID (validated)
+     * </pre>
+     *
+     * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+     * @return The bytes for class.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClass_Bytes() {
+      java.lang.Object ref = class__;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        class__ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace)
+     * </pre>
+     *
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * description is any arbitrary description
+     * </pre>
+     *
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * description is any arbitrary description
+     * </pre>
+     *
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMAGE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object image_ = "";
+    /**
+     * <pre>
+     * image is the image url for the token
+     * </pre>
+     *
+     * <code>string image = 5 [json_name = "image"];</code>
+     * @return The image.
+     */
+    @java.lang.Override
+    public java.lang.String getImage() {
+      java.lang.Object ref = image_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        image_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * image is the image url for the token
+     * </pre>
+     *
+     * <code>string image = 5 [json_name = "image"];</code>
+     * @return The bytes for image.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImageBytes() {
+      java.lang.Object ref = image_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        image_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_TYPE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenType_ = "";
+    /**
+     * <pre>
+     * type is the token type (eg ixo1155)
+     * </pre>
+     *
+     * <code>string token_type = 6 [json_name = "tokenType"];</code>
+     * @return The tokenType.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenType() {
+      java.lang.Object ref = tokenType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type is the token type (eg ixo1155)
+     * </pre>
+     *
+     * <code>string token_type = 6 [json_name = "tokenType"];</code>
+     * @return The bytes for tokenType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenTypeBytes() {
+      java.lang.Object ref = tokenType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CAP_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cap_ = "";
+    /**
+     * <pre>
+     * cap is the maximum number of tokens with this name that can be minted, 0 is
+     * unlimited
+     * </pre>
+     *
+     * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The cap.
+     */
+    @java.lang.Override
+    public java.lang.String getCap() {
+      java.lang.Object ref = cap_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cap_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * cap is the maximum number of tokens with this name that can be minted, 0 is
+     * unlimited
+     * </pre>
+     *
+     * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The bytes for cap.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCapBytes() {
+      java.lang.Object ref = cap_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cap_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(class__)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, class__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(image_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, image_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tokenType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cap_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cap_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(class__)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, class__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(image_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, image_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, tokenType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cap_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cap_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgCreateToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgCreateToken other = (com.ixo.token.v1beta1.TxProto.MsgCreateToken) obj;
+
+      if (!getMinter()
+          .equals(other.getMinter())) return false;
+      if (!getClass_()
+          .equals(other.getClass_())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getImage()
+          .equals(other.getImage())) return false;
+      if (!getTokenType()
+          .equals(other.getTokenType())) return false;
+      if (!getCap()
+          .equals(other.getCap())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMinter().hashCode();
+      hash = (37 * hash) + CLASS_FIELD_NUMBER;
+      hash = (53 * hash) + getClass_().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getImage().hashCode();
+      hash = (37 * hash) + TOKEN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenType().hashCode();
+      hash = (37 * hash) + CAP_FIELD_NUMBER;
+      hash = (53 * hash) + getCap().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgCreateToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgCreateToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgCreateToken)
+        com.ixo.token.v1beta1.TxProto.MsgCreateTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgCreateToken.class, com.ixo.token.v1beta1.TxProto.MsgCreateToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgCreateToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minter_ = "";
+        class__ = "";
+        name_ = "";
+        description_ = "";
+        image_ = "";
+        tokenType_ = "";
+        cap_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCreateToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgCreateToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCreateToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgCreateToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCreateToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgCreateToken result = new com.ixo.token.v1beta1.TxProto.MsgCreateToken(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgCreateToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minter_ = minter_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.class__ = class__;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.image_ = image_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.tokenType_ = tokenType_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.cap_ = cap_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgCreateToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgCreateToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgCreateToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgCreateToken.getDefaultInstance()) return this;
+        if (!other.getMinter().isEmpty()) {
+          minter_ = other.minter_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClass_().isEmpty()) {
+          class__ = other.class__;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getImage().isEmpty()) {
+          image_ = other.image_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getTokenType().isEmpty()) {
+          tokenType_ = other.tokenType_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getCap().isEmpty()) {
+          cap_ = other.cap_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                minter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                class__ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                image_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                tokenType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                cap_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object minter_ = "";
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The minter.
+       */
+      public java.lang.String getMinter() {
+        java.lang.Object ref = minter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The bytes for minter.
+       */
+      public com.google.protobuf.ByteString
+          getMinterBytes() {
+        java.lang.Object ref = minter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinter() {
+        minter_ = getDefaultInstance().getMinter();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The bytes for minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object class__ = "";
+      /**
+       * <pre>
+       * class is the token protocol entity DID (validated)
+       * </pre>
+       *
+       * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The class.
+       */
+      public java.lang.String getClass_() {
+        java.lang.Object ref = class__;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          class__ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class is the token protocol entity DID (validated)
+       * </pre>
+       *
+       * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return The bytes for class.
+       */
+      public com.google.protobuf.ByteString
+          getClass_Bytes() {
+        java.lang.Object ref = class__;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          class__ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * class is the token protocol entity DID (validated)
+       * </pre>
+       *
+       * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The class to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClass_(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        class__ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class is the token protocol entity DID (validated)
+       * </pre>
+       *
+       * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClass_() {
+        class__ = getDefaultInstance().getClass_();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * class is the token protocol entity DID (validated)
+       * </pre>
+       *
+       * <code>string class = 2 [json_name = "class", (.gogoproto.casttype) = "github.com/ixofoundation/ixo-blockchain/x/iid/types.DIDFragment"];</code>
+       * @param value The bytes for class to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClass_Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        class__ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace)
+       * </pre>
+       *
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * description is any arbitrary description
+       * </pre>
+       *
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description is any arbitrary description
+       * </pre>
+       *
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description is any arbitrary description
+       * </pre>
+       *
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description is any arbitrary description
+       * </pre>
+       *
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description is any arbitrary description
+       * </pre>
+       *
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object image_ = "";
+      /**
+       * <pre>
+       * image is the image url for the token
+       * </pre>
+       *
+       * <code>string image = 5 [json_name = "image"];</code>
+       * @return The image.
+       */
+      public java.lang.String getImage() {
+        java.lang.Object ref = image_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          image_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * image is the image url for the token
+       * </pre>
+       *
+       * <code>string image = 5 [json_name = "image"];</code>
+       * @return The bytes for image.
+       */
+      public com.google.protobuf.ByteString
+          getImageBytes() {
+        java.lang.Object ref = image_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          image_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * image is the image url for the token
+       * </pre>
+       *
+       * <code>string image = 5 [json_name = "image"];</code>
+       * @param value The image to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        image_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * image is the image url for the token
+       * </pre>
+       *
+       * <code>string image = 5 [json_name = "image"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImage() {
+        image_ = getDefaultInstance().getImage();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * image is the image url for the token
+       * </pre>
+       *
+       * <code>string image = 5 [json_name = "image"];</code>
+       * @param value The bytes for image to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        image_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenType_ = "";
+      /**
+       * <pre>
+       * type is the token type (eg ixo1155)
+       * </pre>
+       *
+       * <code>string token_type = 6 [json_name = "tokenType"];</code>
+       * @return The tokenType.
+       */
+      public java.lang.String getTokenType() {
+        java.lang.Object ref = tokenType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type is the token type (eg ixo1155)
+       * </pre>
+       *
+       * <code>string token_type = 6 [json_name = "tokenType"];</code>
+       * @return The bytes for tokenType.
+       */
+      public com.google.protobuf.ByteString
+          getTokenTypeBytes() {
+        java.lang.Object ref = tokenType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type is the token type (eg ixo1155)
+       * </pre>
+       *
+       * <code>string token_type = 6 [json_name = "tokenType"];</code>
+       * @param value The tokenType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenType_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the token type (eg ixo1155)
+       * </pre>
+       *
+       * <code>string token_type = 6 [json_name = "tokenType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenType() {
+        tokenType_ = getDefaultInstance().getTokenType();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the token type (eg ixo1155)
+       * </pre>
+       *
+       * <code>string token_type = 6 [json_name = "tokenType"];</code>
+       * @param value The bytes for tokenType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenType_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cap_ = "";
+      /**
+       * <pre>
+       * cap is the maximum number of tokens with this name that can be minted, 0 is
+       * unlimited
+       * </pre>
+       *
+       * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The cap.
+       */
+      public java.lang.String getCap() {
+        java.lang.Object ref = cap_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cap_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cap is the maximum number of tokens with this name that can be minted, 0 is
+       * unlimited
+       * </pre>
+       *
+       * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The bytes for cap.
+       */
+      public com.google.protobuf.ByteString
+          getCapBytes() {
+        java.lang.Object ref = cap_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cap_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cap is the maximum number of tokens with this name that can be minted, 0 is
+       * unlimited
+       * </pre>
+       *
+       * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The cap to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCap(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        cap_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cap is the maximum number of tokens with this name that can be minted, 0 is
+       * unlimited
+       * </pre>
+       *
+       * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCap() {
+        cap_ = getDefaultInstance().getCap();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cap is the maximum number of tokens with this name that can be minted, 0 is
+       * unlimited
+       * </pre>
+       *
+       * <code>string cap = 7 [json_name = "cap", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The bytes for cap to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCapBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        cap_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgCreateToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgCreateToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgCreateToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgCreateToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateToken>() {
+      @java.lang.Override
+      public MsgCreateToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgCreateToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgCreateTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgCreateTokenResponse}
+   */
+  public static final class MsgCreateTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgCreateTokenResponse)
+      MsgCreateTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateTokenResponse.newBuilder() to construct.
+    private MsgCreateTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgCreateTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgCreateTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgCreateTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgCreateTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateTokenResponse>() {
+      @java.lang.Override
+      public MsgCreateTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgCreateTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgMintTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgMintToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    java.lang.String getMinter();
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    com.google.protobuf.ByteString
+        getMinterBytes();
+
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * address of owner to mint for
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * address of owner to mint for
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TxProto.MintBatch> 
+        getMintBatchList();
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.MintBatch getMintBatch(int index);
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    int getMintBatchCount();
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder> 
+        getMintBatchOrBuilderList();
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder getMintBatchOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgMintToken}
+   */
+  public static final class MsgMintToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgMintToken)
+      MsgMintTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMintToken.newBuilder() to construct.
+    private MsgMintToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMintToken() {
+      minter_ = "";
+      contractAddress_ = "";
+      owner_ = "";
+      mintBatch_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMintToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgMintToken.class, com.ixo.token.v1beta1.TxProto.MsgMintToken.Builder.class);
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minter_ = "";
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public java.lang.String getMinter() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinterBytes() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * address of owner to mint for
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of owner to mint for
+     * </pre>
+     *
+     * <code>string owner = 3 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MINT_BATCH_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TxProto.MintBatch> mintBatch_;
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TxProto.MintBatch> getMintBatchList() {
+      return mintBatch_;
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder> 
+        getMintBatchOrBuilderList() {
+      return mintBatch_;
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    @java.lang.Override
+    public int getMintBatchCount() {
+      return mintBatch_.size();
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MintBatch getMintBatch(int index) {
+      return mintBatch_.get(index);
+    }
+    /**
+     * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder getMintBatchOrBuilder(
+        int index) {
+      return mintBatch_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, owner_);
+      }
+      for (int i = 0; i < mintBatch_.size(); i++) {
+        output.writeMessage(4, mintBatch_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, owner_);
+      }
+      for (int i = 0; i < mintBatch_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, mintBatch_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgMintToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgMintToken other = (com.ixo.token.v1beta1.TxProto.MsgMintToken) obj;
+
+      if (!getMinter()
+          .equals(other.getMinter())) return false;
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getMintBatchList()
+          .equals(other.getMintBatchList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMinter().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (getMintBatchCount() > 0) {
+        hash = (37 * hash) + MINT_BATCH_FIELD_NUMBER;
+        hash = (53 * hash) + getMintBatchList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgMintToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgMintToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgMintToken)
+        com.ixo.token.v1beta1.TxProto.MsgMintTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgMintToken.class, com.ixo.token.v1beta1.TxProto.MsgMintToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgMintToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minter_ = "";
+        contractAddress_ = "";
+        owner_ = "";
+        if (mintBatchBuilder_ == null) {
+          mintBatch_ = java.util.Collections.emptyList();
+        } else {
+          mintBatch_ = null;
+          mintBatchBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgMintToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgMintToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgMintToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgMintToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgMintToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgMintToken result = new com.ixo.token.v1beta1.TxProto.MsgMintToken(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.token.v1beta1.TxProto.MsgMintToken result) {
+        if (mintBatchBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            mintBatch_ = java.util.Collections.unmodifiableList(mintBatch_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.mintBatch_ = mintBatch_;
+        } else {
+          result.mintBatch_ = mintBatchBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgMintToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minter_ = minter_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgMintToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgMintToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgMintToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgMintToken.getDefaultInstance()) return this;
+        if (!other.getMinter().isEmpty()) {
+          minter_ = other.minter_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (mintBatchBuilder_ == null) {
+          if (!other.mintBatch_.isEmpty()) {
+            if (mintBatch_.isEmpty()) {
+              mintBatch_ = other.mintBatch_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureMintBatchIsMutable();
+              mintBatch_.addAll(other.mintBatch_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.mintBatch_.isEmpty()) {
+            if (mintBatchBuilder_.isEmpty()) {
+              mintBatchBuilder_.dispose();
+              mintBatchBuilder_ = null;
+              mintBatch_ = other.mintBatch_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              mintBatchBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMintBatchFieldBuilder() : null;
+            } else {
+              mintBatchBuilder_.addAllMessages(other.mintBatch_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                minter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.ixo.token.v1beta1.TxProto.MintBatch m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TxProto.MintBatch.parser(),
+                        extensionRegistry);
+                if (mintBatchBuilder_ == null) {
+                  ensureMintBatchIsMutable();
+                  mintBatch_.add(m);
+                } else {
+                  mintBatchBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object minter_ = "";
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The minter.
+       */
+      public java.lang.String getMinter() {
+        java.lang.Object ref = minter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The bytes for minter.
+       */
+      public com.google.protobuf.ByteString
+          getMinterBytes() {
+        java.lang.Object ref = minter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinter() {
+        minter_ = getDefaultInstance().getMinter();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The bytes for minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * address of owner to mint for
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner to mint for
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner to mint for
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner to mint for
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner to mint for
+       * </pre>
+       *
+       * <code>string owner = 3 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TxProto.MintBatch> mintBatch_ =
+        java.util.Collections.emptyList();
+      private void ensureMintBatchIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          mintBatch_ = new java.util.ArrayList<com.ixo.token.v1beta1.TxProto.MintBatch>(mintBatch_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.MintBatch, com.ixo.token.v1beta1.TxProto.MintBatch.Builder, com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder> mintBatchBuilder_;
+
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.MintBatch> getMintBatchList() {
+        if (mintBatchBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(mintBatch_);
+        } else {
+          return mintBatchBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public int getMintBatchCount() {
+        if (mintBatchBuilder_ == null) {
+          return mintBatch_.size();
+        } else {
+          return mintBatchBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.MintBatch getMintBatch(int index) {
+        if (mintBatchBuilder_ == null) {
+          return mintBatch_.get(index);
+        } else {
+          return mintBatchBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder setMintBatch(
+          int index, com.ixo.token.v1beta1.TxProto.MintBatch value) {
+        if (mintBatchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintBatchIsMutable();
+          mintBatch_.set(index, value);
+          onChanged();
+        } else {
+          mintBatchBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder setMintBatch(
+          int index, com.ixo.token.v1beta1.TxProto.MintBatch.Builder builderForValue) {
+        if (mintBatchBuilder_ == null) {
+          ensureMintBatchIsMutable();
+          mintBatch_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintBatchBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder addMintBatch(com.ixo.token.v1beta1.TxProto.MintBatch value) {
+        if (mintBatchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintBatchIsMutable();
+          mintBatch_.add(value);
+          onChanged();
+        } else {
+          mintBatchBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder addMintBatch(
+          int index, com.ixo.token.v1beta1.TxProto.MintBatch value) {
+        if (mintBatchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMintBatchIsMutable();
+          mintBatch_.add(index, value);
+          onChanged();
+        } else {
+          mintBatchBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder addMintBatch(
+          com.ixo.token.v1beta1.TxProto.MintBatch.Builder builderForValue) {
+        if (mintBatchBuilder_ == null) {
+          ensureMintBatchIsMutable();
+          mintBatch_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mintBatchBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder addMintBatch(
+          int index, com.ixo.token.v1beta1.TxProto.MintBatch.Builder builderForValue) {
+        if (mintBatchBuilder_ == null) {
+          ensureMintBatchIsMutable();
+          mintBatch_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mintBatchBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder addAllMintBatch(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TxProto.MintBatch> values) {
+        if (mintBatchBuilder_ == null) {
+          ensureMintBatchIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, mintBatch_);
+          onChanged();
+        } else {
+          mintBatchBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder clearMintBatch() {
+        if (mintBatchBuilder_ == null) {
+          mintBatch_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          mintBatchBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public Builder removeMintBatch(int index) {
+        if (mintBatchBuilder_ == null) {
+          ensureMintBatchIsMutable();
+          mintBatch_.remove(index);
+          onChanged();
+        } else {
+          mintBatchBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.MintBatch.Builder getMintBatchBuilder(
+          int index) {
+        return getMintBatchFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder getMintBatchOrBuilder(
+          int index) {
+        if (mintBatchBuilder_ == null) {
+          return mintBatch_.get(index);  } else {
+          return mintBatchBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder> 
+           getMintBatchOrBuilderList() {
+        if (mintBatchBuilder_ != null) {
+          return mintBatchBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(mintBatch_);
+        }
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.MintBatch.Builder addMintBatchBuilder() {
+        return getMintBatchFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TxProto.MintBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.MintBatch.Builder addMintBatchBuilder(
+          int index) {
+        return getMintBatchFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TxProto.MintBatch.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.token.v1beta1.MintBatch mint_batch = 4 [json_name = "mintBatch"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.MintBatch.Builder> 
+           getMintBatchBuilderList() {
+        return getMintBatchFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.MintBatch, com.ixo.token.v1beta1.TxProto.MintBatch.Builder, com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder> 
+          getMintBatchFieldBuilder() {
+        if (mintBatchBuilder_ == null) {
+          mintBatchBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TxProto.MintBatch, com.ixo.token.v1beta1.TxProto.MintBatch.Builder, com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder>(
+                  mintBatch_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          mintBatch_ = null;
+        }
+        return mintBatchBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgMintToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgMintToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgMintToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgMintToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMintToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMintToken>() {
+      @java.lang.Override
+      public MsgMintToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMintToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMintToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgMintToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MintBatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MintBatch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace), will be verified
+     * against Token name provided on msgCreateToken
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace), will be verified
+     * against Token name provided on msgCreateToken
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * index is the unique identifier hexstring that identifies the token
+     * </pre>
+     *
+     * <code>string index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    java.lang.String getIndex();
+    /**
+     * <pre>
+     * index is the unique identifier hexstring that identifies the token
+     * </pre>
+     *
+     * <code>string index = 2 [json_name = "index"];</code>
+     * @return The bytes for index.
+     */
+    com.google.protobuf.ByteString
+        getIndexBytes();
+
+    /**
+     * <pre>
+     * amount is the number of tokens to mint
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount is the number of tokens to mint
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <pre>
+     * did of collection (eg Supamoto Malawi)
+     * </pre>
+     *
+     * <code>string collection = 4 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    java.lang.String getCollection();
+    /**
+     * <pre>
+     * did of collection (eg Supamoto Malawi)
+     * </pre>
+     *
+     * <code>string collection = 4 [json_name = "collection"];</code>
+     * @return The bytes for collection.
+     */
+    com.google.protobuf.ByteString
+        getCollectionBytes();
+
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TokenProto.TokenData> 
+        getTokenDataList();
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.TokenData getTokenData(int index);
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    int getTokenDataCount();
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder> 
+        getTokenDataOrBuilderList();
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder getTokenDataOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MintBatch}
+   */
+  public static final class MintBatch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MintBatch)
+      MintBatchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MintBatch.newBuilder() to construct.
+    private MintBatch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MintBatch() {
+      name_ = "";
+      index_ = "";
+      amount_ = "";
+      collection_ = "";
+      tokenData_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MintBatch();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MintBatch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MintBatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MintBatch.class, com.ixo.token.v1beta1.TxProto.MintBatch.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace), will be verified
+     * against Token name provided on msgCreateToken
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name is the token name, which must be unique (namespace), will be verified
+     * against Token name provided on msgCreateToken
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INDEX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object index_ = "";
+    /**
+     * <pre>
+     * index is the unique identifier hexstring that identifies the token
+     * </pre>
+     *
+     * <code>string index = 2 [json_name = "index"];</code>
+     * @return The index.
+     */
+    @java.lang.Override
+    public java.lang.String getIndex() {
+      java.lang.Object ref = index_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        index_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * index is the unique identifier hexstring that identifies the token
+     * </pre>
+     *
+     * <code>string index = 2 [json_name = "index"];</code>
+     * @return The bytes for index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexBytes() {
+      java.lang.Object ref = index_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        index_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount is the number of tokens to mint
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount is the number of tokens to mint
+     * </pre>
+     *
+     * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COLLECTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object collection_ = "";
+    /**
+     * <pre>
+     * did of collection (eg Supamoto Malawi)
+     * </pre>
+     *
+     * <code>string collection = 4 [json_name = "collection"];</code>
+     * @return The collection.
+     */
+    @java.lang.Override
+    public java.lang.String getCollection() {
+      java.lang.Object ref = collection_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        collection_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * did of collection (eg Supamoto Malawi)
+     * </pre>
+     *
+     * <code>string collection = 4 [json_name = "collection"];</code>
+     * @return The bytes for collection.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCollectionBytes() {
+      java.lang.Object ref = collection_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        collection_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_DATA_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TokenProto.TokenData> tokenData_;
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TokenProto.TokenData> getTokenDataList() {
+      return tokenData_;
+    }
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder> 
+        getTokenDataOrBuilderList() {
+      return tokenData_;
+    }
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    @java.lang.Override
+    public int getTokenDataCount() {
+      return tokenData_.size();
+    }
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.TokenData getTokenData(int index) {
+      return tokenData_.get(index);
+    }
+    /**
+     * <pre>
+     * tokenData is the linkedResources added to tokenMetadata when queried eg
+     * (credential link ***.ipfs)
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder getTokenDataOrBuilder(
+        int index) {
+      return tokenData_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collection_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, collection_);
+      }
+      for (int i = 0; i < tokenData_.size(); i++) {
+        output.writeMessage(5, tokenData_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(index_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, index_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collection_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, collection_);
+      }
+      for (int i = 0; i < tokenData_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, tokenData_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MintBatch)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MintBatch other = (com.ixo.token.v1beta1.TxProto.MintBatch) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getIndex()
+          .equals(other.getIndex())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getCollection()
+          .equals(other.getCollection())) return false;
+      if (!getTokenDataList()
+          .equals(other.getTokenDataList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + getIndex().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + COLLECTION_FIELD_NUMBER;
+      hash = (53 * hash) + getCollection().hashCode();
+      if (getTokenDataCount() > 0) {
+        hash = (37 * hash) + TOKEN_DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getTokenDataList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MintBatch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MintBatch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MintBatch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MintBatch)
+        com.ixo.token.v1beta1.TxProto.MintBatchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MintBatch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MintBatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MintBatch.class, com.ixo.token.v1beta1.TxProto.MintBatch.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MintBatch.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        index_ = "";
+        amount_ = "";
+        collection_ = "";
+        if (tokenDataBuilder_ == null) {
+          tokenData_ = java.util.Collections.emptyList();
+        } else {
+          tokenData_ = null;
+          tokenDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MintBatch_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MintBatch getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MintBatch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MintBatch build() {
+        com.ixo.token.v1beta1.TxProto.MintBatch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MintBatch buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MintBatch result = new com.ixo.token.v1beta1.TxProto.MintBatch(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.token.v1beta1.TxProto.MintBatch result) {
+        if (tokenDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            tokenData_ = java.util.Collections.unmodifiableList(tokenData_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.tokenData_ = tokenData_;
+        } else {
+          result.tokenData_ = tokenDataBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MintBatch result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.collection_ = collection_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MintBatch) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MintBatch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MintBatch other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MintBatch.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getIndex().isEmpty()) {
+          index_ = other.index_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getCollection().isEmpty()) {
+          collection_ = other.collection_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (tokenDataBuilder_ == null) {
+          if (!other.tokenData_.isEmpty()) {
+            if (tokenData_.isEmpty()) {
+              tokenData_ = other.tokenData_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureTokenDataIsMutable();
+              tokenData_.addAll(other.tokenData_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokenData_.isEmpty()) {
+            if (tokenDataBuilder_.isEmpty()) {
+              tokenDataBuilder_.dispose();
+              tokenDataBuilder_ = null;
+              tokenData_ = other.tokenData_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              tokenDataBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokenDataFieldBuilder() : null;
+            } else {
+              tokenDataBuilder_.addAllMessages(other.tokenData_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                index_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                collection_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                com.ixo.token.v1beta1.TokenProto.TokenData m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TokenProto.TokenData.parser(),
+                        extensionRegistry);
+                if (tokenDataBuilder_ == null) {
+                  ensureTokenDataIsMutable();
+                  tokenData_.add(m);
+                } else {
+                  tokenDataBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace), will be verified
+       * against Token name provided on msgCreateToken
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace), will be verified
+       * against Token name provided on msgCreateToken
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace), will be verified
+       * against Token name provided on msgCreateToken
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace), will be verified
+       * against Token name provided on msgCreateToken
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name is the token name, which must be unique (namespace), will be verified
+       * against Token name provided on msgCreateToken
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object index_ = "";
+      /**
+       * <pre>
+       * index is the unique identifier hexstring that identifies the token
+       * </pre>
+       *
+       * <code>string index = 2 [json_name = "index"];</code>
+       * @return The index.
+       */
+      public java.lang.String getIndex() {
+        java.lang.Object ref = index_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          index_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * index is the unique identifier hexstring that identifies the token
+       * </pre>
+       *
+       * <code>string index = 2 [json_name = "index"];</code>
+       * @return The bytes for index.
+       */
+      public com.google.protobuf.ByteString
+          getIndexBytes() {
+        java.lang.Object ref = index_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          index_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * index is the unique identifier hexstring that identifies the token
+       * </pre>
+       *
+       * <code>string index = 2 [json_name = "index"];</code>
+       * @param value The index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndex(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        index_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * index is the unique identifier hexstring that identifies the token
+       * </pre>
+       *
+       * <code>string index = 2 [json_name = "index"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndex() {
+        index_ = getDefaultInstance().getIndex();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * index is the unique identifier hexstring that identifies the token
+       * </pre>
+       *
+       * <code>string index = 2 [json_name = "index"];</code>
+       * @param value The bytes for index to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        index_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount is the number of tokens to mint
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to mint
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to mint
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to mint
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to mint
+       * </pre>
+       *
+       * <code>string amount = 3 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object collection_ = "";
+      /**
+       * <pre>
+       * did of collection (eg Supamoto Malawi)
+       * </pre>
+       *
+       * <code>string collection = 4 [json_name = "collection"];</code>
+       * @return The collection.
+       */
+      public java.lang.String getCollection() {
+        java.lang.Object ref = collection_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          collection_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * did of collection (eg Supamoto Malawi)
+       * </pre>
+       *
+       * <code>string collection = 4 [json_name = "collection"];</code>
+       * @return The bytes for collection.
+       */
+      public com.google.protobuf.ByteString
+          getCollectionBytes() {
+        java.lang.Object ref = collection_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          collection_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * did of collection (eg Supamoto Malawi)
+       * </pre>
+       *
+       * <code>string collection = 4 [json_name = "collection"];</code>
+       * @param value The collection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollection(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        collection_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * did of collection (eg Supamoto Malawi)
+       * </pre>
+       *
+       * <code>string collection = 4 [json_name = "collection"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollection() {
+        collection_ = getDefaultInstance().getCollection();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * did of collection (eg Supamoto Malawi)
+       * </pre>
+       *
+       * <code>string collection = 4 [json_name = "collection"];</code>
+       * @param value The bytes for collection to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        collection_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TokenProto.TokenData> tokenData_ =
+        java.util.Collections.emptyList();
+      private void ensureTokenDataIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          tokenData_ = new java.util.ArrayList<com.ixo.token.v1beta1.TokenProto.TokenData>(tokenData_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.TokenData, com.ixo.token.v1beta1.TokenProto.TokenData.Builder, com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder> tokenDataBuilder_;
+
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TokenProto.TokenData> getTokenDataList() {
+        if (tokenDataBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokenData_);
+        } else {
+          return tokenDataBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public int getTokenDataCount() {
+        if (tokenDataBuilder_ == null) {
+          return tokenData_.size();
+        } else {
+          return tokenDataBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenData getTokenData(int index) {
+        if (tokenDataBuilder_ == null) {
+          return tokenData_.get(index);
+        } else {
+          return tokenDataBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder setTokenData(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenData value) {
+        if (tokenDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenDataIsMutable();
+          tokenData_.set(index, value);
+          onChanged();
+        } else {
+          tokenDataBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder setTokenData(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenData.Builder builderForValue) {
+        if (tokenDataBuilder_ == null) {
+          ensureTokenDataIsMutable();
+          tokenData_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenDataBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder addTokenData(com.ixo.token.v1beta1.TokenProto.TokenData value) {
+        if (tokenDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenDataIsMutable();
+          tokenData_.add(value);
+          onChanged();
+        } else {
+          tokenDataBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder addTokenData(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenData value) {
+        if (tokenDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokenDataIsMutable();
+          tokenData_.add(index, value);
+          onChanged();
+        } else {
+          tokenDataBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder addTokenData(
+          com.ixo.token.v1beta1.TokenProto.TokenData.Builder builderForValue) {
+        if (tokenDataBuilder_ == null) {
+          ensureTokenDataIsMutable();
+          tokenData_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokenDataBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder addTokenData(
+          int index, com.ixo.token.v1beta1.TokenProto.TokenData.Builder builderForValue) {
+        if (tokenDataBuilder_ == null) {
+          ensureTokenDataIsMutable();
+          tokenData_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokenDataBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder addAllTokenData(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TokenProto.TokenData> values) {
+        if (tokenDataBuilder_ == null) {
+          ensureTokenDataIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokenData_);
+          onChanged();
+        } else {
+          tokenDataBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder clearTokenData() {
+        if (tokenDataBuilder_ == null) {
+          tokenData_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          tokenDataBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public Builder removeTokenData(int index) {
+        if (tokenDataBuilder_ == null) {
+          ensureTokenDataIsMutable();
+          tokenData_.remove(index);
+          onChanged();
+        } else {
+          tokenDataBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenData.Builder getTokenDataBuilder(
+          int index) {
+        return getTokenDataFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder getTokenDataOrBuilder(
+          int index) {
+        if (tokenDataBuilder_ == null) {
+          return tokenData_.get(index);  } else {
+          return tokenDataBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder> 
+           getTokenDataOrBuilderList() {
+        if (tokenDataBuilder_ != null) {
+          return tokenDataBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokenData_);
+        }
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenData.Builder addTokenDataBuilder() {
+        return getTokenDataFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TokenProto.TokenData.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public com.ixo.token.v1beta1.TokenProto.TokenData.Builder addTokenDataBuilder(
+          int index) {
+        return getTokenDataFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TokenProto.TokenData.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokenData is the linkedResources added to tokenMetadata when queried eg
+       * (credential link ***.ipfs)
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenData token_data = 5 [json_name = "tokenData"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TokenProto.TokenData.Builder> 
+           getTokenDataBuilderList() {
+        return getTokenDataFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TokenProto.TokenData, com.ixo.token.v1beta1.TokenProto.TokenData.Builder, com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder> 
+          getTokenDataFieldBuilder() {
+        if (tokenDataBuilder_ == null) {
+          tokenDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TokenProto.TokenData, com.ixo.token.v1beta1.TokenProto.TokenData.Builder, com.ixo.token.v1beta1.TokenProto.TokenDataOrBuilder>(
+                  tokenData_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokenData_ = null;
+        }
+        return tokenDataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MintBatch)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MintBatch)
+    private static final com.ixo.token.v1beta1.TxProto.MintBatch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MintBatch();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MintBatch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MintBatch>
+        PARSER = new com.google.protobuf.AbstractParser<MintBatch>() {
+      @java.lang.Override
+      public MintBatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MintBatch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MintBatch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MintBatch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgMintTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgMintTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgMintTokenResponse}
+   */
+  public static final class MsgMintTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgMintTokenResponse)
+      MsgMintTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgMintTokenResponse.newBuilder() to construct.
+    private MsgMintTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgMintTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgMintTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgMintTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgMintTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgMintTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgMintTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgMintTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgMintTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgMintTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgMintTokenResponse>() {
+      @java.lang.Override
+      public MsgMintTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgMintTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgMintTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgMintTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgTransferToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * address of receiver
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     * address of receiver
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> 
+        getTokensList();
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index);
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    int getTokensCount();
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+        getTokensOrBuilderList();
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgTransferToken}
+   */
+  public static final class MsgTransferToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgTransferToken)
+      MsgTransferTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferToken.newBuilder() to construct.
+    private MsgTransferToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferToken() {
+      owner_ = "";
+      recipient_ = "";
+      tokens_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgTransferToken.class, com.ixo.token.v1beta1.TxProto.MsgTransferToken.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     * address of receiver
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of receiver
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKENS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> tokens_;
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> getTokensList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+        getTokensOrBuilderList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public int getTokensCount() {
+      return tokens_.size();
+    }
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index) {
+      return tokens_.get(index);
+    }
+    /**
+     * <pre>
+     * all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+        int index) {
+      return tokens_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recipient_);
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        output.writeMessage(3, tokens_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recipient_);
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, tokens_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgTransferToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgTransferToken other = (com.ixo.token.v1beta1.TxProto.MsgTransferToken) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (!getTokensList()
+          .equals(other.getTokensList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      if (getTokensCount() > 0) {
+        hash = (37 * hash) + TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokensList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgTransferToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgTransferToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgTransferToken)
+        com.ixo.token.v1beta1.TxProto.MsgTransferTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgTransferToken.class, com.ixo.token.v1beta1.TxProto.MsgTransferToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgTransferToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        recipient_ = "";
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+        } else {
+          tokens_ = null;
+          tokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgTransferToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgTransferToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgTransferToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgTransferToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgTransferToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgTransferToken result = new com.ixo.token.v1beta1.TxProto.MsgTransferToken(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.token.v1beta1.TxProto.MsgTransferToken result) {
+        if (tokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tokens_ = java.util.Collections.unmodifiableList(tokens_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tokens_ = tokens_;
+        } else {
+          result.tokens_ = tokensBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgTransferToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recipient_ = recipient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgTransferToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgTransferToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgTransferToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgTransferToken.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (tokensBuilder_ == null) {
+          if (!other.tokens_.isEmpty()) {
+            if (tokens_.isEmpty()) {
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTokensIsMutable();
+              tokens_.addAll(other.tokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokens_.isEmpty()) {
+            if (tokensBuilder_.isEmpty()) {
+              tokensBuilder_.dispose();
+              tokensBuilder_ = null;
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokensFieldBuilder() : null;
+            } else {
+              tokensBuilder_.addAllMessages(other.tokens_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.ixo.token.v1beta1.TxProto.TokenBatch m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TxProto.TokenBatch.parser(),
+                        extensionRegistry);
+                if (tokensBuilder_ == null) {
+                  ensureTokensIsMutable();
+                  tokens_.add(m);
+                } else {
+                  tokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       * address of receiver
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of receiver
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of receiver
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of receiver
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of receiver
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> tokens_ =
+        java.util.Collections.emptyList();
+      private void ensureTokensIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tokens_ = new java.util.ArrayList<com.ixo.token.v1beta1.TxProto.TokenBatch>(tokens_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> tokensBuilder_;
+
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> getTokensList() {
+        if (tokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokens_);
+        } else {
+          return tokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public int getTokensCount() {
+        if (tokensBuilder_ == null) {
+          return tokens_.size();
+        } else {
+          return tokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);
+        } else {
+          return tokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.set(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder addAllTokens(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TxProto.TokenBatch> values) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokens_);
+          onChanged();
+        } else {
+          tokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder clearTokens() {
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public Builder removeTokens(int index) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.remove(index);
+          onChanged();
+        } else {
+          tokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder getTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+          int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);  } else {
+          return tokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+           getTokensOrBuilderList() {
+        if (tokensBuilder_ != null) {
+          return tokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokens_);
+        }
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder addTokensBuilder() {
+        return getTokensFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder addTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 3 [json_name = "tokens"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch.Builder> 
+           getTokensBuilderList() {
+        return getTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+          getTokensFieldBuilder() {
+        if (tokensBuilder_ == null) {
+          tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder>(
+                  tokens_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokens_ = null;
+        }
+        return tokensBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgTransferToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgTransferToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgTransferToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgTransferToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferToken>() {
+      @java.lang.Override
+      public MsgTransferToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgTransferToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgTransferTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgTransferTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgTransferTokenResponse}
+   */
+  public static final class MsgTransferTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgTransferTokenResponse)
+      MsgTransferTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgTransferTokenResponse.newBuilder() to construct.
+    private MsgTransferTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgTransferTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgTransferTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgTransferTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgTransferTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgTransferTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgTransferTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgTransferTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgTransferTokenResponse>() {
+      @java.lang.Override
+      public MsgTransferTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgTransferTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgTransferTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgTransferTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TokenBatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.TokenBatch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id that identifies the token
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * id that identifies the token
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * amount is the number of tokens to transfer
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount is the number of tokens to transfer
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.TokenBatch}
+   */
+  public static final class TokenBatch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.TokenBatch)
+      TokenBatchOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TokenBatch.newBuilder() to construct.
+    private TokenBatch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TokenBatch() {
+      id_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TokenBatch();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_TokenBatch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_TokenBatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.TokenBatch.class, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * id that identifies the token
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id that identifies the token
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount is the number of tokens to transfer
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount is the number of tokens to transfer
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.TokenBatch)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.TokenBatch other = (com.ixo.token.v1beta1.TxProto.TokenBatch) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.TokenBatch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.TokenBatch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.TokenBatch)
+        com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_TokenBatch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_TokenBatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.TokenBatch.class, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.TokenBatch.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        amount_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_TokenBatch_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.TokenBatch getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.TokenBatch build() {
+        com.ixo.token.v1beta1.TxProto.TokenBatch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.TokenBatch buildPartial() {
+        com.ixo.token.v1beta1.TxProto.TokenBatch result = new com.ixo.token.v1beta1.TxProto.TokenBatch(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.TokenBatch result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.TokenBatch) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.TokenBatch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.TokenBatch other) {
+        if (other == com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * id that identifies the token
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id that identifies the token
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id that identifies the token
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id that identifies the token
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id that identifies the token
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount is the number of tokens to transfer
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to transfer
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to transfer
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to transfer
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the number of tokens to transfer
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Uint"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.TokenBatch)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.TokenBatch)
+    private static final com.ixo.token.v1beta1.TxProto.TokenBatch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.TokenBatch();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.TokenBatch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TokenBatch>
+        PARSER = new com.google.protobuf.AbstractParser<TokenBatch>() {
+      @java.lang.Override
+      public TokenBatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TokenBatch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TokenBatch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRetireTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgRetireToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> 
+        getTokensList();
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index);
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    int getTokensCount();
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+        getTokensOrBuilderList();
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+     * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+     * The country-code must be 2 alphabetic characters, the sub-national-code
+     * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+     * alphanumeric characters. Only the country-code is required, while the
+     * sub-national-code and postal-code are optional and can be added for
+     * increased precision. See the valid format for this below.
+     * </pre>
+     *
+     * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+     * @return The jurisdiction.
+     */
+    java.lang.String getJurisdiction();
+    /**
+     * <pre>
+     * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+     * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+     * The country-code must be 2 alphabetic characters, the sub-national-code
+     * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+     * alphanumeric characters. Only the country-code is required, while the
+     * sub-national-code and postal-code are optional and can be added for
+     * increased precision. See the valid format for this below.
+     * </pre>
+     *
+     * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+     * @return The bytes for jurisdiction.
+     */
+    com.google.protobuf.ByteString
+        getJurisdictionBytes();
+
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 4 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 4 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgRetireToken}
+   */
+  public static final class MsgRetireToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgRetireToken)
+      MsgRetireTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRetireToken.newBuilder() to construct.
+    private MsgRetireToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRetireToken() {
+      owner_ = "";
+      tokens_ = java.util.Collections.emptyList();
+      jurisdiction_ = "";
+      reason_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRetireToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgRetireToken.class, com.ixo.token.v1beta1.TxProto.MsgRetireToken.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKENS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> tokens_;
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> getTokensList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+        getTokensOrBuilderList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public int getTokensCount() {
+      return tokens_.size();
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index) {
+      return tokens_.get(index);
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+        int index) {
+      return tokens_.get(index);
+    }
+
+    public static final int JURISDICTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jurisdiction_ = "";
+    /**
+     * <pre>
+     * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+     * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+     * The country-code must be 2 alphabetic characters, the sub-national-code
+     * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+     * alphanumeric characters. Only the country-code is required, while the
+     * sub-national-code and postal-code are optional and can be added for
+     * increased precision. See the valid format for this below.
+     * </pre>
+     *
+     * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+     * @return The jurisdiction.
+     */
+    @java.lang.Override
+    public java.lang.String getJurisdiction() {
+      java.lang.Object ref = jurisdiction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jurisdiction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+     * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+     * The country-code must be 2 alphabetic characters, the sub-national-code
+     * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+     * alphanumeric characters. Only the country-code is required, while the
+     * sub-national-code and postal-code are optional and can be added for
+     * increased precision. See the valid format for this below.
+     * </pre>
+     *
+     * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+     * @return The bytes for jurisdiction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJurisdictionBytes() {
+      java.lang.Object ref = jurisdiction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jurisdiction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REASON_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reason_ = "";
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 4 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 4 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        output.writeMessage(2, tokens_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jurisdiction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jurisdiction_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tokens_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jurisdiction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jurisdiction_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgRetireToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgRetireToken other = (com.ixo.token.v1beta1.TxProto.MsgRetireToken) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getTokensList()
+          .equals(other.getTokensList())) return false;
+      if (!getJurisdiction()
+          .equals(other.getJurisdiction())) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (getTokensCount() > 0) {
+        hash = (37 * hash) + TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokensList().hashCode();
+      }
+      hash = (37 * hash) + JURISDICTION_FIELD_NUMBER;
+      hash = (53 * hash) + getJurisdiction().hashCode();
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgRetireToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgRetireToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgRetireToken)
+        com.ixo.token.v1beta1.TxProto.MsgRetireTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgRetireToken.class, com.ixo.token.v1beta1.TxProto.MsgRetireToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgRetireToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+        } else {
+          tokens_ = null;
+          tokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        jurisdiction_ = "";
+        reason_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgRetireToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgRetireToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgRetireToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgRetireToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgRetireToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgRetireToken result = new com.ixo.token.v1beta1.TxProto.MsgRetireToken(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.token.v1beta1.TxProto.MsgRetireToken result) {
+        if (tokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tokens_ = java.util.Collections.unmodifiableList(tokens_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tokens_ = tokens_;
+        } else {
+          result.tokens_ = tokensBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgRetireToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.jurisdiction_ = jurisdiction_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.reason_ = reason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgRetireToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgRetireToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgRetireToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgRetireToken.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (tokensBuilder_ == null) {
+          if (!other.tokens_.isEmpty()) {
+            if (tokens_.isEmpty()) {
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTokensIsMutable();
+              tokens_.addAll(other.tokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokens_.isEmpty()) {
+            if (tokensBuilder_.isEmpty()) {
+              tokensBuilder_.dispose();
+              tokensBuilder_ = null;
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokensFieldBuilder() : null;
+            } else {
+              tokensBuilder_.addAllMessages(other.tokens_);
+            }
+          }
+        }
+        if (!other.getJurisdiction().isEmpty()) {
+          jurisdiction_ = other.jurisdiction_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.ixo.token.v1beta1.TxProto.TokenBatch m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TxProto.TokenBatch.parser(),
+                        extensionRegistry);
+                if (tokensBuilder_ == null) {
+                  ensureTokensIsMutable();
+                  tokens_.add(m);
+                } else {
+                  tokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                jurisdiction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                reason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> tokens_ =
+        java.util.Collections.emptyList();
+      private void ensureTokensIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tokens_ = new java.util.ArrayList<com.ixo.token.v1beta1.TxProto.TokenBatch>(tokens_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> tokensBuilder_;
+
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> getTokensList() {
+        if (tokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokens_);
+        } else {
+          return tokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public int getTokensCount() {
+        if (tokensBuilder_ == null) {
+          return tokens_.size();
+        } else {
+          return tokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);
+        } else {
+          return tokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.set(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addAllTokens(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TxProto.TokenBatch> values) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokens_);
+          onChanged();
+        } else {
+          tokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder clearTokens() {
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder removeTokens(int index) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.remove(index);
+          onChanged();
+        } else {
+          tokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder getTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+          int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);  } else {
+          return tokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+           getTokensOrBuilderList() {
+        if (tokensBuilder_ != null) {
+          return tokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokens_);
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder addTokensBuilder() {
+        return getTokensFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder addTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch.Builder> 
+           getTokensBuilderList() {
+        return getTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+          getTokensFieldBuilder() {
+        if (tokensBuilder_ == null) {
+          tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder>(
+                  tokens_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokens_ = null;
+        }
+        return tokensBuilder_;
+      }
+
+      private java.lang.Object jurisdiction_ = "";
+      /**
+       * <pre>
+       * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+       * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+       * The country-code must be 2 alphabetic characters, the sub-national-code
+       * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+       * alphanumeric characters. Only the country-code is required, while the
+       * sub-national-code and postal-code are optional and can be added for
+       * increased precision. See the valid format for this below.
+       * </pre>
+       *
+       * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+       * @return The jurisdiction.
+       */
+      public java.lang.String getJurisdiction() {
+        java.lang.Object ref = jurisdiction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jurisdiction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+       * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+       * The country-code must be 2 alphabetic characters, the sub-national-code
+       * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+       * alphanumeric characters. Only the country-code is required, while the
+       * sub-national-code and postal-code are optional and can be added for
+       * increased precision. See the valid format for this below.
+       * </pre>
+       *
+       * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+       * @return The bytes for jurisdiction.
+       */
+      public com.google.protobuf.ByteString
+          getJurisdictionBytes() {
+        java.lang.Object ref = jurisdiction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jurisdiction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+       * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+       * The country-code must be 2 alphabetic characters, the sub-national-code
+       * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+       * alphanumeric characters. Only the country-code is required, while the
+       * sub-national-code and postal-code are optional and can be added for
+       * increased precision. See the valid format for this below.
+       * </pre>
+       *
+       * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+       * @param value The jurisdiction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJurisdiction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        jurisdiction_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+       * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+       * The country-code must be 2 alphabetic characters, the sub-national-code
+       * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+       * alphanumeric characters. Only the country-code is required, while the
+       * sub-national-code and postal-code are optional and can be added for
+       * increased precision. See the valid format for this below.
+       * </pre>
+       *
+       * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJurisdiction() {
+        jurisdiction_ = getDefaultInstance().getJurisdiction();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * jurisdiction is the jurisdiction of the token owner. A jurisdiction has
+       * the format: &lt;country-code&gt;[-&lt;sub-national-code&gt;[ &lt;postal-code&gt;]]
+       * The country-code must be 2 alphabetic characters, the sub-national-code
+       * can be 1-3 alphanumeric characters, and the postal-code can be up to 64
+       * alphanumeric characters. Only the country-code is required, while the
+       * sub-national-code and postal-code are optional and can be added for
+       * increased precision. See the valid format for this below.
+       * </pre>
+       *
+       * <code>string jurisdiction = 3 [json_name = "jurisdiction"];</code>
+       * @param value The bytes for jurisdiction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJurisdictionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        jurisdiction_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reason_ = "";
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 4 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 4 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 4 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reason_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 4 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        reason_ = getDefaultInstance().getReason();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 4 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reason_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgRetireToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgRetireToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgRetireToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgRetireToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRetireToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRetireToken>() {
+      @java.lang.Override
+      public MsgRetireToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRetireToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRetireToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgRetireToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRetireTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgRetireTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgRetireTokenResponse}
+   */
+  public static final class MsgRetireTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgRetireTokenResponse)
+      MsgRetireTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRetireTokenResponse.newBuilder() to construct.
+    private MsgRetireTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRetireTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRetireTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgRetireTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgRetireTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgRetireTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgRetireTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRetireTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRetireTokenResponse>() {
+      @java.lang.Override
+      public MsgRetireTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRetireTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRetireTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgRetireTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgCancelToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> 
+        getTokensList();
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index);
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    int getTokensCount();
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+        getTokensOrBuilderList();
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgCancelToken}
+   */
+  public static final class MsgCancelToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgCancelToken)
+      MsgCancelTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelToken.newBuilder() to construct.
+    private MsgCancelToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelToken() {
+      owner_ = "";
+      tokens_ = java.util.Collections.emptyList();
+      reason_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgCancelToken.class, com.ixo.token.v1beta1.TxProto.MsgCancelToken.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of owner
+     * </pre>
+     *
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKENS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> tokens_;
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> getTokensList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+        getTokensOrBuilderList() {
+      return tokens_;
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public int getTokensCount() {
+      return tokens_.size();
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index) {
+      return tokens_.get(index);
+    }
+    /**
+     * <pre>
+     * tokens to retire, all tokens must be in same smart contract
+     * </pre>
+     *
+     * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+     */
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+        int index) {
+      return tokens_.get(index);
+    }
+
+    public static final int REASON_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reason_ = "";
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reason is any arbitrary string that specifies the reason for retiring
+     * tokens.
+     * </pre>
+     *
+     * <code>string reason = 3 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      java.lang.Object ref = reason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        output.writeMessage(2, tokens_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      for (int i = 0; i < tokens_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tokens_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgCancelToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgCancelToken other = (com.ixo.token.v1beta1.TxProto.MsgCancelToken) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getTokensList()
+          .equals(other.getTokensList())) return false;
+      if (!getReason()
+          .equals(other.getReason())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (getTokensCount() > 0) {
+        hash = (37 * hash) + TOKENS_FIELD_NUMBER;
+        hash = (53 * hash) + getTokensList().hashCode();
+      }
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getReason().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgCancelToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgCancelToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgCancelToken)
+        com.ixo.token.v1beta1.TxProto.MsgCancelTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgCancelToken.class, com.ixo.token.v1beta1.TxProto.MsgCancelToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgCancelToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+        } else {
+          tokens_ = null;
+          tokensBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        reason_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCancelToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgCancelToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCancelToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgCancelToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCancelToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgCancelToken result = new com.ixo.token.v1beta1.TxProto.MsgCancelToken(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.token.v1beta1.TxProto.MsgCancelToken result) {
+        if (tokensBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            tokens_ = java.util.Collections.unmodifiableList(tokens_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tokens_ = tokens_;
+        } else {
+          result.tokens_ = tokensBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgCancelToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reason_ = reason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgCancelToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgCancelToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgCancelToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgCancelToken.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (tokensBuilder_ == null) {
+          if (!other.tokens_.isEmpty()) {
+            if (tokens_.isEmpty()) {
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTokensIsMutable();
+              tokens_.addAll(other.tokens_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tokens_.isEmpty()) {
+            if (tokensBuilder_.isEmpty()) {
+              tokensBuilder_.dispose();
+              tokensBuilder_ = null;
+              tokens_ = other.tokens_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tokensBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTokensFieldBuilder() : null;
+            } else {
+              tokensBuilder_.addAllMessages(other.tokens_);
+            }
+          }
+        }
+        if (!other.getReason().isEmpty()) {
+          reason_ = other.reason_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.ixo.token.v1beta1.TxProto.TokenBatch m =
+                    input.readMessage(
+                        com.ixo.token.v1beta1.TxProto.TokenBatch.parser(),
+                        extensionRegistry);
+                if (tokensBuilder_ == null) {
+                  ensureTokensIsMutable();
+                  tokens_.add(m);
+                } else {
+                  tokensBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                reason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of owner
+       * </pre>
+       *
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> tokens_ =
+        java.util.Collections.emptyList();
+      private void ensureTokensIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          tokens_ = new java.util.ArrayList<com.ixo.token.v1beta1.TxProto.TokenBatch>(tokens_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> tokensBuilder_;
+
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch> getTokensList() {
+        if (tokensBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tokens_);
+        } else {
+          return tokensBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public int getTokensCount() {
+        if (tokensBuilder_ == null) {
+          return tokens_.size();
+        } else {
+          return tokensBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch getTokens(int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);
+        } else {
+          return tokensBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.set(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder setTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch value) {
+        if (tokensBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTokensIsMutable();
+          tokens_.add(index, value);
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addTokens(
+          int index, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder builderForValue) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tokensBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder addAllTokens(
+          java.lang.Iterable<? extends com.ixo.token.v1beta1.TxProto.TokenBatch> values) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tokens_);
+          onChanged();
+        } else {
+          tokensBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder clearTokens() {
+        if (tokensBuilder_ == null) {
+          tokens_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tokensBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public Builder removeTokens(int index) {
+        if (tokensBuilder_ == null) {
+          ensureTokensIsMutable();
+          tokens_.remove(index);
+          onChanged();
+        } else {
+          tokensBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder getTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder getTokensOrBuilder(
+          int index) {
+        if (tokensBuilder_ == null) {
+          return tokens_.get(index);  } else {
+          return tokensBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public java.util.List<? extends com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+           getTokensOrBuilderList() {
+        if (tokensBuilder_ != null) {
+          return tokensBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tokens_);
+        }
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder addTokensBuilder() {
+        return getTokensFieldBuilder().addBuilder(
+            com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public com.ixo.token.v1beta1.TxProto.TokenBatch.Builder addTokensBuilder(
+          int index) {
+        return getTokensFieldBuilder().addBuilder(
+            index, com.ixo.token.v1beta1.TxProto.TokenBatch.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * tokens to retire, all tokens must be in same smart contract
+       * </pre>
+       *
+       * <code>repeated .ixo.token.v1beta1.TokenBatch tokens = 2 [json_name = "tokens"];</code>
+       */
+      public java.util.List<com.ixo.token.v1beta1.TxProto.TokenBatch.Builder> 
+           getTokensBuilderList() {
+        return getTokensFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder> 
+          getTokensFieldBuilder() {
+        if (tokensBuilder_ == null) {
+          tokensBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.token.v1beta1.TxProto.TokenBatch, com.ixo.token.v1beta1.TxProto.TokenBatch.Builder, com.ixo.token.v1beta1.TxProto.TokenBatchOrBuilder>(
+                  tokens_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tokens_ = null;
+        }
+        return tokensBuilder_;
+      }
+
+      private java.lang.Object reason_ = "";
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      public java.lang.String getReason() {
+        java.lang.Object ref = reason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        java.lang.Object ref = reason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reason_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        reason_ = getDefaultInstance().getReason();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reason is any arbitrary string that specifies the reason for retiring
+       * tokens.
+       * </pre>
+       *
+       * <code>string reason = 3 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reason_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgCancelToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgCancelToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgCancelToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgCancelToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelToken>() {
+      @java.lang.Override
+      public MsgCancelToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgCancelToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgCancelTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgCancelTokenResponse}
+   */
+  public static final class MsgCancelTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgCancelTokenResponse)
+      MsgCancelTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelTokenResponse.newBuilder() to construct.
+    private MsgCancelTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgCancelTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgCancelTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgCancelTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgCancelTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelTokenResponse>() {
+      @java.lang.Override
+      public MsgCancelTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgCancelTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPauseTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgPauseToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    java.lang.String getMinter();
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    com.google.protobuf.ByteString
+        getMinterBytes();
+
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * pause or unpause Token Minting allowance
+     * </pre>
+     *
+     * <code>bool paused = 3 [json_name = "paused"];</code>
+     * @return The paused.
+     */
+    boolean getPaused();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgPauseToken}
+   */
+  public static final class MsgPauseToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgPauseToken)
+      MsgPauseTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPauseToken.newBuilder() to construct.
+    private MsgPauseToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPauseToken() {
+      minter_ = "";
+      contractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPauseToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgPauseToken.class, com.ixo.token.v1beta1.TxProto.MsgPauseToken.Builder.class);
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minter_ = "";
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public java.lang.String getMinter() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinterBytes() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAUSED_FIELD_NUMBER = 3;
+    private boolean paused_ = false;
+    /**
+     * <pre>
+     * pause or unpause Token Minting allowance
+     * </pre>
+     *
+     * <code>bool paused = 3 [json_name = "paused"];</code>
+     * @return The paused.
+     */
+    @java.lang.Override
+    public boolean getPaused() {
+      return paused_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractAddress_);
+      }
+      if (paused_ != false) {
+        output.writeBool(3, paused_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractAddress_);
+      }
+      if (paused_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, paused_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgPauseToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgPauseToken other = (com.ixo.token.v1beta1.TxProto.MsgPauseToken) obj;
+
+      if (!getMinter()
+          .equals(other.getMinter())) return false;
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (getPaused()
+          != other.getPaused()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMinter().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + PAUSED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPaused());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgPauseToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgPauseToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgPauseToken)
+        com.ixo.token.v1beta1.TxProto.MsgPauseTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgPauseToken.class, com.ixo.token.v1beta1.TxProto.MsgPauseToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgPauseToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minter_ = "";
+        contractAddress_ = "";
+        paused_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgPauseToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgPauseToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgPauseToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgPauseToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgPauseToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgPauseToken result = new com.ixo.token.v1beta1.TxProto.MsgPauseToken(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgPauseToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minter_ = minter_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.paused_ = paused_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgPauseToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgPauseToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgPauseToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgPauseToken.getDefaultInstance()) return this;
+        if (!other.getMinter().isEmpty()) {
+          minter_ = other.minter_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getPaused() != false) {
+          setPaused(other.getPaused());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                minter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                paused_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object minter_ = "";
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The minter.
+       */
+      public java.lang.String getMinter() {
+        java.lang.Object ref = minter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The bytes for minter.
+       */
+      public com.google.protobuf.ByteString
+          getMinterBytes() {
+        java.lang.Object ref = minter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinter() {
+        minter_ = getDefaultInstance().getMinter();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The bytes for minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean paused_ ;
+      /**
+       * <pre>
+       * pause or unpause Token Minting allowance
+       * </pre>
+       *
+       * <code>bool paused = 3 [json_name = "paused"];</code>
+       * @return The paused.
+       */
+      @java.lang.Override
+      public boolean getPaused() {
+        return paused_;
+      }
+      /**
+       * <pre>
+       * pause or unpause Token Minting allowance
+       * </pre>
+       *
+       * <code>bool paused = 3 [json_name = "paused"];</code>
+       * @param value The paused to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaused(boolean value) {
+
+        paused_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pause or unpause Token Minting allowance
+       * </pre>
+       *
+       * <code>bool paused = 3 [json_name = "paused"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPaused() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        paused_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgPauseToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgPauseToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgPauseToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgPauseToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPauseToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPauseToken>() {
+      @java.lang.Override
+      public MsgPauseToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPauseToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPauseToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgPauseToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPauseTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgPauseTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgPauseTokenResponse}
+   */
+  public static final class MsgPauseTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgPauseTokenResponse)
+      MsgPauseTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPauseTokenResponse.newBuilder() to construct.
+    private MsgPauseTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPauseTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPauseTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgPauseTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgPauseTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgPauseTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgPauseTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPauseTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPauseTokenResponse>() {
+      @java.lang.Override
+      public MsgPauseTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPauseTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPauseTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgPauseTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStopTokenOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgStopToken)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    java.lang.String getMinter();
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    com.google.protobuf.ByteString
+        getMinterBytes();
+
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgStopToken}
+   */
+  public static final class MsgStopToken extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgStopToken)
+      MsgStopTokenOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStopToken.newBuilder() to construct.
+    private MsgStopToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStopToken() {
+      minter_ = "";
+      contractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStopToken();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopToken_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopToken_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgStopToken.class, com.ixo.token.v1beta1.TxProto.MsgStopToken.Builder.class);
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minter_ = "";
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public java.lang.String getMinter() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address of minter
+     * </pre>
+     *
+     * <code>string minter = 1 [json_name = "minter"];</code>
+     * @return The bytes for minter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinterBytes() {
+      java.lang.Object ref = minter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, minter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgStopToken)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgStopToken other = (com.ixo.token.v1beta1.TxProto.MsgStopToken) obj;
+
+      if (!getMinter()
+          .equals(other.getMinter())) return false;
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINTER_FIELD_NUMBER;
+      hash = (53 * hash) + getMinter().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgStopToken prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgStopToken}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgStopToken)
+        com.ixo.token.v1beta1.TxProto.MsgStopTokenOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopToken_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopToken_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgStopToken.class, com.ixo.token.v1beta1.TxProto.MsgStopToken.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgStopToken.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minter_ = "";
+        contractAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopToken_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgStopToken getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgStopToken.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgStopToken build() {
+        com.ixo.token.v1beta1.TxProto.MsgStopToken result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgStopToken buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgStopToken result = new com.ixo.token.v1beta1.TxProto.MsgStopToken(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.token.v1beta1.TxProto.MsgStopToken result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minter_ = minter_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgStopToken) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgStopToken)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgStopToken other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgStopToken.getDefaultInstance()) return this;
+        if (!other.getMinter().isEmpty()) {
+          minter_ = other.minter_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                minter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object minter_ = "";
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The minter.
+       */
+      public java.lang.String getMinter() {
+        java.lang.Object ref = minter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return The bytes for minter.
+       */
+      public com.google.protobuf.ByteString
+          getMinterBytes() {
+        java.lang.Object ref = minter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinter(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinter() {
+        minter_ = getDefaultInstance().getMinter();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address of minter
+       * </pre>
+       *
+       * <code>string minter = 1 [json_name = "minter"];</code>
+       * @param value The bytes for minter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minter_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgStopToken)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgStopToken)
+    private static final com.ixo.token.v1beta1.TxProto.MsgStopToken DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgStopToken();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopToken getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStopToken>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStopToken>() {
+      @java.lang.Override
+      public MsgStopToken parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStopToken> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStopToken> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgStopToken getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStopTokenResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.token.v1beta1.MsgStopTokenResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ixo.token.v1beta1.MsgStopTokenResponse}
+   */
+  public static final class MsgStopTokenResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.token.v1beta1.MsgStopTokenResponse)
+      MsgStopTokenResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStopTokenResponse.newBuilder() to construct.
+    private MsgStopTokenResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStopTokenResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStopTokenResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopTokenResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopTokenResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse other = (com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.token.v1beta1.MsgStopTokenResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.token.v1beta1.MsgStopTokenResponse)
+        com.ixo.token.v1beta1.TxProto.MsgStopTokenResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopTokenResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.class, com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.token.v1beta1.TxProto.internal_static_ixo_token_v1beta1_MsgStopTokenResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse getDefaultInstanceForType() {
+        return com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse build() {
+        com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse buildPartial() {
+        com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse result = new com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse) {
+          return mergeFrom((com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse other) {
+        if (other == com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.token.v1beta1.MsgStopTokenResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.token.v1beta1.MsgStopTokenResponse)
+    private static final com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse();
+    }
+
+    public static com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStopTokenResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStopTokenResponse>() {
+      @java.lang.Override
+      public MsgStopTokenResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStopTokenResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStopTokenResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.token.v1beta1.TxProto.MsgStopTokenResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgCreateToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgCreateToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgCreateTokenResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgMintToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgMintToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MintBatch_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MintBatch_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgMintTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgMintTokenResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgTransferToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgTransferToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgTransferTokenResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_TokenBatch_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_TokenBatch_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgRetireToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgRetireToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgRetireTokenResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgCancelToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgCancelToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgCancelTokenResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgPauseToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgPauseToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgPauseTokenResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgStopToken_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgStopToken_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_token_v1beta1_MsgStopTokenResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_token_v1beta1_MsgStopTokenResponse_fieldAccessorTable;
 
@@ -162,12 +13986,12 @@ public final class TxProto {
       "ken.v1beta1.MsgPauseToken\032(.ixo.token.v1" +
       "beta1.MsgPauseTokenResponse\022U\n\tStopToken" +
       "\022\037.ixo.token.v1beta1.MsgStopToken\032\'.ixo." +
-      "token.v1beta1.MsgStopTokenResponseB\275\001\n\025c" +
-      "om.ixo.token.v1beta1B\007TxProtoP\001Z5github." +
-      "com/ixofoundation/ixo-blockchain/x/token" +
-      "/types\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\T" +
-      "oken\\V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMeta" +
-      "data\352\002\023Ixo::Token::V1beta1b\006proto3"
+      "token.v1beta1.MsgStopTokenResponseB\273\001\n\025c" +
+      "om.ixo.token.v1beta1B\007TxProtoZ5github.co" +
+      "m/ixofoundation/ixo-blockchain/x/token/t" +
+      "ypes\242\002\003ITX\252\002\021Ixo.Token.V1beta1\312\002\021Ixo\\Tok" +
+      "en\\V1beta1\342\002\035Ixo\\Token\\V1beta1\\GPBMetada" +
+      "ta\352\002\023Ixo::Token::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

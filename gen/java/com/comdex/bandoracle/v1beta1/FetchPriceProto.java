@@ -14,24 +14,2486 @@ public final class FetchPriceProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface FetchPriceCallDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.bandoracle.v1beta1.FetchPriceCallData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @return A list containing the symbols.
+     */
+    java.util.List<java.lang.String>
+        getSymbolsList();
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @return The count of symbols.
+     */
+    int getSymbolsCount();
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @param index The index of the element to return.
+     * @return The symbols at the given index.
+     */
+    java.lang.String getSymbols(int index);
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the symbols at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSymbolsBytes(int index);
+
+    /**
+     * <code>uint64 multiplier = 2 [json_name = "multiplier"];</code>
+     * @return The multiplier.
+     */
+    long getMultiplier();
+  }
+  /**
+   * Protobuf type {@code comdex.bandoracle.v1beta1.FetchPriceCallData}
+   */
+  public static final class FetchPriceCallData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.bandoracle.v1beta1.FetchPriceCallData)
+      FetchPriceCallDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FetchPriceCallData.newBuilder() to construct.
+    private FetchPriceCallData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FetchPriceCallData() {
+      symbols_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FetchPriceCallData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder.class);
+    }
+
+    public static final int SYMBOLS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList symbols_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @return A list containing the symbols.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSymbolsList() {
+      return symbols_;
+    }
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @return The count of symbols.
+     */
+    public int getSymbolsCount() {
+      return symbols_.size();
+    }
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @param index The index of the element to return.
+     * @return The symbols at the given index.
+     */
+    public java.lang.String getSymbols(int index) {
+      return symbols_.get(index);
+    }
+    /**
+     * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the symbols at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSymbolsBytes(int index) {
+      return symbols_.getByteString(index);
+    }
+
+    public static final int MULTIPLIER_FIELD_NUMBER = 2;
+    private long multiplier_ = 0L;
+    /**
+     * <code>uint64 multiplier = 2 [json_name = "multiplier"];</code>
+     * @return The multiplier.
+     */
+    @java.lang.Override
+    public long getMultiplier() {
+      return multiplier_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < symbols_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbols_.getRaw(i));
+      }
+      if (multiplier_ != 0L) {
+        output.writeUInt64(2, multiplier_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < symbols_.size(); i++) {
+          dataSize += computeStringSizeNoTag(symbols_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSymbolsList().size();
+      }
+      if (multiplier_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, multiplier_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData)) {
+        return super.equals(obj);
+      }
+      com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData other = (com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData) obj;
+
+      if (!getSymbolsList()
+          .equals(other.getSymbolsList())) return false;
+      if (getMultiplier()
+          != other.getMultiplier()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSymbolsCount() > 0) {
+        hash = (37 * hash) + SYMBOLS_FIELD_NUMBER;
+        hash = (53 * hash) + getSymbolsList().hashCode();
+      }
+      hash = (37 * hash) + MULTIPLIER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMultiplier());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.bandoracle.v1beta1.FetchPriceCallData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.bandoracle.v1beta1.FetchPriceCallData)
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.Builder.class);
+      }
+
+      // Construct using com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        symbols_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        multiplier_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData getDefaultInstanceForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData build() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData buildPartial() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData result = new com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          symbols_.makeImmutable();
+          result.symbols_ = symbols_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.multiplier_ = multiplier_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData) {
+          return mergeFrom((com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData other) {
+        if (other == com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData.getDefaultInstance()) return this;
+        if (!other.symbols_.isEmpty()) {
+          if (symbols_.isEmpty()) {
+            symbols_ = other.symbols_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureSymbolsIsMutable();
+            symbols_.addAll(other.symbols_);
+          }
+          onChanged();
+        }
+        if (other.getMultiplier() != 0L) {
+          setMultiplier(other.getMultiplier());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSymbolsIsMutable();
+                symbols_.add(s);
+                break;
+              } // case 10
+              case 16: {
+                multiplier_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList symbols_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSymbolsIsMutable() {
+        if (!symbols_.isModifiable()) {
+          symbols_ = new com.google.protobuf.LazyStringArrayList(symbols_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @return A list containing the symbols.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSymbolsList() {
+        symbols_.makeImmutable();
+        return symbols_;
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @return The count of symbols.
+       */
+      public int getSymbolsCount() {
+        return symbols_.size();
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @param index The index of the element to return.
+       * @return The symbols at the given index.
+       */
+      public java.lang.String getSymbols(int index) {
+        return symbols_.get(index);
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the symbols at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolsBytes(int index) {
+        return symbols_.getByteString(index);
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @param index The index to set the value at.
+       * @param value The symbols to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbols(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSymbolsIsMutable();
+        symbols_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @param value The symbols to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSymbols(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSymbolsIsMutable();
+        symbols_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @param values The symbols to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSymbols(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSymbolsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, symbols_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbols() {
+        symbols_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string symbols = 1 [json_name = "symbols"];</code>
+       * @param value The bytes of the symbols to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSymbolsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSymbolsIsMutable();
+        symbols_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long multiplier_ ;
+      /**
+       * <code>uint64 multiplier = 2 [json_name = "multiplier"];</code>
+       * @return The multiplier.
+       */
+      @java.lang.Override
+      public long getMultiplier() {
+        return multiplier_;
+      }
+      /**
+       * <code>uint64 multiplier = 2 [json_name = "multiplier"];</code>
+       * @param value The multiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMultiplier(long value) {
+
+        multiplier_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 multiplier = 2 [json_name = "multiplier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMultiplier() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        multiplier_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.bandoracle.v1beta1.FetchPriceCallData)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.bandoracle.v1beta1.FetchPriceCallData)
+    private static final com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData();
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FetchPriceCallData>
+        PARSER = new com.google.protobuf.AbstractParser<FetchPriceCallData>() {
+      @java.lang.Override
+      public FetchPriceCallData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FetchPriceCallData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FetchPriceCallData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceCallData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FetchPriceResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.bandoracle.v1beta1.FetchPriceResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+     * @return A list containing the rates.
+     */
+    java.util.List<java.lang.Long> getRatesList();
+    /**
+     * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+     * @return The count of rates.
+     */
+    int getRatesCount();
+    /**
+     * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+     * @param index The index of the element to return.
+     * @return The rates at the given index.
+     */
+    long getRates(int index);
+  }
+  /**
+   * Protobuf type {@code comdex.bandoracle.v1beta1.FetchPriceResult}
+   */
+  public static final class FetchPriceResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.bandoracle.v1beta1.FetchPriceResult)
+      FetchPriceResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FetchPriceResult.newBuilder() to construct.
+    private FetchPriceResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FetchPriceResult() {
+      rates_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FetchPriceResult();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.Builder.class);
+    }
+
+    public static final int RATES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList rates_;
+    /**
+     * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+     * @return A list containing the rates.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getRatesList() {
+      return rates_;
+    }
+    /**
+     * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+     * @return The count of rates.
+     */
+    public int getRatesCount() {
+      return rates_.size();
+    }
+    /**
+     * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+     * @param index The index of the element to return.
+     * @return The rates at the given index.
+     */
+    public long getRates(int index) {
+      return rates_.getLong(index);
+    }
+    private int ratesMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getRatesList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(ratesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < rates_.size(); i++) {
+        output.writeUInt64NoTag(rates_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < rates_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(rates_.getLong(i));
+        }
+        size += dataSize;
+        if (!getRatesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        ratesMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult)) {
+        return super.equals(obj);
+      }
+      com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult other = (com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult) obj;
+
+      if (!getRatesList()
+          .equals(other.getRatesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRatesCount() > 0) {
+        hash = (37 * hash) + RATES_FIELD_NUMBER;
+        hash = (53 * hash) + getRatesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.bandoracle.v1beta1.FetchPriceResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.bandoracle.v1beta1.FetchPriceResult)
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.Builder.class);
+      }
+
+      // Construct using com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rates_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult getDefaultInstanceForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult build() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult buildPartial() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result = new com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          rates_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.rates_ = rates_;
+      }
+
+      private void buildPartial0(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult) {
+          return mergeFrom((com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult other) {
+        if (other == com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult.getDefaultInstance()) return this;
+        if (!other.rates_.isEmpty()) {
+          if (rates_.isEmpty()) {
+            rates_ = other.rates_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureRatesIsMutable();
+            rates_.addAll(other.rates_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readUInt64();
+                ensureRatesIsMutable();
+                rates_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRatesIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  rates_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList rates_ = emptyLongList();
+      private void ensureRatesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rates_ = mutableCopy(rates_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @return A list containing the rates.
+       */
+      public java.util.List<java.lang.Long>
+          getRatesList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(rates_) : rates_;
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @return The count of rates.
+       */
+      public int getRatesCount() {
+        return rates_.size();
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @param index The index of the element to return.
+       * @return The rates at the given index.
+       */
+      public long getRates(int index) {
+        return rates_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @param index The index to set the value at.
+       * @param value The rates to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRates(
+          int index, long value) {
+
+        ensureRatesIsMutable();
+        rates_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @param value The rates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRates(long value) {
+
+        ensureRatesIsMutable();
+        rates_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @param values The rates to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRates(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureRatesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, rates_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 rates = 1 [json_name = "rates"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRates() {
+        rates_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.bandoracle.v1beta1.FetchPriceResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.bandoracle.v1beta1.FetchPriceResult)
+    private static final com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult();
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FetchPriceResult>
+        PARSER = new com.google.protobuf.AbstractParser<FetchPriceResult>() {
+      @java.lang.Override
+      public FetchPriceResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FetchPriceResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FetchPriceResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.FetchPriceProto.FetchPriceResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MarketOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.bandoracle.v1beta1.Market)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The symbol.
+     */
+    java.lang.String getSymbol();
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The bytes for symbol.
+     */
+    com.google.protobuf.ByteString
+        getSymbolBytes();
+
+    /**
+     * <code>uint64 script_id = 2 [json_name = "scriptId", (.gogoproto.customname) = "ScriptID", (.gogoproto.moretags) = "yaml:&#92;"script_id&#92;""];</code>
+     * @return The scriptId.
+     */
+    long getScriptId();
+  }
+  /**
+   * Protobuf type {@code comdex.bandoracle.v1beta1.Market}
+   */
+  public static final class Market extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.bandoracle.v1beta1.Market)
+      MarketOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Market.newBuilder() to construct.
+    private Market(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Market() {
+      symbol_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Market();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_Market_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_Market_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.Builder.class);
+    }
+
+    public static final int SYMBOL_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object symbol_ = "";
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The symbol.
+     */
+    @java.lang.Override
+    public java.lang.String getSymbol() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        symbol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+     * @return The bytes for symbol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSymbolBytes() {
+      java.lang.Object ref = symbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        symbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SCRIPT_ID_FIELD_NUMBER = 2;
+    private long scriptId_ = 0L;
+    /**
+     * <code>uint64 script_id = 2 [json_name = "scriptId", (.gogoproto.customname) = "ScriptID", (.gogoproto.moretags) = "yaml:&#92;"script_id&#92;""];</code>
+     * @return The scriptId.
+     */
+    @java.lang.Override
+    public long getScriptId() {
+      return scriptId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, symbol_);
+      }
+      if (scriptId_ != 0L) {
+        output.writeUInt64(2, scriptId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(symbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, symbol_);
+      }
+      if (scriptId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, scriptId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.Market)) {
+        return super.equals(obj);
+      }
+      com.comdex.bandoracle.v1beta1.FetchPriceProto.Market other = (com.comdex.bandoracle.v1beta1.FetchPriceProto.Market) obj;
+
+      if (!getSymbol()
+          .equals(other.getSymbol())) return false;
+      if (getScriptId()
+          != other.getScriptId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getSymbol().hashCode();
+      hash = (37 * hash) + SCRIPT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getScriptId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.bandoracle.v1beta1.FetchPriceProto.Market prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.bandoracle.v1beta1.Market}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.bandoracle.v1beta1.Market)
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.MarketOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_Market_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_Market_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.Builder.class);
+      }
+
+      // Construct using com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        symbol_ = "";
+        scriptId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_Market_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.Market getDefaultInstanceForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.Market build() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.Market result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.Market buildPartial() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.Market result = new com.comdex.bandoracle.v1beta1.FetchPriceProto.Market(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.bandoracle.v1beta1.FetchPriceProto.Market result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.symbol_ = symbol_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.scriptId_ = scriptId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.Market) {
+          return mergeFrom((com.comdex.bandoracle.v1beta1.FetchPriceProto.Market)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.bandoracle.v1beta1.FetchPriceProto.Market other) {
+        if (other == com.comdex.bandoracle.v1beta1.FetchPriceProto.Market.getDefaultInstance()) return this;
+        if (!other.getSymbol().isEmpty()) {
+          symbol_ = other.symbol_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getScriptId() != 0L) {
+          setScriptId(other.getScriptId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                symbol_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                scriptId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object symbol_ = "";
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @return The symbol.
+       */
+      public java.lang.String getSymbol() {
+        java.lang.Object ref = symbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          symbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @return The bytes for symbol.
+       */
+      public com.google.protobuf.ByteString
+          getSymbolBytes() {
+        java.lang.Object ref = symbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          symbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @param value The symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbol(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        symbol_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSymbol() {
+        symbol_ = getDefaultInstance().getSymbol();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string symbol = 1 [json_name = "symbol", (.gogoproto.moretags) = "yaml:&#92;"symbol&#92;""];</code>
+       * @param value The bytes for symbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSymbolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        symbol_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long scriptId_ ;
+      /**
+       * <code>uint64 script_id = 2 [json_name = "scriptId", (.gogoproto.customname) = "ScriptID", (.gogoproto.moretags) = "yaml:&#92;"script_id&#92;""];</code>
+       * @return The scriptId.
+       */
+      @java.lang.Override
+      public long getScriptId() {
+        return scriptId_;
+      }
+      /**
+       * <code>uint64 script_id = 2 [json_name = "scriptId", (.gogoproto.customname) = "ScriptID", (.gogoproto.moretags) = "yaml:&#92;"script_id&#92;""];</code>
+       * @param value The scriptId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScriptId(long value) {
+
+        scriptId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 script_id = 2 [json_name = "scriptId", (.gogoproto.customname) = "ScriptID", (.gogoproto.moretags) = "yaml:&#92;"script_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScriptId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        scriptId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.bandoracle.v1beta1.Market)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.bandoracle.v1beta1.Market)
+    private static final com.comdex.bandoracle.v1beta1.FetchPriceProto.Market DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.bandoracle.v1beta1.FetchPriceProto.Market();
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.Market getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Market>
+        PARSER = new com.google.protobuf.AbstractParser<Market>() {
+      @java.lang.Override
+      public Market parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Market> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Market> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.FetchPriceProto.Market getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DiscardDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:comdex.bandoracle.v1beta1.DiscardData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 block_height = 1 [json_name = "blockHeight", (.gogoproto.moretags) = "yaml:&#92;"block_height&#92;""];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <code>bool discard_bool = 2 [json_name = "discardBool", (.gogoproto.moretags) = "yaml:&#92;"discard_bool&#92;""];</code>
+     * @return The discardBool.
+     */
+    boolean getDiscardBool();
+  }
+  /**
+   * Protobuf type {@code comdex.bandoracle.v1beta1.DiscardData}
+   */
+  public static final class DiscardData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:comdex.bandoracle.v1beta1.DiscardData)
+      DiscardDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiscardData.newBuilder() to construct.
+    private DiscardData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiscardData() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiscardData();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_DiscardData_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_DiscardData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <code>int64 block_height = 1 [json_name = "blockHeight", (.gogoproto.moretags) = "yaml:&#92;"block_height&#92;""];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int DISCARD_BOOL_FIELD_NUMBER = 2;
+    private boolean discardBool_ = false;
+    /**
+     * <code>bool discard_bool = 2 [json_name = "discardBool", (.gogoproto.moretags) = "yaml:&#92;"discard_bool&#92;""];</code>
+     * @return The discardBool.
+     */
+    @java.lang.Override
+    public boolean getDiscardBool() {
+      return discardBool_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeInt64(1, blockHeight_);
+      }
+      if (discardBool_ != false) {
+        output.writeBool(2, discardBool_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, blockHeight_);
+      }
+      if (discardBool_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, discardBool_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData)) {
+        return super.equals(obj);
+      }
+      com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData other = (com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (getDiscardBool()
+          != other.getDiscardBool()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      hash = (37 * hash) + DISCARD_BOOL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDiscardBool());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code comdex.bandoracle.v1beta1.DiscardData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:comdex.bandoracle.v1beta1.DiscardData)
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_DiscardData_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_DiscardData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.class, com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.Builder.class);
+      }
+
+      // Construct using com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        discardBool_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.internal_static_comdex_bandoracle_v1beta1_DiscardData_descriptor;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData getDefaultInstanceForType() {
+        return com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData build() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData buildPartial() {
+        com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData result = new com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.discardBool_ = discardBool_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData) {
+          return mergeFrom((com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData other) {
+        if (other == com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.getDiscardBool() != false) {
+          setDiscardBool(other.getDiscardBool());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                discardBool_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <code>int64 block_height = 1 [json_name = "blockHeight", (.gogoproto.moretags) = "yaml:&#92;"block_height&#92;""];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <code>int64 block_height = 1 [json_name = "blockHeight", (.gogoproto.moretags) = "yaml:&#92;"block_height&#92;""];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 block_height = 1 [json_name = "blockHeight", (.gogoproto.moretags) = "yaml:&#92;"block_height&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean discardBool_ ;
+      /**
+       * <code>bool discard_bool = 2 [json_name = "discardBool", (.gogoproto.moretags) = "yaml:&#92;"discard_bool&#92;""];</code>
+       * @return The discardBool.
+       */
+      @java.lang.Override
+      public boolean getDiscardBool() {
+        return discardBool_;
+      }
+      /**
+       * <code>bool discard_bool = 2 [json_name = "discardBool", (.gogoproto.moretags) = "yaml:&#92;"discard_bool&#92;""];</code>
+       * @param value The discardBool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiscardBool(boolean value) {
+
+        discardBool_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool discard_bool = 2 [json_name = "discardBool", (.gogoproto.moretags) = "yaml:&#92;"discard_bool&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiscardBool() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        discardBool_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:comdex.bandoracle.v1beta1.DiscardData)
+    }
+
+    // @@protoc_insertion_point(class_scope:comdex.bandoracle.v1beta1.DiscardData)
+    private static final com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData();
+    }
+
+    public static com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiscardData>
+        PARSER = new com.google.protobuf.AbstractParser<DiscardData>() {
+      @java.lang.Override
+      public DiscardData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiscardData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiscardData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.comdex.bandoracle.v1beta1.FetchPriceProto.DiscardData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_bandoracle_v1beta1_FetchPriceCallData_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_bandoracle_v1beta1_FetchPriceResult_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_bandoracle_v1beta1_Market_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_bandoracle_v1beta1_Market_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_comdex_bandoracle_v1beta1_DiscardData_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_comdex_bandoracle_v1beta1_DiscardData_fieldAccessorTable;
 
@@ -54,14 +2516,14 @@ public final class FetchPriceProto {
       "d\"R\010scriptId\"\205\001\n\013DiscardData\022:\n\014block_he" +
       "ight\030\001 \001(\003B\027\362\336\037\023yaml:\"block_height\"R\013blo" +
       "ckHeight\022:\n\014discard_bool\030\002 \001(\010B\027\362\336\037\023yaml" +
-      ":\"discard_bool\"R\013discardBoolB\364\001\n\035com.com" +
-      "dex.bandoracle.v1beta1B\017FetchPriceProtoP" +
-      "\001Z4github.com/comdex-official/comdex/x/b" +
-      "andoracle/types\242\002\003CBX\252\002\031Comdex.Bandoracl" +
-      "e.V1beta1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%" +
-      "Comdex\\Bandoracle\\V1beta1\\GPBMetadata\352\002\033" +
-      "Comdex::Bandoracle::V1beta1\310\341\036\000\250\342\036\000b\006pro" +
-      "to3"
+      ":\"discard_bool\"R\013discardBoolB\362\001\n\035com.com" +
+      "dex.bandoracle.v1beta1B\017FetchPriceProtoZ" +
+      "4github.com/comdex-official/comdex/x/ban" +
+      "doracle/types\242\002\003CBX\252\002\031Comdex.Bandoracle." +
+      "V1beta1\312\002\031Comdex\\Bandoracle\\V1beta1\342\002%Co" +
+      "mdex\\Bandoracle\\V1beta1\\GPBMetadata\352\002\033Co" +
+      "mdex::Bandoracle::V1beta1\310\341\036\000\250\342\036\000b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

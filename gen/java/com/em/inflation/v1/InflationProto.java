@@ -14,14 +14,1988 @@ public final class InflationProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface InflationAssetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.inflation.v1.InflationAsset)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+     * @return The inflation.
+     */
+    java.lang.String getInflation();
+    /**
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+     * @return The bytes for inflation.
+     */
+    com.google.protobuf.ByteString
+        getInflationBytes();
+
+    /**
+     * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+     * @return The accum.
+     */
+    java.lang.String getAccum();
+    /**
+     * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+     * @return The bytes for accum.
+     */
+    com.google.protobuf.ByteString
+        getAccumBytes();
+  }
+  /**
+   * Protobuf type {@code em.inflation.v1.InflationAsset}
+   */
+  public static final class InflationAsset extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.inflation.v1.InflationAsset)
+      InflationAssetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InflationAsset.newBuilder() to construct.
+    private InflationAsset(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InflationAsset() {
+      denom_ = "";
+      inflation_ = "";
+      accum_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InflationAsset();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationAsset_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationAsset_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.inflation.v1.InflationProto.InflationAsset.class, com.em.inflation.v1.InflationProto.InflationAsset.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INFLATION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object inflation_ = "";
+    /**
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+     * @return The inflation.
+     */
+    @java.lang.Override
+    public java.lang.String getInflation() {
+      java.lang.Object ref = inflation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inflation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+     * @return The bytes for inflation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInflationBytes() {
+      java.lang.Object ref = inflation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inflation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCUM_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accum_ = "";
+    /**
+     * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+     * @return The accum.
+     */
+    @java.lang.Override
+    public java.lang.String getAccum() {
+      java.lang.Object ref = accum_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accum_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+     * @return The bytes for accum.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccumBytes() {
+      java.lang.Object ref = accum_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accum_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflation_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, inflation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accum_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, accum_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inflation_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, inflation_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accum_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, accum_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.inflation.v1.InflationProto.InflationAsset)) {
+        return super.equals(obj);
+      }
+      com.em.inflation.v1.InflationProto.InflationAsset other = (com.em.inflation.v1.InflationProto.InflationAsset) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getInflation()
+          .equals(other.getInflation())) return false;
+      if (!getAccum()
+          .equals(other.getAccum())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + INFLATION_FIELD_NUMBER;
+      hash = (53 * hash) + getInflation().hashCode();
+      hash = (37 * hash) + ACCUM_FIELD_NUMBER;
+      hash = (53 * hash) + getAccum().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationAsset parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.inflation.v1.InflationProto.InflationAsset prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.inflation.v1.InflationAsset}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.inflation.v1.InflationAsset)
+        com.em.inflation.v1.InflationProto.InflationAssetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationAsset_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationAsset_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.inflation.v1.InflationProto.InflationAsset.class, com.em.inflation.v1.InflationProto.InflationAsset.Builder.class);
+      }
+
+      // Construct using com.em.inflation.v1.InflationProto.InflationAsset.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        inflation_ = "";
+        accum_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationAsset_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.InflationProto.InflationAsset getDefaultInstanceForType() {
+        return com.em.inflation.v1.InflationProto.InflationAsset.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.InflationProto.InflationAsset build() {
+        com.em.inflation.v1.InflationProto.InflationAsset result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.InflationProto.InflationAsset buildPartial() {
+        com.em.inflation.v1.InflationProto.InflationAsset result = new com.em.inflation.v1.InflationProto.InflationAsset(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.inflation.v1.InflationProto.InflationAsset result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.inflation_ = inflation_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.accum_ = accum_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.inflation.v1.InflationProto.InflationAsset) {
+          return mergeFrom((com.em.inflation.v1.InflationProto.InflationAsset)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.inflation.v1.InflationProto.InflationAsset other) {
+        if (other == com.em.inflation.v1.InflationProto.InflationAsset.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getInflation().isEmpty()) {
+          inflation_ = other.inflation_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getAccum().isEmpty()) {
+          accum_ = other.accum_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                inflation_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                accum_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom", (.gogoproto.moretags) = "yaml:&#92;"denom&#92;""];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inflation_ = "";
+      /**
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+       * @return The inflation.
+       */
+      public java.lang.String getInflation() {
+        java.lang.Object ref = inflation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inflation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+       * @return The bytes for inflation.
+       */
+      public com.google.protobuf.ByteString
+          getInflationBytes() {
+        java.lang.Object ref = inflation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inflation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+       * @param value The inflation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflation(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        inflation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInflation() {
+        inflation_ = getDefaultInstance().getInflation();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inflation = 2 [json_name = "inflation", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"inflation&#92;""];</code>
+       * @param value The bytes for inflation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInflationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        inflation_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accum_ = "";
+      /**
+       * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+       * @return The accum.
+       */
+      public java.lang.String getAccum() {
+        java.lang.Object ref = accum_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accum_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+       * @return The bytes for accum.
+       */
+      public com.google.protobuf.ByteString
+          getAccumBytes() {
+        java.lang.Object ref = accum_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accum_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+       * @param value The accum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccum(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        accum_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccum() {
+        accum_ = getDefaultInstance().getAccum();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string accum = 3 [json_name = "accum", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"accum&#92;""];</code>
+       * @param value The bytes for accum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccumBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        accum_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.inflation.v1.InflationAsset)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.inflation.v1.InflationAsset)
+    private static final com.em.inflation.v1.InflationProto.InflationAsset DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.inflation.v1.InflationProto.InflationAsset();
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationAsset getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InflationAsset>
+        PARSER = new com.google.protobuf.AbstractParser<InflationAsset>() {
+      @java.lang.Override
+      public InflationAsset parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InflationAsset> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InflationAsset> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationAsset getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InflationStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.inflation.v1.InflationState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastApplied field is set.
+     */
+    boolean hasLastApplied();
+    /**
+     * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastApplied.
+     */
+    com.google.protobuf.Timestamp getLastApplied();
+    /**
+     * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastAppliedOrBuilder();
+
+    /**
+     * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+     * @return The lastAppliedHeight.
+     */
+    java.lang.String getLastAppliedHeight();
+    /**
+     * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+     * @return The bytes for lastAppliedHeight.
+     */
+    com.google.protobuf.ByteString
+        getLastAppliedHeightBytes();
+
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    java.util.List<com.em.inflation.v1.InflationProto.InflationAsset> 
+        getAssetsList();
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    com.em.inflation.v1.InflationProto.InflationAsset getAssets(int index);
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    int getAssetsCount();
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    java.util.List<? extends com.em.inflation.v1.InflationProto.InflationAssetOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    com.em.inflation.v1.InflationProto.InflationAssetOrBuilder getAssetsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code em.inflation.v1.InflationState}
+   */
+  public static final class InflationState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.inflation.v1.InflationState)
+      InflationStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InflationState.newBuilder() to construct.
+    private InflationState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InflationState() {
+      lastAppliedHeight_ = "";
+      assets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InflationState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.inflation.v1.InflationProto.InflationState.class, com.em.inflation.v1.InflationProto.InflationState.Builder.class);
+    }
+
+    public static final int LAST_APPLIED_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp lastApplied_;
+    /**
+     * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the lastApplied field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastApplied() {
+      return lastApplied_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The lastApplied.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastApplied() {
+      return lastApplied_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastApplied_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastAppliedOrBuilder() {
+      return lastApplied_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastApplied_;
+    }
+
+    public static final int LAST_APPLIED_HEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lastAppliedHeight_ = "";
+    /**
+     * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+     * @return The lastAppliedHeight.
+     */
+    @java.lang.Override
+    public java.lang.String getLastAppliedHeight() {
+      java.lang.Object ref = lastAppliedHeight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastAppliedHeight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+     * @return The bytes for lastAppliedHeight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastAppliedHeightBytes() {
+      java.lang.Object ref = lastAppliedHeight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastAppliedHeight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.em.inflation.v1.InflationProto.InflationAsset> assets_;
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.em.inflation.v1.InflationProto.InflationAsset> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.em.inflation.v1.InflationProto.InflationAssetOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationAsset getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationAssetOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lastApplied_ != null) {
+        output.writeMessage(1, getLastApplied());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastAppliedHeight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lastAppliedHeight_);
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(3, assets_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lastApplied_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLastApplied());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastAppliedHeight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lastAppliedHeight_);
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, assets_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.inflation.v1.InflationProto.InflationState)) {
+        return super.equals(obj);
+      }
+      com.em.inflation.v1.InflationProto.InflationState other = (com.em.inflation.v1.InflationProto.InflationState) obj;
+
+      if (hasLastApplied() != other.hasLastApplied()) return false;
+      if (hasLastApplied()) {
+        if (!getLastApplied()
+            .equals(other.getLastApplied())) return false;
+      }
+      if (!getLastAppliedHeight()
+          .equals(other.getLastAppliedHeight())) return false;
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLastApplied()) {
+        hash = (37 * hash) + LAST_APPLIED_FIELD_NUMBER;
+        hash = (53 * hash) + getLastApplied().hashCode();
+      }
+      hash = (37 * hash) + LAST_APPLIED_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getLastAppliedHeight().hashCode();
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.InflationProto.InflationState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.inflation.v1.InflationProto.InflationState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.inflation.v1.InflationState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.inflation.v1.InflationState)
+        com.em.inflation.v1.InflationProto.InflationStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.inflation.v1.InflationProto.InflationState.class, com.em.inflation.v1.InflationProto.InflationState.Builder.class);
+      }
+
+      // Construct using com.em.inflation.v1.InflationProto.InflationState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lastApplied_ = null;
+        if (lastAppliedBuilder_ != null) {
+          lastAppliedBuilder_.dispose();
+          lastAppliedBuilder_ = null;
+        }
+        lastAppliedHeight_ = "";
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+        } else {
+          assets_ = null;
+          assetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.inflation.v1.InflationProto.internal_static_em_inflation_v1_InflationState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.InflationProto.InflationState getDefaultInstanceForType() {
+        return com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.InflationProto.InflationState build() {
+        com.em.inflation.v1.InflationProto.InflationState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.InflationProto.InflationState buildPartial() {
+        com.em.inflation.v1.InflationProto.InflationState result = new com.em.inflation.v1.InflationProto.InflationState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.em.inflation.v1.InflationProto.InflationState result) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.em.inflation.v1.InflationProto.InflationState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lastApplied_ = lastAppliedBuilder_ == null
+              ? lastApplied_
+              : lastAppliedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lastAppliedHeight_ = lastAppliedHeight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.inflation.v1.InflationProto.InflationState) {
+          return mergeFrom((com.em.inflation.v1.InflationProto.InflationState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.inflation.v1.InflationProto.InflationState other) {
+        if (other == com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance()) return this;
+        if (other.hasLastApplied()) {
+          mergeLastApplied(other.getLastApplied());
+        }
+        if (!other.getLastAppliedHeight().isEmpty()) {
+          lastAppliedHeight_ = other.lastAppliedHeight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLastAppliedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                lastAppliedHeight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.em.inflation.v1.InflationProto.InflationAsset m =
+                    input.readMessage(
+                        com.em.inflation.v1.InflationProto.InflationAsset.parser(),
+                        extensionRegistry);
+                if (assetsBuilder_ == null) {
+                  ensureAssetsIsMutable();
+                  assets_.add(m);
+                } else {
+                  assetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp lastApplied_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastAppliedBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the lastApplied field is set.
+       */
+      public boolean hasLastApplied() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The lastApplied.
+       */
+      public com.google.protobuf.Timestamp getLastApplied() {
+        if (lastAppliedBuilder_ == null) {
+          return lastApplied_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastApplied_;
+        } else {
+          return lastAppliedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastApplied(com.google.protobuf.Timestamp value) {
+        if (lastAppliedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastApplied_ = value;
+        } else {
+          lastAppliedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setLastApplied(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastAppliedBuilder_ == null) {
+          lastApplied_ = builderForValue.build();
+        } else {
+          lastAppliedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeLastApplied(com.google.protobuf.Timestamp value) {
+        if (lastAppliedBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            lastApplied_ != null &&
+            lastApplied_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastAppliedBuilder().mergeFrom(value);
+          } else {
+            lastApplied_ = value;
+          }
+        } else {
+          lastAppliedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearLastApplied() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lastApplied_ = null;
+        if (lastAppliedBuilder_ != null) {
+          lastAppliedBuilder_.dispose();
+          lastAppliedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastAppliedBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLastAppliedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastAppliedOrBuilder() {
+        if (lastAppliedBuilder_ != null) {
+          return lastAppliedBuilder_.getMessageOrBuilder();
+        } else {
+          return lastApplied_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastApplied_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp last_applied = 1 [json_name = "lastApplied", (.gogoproto.nullable) = false, (.gogoproto.customname) = "LastAppliedTime", (.gogoproto.moretags) = "yaml:&#92;"last_applied&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastAppliedFieldBuilder() {
+        if (lastAppliedBuilder_ == null) {
+          lastAppliedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastApplied(),
+                  getParentForChildren(),
+                  isClean());
+          lastApplied_ = null;
+        }
+        return lastAppliedBuilder_;
+      }
+
+      private java.lang.Object lastAppliedHeight_ = "";
+      /**
+       * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+       * @return The lastAppliedHeight.
+       */
+      public java.lang.String getLastAppliedHeight() {
+        java.lang.Object ref = lastAppliedHeight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastAppliedHeight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+       * @return The bytes for lastAppliedHeight.
+       */
+      public com.google.protobuf.ByteString
+          getLastAppliedHeightBytes() {
+        java.lang.Object ref = lastAppliedHeight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastAppliedHeight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+       * @param value The lastAppliedHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastAppliedHeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastAppliedHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastAppliedHeight() {
+        lastAppliedHeight_ = getDefaultInstance().getLastAppliedHeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_applied_height = 2 [json_name = "lastAppliedHeight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int", (.gogoproto.moretags) = "yaml:&#92;"last_applied_height&#92;""];</code>
+       * @param value The bytes for lastAppliedHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastAppliedHeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lastAppliedHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.em.inflation.v1.InflationProto.InflationAsset> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          assets_ = new java.util.ArrayList<com.em.inflation.v1.InflationProto.InflationAsset>(assets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.inflation.v1.InflationProto.InflationAsset, com.em.inflation.v1.InflationProto.InflationAsset.Builder, com.em.inflation.v1.InflationProto.InflationAssetOrBuilder> assetsBuilder_;
+
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public java.util.List<com.em.inflation.v1.InflationProto.InflationAsset> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationAsset getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder setAssets(
+          int index, com.em.inflation.v1.InflationProto.InflationAsset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder setAssets(
+          int index, com.em.inflation.v1.InflationProto.InflationAsset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(com.em.inflation.v1.InflationProto.InflationAsset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(
+          int index, com.em.inflation.v1.InflationProto.InflationAsset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(
+          com.em.inflation.v1.InflationProto.InflationAsset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAssets(
+          int index, com.em.inflation.v1.InflationProto.InflationAsset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends com.em.inflation.v1.InflationProto.InflationAsset> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationAsset.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationAssetOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public java.util.List<? extends com.em.inflation.v1.InflationProto.InflationAssetOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationAsset.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            com.em.inflation.v1.InflationProto.InflationAsset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationAsset.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, com.em.inflation.v1.InflationProto.InflationAsset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .em.inflation.v1.InflationAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationAssets", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public java.util.List<com.em.inflation.v1.InflationProto.InflationAsset.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.em.inflation.v1.InflationProto.InflationAsset, com.em.inflation.v1.InflationProto.InflationAsset.Builder, com.em.inflation.v1.InflationProto.InflationAssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.em.inflation.v1.InflationProto.InflationAsset, com.em.inflation.v1.InflationProto.InflationAsset.Builder, com.em.inflation.v1.InflationProto.InflationAssetOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.inflation.v1.InflationState)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.inflation.v1.InflationState)
+    private static final com.em.inflation.v1.InflationProto.InflationState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.inflation.v1.InflationProto.InflationState();
+    }
+
+    public static com.em.inflation.v1.InflationProto.InflationState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InflationState>
+        PARSER = new com.google.protobuf.AbstractParser<InflationState>() {
+      @java.lang.Override
+      public InflationState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InflationState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InflationState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_inflation_v1_InflationAsset_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_inflation_v1_InflationAsset_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_inflation_v1_InflationState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_inflation_v1_InflationState_fieldAccessorTable;
 
@@ -51,12 +2025,12 @@ public final class InflationProto {
       "\"last_applied_height\"R\021lastAppliedHeight" +
       "\022a\n\006assets\030\003 \003(\0132\037.em.inflation.v1.Infla" +
       "tionAssetB(\310\336\037\000\342\336\037\017InflationAssets\362\336\037\rya" +
-      "ml:\"assets\"R\006assets:\004\230\240\037\000B\263\001\n\023com.em.inf" +
-      "lation.v1B\016InflationProtoP\001Z.github.com/" +
-      "e-money/em-ledger/x/inflation/types\242\002\003EI" +
-      "X\252\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342\002\033" +
-      "Em\\Inflation\\V1\\GPBMetadata\352\002\021Em::Inflat" +
-      "ion::V1b\006proto3"
+      "ml:\"assets\"R\006assets:\004\230\240\037\000B\261\001\n\023com.em.inf" +
+      "lation.v1B\016InflationProtoZ.github.com/e-" +
+      "money/em-ledger/x/inflation/types\242\002\003EIX\252" +
+      "\002\017Em.Inflation.V1\312\002\017Em\\Inflation\\V1\342\002\033Em" +
+      "\\Inflation\\V1\\GPBMetadata\352\002\021Em::Inflatio" +
+      "n::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

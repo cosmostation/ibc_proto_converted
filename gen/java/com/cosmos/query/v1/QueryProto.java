@@ -64,11 +64,11 @@ public final class QueryProto {
       "ery.v1\032 google/protobuf/descriptor.proto" +
       ":M\n\021module_query_safe\022\036.google.protobuf." +
       "MethodOptions\030\361\214\246\005 \001(\010R\017moduleQuerySafeB" +
-      "\251\001\n\023com.cosmos.query.v1B\nQueryProtoP\001Z(g" +
-      "ithub.com/cosmos/cosmos-sdk/types/query\242" +
-      "\002\003CQX\252\002\017Cosmos.Query.V1\312\002\017Cosmos\\Query\\V" +
-      "1\342\002\033Cosmos\\Query\\V1\\GPBMetadata\352\002\021Cosmos" +
-      "::Query::V1b\006proto3"
+      "\247\001\n\023com.cosmos.query.v1B\nQueryProtoZ(git" +
+      "hub.com/cosmos/cosmos-sdk/types/query\242\002\003" +
+      "CQX\252\002\017Cosmos.Query.V1\312\002\017Cosmos\\Query\\V1\342" +
+      "\002\033Cosmos\\Query\\V1\\GPBMetadata\352\002\021Cosmos::" +
+      "Query::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

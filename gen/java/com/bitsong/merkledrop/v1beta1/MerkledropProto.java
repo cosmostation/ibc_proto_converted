@@ -14,9 +14,1612 @@ public final class MerkledropProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MerkledropOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bitsong.merkledrop.v1beta1.Merkledrop)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * merkledrop id
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * merkle_root of the merkledrop
+     * </pre>
+     *
+     * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+     * @return The merkleRoot.
+     */
+    java.lang.String getMerkleRoot();
+    /**
+     * <pre>
+     * merkle_root of the merkledrop
+     * </pre>
+     *
+     * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+     * @return The bytes for merkleRoot.
+     */
+    com.google.protobuf.ByteString
+        getMerkleRootBytes();
+
+    /**
+     * <pre>
+     * merkledrop start height
+     * </pre>
+     *
+     * <code>int64 start_height = 3 [json_name = "startHeight"];</code>
+     * @return The startHeight.
+     */
+    long getStartHeight();
+
+    /**
+     * <pre>
+     * merkledrop end height
+     * </pre>
+     *
+     * <code>int64 end_height = 4 [json_name = "endHeight"];</code>
+     * @return The endHeight.
+     */
+    long getEndHeight();
+
+    /**
+     * <pre>
+     * denom to distribuite
+     * </pre>
+     *
+     * <code>string denom = 5 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     * denom to distribuite
+     * </pre>
+     *
+     * <code>string denom = 5 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <pre>
+     * amount to distribuite
+     * </pre>
+     *
+     * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount to distribuite
+     * </pre>
+     *
+     * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <pre>
+     * claimed amount
+     * </pre>
+     *
+     * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The claimed.
+     */
+    java.lang.String getClaimed();
+    /**
+     * <pre>
+     * claimed amount
+     * </pre>
+     *
+     * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for claimed.
+     */
+    com.google.protobuf.ByteString
+        getClaimedBytes();
+
+    /**
+     * <pre>
+     * merkledrop's owner
+     * </pre>
+     *
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <pre>
+     * merkledrop's owner
+     * </pre>
+     *
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * Protobuf type {@code bitsong.merkledrop.v1beta1.Merkledrop}
+   */
+  public static final class Merkledrop extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bitsong.merkledrop.v1beta1.Merkledrop)
+      MerkledropOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Merkledrop.newBuilder() to construct.
+    private Merkledrop(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Merkledrop() {
+      merkleRoot_ = "";
+      denom_ = "";
+      amount_ = "";
+      claimed_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Merkledrop();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bitsong.merkledrop.v1beta1.MerkledropProto.internal_static_bitsong_merkledrop_v1beta1_Merkledrop_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bitsong.merkledrop.v1beta1.MerkledropProto.internal_static_bitsong_merkledrop_v1beta1_Merkledrop_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.class, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * merkledrop id
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int MERKLE_ROOT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object merkleRoot_ = "";
+    /**
+     * <pre>
+     * merkle_root of the merkledrop
+     * </pre>
+     *
+     * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+     * @return The merkleRoot.
+     */
+    @java.lang.Override
+    public java.lang.String getMerkleRoot() {
+      java.lang.Object ref = merkleRoot_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        merkleRoot_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * merkle_root of the merkledrop
+     * </pre>
+     *
+     * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+     * @return The bytes for merkleRoot.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMerkleRootBytes() {
+      java.lang.Object ref = merkleRoot_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        merkleRoot_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_HEIGHT_FIELD_NUMBER = 3;
+    private long startHeight_ = 0L;
+    /**
+     * <pre>
+     * merkledrop start height
+     * </pre>
+     *
+     * <code>int64 start_height = 3 [json_name = "startHeight"];</code>
+     * @return The startHeight.
+     */
+    @java.lang.Override
+    public long getStartHeight() {
+      return startHeight_;
+    }
+
+    public static final int END_HEIGHT_FIELD_NUMBER = 4;
+    private long endHeight_ = 0L;
+    /**
+     * <pre>
+     * merkledrop end height
+     * </pre>
+     *
+     * <code>int64 end_height = 4 [json_name = "endHeight"];</code>
+     * @return The endHeight.
+     */
+    @java.lang.Override
+    public long getEndHeight() {
+      return endHeight_;
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     * denom to distribuite
+     * </pre>
+     *
+     * <code>string denom = 5 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * denom to distribuite
+     * </pre>
+     *
+     * <code>string denom = 5 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount to distribuite
+     * </pre>
+     *
+     * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount to distribuite
+     * </pre>
+     *
+     * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAIMED_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object claimed_ = "";
+    /**
+     * <pre>
+     * claimed amount
+     * </pre>
+     *
+     * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The claimed.
+     */
+    @java.lang.Override
+    public java.lang.String getClaimed() {
+      java.lang.Object ref = claimed_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claimed_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * claimed amount
+     * </pre>
+     *
+     * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for claimed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClaimedBytes() {
+      java.lang.Object ref = claimed_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claimed_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * merkledrop's owner
+     * </pre>
+     *
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * merkledrop's owner
+     * </pre>
+     *
+     * <code>string owner = 8 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(merkleRoot_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, merkleRoot_);
+      }
+      if (startHeight_ != 0L) {
+        output.writeInt64(3, startHeight_);
+      }
+      if (endHeight_ != 0L) {
+        output.writeInt64(4, endHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimed_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, claimed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(merkleRoot_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, merkleRoot_);
+      }
+      if (startHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, startHeight_);
+      }
+      if (endHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, endHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(claimed_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, claimed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop)) {
+        return super.equals(obj);
+      }
+      com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop other = (com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getMerkleRoot()
+          .equals(other.getMerkleRoot())) return false;
+      if (getStartHeight()
+          != other.getStartHeight()) return false;
+      if (getEndHeight()
+          != other.getEndHeight()) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getClaimed()
+          .equals(other.getClaimed())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + MERKLE_ROOT_FIELD_NUMBER;
+      hash = (53 * hash) + getMerkleRoot().hashCode();
+      hash = (37 * hash) + START_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartHeight());
+      hash = (37 * hash) + END_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndHeight());
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + CLAIMED_FIELD_NUMBER;
+      hash = (53 * hash) + getClaimed().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code bitsong.merkledrop.v1beta1.Merkledrop}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bitsong.merkledrop.v1beta1.Merkledrop)
+        com.bitsong.merkledrop.v1beta1.MerkledropProto.MerkledropOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bitsong.merkledrop.v1beta1.MerkledropProto.internal_static_bitsong_merkledrop_v1beta1_Merkledrop_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bitsong.merkledrop.v1beta1.MerkledropProto.internal_static_bitsong_merkledrop_v1beta1_Merkledrop_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.class, com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.Builder.class);
+      }
+
+      // Construct using com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        merkleRoot_ = "";
+        startHeight_ = 0L;
+        endHeight_ = 0L;
+        denom_ = "";
+        amount_ = "";
+        claimed_ = "";
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bitsong.merkledrop.v1beta1.MerkledropProto.internal_static_bitsong_merkledrop_v1beta1_Merkledrop_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getDefaultInstanceForType() {
+        return com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop build() {
+        com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop buildPartial() {
+        com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop result = new com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.merkleRoot_ = merkleRoot_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startHeight_ = startHeight_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.endHeight_ = endHeight_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.claimed_ = claimed_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop) {
+          return mergeFrom((com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop other) {
+        if (other == com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getMerkleRoot().isEmpty()) {
+          merkleRoot_ = other.merkleRoot_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getStartHeight() != 0L) {
+          setStartHeight(other.getStartHeight());
+        }
+        if (other.getEndHeight() != 0L) {
+          setEndHeight(other.getEndHeight());
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getClaimed().isEmpty()) {
+          claimed_ = other.claimed_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                merkleRoot_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                startHeight_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                endHeight_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                claimed_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * merkledrop id
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * merkledrop id
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkledrop id
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object merkleRoot_ = "";
+      /**
+       * <pre>
+       * merkle_root of the merkledrop
+       * </pre>
+       *
+       * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+       * @return The merkleRoot.
+       */
+      public java.lang.String getMerkleRoot() {
+        java.lang.Object ref = merkleRoot_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          merkleRoot_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * merkle_root of the merkledrop
+       * </pre>
+       *
+       * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+       * @return The bytes for merkleRoot.
+       */
+      public com.google.protobuf.ByteString
+          getMerkleRootBytes() {
+        java.lang.Object ref = merkleRoot_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          merkleRoot_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * merkle_root of the merkledrop
+       * </pre>
+       *
+       * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+       * @param value The merkleRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerkleRoot(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        merkleRoot_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkle_root of the merkledrop
+       * </pre>
+       *
+       * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerkleRoot() {
+        merkleRoot_ = getDefaultInstance().getMerkleRoot();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkle_root of the merkledrop
+       * </pre>
+       *
+       * <code>string merkle_root = 2 [json_name = "merkleRoot", (.gogoproto.moretags) = "yaml:&#92;"merkle_root&#92;""];</code>
+       * @param value The bytes for merkleRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerkleRootBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        merkleRoot_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long startHeight_ ;
+      /**
+       * <pre>
+       * merkledrop start height
+       * </pre>
+       *
+       * <code>int64 start_height = 3 [json_name = "startHeight"];</code>
+       * @return The startHeight.
+       */
+      @java.lang.Override
+      public long getStartHeight() {
+        return startHeight_;
+      }
+      /**
+       * <pre>
+       * merkledrop start height
+       * </pre>
+       *
+       * <code>int64 start_height = 3 [json_name = "startHeight"];</code>
+       * @param value The startHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartHeight(long value) {
+
+        startHeight_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkledrop start height
+       * </pre>
+       *
+       * <code>int64 start_height = 3 [json_name = "startHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartHeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endHeight_ ;
+      /**
+       * <pre>
+       * merkledrop end height
+       * </pre>
+       *
+       * <code>int64 end_height = 4 [json_name = "endHeight"];</code>
+       * @return The endHeight.
+       */
+      @java.lang.Override
+      public long getEndHeight() {
+        return endHeight_;
+      }
+      /**
+       * <pre>
+       * merkledrop end height
+       * </pre>
+       *
+       * <code>int64 end_height = 4 [json_name = "endHeight"];</code>
+       * @param value The endHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndHeight(long value) {
+
+        endHeight_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkledrop end height
+       * </pre>
+       *
+       * <code>int64 end_height = 4 [json_name = "endHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndHeight() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        endHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       * denom to distribuite
+       * </pre>
+       *
+       * <code>string denom = 5 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom to distribuite
+       * </pre>
+       *
+       * <code>string denom = 5 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * denom to distribuite
+       * </pre>
+       *
+       * <code>string denom = 5 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom to distribuite
+       * </pre>
+       *
+       * <code>string denom = 5 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * denom to distribuite
+       * </pre>
+       *
+       * <code>string denom = 5 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount to distribuite
+       * </pre>
+       *
+       * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount to distribuite
+       * </pre>
+       *
+       * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount to distribuite
+       * </pre>
+       *
+       * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount to distribuite
+       * </pre>
+       *
+       * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount to distribuite
+       * </pre>
+       *
+       * <code>string amount = 6 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object claimed_ = "";
+      /**
+       * <pre>
+       * claimed amount
+       * </pre>
+       *
+       * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The claimed.
+       */
+      public java.lang.String getClaimed() {
+        java.lang.Object ref = claimed_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claimed_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * claimed amount
+       * </pre>
+       *
+       * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for claimed.
+       */
+      public com.google.protobuf.ByteString
+          getClaimedBytes() {
+        java.lang.Object ref = claimed_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claimed_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * claimed amount
+       * </pre>
+       *
+       * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The claimed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimed(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        claimed_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed amount
+       * </pre>
+       *
+       * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimed() {
+        claimed_ = getDefaultInstance().getClaimed();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed amount
+       * </pre>
+       *
+       * <code>string claimed = 7 [json_name = "claimed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for claimed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        claimed_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <pre>
+       * merkledrop's owner
+       * </pre>
+       *
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * merkledrop's owner
+       * </pre>
+       *
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * merkledrop's owner
+       * </pre>
+       *
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkledrop's owner
+       * </pre>
+       *
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merkledrop's owner
+       * </pre>
+       *
+       * <code>string owner = 8 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bitsong.merkledrop.v1beta1.Merkledrop)
+    }
+
+    // @@protoc_insertion_point(class_scope:bitsong.merkledrop.v1beta1.Merkledrop)
+    private static final com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop();
+    }
+
+    public static com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Merkledrop>
+        PARSER = new com.google.protobuf.AbstractParser<Merkledrop>() {
+      @java.lang.Override
+      public Merkledrop parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Merkledrop> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Merkledrop> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bitsong.merkledrop.v1beta1.MerkledropProto.Merkledrop getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bitsong_merkledrop_v1beta1_Merkledrop_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bitsong_merkledrop_v1beta1_Merkledrop_fieldAccessorTable;
 
@@ -40,14 +1643,14 @@ public final class MerkledropProto {
       "\037&github.com/cosmos/cosmos-sdk/types.Int" +
       "R\006amount\022H\n\007claimed\030\007 \001(\tB.\310\336\037\000\332\336\037&githu" +
       "b.com/cosmos/cosmos-sdk/types.IntR\007claim" +
-      "ed\022\024\n\005owner\030\010 \001(\tR\005owner:\010\210\240\037\000\230\240\037\000B\371\001\n\036c" +
+      "ed\022\024\n\005owner\030\010 \001(\tR\005owner:\010\210\240\037\000\230\240\037\000B\367\001\n\036c" +
       "om.bitsong.merkledrop.v1beta1B\017Merkledro" +
-      "pProtoP\001Z8github.com/bitsongofficial/go-" +
-      "bitsong/x/merkledrop/types\242\002\003BMX\252\002\032Bitso" +
-      "ng.Merkledrop.V1beta1\312\002\032Bitsong\\Merkledr" +
-      "op\\V1beta1\342\002&Bitsong\\Merkledrop\\V1beta1\\" +
-      "GPBMetadata\352\002\034Bitsong::Merkledrop::V1bet" +
-      "a1\310\341\036\000b\006proto3"
+      "pProtoZ8github.com/bitsongofficial/go-bi" +
+      "tsong/x/merkledrop/types\242\002\003BMX\252\002\032Bitsong" +
+      ".Merkledrop.V1beta1\312\002\032Bitsong\\Merkledrop" +
+      "\\V1beta1\342\002&Bitsong\\Merkledrop\\V1beta1\\GP" +
+      "BMetadata\352\002\034Bitsong::Merkledrop::V1beta1" +
+      "\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

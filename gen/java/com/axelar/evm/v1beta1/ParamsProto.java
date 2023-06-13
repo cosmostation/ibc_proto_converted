@@ -14,14 +14,2748 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.evm.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    java.lang.String getChain();
+    /**
+     * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    com.google.protobuf.ByteString
+        getChainBytes();
+
+    /**
+     * <code>uint64 confirmation_height = 2 [json_name = "confirmationHeight"];</code>
+     * @return The confirmationHeight.
+     */
+    long getConfirmationHeight();
+
+    /**
+     * <code>string network = 3 [json_name = "network"];</code>
+     * @return The network.
+     */
+    java.lang.String getNetwork();
+    /**
+     * <code>string network = 3 [json_name = "network"];</code>
+     * @return The bytes for network.
+     */
+    com.google.protobuf.ByteString
+        getNetworkBytes();
+
+    /**
+     * <code>bytes token_code = 5 [json_name = "tokenCode"];</code>
+     * @return The tokenCode.
+     */
+    com.google.protobuf.ByteString getTokenCode();
+
+    /**
+     * <code>bytes burnable = 6 [json_name = "burnable"];</code>
+     * @return The burnable.
+     */
+    com.google.protobuf.ByteString getBurnable();
+
+    /**
+     * <code>int64 revote_locking_period = 7 [json_name = "revoteLockingPeriod"];</code>
+     * @return The revoteLockingPeriod.
+     */
+    long getRevoteLockingPeriod();
+
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.axelar.evm.v1beta1.TypesProto.NetworkInfo> 
+        getNetworksList();
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.evm.v1beta1.TypesProto.NetworkInfo getNetworks(int index);
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    int getNetworksCount();
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder> 
+        getNetworksOrBuilderList();
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder getNetworksOrBuilder(
+        int index);
+
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingThreshold field is set.
+     */
+    boolean hasVotingThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The votingThreshold.
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.Threshold getVotingThreshold();
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getVotingThresholdOrBuilder();
+
+    /**
+     * <code>int64 min_voter_count = 10 [json_name = "minVoterCount"];</code>
+     * @return The minVoterCount.
+     */
+    long getMinVoterCount();
+
+    /**
+     * <code>uint32 commands_gas_limit = 11 [json_name = "commandsGasLimit"];</code>
+     * @return The commandsGasLimit.
+     */
+    int getCommandsGasLimit();
+
+    /**
+     * <code>int64 voting_grace_period = 13 [json_name = "votingGracePeriod"];</code>
+     * @return The votingGracePeriod.
+     */
+    long getVotingGracePeriod();
+
+    /**
+     * <code>int64 end_blocker_limit = 14 [json_name = "endBlockerLimit"];</code>
+     * @return The endBlockerLimit.
+     */
+    long getEndBlockerLimit();
+
+    /**
+     * <code>uint64 transfer_limit = 15 [json_name = "transferLimit"];</code>
+     * @return The transferLimit.
+     */
+    long getTransferLimit();
+  }
+  /**
+   * <pre>
+   * Params is the parameter set for this module
+   * </pre>
+   *
+   * Protobuf type {@code axelar.evm.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.evm.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      chain_ = "";
+      network_ = "";
+      tokenCode_ = com.google.protobuf.ByteString.EMPTY;
+      burnable_ = com.google.protobuf.ByteString.EMPTY;
+      networks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.evm.v1beta1.ParamsProto.Params.class, com.axelar.evm.v1beta1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int CHAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chain_ = "";
+    /**
+     * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    @java.lang.Override
+    public java.lang.String getChain() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainBytes() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIRMATION_HEIGHT_FIELD_NUMBER = 2;
+    private long confirmationHeight_ = 0L;
+    /**
+     * <code>uint64 confirmation_height = 2 [json_name = "confirmationHeight"];</code>
+     * @return The confirmationHeight.
+     */
+    @java.lang.Override
+    public long getConfirmationHeight() {
+      return confirmationHeight_;
+    }
+
+    public static final int NETWORK_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object network_ = "";
+    /**
+     * <code>string network = 3 [json_name = "network"];</code>
+     * @return The network.
+     */
+    @java.lang.Override
+    public java.lang.String getNetwork() {
+      java.lang.Object ref = network_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        network_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string network = 3 [json_name = "network"];</code>
+     * @return The bytes for network.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNetworkBytes() {
+      java.lang.Object ref = network_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        network_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_CODE_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString tokenCode_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes token_code = 5 [json_name = "tokenCode"];</code>
+     * @return The tokenCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getTokenCode() {
+      return tokenCode_;
+    }
+
+    public static final int BURNABLE_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString burnable_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes burnable = 6 [json_name = "burnable"];</code>
+     * @return The burnable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBurnable() {
+      return burnable_;
+    }
+
+    public static final int REVOTE_LOCKING_PERIOD_FIELD_NUMBER = 7;
+    private long revoteLockingPeriod_ = 0L;
+    /**
+     * <code>int64 revote_locking_period = 7 [json_name = "revoteLockingPeriod"];</code>
+     * @return The revoteLockingPeriod.
+     */
+    @java.lang.Override
+    public long getRevoteLockingPeriod() {
+      return revoteLockingPeriod_;
+    }
+
+    public static final int NETWORKS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<com.axelar.evm.v1beta1.TypesProto.NetworkInfo> networks_;
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.axelar.evm.v1beta1.TypesProto.NetworkInfo> getNetworksList() {
+      return networks_;
+    }
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder> 
+        getNetworksOrBuilderList() {
+      return networks_;
+    }
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getNetworksCount() {
+      return networks_.size();
+    }
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.evm.v1beta1.TypesProto.NetworkInfo getNetworks(int index) {
+      return networks_.get(index);
+    }
+    /**
+     * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder getNetworksOrBuilder(
+        int index) {
+      return networks_.get(index);
+    }
+
+    public static final int VOTING_THRESHOLD_FIELD_NUMBER = 9;
+    private com.axelar.utils.v1beta1.ThresholdProto.Threshold votingThreshold_;
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return Whether the votingThreshold field is set.
+     */
+    @java.lang.Override
+    public boolean hasVotingThreshold() {
+      return votingThreshold_ != null;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+     * @return The votingThreshold.
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.Threshold getVotingThreshold() {
+      return votingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : votingThreshold_;
+    }
+    /**
+     * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getVotingThresholdOrBuilder() {
+      return votingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : votingThreshold_;
+    }
+
+    public static final int MIN_VOTER_COUNT_FIELD_NUMBER = 10;
+    private long minVoterCount_ = 0L;
+    /**
+     * <code>int64 min_voter_count = 10 [json_name = "minVoterCount"];</code>
+     * @return The minVoterCount.
+     */
+    @java.lang.Override
+    public long getMinVoterCount() {
+      return minVoterCount_;
+    }
+
+    public static final int COMMANDS_GAS_LIMIT_FIELD_NUMBER = 11;
+    private int commandsGasLimit_ = 0;
+    /**
+     * <code>uint32 commands_gas_limit = 11 [json_name = "commandsGasLimit"];</code>
+     * @return The commandsGasLimit.
+     */
+    @java.lang.Override
+    public int getCommandsGasLimit() {
+      return commandsGasLimit_;
+    }
+
+    public static final int VOTING_GRACE_PERIOD_FIELD_NUMBER = 13;
+    private long votingGracePeriod_ = 0L;
+    /**
+     * <code>int64 voting_grace_period = 13 [json_name = "votingGracePeriod"];</code>
+     * @return The votingGracePeriod.
+     */
+    @java.lang.Override
+    public long getVotingGracePeriod() {
+      return votingGracePeriod_;
+    }
+
+    public static final int END_BLOCKER_LIMIT_FIELD_NUMBER = 14;
+    private long endBlockerLimit_ = 0L;
+    /**
+     * <code>int64 end_blocker_limit = 14 [json_name = "endBlockerLimit"];</code>
+     * @return The endBlockerLimit.
+     */
+    @java.lang.Override
+    public long getEndBlockerLimit() {
+      return endBlockerLimit_;
+    }
+
+    public static final int TRANSFER_LIMIT_FIELD_NUMBER = 15;
+    private long transferLimit_ = 0L;
+    /**
+     * <code>uint64 transfer_limit = 15 [json_name = "transferLimit"];</code>
+     * @return The transferLimit.
+     */
+    @java.lang.Override
+    public long getTransferLimit() {
+      return transferLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, chain_);
+      }
+      if (confirmationHeight_ != 0L) {
+        output.writeUInt64(2, confirmationHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(network_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, network_);
+      }
+      if (!tokenCode_.isEmpty()) {
+        output.writeBytes(5, tokenCode_);
+      }
+      if (!burnable_.isEmpty()) {
+        output.writeBytes(6, burnable_);
+      }
+      if (revoteLockingPeriod_ != 0L) {
+        output.writeInt64(7, revoteLockingPeriod_);
+      }
+      for (int i = 0; i < networks_.size(); i++) {
+        output.writeMessage(8, networks_.get(i));
+      }
+      if (votingThreshold_ != null) {
+        output.writeMessage(9, getVotingThreshold());
+      }
+      if (minVoterCount_ != 0L) {
+        output.writeInt64(10, minVoterCount_);
+      }
+      if (commandsGasLimit_ != 0) {
+        output.writeUInt32(11, commandsGasLimit_);
+      }
+      if (votingGracePeriod_ != 0L) {
+        output.writeInt64(13, votingGracePeriod_);
+      }
+      if (endBlockerLimit_ != 0L) {
+        output.writeInt64(14, endBlockerLimit_);
+      }
+      if (transferLimit_ != 0L) {
+        output.writeUInt64(15, transferLimit_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, chain_);
+      }
+      if (confirmationHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, confirmationHeight_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(network_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, network_);
+      }
+      if (!tokenCode_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, tokenCode_);
+      }
+      if (!burnable_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, burnable_);
+      }
+      if (revoteLockingPeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, revoteLockingPeriod_);
+      }
+      for (int i = 0; i < networks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, networks_.get(i));
+      }
+      if (votingThreshold_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getVotingThreshold());
+      }
+      if (minVoterCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, minVoterCount_);
+      }
+      if (commandsGasLimit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, commandsGasLimit_);
+      }
+      if (votingGracePeriod_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(13, votingGracePeriod_);
+      }
+      if (endBlockerLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(14, endBlockerLimit_);
+      }
+      if (transferLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, transferLimit_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.evm.v1beta1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.axelar.evm.v1beta1.ParamsProto.Params other = (com.axelar.evm.v1beta1.ParamsProto.Params) obj;
+
+      if (!getChain()
+          .equals(other.getChain())) return false;
+      if (getConfirmationHeight()
+          != other.getConfirmationHeight()) return false;
+      if (!getNetwork()
+          .equals(other.getNetwork())) return false;
+      if (!getTokenCode()
+          .equals(other.getTokenCode())) return false;
+      if (!getBurnable()
+          .equals(other.getBurnable())) return false;
+      if (getRevoteLockingPeriod()
+          != other.getRevoteLockingPeriod()) return false;
+      if (!getNetworksList()
+          .equals(other.getNetworksList())) return false;
+      if (hasVotingThreshold() != other.hasVotingThreshold()) return false;
+      if (hasVotingThreshold()) {
+        if (!getVotingThreshold()
+            .equals(other.getVotingThreshold())) return false;
+      }
+      if (getMinVoterCount()
+          != other.getMinVoterCount()) return false;
+      if (getCommandsGasLimit()
+          != other.getCommandsGasLimit()) return false;
+      if (getVotingGracePeriod()
+          != other.getVotingGracePeriod()) return false;
+      if (getEndBlockerLimit()
+          != other.getEndBlockerLimit()) return false;
+      if (getTransferLimit()
+          != other.getTransferLimit()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getChain().hashCode();
+      hash = (37 * hash) + CONFIRMATION_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getConfirmationHeight());
+      hash = (37 * hash) + NETWORK_FIELD_NUMBER;
+      hash = (53 * hash) + getNetwork().hashCode();
+      hash = (37 * hash) + TOKEN_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenCode().hashCode();
+      hash = (37 * hash) + BURNABLE_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnable().hashCode();
+      hash = (37 * hash) + REVOTE_LOCKING_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRevoteLockingPeriod());
+      if (getNetworksCount() > 0) {
+        hash = (37 * hash) + NETWORKS_FIELD_NUMBER;
+        hash = (53 * hash) + getNetworksList().hashCode();
+      }
+      if (hasVotingThreshold()) {
+        hash = (37 * hash) + VOTING_THRESHOLD_FIELD_NUMBER;
+        hash = (53 * hash) + getVotingThreshold().hashCode();
+      }
+      hash = (37 * hash) + MIN_VOTER_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinVoterCount());
+      hash = (37 * hash) + COMMANDS_GAS_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getCommandsGasLimit();
+      hash = (37 * hash) + VOTING_GRACE_PERIOD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVotingGracePeriod());
+      hash = (37 * hash) + END_BLOCKER_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndBlockerLimit());
+      hash = (37 * hash) + TRANSFER_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTransferLimit());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.evm.v1beta1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params is the parameter set for this module
+     * </pre>
+     *
+     * Protobuf type {@code axelar.evm.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.evm.v1beta1.Params)
+        com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.evm.v1beta1.ParamsProto.Params.class, com.axelar.evm.v1beta1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.axelar.evm.v1beta1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        chain_ = "";
+        confirmationHeight_ = 0L;
+        network_ = "";
+        tokenCode_ = com.google.protobuf.ByteString.EMPTY;
+        burnable_ = com.google.protobuf.ByteString.EMPTY;
+        revoteLockingPeriod_ = 0L;
+        if (networksBuilder_ == null) {
+          networks_ = java.util.Collections.emptyList();
+        } else {
+          networks_ = null;
+          networksBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        votingThreshold_ = null;
+        if (votingThresholdBuilder_ != null) {
+          votingThresholdBuilder_.dispose();
+          votingThresholdBuilder_ = null;
+        }
+        minVoterCount_ = 0L;
+        commandsGasLimit_ = 0;
+        votingGracePeriod_ = 0L;
+        endBlockerLimit_ = 0L;
+        transferLimit_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.evm.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.evm.v1beta1.ParamsProto.Params build() {
+        com.axelar.evm.v1beta1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.evm.v1beta1.ParamsProto.Params buildPartial() {
+        com.axelar.evm.v1beta1.ParamsProto.Params result = new com.axelar.evm.v1beta1.ParamsProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.evm.v1beta1.ParamsProto.Params result) {
+        if (networksBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            networks_ = java.util.Collections.unmodifiableList(networks_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.networks_ = networks_;
+        } else {
+          result.networks_ = networksBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.axelar.evm.v1beta1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.chain_ = chain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.confirmationHeight_ = confirmationHeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.network_ = network_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tokenCode_ = tokenCode_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.burnable_ = burnable_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.revoteLockingPeriod_ = revoteLockingPeriod_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.votingThreshold_ = votingThresholdBuilder_ == null
+              ? votingThreshold_
+              : votingThresholdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.minVoterCount_ = minVoterCount_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.commandsGasLimit_ = commandsGasLimit_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.votingGracePeriod_ = votingGracePeriod_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.endBlockerLimit_ = endBlockerLimit_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.transferLimit_ = transferLimit_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.evm.v1beta1.ParamsProto.Params) {
+          return mergeFrom((com.axelar.evm.v1beta1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.evm.v1beta1.ParamsProto.Params other) {
+        if (other == com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (!other.getChain().isEmpty()) {
+          chain_ = other.chain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getConfirmationHeight() != 0L) {
+          setConfirmationHeight(other.getConfirmationHeight());
+        }
+        if (!other.getNetwork().isEmpty()) {
+          network_ = other.network_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getTokenCode() != com.google.protobuf.ByteString.EMPTY) {
+          setTokenCode(other.getTokenCode());
+        }
+        if (other.getBurnable() != com.google.protobuf.ByteString.EMPTY) {
+          setBurnable(other.getBurnable());
+        }
+        if (other.getRevoteLockingPeriod() != 0L) {
+          setRevoteLockingPeriod(other.getRevoteLockingPeriod());
+        }
+        if (networksBuilder_ == null) {
+          if (!other.networks_.isEmpty()) {
+            if (networks_.isEmpty()) {
+              networks_ = other.networks_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureNetworksIsMutable();
+              networks_.addAll(other.networks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.networks_.isEmpty()) {
+            if (networksBuilder_.isEmpty()) {
+              networksBuilder_.dispose();
+              networksBuilder_ = null;
+              networks_ = other.networks_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              networksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNetworksFieldBuilder() : null;
+            } else {
+              networksBuilder_.addAllMessages(other.networks_);
+            }
+          }
+        }
+        if (other.hasVotingThreshold()) {
+          mergeVotingThreshold(other.getVotingThreshold());
+        }
+        if (other.getMinVoterCount() != 0L) {
+          setMinVoterCount(other.getMinVoterCount());
+        }
+        if (other.getCommandsGasLimit() != 0) {
+          setCommandsGasLimit(other.getCommandsGasLimit());
+        }
+        if (other.getVotingGracePeriod() != 0L) {
+          setVotingGracePeriod(other.getVotingGracePeriod());
+        }
+        if (other.getEndBlockerLimit() != 0L) {
+          setEndBlockerLimit(other.getEndBlockerLimit());
+        }
+        if (other.getTransferLimit() != 0L) {
+          setTransferLimit(other.getTransferLimit());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                chain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                confirmationHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                network_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 42: {
+                tokenCode_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              case 50: {
+                burnable_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              case 56: {
+                revoteLockingPeriod_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 56
+              case 66: {
+                com.axelar.evm.v1beta1.TypesProto.NetworkInfo m =
+                    input.readMessage(
+                        com.axelar.evm.v1beta1.TypesProto.NetworkInfo.parser(),
+                        extensionRegistry);
+                if (networksBuilder_ == null) {
+                  ensureNetworksIsMutable();
+                  networks_.add(m);
+                } else {
+                  networksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getVotingThresholdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
+              case 80: {
+                minVoterCount_ = input.readInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 80
+              case 88: {
+                commandsGasLimit_ = input.readUInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 88
+              case 104: {
+                votingGracePeriod_ = input.readInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 104
+              case 112: {
+                endBlockerLimit_ = input.readInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 112
+              case 120: {
+                transferLimit_ = input.readUInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 120
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object chain_ = "";
+      /**
+       * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The chain.
+       */
+      public java.lang.String getChain() {
+        java.lang.Object ref = chain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The bytes for chain.
+       */
+      public com.google.protobuf.ByteString
+          getChainBytes() {
+        java.lang.Object ref = chain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChain() {
+        chain_ = getDefaultInstance().getChain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 1 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes for chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long confirmationHeight_ ;
+      /**
+       * <code>uint64 confirmation_height = 2 [json_name = "confirmationHeight"];</code>
+       * @return The confirmationHeight.
+       */
+      @java.lang.Override
+      public long getConfirmationHeight() {
+        return confirmationHeight_;
+      }
+      /**
+       * <code>uint64 confirmation_height = 2 [json_name = "confirmationHeight"];</code>
+       * @param value The confirmationHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfirmationHeight(long value) {
+
+        confirmationHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 confirmation_height = 2 [json_name = "confirmationHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfirmationHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        confirmationHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object network_ = "";
+      /**
+       * <code>string network = 3 [json_name = "network"];</code>
+       * @return The network.
+       */
+      public java.lang.String getNetwork() {
+        java.lang.Object ref = network_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          network_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string network = 3 [json_name = "network"];</code>
+       * @return The bytes for network.
+       */
+      public com.google.protobuf.ByteString
+          getNetworkBytes() {
+        java.lang.Object ref = network_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          network_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string network = 3 [json_name = "network"];</code>
+       * @param value The network to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetwork(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        network_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string network = 3 [json_name = "network"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNetwork() {
+        network_ = getDefaultInstance().getNetwork();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string network = 3 [json_name = "network"];</code>
+       * @param value The bytes for network to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNetworkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        network_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString tokenCode_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes token_code = 5 [json_name = "tokenCode"];</code>
+       * @return The tokenCode.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getTokenCode() {
+        return tokenCode_;
+      }
+      /**
+       * <code>bytes token_code = 5 [json_name = "tokenCode"];</code>
+       * @param value The tokenCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenCode(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenCode_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes token_code = 5 [json_name = "tokenCode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenCode() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        tokenCode_ = getDefaultInstance().getTokenCode();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString burnable_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes burnable = 6 [json_name = "burnable"];</code>
+       * @return The burnable.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBurnable() {
+        return burnable_;
+      }
+      /**
+       * <code>bytes burnable = 6 [json_name = "burnable"];</code>
+       * @param value The burnable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnable(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnable_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes burnable = 6 [json_name = "burnable"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnable() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        burnable_ = getDefaultInstance().getBurnable();
+        onChanged();
+        return this;
+      }
+
+      private long revoteLockingPeriod_ ;
+      /**
+       * <code>int64 revote_locking_period = 7 [json_name = "revoteLockingPeriod"];</code>
+       * @return The revoteLockingPeriod.
+       */
+      @java.lang.Override
+      public long getRevoteLockingPeriod() {
+        return revoteLockingPeriod_;
+      }
+      /**
+       * <code>int64 revote_locking_period = 7 [json_name = "revoteLockingPeriod"];</code>
+       * @param value The revoteLockingPeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevoteLockingPeriod(long value) {
+
+        revoteLockingPeriod_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 revote_locking_period = 7 [json_name = "revoteLockingPeriod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevoteLockingPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        revoteLockingPeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.axelar.evm.v1beta1.TypesProto.NetworkInfo> networks_ =
+        java.util.Collections.emptyList();
+      private void ensureNetworksIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          networks_ = new java.util.ArrayList<com.axelar.evm.v1beta1.TypesProto.NetworkInfo>(networks_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.axelar.evm.v1beta1.TypesProto.NetworkInfo, com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder, com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder> networksBuilder_;
+
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.axelar.evm.v1beta1.TypesProto.NetworkInfo> getNetworksList() {
+        if (networksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(networks_);
+        } else {
+          return networksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public int getNetworksCount() {
+        if (networksBuilder_ == null) {
+          return networks_.size();
+        } else {
+          return networksBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.TypesProto.NetworkInfo getNetworks(int index) {
+        if (networksBuilder_ == null) {
+          return networks_.get(index);
+        } else {
+          return networksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNetworks(
+          int index, com.axelar.evm.v1beta1.TypesProto.NetworkInfo value) {
+        if (networksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNetworksIsMutable();
+          networks_.set(index, value);
+          onChanged();
+        } else {
+          networksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNetworks(
+          int index, com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder builderForValue) {
+        if (networksBuilder_ == null) {
+          ensureNetworksIsMutable();
+          networks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          networksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNetworks(com.axelar.evm.v1beta1.TypesProto.NetworkInfo value) {
+        if (networksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNetworksIsMutable();
+          networks_.add(value);
+          onChanged();
+        } else {
+          networksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNetworks(
+          int index, com.axelar.evm.v1beta1.TypesProto.NetworkInfo value) {
+        if (networksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNetworksIsMutable();
+          networks_.add(index, value);
+          onChanged();
+        } else {
+          networksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNetworks(
+          com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder builderForValue) {
+        if (networksBuilder_ == null) {
+          ensureNetworksIsMutable();
+          networks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          networksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addNetworks(
+          int index, com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder builderForValue) {
+        if (networksBuilder_ == null) {
+          ensureNetworksIsMutable();
+          networks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          networksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllNetworks(
+          java.lang.Iterable<? extends com.axelar.evm.v1beta1.TypesProto.NetworkInfo> values) {
+        if (networksBuilder_ == null) {
+          ensureNetworksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, networks_);
+          onChanged();
+        } else {
+          networksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearNetworks() {
+        if (networksBuilder_ == null) {
+          networks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          networksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeNetworks(int index) {
+        if (networksBuilder_ == null) {
+          ensureNetworksIsMutable();
+          networks_.remove(index);
+          onChanged();
+        } else {
+          networksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder getNetworksBuilder(
+          int index) {
+        return getNetworksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder getNetworksOrBuilder(
+          int index) {
+        if (networksBuilder_ == null) {
+          return networks_.get(index);  } else {
+          return networksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder> 
+           getNetworksOrBuilderList() {
+        if (networksBuilder_ != null) {
+          return networksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(networks_);
+        }
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder addNetworksBuilder() {
+        return getNetworksFieldBuilder().addBuilder(
+            com.axelar.evm.v1beta1.TypesProto.NetworkInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder addNetworksBuilder(
+          int index) {
+        return getNetworksFieldBuilder().addBuilder(
+            index, com.axelar.evm.v1beta1.TypesProto.NetworkInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .axelar.evm.v1beta1.NetworkInfo networks = 8 [json_name = "networks", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder> 
+           getNetworksBuilderList() {
+        return getNetworksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.axelar.evm.v1beta1.TypesProto.NetworkInfo, com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder, com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder> 
+          getNetworksFieldBuilder() {
+        if (networksBuilder_ == null) {
+          networksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.axelar.evm.v1beta1.TypesProto.NetworkInfo, com.axelar.evm.v1beta1.TypesProto.NetworkInfo.Builder, com.axelar.evm.v1beta1.TypesProto.NetworkInfoOrBuilder>(
+                  networks_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          networks_ = null;
+        }
+        return networksBuilder_;
+      }
+
+      private com.axelar.utils.v1beta1.ThresholdProto.Threshold votingThreshold_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> votingThresholdBuilder_;
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       * @return Whether the votingThreshold field is set.
+       */
+      public boolean hasVotingThreshold() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       * @return The votingThreshold.
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold getVotingThreshold() {
+        if (votingThresholdBuilder_ == null) {
+          return votingThreshold_ == null ? com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : votingThreshold_;
+        } else {
+          return votingThresholdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (votingThresholdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          votingThreshold_ = value;
+        } else {
+          votingThresholdBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setVotingThreshold(
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder builderForValue) {
+        if (votingThresholdBuilder_ == null) {
+          votingThreshold_ = builderForValue.build();
+        } else {
+          votingThresholdBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeVotingThreshold(com.axelar.utils.v1beta1.ThresholdProto.Threshold value) {
+        if (votingThresholdBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            votingThreshold_ != null &&
+            votingThreshold_ != com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance()) {
+            getVotingThresholdBuilder().mergeFrom(value);
+          } else {
+            votingThreshold_ = value;
+          }
+        } else {
+          votingThresholdBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearVotingThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        votingThreshold_ = null;
+        if (votingThresholdBuilder_ != null) {
+          votingThresholdBuilder_.dispose();
+          votingThresholdBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder getVotingThresholdBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getVotingThresholdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder getVotingThresholdOrBuilder() {
+        if (votingThresholdBuilder_ != null) {
+          return votingThresholdBuilder_.getMessageOrBuilder();
+        } else {
+          return votingThreshold_ == null ?
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold.getDefaultInstance() : votingThreshold_;
+        }
+      }
+      /**
+       * <code>.axelar.utils.v1beta1.Threshold voting_threshold = 9 [json_name = "votingThreshold", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder> 
+          getVotingThresholdFieldBuilder() {
+        if (votingThresholdBuilder_ == null) {
+          votingThresholdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.utils.v1beta1.ThresholdProto.Threshold, com.axelar.utils.v1beta1.ThresholdProto.Threshold.Builder, com.axelar.utils.v1beta1.ThresholdProto.ThresholdOrBuilder>(
+                  getVotingThreshold(),
+                  getParentForChildren(),
+                  isClean());
+          votingThreshold_ = null;
+        }
+        return votingThresholdBuilder_;
+      }
+
+      private long minVoterCount_ ;
+      /**
+       * <code>int64 min_voter_count = 10 [json_name = "minVoterCount"];</code>
+       * @return The minVoterCount.
+       */
+      @java.lang.Override
+      public long getMinVoterCount() {
+        return minVoterCount_;
+      }
+      /**
+       * <code>int64 min_voter_count = 10 [json_name = "minVoterCount"];</code>
+       * @param value The minVoterCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinVoterCount(long value) {
+
+        minVoterCount_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 min_voter_count = 10 [json_name = "minVoterCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinVoterCount() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        minVoterCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int commandsGasLimit_ ;
+      /**
+       * <code>uint32 commands_gas_limit = 11 [json_name = "commandsGasLimit"];</code>
+       * @return The commandsGasLimit.
+       */
+      @java.lang.Override
+      public int getCommandsGasLimit() {
+        return commandsGasLimit_;
+      }
+      /**
+       * <code>uint32 commands_gas_limit = 11 [json_name = "commandsGasLimit"];</code>
+       * @param value The commandsGasLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommandsGasLimit(int value) {
+
+        commandsGasLimit_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 commands_gas_limit = 11 [json_name = "commandsGasLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommandsGasLimit() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        commandsGasLimit_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long votingGracePeriod_ ;
+      /**
+       * <code>int64 voting_grace_period = 13 [json_name = "votingGracePeriod"];</code>
+       * @return The votingGracePeriod.
+       */
+      @java.lang.Override
+      public long getVotingGracePeriod() {
+        return votingGracePeriod_;
+      }
+      /**
+       * <code>int64 voting_grace_period = 13 [json_name = "votingGracePeriod"];</code>
+       * @param value The votingGracePeriod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVotingGracePeriod(long value) {
+
+        votingGracePeriod_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 voting_grace_period = 13 [json_name = "votingGracePeriod"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVotingGracePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        votingGracePeriod_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endBlockerLimit_ ;
+      /**
+       * <code>int64 end_blocker_limit = 14 [json_name = "endBlockerLimit"];</code>
+       * @return The endBlockerLimit.
+       */
+      @java.lang.Override
+      public long getEndBlockerLimit() {
+        return endBlockerLimit_;
+      }
+      /**
+       * <code>int64 end_blocker_limit = 14 [json_name = "endBlockerLimit"];</code>
+       * @param value The endBlockerLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndBlockerLimit(long value) {
+
+        endBlockerLimit_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 end_blocker_limit = 14 [json_name = "endBlockerLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndBlockerLimit() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        endBlockerLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long transferLimit_ ;
+      /**
+       * <code>uint64 transfer_limit = 15 [json_name = "transferLimit"];</code>
+       * @return The transferLimit.
+       */
+      @java.lang.Override
+      public long getTransferLimit() {
+        return transferLimit_;
+      }
+      /**
+       * <code>uint64 transfer_limit = 15 [json_name = "transferLimit"];</code>
+       * @param value The transferLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferLimit(long value) {
+
+        transferLimit_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 transfer_limit = 15 [json_name = "transferLimit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferLimit() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        transferLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.evm.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.evm.v1beta1.Params)
+    private static final com.axelar.evm.v1beta1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.evm.v1beta1.ParamsProto.Params();
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.evm.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PendingChainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.evm.v1beta1.PendingChain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.axelar.evm.v1beta1.ParamsProto.Params getParams();
+    /**
+     * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chain field is set.
+     */
+    boolean hasChain();
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+     * @return The chain.
+     */
+    com.axelar.nexus.exported.v1beta1.TypesProto.Chain getChain();
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+     */
+    com.axelar.nexus.exported.v1beta1.TypesProto.ChainOrBuilder getChainOrBuilder();
+  }
+  /**
+   * Protobuf type {@code axelar.evm.v1beta1.PendingChain}
+   */
+  public static final class PendingChain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.evm.v1beta1.PendingChain)
+      PendingChainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PendingChain.newBuilder() to construct.
+    private PendingChain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PendingChain() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PendingChain();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_PendingChain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_PendingChain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.evm.v1beta1.ParamsProto.PendingChain.class, com.axelar.evm.v1beta1.ParamsProto.PendingChain.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.axelar.evm.v1beta1.ParamsProto.Params params_;
+    /**
+     * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.axelar.evm.v1beta1.ParamsProto.Params getParams() {
+      return params_ == null ? com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int CHAIN_FIELD_NUMBER = 2;
+    private com.axelar.nexus.exported.v1beta1.TypesProto.Chain chain_;
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+     * @return Whether the chain field is set.
+     */
+    @java.lang.Override
+    public boolean hasChain() {
+      return chain_ != null;
+    }
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+     * @return The chain.
+     */
+    @java.lang.Override
+    public com.axelar.nexus.exported.v1beta1.TypesProto.Chain getChain() {
+      return chain_ == null ? com.axelar.nexus.exported.v1beta1.TypesProto.Chain.getDefaultInstance() : chain_;
+    }
+    /**
+     * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.axelar.nexus.exported.v1beta1.TypesProto.ChainOrBuilder getChainOrBuilder() {
+      return chain_ == null ? com.axelar.nexus.exported.v1beta1.TypesProto.Chain.getDefaultInstance() : chain_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (chain_ != null) {
+        output.writeMessage(2, getChain());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (chain_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getChain());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.evm.v1beta1.ParamsProto.PendingChain)) {
+        return super.equals(obj);
+      }
+      com.axelar.evm.v1beta1.ParamsProto.PendingChain other = (com.axelar.evm.v1beta1.ParamsProto.PendingChain) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasChain() != other.hasChain()) return false;
+      if (hasChain()) {
+        if (!getChain()
+            .equals(other.getChain())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasChain()) {
+        hash = (37 * hash) + CHAIN_FIELD_NUMBER;
+        hash = (53 * hash) + getChain().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.evm.v1beta1.ParamsProto.PendingChain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.evm.v1beta1.PendingChain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.evm.v1beta1.PendingChain)
+        com.axelar.evm.v1beta1.ParamsProto.PendingChainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_PendingChain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_PendingChain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.evm.v1beta1.ParamsProto.PendingChain.class, com.axelar.evm.v1beta1.ParamsProto.PendingChain.Builder.class);
+      }
+
+      // Construct using com.axelar.evm.v1beta1.ParamsProto.PendingChain.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        chain_ = null;
+        if (chainBuilder_ != null) {
+          chainBuilder_.dispose();
+          chainBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.evm.v1beta1.ParamsProto.internal_static_axelar_evm_v1beta1_PendingChain_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.evm.v1beta1.ParamsProto.PendingChain getDefaultInstanceForType() {
+        return com.axelar.evm.v1beta1.ParamsProto.PendingChain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.evm.v1beta1.ParamsProto.PendingChain build() {
+        com.axelar.evm.v1beta1.ParamsProto.PendingChain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.evm.v1beta1.ParamsProto.PendingChain buildPartial() {
+        com.axelar.evm.v1beta1.ParamsProto.PendingChain result = new com.axelar.evm.v1beta1.ParamsProto.PendingChain(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.evm.v1beta1.ParamsProto.PendingChain result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chain_ = chainBuilder_ == null
+              ? chain_
+              : chainBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.evm.v1beta1.ParamsProto.PendingChain) {
+          return mergeFrom((com.axelar.evm.v1beta1.ParamsProto.PendingChain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.evm.v1beta1.ParamsProto.PendingChain other) {
+        if (other == com.axelar.evm.v1beta1.ParamsProto.PendingChain.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasChain()) {
+          mergeChain(other.getChain());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getChainFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.axelar.evm.v1beta1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.evm.v1beta1.ParamsProto.Params, com.axelar.evm.v1beta1.ParamsProto.Params.Builder, com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.axelar.evm.v1beta1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.axelar.evm.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.axelar.evm.v1beta1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.axelar.evm.v1beta1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.axelar.evm.v1beta1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.axelar.evm.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.evm.v1beta1.ParamsProto.Params, com.axelar.evm.v1beta1.ParamsProto.Params.Builder, com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.evm.v1beta1.ParamsProto.Params, com.axelar.evm.v1beta1.ParamsProto.Params.Builder, com.axelar.evm.v1beta1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.axelar.nexus.exported.v1beta1.TypesProto.Chain chain_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.nexus.exported.v1beta1.TypesProto.Chain, com.axelar.nexus.exported.v1beta1.TypesProto.Chain.Builder, com.axelar.nexus.exported.v1beta1.TypesProto.ChainOrBuilder> chainBuilder_;
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       * @return Whether the chain field is set.
+       */
+      public boolean hasChain() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       * @return The chain.
+       */
+      public com.axelar.nexus.exported.v1beta1.TypesProto.Chain getChain() {
+        if (chainBuilder_ == null) {
+          return chain_ == null ? com.axelar.nexus.exported.v1beta1.TypesProto.Chain.getDefaultInstance() : chain_;
+        } else {
+          return chainBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChain(com.axelar.nexus.exported.v1beta1.TypesProto.Chain value) {
+        if (chainBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          chain_ = value;
+        } else {
+          chainBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setChain(
+          com.axelar.nexus.exported.v1beta1.TypesProto.Chain.Builder builderForValue) {
+        if (chainBuilder_ == null) {
+          chain_ = builderForValue.build();
+        } else {
+          chainBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeChain(com.axelar.nexus.exported.v1beta1.TypesProto.Chain value) {
+        if (chainBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            chain_ != null &&
+            chain_ != com.axelar.nexus.exported.v1beta1.TypesProto.Chain.getDefaultInstance()) {
+            getChainBuilder().mergeFrom(value);
+          } else {
+            chain_ = value;
+          }
+        } else {
+          chainBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearChain() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        chain_ = null;
+        if (chainBuilder_ != null) {
+          chainBuilder_.dispose();
+          chainBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.nexus.exported.v1beta1.TypesProto.Chain.Builder getChainBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getChainFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      public com.axelar.nexus.exported.v1beta1.TypesProto.ChainOrBuilder getChainOrBuilder() {
+        if (chainBuilder_ != null) {
+          return chainBuilder_.getMessageOrBuilder();
+        } else {
+          return chain_ == null ?
+              com.axelar.nexus.exported.v1beta1.TypesProto.Chain.getDefaultInstance() : chain_;
+        }
+      }
+      /**
+       * <code>.axelar.nexus.exported.v1beta1.Chain chain = 2 [json_name = "chain", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.axelar.nexus.exported.v1beta1.TypesProto.Chain, com.axelar.nexus.exported.v1beta1.TypesProto.Chain.Builder, com.axelar.nexus.exported.v1beta1.TypesProto.ChainOrBuilder> 
+          getChainFieldBuilder() {
+        if (chainBuilder_ == null) {
+          chainBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.axelar.nexus.exported.v1beta1.TypesProto.Chain, com.axelar.nexus.exported.v1beta1.TypesProto.Chain.Builder, com.axelar.nexus.exported.v1beta1.TypesProto.ChainOrBuilder>(
+                  getChain(),
+                  getParentForChildren(),
+                  isClean());
+          chain_ = null;
+        }
+        return chainBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.evm.v1beta1.PendingChain)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.evm.v1beta1.PendingChain)
+    private static final com.axelar.evm.v1beta1.ParamsProto.PendingChain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.evm.v1beta1.ParamsProto.PendingChain();
+    }
+
+    public static com.axelar.evm.v1beta1.ParamsProto.PendingChain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PendingChain>
+        PARSER = new com.google.protobuf.AbstractParser<PendingChain>() {
+      @java.lang.Override
+      public PendingChain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PendingChain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PendingChain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.evm.v1beta1.ParamsProto.PendingChain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_evm_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_evm_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_evm_v1beta1_PendingChain_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_evm_v1beta1_PendingChain_fieldAccessorTable;
 
@@ -57,13 +2791,13 @@ public final class ParamsProto {
       "itJ\004\010\004\020\005J\004\010\014\020\r\"\212\001\n\014PendingChain\0228\n\006param" +
       "s\030\001 \001(\0132\032.axelar.evm.v1beta1.ParamsB\004\310\336\037" +
       "\000R\006params\022@\n\005chain\030\002 \001(\0132$.axelar.nexus." +
-      "exported.v1beta1.ChainB\004\310\336\037\000R\005chainB\305\001\n\026" +
-      "com.axelar.evm.v1beta1B\013ParamsProtoP\001Z0g" +
-      "ithub.com/axelarnetwork/axelar-core/x/ev" +
-      "m/types\242\002\003AEX\252\002\022Axelar.Evm.V1beta1\312\002\022Axe" +
-      "lar\\Evm\\V1beta1\342\002\036Axelar\\Evm\\V1beta1\\GPB" +
-      "Metadata\352\002\024Axelar::Evm::V1beta1\310\341\036\000b\006pro" +
-      "to3"
+      "exported.v1beta1.ChainB\004\310\336\037\000R\005chainB\303\001\n\026" +
+      "com.axelar.evm.v1beta1B\013ParamsProtoZ0git" +
+      "hub.com/axelarnetwork/axelar-core/x/evm/" +
+      "types\242\002\003AEX\252\002\022Axelar.Evm.V1beta1\312\002\022Axela" +
+      "r\\Evm\\V1beta1\342\002\036Axelar\\Evm\\V1beta1\\GPBMe" +
+      "tadata\352\002\024Axelar::Evm::V1beta1\310\341\036\000b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,486 @@ public final class BlacklistedProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface BlacklistedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:noble.fiattokenfactory.Blacklisted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes addressBz = 1 [json_name = "addressBz"];</code>
+     * @return The addressBz.
+     */
+    com.google.protobuf.ByteString getAddressBz();
+  }
+  /**
+   * Protobuf type {@code noble.fiattokenfactory.Blacklisted}
+   */
+  public static final class Blacklisted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:noble.fiattokenfactory.Blacklisted)
+      BlacklistedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Blacklisted.newBuilder() to construct.
+    private Blacklisted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Blacklisted() {
+      addressBz_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Blacklisted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.noble.fiattokenfactory.BlacklistedProto.internal_static_noble_fiattokenfactory_Blacklisted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.noble.fiattokenfactory.BlacklistedProto.internal_static_noble_fiattokenfactory_Blacklisted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.class, com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.Builder.class);
+    }
+
+    public static final int ADDRESSBZ_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString addressBz_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes addressBz = 1 [json_name = "addressBz"];</code>
+     * @return The addressBz.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAddressBz() {
+      return addressBz_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!addressBz_.isEmpty()) {
+        output.writeBytes(1, addressBz_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!addressBz_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, addressBz_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.noble.fiattokenfactory.BlacklistedProto.Blacklisted)) {
+        return super.equals(obj);
+      }
+      com.noble.fiattokenfactory.BlacklistedProto.Blacklisted other = (com.noble.fiattokenfactory.BlacklistedProto.Blacklisted) obj;
+
+      if (!getAddressBz()
+          .equals(other.getAddressBz())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESSBZ_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressBz().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.noble.fiattokenfactory.BlacklistedProto.Blacklisted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code noble.fiattokenfactory.Blacklisted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:noble.fiattokenfactory.Blacklisted)
+        com.noble.fiattokenfactory.BlacklistedProto.BlacklistedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.noble.fiattokenfactory.BlacklistedProto.internal_static_noble_fiattokenfactory_Blacklisted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.noble.fiattokenfactory.BlacklistedProto.internal_static_noble_fiattokenfactory_Blacklisted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.class, com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.Builder.class);
+      }
+
+      // Construct using com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        addressBz_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.noble.fiattokenfactory.BlacklistedProto.internal_static_noble_fiattokenfactory_Blacklisted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.noble.fiattokenfactory.BlacklistedProto.Blacklisted getDefaultInstanceForType() {
+        return com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.noble.fiattokenfactory.BlacklistedProto.Blacklisted build() {
+        com.noble.fiattokenfactory.BlacklistedProto.Blacklisted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.noble.fiattokenfactory.BlacklistedProto.Blacklisted buildPartial() {
+        com.noble.fiattokenfactory.BlacklistedProto.Blacklisted result = new com.noble.fiattokenfactory.BlacklistedProto.Blacklisted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.noble.fiattokenfactory.BlacklistedProto.Blacklisted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.addressBz_ = addressBz_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.noble.fiattokenfactory.BlacklistedProto.Blacklisted) {
+          return mergeFrom((com.noble.fiattokenfactory.BlacklistedProto.Blacklisted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.noble.fiattokenfactory.BlacklistedProto.Blacklisted other) {
+        if (other == com.noble.fiattokenfactory.BlacklistedProto.Blacklisted.getDefaultInstance()) return this;
+        if (other.getAddressBz() != com.google.protobuf.ByteString.EMPTY) {
+          setAddressBz(other.getAddressBz());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                addressBz_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString addressBz_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes addressBz = 1 [json_name = "addressBz"];</code>
+       * @return The addressBz.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAddressBz() {
+        return addressBz_;
+      }
+      /**
+       * <code>bytes addressBz = 1 [json_name = "addressBz"];</code>
+       * @param value The addressBz to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBz(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        addressBz_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes addressBz = 1 [json_name = "addressBz"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddressBz() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        addressBz_ = getDefaultInstance().getAddressBz();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:noble.fiattokenfactory.Blacklisted)
+    }
+
+    // @@protoc_insertion_point(class_scope:noble.fiattokenfactory.Blacklisted)
+    private static final com.noble.fiattokenfactory.BlacklistedProto.Blacklisted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.noble.fiattokenfactory.BlacklistedProto.Blacklisted();
+    }
+
+    public static com.noble.fiattokenfactory.BlacklistedProto.Blacklisted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Blacklisted>
+        PARSER = new com.google.protobuf.AbstractParser<Blacklisted>() {
+      @java.lang.Override
+      public Blacklisted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Blacklisted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Blacklisted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.noble.fiattokenfactory.BlacklistedProto.Blacklisted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_noble_fiattokenfactory_Blacklisted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_noble_fiattokenfactory_Blacklisted_fieldAccessorTable;
 
@@ -30,13 +507,13 @@ public final class BlacklistedProto {
     java.lang.String[] descriptorData = {
       "\n(noble/fiattokenfactory/blacklisted.pro" +
       "to\022\026noble.fiattokenfactory\"+\n\013Blackliste" +
-      "d\022\034\n\taddressBz\030\001 \001(\014R\taddressBzB\347\001\n\032com." +
+      "d\022\034\n\taddressBz\030\001 \001(\014R\taddressBzB\345\001\n\032com." +
       "noble.fiattokenfactoryB\020BlacklistedProto" +
-      "P\001Z>github.com/strangelove-ventures/nobl" +
-      "e/x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble" +
-      ".Fiattokenfactory\312\002\026Noble\\Fiattokenfacto" +
-      "ry\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352" +
-      "\002\027Noble::Fiattokenfactoryb\006proto3"
+      "Z>github.com/strangelove-ventures/noble/" +
+      "x/fiattokenfactory/types\242\002\003NFX\252\002\026Noble.F" +
+      "iattokenfactory\312\002\026Noble\\Fiattokenfactory" +
+      "\342\002\"Noble\\Fiattokenfactory\\GPBMetadata\352\002\027" +
+      "Noble::Fiattokenfactoryb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

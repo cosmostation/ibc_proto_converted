@@ -65,13 +65,12 @@ public final class MsgServerProto {
       "0.desmos.profiles.v3.MsgUnlinkApplicatio" +
       "nResponse\022`\n\014UpdateParams\022#.desmos.profi" +
       "les.v3.MsgUpdateParams\032+.desmos.profiles" +
-      ".v3.MsgUpdateParamsResponse\032\005\200\347\260*\001B\305\001\n\026c" +
-      "om.desmos.profiles.v3B\016MsgServerProtoP\001Z" +
-      "1github.com/desmos-labs/desmos/v5/x/prof" +
-      "iles/types\242\002\003DPX\252\002\022Desmos.Profiles.V3\312\002\022" +
-      "Desmos\\Profiles\\V3\342\002\036Desmos\\Profiles\\V3\\" +
-      "GPBMetadata\352\002\024Desmos::Profiles::V3b\006prot" +
-      "o3"
+      ".v3.MsgUpdateParamsResponse\032\005\200\347\260*\001B\303\001\n\026c" +
+      "om.desmos.profiles.v3B\016MsgServerProtoZ1g" +
+      "ithub.com/desmos-labs/desmos/v5/x/profil" +
+      "es/types\242\002\003DPX\252\002\022Desmos.Profiles.V3\312\002\022De" +
+      "smos\\Profiles\\V3\342\002\036Desmos\\Profiles\\V3\\GP" +
+      "BMetadata\352\002\024Desmos::Profiles::V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

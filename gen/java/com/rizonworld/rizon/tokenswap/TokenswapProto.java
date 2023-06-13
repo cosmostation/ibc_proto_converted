@@ -14,14 +14,1982 @@ public final class TokenswapProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TokenswapOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.Tokenswap)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * tx_hash is the tx hash of burn tx from legacy chain
+     * tx_hash is used for store key
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The txHash.
+     */
+    java.lang.String getTxHash();
+    /**
+     * <pre>
+     * tx_hash is the tx hash of burn tx from legacy chain
+     * tx_hash is used for store key
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The bytes for txHash.
+     */
+    com.google.protobuf.ByteString
+        getTxHashBytes();
+
+    /**
+     * <pre>
+     * receiver is the target of tokenswap
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    java.lang.String getReceiver();
+    /**
+     * <pre>
+     * receiver is the target of tokenswap
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    com.google.protobuf.ByteString
+        getReceiverBytes();
+
+    /**
+     * <pre>
+     * signer is who confirms the swap process
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    java.lang.String getSigner();
+    /**
+     * <pre>
+     * signer is who confirms the swap process
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    com.google.protobuf.ByteString
+        getSignerBytes();
+
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getAmountList();
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index);
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getAmountCount();
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList();
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Tokenswap defines the tokenswap state
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.Tokenswap}
+   */
+  public static final class Tokenswap extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.Tokenswap)
+      TokenswapOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Tokenswap.newBuilder() to construct.
+    private Tokenswap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Tokenswap() {
+      txHash_ = "";
+      receiver_ = "";
+      signer_ = "";
+      amount_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tokenswap();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_Tokenswap_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_Tokenswap_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.class, com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder.class);
+    }
+
+    public static final int TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object txHash_ = "";
+    /**
+     * <pre>
+     * tx_hash is the tx hash of burn tx from legacy chain
+     * tx_hash is used for store key
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The txHash.
+     */
+    @java.lang.Override
+    public java.lang.String getTxHash() {
+      java.lang.Object ref = txHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        txHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * tx_hash is the tx hash of burn tx from legacy chain
+     * tx_hash is used for store key
+     * </pre>
+     *
+     * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+     * @return The bytes for txHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTxHashBytes() {
+      java.lang.Object ref = txHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        txHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiver_ = "";
+    /**
+     * <pre>
+     * receiver is the target of tokenswap
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiver() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * receiver is the target of tokenswap
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverBytes() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object signer_ = "";
+    /**
+     * <pre>
+     * signer is who confirms the swap process
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer"];</code>
+     * @return The signer.
+     */
+    @java.lang.Override
+    public java.lang.String getSigner() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * signer is who confirms the swap process
+     * </pre>
+     *
+     * <code>string signer = 3 [json_name = "signer"];</code>
+     * @return The bytes for signer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignerBytes() {
+      java.lang.Object ref = signer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_;
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+      return amount_;
+    }
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getAmountOrBuilderList() {
+      return amount_;
+    }
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getAmountCount() {
+      return amount_.size();
+    }
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+      return amount_.get(index);
+    }
+    /**
+     * <pre>
+     * amount is the amount of swap process
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+        int index) {
+      return amount_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, txHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, signer_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        output.writeMessage(4, amount_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, txHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, signer_);
+      }
+      for (int i = 0; i < amount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, amount_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap other = (com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap) obj;
+
+      if (!getTxHash()
+          .equals(other.getTxHash())) return false;
+      if (!getReceiver()
+          .equals(other.getReceiver())) return false;
+      if (!getSigner()
+          .equals(other.getSigner())) return false;
+      if (!getAmountList()
+          .equals(other.getAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getTxHash().hashCode();
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiver().hashCode();
+      hash = (37 * hash) + SIGNER_FIELD_NUMBER;
+      hash = (53 * hash) + getSigner().hashCode();
+      if (getAmountCount() > 0) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Tokenswap defines the tokenswap state
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.Tokenswap}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.Tokenswap)
+        com.rizonworld.rizon.tokenswap.TokenswapProto.TokenswapOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_Tokenswap_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_Tokenswap_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.class, com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        txHash_ = "";
+        receiver_ = "";
+        signer_ = "";
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+        } else {
+          amount_ = null;
+          amountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_Tokenswap_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap build() {
+        com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap buildPartial() {
+        com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap result = new com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap result) {
+        if (amountBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            amount_ = java.util.Collections.unmodifiableList(amount_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.amount_ = amount_;
+        } else {
+          result.amount_ = amountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.txHash_ = txHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.receiver_ = receiver_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.signer_ = signer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap other) {
+        if (other == com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap.getDefaultInstance()) return this;
+        if (!other.getTxHash().isEmpty()) {
+          txHash_ = other.txHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getReceiver().isEmpty()) {
+          receiver_ = other.receiver_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSigner().isEmpty()) {
+          signer_ = other.signer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (amountBuilder_ == null) {
+          if (!other.amount_.isEmpty()) {
+            if (amount_.isEmpty()) {
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureAmountIsMutable();
+              amount_.addAll(other.amount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.amount_.isEmpty()) {
+            if (amountBuilder_.isEmpty()) {
+              amountBuilder_.dispose();
+              amountBuilder_ = null;
+              amount_ = other.amount_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              amountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAmountFieldBuilder() : null;
+            } else {
+              amountBuilder_.addAllMessages(other.amount_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                txHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                receiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                signer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (amountBuilder_ == null) {
+                  ensureAmountIsMutable();
+                  amount_.add(m);
+                } else {
+                  amountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object txHash_ = "";
+      /**
+       * <pre>
+       * tx_hash is the tx hash of burn tx from legacy chain
+       * tx_hash is used for store key
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @return The txHash.
+       */
+      public java.lang.String getTxHash() {
+        java.lang.Object ref = txHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          txHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tx_hash is the tx hash of burn tx from legacy chain
+       * tx_hash is used for store key
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @return The bytes for txHash.
+       */
+      public com.google.protobuf.ByteString
+          getTxHashBytes() {
+        java.lang.Object ref = txHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          txHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * tx_hash is the tx hash of burn tx from legacy chain
+       * tx_hash is used for store key
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @param value The txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        txHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_hash is the tx hash of burn tx from legacy chain
+       * tx_hash is used for store key
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxHash() {
+        txHash_ = getDefaultInstance().getTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_hash is the tx hash of burn tx from legacy chain
+       * tx_hash is used for store key
+       * </pre>
+       *
+       * <code>string tx_hash = 1 [json_name = "txHash"];</code>
+       * @param value The bytes for txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        txHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiver_ = "";
+      /**
+       * <pre>
+       * receiver is the target of tokenswap
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return The receiver.
+       */
+      public java.lang.String getReceiver() {
+        java.lang.Object ref = receiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * receiver is the target of tokenswap
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return The bytes for receiver.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverBytes() {
+        java.lang.Object ref = receiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * receiver is the target of tokenswap
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @param value The receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * receiver is the target of tokenswap
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiver() {
+        receiver_ = getDefaultInstance().getReceiver();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * receiver is the target of tokenswap
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @param value The bytes for receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signer_ = "";
+      /**
+       * <pre>
+       * signer is who confirms the swap process
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer"];</code>
+       * @return The signer.
+       */
+      public java.lang.String getSigner() {
+        java.lang.Object ref = signer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer is who confirms the swap process
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer"];</code>
+       * @return The bytes for signer.
+       */
+      public com.google.protobuf.ByteString
+          getSignerBytes() {
+        java.lang.Object ref = signer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * signer is who confirms the swap process
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer"];</code>
+       * @param value The signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        signer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer is who confirms the swap process
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigner() {
+        signer_ = getDefaultInstance().getSigner();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signer is who confirms the swap process
+       * </pre>
+       *
+       * <code>string signer = 3 [json_name = "signer"];</code>
+       * @param value The bytes for signer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        signer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> amount_ =
+        java.util.Collections.emptyList();
+      private void ensureAmountIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          amount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(amount_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> amountBuilder_;
+
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getAmountList() {
+        if (amountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(amount_);
+        } else {
+          return amountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getAmountCount() {
+        if (amountBuilder_ == null) {
+          return amount_.size();
+        } else {
+          return amountBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getAmount(int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);
+        } else {
+          return amountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.set(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (amountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAmountIsMutable();
+          amount_.add(index, value);
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          amountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, amount_);
+          onChanged();
+        } else {
+          amountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearAmount() {
+        if (amountBuilder_ == null) {
+          amount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          amountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeAmount(int index) {
+        if (amountBuilder_ == null) {
+          ensureAmountIsMutable();
+          amount_.remove(index);
+          onChanged();
+        } else {
+          amountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getAmountOrBuilder(
+          int index) {
+        if (amountBuilder_ == null) {
+          return amount_.get(index);  } else {
+          return amountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getAmountOrBuilderList() {
+        if (amountBuilder_ != null) {
+          return amountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(amount_);
+        }
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder() {
+        return getAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addAmountBuilder(
+          int index) {
+        return getAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * amount is the amount of swap process
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin amount = 4 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getAmountBuilderList() {
+        return getAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getAmountFieldBuilder() {
+        if (amountBuilder_ == null) {
+          amountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  amount_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          amount_ = null;
+        }
+        return amountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.Tokenswap)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.Tokenswap)
+    private static final com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Tokenswap>
+        PARSER = new com.google.protobuf.AbstractParser<Tokenswap>() {
+      @java.lang.Override
+      public Tokenswap parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Tokenswap> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Tokenswap> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.TokenswapProto.Tokenswap getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SwappedAmountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rizonworld.rizon.tokenswap.SwappedAmount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * amount is the amount of already swapped
+     * </pre>
+     *
+     * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * Current swapped amount of tokenswap module
+   * </pre>
+   *
+   * Protobuf type {@code rizonworld.rizon.tokenswap.SwappedAmount}
+   */
+  public static final class SwappedAmount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:rizonworld.rizon.tokenswap.SwappedAmount)
+      SwappedAmountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SwappedAmount.newBuilder() to construct.
+    private SwappedAmount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SwappedAmount() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SwappedAmount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_SwappedAmount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_SwappedAmount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.class, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount is the amount of already swapped
+     * </pre>
+     *
+     * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (amount_ != 0L) {
+        output.writeInt64(1, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount)) {
+        return super.equals(obj);
+      }
+      com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount other = (com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount) obj;
+
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Current swapped amount of tokenswap module
+     * </pre>
+     *
+     * Protobuf type {@code rizonworld.rizon.tokenswap.SwappedAmount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:rizonworld.rizon.tokenswap.SwappedAmount)
+        com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_SwappedAmount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_SwappedAmount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.class, com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.Builder.class);
+      }
+
+      // Construct using com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.internal_static_rizonworld_rizon_tokenswap_SwappedAmount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount getDefaultInstanceForType() {
+        return com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount build() {
+        com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount buildPartial() {
+        com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount result = new com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount) {
+          return mergeFrom((com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount other) {
+        if (other == com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount.getDefaultInstance()) return this;
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                amount_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount is the amount of already swapped
+       * </pre>
+       *
+       * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount is the amount of already swapped
+       * </pre>
+       *
+       * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount is the amount of already swapped
+       * </pre>
+       *
+       * <code>int64 amount = 1 [json_name = "amount", (.gogoproto.moretags) = "yaml:&#92;"amount&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:rizonworld.rizon.tokenswap.SwappedAmount)
+    }
+
+    // @@protoc_insertion_point(class_scope:rizonworld.rizon.tokenswap.SwappedAmount)
+    private static final com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount();
+    }
+
+    public static com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SwappedAmount>
+        PARSER = new com.google.protobuf.AbstractParser<SwappedAmount>() {
+      @java.lang.Override
+      public SwappedAmount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SwappedAmount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SwappedAmount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.rizonworld.rizon.tokenswap.TokenswapProto.SwappedAmount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_Tokenswap_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_Tokenswap_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_rizonworld_rizon_tokenswap_SwappedAmount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_rizonworld_rizon_tokenswap_SwappedAmount_fieldAccessorTable;
 
@@ -42,13 +2010,13 @@ public final class TokenswapProto {
       "eta1.CoinB0\310\336\037\000\252\337\037(github.com/cosmos/cos" +
       "mos-sdk/types.CoinsR\006amount\":\n\rSwappedAm" +
       "ount\022)\n\006amount\030\001 \001(\003B\021\362\336\037\ryaml:\"amount\"R" +
-      "\006amountB\352\001\n\036com.rizonworld.rizon.tokensw" +
-      "apB\016TokenswapProtoP\001Z.github.com/rizon-w" +
-      "orld/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Riz" +
-      "onworld.Rizon.Tokenswap\312\002\032Rizonworld\\Riz" +
-      "on\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswa" +
-      "p\\GPBMetadata\352\002\034Rizonworld::Rizon::Token" +
-      "swapb\006proto3"
+      "\006amountB\350\001\n\036com.rizonworld.rizon.tokensw" +
+      "apB\016TokenswapProtoZ.github.com/rizon-wor" +
+      "ld/rizon/x/tokenswap/types\242\002\003RRT\252\002\032Rizon" +
+      "world.Rizon.Tokenswap\312\002\032Rizonworld\\Rizon" +
+      "\\Tokenswap\342\002&Rizonworld\\Rizon\\Tokenswap\\" +
+      "GPBMetadata\352\002\034Rizonworld::Rizon::Tokensw" +
+      "apb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

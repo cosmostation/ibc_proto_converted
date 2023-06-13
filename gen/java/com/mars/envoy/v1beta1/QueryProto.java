@@ -14,34 +14,4402 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.envoy.v1beta1.QueryAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ConnectionId identified the connection associated with the interchain
+     * account.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <pre>
+     * ConnectionId identified the connection associated with the interchain
+     * account.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryAccountRequest is the request type for the Query/Account RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code mars.envoy.v1beta1.QueryAccountRequest}
+   */
+  public static final class QueryAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.envoy.v1beta1.QueryAccountRequest)
+      QueryAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAccountRequest.newBuilder() to construct.
+    private QueryAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAccountRequest() {
+      connectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.Builder.class);
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <pre>
+     * ConnectionId identified the connection associated with the interchain
+     * account.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ConnectionId identified the connection associated with the interchain
+     * account.
+     * </pre>
+     *
+     * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest other = (com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest) obj;
+
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountRequest is the request type for the Query/Account RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code mars.envoy.v1beta1.QueryAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.envoy.v1beta1.QueryAccountRequest)
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.Builder.class);
+      }
+
+      // Construct using com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        connectionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest getDefaultInstanceForType() {
+        return com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest build() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest buildPartial() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest result = new com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest) {
+          return mergeFrom((com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest other) {
+        if (other == com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest.getDefaultInstance()) return this;
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <pre>
+       * ConnectionId identified the connection associated with the interchain
+       * account.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ConnectionId identified the connection associated with the interchain
+       * account.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ConnectionId identified the connection associated with the interchain
+       * account.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ConnectionId identified the connection associated with the interchain
+       * account.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ConnectionId identified the connection associated with the interchain
+       * account.
+       * </pre>
+       *
+       * <code>string connection_id = 1 [json_name = "connectionId", (.gogoproto.moretags) = "yaml:&#92;"connection_id&#92;""];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.envoy.v1beta1.QueryAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.envoy.v1beta1.QueryAccountRequest)
+    private static final com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest();
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAccountRequest>() {
+      @java.lang.Override
+      public QueryAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.QueryAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.envoy.v1beta1.QueryAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+     * @return Whether the account field is set.
+     */
+    boolean hasAccount();
+    /**
+     * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    com.mars.envoy.v1beta1.QueryProto.AccountInfo getAccount();
+    /**
+     * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+     */
+    com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder getAccountOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAccountResponse is the response type for the Query/Account RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code mars.envoy.v1beta1.QueryAccountResponse}
+   */
+  public static final class QueryAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.envoy.v1beta1.QueryAccountResponse)
+      QueryAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAccountResponse.newBuilder() to construct.
+    private QueryAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    private com.mars.envoy.v1beta1.QueryProto.AccountInfo account_;
+    /**
+     * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+     * @return Whether the account field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccount() {
+      return account_ != null;
+    }
+    /**
+     * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.AccountInfo getAccount() {
+      return account_ == null ? com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance() : account_;
+    }
+    /**
+     * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder getAccountOrBuilder() {
+      return account_ == null ? com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance() : account_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (account_ != null) {
+        output.writeMessage(1, getAccount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (account_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAccount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse other = (com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse) obj;
+
+      if (hasAccount() != other.hasAccount()) return false;
+      if (hasAccount()) {
+        if (!getAccount()
+            .equals(other.getAccount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAccount()) {
+        hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAccount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountResponse is the response type for the Query/Account RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code mars.envoy.v1beta1.QueryAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.envoy.v1beta1.QueryAccountResponse)
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.Builder.class);
+      }
+
+      // Construct using com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = null;
+        if (accountBuilder_ != null) {
+          accountBuilder_.dispose();
+          accountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse getDefaultInstanceForType() {
+        return com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse build() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse buildPartial() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse result = new com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = accountBuilder_ == null
+              ? account_
+              : accountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse) {
+          return mergeFrom((com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse other) {
+        if (other == com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse.getDefaultInstance()) return this;
+        if (other.hasAccount()) {
+          mergeAccount(other.getAccount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAccountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.mars.envoy.v1beta1.QueryProto.AccountInfo account_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.AccountInfo, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder, com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> accountBuilder_;
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       * @return Whether the account field is set.
+       */
+      public boolean hasAccount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       * @return The account.
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo getAccount() {
+        if (accountBuilder_ == null) {
+          return account_ == null ? com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance() : account_;
+        } else {
+          return accountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      public Builder setAccount(com.mars.envoy.v1beta1.QueryProto.AccountInfo value) {
+        if (accountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          account_ = value;
+        } else {
+          accountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      public Builder setAccount(
+          com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder builderForValue) {
+        if (accountBuilder_ == null) {
+          account_ = builderForValue.build();
+        } else {
+          accountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      public Builder mergeAccount(com.mars.envoy.v1beta1.QueryProto.AccountInfo value) {
+        if (accountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            account_ != null &&
+            account_ != com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance()) {
+            getAccountBuilder().mergeFrom(value);
+          } else {
+            account_ = value;
+          }
+        } else {
+          accountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      public Builder clearAccount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        account_ = null;
+        if (accountBuilder_ != null) {
+          accountBuilder_.dispose();
+          accountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder getAccountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAccountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder getAccountOrBuilder() {
+        if (accountBuilder_ != null) {
+          return accountBuilder_.getMessageOrBuilder();
+        } else {
+          return account_ == null ?
+              com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance() : account_;
+        }
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.AccountInfo account = 1 [json_name = "account"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.AccountInfo, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder, com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> 
+          getAccountFieldBuilder() {
+        if (accountBuilder_ == null) {
+          accountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.mars.envoy.v1beta1.QueryProto.AccountInfo, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder, com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder>(
+                  getAccount(),
+                  getParentForChildren(),
+                  isClean());
+          account_ = null;
+        }
+        return accountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.envoy.v1beta1.QueryAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.envoy.v1beta1.QueryAccountResponse)
+    private static final com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse();
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAccountResponse>() {
+      @java.lang.Override
+      public QueryAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.QueryAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAccountsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.envoy.v1beta1.QueryAccountsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryAccountsRequest is the request type for the Query/Accounts RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code mars.envoy.v1beta1.QueryAccountsRequest}
+   */
+  public static final class QueryAccountsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.envoy.v1beta1.QueryAccountsRequest)
+      QueryAccountsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAccountsRequest.newBuilder() to construct.
+    private QueryAccountsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAccountsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAccountsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest)) {
+        return super.equals(obj);
+      }
+      com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest other = (com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountsRequest is the request type for the Query/Accounts RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code mars.envoy.v1beta1.QueryAccountsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.envoy.v1beta1.QueryAccountsRequest)
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.Builder.class);
+      }
+
+      // Construct using com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest getDefaultInstanceForType() {
+        return com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest build() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest buildPartial() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest result = new com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest) {
+          return mergeFrom((com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest other) {
+        if (other == com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.envoy.v1beta1.QueryAccountsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.envoy.v1beta1.QueryAccountsRequest)
+    private static final com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest();
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAccountsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAccountsRequest>() {
+      @java.lang.Override
+      public QueryAccountsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAccountsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAccountsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.QueryAccountsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAccountsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.envoy.v1beta1.QueryAccountsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    java.util.List<com.mars.envoy.v1beta1.QueryProto.AccountInfo> 
+        getAccountsList();
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    com.mars.envoy.v1beta1.QueryProto.AccountInfo getAccounts(int index);
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    int getAccountsCount();
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    java.util.List<? extends com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> 
+        getAccountsOrBuilderList();
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder getAccountsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryAccountsResponse is the response type for Query/Accounts RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code mars.envoy.v1beta1.QueryAccountsResponse}
+   */
+  public static final class QueryAccountsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.envoy.v1beta1.QueryAccountsResponse)
+      QueryAccountsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAccountsResponse.newBuilder() to construct.
+    private QueryAccountsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAccountsResponse() {
+      accounts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAccountsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.Builder.class);
+    }
+
+    public static final int ACCOUNTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.mars.envoy.v1beta1.QueryProto.AccountInfo> accounts_;
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.mars.envoy.v1beta1.QueryProto.AccountInfo> getAccountsList() {
+      return accounts_;
+    }
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> 
+        getAccountsOrBuilderList() {
+      return accounts_;
+    }
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    @java.lang.Override
+    public int getAccountsCount() {
+      return accounts_.size();
+    }
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.AccountInfo getAccounts(int index) {
+      return accounts_.get(index);
+    }
+    /**
+     * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder getAccountsOrBuilder(
+        int index) {
+      return accounts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < accounts_.size(); i++) {
+        output.writeMessage(1, accounts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < accounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, accounts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse)) {
+        return super.equals(obj);
+      }
+      com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse other = (com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse) obj;
+
+      if (!getAccountsList()
+          .equals(other.getAccountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAccountsCount() > 0) {
+        hash = (37 * hash) + ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountsResponse is the response type for Query/Accounts RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code mars.envoy.v1beta1.QueryAccountsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.envoy.v1beta1.QueryAccountsResponse)
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.class, com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.Builder.class);
+      }
+
+      // Construct using com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (accountsBuilder_ == null) {
+          accounts_ = java.util.Collections.emptyList();
+        } else {
+          accounts_ = null;
+          accountsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_QueryAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse getDefaultInstanceForType() {
+        return com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse build() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse buildPartial() {
+        com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse result = new com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse result) {
+        if (accountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            accounts_ = java.util.Collections.unmodifiableList(accounts_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.accounts_ = accounts_;
+        } else {
+          result.accounts_ = accountsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse) {
+          return mergeFrom((com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse other) {
+        if (other == com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse.getDefaultInstance()) return this;
+        if (accountsBuilder_ == null) {
+          if (!other.accounts_.isEmpty()) {
+            if (accounts_.isEmpty()) {
+              accounts_ = other.accounts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAccountsIsMutable();
+              accounts_.addAll(other.accounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accounts_.isEmpty()) {
+            if (accountsBuilder_.isEmpty()) {
+              accountsBuilder_.dispose();
+              accountsBuilder_ = null;
+              accounts_ = other.accounts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              accountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccountsFieldBuilder() : null;
+            } else {
+              accountsBuilder_.addAllMessages(other.accounts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.mars.envoy.v1beta1.QueryProto.AccountInfo m =
+                    input.readMessage(
+                        com.mars.envoy.v1beta1.QueryProto.AccountInfo.parser(),
+                        extensionRegistry);
+                if (accountsBuilder_ == null) {
+                  ensureAccountsIsMutable();
+                  accounts_.add(m);
+                } else {
+                  accountsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.mars.envoy.v1beta1.QueryProto.AccountInfo> accounts_ =
+        java.util.Collections.emptyList();
+      private void ensureAccountsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          accounts_ = new java.util.ArrayList<com.mars.envoy.v1beta1.QueryProto.AccountInfo>(accounts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.AccountInfo, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder, com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> accountsBuilder_;
+
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public java.util.List<com.mars.envoy.v1beta1.QueryProto.AccountInfo> getAccountsList() {
+        if (accountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accounts_);
+        } else {
+          return accountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public int getAccountsCount() {
+        if (accountsBuilder_ == null) {
+          return accounts_.size();
+        } else {
+          return accountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo getAccounts(int index) {
+        if (accountsBuilder_ == null) {
+          return accounts_.get(index);
+        } else {
+          return accountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder setAccounts(
+          int index, com.mars.envoy.v1beta1.QueryProto.AccountInfo value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.set(index, value);
+          onChanged();
+        } else {
+          accountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder setAccounts(
+          int index, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder addAccounts(com.mars.envoy.v1beta1.QueryProto.AccountInfo value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.add(value);
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder addAccounts(
+          int index, com.mars.envoy.v1beta1.QueryProto.AccountInfo value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.add(index, value);
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder addAccounts(
+          com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder addAccounts(
+          int index, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder addAllAccounts(
+          java.lang.Iterable<? extends com.mars.envoy.v1beta1.QueryProto.AccountInfo> values) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accounts_);
+          onChanged();
+        } else {
+          accountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder clearAccounts() {
+        if (accountsBuilder_ == null) {
+          accounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          accountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public Builder removeAccounts(int index) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.remove(index);
+          onChanged();
+        } else {
+          accountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder getAccountsBuilder(
+          int index) {
+        return getAccountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder getAccountsOrBuilder(
+          int index) {
+        if (accountsBuilder_ == null) {
+          return accounts_.get(index);  } else {
+          return accountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public java.util.List<? extends com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> 
+           getAccountsOrBuilderList() {
+        if (accountsBuilder_ != null) {
+          return accountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accounts_);
+        }
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder addAccountsBuilder() {
+        return getAccountsFieldBuilder().addBuilder(
+            com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder addAccountsBuilder(
+          int index) {
+        return getAccountsFieldBuilder().addBuilder(
+            index, com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .mars.envoy.v1beta1.AccountInfo accounts = 1 [json_name = "accounts"];</code>
+       */
+      public java.util.List<com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder> 
+           getAccountsBuilderList() {
+        return getAccountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.AccountInfo, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder, com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder> 
+          getAccountsFieldBuilder() {
+        if (accountsBuilder_ == null) {
+          accountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.mars.envoy.v1beta1.QueryProto.AccountInfo, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder, com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder>(
+                  accounts_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accounts_ = null;
+        }
+        return accountsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.envoy.v1beta1.QueryAccountsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.envoy.v1beta1.QueryAccountsResponse)
+    private static final com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse();
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAccountsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAccountsResponse>() {
+      @java.lang.Override
+      public QueryAccountsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAccountsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAccountsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.QueryAccountsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccountInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.envoy.v1beta1.AccountInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+     * @return Whether the controller field is set.
+     */
+    boolean hasController();
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+     * @return The controller.
+     */
+    com.mars.envoy.v1beta1.QueryProto.ChainInfo getController();
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+     */
+    com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder getControllerOrBuilder();
+
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+     * @return Whether the host field is set.
+     */
+    boolean hasHost();
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+     * @return The host.
+     */
+    com.mars.envoy.v1beta1.QueryProto.ChainInfo getHost();
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+     */
+    com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder getHostOrBuilder();
+
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * <pre>
+   * AccountInfo describes an interchain account, including its address and info
+   * of the controller and host chains.
+   * </pre>
+   *
+   * Protobuf type {@code mars.envoy.v1beta1.AccountInfo}
+   */
+  public static final class AccountInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.envoy.v1beta1.AccountInfo)
+      AccountInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccountInfo.newBuilder() to construct.
+    private AccountInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccountInfo() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccountInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_AccountInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_AccountInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.envoy.v1beta1.QueryProto.AccountInfo.class, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder.class);
+    }
+
+    public static final int CONTROLLER_FIELD_NUMBER = 1;
+    private com.mars.envoy.v1beta1.QueryProto.ChainInfo controller_;
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+     * @return Whether the controller field is set.
+     */
+    @java.lang.Override
+    public boolean hasController() {
+      return controller_ != null;
+    }
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+     * @return The controller.
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.ChainInfo getController() {
+      return controller_ == null ? com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : controller_;
+    }
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder getControllerOrBuilder() {
+      return controller_ == null ? com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : controller_;
+    }
+
+    public static final int HOST_FIELD_NUMBER = 2;
+    private com.mars.envoy.v1beta1.QueryProto.ChainInfo host_;
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+     * @return Whether the host field is set.
+     */
+    @java.lang.Override
+    public boolean hasHost() {
+      return host_ != null;
+    }
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+     * @return The host.
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.ChainInfo getHost() {
+      return host_ == null ? com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : host_;
+    }
+    /**
+     * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+     */
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder getHostOrBuilder() {
+      return host_ == null ? com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : host_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 3 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (controller_ != null) {
+        output.writeMessage(1, getController());
+      }
+      if (host_ != null) {
+        output.writeMessage(2, getHost());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (controller_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getController());
+      }
+      if (host_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getHost());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.envoy.v1beta1.QueryProto.AccountInfo)) {
+        return super.equals(obj);
+      }
+      com.mars.envoy.v1beta1.QueryProto.AccountInfo other = (com.mars.envoy.v1beta1.QueryProto.AccountInfo) obj;
+
+      if (hasController() != other.hasController()) return false;
+      if (hasController()) {
+        if (!getController()
+            .equals(other.getController())) return false;
+      }
+      if (hasHost() != other.hasHost()) return false;
+      if (hasHost()) {
+        if (!getHost()
+            .equals(other.getHost())) return false;
+      }
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasController()) {
+        hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
+        hash = (53 * hash) + getController().hashCode();
+      }
+      if (hasHost()) {
+        hash = (37 * hash) + HOST_FIELD_NUMBER;
+        hash = (53 * hash) + getHost().hashCode();
+      }
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.envoy.v1beta1.QueryProto.AccountInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccountInfo describes an interchain account, including its address and info
+     * of the controller and host chains.
+     * </pre>
+     *
+     * Protobuf type {@code mars.envoy.v1beta1.AccountInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.envoy.v1beta1.AccountInfo)
+        com.mars.envoy.v1beta1.QueryProto.AccountInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_AccountInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_AccountInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.envoy.v1beta1.QueryProto.AccountInfo.class, com.mars.envoy.v1beta1.QueryProto.AccountInfo.Builder.class);
+      }
+
+      // Construct using com.mars.envoy.v1beta1.QueryProto.AccountInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        controller_ = null;
+        if (controllerBuilder_ != null) {
+          controllerBuilder_.dispose();
+          controllerBuilder_ = null;
+        }
+        host_ = null;
+        if (hostBuilder_ != null) {
+          hostBuilder_.dispose();
+          hostBuilder_ = null;
+        }
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_AccountInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo getDefaultInstanceForType() {
+        return com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo build() {
+        com.mars.envoy.v1beta1.QueryProto.AccountInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.AccountInfo buildPartial() {
+        com.mars.envoy.v1beta1.QueryProto.AccountInfo result = new com.mars.envoy.v1beta1.QueryProto.AccountInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.AccountInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.controller_ = controllerBuilder_ == null
+              ? controller_
+              : controllerBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.host_ = hostBuilder_ == null
+              ? host_
+              : hostBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.envoy.v1beta1.QueryProto.AccountInfo) {
+          return mergeFrom((com.mars.envoy.v1beta1.QueryProto.AccountInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.envoy.v1beta1.QueryProto.AccountInfo other) {
+        if (other == com.mars.envoy.v1beta1.QueryProto.AccountInfo.getDefaultInstance()) return this;
+        if (other.hasController()) {
+          mergeController(other.getController());
+        }
+        if (other.hasHost()) {
+          mergeHost(other.getHost());
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getControllerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getHostFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.mars.envoy.v1beta1.QueryProto.ChainInfo controller_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.ChainInfo, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder, com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder> controllerBuilder_;
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       * @return Whether the controller field is set.
+       */
+      public boolean hasController() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       * @return The controller.
+       */
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo getController() {
+        if (controllerBuilder_ == null) {
+          return controller_ == null ? com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : controller_;
+        } else {
+          return controllerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      public Builder setController(com.mars.envoy.v1beta1.QueryProto.ChainInfo value) {
+        if (controllerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          controller_ = value;
+        } else {
+          controllerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      public Builder setController(
+          com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder builderForValue) {
+        if (controllerBuilder_ == null) {
+          controller_ = builderForValue.build();
+        } else {
+          controllerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      public Builder mergeController(com.mars.envoy.v1beta1.QueryProto.ChainInfo value) {
+        if (controllerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            controller_ != null &&
+            controller_ != com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance()) {
+            getControllerBuilder().mergeFrom(value);
+          } else {
+            controller_ = value;
+          }
+        } else {
+          controllerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      public Builder clearController() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        controller_ = null;
+        if (controllerBuilder_ != null) {
+          controllerBuilder_.dispose();
+          controllerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder getControllerBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getControllerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder getControllerOrBuilder() {
+        if (controllerBuilder_ != null) {
+          return controllerBuilder_.getMessageOrBuilder();
+        } else {
+          return controller_ == null ?
+              com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : controller_;
+        }
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo controller = 1 [json_name = "controller"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.ChainInfo, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder, com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder> 
+          getControllerFieldBuilder() {
+        if (controllerBuilder_ == null) {
+          controllerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.mars.envoy.v1beta1.QueryProto.ChainInfo, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder, com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder>(
+                  getController(),
+                  getParentForChildren(),
+                  isClean());
+          controller_ = null;
+        }
+        return controllerBuilder_;
+      }
+
+      private com.mars.envoy.v1beta1.QueryProto.ChainInfo host_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.ChainInfo, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder, com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder> hostBuilder_;
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       * @return Whether the host field is set.
+       */
+      public boolean hasHost() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       * @return The host.
+       */
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo getHost() {
+        if (hostBuilder_ == null) {
+          return host_ == null ? com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : host_;
+        } else {
+          return hostBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      public Builder setHost(com.mars.envoy.v1beta1.QueryProto.ChainInfo value) {
+        if (hostBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          host_ = value;
+        } else {
+          hostBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      public Builder setHost(
+          com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder builderForValue) {
+        if (hostBuilder_ == null) {
+          host_ = builderForValue.build();
+        } else {
+          hostBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      public Builder mergeHost(com.mars.envoy.v1beta1.QueryProto.ChainInfo value) {
+        if (hostBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            host_ != null &&
+            host_ != com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance()) {
+            getHostBuilder().mergeFrom(value);
+          } else {
+            host_ = value;
+          }
+        } else {
+          hostBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      public Builder clearHost() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        host_ = null;
+        if (hostBuilder_ != null) {
+          hostBuilder_.dispose();
+          hostBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder getHostBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getHostFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder getHostOrBuilder() {
+        if (hostBuilder_ != null) {
+          return hostBuilder_.getMessageOrBuilder();
+        } else {
+          return host_ == null ?
+              com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance() : host_;
+        }
+      }
+      /**
+       * <code>.mars.envoy.v1beta1.ChainInfo host = 2 [json_name = "host"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.mars.envoy.v1beta1.QueryProto.ChainInfo, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder, com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder> 
+          getHostFieldBuilder() {
+        if (hostBuilder_ == null) {
+          hostBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.mars.envoy.v1beta1.QueryProto.ChainInfo, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder, com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder>(
+                  getHost(),
+                  getParentForChildren(),
+                  isClean());
+          host_ = null;
+        }
+        return hostBuilder_;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 3 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.envoy.v1beta1.AccountInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.envoy.v1beta1.AccountInfo)
+    private static final com.mars.envoy.v1beta1.QueryProto.AccountInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.envoy.v1beta1.QueryProto.AccountInfo();
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.AccountInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccountInfo>
+        PARSER = new com.google.protobuf.AbstractParser<AccountInfo>() {
+      @java.lang.Override
+      public AccountInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccountInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccountInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.AccountInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChainInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mars.envoy.v1beta1.ChainInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
+     * @return The clientId.
+     */
+    java.lang.String getClientId();
+    /**
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
+     * @return The bytes for clientId.
+     */
+    com.google.protobuf.ByteString
+        getClientIdBytes();
+
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>string port_id = 3 [json_name = "portId"];</code>
+     * @return The portId.
+     */
+    java.lang.String getPortId();
+    /**
+     * <code>string port_id = 3 [json_name = "portId"];</code>
+     * @return The bytes for portId.
+     */
+    com.google.protobuf.ByteString
+        getPortIdBytes();
+
+    /**
+     * <code>string channel_id = 4 [json_name = "channelId"];</code>
+     * @return The channelId.
+     */
+    java.lang.String getChannelId();
+    /**
+     * <code>string channel_id = 4 [json_name = "channelId"];</code>
+     * @return The bytes for channelId.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdBytes();
+  }
+  /**
+   * <pre>
+   * ChainInfo describes the IBC connection/port/channel on either the controller
+   * or host chain.
+   * </pre>
+   *
+   * Protobuf type {@code mars.envoy.v1beta1.ChainInfo}
+   */
+  public static final class ChainInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mars.envoy.v1beta1.ChainInfo)
+      ChainInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChainInfo.newBuilder() to construct.
+    private ChainInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChainInfo() {
+      clientId_ = "";
+      connectionId_ = "";
+      portId_ = "";
+      channelId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChainInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_ChainInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_ChainInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.mars.envoy.v1beta1.QueryProto.ChainInfo.class, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder.class);
+    }
+
+    public static final int CLIENT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientId_ = "";
+    /**
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
+     * @return The clientId.
+     */
+    @java.lang.Override
+    public java.lang.String getClientId() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_id = 1 [json_name = "clientId"];</code>
+     * @return The bytes for clientId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientIdBytes() {
+      java.lang.Object ref = clientId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object portId_ = "";
+    /**
+     * <code>string port_id = 3 [json_name = "portId"];</code>
+     * @return The portId.
+     */
+    @java.lang.Override
+    public java.lang.String getPortId() {
+      java.lang.Object ref = portId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        portId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string port_id = 3 [json_name = "portId"];</code>
+     * @return The bytes for portId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPortIdBytes() {
+      java.lang.Object ref = portId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        portId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANNEL_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object channelId_ = "";
+    /**
+     * <code>string channel_id = 4 [json_name = "channelId"];</code>
+     * @return The channelId.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelId() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string channel_id = 4 [json_name = "channelId"];</code>
+     * @return The bytes for channelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelIdBytes() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, portId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, channelId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectionId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, portId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, channelId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.mars.envoy.v1beta1.QueryProto.ChainInfo)) {
+        return super.equals(obj);
+      }
+      com.mars.envoy.v1beta1.QueryProto.ChainInfo other = (com.mars.envoy.v1beta1.QueryProto.ChainInfo) obj;
+
+      if (!getClientId()
+          .equals(other.getClientId())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getPortId()
+          .equals(other.getPortId())) return false;
+      if (!getChannelId()
+          .equals(other.getChannelId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientId().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (37 * hash) + PORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPortId().hashCode();
+      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.mars.envoy.v1beta1.QueryProto.ChainInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ChainInfo describes the IBC connection/port/channel on either the controller
+     * or host chain.
+     * </pre>
+     *
+     * Protobuf type {@code mars.envoy.v1beta1.ChainInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mars.envoy.v1beta1.ChainInfo)
+        com.mars.envoy.v1beta1.QueryProto.ChainInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_ChainInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_ChainInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.mars.envoy.v1beta1.QueryProto.ChainInfo.class, com.mars.envoy.v1beta1.QueryProto.ChainInfo.Builder.class);
+      }
+
+      // Construct using com.mars.envoy.v1beta1.QueryProto.ChainInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        clientId_ = "";
+        connectionId_ = "";
+        portId_ = "";
+        channelId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.mars.envoy.v1beta1.QueryProto.internal_static_mars_envoy_v1beta1_ChainInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo getDefaultInstanceForType() {
+        return com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo build() {
+        com.mars.envoy.v1beta1.QueryProto.ChainInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.mars.envoy.v1beta1.QueryProto.ChainInfo buildPartial() {
+        com.mars.envoy.v1beta1.QueryProto.ChainInfo result = new com.mars.envoy.v1beta1.QueryProto.ChainInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.mars.envoy.v1beta1.QueryProto.ChainInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clientId_ = clientId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.portId_ = portId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.channelId_ = channelId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.mars.envoy.v1beta1.QueryProto.ChainInfo) {
+          return mergeFrom((com.mars.envoy.v1beta1.QueryProto.ChainInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.mars.envoy.v1beta1.QueryProto.ChainInfo other) {
+        if (other == com.mars.envoy.v1beta1.QueryProto.ChainInfo.getDefaultInstance()) return this;
+        if (!other.getClientId().isEmpty()) {
+          clientId_ = other.clientId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getPortId().isEmpty()) {
+          portId_ = other.portId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getChannelId().isEmpty()) {
+          channelId_ = other.channelId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                clientId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                portId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                channelId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clientId_ = "";
+      /**
+       * <code>string client_id = 1 [json_name = "clientId"];</code>
+       * @return The clientId.
+       */
+      public java.lang.String getClientId() {
+        java.lang.Object ref = clientId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_id = 1 [json_name = "clientId"];</code>
+       * @return The bytes for clientId.
+       */
+      public com.google.protobuf.ByteString
+          getClientIdBytes() {
+        java.lang.Object ref = clientId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_id = 1 [json_name = "clientId"];</code>
+       * @param value The clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_id = 1 [json_name = "clientId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientId() {
+        clientId_ = getDefaultInstance().getClientId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_id = 1 [json_name = "clientId"];</code>
+       * @param value The bytes for clientId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object portId_ = "";
+      /**
+       * <code>string port_id = 3 [json_name = "portId"];</code>
+       * @return The portId.
+       */
+      public java.lang.String getPortId() {
+        java.lang.Object ref = portId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          portId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string port_id = 3 [json_name = "portId"];</code>
+       * @return The bytes for portId.
+       */
+      public com.google.protobuf.ByteString
+          getPortIdBytes() {
+        java.lang.Object ref = portId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          portId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string port_id = 3 [json_name = "portId"];</code>
+       * @param value The portId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        portId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string port_id = 3 [json_name = "portId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPortId() {
+        portId_ = getDefaultInstance().getPortId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string port_id = 3 [json_name = "portId"];</code>
+       * @param value The bytes for portId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        portId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object channelId_ = "";
+      /**
+       * <code>string channel_id = 4 [json_name = "channelId"];</code>
+       * @return The channelId.
+       */
+      public java.lang.String getChannelId() {
+        java.lang.Object ref = channelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string channel_id = 4 [json_name = "channelId"];</code>
+       * @return The bytes for channelId.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdBytes() {
+        java.lang.Object ref = channelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string channel_id = 4 [json_name = "channelId"];</code>
+       * @param value The channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        channelId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string channel_id = 4 [json_name = "channelId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelId() {
+        channelId_ = getDefaultInstance().getChannelId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string channel_id = 4 [json_name = "channelId"];</code>
+       * @param value The bytes for channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        channelId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mars.envoy.v1beta1.ChainInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:mars.envoy.v1beta1.ChainInfo)
+    private static final com.mars.envoy.v1beta1.QueryProto.ChainInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.mars.envoy.v1beta1.QueryProto.ChainInfo();
+    }
+
+    public static com.mars.envoy.v1beta1.QueryProto.ChainInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChainInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ChainInfo>() {
+      @java.lang.Override
+      public ChainInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChainInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChainInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.mars.envoy.v1beta1.QueryProto.ChainInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_envoy_v1beta1_QueryAccountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_envoy_v1beta1_QueryAccountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_envoy_v1beta1_QueryAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_envoy_v1beta1_QueryAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_envoy_v1beta1_QueryAccountsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_envoy_v1beta1_QueryAccountsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_envoy_v1beta1_QueryAccountsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_envoy_v1beta1_QueryAccountsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_envoy_v1beta1_AccountInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_envoy_v1beta1_AccountInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mars_envoy_v1beta1_ChainInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mars_envoy_v1beta1_ChainInfo_fieldAccessorTable;
 
@@ -77,12 +4445,12 @@ public final class QueryProto {
       "counts\022(.mars.envoy.v1beta1.QueryAccount" +
       "sRequest\032).mars.envoy.v1beta1.QueryAccou" +
       "ntsResponse\"$\202\323\344\223\002\036\022\034/mars/envoy/v1beta1" +
-      "/accountsB\272\001\n\026com.mars.envoy.v1beta1B\nQu" +
-      "eryProtoP\001Z*github.com/mars-protocol/hub" +
-      "/x/envoy/types\242\002\003MEX\252\002\022Mars.Envoy.V1beta" +
-      "1\312\002\022Mars\\Envoy\\V1beta1\342\002\036Mars\\Envoy\\V1be" +
-      "ta1\\GPBMetadata\352\002\024Mars::Envoy::V1beta1b\006" +
-      "proto3"
+      "/accountsB\270\001\n\026com.mars.envoy.v1beta1B\nQu" +
+      "eryProtoZ*github.com/mars-protocol/hub/x" +
+      "/envoy/types\242\002\003MEX\252\002\022Mars.Envoy.V1beta1\312" +
+      "\002\022Mars\\Envoy\\V1beta1\342\002\036Mars\\Envoy\\V1beta" +
+      "1\\GPBMetadata\352\002\024Mars::Envoy::V1beta1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -70,12 +70,12 @@ public final class MsgProto {
       "\032 google/protobuf/descriptor.proto:<\n\007se" +
       "rvice\022\037.google.protobuf.ServiceOptions\030\360" +
       "\214\246\005 \001(\010R\007service::\n\006signer\022\037.google.prot" +
-      "obuf.MessageOptions\030\360\214\246\005 \003(\tR\006signerB\242\001\n" +
-      "\021com.cosmos.msg.v1B\010MsgProtoP\001Z-github.c" +
-      "om/cosmos/cosmos-sdk/types/msgservice\242\002\003" +
-      "CMX\252\002\rCosmos.Msg.V1\312\002\rCosmos\\Msg\\V1\342\002\031Co" +
-      "smos\\Msg\\V1\\GPBMetadata\352\002\017Cosmos::Msg::V" +
-      "1b\006proto3"
+      "obuf.MessageOptions\030\360\214\246\005 \003(\tR\006signerB\240\001\n" +
+      "\021com.cosmos.msg.v1B\010MsgProtoZ-github.com" +
+      "/cosmos/cosmos-sdk/types/msgservice\242\002\003CM" +
+      "X\252\002\rCosmos.Msg.V1\312\002\rCosmos\\Msg\\V1\342\002\031Cosm" +
+      "os\\Msg\\V1\\GPBMetadata\352\002\017Cosmos::Msg::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

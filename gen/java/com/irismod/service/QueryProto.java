@@ -14,134 +14,18391 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryDefinitionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryDefinitionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+  }
+  /**
+   * <pre>
+   * QueryDefinitionRequest is request type for the Query/Definition RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryDefinitionRequest}
+   */
+  public static final class QueryDefinitionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryDefinitionRequest)
+      QueryDefinitionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDefinitionRequest.newBuilder() to construct.
+    private QueryDefinitionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDefinitionRequest() {
+      serviceName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDefinitionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryDefinitionRequest.class, com.irismod.service.QueryProto.QueryDefinitionRequest.Builder.class);
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceName_ = "";
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryDefinitionRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryDefinitionRequest other = (com.irismod.service.QueryProto.QueryDefinitionRequest) obj;
+
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryDefinitionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDefinitionRequest is request type for the Query/Definition RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryDefinitionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryDefinitionRequest)
+        com.irismod.service.QueryProto.QueryDefinitionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryDefinitionRequest.class, com.irismod.service.QueryProto.QueryDefinitionRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryDefinitionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        serviceName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryDefinitionRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryDefinitionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryDefinitionRequest build() {
+        com.irismod.service.QueryProto.QueryDefinitionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryDefinitionRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryDefinitionRequest result = new com.irismod.service.QueryProto.QueryDefinitionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryDefinitionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serviceName_ = serviceName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryDefinitionRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryDefinitionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryDefinitionRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryDefinitionRequest.getDefaultInstance()) return this;
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                serviceName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        serviceName_ = getDefaultInstance().getServiceName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryDefinitionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryDefinitionRequest)
+    private static final com.irismod.service.QueryProto.QueryDefinitionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryDefinitionRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDefinitionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDefinitionRequest>() {
+      @java.lang.Override
+      public QueryDefinitionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDefinitionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDefinitionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryDefinitionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDefinitionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryDefinitionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+     * @return Whether the serviceDefinition field is set.
+     */
+    boolean hasServiceDefinition();
+    /**
+     * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+     * @return The serviceDefinition.
+     */
+    com.irismod.service.ServiceProto.ServiceDefinition getServiceDefinition();
+    /**
+     * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+     */
+    com.irismod.service.ServiceProto.ServiceDefinitionOrBuilder getServiceDefinitionOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDefinitionResponse is response type for the Query/Definition RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryDefinitionResponse}
+   */
+  public static final class QueryDefinitionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryDefinitionResponse)
+      QueryDefinitionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDefinitionResponse.newBuilder() to construct.
+    private QueryDefinitionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDefinitionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDefinitionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryDefinitionResponse.class, com.irismod.service.QueryProto.QueryDefinitionResponse.Builder.class);
+    }
+
+    public static final int SERVICE_DEFINITION_FIELD_NUMBER = 1;
+    private com.irismod.service.ServiceProto.ServiceDefinition serviceDefinition_;
+    /**
+     * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+     * @return Whether the serviceDefinition field is set.
+     */
+    @java.lang.Override
+    public boolean hasServiceDefinition() {
+      return serviceDefinition_ != null;
+    }
+    /**
+     * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+     * @return The serviceDefinition.
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ServiceDefinition getServiceDefinition() {
+      return serviceDefinition_ == null ? com.irismod.service.ServiceProto.ServiceDefinition.getDefaultInstance() : serviceDefinition_;
+    }
+    /**
+     * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ServiceDefinitionOrBuilder getServiceDefinitionOrBuilder() {
+      return serviceDefinition_ == null ? com.irismod.service.ServiceProto.ServiceDefinition.getDefaultInstance() : serviceDefinition_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (serviceDefinition_ != null) {
+        output.writeMessage(1, getServiceDefinition());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (serviceDefinition_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getServiceDefinition());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryDefinitionResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryDefinitionResponse other = (com.irismod.service.QueryProto.QueryDefinitionResponse) obj;
+
+      if (hasServiceDefinition() != other.hasServiceDefinition()) return false;
+      if (hasServiceDefinition()) {
+        if (!getServiceDefinition()
+            .equals(other.getServiceDefinition())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasServiceDefinition()) {
+        hash = (37 * hash) + SERVICE_DEFINITION_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceDefinition().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryDefinitionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDefinitionResponse is response type for the Query/Definition RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryDefinitionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryDefinitionResponse)
+        com.irismod.service.QueryProto.QueryDefinitionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryDefinitionResponse.class, com.irismod.service.QueryProto.QueryDefinitionResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryDefinitionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        serviceDefinition_ = null;
+        if (serviceDefinitionBuilder_ != null) {
+          serviceDefinitionBuilder_.dispose();
+          serviceDefinitionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryDefinitionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryDefinitionResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryDefinitionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryDefinitionResponse build() {
+        com.irismod.service.QueryProto.QueryDefinitionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryDefinitionResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryDefinitionResponse result = new com.irismod.service.QueryProto.QueryDefinitionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryDefinitionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serviceDefinition_ = serviceDefinitionBuilder_ == null
+              ? serviceDefinition_
+              : serviceDefinitionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryDefinitionResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryDefinitionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryDefinitionResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryDefinitionResponse.getDefaultInstance()) return this;
+        if (other.hasServiceDefinition()) {
+          mergeServiceDefinition(other.getServiceDefinition());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getServiceDefinitionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.service.ServiceProto.ServiceDefinition serviceDefinition_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.ServiceDefinition, com.irismod.service.ServiceProto.ServiceDefinition.Builder, com.irismod.service.ServiceProto.ServiceDefinitionOrBuilder> serviceDefinitionBuilder_;
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       * @return Whether the serviceDefinition field is set.
+       */
+      public boolean hasServiceDefinition() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       * @return The serviceDefinition.
+       */
+      public com.irismod.service.ServiceProto.ServiceDefinition getServiceDefinition() {
+        if (serviceDefinitionBuilder_ == null) {
+          return serviceDefinition_ == null ? com.irismod.service.ServiceProto.ServiceDefinition.getDefaultInstance() : serviceDefinition_;
+        } else {
+          return serviceDefinitionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      public Builder setServiceDefinition(com.irismod.service.ServiceProto.ServiceDefinition value) {
+        if (serviceDefinitionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serviceDefinition_ = value;
+        } else {
+          serviceDefinitionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      public Builder setServiceDefinition(
+          com.irismod.service.ServiceProto.ServiceDefinition.Builder builderForValue) {
+        if (serviceDefinitionBuilder_ == null) {
+          serviceDefinition_ = builderForValue.build();
+        } else {
+          serviceDefinitionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      public Builder mergeServiceDefinition(com.irismod.service.ServiceProto.ServiceDefinition value) {
+        if (serviceDefinitionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            serviceDefinition_ != null &&
+            serviceDefinition_ != com.irismod.service.ServiceProto.ServiceDefinition.getDefaultInstance()) {
+            getServiceDefinitionBuilder().mergeFrom(value);
+          } else {
+            serviceDefinition_ = value;
+          }
+        } else {
+          serviceDefinitionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      public Builder clearServiceDefinition() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        serviceDefinition_ = null;
+        if (serviceDefinitionBuilder_ != null) {
+          serviceDefinitionBuilder_.dispose();
+          serviceDefinitionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceDefinition.Builder getServiceDefinitionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getServiceDefinitionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceDefinitionOrBuilder getServiceDefinitionOrBuilder() {
+        if (serviceDefinitionBuilder_ != null) {
+          return serviceDefinitionBuilder_.getMessageOrBuilder();
+        } else {
+          return serviceDefinition_ == null ?
+              com.irismod.service.ServiceProto.ServiceDefinition.getDefaultInstance() : serviceDefinition_;
+        }
+      }
+      /**
+       * <code>.irismod.service.ServiceDefinition service_definition = 1 [json_name = "serviceDefinition"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.ServiceDefinition, com.irismod.service.ServiceProto.ServiceDefinition.Builder, com.irismod.service.ServiceProto.ServiceDefinitionOrBuilder> 
+          getServiceDefinitionFieldBuilder() {
+        if (serviceDefinitionBuilder_ == null) {
+          serviceDefinitionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.service.ServiceProto.ServiceDefinition, com.irismod.service.ServiceProto.ServiceDefinition.Builder, com.irismod.service.ServiceProto.ServiceDefinitionOrBuilder>(
+                  getServiceDefinition(),
+                  getParentForChildren(),
+                  isClean());
+          serviceDefinition_ = null;
+        }
+        return serviceDefinitionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryDefinitionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryDefinitionResponse)
+    private static final com.irismod.service.QueryProto.QueryDefinitionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryDefinitionResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryDefinitionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDefinitionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDefinitionResponse>() {
+      @java.lang.Override
+      public QueryDefinitionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDefinitionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDefinitionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryDefinitionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBindingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryBindingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+  }
+  /**
+   * <pre>
+   * QueryBindingRequest is request type for the Query/Binding RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryBindingRequest}
+   */
+  public static final class QueryBindingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryBindingRequest)
+      QueryBindingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBindingRequest.newBuilder() to construct.
+    private QueryBindingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBindingRequest() {
+      serviceName_ = "";
+      provider_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBindingRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryBindingRequest.class, com.irismod.service.QueryProto.QueryBindingRequest.Builder.class);
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceName_ = "";
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object provider_ = "";
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, provider_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, provider_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryBindingRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryBindingRequest other = (com.irismod.service.QueryProto.QueryBindingRequest) obj;
+
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryBindingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBindingRequest is request type for the Query/Binding RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryBindingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryBindingRequest)
+        com.irismod.service.QueryProto.QueryBindingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryBindingRequest.class, com.irismod.service.QueryProto.QueryBindingRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryBindingRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        serviceName_ = "";
+        provider_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryBindingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingRequest build() {
+        com.irismod.service.QueryProto.QueryBindingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryBindingRequest result = new com.irismod.service.QueryProto.QueryBindingRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryBindingRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serviceName_ = serviceName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.provider_ = provider_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryBindingRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryBindingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryBindingRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryBindingRequest.getDefaultInstance()) return this;
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                serviceName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                provider_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        serviceName_ = getDefaultInstance().getServiceName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        provider_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        provider_ = getDefaultInstance().getProvider();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        provider_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryBindingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryBindingRequest)
+    private static final com.irismod.service.QueryProto.QueryBindingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryBindingRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBindingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBindingRequest>() {
+      @java.lang.Override
+      public QueryBindingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBindingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBindingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryBindingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBindingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryBindingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+     * @return Whether the serviceBinding field is set.
+     */
+    boolean hasServiceBinding();
+    /**
+     * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+     * @return The serviceBinding.
+     */
+    com.irismod.service.ServiceProto.ServiceBinding getServiceBinding();
+    /**
+     * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+     */
+    com.irismod.service.ServiceProto.ServiceBindingOrBuilder getServiceBindingOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDefinitionResponse is response type for the Query/Binding RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryBindingResponse}
+   */
+  public static final class QueryBindingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryBindingResponse)
+      QueryBindingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBindingResponse.newBuilder() to construct.
+    private QueryBindingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBindingResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBindingResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryBindingResponse.class, com.irismod.service.QueryProto.QueryBindingResponse.Builder.class);
+    }
+
+    public static final int SERVICE_BINDING_FIELD_NUMBER = 1;
+    private com.irismod.service.ServiceProto.ServiceBinding serviceBinding_;
+    /**
+     * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+     * @return Whether the serviceBinding field is set.
+     */
+    @java.lang.Override
+    public boolean hasServiceBinding() {
+      return serviceBinding_ != null;
+    }
+    /**
+     * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+     * @return The serviceBinding.
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ServiceBinding getServiceBinding() {
+      return serviceBinding_ == null ? com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance() : serviceBinding_;
+    }
+    /**
+     * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ServiceBindingOrBuilder getServiceBindingOrBuilder() {
+      return serviceBinding_ == null ? com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance() : serviceBinding_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (serviceBinding_ != null) {
+        output.writeMessage(1, getServiceBinding());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (serviceBinding_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getServiceBinding());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryBindingResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryBindingResponse other = (com.irismod.service.QueryProto.QueryBindingResponse) obj;
+
+      if (hasServiceBinding() != other.hasServiceBinding()) return false;
+      if (hasServiceBinding()) {
+        if (!getServiceBinding()
+            .equals(other.getServiceBinding())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasServiceBinding()) {
+        hash = (37 * hash) + SERVICE_BINDING_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceBinding().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryBindingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDefinitionResponse is response type for the Query/Binding RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryBindingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryBindingResponse)
+        com.irismod.service.QueryProto.QueryBindingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryBindingResponse.class, com.irismod.service.QueryProto.QueryBindingResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryBindingResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        serviceBinding_ = null;
+        if (serviceBindingBuilder_ != null) {
+          serviceBindingBuilder_.dispose();
+          serviceBindingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryBindingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingResponse build() {
+        com.irismod.service.QueryProto.QueryBindingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryBindingResponse result = new com.irismod.service.QueryProto.QueryBindingResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryBindingResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serviceBinding_ = serviceBindingBuilder_ == null
+              ? serviceBinding_
+              : serviceBindingBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryBindingResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryBindingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryBindingResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryBindingResponse.getDefaultInstance()) return this;
+        if (other.hasServiceBinding()) {
+          mergeServiceBinding(other.getServiceBinding());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getServiceBindingFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.service.ServiceProto.ServiceBinding serviceBinding_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.ServiceBinding, com.irismod.service.ServiceProto.ServiceBinding.Builder, com.irismod.service.ServiceProto.ServiceBindingOrBuilder> serviceBindingBuilder_;
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       * @return Whether the serviceBinding field is set.
+       */
+      public boolean hasServiceBinding() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       * @return The serviceBinding.
+       */
+      public com.irismod.service.ServiceProto.ServiceBinding getServiceBinding() {
+        if (serviceBindingBuilder_ == null) {
+          return serviceBinding_ == null ? com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance() : serviceBinding_;
+        } else {
+          return serviceBindingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      public Builder setServiceBinding(com.irismod.service.ServiceProto.ServiceBinding value) {
+        if (serviceBindingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          serviceBinding_ = value;
+        } else {
+          serviceBindingBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      public Builder setServiceBinding(
+          com.irismod.service.ServiceProto.ServiceBinding.Builder builderForValue) {
+        if (serviceBindingBuilder_ == null) {
+          serviceBinding_ = builderForValue.build();
+        } else {
+          serviceBindingBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      public Builder mergeServiceBinding(com.irismod.service.ServiceProto.ServiceBinding value) {
+        if (serviceBindingBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            serviceBinding_ != null &&
+            serviceBinding_ != com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance()) {
+            getServiceBindingBuilder().mergeFrom(value);
+          } else {
+            serviceBinding_ = value;
+          }
+        } else {
+          serviceBindingBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      public Builder clearServiceBinding() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        serviceBinding_ = null;
+        if (serviceBindingBuilder_ != null) {
+          serviceBindingBuilder_.dispose();
+          serviceBindingBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBinding.Builder getServiceBindingBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getServiceBindingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBindingOrBuilder getServiceBindingOrBuilder() {
+        if (serviceBindingBuilder_ != null) {
+          return serviceBindingBuilder_.getMessageOrBuilder();
+        } else {
+          return serviceBinding_ == null ?
+              com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance() : serviceBinding_;
+        }
+      }
+      /**
+       * <code>.irismod.service.ServiceBinding service_binding = 1 [json_name = "serviceBinding"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.ServiceBinding, com.irismod.service.ServiceProto.ServiceBinding.Builder, com.irismod.service.ServiceProto.ServiceBindingOrBuilder> 
+          getServiceBindingFieldBuilder() {
+        if (serviceBindingBuilder_ == null) {
+          serviceBindingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.service.ServiceProto.ServiceBinding, com.irismod.service.ServiceProto.ServiceBinding.Builder, com.irismod.service.ServiceProto.ServiceBindingOrBuilder>(
+                  getServiceBinding(),
+                  getParentForChildren(),
+                  isClean());
+          serviceBinding_ = null;
+        }
+        return serviceBindingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryBindingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryBindingResponse)
+    private static final com.irismod.service.QueryProto.QueryBindingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryBindingResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBindingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBindingResponse>() {
+      @java.lang.Override
+      public QueryBindingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBindingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBindingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryBindingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBindingsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryBindingsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBindingsRequest is request type for the Query/Bindings RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryBindingsRequest}
+   */
+  public static final class QueryBindingsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryBindingsRequest)
+      QueryBindingsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBindingsRequest.newBuilder() to construct.
+    private QueryBindingsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBindingsRequest() {
+      serviceName_ = "";
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBindingsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryBindingsRequest.class, com.irismod.service.QueryProto.QueryBindingsRequest.Builder.class);
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceName_ = "";
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 2 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, owner_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, owner_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryBindingsRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryBindingsRequest other = (com.irismod.service.QueryProto.QueryBindingsRequest) obj;
+
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryBindingsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBindingsRequest is request type for the Query/Bindings RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryBindingsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryBindingsRequest)
+        com.irismod.service.QueryProto.QueryBindingsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryBindingsRequest.class, com.irismod.service.QueryProto.QueryBindingsRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryBindingsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        serviceName_ = "";
+        owner_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingsRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryBindingsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingsRequest build() {
+        com.irismod.service.QueryProto.QueryBindingsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingsRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryBindingsRequest result = new com.irismod.service.QueryProto.QueryBindingsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryBindingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serviceName_ = serviceName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.owner_ = owner_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryBindingsRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryBindingsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryBindingsRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryBindingsRequest.getDefaultInstance()) return this;
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                serviceName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        serviceName_ = getDefaultInstance().getServiceName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 2 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryBindingsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryBindingsRequest)
+    private static final com.irismod.service.QueryProto.QueryBindingsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryBindingsRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBindingsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBindingsRequest>() {
+      @java.lang.Override
+      public QueryBindingsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBindingsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBindingsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryBindingsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBindingsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryBindingsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    java.util.List<com.irismod.service.ServiceProto.ServiceBinding> 
+        getServiceBindingsList();
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    com.irismod.service.ServiceProto.ServiceBinding getServiceBindings(int index);
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    int getServiceBindingsCount();
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    java.util.List<? extends com.irismod.service.ServiceProto.ServiceBindingOrBuilder> 
+        getServiceBindingsOrBuilderList();
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    com.irismod.service.ServiceProto.ServiceBindingOrBuilder getServiceBindingsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryDefinitionsResponse is response type for the Query/Bindings RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryBindingsResponse}
+   */
+  public static final class QueryBindingsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryBindingsResponse)
+      QueryBindingsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBindingsResponse.newBuilder() to construct.
+    private QueryBindingsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBindingsResponse() {
+      serviceBindings_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBindingsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryBindingsResponse.class, com.irismod.service.QueryProto.QueryBindingsResponse.Builder.class);
+    }
+
+    public static final int SERVICE_BINDINGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.service.ServiceProto.ServiceBinding> serviceBindings_;
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.service.ServiceProto.ServiceBinding> getServiceBindingsList() {
+      return serviceBindings_;
+    }
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.service.ServiceProto.ServiceBindingOrBuilder> 
+        getServiceBindingsOrBuilderList() {
+      return serviceBindings_;
+    }
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    @java.lang.Override
+    public int getServiceBindingsCount() {
+      return serviceBindings_.size();
+    }
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ServiceBinding getServiceBindings(int index) {
+      return serviceBindings_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ServiceBindingOrBuilder getServiceBindingsOrBuilder(
+        int index) {
+      return serviceBindings_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < serviceBindings_.size(); i++) {
+        output.writeMessage(1, serviceBindings_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < serviceBindings_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, serviceBindings_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryBindingsResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryBindingsResponse other = (com.irismod.service.QueryProto.QueryBindingsResponse) obj;
+
+      if (!getServiceBindingsList()
+          .equals(other.getServiceBindingsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getServiceBindingsCount() > 0) {
+        hash = (37 * hash) + SERVICE_BINDINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceBindingsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryBindingsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryBindingsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryDefinitionsResponse is response type for the Query/Bindings RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryBindingsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryBindingsResponse)
+        com.irismod.service.QueryProto.QueryBindingsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryBindingsResponse.class, com.irismod.service.QueryProto.QueryBindingsResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryBindingsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (serviceBindingsBuilder_ == null) {
+          serviceBindings_ = java.util.Collections.emptyList();
+        } else {
+          serviceBindings_ = null;
+          serviceBindingsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryBindingsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingsResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryBindingsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingsResponse build() {
+        com.irismod.service.QueryProto.QueryBindingsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryBindingsResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryBindingsResponse result = new com.irismod.service.QueryProto.QueryBindingsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.service.QueryProto.QueryBindingsResponse result) {
+        if (serviceBindingsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            serviceBindings_ = java.util.Collections.unmodifiableList(serviceBindings_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.serviceBindings_ = serviceBindings_;
+        } else {
+          result.serviceBindings_ = serviceBindingsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryBindingsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryBindingsResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryBindingsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryBindingsResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryBindingsResponse.getDefaultInstance()) return this;
+        if (serviceBindingsBuilder_ == null) {
+          if (!other.serviceBindings_.isEmpty()) {
+            if (serviceBindings_.isEmpty()) {
+              serviceBindings_ = other.serviceBindings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureServiceBindingsIsMutable();
+              serviceBindings_.addAll(other.serviceBindings_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.serviceBindings_.isEmpty()) {
+            if (serviceBindingsBuilder_.isEmpty()) {
+              serviceBindingsBuilder_.dispose();
+              serviceBindingsBuilder_ = null;
+              serviceBindings_ = other.serviceBindings_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              serviceBindingsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServiceBindingsFieldBuilder() : null;
+            } else {
+              serviceBindingsBuilder_.addAllMessages(other.serviceBindings_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.service.ServiceProto.ServiceBinding m =
+                    input.readMessage(
+                        com.irismod.service.ServiceProto.ServiceBinding.parser(),
+                        extensionRegistry);
+                if (serviceBindingsBuilder_ == null) {
+                  ensureServiceBindingsIsMutable();
+                  serviceBindings_.add(m);
+                } else {
+                  serviceBindingsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.service.ServiceProto.ServiceBinding> serviceBindings_ =
+        java.util.Collections.emptyList();
+      private void ensureServiceBindingsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          serviceBindings_ = new java.util.ArrayList<com.irismod.service.ServiceProto.ServiceBinding>(serviceBindings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.ServiceBinding, com.irismod.service.ServiceProto.ServiceBinding.Builder, com.irismod.service.ServiceProto.ServiceBindingOrBuilder> serviceBindingsBuilder_;
+
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.ServiceBinding> getServiceBindingsList() {
+        if (serviceBindingsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(serviceBindings_);
+        } else {
+          return serviceBindingsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public int getServiceBindingsCount() {
+        if (serviceBindingsBuilder_ == null) {
+          return serviceBindings_.size();
+        } else {
+          return serviceBindingsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBinding getServiceBindings(int index) {
+        if (serviceBindingsBuilder_ == null) {
+          return serviceBindings_.get(index);
+        } else {
+          return serviceBindingsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder setServiceBindings(
+          int index, com.irismod.service.ServiceProto.ServiceBinding value) {
+        if (serviceBindingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.set(index, value);
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder setServiceBindings(
+          int index, com.irismod.service.ServiceProto.ServiceBinding.Builder builderForValue) {
+        if (serviceBindingsBuilder_ == null) {
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder addServiceBindings(com.irismod.service.ServiceProto.ServiceBinding value) {
+        if (serviceBindingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.add(value);
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder addServiceBindings(
+          int index, com.irismod.service.ServiceProto.ServiceBinding value) {
+        if (serviceBindingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.add(index, value);
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder addServiceBindings(
+          com.irismod.service.ServiceProto.ServiceBinding.Builder builderForValue) {
+        if (serviceBindingsBuilder_ == null) {
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.add(builderForValue.build());
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder addServiceBindings(
+          int index, com.irismod.service.ServiceProto.ServiceBinding.Builder builderForValue) {
+        if (serviceBindingsBuilder_ == null) {
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder addAllServiceBindings(
+          java.lang.Iterable<? extends com.irismod.service.ServiceProto.ServiceBinding> values) {
+        if (serviceBindingsBuilder_ == null) {
+          ensureServiceBindingsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, serviceBindings_);
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder clearServiceBindings() {
+        if (serviceBindingsBuilder_ == null) {
+          serviceBindings_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public Builder removeServiceBindings(int index) {
+        if (serviceBindingsBuilder_ == null) {
+          ensureServiceBindingsIsMutable();
+          serviceBindings_.remove(index);
+          onChanged();
+        } else {
+          serviceBindingsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBinding.Builder getServiceBindingsBuilder(
+          int index) {
+        return getServiceBindingsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBindingOrBuilder getServiceBindingsOrBuilder(
+          int index) {
+        if (serviceBindingsBuilder_ == null) {
+          return serviceBindings_.get(index);  } else {
+          return serviceBindingsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public java.util.List<? extends com.irismod.service.ServiceProto.ServiceBindingOrBuilder> 
+           getServiceBindingsOrBuilderList() {
+        if (serviceBindingsBuilder_ != null) {
+          return serviceBindingsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(serviceBindings_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBinding.Builder addServiceBindingsBuilder() {
+        return getServiceBindingsFieldBuilder().addBuilder(
+            com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public com.irismod.service.ServiceProto.ServiceBinding.Builder addServiceBindingsBuilder(
+          int index) {
+        return getServiceBindingsFieldBuilder().addBuilder(
+            index, com.irismod.service.ServiceProto.ServiceBinding.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.ServiceBinding service_bindings = 1 [json_name = "serviceBindings"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.ServiceBinding.Builder> 
+           getServiceBindingsBuilderList() {
+        return getServiceBindingsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.ServiceBinding, com.irismod.service.ServiceProto.ServiceBinding.Builder, com.irismod.service.ServiceProto.ServiceBindingOrBuilder> 
+          getServiceBindingsFieldBuilder() {
+        if (serviceBindingsBuilder_ == null) {
+          serviceBindingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.service.ServiceProto.ServiceBinding, com.irismod.service.ServiceProto.ServiceBinding.Builder, com.irismod.service.ServiceProto.ServiceBindingOrBuilder>(
+                  serviceBindings_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          serviceBindings_ = null;
+        }
+        return serviceBindingsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryBindingsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryBindingsResponse)
+    private static final com.irismod.service.QueryProto.QueryBindingsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryBindingsResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryBindingsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBindingsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBindingsResponse>() {
+      @java.lang.Override
+      public QueryBindingsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBindingsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBindingsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryBindingsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWithdrawAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryWithdrawAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    java.lang.String getOwner();
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    com.google.protobuf.ByteString
+        getOwnerBytes();
+  }
+  /**
+   * <pre>
+   * QueryWithdrawAddressRequest is request type for the Query/WithdrawAddress RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryWithdrawAddressRequest}
+   */
+  public static final class QueryWithdrawAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryWithdrawAddressRequest)
+      QueryWithdrawAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWithdrawAddressRequest.newBuilder() to construct.
+    private QueryWithdrawAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWithdrawAddressRequest() {
+      owner_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWithdrawAddressRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryWithdrawAddressRequest.class, com.irismod.service.QueryProto.QueryWithdrawAddressRequest.Builder.class);
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object owner_ = "";
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner = 1 [json_name = "owner"];</code>
+     * @return The bytes for owner.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owner_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(owner_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, owner_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryWithdrawAddressRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryWithdrawAddressRequest other = (com.irismod.service.QueryProto.QueryWithdrawAddressRequest) obj;
+
+      if (!getOwner()
+          .equals(other.getOwner())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_FIELD_NUMBER;
+      hash = (53 * hash) + getOwner().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryWithdrawAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryWithdrawAddressRequest is request type for the Query/WithdrawAddress RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryWithdrawAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryWithdrawAddressRequest)
+        com.irismod.service.QueryProto.QueryWithdrawAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryWithdrawAddressRequest.class, com.irismod.service.QueryProto.QueryWithdrawAddressRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryWithdrawAddressRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owner_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryWithdrawAddressRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryWithdrawAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryWithdrawAddressRequest build() {
+        com.irismod.service.QueryProto.QueryWithdrawAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryWithdrawAddressRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryWithdrawAddressRequest result = new com.irismod.service.QueryProto.QueryWithdrawAddressRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryWithdrawAddressRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.owner_ = owner_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryWithdrawAddressRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryWithdrawAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryWithdrawAddressRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryWithdrawAddressRequest.getDefaultInstance()) return this;
+        if (!other.getOwner().isEmpty()) {
+          owner_ = other.owner_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                owner_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object owner_ = "";
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The owner.
+       */
+      public java.lang.String getOwner() {
+        java.lang.Object ref = owner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          owner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return The bytes for owner.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerBytes() {
+        java.lang.Object ref = owner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          owner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwner(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwner() {
+        owner_ = getDefaultInstance().getOwner();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner = 1 [json_name = "owner"];</code>
+       * @param value The bytes for owner to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        owner_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryWithdrawAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryWithdrawAddressRequest)
+    private static final com.irismod.service.QueryProto.QueryWithdrawAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryWithdrawAddressRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWithdrawAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWithdrawAddressRequest>() {
+      @java.lang.Override
+      public QueryWithdrawAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWithdrawAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWithdrawAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryWithdrawAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWithdrawAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryWithdrawAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+     * @return The withdrawAddress.
+     */
+    java.lang.String getWithdrawAddress();
+    /**
+     * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+     * @return The bytes for withdrawAddress.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryWithdrawAddressResponse is response type for the Query/WithdrawAddress RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryWithdrawAddressResponse}
+   */
+  public static final class QueryWithdrawAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryWithdrawAddressResponse)
+      QueryWithdrawAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWithdrawAddressResponse.newBuilder() to construct.
+    private QueryWithdrawAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWithdrawAddressResponse() {
+      withdrawAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWithdrawAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryWithdrawAddressResponse.class, com.irismod.service.QueryProto.QueryWithdrawAddressResponse.Builder.class);
+    }
+
+    public static final int WITHDRAW_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawAddress_ = "";
+    /**
+     * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+     * @return The withdrawAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawAddress() {
+      java.lang.Object ref = withdrawAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+     * @return The bytes for withdrawAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawAddressBytes() {
+      java.lang.Object ref = withdrawAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, withdrawAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, withdrawAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryWithdrawAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryWithdrawAddressResponse other = (com.irismod.service.QueryProto.QueryWithdrawAddressResponse) obj;
+
+      if (!getWithdrawAddress()
+          .equals(other.getWithdrawAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WITHDRAW_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryWithdrawAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryWithdrawAddressResponse is response type for the Query/WithdrawAddress RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryWithdrawAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryWithdrawAddressResponse)
+        com.irismod.service.QueryProto.QueryWithdrawAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryWithdrawAddressResponse.class, com.irismod.service.QueryProto.QueryWithdrawAddressResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryWithdrawAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        withdrawAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryWithdrawAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryWithdrawAddressResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryWithdrawAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryWithdrawAddressResponse build() {
+        com.irismod.service.QueryProto.QueryWithdrawAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryWithdrawAddressResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryWithdrawAddressResponse result = new com.irismod.service.QueryProto.QueryWithdrawAddressResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryWithdrawAddressResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.withdrawAddress_ = withdrawAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryWithdrawAddressResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryWithdrawAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryWithdrawAddressResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryWithdrawAddressResponse.getDefaultInstance()) return this;
+        if (!other.getWithdrawAddress().isEmpty()) {
+          withdrawAddress_ = other.withdrawAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                withdrawAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object withdrawAddress_ = "";
+      /**
+       * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+       * @return The withdrawAddress.
+       */
+      public java.lang.String getWithdrawAddress() {
+        java.lang.Object ref = withdrawAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+       * @return The bytes for withdrawAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawAddressBytes() {
+        java.lang.Object ref = withdrawAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+       * @param value The withdrawAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawAddress() {
+        withdrawAddress_ = getDefaultInstance().getWithdrawAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string withdraw_address = 1 [json_name = "withdrawAddress"];</code>
+       * @param value The bytes for withdrawAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryWithdrawAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryWithdrawAddressResponse)
+    private static final com.irismod.service.QueryProto.QueryWithdrawAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryWithdrawAddressResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryWithdrawAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWithdrawAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWithdrawAddressResponse>() {
+      @java.lang.Override
+      public QueryWithdrawAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWithdrawAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWithdrawAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryWithdrawAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestContextRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestContextRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The requestContextId.
+     */
+    java.lang.String getRequestContextId();
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The bytes for requestContextId.
+     */
+    com.google.protobuf.ByteString
+        getRequestContextIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryRequestContextRequest is request type for the Query/RequestContext RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestContextRequest}
+   */
+  public static final class QueryRequestContextRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestContextRequest)
+      QueryRequestContextRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestContextRequest.newBuilder() to construct.
+    private QueryRequestContextRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestContextRequest() {
+      requestContextId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestContextRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestContextRequest.class, com.irismod.service.QueryProto.QueryRequestContextRequest.Builder.class);
+    }
+
+    public static final int REQUEST_CONTEXT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestContextId_ = "";
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The requestContextId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestContextId() {
+      java.lang.Object ref = requestContextId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestContextId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The bytes for requestContextId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestContextIdBytes() {
+      java.lang.Object ref = requestContextId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestContextId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestContextId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestContextId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestContextId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestContextId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestContextRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestContextRequest other = (com.irismod.service.QueryProto.QueryRequestContextRequest) obj;
+
+      if (!getRequestContextId()
+          .equals(other.getRequestContextId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_CONTEXT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestContextId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestContextRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestContextRequest is request type for the Query/RequestContext RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestContextRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestContextRequest)
+        com.irismod.service.QueryProto.QueryRequestContextRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestContextRequest.class, com.irismod.service.QueryProto.QueryRequestContextRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestContextRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestContextId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestContextRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestContextRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestContextRequest build() {
+        com.irismod.service.QueryProto.QueryRequestContextRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestContextRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestContextRequest result = new com.irismod.service.QueryProto.QueryRequestContextRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestContextRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestContextId_ = requestContextId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestContextRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestContextRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestContextRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestContextRequest.getDefaultInstance()) return this;
+        if (!other.getRequestContextId().isEmpty()) {
+          requestContextId_ = other.requestContextId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestContextId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestContextId_ = "";
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return The requestContextId.
+       */
+      public java.lang.String getRequestContextId() {
+        java.lang.Object ref = requestContextId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestContextId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return The bytes for requestContextId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestContextIdBytes() {
+        java.lang.Object ref = requestContextId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestContextId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @param value The requestContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestContextId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestContextId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestContextId() {
+        requestContextId_ = getDefaultInstance().getRequestContextId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @param value The bytes for requestContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestContextIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestContextId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestContextRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestContextRequest)
+    private static final com.irismod.service.QueryProto.QueryRequestContextRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestContextRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestContextRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestContextRequest>() {
+      @java.lang.Override
+      public QueryRequestContextRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestContextRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestContextRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestContextRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestContextResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestContextResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+     * @return Whether the requestContext field is set.
+     */
+    boolean hasRequestContext();
+    /**
+     * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+     * @return The requestContext.
+     */
+    com.irismod.service.ServiceProto.RequestContext getRequestContext();
+    /**
+     * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+     */
+    com.irismod.service.ServiceProto.RequestContextOrBuilder getRequestContextOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestContextResponse is response type for the Query/RequestContext RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestContextResponse}
+   */
+  public static final class QueryRequestContextResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestContextResponse)
+      QueryRequestContextResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestContextResponse.newBuilder() to construct.
+    private QueryRequestContextResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestContextResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestContextResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestContextResponse.class, com.irismod.service.QueryProto.QueryRequestContextResponse.Builder.class);
+    }
+
+    public static final int REQUEST_CONTEXT_FIELD_NUMBER = 1;
+    private com.irismod.service.ServiceProto.RequestContext requestContext_;
+    /**
+     * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+     * @return Whether the requestContext field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestContext() {
+      return requestContext_ != null;
+    }
+    /**
+     * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+     * @return The requestContext.
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.RequestContext getRequestContext() {
+      return requestContext_ == null ? com.irismod.service.ServiceProto.RequestContext.getDefaultInstance() : requestContext_;
+    }
+    /**
+     * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.RequestContextOrBuilder getRequestContextOrBuilder() {
+      return requestContext_ == null ? com.irismod.service.ServiceProto.RequestContext.getDefaultInstance() : requestContext_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (requestContext_ != null) {
+        output.writeMessage(1, getRequestContext());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (requestContext_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRequestContext());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestContextResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestContextResponse other = (com.irismod.service.QueryProto.QueryRequestContextResponse) obj;
+
+      if (hasRequestContext() != other.hasRequestContext()) return false;
+      if (hasRequestContext()) {
+        if (!getRequestContext()
+            .equals(other.getRequestContext())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRequestContext()) {
+        hash = (37 * hash) + REQUEST_CONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestContext().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestContextResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestContextResponse is response type for the Query/RequestContext RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestContextResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestContextResponse)
+        com.irismod.service.QueryProto.QueryRequestContextResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestContextResponse.class, com.irismod.service.QueryProto.QueryRequestContextResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestContextResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestContext_ = null;
+        if (requestContextBuilder_ != null) {
+          requestContextBuilder_.dispose();
+          requestContextBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestContextResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestContextResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestContextResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestContextResponse build() {
+        com.irismod.service.QueryProto.QueryRequestContextResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestContextResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestContextResponse result = new com.irismod.service.QueryProto.QueryRequestContextResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestContextResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestContext_ = requestContextBuilder_ == null
+              ? requestContext_
+              : requestContextBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestContextResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestContextResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestContextResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestContextResponse.getDefaultInstance()) return this;
+        if (other.hasRequestContext()) {
+          mergeRequestContext(other.getRequestContext());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRequestContextFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.service.ServiceProto.RequestContext requestContext_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.RequestContext, com.irismod.service.ServiceProto.RequestContext.Builder, com.irismod.service.ServiceProto.RequestContextOrBuilder> requestContextBuilder_;
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       * @return Whether the requestContext field is set.
+       */
+      public boolean hasRequestContext() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       * @return The requestContext.
+       */
+      public com.irismod.service.ServiceProto.RequestContext getRequestContext() {
+        if (requestContextBuilder_ == null) {
+          return requestContext_ == null ? com.irismod.service.ServiceProto.RequestContext.getDefaultInstance() : requestContext_;
+        } else {
+          return requestContextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      public Builder setRequestContext(com.irismod.service.ServiceProto.RequestContext value) {
+        if (requestContextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          requestContext_ = value;
+        } else {
+          requestContextBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      public Builder setRequestContext(
+          com.irismod.service.ServiceProto.RequestContext.Builder builderForValue) {
+        if (requestContextBuilder_ == null) {
+          requestContext_ = builderForValue.build();
+        } else {
+          requestContextBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      public Builder mergeRequestContext(com.irismod.service.ServiceProto.RequestContext value) {
+        if (requestContextBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            requestContext_ != null &&
+            requestContext_ != com.irismod.service.ServiceProto.RequestContext.getDefaultInstance()) {
+            getRequestContextBuilder().mergeFrom(value);
+          } else {
+            requestContext_ = value;
+          }
+        } else {
+          requestContextBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      public Builder clearRequestContext() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestContext_ = null;
+        if (requestContextBuilder_ != null) {
+          requestContextBuilder_.dispose();
+          requestContextBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      public com.irismod.service.ServiceProto.RequestContext.Builder getRequestContextBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRequestContextFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      public com.irismod.service.ServiceProto.RequestContextOrBuilder getRequestContextOrBuilder() {
+        if (requestContextBuilder_ != null) {
+          return requestContextBuilder_.getMessageOrBuilder();
+        } else {
+          return requestContext_ == null ?
+              com.irismod.service.ServiceProto.RequestContext.getDefaultInstance() : requestContext_;
+        }
+      }
+      /**
+       * <code>.irismod.service.RequestContext request_context = 1 [json_name = "requestContext"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.RequestContext, com.irismod.service.ServiceProto.RequestContext.Builder, com.irismod.service.ServiceProto.RequestContextOrBuilder> 
+          getRequestContextFieldBuilder() {
+        if (requestContextBuilder_ == null) {
+          requestContextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.service.ServiceProto.RequestContext, com.irismod.service.ServiceProto.RequestContext.Builder, com.irismod.service.ServiceProto.RequestContextOrBuilder>(
+                  getRequestContext(),
+                  getParentForChildren(),
+                  isClean());
+          requestContext_ = null;
+        }
+        return requestContextBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestContextResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestContextResponse)
+    private static final com.irismod.service.QueryProto.QueryRequestContextResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestContextResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestContextResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestContextResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestContextResponse>() {
+      @java.lang.Override
+      public QueryRequestContextResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestContextResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestContextResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestContextResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    java.lang.String getRequestId();
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The bytes for requestId.
+     */
+    com.google.protobuf.ByteString
+        getRequestIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryRequestRequest is request type for the Query/Request RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestRequest}
+   */
+  public static final class QueryRequestRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestRequest)
+      QueryRequestRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestRequest.newBuilder() to construct.
+    private QueryRequestRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestRequest() {
+      requestId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestRequest.class, com.irismod.service.QueryProto.QueryRequestRequest.Builder.class);
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestId_ = "";
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The bytes for requestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestRequest other = (com.irismod.service.QueryProto.QueryRequestRequest) obj;
+
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestRequest is request type for the Query/Request RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestRequest)
+        com.irismod.service.QueryProto.QueryRequestRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestRequest.class, com.irismod.service.QueryProto.QueryRequestRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestRequest build() {
+        com.irismod.service.QueryProto.QueryRequestRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestRequest result = new com.irismod.service.QueryProto.QueryRequestRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestId_ = requestId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestRequest.getDefaultInstance()) return this;
+        if (!other.getRequestId().isEmpty()) {
+          requestId_ = other.requestId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestId_ = "";
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @return The requestId.
+       */
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @return The bytes for requestId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        requestId_ = getDefaultInstance().getRequestId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestRequest)
+    private static final com.irismod.service.QueryProto.QueryRequestRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestRequest>() {
+      @java.lang.Override
+      public QueryRequestRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+     * @return Whether the request field is set.
+     */
+    boolean hasRequest();
+    /**
+     * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+     * @return The request.
+     */
+    com.irismod.service.ServiceProto.Request getRequest();
+    /**
+     * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+     */
+    com.irismod.service.ServiceProto.RequestOrBuilder getRequestOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestResponse is response type for the Query/Request RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestResponse}
+   */
+  public static final class QueryRequestResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestResponse)
+      QueryRequestResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestResponse.newBuilder() to construct.
+    private QueryRequestResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestResponse.class, com.irismod.service.QueryProto.QueryRequestResponse.Builder.class);
+    }
+
+    public static final int REQUEST_FIELD_NUMBER = 1;
+    private com.irismod.service.ServiceProto.Request request_;
+    /**
+     * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+     * @return Whether the request field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequest() {
+      return request_ != null;
+    }
+    /**
+     * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+     * @return The request.
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.Request getRequest() {
+      return request_ == null ? com.irismod.service.ServiceProto.Request.getDefaultInstance() : request_;
+    }
+    /**
+     * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.RequestOrBuilder getRequestOrBuilder() {
+      return request_ == null ? com.irismod.service.ServiceProto.Request.getDefaultInstance() : request_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (request_ != null) {
+        output.writeMessage(1, getRequest());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (request_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRequest());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestResponse other = (com.irismod.service.QueryProto.QueryRequestResponse) obj;
+
+      if (hasRequest() != other.hasRequest()) return false;
+      if (hasRequest()) {
+        if (!getRequest()
+            .equals(other.getRequest())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRequest()) {
+        hash = (37 * hash) + REQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getRequest().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestResponse is response type for the Query/Request RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestResponse)
+        com.irismod.service.QueryProto.QueryRequestResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestResponse.class, com.irismod.service.QueryProto.QueryRequestResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
+          requestBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestResponse build() {
+        com.irismod.service.QueryProto.QueryRequestResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestResponse result = new com.irismod.service.QueryProto.QueryRequestResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.request_ = requestBuilder_ == null
+              ? request_
+              : requestBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestResponse.getDefaultInstance()) return this;
+        if (other.hasRequest()) {
+          mergeRequest(other.getRequest());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRequestFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.service.ServiceProto.Request request_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder> requestBuilder_;
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       * @return Whether the request field is set.
+       */
+      public boolean hasRequest() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       * @return The request.
+       */
+      public com.irismod.service.ServiceProto.Request getRequest() {
+        if (requestBuilder_ == null) {
+          return request_ == null ? com.irismod.service.ServiceProto.Request.getDefaultInstance() : request_;
+        } else {
+          return requestBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      public Builder setRequest(com.irismod.service.ServiceProto.Request value) {
+        if (requestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          request_ = value;
+        } else {
+          requestBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      public Builder setRequest(
+          com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestBuilder_ == null) {
+          request_ = builderForValue.build();
+        } else {
+          requestBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      public Builder mergeRequest(com.irismod.service.ServiceProto.Request value) {
+        if (requestBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            request_ != null &&
+            request_ != com.irismod.service.ServiceProto.Request.getDefaultInstance()) {
+            getRequestBuilder().mergeFrom(value);
+          } else {
+            request_ = value;
+          }
+        } else {
+          requestBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      public Builder clearRequest() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        request_ = null;
+        if (requestBuilder_ != null) {
+          requestBuilder_.dispose();
+          requestBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder getRequestBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      public com.irismod.service.ServiceProto.RequestOrBuilder getRequestOrBuilder() {
+        if (requestBuilder_ != null) {
+          return requestBuilder_.getMessageOrBuilder();
+        } else {
+          return request_ == null ?
+              com.irismod.service.ServiceProto.Request.getDefaultInstance() : request_;
+        }
+      }
+      /**
+       * <code>.irismod.service.Request request = 1 [json_name = "request"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder> 
+          getRequestFieldBuilder() {
+        if (requestBuilder_ == null) {
+          requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder>(
+                  getRequest(),
+                  getParentForChildren(),
+                  isClean());
+          request_ = null;
+        }
+        return requestBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestResponse)
+    private static final com.irismod.service.QueryProto.QueryRequestResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestResponse>() {
+      @java.lang.Override
+      public QueryRequestResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestsRequest is request type for the Query/Requests RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestsRequest}
+   */
+  public static final class QueryRequestsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestsRequest)
+      QueryRequestsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestsRequest.newBuilder() to construct.
+    private QueryRequestsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestsRequest() {
+      serviceName_ = "";
+      provider_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestsRequest.class, com.irismod.service.QueryProto.QueryRequestsRequest.Builder.class);
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceName_ = "";
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 1 [json_name = "serviceName"];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object provider_ = "";
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 2 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, serviceName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, provider_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, serviceName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, provider_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestsRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestsRequest other = (com.irismod.service.QueryProto.QueryRequestsRequest) obj;
+
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestsRequest is request type for the Query/Requests RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestsRequest)
+        com.irismod.service.QueryProto.QueryRequestsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestsRequest.class, com.irismod.service.QueryProto.QueryRequestsRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        serviceName_ = "";
+        provider_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsRequest build() {
+        com.irismod.service.QueryProto.QueryRequestsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestsRequest result = new com.irismod.service.QueryProto.QueryRequestsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.serviceName_ = serviceName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.provider_ = provider_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestsRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestsRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestsRequest.getDefaultInstance()) return this;
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                serviceName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                provider_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        serviceName_ = getDefaultInstance().getServiceName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 1 [json_name = "serviceName"];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        provider_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        provider_ = getDefaultInstance().getProvider();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 2 [json_name = "provider"];</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        provider_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestsRequest)
+    private static final com.irismod.service.QueryProto.QueryRequestsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestsRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestsRequest>() {
+      @java.lang.Override
+      public QueryRequestsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    java.util.List<com.irismod.service.ServiceProto.Request> 
+        getRequestsList();
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    com.irismod.service.ServiceProto.Request getRequests(int index);
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    int getRequestsCount();
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    java.util.List<? extends com.irismod.service.ServiceProto.RequestOrBuilder> 
+        getRequestsOrBuilderList();
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    com.irismod.service.ServiceProto.RequestOrBuilder getRequestsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestsResponse is response type for the Query/Requests RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestsResponse}
+   */
+  public static final class QueryRequestsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestsResponse)
+      QueryRequestsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestsResponse.newBuilder() to construct.
+    private QueryRequestsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestsResponse() {
+      requests_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestsResponse.class, com.irismod.service.QueryProto.QueryRequestsResponse.Builder.class);
+    }
+
+    public static final int REQUESTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.service.ServiceProto.Request> requests_;
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.service.ServiceProto.Request> getRequestsList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.service.ServiceProto.RequestOrBuilder> 
+        getRequestsOrBuilderList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public int getRequestsCount() {
+      return requests_.size();
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.Request getRequests(int index) {
+      return requests_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.RequestOrBuilder getRequestsOrBuilder(
+        int index) {
+      return requests_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < requests_.size(); i++) {
+        output.writeMessage(1, requests_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < requests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, requests_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestsResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestsResponse other = (com.irismod.service.QueryProto.QueryRequestsResponse) obj;
+
+      if (!getRequestsList()
+          .equals(other.getRequestsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRequestsCount() > 0) {
+        hash = (37 * hash) + REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestsResponse is response type for the Query/Requests RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestsResponse)
+        com.irismod.service.QueryProto.QueryRequestsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestsResponse.class, com.irismod.service.QueryProto.QueryRequestsResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+        } else {
+          requests_ = null;
+          requestsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsResponse build() {
+        com.irismod.service.QueryProto.QueryRequestsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestsResponse result = new com.irismod.service.QueryProto.QueryRequestsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.service.QueryProto.QueryRequestsResponse result) {
+        if (requestsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            requests_ = java.util.Collections.unmodifiableList(requests_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.requests_ = requests_;
+        } else {
+          result.requests_ = requestsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestsResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestsResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestsResponse.getDefaultInstance()) return this;
+        if (requestsBuilder_ == null) {
+          if (!other.requests_.isEmpty()) {
+            if (requests_.isEmpty()) {
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRequestsIsMutable();
+              requests_.addAll(other.requests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.requests_.isEmpty()) {
+            if (requestsBuilder_.isEmpty()) {
+              requestsBuilder_.dispose();
+              requestsBuilder_ = null;
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              requestsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequestsFieldBuilder() : null;
+            } else {
+              requestsBuilder_.addAllMessages(other.requests_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.service.ServiceProto.Request m =
+                    input.readMessage(
+                        com.irismod.service.ServiceProto.Request.parser(),
+                        extensionRegistry);
+                if (requestsBuilder_ == null) {
+                  ensureRequestsIsMutable();
+                  requests_.add(m);
+                } else {
+                  requestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.service.ServiceProto.Request> requests_ =
+        java.util.Collections.emptyList();
+      private void ensureRequestsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requests_ = new java.util.ArrayList<com.irismod.service.ServiceProto.Request>(requests_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder> requestsBuilder_;
+
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.Request> getRequestsList() {
+        if (requestsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(requests_);
+        } else {
+          return requestsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public int getRequestsCount() {
+        if (requestsBuilder_ == null) {
+          return requests_.size();
+        } else {
+          return requestsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request getRequests(int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);
+        } else {
+          return requestsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.service.ServiceProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.set(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(com.irismod.service.ServiceProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.service.ServiceProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(
+          com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addAllRequests(
+          java.lang.Iterable<? extends com.irismod.service.ServiceProto.Request> values) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requests_);
+          onChanged();
+        } else {
+          requestsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder clearRequests() {
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          requestsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder removeRequests(int index) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.remove(index);
+          onChanged();
+        } else {
+          requestsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder getRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.RequestOrBuilder getRequestsOrBuilder(
+          int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);  } else {
+          return requestsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public java.util.List<? extends com.irismod.service.ServiceProto.RequestOrBuilder> 
+           getRequestsOrBuilderList() {
+        if (requestsBuilder_ != null) {
+          return requestsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(requests_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder addRequestsBuilder() {
+        return getRequestsFieldBuilder().addBuilder(
+            com.irismod.service.ServiceProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder addRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().addBuilder(
+            index, com.irismod.service.ServiceProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.Request.Builder> 
+           getRequestsBuilderList() {
+        return getRequestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder> 
+          getRequestsFieldBuilder() {
+        if (requestsBuilder_ == null) {
+          requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder>(
+                  requests_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          requests_ = null;
+        }
+        return requestsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestsResponse)
+    private static final com.irismod.service.QueryProto.QueryRequestsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestsResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestsResponse>() {
+      @java.lang.Override
+      public QueryRequestsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestsByReqCtxRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestsByReqCtxRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The requestContextId.
+     */
+    java.lang.String getRequestContextId();
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The bytes for requestContextId.
+     */
+    com.google.protobuf.ByteString
+        getRequestContextIdBytes();
+
+    /**
+     * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+     * @return The batchCounter.
+     */
+    long getBatchCounter();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestsByReqCtxRequest is request type for the Query/RequestsByReqCtx RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestsByReqCtxRequest}
+   */
+  public static final class QueryRequestsByReqCtxRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestsByReqCtxRequest)
+      QueryRequestsByReqCtxRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestsByReqCtxRequest.newBuilder() to construct.
+    private QueryRequestsByReqCtxRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestsByReqCtxRequest() {
+      requestContextId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestsByReqCtxRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.class, com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.Builder.class);
+    }
+
+    public static final int REQUEST_CONTEXT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestContextId_ = "";
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The requestContextId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestContextId() {
+      java.lang.Object ref = requestContextId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestContextId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The bytes for requestContextId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestContextIdBytes() {
+      java.lang.Object ref = requestContextId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestContextId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_COUNTER_FIELD_NUMBER = 2;
+    private long batchCounter_ = 0L;
+    /**
+     * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+     * @return The batchCounter.
+     */
+    @java.lang.Override
+    public long getBatchCounter() {
+      return batchCounter_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestContextId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestContextId_);
+      }
+      if (batchCounter_ != 0L) {
+        output.writeUInt64(2, batchCounter_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestContextId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestContextId_);
+      }
+      if (batchCounter_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, batchCounter_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest other = (com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest) obj;
+
+      if (!getRequestContextId()
+          .equals(other.getRequestContextId())) return false;
+      if (getBatchCounter()
+          != other.getBatchCounter()) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_CONTEXT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestContextId().hashCode();
+      hash = (37 * hash) + BATCH_COUNTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBatchCounter());
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestsByReqCtxRequest is request type for the Query/RequestsByReqCtx RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestsByReqCtxRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestsByReqCtxRequest)
+        com.irismod.service.QueryProto.QueryRequestsByReqCtxRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.class, com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestContextId_ = "";
+        batchCounter_ = 0L;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest build() {
+        com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest result = new com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestContextId_ = requestContextId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchCounter_ = batchCounter_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest.getDefaultInstance()) return this;
+        if (!other.getRequestContextId().isEmpty()) {
+          requestContextId_ = other.requestContextId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getBatchCounter() != 0L) {
+          setBatchCounter(other.getBatchCounter());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestContextId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                batchCounter_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestContextId_ = "";
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return The requestContextId.
+       */
+      public java.lang.String getRequestContextId() {
+        java.lang.Object ref = requestContextId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestContextId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return The bytes for requestContextId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestContextIdBytes() {
+        java.lang.Object ref = requestContextId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestContextId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @param value The requestContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestContextId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestContextId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestContextId() {
+        requestContextId_ = getDefaultInstance().getRequestContextId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @param value The bytes for requestContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestContextIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestContextId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long batchCounter_ ;
+      /**
+       * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+       * @return The batchCounter.
+       */
+      @java.lang.Override
+      public long getBatchCounter() {
+        return batchCounter_;
+      }
+      /**
+       * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+       * @param value The batchCounter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchCounter(long value) {
+
+        batchCounter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchCounter() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        batchCounter_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestsByReqCtxRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestsByReqCtxRequest)
+    private static final com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestsByReqCtxRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestsByReqCtxRequest>() {
+      @java.lang.Override
+      public QueryRequestsByReqCtxRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestsByReqCtxRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestsByReqCtxRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestsByReqCtxRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestsByReqCtxResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryRequestsByReqCtxResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    java.util.List<com.irismod.service.ServiceProto.Request> 
+        getRequestsList();
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    com.irismod.service.ServiceProto.Request getRequests(int index);
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    int getRequestsCount();
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    java.util.List<? extends com.irismod.service.ServiceProto.RequestOrBuilder> 
+        getRequestsOrBuilderList();
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    com.irismod.service.ServiceProto.RequestOrBuilder getRequestsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestsByReqCtxResponse is response type for the Query/RequestsByReqCtx RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryRequestsByReqCtxResponse}
+   */
+  public static final class QueryRequestsByReqCtxResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryRequestsByReqCtxResponse)
+      QueryRequestsByReqCtxResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestsByReqCtxResponse.newBuilder() to construct.
+    private QueryRequestsByReqCtxResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestsByReqCtxResponse() {
+      requests_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestsByReqCtxResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.class, com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.Builder.class);
+    }
+
+    public static final int REQUESTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.service.ServiceProto.Request> requests_;
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.service.ServiceProto.Request> getRequestsList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.service.ServiceProto.RequestOrBuilder> 
+        getRequestsOrBuilderList() {
+      return requests_;
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public int getRequestsCount() {
+      return requests_.size();
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.Request getRequests(int index) {
+      return requests_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.RequestOrBuilder getRequestsOrBuilder(
+        int index) {
+      return requests_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < requests_.size(); i++) {
+        output.writeMessage(1, requests_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < requests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, requests_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse other = (com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse) obj;
+
+      if (!getRequestsList()
+          .equals(other.getRequestsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRequestsCount() > 0) {
+        hash = (37 * hash) + REQUESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestsByReqCtxResponse is response type for the Query/RequestsByReqCtx RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryRequestsByReqCtxResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryRequestsByReqCtxResponse)
+        com.irismod.service.QueryProto.QueryRequestsByReqCtxResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.class, com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+        } else {
+          requests_ = null;
+          requestsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryRequestsByReqCtxResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse build() {
+        com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse result = new com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse result) {
+        if (requestsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            requests_ = java.util.Collections.unmodifiableList(requests_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.requests_ = requests_;
+        } else {
+          result.requests_ = requestsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse.getDefaultInstance()) return this;
+        if (requestsBuilder_ == null) {
+          if (!other.requests_.isEmpty()) {
+            if (requests_.isEmpty()) {
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRequestsIsMutable();
+              requests_.addAll(other.requests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.requests_.isEmpty()) {
+            if (requestsBuilder_.isEmpty()) {
+              requestsBuilder_.dispose();
+              requestsBuilder_ = null;
+              requests_ = other.requests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              requestsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRequestsFieldBuilder() : null;
+            } else {
+              requestsBuilder_.addAllMessages(other.requests_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.service.ServiceProto.Request m =
+                    input.readMessage(
+                        com.irismod.service.ServiceProto.Request.parser(),
+                        extensionRegistry);
+                if (requestsBuilder_ == null) {
+                  ensureRequestsIsMutable();
+                  requests_.add(m);
+                } else {
+                  requestsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.service.ServiceProto.Request> requests_ =
+        java.util.Collections.emptyList();
+      private void ensureRequestsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requests_ = new java.util.ArrayList<com.irismod.service.ServiceProto.Request>(requests_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder> requestsBuilder_;
+
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.Request> getRequestsList() {
+        if (requestsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(requests_);
+        } else {
+          return requestsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public int getRequestsCount() {
+        if (requestsBuilder_ == null) {
+          return requests_.size();
+        } else {
+          return requestsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request getRequests(int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);
+        } else {
+          return requestsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.service.ServiceProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.set(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder setRequests(
+          int index, com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(com.irismod.service.ServiceProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.service.ServiceProto.Request value) {
+        if (requestsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRequestsIsMutable();
+          requests_.add(index, value);
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(
+          com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addRequests(
+          int index, com.irismod.service.ServiceProto.Request.Builder builderForValue) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          requestsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder addAllRequests(
+          java.lang.Iterable<? extends com.irismod.service.ServiceProto.Request> values) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requests_);
+          onChanged();
+        } else {
+          requestsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder clearRequests() {
+        if (requestsBuilder_ == null) {
+          requests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          requestsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public Builder removeRequests(int index) {
+        if (requestsBuilder_ == null) {
+          ensureRequestsIsMutable();
+          requests_.remove(index);
+          onChanged();
+        } else {
+          requestsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder getRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.RequestOrBuilder getRequestsOrBuilder(
+          int index) {
+        if (requestsBuilder_ == null) {
+          return requests_.get(index);  } else {
+          return requestsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public java.util.List<? extends com.irismod.service.ServiceProto.RequestOrBuilder> 
+           getRequestsOrBuilderList() {
+        if (requestsBuilder_ != null) {
+          return requestsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(requests_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder addRequestsBuilder() {
+        return getRequestsFieldBuilder().addBuilder(
+            com.irismod.service.ServiceProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public com.irismod.service.ServiceProto.Request.Builder addRequestsBuilder(
+          int index) {
+        return getRequestsFieldBuilder().addBuilder(
+            index, com.irismod.service.ServiceProto.Request.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.Request requests = 1 [json_name = "requests"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.Request.Builder> 
+           getRequestsBuilderList() {
+        return getRequestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder> 
+          getRequestsFieldBuilder() {
+        if (requestsBuilder_ == null) {
+          requestsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.service.ServiceProto.Request, com.irismod.service.ServiceProto.Request.Builder, com.irismod.service.ServiceProto.RequestOrBuilder>(
+                  requests_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          requests_ = null;
+        }
+        return requestsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryRequestsByReqCtxResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryRequestsByReqCtxResponse)
+    private static final com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestsByReqCtxResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestsByReqCtxResponse>() {
+      @java.lang.Override
+      public QueryRequestsByReqCtxResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestsByReqCtxResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestsByReqCtxResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryRequestsByReqCtxResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResponseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryResponseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    java.lang.String getRequestId();
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The bytes for requestId.
+     */
+    com.google.protobuf.ByteString
+        getRequestIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryResponseRequest is request type for the Query/Response RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryResponseRequest}
+   */
+  public static final class QueryResponseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryResponseRequest)
+      QueryResponseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResponseRequest.newBuilder() to construct.
+    private QueryResponseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResponseRequest() {
+      requestId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResponseRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryResponseRequest.class, com.irismod.service.QueryProto.QueryResponseRequest.Builder.class);
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestId_ = "";
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_id = 1 [json_name = "requestId"];</code>
+     * @return The bytes for requestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryResponseRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryResponseRequest other = (com.irismod.service.QueryProto.QueryResponseRequest) obj;
+
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryResponseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryResponseRequest is request type for the Query/Response RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryResponseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryResponseRequest)
+        com.irismod.service.QueryProto.QueryResponseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryResponseRequest.class, com.irismod.service.QueryProto.QueryResponseRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryResponseRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponseRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryResponseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponseRequest build() {
+        com.irismod.service.QueryProto.QueryResponseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponseRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryResponseRequest result = new com.irismod.service.QueryProto.QueryResponseRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryResponseRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestId_ = requestId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryResponseRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryResponseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryResponseRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryResponseRequest.getDefaultInstance()) return this;
+        if (!other.getRequestId().isEmpty()) {
+          requestId_ = other.requestId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestId_ = "";
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @return The requestId.
+       */
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @return The bytes for requestId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        requestId_ = getDefaultInstance().getRequestId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_id = 1 [json_name = "requestId"];</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryResponseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryResponseRequest)
+    private static final com.irismod.service.QueryProto.QueryResponseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryResponseRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResponseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResponseRequest>() {
+      @java.lang.Override
+      public QueryResponseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResponseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResponseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryResponseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResponseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryResponseResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+     * @return Whether the response field is set.
+     */
+    boolean hasResponse();
+    /**
+     * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    com.irismod.service.ServiceProto.Response getResponse();
+    /**
+     * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+     */
+    com.irismod.service.ServiceProto.ResponseOrBuilder getResponseOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryResponseResponse is response type for the Query/Response RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryResponseResponse}
+   */
+  public static final class QueryResponseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryResponseResponse)
+      QueryResponseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResponseResponse.newBuilder() to construct.
+    private QueryResponseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResponseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResponseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryResponseResponse.class, com.irismod.service.QueryProto.QueryResponseResponse.Builder.class);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 1;
+    private com.irismod.service.ServiceProto.Response response_;
+    /**
+     * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+     * @return Whether the response field is set.
+     */
+    @java.lang.Override
+    public boolean hasResponse() {
+      return response_ != null;
+    }
+    /**
+     * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+     * @return The response.
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.Response getResponse() {
+      return response_ == null ? com.irismod.service.ServiceProto.Response.getDefaultInstance() : response_;
+    }
+    /**
+     * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ResponseOrBuilder getResponseOrBuilder() {
+      return response_ == null ? com.irismod.service.ServiceProto.Response.getDefaultInstance() : response_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (response_ != null) {
+        output.writeMessage(1, getResponse());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (response_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResponse());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryResponseResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryResponseResponse other = (com.irismod.service.QueryProto.QueryResponseResponse) obj;
+
+      if (hasResponse() != other.hasResponse()) return false;
+      if (hasResponse()) {
+        if (!getResponse()
+            .equals(other.getResponse())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResponse()) {
+        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getResponse().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryResponseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryResponseResponse is response type for the Query/Response RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryResponseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryResponseResponse)
+        com.irismod.service.QueryProto.QueryResponseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryResponseResponse.class, com.irismod.service.QueryProto.QueryResponseResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryResponseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponseResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryResponseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponseResponse build() {
+        com.irismod.service.QueryProto.QueryResponseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponseResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryResponseResponse result = new com.irismod.service.QueryProto.QueryResponseResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryResponseResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.response_ = responseBuilder_ == null
+              ? response_
+              : responseBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryResponseResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryResponseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryResponseResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryResponseResponse.getDefaultInstance()) return this;
+        if (other.hasResponse()) {
+          mergeResponse(other.getResponse());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.service.ServiceProto.Response response_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.Response, com.irismod.service.ServiceProto.Response.Builder, com.irismod.service.ServiceProto.ResponseOrBuilder> responseBuilder_;
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       * @return Whether the response field is set.
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       * @return The response.
+       */
+      public com.irismod.service.ServiceProto.Response getResponse() {
+        if (responseBuilder_ == null) {
+          return response_ == null ? com.irismod.service.ServiceProto.Response.getDefaultInstance() : response_;
+        } else {
+          return responseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      public Builder setResponse(com.irismod.service.ServiceProto.Response value) {
+        if (responseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          response_ = value;
+        } else {
+          responseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      public Builder setResponse(
+          com.irismod.service.ServiceProto.Response.Builder builderForValue) {
+        if (responseBuilder_ == null) {
+          response_ = builderForValue.build();
+        } else {
+          responseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      public Builder mergeResponse(com.irismod.service.ServiceProto.Response value) {
+        if (responseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            response_ != null &&
+            response_ != com.irismod.service.ServiceProto.Response.getDefaultInstance()) {
+            getResponseBuilder().mergeFrom(value);
+          } else {
+            response_ = value;
+          }
+        } else {
+          responseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        response_ = null;
+        if (responseBuilder_ != null) {
+          responseBuilder_.dispose();
+          responseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      public com.irismod.service.ServiceProto.Response.Builder getResponseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      public com.irismod.service.ServiceProto.ResponseOrBuilder getResponseOrBuilder() {
+        if (responseBuilder_ != null) {
+          return responseBuilder_.getMessageOrBuilder();
+        } else {
+          return response_ == null ?
+              com.irismod.service.ServiceProto.Response.getDefaultInstance() : response_;
+        }
+      }
+      /**
+       * <code>.irismod.service.Response response = 1 [json_name = "response"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.Response, com.irismod.service.ServiceProto.Response.Builder, com.irismod.service.ServiceProto.ResponseOrBuilder> 
+          getResponseFieldBuilder() {
+        if (responseBuilder_ == null) {
+          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.service.ServiceProto.Response, com.irismod.service.ServiceProto.Response.Builder, com.irismod.service.ServiceProto.ResponseOrBuilder>(
+                  getResponse(),
+                  getParentForChildren(),
+                  isClean());
+          response_ = null;
+        }
+        return responseBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryResponseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryResponseResponse)
+    private static final com.irismod.service.QueryProto.QueryResponseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryResponseResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResponseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResponseResponse>() {
+      @java.lang.Override
+      public QueryResponseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResponseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResponseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryResponseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResponsesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryResponsesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The requestContextId.
+     */
+    java.lang.String getRequestContextId();
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The bytes for requestContextId.
+     */
+    com.google.protobuf.ByteString
+        getRequestContextIdBytes();
+
+    /**
+     * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+     * @return The batchCounter.
+     */
+    long getBatchCounter();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryResponsesRequest is request type for the Query/Responses RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryResponsesRequest}
+   */
+  public static final class QueryResponsesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryResponsesRequest)
+      QueryResponsesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResponsesRequest.newBuilder() to construct.
+    private QueryResponsesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResponsesRequest() {
+      requestContextId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResponsesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryResponsesRequest.class, com.irismod.service.QueryProto.QueryResponsesRequest.Builder.class);
+    }
+
+    public static final int REQUEST_CONTEXT_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestContextId_ = "";
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The requestContextId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestContextId() {
+      java.lang.Object ref = requestContextId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestContextId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+     * @return The bytes for requestContextId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestContextIdBytes() {
+      java.lang.Object ref = requestContextId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestContextId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_COUNTER_FIELD_NUMBER = 2;
+    private long batchCounter_ = 0L;
+    /**
+     * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+     * @return The batchCounter.
+     */
+    @java.lang.Override
+    public long getBatchCounter() {
+      return batchCounter_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestContextId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestContextId_);
+      }
+      if (batchCounter_ != 0L) {
+        output.writeUInt64(2, batchCounter_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestContextId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestContextId_);
+      }
+      if (batchCounter_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, batchCounter_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryResponsesRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryResponsesRequest other = (com.irismod.service.QueryProto.QueryResponsesRequest) obj;
+
+      if (!getRequestContextId()
+          .equals(other.getRequestContextId())) return false;
+      if (getBatchCounter()
+          != other.getBatchCounter()) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_CONTEXT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestContextId().hashCode();
+      hash = (37 * hash) + BATCH_COUNTER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBatchCounter());
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryResponsesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryResponsesRequest is request type for the Query/Responses RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryResponsesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryResponsesRequest)
+        com.irismod.service.QueryProto.QueryResponsesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryResponsesRequest.class, com.irismod.service.QueryProto.QueryResponsesRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryResponsesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestContextId_ = "";
+        batchCounter_ = 0L;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponsesRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryResponsesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponsesRequest build() {
+        com.irismod.service.QueryProto.QueryResponsesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponsesRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryResponsesRequest result = new com.irismod.service.QueryProto.QueryResponsesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryResponsesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestContextId_ = requestContextId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchCounter_ = batchCounter_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryResponsesRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryResponsesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryResponsesRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryResponsesRequest.getDefaultInstance()) return this;
+        if (!other.getRequestContextId().isEmpty()) {
+          requestContextId_ = other.requestContextId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getBatchCounter() != 0L) {
+          setBatchCounter(other.getBatchCounter());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestContextId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                batchCounter_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestContextId_ = "";
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return The requestContextId.
+       */
+      public java.lang.String getRequestContextId() {
+        java.lang.Object ref = requestContextId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestContextId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return The bytes for requestContextId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestContextIdBytes() {
+        java.lang.Object ref = requestContextId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestContextId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @param value The requestContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestContextId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestContextId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestContextId() {
+        requestContextId_ = getDefaultInstance().getRequestContextId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_context_id = 1 [json_name = "requestContextId"];</code>
+       * @param value The bytes for requestContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestContextIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestContextId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long batchCounter_ ;
+      /**
+       * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+       * @return The batchCounter.
+       */
+      @java.lang.Override
+      public long getBatchCounter() {
+        return batchCounter_;
+      }
+      /**
+       * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+       * @param value The batchCounter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBatchCounter(long value) {
+
+        batchCounter_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 batch_counter = 2 [json_name = "batchCounter"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBatchCounter() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        batchCounter_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryResponsesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryResponsesRequest)
+    private static final com.irismod.service.QueryProto.QueryResponsesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryResponsesRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResponsesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResponsesRequest>() {
+      @java.lang.Override
+      public QueryResponsesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResponsesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResponsesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryResponsesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryResponsesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryResponsesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    java.util.List<com.irismod.service.ServiceProto.Response> 
+        getResponsesList();
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    com.irismod.service.ServiceProto.Response getResponses(int index);
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    int getResponsesCount();
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    java.util.List<? extends com.irismod.service.ServiceProto.ResponseOrBuilder> 
+        getResponsesOrBuilderList();
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    com.irismod.service.ServiceProto.ResponseOrBuilder getResponsesOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryResponsesResponse is response type for the Query/Responses RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryResponsesResponse}
+   */
+  public static final class QueryResponsesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryResponsesResponse)
+      QueryResponsesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryResponsesResponse.newBuilder() to construct.
+    private QueryResponsesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryResponsesResponse() {
+      responses_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryResponsesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryResponsesResponse.class, com.irismod.service.QueryProto.QueryResponsesResponse.Builder.class);
+    }
+
+    public static final int RESPONSES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.service.ServiceProto.Response> responses_;
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.service.ServiceProto.Response> getResponsesList() {
+      return responses_;
+    }
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.service.ServiceProto.ResponseOrBuilder> 
+        getResponsesOrBuilderList() {
+      return responses_;
+    }
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    @java.lang.Override
+    public int getResponsesCount() {
+      return responses_.size();
+    }
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.Response getResponses(int index) {
+      return responses_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ResponseOrBuilder getResponsesOrBuilder(
+        int index) {
+      return responses_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < responses_.size(); i++) {
+        output.writeMessage(1, responses_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < responses_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, responses_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryResponsesResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryResponsesResponse other = (com.irismod.service.QueryProto.QueryResponsesResponse) obj;
+
+      if (!getResponsesList()
+          .equals(other.getResponsesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getResponsesCount() > 0) {
+        hash = (37 * hash) + RESPONSES_FIELD_NUMBER;
+        hash = (53 * hash) + getResponsesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryResponsesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryResponsesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryResponsesResponse is response type for the Query/Responses RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryResponsesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryResponsesResponse)
+        com.irismod.service.QueryProto.QueryResponsesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryResponsesResponse.class, com.irismod.service.QueryProto.QueryResponsesResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryResponsesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (responsesBuilder_ == null) {
+          responses_ = java.util.Collections.emptyList();
+        } else {
+          responses_ = null;
+          responsesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryResponsesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponsesResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryResponsesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponsesResponse build() {
+        com.irismod.service.QueryProto.QueryResponsesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryResponsesResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryResponsesResponse result = new com.irismod.service.QueryProto.QueryResponsesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.service.QueryProto.QueryResponsesResponse result) {
+        if (responsesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            responses_ = java.util.Collections.unmodifiableList(responses_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.responses_ = responses_;
+        } else {
+          result.responses_ = responsesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryResponsesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryResponsesResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryResponsesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryResponsesResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryResponsesResponse.getDefaultInstance()) return this;
+        if (responsesBuilder_ == null) {
+          if (!other.responses_.isEmpty()) {
+            if (responses_.isEmpty()) {
+              responses_ = other.responses_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureResponsesIsMutable();
+              responses_.addAll(other.responses_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.responses_.isEmpty()) {
+            if (responsesBuilder_.isEmpty()) {
+              responsesBuilder_.dispose();
+              responsesBuilder_ = null;
+              responses_ = other.responses_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              responsesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResponsesFieldBuilder() : null;
+            } else {
+              responsesBuilder_.addAllMessages(other.responses_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.service.ServiceProto.Response m =
+                    input.readMessage(
+                        com.irismod.service.ServiceProto.Response.parser(),
+                        extensionRegistry);
+                if (responsesBuilder_ == null) {
+                  ensureResponsesIsMutable();
+                  responses_.add(m);
+                } else {
+                  responsesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.service.ServiceProto.Response> responses_ =
+        java.util.Collections.emptyList();
+      private void ensureResponsesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          responses_ = new java.util.ArrayList<com.irismod.service.ServiceProto.Response>(responses_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.Response, com.irismod.service.ServiceProto.Response.Builder, com.irismod.service.ServiceProto.ResponseOrBuilder> responsesBuilder_;
+
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.Response> getResponsesList() {
+        if (responsesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(responses_);
+        } else {
+          return responsesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public int getResponsesCount() {
+        if (responsesBuilder_ == null) {
+          return responses_.size();
+        } else {
+          return responsesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public com.irismod.service.ServiceProto.Response getResponses(int index) {
+        if (responsesBuilder_ == null) {
+          return responses_.get(index);
+        } else {
+          return responsesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder setResponses(
+          int index, com.irismod.service.ServiceProto.Response value) {
+        if (responsesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResponsesIsMutable();
+          responses_.set(index, value);
+          onChanged();
+        } else {
+          responsesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder setResponses(
+          int index, com.irismod.service.ServiceProto.Response.Builder builderForValue) {
+        if (responsesBuilder_ == null) {
+          ensureResponsesIsMutable();
+          responses_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          responsesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder addResponses(com.irismod.service.ServiceProto.Response value) {
+        if (responsesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResponsesIsMutable();
+          responses_.add(value);
+          onChanged();
+        } else {
+          responsesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder addResponses(
+          int index, com.irismod.service.ServiceProto.Response value) {
+        if (responsesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureResponsesIsMutable();
+          responses_.add(index, value);
+          onChanged();
+        } else {
+          responsesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder addResponses(
+          com.irismod.service.ServiceProto.Response.Builder builderForValue) {
+        if (responsesBuilder_ == null) {
+          ensureResponsesIsMutable();
+          responses_.add(builderForValue.build());
+          onChanged();
+        } else {
+          responsesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder addResponses(
+          int index, com.irismod.service.ServiceProto.Response.Builder builderForValue) {
+        if (responsesBuilder_ == null) {
+          ensureResponsesIsMutable();
+          responses_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          responsesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder addAllResponses(
+          java.lang.Iterable<? extends com.irismod.service.ServiceProto.Response> values) {
+        if (responsesBuilder_ == null) {
+          ensureResponsesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, responses_);
+          onChanged();
+        } else {
+          responsesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder clearResponses() {
+        if (responsesBuilder_ == null) {
+          responses_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          responsesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public Builder removeResponses(int index) {
+        if (responsesBuilder_ == null) {
+          ensureResponsesIsMutable();
+          responses_.remove(index);
+          onChanged();
+        } else {
+          responsesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public com.irismod.service.ServiceProto.Response.Builder getResponsesBuilder(
+          int index) {
+        return getResponsesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public com.irismod.service.ServiceProto.ResponseOrBuilder getResponsesOrBuilder(
+          int index) {
+        if (responsesBuilder_ == null) {
+          return responses_.get(index);  } else {
+          return responsesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public java.util.List<? extends com.irismod.service.ServiceProto.ResponseOrBuilder> 
+           getResponsesOrBuilderList() {
+        if (responsesBuilder_ != null) {
+          return responsesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(responses_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public com.irismod.service.ServiceProto.Response.Builder addResponsesBuilder() {
+        return getResponsesFieldBuilder().addBuilder(
+            com.irismod.service.ServiceProto.Response.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public com.irismod.service.ServiceProto.Response.Builder addResponsesBuilder(
+          int index) {
+        return getResponsesFieldBuilder().addBuilder(
+            index, com.irismod.service.ServiceProto.Response.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.service.Response responses = 1 [json_name = "responses"];</code>
+       */
+      public java.util.List<com.irismod.service.ServiceProto.Response.Builder> 
+           getResponsesBuilderList() {
+        return getResponsesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.service.ServiceProto.Response, com.irismod.service.ServiceProto.Response.Builder, com.irismod.service.ServiceProto.ResponseOrBuilder> 
+          getResponsesFieldBuilder() {
+        if (responsesBuilder_ == null) {
+          responsesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.service.ServiceProto.Response, com.irismod.service.ServiceProto.Response.Builder, com.irismod.service.ServiceProto.ResponseOrBuilder>(
+                  responses_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          responses_ = null;
+        }
+        return responsesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryResponsesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryResponsesResponse)
+    private static final com.irismod.service.QueryProto.QueryResponsesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryResponsesResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryResponsesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryResponsesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryResponsesResponse>() {
+      @java.lang.Override
+      public QueryResponsesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryResponsesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryResponsesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryResponsesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEarnedFeesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryEarnedFeesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string provider = 1 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    java.lang.String getProvider();
+    /**
+     * <code>string provider = 1 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    com.google.protobuf.ByteString
+        getProviderBytes();
+  }
+  /**
+   * <pre>
+   * QueryEarnedFeesRequest is request type for the Query/EarnedFees RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryEarnedFeesRequest}
+   */
+  public static final class QueryEarnedFeesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryEarnedFeesRequest)
+      QueryEarnedFeesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEarnedFeesRequest.newBuilder() to construct.
+    private QueryEarnedFeesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEarnedFeesRequest() {
+      provider_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEarnedFeesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryEarnedFeesRequest.class, com.irismod.service.QueryProto.QueryEarnedFeesRequest.Builder.class);
+    }
+
+    public static final int PROVIDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object provider_ = "";
+    /**
+     * <code>string provider = 1 [json_name = "provider"];</code>
+     * @return The provider.
+     */
+    @java.lang.Override
+    public java.lang.String getProvider() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        provider_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider = 1 [json_name = "provider"];</code>
+     * @return The bytes for provider.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderBytes() {
+      java.lang.Object ref = provider_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        provider_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, provider_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(provider_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, provider_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryEarnedFeesRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryEarnedFeesRequest other = (com.irismod.service.QueryProto.QueryEarnedFeesRequest) obj;
+
+      if (!getProvider()
+          .equals(other.getProvider())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
+      hash = (53 * hash) + getProvider().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryEarnedFeesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryEarnedFeesRequest is request type for the Query/EarnedFees RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryEarnedFeesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryEarnedFeesRequest)
+        com.irismod.service.QueryProto.QueryEarnedFeesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryEarnedFeesRequest.class, com.irismod.service.QueryProto.QueryEarnedFeesRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryEarnedFeesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        provider_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryEarnedFeesRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryEarnedFeesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryEarnedFeesRequest build() {
+        com.irismod.service.QueryProto.QueryEarnedFeesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryEarnedFeesRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryEarnedFeesRequest result = new com.irismod.service.QueryProto.QueryEarnedFeesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryEarnedFeesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.provider_ = provider_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryEarnedFeesRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryEarnedFeesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryEarnedFeesRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryEarnedFeesRequest.getDefaultInstance()) return this;
+        if (!other.getProvider().isEmpty()) {
+          provider_ = other.provider_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                provider_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object provider_ = "";
+      /**
+       * <code>string provider = 1 [json_name = "provider"];</code>
+       * @return The provider.
+       */
+      public java.lang.String getProvider() {
+        java.lang.Object ref = provider_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          provider_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider = 1 [json_name = "provider"];</code>
+       * @return The bytes for provider.
+       */
+      public com.google.protobuf.ByteString
+          getProviderBytes() {
+        java.lang.Object ref = provider_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          provider_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider = 1 [json_name = "provider"];</code>
+       * @param value The provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProvider(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        provider_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 1 [json_name = "provider"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProvider() {
+        provider_ = getDefaultInstance().getProvider();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider = 1 [json_name = "provider"];</code>
+       * @param value The bytes for provider to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        provider_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryEarnedFeesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryEarnedFeesRequest)
+    private static final com.irismod.service.QueryProto.QueryEarnedFeesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryEarnedFeesRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEarnedFeesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEarnedFeesRequest>() {
+      @java.lang.Override
+      public QueryEarnedFeesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEarnedFeesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEarnedFeesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryEarnedFeesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEarnedFeesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryEarnedFeesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getFeesList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getFeesCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeesOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryEarnedFeesResponse is response type for the Query/EarnedFees RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryEarnedFeesResponse}
+   */
+  public static final class QueryEarnedFeesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryEarnedFeesResponse)
+      QueryEarnedFeesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEarnedFeesResponse.newBuilder() to construct.
+    private QueryEarnedFeesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEarnedFeesResponse() {
+      fees_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEarnedFeesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryEarnedFeesResponse.class, com.irismod.service.QueryProto.QueryEarnedFeesResponse.Builder.class);
+    }
+
+    public static final int FEES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fees_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeesList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getFeesOrBuilderList() {
+      return fees_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getFeesCount() {
+      return fees_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index) {
+      return fees_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+        int index) {
+      return fees_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fees_.size(); i++) {
+        output.writeMessage(1, fees_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fees_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, fees_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryEarnedFeesResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryEarnedFeesResponse other = (com.irismod.service.QueryProto.QueryEarnedFeesResponse) obj;
+
+      if (!getFeesList()
+          .equals(other.getFeesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFeesCount() > 0) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryEarnedFeesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryEarnedFeesResponse is response type for the Query/EarnedFees RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryEarnedFeesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryEarnedFeesResponse)
+        com.irismod.service.QueryProto.QueryEarnedFeesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryEarnedFeesResponse.class, com.irismod.service.QueryProto.QueryEarnedFeesResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryEarnedFeesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+        } else {
+          fees_ = null;
+          feesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryEarnedFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryEarnedFeesResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryEarnedFeesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryEarnedFeesResponse build() {
+        com.irismod.service.QueryProto.QueryEarnedFeesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryEarnedFeesResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryEarnedFeesResponse result = new com.irismod.service.QueryProto.QueryEarnedFeesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.service.QueryProto.QueryEarnedFeesResponse result) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fees_ = java.util.Collections.unmodifiableList(fees_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fees_ = fees_;
+        } else {
+          result.fees_ = feesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryEarnedFeesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryEarnedFeesResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryEarnedFeesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryEarnedFeesResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryEarnedFeesResponse.getDefaultInstance()) return this;
+        if (feesBuilder_ == null) {
+          if (!other.fees_.isEmpty()) {
+            if (fees_.isEmpty()) {
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFeesIsMutable();
+              fees_.addAll(other.fees_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fees_.isEmpty()) {
+            if (feesBuilder_.isEmpty()) {
+              feesBuilder_.dispose();
+              feesBuilder_ = null;
+              fees_ = other.fees_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              feesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFeesFieldBuilder() : null;
+            } else {
+              feesBuilder_.addAllMessages(other.fees_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (feesBuilder_ == null) {
+                  ensureFeesIsMutable();
+                  fees_.add(m);
+                } else {
+                  feesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> fees_ =
+        java.util.Collections.emptyList();
+      private void ensureFeesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fees_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(fees_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> feesBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getFeesList() {
+        if (feesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fees_);
+        } else {
+          return feesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getFeesCount() {
+        if (feesBuilder_ == null) {
+          return fees_.size();
+        } else {
+          return feesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getFees(int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);
+        } else {
+          return feesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.set(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFeesIsMutable();
+          fees_.add(index, value);
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addFees(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          feesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllFees(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fees_);
+          onChanged();
+        } else {
+          feesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearFees() {
+        if (feesBuilder_ == null) {
+          fees_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          feesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeFees(int index) {
+        if (feesBuilder_ == null) {
+          ensureFeesIsMutable();
+          fees_.remove(index);
+          onChanged();
+        } else {
+          feesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getFeesOrBuilder(
+          int index) {
+        if (feesBuilder_ == null) {
+          return fees_.get(index);  } else {
+          return feesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getFeesOrBuilderList() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fees_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeesBuilder() {
+        return getFeesFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addFeesBuilder(
+          int index) {
+        return getFeesFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin fees = 1 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getFeesBuilderList() {
+        return getFeesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  fees_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryEarnedFeesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryEarnedFeesResponse)
+    private static final com.irismod.service.QueryProto.QueryEarnedFeesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryEarnedFeesResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryEarnedFeesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEarnedFeesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEarnedFeesResponse>() {
+      @java.lang.Override
+      public QueryEarnedFeesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEarnedFeesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEarnedFeesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryEarnedFeesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySchemaRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QuerySchemaRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+     * @return The schemaName.
+     */
+    java.lang.String getSchemaName();
+    /**
+     * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+     * @return The bytes for schemaName.
+     */
+    com.google.protobuf.ByteString
+        getSchemaNameBytes();
+  }
+  /**
+   * <pre>
+   * QuerySchemaRequest is request type for the Query/Schema RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QuerySchemaRequest}
+   */
+  public static final class QuerySchemaRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QuerySchemaRequest)
+      QuerySchemaRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySchemaRequest.newBuilder() to construct.
+    private QuerySchemaRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySchemaRequest() {
+      schemaName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySchemaRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QuerySchemaRequest.class, com.irismod.service.QueryProto.QuerySchemaRequest.Builder.class);
+    }
+
+    public static final int SCHEMA_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schemaName_ = "";
+    /**
+     * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+     * @return The schemaName.
+     */
+    @java.lang.Override
+    public java.lang.String getSchemaName() {
+      java.lang.Object ref = schemaName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schemaName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+     * @return The bytes for schemaName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaNameBytes() {
+      java.lang.Object ref = schemaName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schemaName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schemaName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, schemaName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schemaName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, schemaName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QuerySchemaRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QuerySchemaRequest other = (com.irismod.service.QueryProto.QuerySchemaRequest) obj;
+
+      if (!getSchemaName()
+          .equals(other.getSchemaName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCHEMA_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getSchemaName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QuerySchemaRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySchemaRequest is request type for the Query/Schema RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QuerySchemaRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QuerySchemaRequest)
+        com.irismod.service.QueryProto.QuerySchemaRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QuerySchemaRequest.class, com.irismod.service.QueryProto.QuerySchemaRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QuerySchemaRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        schemaName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QuerySchemaRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QuerySchemaRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QuerySchemaRequest build() {
+        com.irismod.service.QueryProto.QuerySchemaRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QuerySchemaRequest buildPartial() {
+        com.irismod.service.QueryProto.QuerySchemaRequest result = new com.irismod.service.QueryProto.QuerySchemaRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QuerySchemaRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.schemaName_ = schemaName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QuerySchemaRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QuerySchemaRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QuerySchemaRequest other) {
+        if (other == com.irismod.service.QueryProto.QuerySchemaRequest.getDefaultInstance()) return this;
+        if (!other.getSchemaName().isEmpty()) {
+          schemaName_ = other.schemaName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                schemaName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object schemaName_ = "";
+      /**
+       * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+       * @return The schemaName.
+       */
+      public java.lang.String getSchemaName() {
+        java.lang.Object ref = schemaName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schemaName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+       * @return The bytes for schemaName.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaNameBytes() {
+        java.lang.Object ref = schemaName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schemaName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+       * @param value The schemaName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        schemaName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchemaName() {
+        schemaName_ = getDefaultInstance().getSchemaName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema_name = 1 [json_name = "schemaName"];</code>
+       * @param value The bytes for schemaName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        schemaName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QuerySchemaRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QuerySchemaRequest)
+    private static final com.irismod.service.QueryProto.QuerySchemaRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QuerySchemaRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySchemaRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySchemaRequest>() {
+      @java.lang.Override
+      public QuerySchemaRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySchemaRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySchemaRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QuerySchemaRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySchemaResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QuerySchemaResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string schema = 1 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    java.lang.String getSchema();
+    /**
+     * <code>string schema = 1 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    com.google.protobuf.ByteString
+        getSchemaBytes();
+  }
+  /**
+   * <pre>
+   * QuerySchemaResponse is response type for the Query/Schema RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QuerySchemaResponse}
+   */
+  public static final class QuerySchemaResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QuerySchemaResponse)
+      QuerySchemaResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySchemaResponse.newBuilder() to construct.
+    private QuerySchemaResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySchemaResponse() {
+      schema_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySchemaResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QuerySchemaResponse.class, com.irismod.service.QueryProto.QuerySchemaResponse.Builder.class);
+    }
+
+    public static final int SCHEMA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schema_ = "";
+    /**
+     * <code>string schema = 1 [json_name = "schema"];</code>
+     * @return The schema.
+     */
+    @java.lang.Override
+    public java.lang.String getSchema() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schema_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string schema = 1 [json_name = "schema"];</code>
+     * @return The bytes for schema.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSchemaBytes() {
+      java.lang.Object ref = schema_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schema_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, schema_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schema_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, schema_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QuerySchemaResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QuerySchemaResponse other = (com.irismod.service.QueryProto.QuerySchemaResponse) obj;
+
+      if (!getSchema()
+          .equals(other.getSchema())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
+      hash = (53 * hash) + getSchema().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QuerySchemaResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QuerySchemaResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QuerySchemaResponse is response type for the Query/Schema RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QuerySchemaResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QuerySchemaResponse)
+        com.irismod.service.QueryProto.QuerySchemaResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QuerySchemaResponse.class, com.irismod.service.QueryProto.QuerySchemaResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QuerySchemaResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        schema_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QuerySchemaResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QuerySchemaResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QuerySchemaResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QuerySchemaResponse build() {
+        com.irismod.service.QueryProto.QuerySchemaResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QuerySchemaResponse buildPartial() {
+        com.irismod.service.QueryProto.QuerySchemaResponse result = new com.irismod.service.QueryProto.QuerySchemaResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QuerySchemaResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.schema_ = schema_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QuerySchemaResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QuerySchemaResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QuerySchemaResponse other) {
+        if (other == com.irismod.service.QueryProto.QuerySchemaResponse.getDefaultInstance()) return this;
+        if (!other.getSchema().isEmpty()) {
+          schema_ = other.schema_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                schema_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object schema_ = "";
+      /**
+       * <code>string schema = 1 [json_name = "schema"];</code>
+       * @return The schema.
+       */
+      public java.lang.String getSchema() {
+        java.lang.Object ref = schema_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schema_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string schema = 1 [json_name = "schema"];</code>
+       * @return The bytes for schema.
+       */
+      public com.google.protobuf.ByteString
+          getSchemaBytes() {
+        java.lang.Object ref = schema_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schema_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string schema = 1 [json_name = "schema"];</code>
+       * @param value The schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchema(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        schema_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema = 1 [json_name = "schema"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchema() {
+        schema_ = getDefaultInstance().getSchema();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string schema = 1 [json_name = "schema"];</code>
+       * @param value The bytes for schema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchemaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        schema_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QuerySchemaResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QuerySchemaResponse)
+    private static final com.irismod.service.QueryProto.QuerySchemaResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QuerySchemaResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QuerySchemaResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySchemaResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySchemaResponse>() {
+      @java.lang.Override
+      public QuerySchemaResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySchemaResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySchemaResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QuerySchemaResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParametersRequest is request type for the Query/Parameters RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryParamsRequest.class, com.irismod.service.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryParamsRequest other = (com.irismod.service.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParametersRequest is request type for the Query/Parameters RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryParamsRequest)
+        com.irismod.service.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryParamsRequest.class, com.irismod.service.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryParamsRequest build() {
+        com.irismod.service.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryParamsRequest buildPartial() {
+        com.irismod.service.QueryProto.QueryParamsRequest result = new com.irismod.service.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryParamsRequest other) {
+        if (other == com.irismod.service.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryParamsRequest)
+    private static final com.irismod.service.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.service.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.irismod.service.ServiceProto.Params getParams();
+    /**
+     * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.service.ServiceProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+     * @return Whether the res field is set.
+     */
+    boolean hasRes();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+     * @return The res.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getRes();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getResOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParametersResponse is response type for the Query/Parameters RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.service.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.service.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.service.QueryProto.QueryParamsResponse.class, com.irismod.service.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.irismod.service.ServiceProto.Params params_;
+    /**
+     * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.Params getParams() {
+      return params_ == null ? com.irismod.service.ServiceProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.service.ServiceProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.irismod.service.ServiceProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int RES_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse res_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+     * @return Whether the res field is set.
+     */
+    @java.lang.Override
+    public boolean hasRes() {
+      return res_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+     * @return The res.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getRes() {
+      return res_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : res_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getResOrBuilder() {
+      return res_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : res_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      if (res_ != null) {
+        output.writeMessage(2, getRes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      if (res_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.service.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.service.QueryProto.QueryParamsResponse other = (com.irismod.service.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasRes() != other.hasRes()) return false;
+      if (hasRes()) {
+        if (!getRes()
+            .equals(other.getRes())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasRes()) {
+        hash = (37 * hash) + RES_FIELD_NUMBER;
+        hash = (53 * hash) + getRes().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.service.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.service.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParametersResponse is response type for the Query/Parameters RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.service.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.service.QueryParamsResponse)
+        com.irismod.service.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.service.QueryProto.QueryParamsResponse.class, com.irismod.service.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.service.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        res_ = null;
+        if (resBuilder_ != null) {
+          resBuilder_.dispose();
+          resBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.service.QueryProto.internal_static_irismod_service_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.irismod.service.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryParamsResponse build() {
+        com.irismod.service.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.service.QueryProto.QueryParamsResponse buildPartial() {
+        com.irismod.service.QueryProto.QueryParamsResponse result = new com.irismod.service.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.service.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.res_ = resBuilder_ == null
+              ? res_
+              : resBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.service.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.irismod.service.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.service.QueryProto.QueryParamsResponse other) {
+        if (other == com.irismod.service.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasRes()) {
+          mergeRes(other.getRes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getResFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.service.ServiceProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.Params, com.irismod.service.ServiceProto.Params.Builder, com.irismod.service.ServiceProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.irismod.service.ServiceProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.irismod.service.ServiceProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.irismod.service.ServiceProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.irismod.service.ServiceProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.irismod.service.ServiceProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.irismod.service.ServiceProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.service.ServiceProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.service.ServiceProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.irismod.service.ServiceProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.irismod.service.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.service.ServiceProto.Params, com.irismod.service.ServiceProto.Params.Builder, com.irismod.service.ServiceProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.service.ServiceProto.Params, com.irismod.service.ServiceProto.Params.Builder, com.irismod.service.ServiceProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse res_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> resBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       * @return Whether the res field is set.
+       */
+      public boolean hasRes() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       * @return The res.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getRes() {
+        if (resBuilder_ == null) {
+          return res_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : res_;
+        } else {
+          return resBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      public Builder setRes(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (resBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          res_ = value;
+        } else {
+          resBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      public Builder setRes(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (resBuilder_ == null) {
+          res_ = builderForValue.build();
+        } else {
+          resBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      public Builder mergeRes(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (resBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            res_ != null &&
+            res_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getResBuilder().mergeFrom(value);
+          } else {
+            res_ = value;
+          }
+        } else {
+          resBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      public Builder clearRes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        res_ = null;
+        if (resBuilder_ != null) {
+          resBuilder_.dispose();
+          resBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getResBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getResOrBuilder() {
+        if (resBuilder_ != null) {
+          return resBuilder_.getMessageOrBuilder();
+        } else {
+          return res_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : res_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse res = 2 [json_name = "res"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getResFieldBuilder() {
+        if (resBuilder_ == null) {
+          resBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getRes(),
+                  getParentForChildren(),
+                  isClean());
+          res_ = null;
+        }
+        return resBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.service.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.service.QueryParamsResponse)
+    private static final com.irismod.service.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.service.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.irismod.service.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.service.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryDefinitionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryDefinitionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryDefinitionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryDefinitionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryBindingRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryBindingRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryBindingResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryBindingResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryBindingsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryBindingsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryBindingsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryBindingsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryWithdrawAddressRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryWithdrawAddressRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryWithdrawAddressResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryWithdrawAddressResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestContextRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestContextRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestContextResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestContextResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestsByReqCtxRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestsByReqCtxRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryRequestsByReqCtxResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryRequestsByReqCtxResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryResponseRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryResponseRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryResponseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryResponseResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryResponsesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryResponsesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryResponsesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryResponsesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryEarnedFeesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryEarnedFeesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryEarnedFeesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryEarnedFeesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QuerySchemaRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QuerySchemaRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QuerySchemaResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QuerySchemaResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_service_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_service_QueryParamsResponse_fieldAccessorTable;
 
@@ -275,12 +18532,11 @@ public final class QueryProto {
       "mas/{schema_name}\022t\n\006Params\022#.irismod.se" +
       "rvice.QueryParamsRequest\032$.irismod.servi" +
       "ce.QueryParamsResponse\"\037\202\323\344\223\002\031\022\027/irismod" +
-      "/service/paramsB\260\001\n\023com.irismod.serviceB" +
-      "\nQueryProtoP\001Z0github.com/irisnet/irismo" +
-      "d/modules/service/types\242\002\003ISX\252\002\017Irismod." +
-      "Service\312\002\017Irismod\\Service\342\002\033Irismod\\Serv" +
-      "ice\\GPBMetadata\352\002\020Irismod::Serviceb\006prot" +
-      "o3"
+      "/service/paramsB\256\001\n\023com.irismod.serviceB" +
+      "\nQueryProtoZ0github.com/irisnet/irismod/" +
+      "modules/service/types\242\002\003ISX\252\002\017Irismod.Se" +
+      "rvice\312\002\017Irismod\\Service\342\002\033Irismod\\Servic" +
+      "e\\GPBMetadata\352\002\020Irismod::Serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

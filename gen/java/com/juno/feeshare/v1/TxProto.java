@@ -14,34 +14,4004 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgRegisterFeeShareOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:juno.feeshare.v1.MsgRegisterFeeShare)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    java.lang.String getWithdrawerAddress();
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgRegisterFeeShare defines a message that registers a FeeShare
+   * </pre>
+   *
+   * Protobuf type {@code juno.feeshare.v1.MsgRegisterFeeShare}
+   */
+  public static final class MsgRegisterFeeShare extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:juno.feeshare.v1.MsgRegisterFeeShare)
+      MsgRegisterFeeShareOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterFeeShare.newBuilder() to construct.
+    private MsgRegisterFeeShare(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterFeeShare() {
+      contractAddress_ = "";
+      deployerAddress_ = "";
+      withdrawerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterFeeShare();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShare_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShare_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.class, com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WITHDRAWER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawerAddress_ = "";
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawerAddress() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawerAddressBytes() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, withdrawerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, withdrawerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare)) {
+        return super.equals(obj);
+      }
+      com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare other = (com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (!getWithdrawerAddress()
+          .equals(other.getWithdrawerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      hash = (37 * hash) + WITHDRAWER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterFeeShare defines a message that registers a FeeShare
+     * </pre>
+     *
+     * Protobuf type {@code juno.feeshare.v1.MsgRegisterFeeShare}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:juno.feeshare.v1.MsgRegisterFeeShare)
+        com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShare_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShare_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.class, com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.Builder.class);
+      }
+
+      // Construct using com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        deployerAddress_ = "";
+        withdrawerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShare_descriptor;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare getDefaultInstanceForType() {
+        return com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare build() {
+        com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare buildPartial() {
+        com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare result = new com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.withdrawerAddress_ = withdrawerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare) {
+          return mergeFrom((com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare other) {
+        if (other == com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWithdrawerAddress().isEmpty()) {
+          withdrawerAddress_ = other.withdrawerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                withdrawerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object withdrawerAddress_ = "";
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The withdrawerAddress.
+       */
+      public java.lang.String getWithdrawerAddress() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The bytes for withdrawerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawerAddressBytes() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawerAddress() {
+        withdrawerAddress_ = getDefaultInstance().getWithdrawerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The bytes for withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:juno.feeshare.v1.MsgRegisterFeeShare)
+    }
+
+    // @@protoc_insertion_point(class_scope:juno.feeshare.v1.MsgRegisterFeeShare)
+    private static final com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare();
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterFeeShare>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterFeeShare>() {
+      @java.lang.Override
+      public MsgRegisterFeeShare parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterFeeShare> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterFeeShare> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShare getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRegisterFeeShareResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:juno.feeshare.v1.MsgRegisterFeeShareResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRegisterFeeShareResponse defines the MsgRegisterFeeShare response type
+   * </pre>
+   *
+   * Protobuf type {@code juno.feeshare.v1.MsgRegisterFeeShareResponse}
+   */
+  public static final class MsgRegisterFeeShareResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:juno.feeshare.v1.MsgRegisterFeeShareResponse)
+      MsgRegisterFeeShareResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRegisterFeeShareResponse.newBuilder() to construct.
+    private MsgRegisterFeeShareResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRegisterFeeShareResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRegisterFeeShareResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.class, com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse)) {
+        return super.equals(obj);
+      }
+      com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse other = (com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRegisterFeeShareResponse defines the MsgRegisterFeeShare response type
+     * </pre>
+     *
+     * Protobuf type {@code juno.feeshare.v1.MsgRegisterFeeShareResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:juno.feeshare.v1.MsgRegisterFeeShareResponse)
+        com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.class, com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.Builder.class);
+      }
+
+      // Construct using com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse getDefaultInstanceForType() {
+        return com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse build() {
+        com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse buildPartial() {
+        com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse result = new com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse) {
+          return mergeFrom((com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse other) {
+        if (other == com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:juno.feeshare.v1.MsgRegisterFeeShareResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:juno.feeshare.v1.MsgRegisterFeeShareResponse)
+    private static final com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse();
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRegisterFeeShareResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRegisterFeeShareResponse>() {
+      @java.lang.Override
+      public MsgRegisterFeeShareResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRegisterFeeShareResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRegisterFeeShareResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.juno.feeshare.v1.TxProto.MsgRegisterFeeShareResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateFeeShareOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:juno.feeshare.v1.MsgUpdateFeeShare)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    java.lang.String getWithdrawerAddress();
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWithdrawerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgUpdateFeeShare defines a message that updates the withdrawer address for a
+   * registered FeeShare
+   * </pre>
+   *
+   * Protobuf type {@code juno.feeshare.v1.MsgUpdateFeeShare}
+   */
+  public static final class MsgUpdateFeeShare extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:juno.feeshare.v1.MsgUpdateFeeShare)
+      MsgUpdateFeeShareOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateFeeShare.newBuilder() to construct.
+    private MsgUpdateFeeShare(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateFeeShare() {
+      contractAddress_ = "";
+      deployerAddress_ = "";
+      withdrawerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateFeeShare();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShare_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShare_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.class, com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WITHDRAWER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object withdrawerAddress_ = "";
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The withdrawerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWithdrawerAddress() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        withdrawerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * withdrawer_address is the bech32 address of account receiving the
+     * transaction fees
+     * </pre>
+     *
+     * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+     * @return The bytes for withdrawerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWithdrawerAddressBytes() {
+      java.lang.Object ref = withdrawerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        withdrawerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, withdrawerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deployerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(withdrawerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, withdrawerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare)) {
+        return super.equals(obj);
+      }
+      com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare other = (com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (!getWithdrawerAddress()
+          .equals(other.getWithdrawerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      hash = (37 * hash) + WITHDRAWER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWithdrawerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateFeeShare defines a message that updates the withdrawer address for a
+     * registered FeeShare
+     * </pre>
+     *
+     * Protobuf type {@code juno.feeshare.v1.MsgUpdateFeeShare}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:juno.feeshare.v1.MsgUpdateFeeShare)
+        com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShare_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShare_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.class, com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.Builder.class);
+      }
+
+      // Construct using com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        deployerAddress_ = "";
+        withdrawerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShare_descriptor;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare getDefaultInstanceForType() {
+        return com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare build() {
+        com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare buildPartial() {
+        com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare result = new com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.withdrawerAddress_ = withdrawerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare) {
+          return mergeFrom((com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare other) {
+        if (other == com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWithdrawerAddress().isEmpty()) {
+          withdrawerAddress_ = other.withdrawerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                withdrawerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object withdrawerAddress_ = "";
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The withdrawerAddress.
+       */
+      public java.lang.String getWithdrawerAddress() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          withdrawerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return The bytes for withdrawerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWithdrawerAddressBytes() {
+        java.lang.Object ref = withdrawerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          withdrawerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithdrawerAddress() {
+        withdrawerAddress_ = getDefaultInstance().getWithdrawerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * withdrawer_address is the bech32 address of account receiving the
+       * transaction fees
+       * </pre>
+       *
+       * <code>string withdrawer_address = 3 [json_name = "withdrawerAddress"];</code>
+       * @param value The bytes for withdrawerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithdrawerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        withdrawerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:juno.feeshare.v1.MsgUpdateFeeShare)
+    }
+
+    // @@protoc_insertion_point(class_scope:juno.feeshare.v1.MsgUpdateFeeShare)
+    private static final com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare();
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateFeeShare>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateFeeShare>() {
+      @java.lang.Override
+      public MsgUpdateFeeShare parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateFeeShare> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateFeeShare> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShare getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateFeeShareResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:juno.feeshare.v1.MsgUpdateFeeShareResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateFeeShareResponse defines the MsgUpdateFeeShare response type
+   * </pre>
+   *
+   * Protobuf type {@code juno.feeshare.v1.MsgUpdateFeeShareResponse}
+   */
+  public static final class MsgUpdateFeeShareResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:juno.feeshare.v1.MsgUpdateFeeShareResponse)
+      MsgUpdateFeeShareResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateFeeShareResponse.newBuilder() to construct.
+    private MsgUpdateFeeShareResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateFeeShareResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateFeeShareResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.class, com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse)) {
+        return super.equals(obj);
+      }
+      com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse other = (com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateFeeShareResponse defines the MsgUpdateFeeShare response type
+     * </pre>
+     *
+     * Protobuf type {@code juno.feeshare.v1.MsgUpdateFeeShareResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:juno.feeshare.v1.MsgUpdateFeeShareResponse)
+        com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.class, com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.Builder.class);
+      }
+
+      // Construct using com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse getDefaultInstanceForType() {
+        return com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse build() {
+        com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse buildPartial() {
+        com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse result = new com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse) {
+          return mergeFrom((com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse other) {
+        if (other == com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:juno.feeshare.v1.MsgUpdateFeeShareResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:juno.feeshare.v1.MsgUpdateFeeShareResponse)
+    private static final com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse();
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateFeeShareResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateFeeShareResponse>() {
+      @java.lang.Override
+      public MsgUpdateFeeShareResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateFeeShareResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateFeeShareResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.juno.feeshare.v1.TxProto.MsgUpdateFeeShareResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelFeeShareOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:juno.feeshare.v1.MsgCancelFeeShare)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    java.lang.String getDeployerAddress();
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    com.google.protobuf.ByteString
+        getDeployerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgCancelFeeShare defines a message that cancels a registered FeeShare
+   * </pre>
+   *
+   * Protobuf type {@code juno.feeshare.v1.MsgCancelFeeShare}
+   */
+  public static final class MsgCancelFeeShare extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:juno.feeshare.v1.MsgCancelFeeShare)
+      MsgCancelFeeShareOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelFeeShare.newBuilder() to construct.
+    private MsgCancelFeeShare(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelFeeShare() {
+      contractAddress_ = "";
+      deployerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelFeeShare();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShare_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShare_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.class, com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * contract_address in bech32 format
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPLOYER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deployerAddress_ = "";
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The deployerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDeployerAddress() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deployerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * deployer_address is the bech32 address of message sender. It must be the
+     * same the contract's admin address
+     * </pre>
+     *
+     * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+     * @return The bytes for deployerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeployerAddressBytes() {
+      java.lang.Object ref = deployerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deployerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deployerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deployerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deployerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.juno.feeshare.v1.TxProto.MsgCancelFeeShare)) {
+        return super.equals(obj);
+      }
+      com.juno.feeshare.v1.TxProto.MsgCancelFeeShare other = (com.juno.feeshare.v1.TxProto.MsgCancelFeeShare) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getDeployerAddress()
+          .equals(other.getDeployerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + DEPLOYER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeployerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.juno.feeshare.v1.TxProto.MsgCancelFeeShare prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCancelFeeShare defines a message that cancels a registered FeeShare
+     * </pre>
+     *
+     * Protobuf type {@code juno.feeshare.v1.MsgCancelFeeShare}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:juno.feeshare.v1.MsgCancelFeeShare)
+        com.juno.feeshare.v1.TxProto.MsgCancelFeeShareOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShare_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShare_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.class, com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.Builder.class);
+      }
+
+      // Construct using com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        deployerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShare_descriptor;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgCancelFeeShare getDefaultInstanceForType() {
+        return com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgCancelFeeShare build() {
+        com.juno.feeshare.v1.TxProto.MsgCancelFeeShare result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgCancelFeeShare buildPartial() {
+        com.juno.feeshare.v1.TxProto.MsgCancelFeeShare result = new com.juno.feeshare.v1.TxProto.MsgCancelFeeShare(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.juno.feeshare.v1.TxProto.MsgCancelFeeShare result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.deployerAddress_ = deployerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.juno.feeshare.v1.TxProto.MsgCancelFeeShare) {
+          return mergeFrom((com.juno.feeshare.v1.TxProto.MsgCancelFeeShare)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.juno.feeshare.v1.TxProto.MsgCancelFeeShare other) {
+        if (other == com.juno.feeshare.v1.TxProto.MsgCancelFeeShare.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeployerAddress().isEmpty()) {
+          deployerAddress_ = other.deployerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                deployerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_address in bech32 format
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deployerAddress_ = "";
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The deployerAddress.
+       */
+      public java.lang.String getDeployerAddress() {
+        java.lang.Object ref = deployerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deployerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return The bytes for deployerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDeployerAddressBytes() {
+        java.lang.Object ref = deployerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deployerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeployerAddress() {
+        deployerAddress_ = getDefaultInstance().getDeployerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deployer_address is the bech32 address of message sender. It must be the
+       * same the contract's admin address
+       * </pre>
+       *
+       * <code>string deployer_address = 2 [json_name = "deployerAddress"];</code>
+       * @param value The bytes for deployerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeployerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        deployerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:juno.feeshare.v1.MsgCancelFeeShare)
+    }
+
+    // @@protoc_insertion_point(class_scope:juno.feeshare.v1.MsgCancelFeeShare)
+    private static final com.juno.feeshare.v1.TxProto.MsgCancelFeeShare DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.juno.feeshare.v1.TxProto.MsgCancelFeeShare();
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShare getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelFeeShare>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelFeeShare>() {
+      @java.lang.Override
+      public MsgCancelFeeShare parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelFeeShare> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelFeeShare> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.juno.feeshare.v1.TxProto.MsgCancelFeeShare getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCancelFeeShareResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:juno.feeshare.v1.MsgCancelFeeShareResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCancelFeeShareResponse defines the MsgCancelFeeShare response type
+   * </pre>
+   *
+   * Protobuf type {@code juno.feeshare.v1.MsgCancelFeeShareResponse}
+   */
+  public static final class MsgCancelFeeShareResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:juno.feeshare.v1.MsgCancelFeeShareResponse)
+      MsgCancelFeeShareResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCancelFeeShareResponse.newBuilder() to construct.
+    private MsgCancelFeeShareResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCancelFeeShareResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCancelFeeShareResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.class, com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse)) {
+        return super.equals(obj);
+      }
+      com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse other = (com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCancelFeeShareResponse defines the MsgCancelFeeShare response type
+     * </pre>
+     *
+     * Protobuf type {@code juno.feeshare.v1.MsgCancelFeeShareResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:juno.feeshare.v1.MsgCancelFeeShareResponse)
+        com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.class, com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.Builder.class);
+      }
+
+      // Construct using com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.juno.feeshare.v1.TxProto.internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse getDefaultInstanceForType() {
+        return com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse build() {
+        com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse buildPartial() {
+        com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse result = new com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse) {
+          return mergeFrom((com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse other) {
+        if (other == com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:juno.feeshare.v1.MsgCancelFeeShareResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:juno.feeshare.v1.MsgCancelFeeShareResponse)
+    private static final com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse();
+    }
+
+    public static com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCancelFeeShareResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCancelFeeShareResponse>() {
+      @java.lang.Override
+      public MsgCancelFeeShareResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCancelFeeShareResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCancelFeeShareResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.juno.feeshare.v1.TxProto.MsgCancelFeeShareResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_juno_feeshare_v1_MsgRegisterFeeShare_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_juno_feeshare_v1_MsgRegisterFeeShare_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_juno_feeshare_v1_MsgRegisterFeeShareResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_juno_feeshare_v1_MsgUpdateFeeShare_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_juno_feeshare_v1_MsgUpdateFeeShare_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_juno_feeshare_v1_MsgUpdateFeeShareResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_juno_feeshare_v1_MsgCancelFeeShare_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_juno_feeshare_v1_MsgCancelFeeShare_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_juno_feeshare_v1_MsgCancelFeeShareResponse_fieldAccessorTable;
 
@@ -80,11 +4050,11 @@ public final class TxProto {
       "feeshare.v1.MsgCancelFeeShare\032+.juno.fee" +
       "share.v1.MsgCancelFeeShareResponse\",\202\323\344\223" +
       "\002&\"$/juno/feeshare/v1/tx/cancel_FeeShare" +
-      "B\263\001\n\024com.juno.feeshare.v1B\007TxProtoP\001Z0gi" +
-      "thub.com/CosmosContracts/juno/x/feeshare" +
-      "/types\242\002\003JFX\252\002\020Juno.Feeshare.V1\312\002\020Juno\\F" +
-      "eeshare\\V1\342\002\034Juno\\Feeshare\\V1\\GPBMetadat" +
-      "a\352\002\022Juno::Feeshare::V1b\006proto3"
+      "B\261\001\n\024com.juno.feeshare.v1B\007TxProtoZ0gith" +
+      "ub.com/CosmosContracts/juno/x/feeshare/t" +
+      "ypes\242\002\003JFX\252\002\020Juno.Feeshare.V1\312\002\020Juno\\Fee" +
+      "share\\V1\342\002\034Juno\\Feeshare\\V1\\GPBMetadata\352" +
+      "\002\022Juno::Feeshare::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

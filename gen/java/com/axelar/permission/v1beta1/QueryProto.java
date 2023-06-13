@@ -14,14 +14,1031 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryGovernanceKeyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.QueryGovernanceKeyRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryGovernanceKeyRequest is the request type for the
+   * Query/GovernanceKey RPC method
+   * </pre>
+   *
+   * Protobuf type {@code axelar.permission.v1beta1.QueryGovernanceKeyRequest}
+   */
+  public static final class QueryGovernanceKeyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.QueryGovernanceKeyRequest)
+      QueryGovernanceKeyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGovernanceKeyRequest.newBuilder() to construct.
+    private QueryGovernanceKeyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGovernanceKeyRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGovernanceKeyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.class, com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest other = (com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGovernanceKeyRequest is the request type for the
+     * Query/GovernanceKey RPC method
+     * </pre>
+     *
+     * Protobuf type {@code axelar.permission.v1beta1.QueryGovernanceKeyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.QueryGovernanceKeyRequest)
+        com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.class, com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest build() {
+        com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest buildPartial() {
+        com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest result = new com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest) {
+          return mergeFrom((com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest other) {
+        if (other == com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.QueryGovernanceKeyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.QueryGovernanceKeyRequest)
+    private static final com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest();
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGovernanceKeyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGovernanceKeyRequest>() {
+      @java.lang.Override
+      public QueryGovernanceKeyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGovernanceKeyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGovernanceKeyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGovernanceKeyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.permission.v1beta1.QueryGovernanceKeyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return Whether the governanceKey field is set.
+     */
+    boolean hasGovernanceKey();
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return The governanceKey.
+     */
+    com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey getGovernanceKey();
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder getGovernanceKeyOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryGovernanceKeyResponse is the response type for the
+   * Query/GovernanceKey RPC method
+   * </pre>
+   *
+   * Protobuf type {@code axelar.permission.v1beta1.QueryGovernanceKeyResponse}
+   */
+  public static final class QueryGovernanceKeyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.permission.v1beta1.QueryGovernanceKeyResponse)
+      QueryGovernanceKeyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGovernanceKeyResponse.newBuilder() to construct.
+    private QueryGovernanceKeyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGovernanceKeyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGovernanceKeyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.class, com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.Builder.class);
+    }
+
+    public static final int GOVERNANCE_KEY_FIELD_NUMBER = 1;
+    private com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey governanceKey_;
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return Whether the governanceKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasGovernanceKey() {
+      return governanceKey_ != null;
+    }
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     * @return The governanceKey.
+     */
+    @java.lang.Override
+    public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey getGovernanceKey() {
+      return governanceKey_ == null ? com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+    }
+    /**
+     * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder getGovernanceKeyOrBuilder() {
+      return governanceKey_ == null ? com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (governanceKey_ != null) {
+        output.writeMessage(1, getGovernanceKey());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (governanceKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGovernanceKey());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse)) {
+        return super.equals(obj);
+      }
+      com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse other = (com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse) obj;
+
+      if (hasGovernanceKey() != other.hasGovernanceKey()) return false;
+      if (hasGovernanceKey()) {
+        if (!getGovernanceKey()
+            .equals(other.getGovernanceKey())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGovernanceKey()) {
+        hash = (37 * hash) + GOVERNANCE_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getGovernanceKey().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryGovernanceKeyResponse is the response type for the
+     * Query/GovernanceKey RPC method
+     * </pre>
+     *
+     * Protobuf type {@code axelar.permission.v1beta1.QueryGovernanceKeyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.permission.v1beta1.QueryGovernanceKeyResponse)
+        com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.class, com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.Builder.class);
+      }
+
+      // Construct using com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        governanceKey_ = null;
+        if (governanceKeyBuilder_ != null) {
+          governanceKeyBuilder_.dispose();
+          governanceKeyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.permission.v1beta1.QueryProto.internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse getDefaultInstanceForType() {
+        return com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse build() {
+        com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse buildPartial() {
+        com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse result = new com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.governanceKey_ = governanceKeyBuilder_ == null
+              ? governanceKey_
+              : governanceKeyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse) {
+          return mergeFrom((com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse other) {
+        if (other == com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse.getDefaultInstance()) return this;
+        if (other.hasGovernanceKey()) {
+          mergeGovernanceKey(other.getGovernanceKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getGovernanceKeyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey governanceKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder> governanceKeyBuilder_;
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       * @return Whether the governanceKey field is set.
+       */
+      public boolean hasGovernanceKey() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       * @return The governanceKey.
+       */
+      public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey getGovernanceKey() {
+        if (governanceKeyBuilder_ == null) {
+          return governanceKey_ == null ? com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+        } else {
+          return governanceKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGovernanceKey(com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey value) {
+        if (governanceKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          governanceKey_ = value;
+        } else {
+          governanceKeyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGovernanceKey(
+          com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder builderForValue) {
+        if (governanceKeyBuilder_ == null) {
+          governanceKey_ = builderForValue.build();
+        } else {
+          governanceKeyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeGovernanceKey(com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey value) {
+        if (governanceKeyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            governanceKey_ != null &&
+            governanceKey_ != com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance()) {
+            getGovernanceKeyBuilder().mergeFrom(value);
+          } else {
+            governanceKey_ = value;
+          }
+        } else {
+          governanceKeyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGovernanceKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        governanceKey_ = null;
+        if (governanceKeyBuilder_ != null) {
+          governanceKeyBuilder_.dispose();
+          governanceKeyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder getGovernanceKeyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getGovernanceKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder getGovernanceKeyOrBuilder() {
+        if (governanceKeyBuilder_ != null) {
+          return governanceKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return governanceKey_ == null ?
+              com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.getDefaultInstance() : governanceKey_;
+        }
+      }
+      /**
+       * <code>.cosmos.crypto.multisig.LegacyAminoPubKey governance_key = 1 [json_name = "governanceKey", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder> 
+          getGovernanceKeyFieldBuilder() {
+        if (governanceKeyBuilder_ == null) {
+          governanceKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKey.Builder, com.cosmos.crypto.multisig.KeysProto.LegacyAminoPubKeyOrBuilder>(
+                  getGovernanceKey(),
+                  getParentForChildren(),
+                  isClean());
+          governanceKey_ = null;
+        }
+        return governanceKeyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.permission.v1beta1.QueryGovernanceKeyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.permission.v1beta1.QueryGovernanceKeyResponse)
+    private static final com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse();
+    }
+
+    public static com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGovernanceKeyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGovernanceKeyResponse>() {
+      @java.lang.Override
+      public QueryGovernanceKeyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGovernanceKeyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGovernanceKeyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.permission.v1beta1.QueryProto.QueryGovernanceKeyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_QueryGovernanceKeyRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_permission_v1beta1_QueryGovernanceKeyResponse_fieldAccessorTable;
 
@@ -40,13 +1057,13 @@ public final class QueryProto {
       "QueryGovernanceKeyRequest\"t\n\032QueryGovern" +
       "anceKeyResponse\022V\n\016governance_key\030\001 \001(\0132" +
       ").cosmos.crypto.multisig.LegacyAminoPubK" +
-      "eyB\004\310\336\037\000R\rgovernanceKeyB\356\001\n\035com.axelar.p" +
-      "ermission.v1beta1B\nQueryProtoP\001Z7github." +
-      "com/axelarnetwork/axelar-core/x/permissi" +
-      "on/types\242\002\003APX\252\002\031Axelar.Permission.V1bet" +
-      "a1\312\002\031Axelar\\Permission\\V1beta1\342\002%Axelar\\" +
-      "Permission\\V1beta1\\GPBMetadata\352\002\033Axelar:" +
-      ":Permission::V1beta1\310\341\036\000b\006proto3"
+      "eyB\004\310\336\037\000R\rgovernanceKeyB\354\001\n\035com.axelar.p" +
+      "ermission.v1beta1B\nQueryProtoZ7github.co" +
+      "m/axelarnetwork/axelar-core/x/permission" +
+      "/types\242\002\003APX\252\002\031Axelar.Permission.V1beta1" +
+      "\312\002\031Axelar\\Permission\\V1beta1\342\002%Axelar\\Pe" +
+      "rmission\\V1beta1\\GPBMetadata\352\002\033Axelar::P" +
+      "ermission::V1beta1\310\341\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

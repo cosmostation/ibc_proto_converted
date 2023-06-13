@@ -24,13 +24,13 @@ public final class GovProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037comdex/market/v1beta1/gov.proto\022\025comde" +
-      "x.market.v1beta1\032\024gogoproto/gogo.protoB\325" +
-      "\001\n\031com.comdex.market.v1beta1B\010GovProtoP\001" +
-      "Z0github.com/comdex-official/comdex/x/ma" +
-      "rket/types\242\002\003CMX\252\002\025Comdex.Market.V1beta1" +
-      "\312\002\025Comdex\\Market\\V1beta1\342\002!Comdex\\Market" +
-      "\\V1beta1\\GPBMetadata\352\002\027Comdex::Market::V" +
-      "1beta1\310\341\036\000\250\342\036\000b\006proto3"
+      "x.market.v1beta1\032\024gogoproto/gogo.protoB\323" +
+      "\001\n\031com.comdex.market.v1beta1B\010GovProtoZ0" +
+      "github.com/comdex-official/comdex/x/mark" +
+      "et/types\242\002\003CMX\252\002\025Comdex.Market.V1beta1\312\002" +
+      "\025Comdex\\Market\\V1beta1\342\002!Comdex\\Market\\V" +
+      "1beta1\\GPBMetadata\352\002\027Comdex::Market::V1b" +
+      "eta1\310\341\036\000\250\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

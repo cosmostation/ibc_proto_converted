@@ -14,9 +14,805 @@ public final class GovProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CustomParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:shentu.gov.v1alpha1.CustomParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+     * @return Whether the certifierUpdateSecurityVoteTally field is set.
+     */
+    boolean hasCertifierUpdateSecurityVoteTally();
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+     * @return The certifierUpdateSecurityVoteTally.
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParams getCertifierUpdateSecurityVoteTally();
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getCertifierUpdateSecurityVoteTallyOrBuilder();
+
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+     * @return Whether the certifierUpdateStakeVoteTally field is set.
+     */
+    boolean hasCertifierUpdateStakeVoteTally();
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+     * @return The certifierUpdateStakeVoteTally.
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParams getCertifierUpdateStakeVoteTally();
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+     */
+    com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getCertifierUpdateStakeVoteTallyOrBuilder();
+  }
+  /**
+   * Protobuf type {@code shentu.gov.v1alpha1.CustomParams}
+   */
+  public static final class CustomParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:shentu.gov.v1alpha1.CustomParams)
+      CustomParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CustomParams.newBuilder() to construct.
+    private CustomParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CustomParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CustomParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shentu.gov.v1alpha1.GovProto.internal_static_shentu_gov_v1alpha1_CustomParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shentu.gov.v1alpha1.GovProto.internal_static_shentu_gov_v1alpha1_CustomParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shentu.gov.v1alpha1.GovProto.CustomParams.class, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder.class);
+    }
+
+    public static final int CERTIFIER_UPDATE_SECURITY_VOTE_TALLY_FIELD_NUMBER = 1;
+    private com.cosmos.gov.v1beta1.GovProto.TallyParams certifierUpdateSecurityVoteTally_;
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+     * @return Whether the certifierUpdateSecurityVoteTally field is set.
+     */
+    @java.lang.Override
+    public boolean hasCertifierUpdateSecurityVoteTally() {
+      return certifierUpdateSecurityVoteTally_ != null;
+    }
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+     * @return The certifierUpdateSecurityVoteTally.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParams getCertifierUpdateSecurityVoteTally() {
+      return certifierUpdateSecurityVoteTally_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateSecurityVoteTally_;
+    }
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getCertifierUpdateSecurityVoteTallyOrBuilder() {
+      return certifierUpdateSecurityVoteTally_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateSecurityVoteTally_;
+    }
+
+    public static final int CERTIFIER_UPDATE_STAKE_VOTE_TALLY_FIELD_NUMBER = 2;
+    private com.cosmos.gov.v1beta1.GovProto.TallyParams certifierUpdateStakeVoteTally_;
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+     * @return Whether the certifierUpdateStakeVoteTally field is set.
+     */
+    @java.lang.Override
+    public boolean hasCertifierUpdateStakeVoteTally() {
+      return certifierUpdateStakeVoteTally_ != null;
+    }
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+     * @return The certifierUpdateStakeVoteTally.
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParams getCertifierUpdateStakeVoteTally() {
+      return certifierUpdateStakeVoteTally_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateStakeVoteTally_;
+    }
+    /**
+     * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getCertifierUpdateStakeVoteTallyOrBuilder() {
+      return certifierUpdateStakeVoteTally_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateStakeVoteTally_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (certifierUpdateSecurityVoteTally_ != null) {
+        output.writeMessage(1, getCertifierUpdateSecurityVoteTally());
+      }
+      if (certifierUpdateStakeVoteTally_ != null) {
+        output.writeMessage(2, getCertifierUpdateStakeVoteTally());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (certifierUpdateSecurityVoteTally_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCertifierUpdateSecurityVoteTally());
+      }
+      if (certifierUpdateStakeVoteTally_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCertifierUpdateStakeVoteTally());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shentu.gov.v1alpha1.GovProto.CustomParams)) {
+        return super.equals(obj);
+      }
+      com.shentu.gov.v1alpha1.GovProto.CustomParams other = (com.shentu.gov.v1alpha1.GovProto.CustomParams) obj;
+
+      if (hasCertifierUpdateSecurityVoteTally() != other.hasCertifierUpdateSecurityVoteTally()) return false;
+      if (hasCertifierUpdateSecurityVoteTally()) {
+        if (!getCertifierUpdateSecurityVoteTally()
+            .equals(other.getCertifierUpdateSecurityVoteTally())) return false;
+      }
+      if (hasCertifierUpdateStakeVoteTally() != other.hasCertifierUpdateStakeVoteTally()) return false;
+      if (hasCertifierUpdateStakeVoteTally()) {
+        if (!getCertifierUpdateStakeVoteTally()
+            .equals(other.getCertifierUpdateStakeVoteTally())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCertifierUpdateSecurityVoteTally()) {
+        hash = (37 * hash) + CERTIFIER_UPDATE_SECURITY_VOTE_TALLY_FIELD_NUMBER;
+        hash = (53 * hash) + getCertifierUpdateSecurityVoteTally().hashCode();
+      }
+      if (hasCertifierUpdateStakeVoteTally()) {
+        hash = (37 * hash) + CERTIFIER_UPDATE_STAKE_VOTE_TALLY_FIELD_NUMBER;
+        hash = (53 * hash) + getCertifierUpdateStakeVoteTally().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shentu.gov.v1alpha1.GovProto.CustomParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code shentu.gov.v1alpha1.CustomParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:shentu.gov.v1alpha1.CustomParams)
+        com.shentu.gov.v1alpha1.GovProto.CustomParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shentu.gov.v1alpha1.GovProto.internal_static_shentu_gov_v1alpha1_CustomParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shentu.gov.v1alpha1.GovProto.internal_static_shentu_gov_v1alpha1_CustomParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shentu.gov.v1alpha1.GovProto.CustomParams.class, com.shentu.gov.v1alpha1.GovProto.CustomParams.Builder.class);
+      }
+
+      // Construct using com.shentu.gov.v1alpha1.GovProto.CustomParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        certifierUpdateSecurityVoteTally_ = null;
+        if (certifierUpdateSecurityVoteTallyBuilder_ != null) {
+          certifierUpdateSecurityVoteTallyBuilder_.dispose();
+          certifierUpdateSecurityVoteTallyBuilder_ = null;
+        }
+        certifierUpdateStakeVoteTally_ = null;
+        if (certifierUpdateStakeVoteTallyBuilder_ != null) {
+          certifierUpdateStakeVoteTallyBuilder_.dispose();
+          certifierUpdateStakeVoteTallyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shentu.gov.v1alpha1.GovProto.internal_static_shentu_gov_v1alpha1_CustomParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams getDefaultInstanceForType() {
+        return com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams build() {
+        com.shentu.gov.v1alpha1.GovProto.CustomParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.shentu.gov.v1alpha1.GovProto.CustomParams buildPartial() {
+        com.shentu.gov.v1alpha1.GovProto.CustomParams result = new com.shentu.gov.v1alpha1.GovProto.CustomParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.shentu.gov.v1alpha1.GovProto.CustomParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.certifierUpdateSecurityVoteTally_ = certifierUpdateSecurityVoteTallyBuilder_ == null
+              ? certifierUpdateSecurityVoteTally_
+              : certifierUpdateSecurityVoteTallyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.certifierUpdateStakeVoteTally_ = certifierUpdateStakeVoteTallyBuilder_ == null
+              ? certifierUpdateStakeVoteTally_
+              : certifierUpdateStakeVoteTallyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shentu.gov.v1alpha1.GovProto.CustomParams) {
+          return mergeFrom((com.shentu.gov.v1alpha1.GovProto.CustomParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shentu.gov.v1alpha1.GovProto.CustomParams other) {
+        if (other == com.shentu.gov.v1alpha1.GovProto.CustomParams.getDefaultInstance()) return this;
+        if (other.hasCertifierUpdateSecurityVoteTally()) {
+          mergeCertifierUpdateSecurityVoteTally(other.getCertifierUpdateSecurityVoteTally());
+        }
+        if (other.hasCertifierUpdateStakeVoteTally()) {
+          mergeCertifierUpdateStakeVoteTally(other.getCertifierUpdateStakeVoteTally());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCertifierUpdateSecurityVoteTallyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCertifierUpdateStakeVoteTallyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.gov.v1beta1.GovProto.TallyParams certifierUpdateSecurityVoteTally_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> certifierUpdateSecurityVoteTallyBuilder_;
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       * @return Whether the certifierUpdateSecurityVoteTally field is set.
+       */
+      public boolean hasCertifierUpdateSecurityVoteTally() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       * @return The certifierUpdateSecurityVoteTally.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams getCertifierUpdateSecurityVoteTally() {
+        if (certifierUpdateSecurityVoteTallyBuilder_ == null) {
+          return certifierUpdateSecurityVoteTally_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateSecurityVoteTally_;
+        } else {
+          return certifierUpdateSecurityVoteTallyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      public Builder setCertifierUpdateSecurityVoteTally(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (certifierUpdateSecurityVoteTallyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          certifierUpdateSecurityVoteTally_ = value;
+        } else {
+          certifierUpdateSecurityVoteTallyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      public Builder setCertifierUpdateSecurityVoteTally(
+          com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder builderForValue) {
+        if (certifierUpdateSecurityVoteTallyBuilder_ == null) {
+          certifierUpdateSecurityVoteTally_ = builderForValue.build();
+        } else {
+          certifierUpdateSecurityVoteTallyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      public Builder mergeCertifierUpdateSecurityVoteTally(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (certifierUpdateSecurityVoteTallyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            certifierUpdateSecurityVoteTally_ != null &&
+            certifierUpdateSecurityVoteTally_ != com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance()) {
+            getCertifierUpdateSecurityVoteTallyBuilder().mergeFrom(value);
+          } else {
+            certifierUpdateSecurityVoteTally_ = value;
+          }
+        } else {
+          certifierUpdateSecurityVoteTallyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      public Builder clearCertifierUpdateSecurityVoteTally() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        certifierUpdateSecurityVoteTally_ = null;
+        if (certifierUpdateSecurityVoteTallyBuilder_ != null) {
+          certifierUpdateSecurityVoteTallyBuilder_.dispose();
+          certifierUpdateSecurityVoteTallyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder getCertifierUpdateSecurityVoteTallyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCertifierUpdateSecurityVoteTallyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getCertifierUpdateSecurityVoteTallyOrBuilder() {
+        if (certifierUpdateSecurityVoteTallyBuilder_ != null) {
+          return certifierUpdateSecurityVoteTallyBuilder_.getMessageOrBuilder();
+        } else {
+          return certifierUpdateSecurityVoteTally_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateSecurityVoteTally_;
+        }
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_security_vote_tally = 1 [json_name = "certifierUpdateSecurityVoteTally"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> 
+          getCertifierUpdateSecurityVoteTallyFieldBuilder() {
+        if (certifierUpdateSecurityVoteTallyBuilder_ == null) {
+          certifierUpdateSecurityVoteTallyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder>(
+                  getCertifierUpdateSecurityVoteTally(),
+                  getParentForChildren(),
+                  isClean());
+          certifierUpdateSecurityVoteTally_ = null;
+        }
+        return certifierUpdateSecurityVoteTallyBuilder_;
+      }
+
+      private com.cosmos.gov.v1beta1.GovProto.TallyParams certifierUpdateStakeVoteTally_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> certifierUpdateStakeVoteTallyBuilder_;
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       * @return Whether the certifierUpdateStakeVoteTally field is set.
+       */
+      public boolean hasCertifierUpdateStakeVoteTally() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       * @return The certifierUpdateStakeVoteTally.
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams getCertifierUpdateStakeVoteTally() {
+        if (certifierUpdateStakeVoteTallyBuilder_ == null) {
+          return certifierUpdateStakeVoteTally_ == null ? com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateStakeVoteTally_;
+        } else {
+          return certifierUpdateStakeVoteTallyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      public Builder setCertifierUpdateStakeVoteTally(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (certifierUpdateStakeVoteTallyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          certifierUpdateStakeVoteTally_ = value;
+        } else {
+          certifierUpdateStakeVoteTallyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      public Builder setCertifierUpdateStakeVoteTally(
+          com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder builderForValue) {
+        if (certifierUpdateStakeVoteTallyBuilder_ == null) {
+          certifierUpdateStakeVoteTally_ = builderForValue.build();
+        } else {
+          certifierUpdateStakeVoteTallyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      public Builder mergeCertifierUpdateStakeVoteTally(com.cosmos.gov.v1beta1.GovProto.TallyParams value) {
+        if (certifierUpdateStakeVoteTallyBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            certifierUpdateStakeVoteTally_ != null &&
+            certifierUpdateStakeVoteTally_ != com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance()) {
+            getCertifierUpdateStakeVoteTallyBuilder().mergeFrom(value);
+          } else {
+            certifierUpdateStakeVoteTally_ = value;
+          }
+        } else {
+          certifierUpdateStakeVoteTallyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      public Builder clearCertifierUpdateStakeVoteTally() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        certifierUpdateStakeVoteTally_ = null;
+        if (certifierUpdateStakeVoteTallyBuilder_ != null) {
+          certifierUpdateStakeVoteTallyBuilder_.dispose();
+          certifierUpdateStakeVoteTallyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder getCertifierUpdateStakeVoteTallyBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCertifierUpdateStakeVoteTallyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      public com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder getCertifierUpdateStakeVoteTallyOrBuilder() {
+        if (certifierUpdateStakeVoteTallyBuilder_ != null) {
+          return certifierUpdateStakeVoteTallyBuilder_.getMessageOrBuilder();
+        } else {
+          return certifierUpdateStakeVoteTally_ == null ?
+              com.cosmos.gov.v1beta1.GovProto.TallyParams.getDefaultInstance() : certifierUpdateStakeVoteTally_;
+        }
+      }
+      /**
+       * <code>.cosmos.gov.v1beta1.TallyParams certifier_update_stake_vote_tally = 2 [json_name = "certifierUpdateStakeVoteTally"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder> 
+          getCertifierUpdateStakeVoteTallyFieldBuilder() {
+        if (certifierUpdateStakeVoteTallyBuilder_ == null) {
+          certifierUpdateStakeVoteTallyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.gov.v1beta1.GovProto.TallyParams, com.cosmos.gov.v1beta1.GovProto.TallyParams.Builder, com.cosmos.gov.v1beta1.GovProto.TallyParamsOrBuilder>(
+                  getCertifierUpdateStakeVoteTally(),
+                  getParentForChildren(),
+                  isClean());
+          certifierUpdateStakeVoteTally_ = null;
+        }
+        return certifierUpdateStakeVoteTallyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:shentu.gov.v1alpha1.CustomParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:shentu.gov.v1alpha1.CustomParams)
+    private static final com.shentu.gov.v1alpha1.GovProto.CustomParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shentu.gov.v1alpha1.GovProto.CustomParams();
+    }
+
+    public static com.shentu.gov.v1alpha1.GovProto.CustomParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CustomParams>
+        PARSER = new com.google.protobuf.AbstractParser<CustomParams>() {
+      @java.lang.Override
+      public CustomParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CustomParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CustomParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.shentu.gov.v1alpha1.GovProto.CustomParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shentu_gov_v1alpha1_CustomParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_shentu_gov_v1alpha1_CustomParams_fieldAccessorTable;
 
@@ -36,12 +832,12 @@ public final class GovProto {
       "R certifierUpdateSecurityVoteTally\022i\n!ce" +
       "rtifier_update_stake_vote_tally\030\002 \001(\0132\037." +
       "cosmos.gov.v1beta1.TallyParamsR\035certifie" +
-      "rUpdateStakeVoteTallyB\315\001\n\027com.shentu.gov" +
-      ".v1alpha1B\010GovProtoP\001Z.github.com/shentu" +
-      "foundation/shentu/x/gov/types\242\002\003SGX\252\002\023Sh" +
-      "entu.Gov.V1alpha1\312\002\023Shentu\\Gov\\V1alpha1\342" +
-      "\002\037Shentu\\Gov\\V1alpha1\\GPBMetadata\352\002\025Shen" +
-      "tu::Gov::V1alpha1\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
+      "rUpdateStakeVoteTallyB\313\001\n\027com.shentu.gov" +
+      ".v1alpha1B\010GovProtoZ.github.com/shentufo" +
+      "undation/shentu/x/gov/types\242\002\003SGX\252\002\023Shen" +
+      "tu.Gov.V1alpha1\312\002\023Shentu\\Gov\\V1alpha1\342\002\037" +
+      "Shentu\\Gov\\V1alpha1\\GPBMetadata\352\002\025Shentu" +
+      "::Gov::V1alpha1\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

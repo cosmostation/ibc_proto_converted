@@ -14,9 +14,2097 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * EscrowState defines the state of an escrow
+   * </pre>
+   *
+   * Protobuf enum {@code starnamed.x.escrow.v1beta1.EscrowState}
+   */
+  public enum EscrowState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * ESCROW_STATE_OPEN_UNSPECIFIED defines an open state. TODO:: review the
+     * _UNSPECIFIED sufix
+     * </pre>
+     *
+     * <code>ESCROW_STATE_OPEN_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Open"];</code>
+     */
+    ESCROW_STATE_OPEN_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ESCROW_STATE_COMPLETED defines a completed state.
+     * </pre>
+     *
+     * <code>ESCROW_STATE_COMPLETED = 1 [(.gogoproto.enumvalue_customname) = "Completed"];</code>
+     */
+    ESCROW_STATE_COMPLETED(1),
+    /**
+     * <pre>
+     * ESCROW_STATE_REFUNDED defines a refunded state.
+     * </pre>
+     *
+     * <code>ESCROW_STATE_REFUNDED = 2 [(.gogoproto.enumvalue_customname) = "Refunded"];</code>
+     */
+    ESCROW_STATE_REFUNDED(2),
+    /**
+     * <pre>
+     * ESCROW_STATE_REFUNDED defines an expired state.
+     * </pre>
+     *
+     * <code>ESCROW_STATE_EXPIRED = 3 [(.gogoproto.enumvalue_customname) = "Expired"];</code>
+     */
+    ESCROW_STATE_EXPIRED(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * ESCROW_STATE_OPEN_UNSPECIFIED defines an open state. TODO:: review the
+     * _UNSPECIFIED sufix
+     * </pre>
+     *
+     * <code>ESCROW_STATE_OPEN_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Open"];</code>
+     */
+    public static final int ESCROW_STATE_OPEN_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ESCROW_STATE_COMPLETED defines a completed state.
+     * </pre>
+     *
+     * <code>ESCROW_STATE_COMPLETED = 1 [(.gogoproto.enumvalue_customname) = "Completed"];</code>
+     */
+    public static final int ESCROW_STATE_COMPLETED_VALUE = 1;
+    /**
+     * <pre>
+     * ESCROW_STATE_REFUNDED defines a refunded state.
+     * </pre>
+     *
+     * <code>ESCROW_STATE_REFUNDED = 2 [(.gogoproto.enumvalue_customname) = "Refunded"];</code>
+     */
+    public static final int ESCROW_STATE_REFUNDED_VALUE = 2;
+    /**
+     * <pre>
+     * ESCROW_STATE_REFUNDED defines an expired state.
+     * </pre>
+     *
+     * <code>ESCROW_STATE_EXPIRED = 3 [(.gogoproto.enumvalue_customname) = "Expired"];</code>
+     */
+    public static final int ESCROW_STATE_EXPIRED_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EscrowState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EscrowState forNumber(int value) {
+      switch (value) {
+        case 0: return ESCROW_STATE_OPEN_UNSPECIFIED;
+        case 1: return ESCROW_STATE_COMPLETED;
+        case 2: return ESCROW_STATE_REFUNDED;
+        case 3: return ESCROW_STATE_EXPIRED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EscrowState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EscrowState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EscrowState>() {
+            public EscrowState findValueByNumber(int number) {
+              return EscrowState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.starnamed.x.escrow.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EscrowState[] VALUES = values();
+
+    public static EscrowState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EscrowState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:starnamed.x.escrow.v1beta1.EscrowState)
+  }
+
+  public interface EscrowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.escrow.v1beta1.Escrow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    java.lang.String getSeller();
+    /**
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    com.google.protobuf.ByteString
+        getSellerBytes();
+
+    /**
+     * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+     * @return Whether the object field is set.
+     */
+    boolean hasObject();
+    /**
+     * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+     * @return The object.
+     */
+    com.google.protobuf.Any getObject();
+    /**
+     * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+     */
+    com.google.protobuf.AnyOrBuilder getObjectOrBuilder();
+
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getPriceList();
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPrice(int index);
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getPriceCount();
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getPriceOrBuilderList();
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder(
+        int index);
+
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState getState();
+
+    /**
+     * <code>uint64 deadline = 6 [json_name = "deadline"];</code>
+     * @return The deadline.
+     */
+    long getDeadline();
+
+    /**
+     * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+     * @return The brokerAddress.
+     */
+    java.lang.String getBrokerAddress();
+    /**
+     * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+     * @return The bytes for brokerAddress.
+     */
+    com.google.protobuf.ByteString
+        getBrokerAddressBytes();
+
+    /**
+     * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The brokerCommission.
+     */
+    java.lang.String getBrokerCommission();
+    /**
+     * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for brokerCommission.
+     */
+    com.google.protobuf.ByteString
+        getBrokerCommissionBytes();
+  }
+  /**
+   * <pre>
+   * Escrow defines the struct of an escrow
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.escrow.v1beta1.Escrow}
+   */
+  public static final class Escrow extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.escrow.v1beta1.Escrow)
+      EscrowOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Escrow.newBuilder() to construct.
+    private Escrow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Escrow() {
+      id_ = "";
+      seller_ = "";
+      price_ = java.util.Collections.emptyList();
+      state_ = 0;
+      brokerAddress_ = "";
+      brokerCommission_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Escrow();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.escrow.v1beta1.TypesProto.internal_static_starnamed_x_escrow_v1beta1_Escrow_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.escrow.v1beta1.TypesProto.internal_static_starnamed_x_escrow_v1beta1_Escrow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.class, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SELLER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seller_ = "";
+    /**
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The seller.
+     */
+    @java.lang.Override
+    public java.lang.String getSeller() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        seller_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string seller = 2 [json_name = "seller"];</code>
+     * @return The bytes for seller.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerBytes() {
+      java.lang.Object ref = seller_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        seller_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OBJECT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Any object_;
+    /**
+     * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+     * @return Whether the object field is set.
+     */
+    @java.lang.Override
+    public boolean hasObject() {
+      return object_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+     * @return The object.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Any getObject() {
+      return object_ == null ? com.google.protobuf.Any.getDefaultInstance() : object_;
+    }
+    /**
+     * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.AnyOrBuilder getObjectOrBuilder() {
+      return object_ == null ? com.google.protobuf.Any.getDefaultInstance() : object_;
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> price_;
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getPriceList() {
+      return price_;
+    }
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getPriceOrBuilderList() {
+      return price_;
+    }
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getPriceCount() {
+      return price_.size();
+    }
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPrice(int index) {
+      return price_.get(index);
+    }
+    /**
+     * <pre>
+     * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+     * Although the price contains multiple coins, for now we enforce a specific
+     * denomination, so there will be only one coin type in a valid escrow
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder(
+        int index) {
+      return price_.get(index);
+    }
+
+    public static final int STATE_FIELD_NUMBER = 5;
+    private int state_ = 0;
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState getState() {
+      com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState result = com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState.forNumber(state_);
+      return result == null ? com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState.UNRECOGNIZED : result;
+    }
+
+    public static final int DEADLINE_FIELD_NUMBER = 6;
+    private long deadline_ = 0L;
+    /**
+     * <code>uint64 deadline = 6 [json_name = "deadline"];</code>
+     * @return The deadline.
+     */
+    @java.lang.Override
+    public long getDeadline() {
+      return deadline_;
+    }
+
+    public static final int BROKER_ADDRESS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object brokerAddress_ = "";
+    /**
+     * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+     * @return The brokerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getBrokerAddress() {
+      java.lang.Object ref = brokerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        brokerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+     * @return The bytes for brokerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBrokerAddressBytes() {
+      java.lang.Object ref = brokerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        brokerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BROKER_COMMISSION_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object brokerCommission_ = "";
+    /**
+     * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The brokerCommission.
+     */
+    @java.lang.Override
+    public java.lang.String getBrokerCommission() {
+      java.lang.Object ref = brokerCommission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        brokerCommission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for brokerCommission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBrokerCommissionBytes() {
+      java.lang.Object ref = brokerCommission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        brokerCommission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, seller_);
+      }
+      if (object_ != null) {
+        output.writeMessage(3, getObject());
+      }
+      for (int i = 0; i < price_.size(); i++) {
+        output.writeMessage(4, price_.get(i));
+      }
+      if (state_ != com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState.ESCROW_STATE_OPEN_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, state_);
+      }
+      if (deadline_ != 0L) {
+        output.writeUInt64(6, deadline_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brokerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, brokerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brokerCommission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, brokerCommission_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seller_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, seller_);
+      }
+      if (object_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getObject());
+      }
+      for (int i = 0; i < price_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, price_.get(i));
+      }
+      if (state_ != com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState.ESCROW_STATE_OPEN_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, state_);
+      }
+      if (deadline_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, deadline_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brokerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, brokerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brokerCommission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, brokerCommission_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.escrow.v1beta1.TypesProto.Escrow)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.escrow.v1beta1.TypesProto.Escrow other = (com.starnamed.x.escrow.v1beta1.TypesProto.Escrow) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getSeller()
+          .equals(other.getSeller())) return false;
+      if (hasObject() != other.hasObject()) return false;
+      if (hasObject()) {
+        if (!getObject()
+            .equals(other.getObject())) return false;
+      }
+      if (!getPriceList()
+          .equals(other.getPriceList())) return false;
+      if (state_ != other.state_) return false;
+      if (getDeadline()
+          != other.getDeadline()) return false;
+      if (!getBrokerAddress()
+          .equals(other.getBrokerAddress())) return false;
+      if (!getBrokerCommission()
+          .equals(other.getBrokerCommission())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + SELLER_FIELD_NUMBER;
+      hash = (53 * hash) + getSeller().hashCode();
+      if (hasObject()) {
+        hash = (37 * hash) + OBJECT_FIELD_NUMBER;
+        hash = (53 * hash) + getObject().hashCode();
+      }
+      if (getPriceCount() > 0) {
+        hash = (37 * hash) + PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getPriceList().hashCode();
+      }
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (37 * hash) + DEADLINE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDeadline());
+      hash = (37 * hash) + BROKER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getBrokerAddress().hashCode();
+      hash = (37 * hash) + BROKER_COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getBrokerCommission().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.escrow.v1beta1.TypesProto.Escrow prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Escrow defines the struct of an escrow
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.escrow.v1beta1.Escrow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.escrow.v1beta1.Escrow)
+        com.starnamed.x.escrow.v1beta1.TypesProto.EscrowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.escrow.v1beta1.TypesProto.internal_static_starnamed_x_escrow_v1beta1_Escrow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.escrow.v1beta1.TypesProto.internal_static_starnamed_x_escrow_v1beta1_Escrow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.class, com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        seller_ = "";
+        object_ = null;
+        if (objectBuilder_ != null) {
+          objectBuilder_.dispose();
+          objectBuilder_ = null;
+        }
+        if (priceBuilder_ == null) {
+          price_ = java.util.Collections.emptyList();
+        } else {
+          price_ = null;
+          priceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        state_ = 0;
+        deadline_ = 0L;
+        brokerAddress_ = "";
+        brokerCommission_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.escrow.v1beta1.TypesProto.internal_static_starnamed_x_escrow_v1beta1_Escrow_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow getDefaultInstanceForType() {
+        return com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow build() {
+        com.starnamed.x.escrow.v1beta1.TypesProto.Escrow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow buildPartial() {
+        com.starnamed.x.escrow.v1beta1.TypesProto.Escrow result = new com.starnamed.x.escrow.v1beta1.TypesProto.Escrow(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.starnamed.x.escrow.v1beta1.TypesProto.Escrow result) {
+        if (priceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            price_ = java.util.Collections.unmodifiableList(price_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.price_ = price_;
+        } else {
+          result.price_ = priceBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.starnamed.x.escrow.v1beta1.TypesProto.Escrow result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.seller_ = seller_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.object_ = objectBuilder_ == null
+              ? object_
+              : objectBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.deadline_ = deadline_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.brokerAddress_ = brokerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.brokerCommission_ = brokerCommission_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.escrow.v1beta1.TypesProto.Escrow) {
+          return mergeFrom((com.starnamed.x.escrow.v1beta1.TypesProto.Escrow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.escrow.v1beta1.TypesProto.Escrow other) {
+        if (other == com.starnamed.x.escrow.v1beta1.TypesProto.Escrow.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSeller().isEmpty()) {
+          seller_ = other.seller_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasObject()) {
+          mergeObject(other.getObject());
+        }
+        if (priceBuilder_ == null) {
+          if (!other.price_.isEmpty()) {
+            if (price_.isEmpty()) {
+              price_ = other.price_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePriceIsMutable();
+              price_.addAll(other.price_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.price_.isEmpty()) {
+            if (priceBuilder_.isEmpty()) {
+              priceBuilder_.dispose();
+              priceBuilder_ = null;
+              price_ = other.price_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              priceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPriceFieldBuilder() : null;
+            } else {
+              priceBuilder_.addAllMessages(other.price_);
+            }
+          }
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        if (other.getDeadline() != 0L) {
+          setDeadline(other.getDeadline());
+        }
+        if (!other.getBrokerAddress().isEmpty()) {
+          brokerAddress_ = other.brokerAddress_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getBrokerCommission().isEmpty()) {
+          brokerCommission_ = other.brokerCommission_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                seller_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getObjectFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (priceBuilder_ == null) {
+                  ensurePriceIsMutable();
+                  price_.add(m);
+                } else {
+                  priceBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 40: {
+                state_ = input.readEnum();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                deadline_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                brokerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                brokerCommission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object seller_ = "";
+      /**
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @return The seller.
+       */
+      public java.lang.String getSeller() {
+        java.lang.Object ref = seller_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          seller_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @return The bytes for seller.
+       */
+      public com.google.protobuf.ByteString
+          getSellerBytes() {
+        java.lang.Object ref = seller_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          seller_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @param value The seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeller(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        seller_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeller() {
+        seller_ = getDefaultInstance().getSeller();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string seller = 2 [json_name = "seller"];</code>
+       * @param value The bytes for seller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        seller_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Any object_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> objectBuilder_;
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       * @return Whether the object field is set.
+       */
+      public boolean hasObject() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       * @return The object.
+       */
+      public com.google.protobuf.Any getObject() {
+        if (objectBuilder_ == null) {
+          return object_ == null ? com.google.protobuf.Any.getDefaultInstance() : object_;
+        } else {
+          return objectBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      public Builder setObject(com.google.protobuf.Any value) {
+        if (objectBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          object_ = value;
+        } else {
+          objectBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      public Builder setObject(
+          com.google.protobuf.Any.Builder builderForValue) {
+        if (objectBuilder_ == null) {
+          object_ = builderForValue.build();
+        } else {
+          objectBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      public Builder mergeObject(com.google.protobuf.Any value) {
+        if (objectBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            object_ != null &&
+            object_ != com.google.protobuf.Any.getDefaultInstance()) {
+            getObjectBuilder().mergeFrom(value);
+          } else {
+            object_ = value;
+          }
+        } else {
+          objectBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      public Builder clearObject() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        object_ = null;
+        if (objectBuilder_ != null) {
+          objectBuilder_.dispose();
+          objectBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      public com.google.protobuf.Any.Builder getObjectBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getObjectFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      public com.google.protobuf.AnyOrBuilder getObjectOrBuilder() {
+        if (objectBuilder_ != null) {
+          return objectBuilder_.getMessageOrBuilder();
+        } else {
+          return object_ == null ?
+              com.google.protobuf.Any.getDefaultInstance() : object_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Any object = 3 [json_name = "object", (.cosmos_proto.accepts_interface) = "TransferableObject"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          getObjectFieldBuilder() {
+        if (objectBuilder_ == null) {
+          objectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+                  getObject(),
+                  getParentForChildren(),
+                  isClean());
+          object_ = null;
+        }
+        return objectBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> price_ =
+        java.util.Collections.emptyList();
+      private void ensurePriceIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          price_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(price_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> priceBuilder_;
+
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getPriceList() {
+        if (priceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(price_);
+        } else {
+          return priceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getPriceCount() {
+        if (priceBuilder_ == null) {
+          return price_.size();
+        } else {
+          return priceBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPrice(int index) {
+        if (priceBuilder_ == null) {
+          return price_.get(index);
+        } else {
+          return priceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePriceIsMutable();
+          price_.set(index, value);
+          onChanged();
+        } else {
+          priceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setPrice(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          ensurePriceIsMutable();
+          price_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          priceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePriceIsMutable();
+          price_.add(value);
+          onChanged();
+        } else {
+          priceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPrice(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (priceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePriceIsMutable();
+          price_.add(index, value);
+          onChanged();
+        } else {
+          priceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          ensurePriceIsMutable();
+          price_.add(builderForValue.build());
+          onChanged();
+        } else {
+          priceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addPrice(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (priceBuilder_ == null) {
+          ensurePriceIsMutable();
+          price_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          priceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllPrice(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (priceBuilder_ == null) {
+          ensurePriceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, price_);
+          onChanged();
+        } else {
+          priceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearPrice() {
+        if (priceBuilder_ == null) {
+          price_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          priceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removePrice(int index) {
+        if (priceBuilder_ == null) {
+          ensurePriceIsMutable();
+          price_.remove(index);
+          onChanged();
+        } else {
+          priceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPriceBuilder(
+          int index) {
+        return getPriceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPriceOrBuilder(
+          int index) {
+        if (priceBuilder_ == null) {
+          return price_.get(index);  } else {
+          return priceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getPriceOrBuilderList() {
+        if (priceBuilder_ != null) {
+          return priceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(price_);
+        }
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addPriceBuilder() {
+        return getPriceFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addPriceBuilder(
+          int index) {
+        return getPriceFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * TODO: refactor this to use sdk.Coin instead of sdk.Coins
+       * Although the price contains multiple coins, for now we enforce a specific
+       * denomination, so there will be only one coin type in a valid escrow
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin price = 4 [json_name = "price", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getPriceBuilderList() {
+        return getPriceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPriceFieldBuilder() {
+        if (priceBuilder_ == null) {
+          priceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  price_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          price_ = null;
+        }
+        return priceBuilder_;
+      }
+
+      private int state_ = 0;
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        state_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState getState() {
+        com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState result = com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState.forNumber(state_);
+        return result == null ? com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.starnamed.x.escrow.v1beta1.TypesProto.EscrowState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.escrow.v1beta1.EscrowState state = 5 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long deadline_ ;
+      /**
+       * <code>uint64 deadline = 6 [json_name = "deadline"];</code>
+       * @return The deadline.
+       */
+      @java.lang.Override
+      public long getDeadline() {
+        return deadline_;
+      }
+      /**
+       * <code>uint64 deadline = 6 [json_name = "deadline"];</code>
+       * @param value The deadline to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeadline(long value) {
+
+        deadline_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 deadline = 6 [json_name = "deadline"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeadline() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        deadline_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object brokerAddress_ = "";
+      /**
+       * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+       * @return The brokerAddress.
+       */
+      public java.lang.String getBrokerAddress() {
+        java.lang.Object ref = brokerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          brokerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+       * @return The bytes for brokerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getBrokerAddressBytes() {
+        java.lang.Object ref = brokerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          brokerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+       * @param value The brokerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrokerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        brokerAddress_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBrokerAddress() {
+        brokerAddress_ = getDefaultInstance().getBrokerAddress();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string broker_address = 7 [json_name = "brokerAddress"];</code>
+       * @param value The bytes for brokerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrokerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        brokerAddress_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object brokerCommission_ = "";
+      /**
+       * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The brokerCommission.
+       */
+      public java.lang.String getBrokerCommission() {
+        java.lang.Object ref = brokerCommission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          brokerCommission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for brokerCommission.
+       */
+      public com.google.protobuf.ByteString
+          getBrokerCommissionBytes() {
+        java.lang.Object ref = brokerCommission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          brokerCommission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The brokerCommission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrokerCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        brokerCommission_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBrokerCommission() {
+        brokerCommission_ = getDefaultInstance().getBrokerCommission();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string broker_commission = 8 [json_name = "brokerCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for brokerCommission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBrokerCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        brokerCommission_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.escrow.v1beta1.Escrow)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.escrow.v1beta1.Escrow)
+    private static final com.starnamed.x.escrow.v1beta1.TypesProto.Escrow DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.escrow.v1beta1.TypesProto.Escrow();
+    }
+
+    public static com.starnamed.x.escrow.v1beta1.TypesProto.Escrow getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Escrow>
+        PARSER = new com.google.protobuf.AbstractParser<Escrow>() {
+      @java.lang.Override
+      public Escrow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Escrow> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Escrow> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.escrow.v1beta1.TypesProto.Escrow getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_escrow_v1beta1_Escrow_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_escrow_v1beta1_Escrow_fieldAccessorTable;
 
@@ -48,13 +2136,13 @@ public final class TypesProto {
       "OW_STATE_COMPLETED\020\001\032\r\212\235 \tCompleted\022\'\n\025E" +
       "SCROW_STATE_REFUNDED\020\002\032\014\212\235 \010Refunded\022%\n\024" +
       "ESCROW_STATE_EXPIRED\020\003\032\013\212\235 \007Expired\032\004\210\243\036" +
-      "\001B\350\001\n\036com.starnamed.x.escrow.v1beta1B\nTy" +
-      "pesProtoP\001Z+github.com/iov-one/starnamed" +
-      "/x/escrow/types\242\002\003SXE\252\002\032Starnamed.X.Escr" +
-      "ow.V1beta1\312\002\032Starnamed\\X\\Escrow\\V1beta1\342" +
-      "\002&Starnamed\\X\\Escrow\\V1beta1\\GPBMetadata" +
-      "\352\002\035Starnamed::X::Escrow::V1beta1\310\341\036\000b\006pr" +
-      "oto3"
+      "\001B\346\001\n\036com.starnamed.x.escrow.v1beta1B\nTy" +
+      "pesProtoZ+github.com/iov-one/starnamed/x" +
+      "/escrow/types\242\002\003SXE\252\002\032Starnamed.X.Escrow" +
+      ".V1beta1\312\002\032Starnamed\\X\\Escrow\\V1beta1\342\002&" +
+      "Starnamed\\X\\Escrow\\V1beta1\\GPBMetadata\352\002" +
+      "\035Starnamed::X::Escrow::V1beta1\310\341\036\000b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

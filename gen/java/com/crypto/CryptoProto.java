@@ -14,19 +14,1759 @@ public final class CryptoProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PublicKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crypto.PublicKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+     * @return The curveType.
+     */
+    int getCurveType();
+
+    /**
+     * <code>bytes PublicKey = 2 [json_name = "PublicKey", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The publicKey.
+     */
+    com.google.protobuf.ByteString getPublicKey();
+  }
+  /**
+   * Protobuf type {@code crypto.PublicKey}
+   */
+  public static final class PublicKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crypto.PublicKey)
+      PublicKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PublicKey.newBuilder() to construct.
+    private PublicKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PublicKey() {
+      publicKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PublicKey();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crypto.CryptoProto.internal_static_crypto_PublicKey_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crypto.CryptoProto.internal_static_crypto_PublicKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crypto.CryptoProto.PublicKey.class, com.crypto.CryptoProto.PublicKey.Builder.class);
+    }
+
+    public static final int CURVETYPE_FIELD_NUMBER = 1;
+    private int curveType_ = 0;
+    /**
+     * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+     * @return The curveType.
+     */
+    @java.lang.Override
+    public int getCurveType() {
+      return curveType_;
+    }
+
+    public static final int PUBLICKEY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes PublicKey = 2 [json_name = "PublicKey", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+     * @return The publicKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicKey() {
+      return publicKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (curveType_ != 0) {
+        output.writeUInt32(1, curveType_);
+      }
+      if (!publicKey_.isEmpty()) {
+        output.writeBytes(2, publicKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (curveType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, curveType_);
+      }
+      if (!publicKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, publicKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crypto.CryptoProto.PublicKey)) {
+        return super.equals(obj);
+      }
+      com.crypto.CryptoProto.PublicKey other = (com.crypto.CryptoProto.PublicKey) obj;
+
+      if (getCurveType()
+          != other.getCurveType()) return false;
+      if (!getPublicKey()
+          .equals(other.getPublicKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURVETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurveType();
+      hash = (37 * hash) + PUBLICKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crypto.CryptoProto.PublicKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crypto.CryptoProto.PublicKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crypto.CryptoProto.PublicKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crypto.CryptoProto.PublicKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crypto.PublicKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crypto.PublicKey)
+        com.crypto.CryptoProto.PublicKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crypto.CryptoProto.internal_static_crypto_PublicKey_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crypto.CryptoProto.internal_static_crypto_PublicKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crypto.CryptoProto.PublicKey.class, com.crypto.CryptoProto.PublicKey.Builder.class);
+      }
+
+      // Construct using com.crypto.CryptoProto.PublicKey.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        curveType_ = 0;
+        publicKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crypto.CryptoProto.internal_static_crypto_PublicKey_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.PublicKey getDefaultInstanceForType() {
+        return com.crypto.CryptoProto.PublicKey.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.PublicKey build() {
+        com.crypto.CryptoProto.PublicKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.PublicKey buildPartial() {
+        com.crypto.CryptoProto.PublicKey result = new com.crypto.CryptoProto.PublicKey(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crypto.CryptoProto.PublicKey result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.curveType_ = curveType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.publicKey_ = publicKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crypto.CryptoProto.PublicKey) {
+          return mergeFrom((com.crypto.CryptoProto.PublicKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crypto.CryptoProto.PublicKey other) {
+        if (other == com.crypto.CryptoProto.PublicKey.getDefaultInstance()) return this;
+        if (other.getCurveType() != 0) {
+          setCurveType(other.getCurveType());
+        }
+        if (other.getPublicKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicKey(other.getPublicKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                curveType_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                publicKey_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int curveType_ ;
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @return The curveType.
+       */
+      @java.lang.Override
+      public int getCurveType() {
+        return curveType_;
+      }
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @param value The curveType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurveType(int value) {
+
+        curveType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurveType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        curveType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes PublicKey = 2 [json_name = "PublicKey", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return The publicKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicKey() {
+        return publicKey_;
+      }
+      /**
+       * <code>bytes PublicKey = 2 [json_name = "PublicKey", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @param value The publicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes PublicKey = 2 [json_name = "PublicKey", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        publicKey_ = getDefaultInstance().getPublicKey();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crypto.PublicKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:crypto.PublicKey)
+    private static final com.crypto.CryptoProto.PublicKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crypto.CryptoProto.PublicKey();
+    }
+
+    public static com.crypto.CryptoProto.PublicKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PublicKey>
+        PARSER = new com.google.protobuf.AbstractParser<PublicKey>() {
+      @java.lang.Override
+      public PublicKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PublicKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PublicKey> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crypto.CryptoProto.PublicKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PrivateKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crypto.PrivateKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+     * @return The curveType.
+     */
+    int getCurveType();
+
+    /**
+     * <pre>
+     * Note may need initialisation
+     * </pre>
+     *
+     * <code>bytes PublicKey = 2 [json_name = "PublicKey"];</code>
+     * @return The publicKey.
+     */
+    com.google.protobuf.ByteString getPublicKey();
+
+    /**
+     * <code>bytes PrivateKey = 3 [json_name = "PrivateKey"];</code>
+     * @return The privateKey.
+     */
+    com.google.protobuf.ByteString getPrivateKey();
+  }
+  /**
+   * Protobuf type {@code crypto.PrivateKey}
+   */
+  public static final class PrivateKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crypto.PrivateKey)
+      PrivateKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PrivateKey.newBuilder() to construct.
+    private PrivateKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PrivateKey() {
+      publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      privateKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PrivateKey();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crypto.CryptoProto.internal_static_crypto_PrivateKey_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crypto.CryptoProto.internal_static_crypto_PrivateKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crypto.CryptoProto.PrivateKey.class, com.crypto.CryptoProto.PrivateKey.Builder.class);
+    }
+
+    public static final int CURVETYPE_FIELD_NUMBER = 1;
+    private int curveType_ = 0;
+    /**
+     * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+     * @return The curveType.
+     */
+    @java.lang.Override
+    public int getCurveType() {
+      return curveType_;
+    }
+
+    public static final int PUBLICKEY_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * Note may need initialisation
+     * </pre>
+     *
+     * <code>bytes PublicKey = 2 [json_name = "PublicKey"];</code>
+     * @return The publicKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPublicKey() {
+      return publicKey_;
+    }
+
+    public static final int PRIVATEKEY_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString privateKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes PrivateKey = 3 [json_name = "PrivateKey"];</code>
+     * @return The privateKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPrivateKey() {
+      return privateKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (curveType_ != 0) {
+        output.writeUInt32(1, curveType_);
+      }
+      if (!publicKey_.isEmpty()) {
+        output.writeBytes(2, publicKey_);
+      }
+      if (!privateKey_.isEmpty()) {
+        output.writeBytes(3, privateKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (curveType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, curveType_);
+      }
+      if (!publicKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, publicKey_);
+      }
+      if (!privateKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, privateKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crypto.CryptoProto.PrivateKey)) {
+        return super.equals(obj);
+      }
+      com.crypto.CryptoProto.PrivateKey other = (com.crypto.CryptoProto.PrivateKey) obj;
+
+      if (getCurveType()
+          != other.getCurveType()) return false;
+      if (!getPublicKey()
+          .equals(other.getPublicKey())) return false;
+      if (!getPrivateKey()
+          .equals(other.getPrivateKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURVETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurveType();
+      hash = (37 * hash) + PUBLICKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKey().hashCode();
+      hash = (37 * hash) + PRIVATEKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crypto.CryptoProto.PrivateKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crypto.CryptoProto.PrivateKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crypto.CryptoProto.PrivateKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crypto.CryptoProto.PrivateKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crypto.PrivateKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crypto.PrivateKey)
+        com.crypto.CryptoProto.PrivateKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crypto.CryptoProto.internal_static_crypto_PrivateKey_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crypto.CryptoProto.internal_static_crypto_PrivateKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crypto.CryptoProto.PrivateKey.class, com.crypto.CryptoProto.PrivateKey.Builder.class);
+      }
+
+      // Construct using com.crypto.CryptoProto.PrivateKey.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        curveType_ = 0;
+        publicKey_ = com.google.protobuf.ByteString.EMPTY;
+        privateKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crypto.CryptoProto.internal_static_crypto_PrivateKey_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.PrivateKey getDefaultInstanceForType() {
+        return com.crypto.CryptoProto.PrivateKey.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.PrivateKey build() {
+        com.crypto.CryptoProto.PrivateKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.PrivateKey buildPartial() {
+        com.crypto.CryptoProto.PrivateKey result = new com.crypto.CryptoProto.PrivateKey(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crypto.CryptoProto.PrivateKey result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.curveType_ = curveType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.publicKey_ = publicKey_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.privateKey_ = privateKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crypto.CryptoProto.PrivateKey) {
+          return mergeFrom((com.crypto.CryptoProto.PrivateKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crypto.CryptoProto.PrivateKey other) {
+        if (other == com.crypto.CryptoProto.PrivateKey.getDefaultInstance()) return this;
+        if (other.getCurveType() != 0) {
+          setCurveType(other.getCurveType());
+        }
+        if (other.getPublicKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPublicKey(other.getPublicKey());
+        }
+        if (other.getPrivateKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPrivateKey(other.getPrivateKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                curveType_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                publicKey_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                privateKey_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int curveType_ ;
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @return The curveType.
+       */
+      @java.lang.Override
+      public int getCurveType() {
+        return curveType_;
+      }
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @param value The curveType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurveType(int value) {
+
+        curveType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurveType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        curveType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString publicKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Note may need initialisation
+       * </pre>
+       *
+       * <code>bytes PublicKey = 2 [json_name = "PublicKey"];</code>
+       * @return The publicKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPublicKey() {
+        return publicKey_;
+      }
+      /**
+       * <pre>
+       * Note may need initialisation
+       * </pre>
+       *
+       * <code>bytes PublicKey = 2 [json_name = "PublicKey"];</code>
+       * @param value The publicKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        publicKey_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Note may need initialisation
+       * </pre>
+       *
+       * <code>bytes PublicKey = 2 [json_name = "PublicKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        publicKey_ = getDefaultInstance().getPublicKey();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString privateKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes PrivateKey = 3 [json_name = "PrivateKey"];</code>
+       * @return The privateKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPrivateKey() {
+        return privateKey_;
+      }
+      /**
+       * <code>bytes PrivateKey = 3 [json_name = "PrivateKey"];</code>
+       * @param value The privateKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        privateKey_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes PrivateKey = 3 [json_name = "PrivateKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateKey() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        privateKey_ = getDefaultInstance().getPrivateKey();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crypto.PrivateKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:crypto.PrivateKey)
+    private static final com.crypto.CryptoProto.PrivateKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crypto.CryptoProto.PrivateKey();
+    }
+
+    public static com.crypto.CryptoProto.PrivateKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PrivateKey>
+        PARSER = new com.google.protobuf.AbstractParser<PrivateKey>() {
+      @java.lang.Override
+      public PrivateKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PrivateKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PrivateKey> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crypto.CryptoProto.PrivateKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crypto.Signature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+     * @return The curveType.
+     */
+    int getCurveType();
+
+    /**
+     * <code>bytes Signature = 2 [json_name = "Signature"];</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+  }
+  /**
+   * Protobuf type {@code crypto.Signature}
+   */
+  public static final class Signature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crypto.Signature)
+      SignatureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Signature.newBuilder() to construct.
+    private Signature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Signature() {
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Signature();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crypto.CryptoProto.internal_static_crypto_Signature_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crypto.CryptoProto.internal_static_crypto_Signature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crypto.CryptoProto.Signature.class, com.crypto.CryptoProto.Signature.Builder.class);
+    }
+
+    public static final int CURVETYPE_FIELD_NUMBER = 1;
+    private int curveType_ = 0;
+    /**
+     * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+     * @return The curveType.
+     */
+    @java.lang.Override
+    public int getCurveType() {
+      return curveType_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes Signature = 2 [json_name = "Signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (curveType_ != 0) {
+        output.writeUInt32(1, curveType_);
+      }
+      if (!signature_.isEmpty()) {
+        output.writeBytes(2, signature_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (curveType_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, curveType_);
+      }
+      if (!signature_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, signature_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crypto.CryptoProto.Signature)) {
+        return super.equals(obj);
+      }
+      com.crypto.CryptoProto.Signature other = (com.crypto.CryptoProto.Signature) obj;
+
+      if (getCurveType()
+          != other.getCurveType()) return false;
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURVETYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurveType();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crypto.CryptoProto.Signature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crypto.CryptoProto.Signature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crypto.CryptoProto.Signature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crypto.CryptoProto.Signature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code crypto.Signature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crypto.Signature)
+        com.crypto.CryptoProto.SignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crypto.CryptoProto.internal_static_crypto_Signature_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crypto.CryptoProto.internal_static_crypto_Signature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crypto.CryptoProto.Signature.class, com.crypto.CryptoProto.Signature.Builder.class);
+      }
+
+      // Construct using com.crypto.CryptoProto.Signature.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        curveType_ = 0;
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crypto.CryptoProto.internal_static_crypto_Signature_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.Signature getDefaultInstanceForType() {
+        return com.crypto.CryptoProto.Signature.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.Signature build() {
+        com.crypto.CryptoProto.Signature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crypto.CryptoProto.Signature buildPartial() {
+        com.crypto.CryptoProto.Signature result = new com.crypto.CryptoProto.Signature(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crypto.CryptoProto.Signature result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.curveType_ = curveType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signature_ = signature_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crypto.CryptoProto.Signature) {
+          return mergeFrom((com.crypto.CryptoProto.Signature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crypto.CryptoProto.Signature other) {
+        if (other == com.crypto.CryptoProto.Signature.getDefaultInstance()) return this;
+        if (other.getCurveType() != 0) {
+          setCurveType(other.getCurveType());
+        }
+        if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
+          setSignature(other.getSignature());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                curveType_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                signature_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int curveType_ ;
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @return The curveType.
+       */
+      @java.lang.Override
+      public int getCurveType() {
+        return curveType_;
+      }
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @param value The curveType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurveType(int value) {
+
+        curveType_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 CurveType = 1 [json_name = "CurveType", (.gogoproto.casttype) = "CurveType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurveType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        curveType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes Signature = 2 [json_name = "Signature"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <code>bytes Signature = 2 [json_name = "Signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes Signature = 2 [json_name = "Signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crypto.Signature)
+    }
+
+    // @@protoc_insertion_point(class_scope:crypto.Signature)
+    private static final com.crypto.CryptoProto.Signature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crypto.CryptoProto.Signature();
+    }
+
+    public static com.crypto.CryptoProto.Signature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Signature>
+        PARSER = new com.google.protobuf.AbstractParser<Signature>() {
+      @java.lang.Override
+      public Signature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Signature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Signature> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crypto.CryptoProto.Signature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crypto_PublicKey_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crypto_PublicKey_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crypto_PrivateKey_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crypto_PrivateKey_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crypto_Signature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crypto_Signature_fieldAccessorTable;
 
@@ -48,11 +1788,11 @@ public final class CryptoProto {
       "y\030\002 \001(\014R\tPublicKey\022\036\n\nPrivateKey\030\003 \001(\014R\n" +
       "PrivateKey:\010\210\240\037\000\230\240\037\000\"\\\n\tSignature\022+\n\tCur" +
       "veType\030\001 \001(\rB\r\372\336\037\tCurveTypeR\tCurveType\022\034" +
-      "\n\tSignature\030\002 \001(\014R\tSignature:\004\230\240\037\000B\217\001\n\nc" +
-      "om.cryptoB\013CryptoProtoP\001Z$github.com/hyp" +
-      "erledger/burrow/crypto\242\002\003CXX\252\002\006Crypto\312\002\006" +
-      "Crypto\342\002\022Crypto\\GPBMetadata\352\002\006Crypto\310\342\036\001" +
-      "\320\342\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
+      "\n\tSignature\030\002 \001(\014R\tSignature:\004\230\240\037\000B\215\001\n\nc" +
+      "om.cryptoB\013CryptoProtoZ$github.com/hyper" +
+      "ledger/burrow/crypto\242\002\003CXX\252\002\006Crypto\312\002\006Cr" +
+      "ypto\342\002\022Crypto\\GPBMetadata\352\002\006Crypto\310\342\036\001\320\342" +
+      "\036\001\330\342\036\001\340\342\036\001\300\343\036\001\310\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

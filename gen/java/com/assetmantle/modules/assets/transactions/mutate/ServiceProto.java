@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.assets.transactions.m" +
       "utate.Message\032C.assetmantle.modules.asse" +
       "ts.transactions.mutate.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/assets/mutateB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/assets/mutateB\236\002\n2co" +
       "m.assetmantle.modules.assets.transaction" +
-      "s.mutateB\014ServiceProtoP\001\242\002\005AMATM\252\002.Asset" +
-      "mantle.Modules.Assets.Transactions.Mutat" +
-      "e\312\002.Assetmantle\\Modules\\Assets\\Transacti" +
-      "ons\\Mutate\342\002:Assetmantle\\Modules\\Assets\\" +
-      "Transactions\\Mutate\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Assets::Transactions::Mu" +
-      "tateb\006proto3"
+      "s.mutateB\014ServiceProto\242\002\005AMATM\252\002.Assetma" +
+      "ntle.Modules.Assets.Transactions.Mutate\312" +
+      "\002.Assetmantle\\Modules\\Assets\\Transaction" +
+      "s\\Mutate\342\002:Assetmantle\\Modules\\Assets\\Tr" +
+      "ansactions\\Mutate\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Assets::Transactions::Muta" +
+      "teb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

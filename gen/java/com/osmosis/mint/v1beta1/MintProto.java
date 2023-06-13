@@ -14,24 +14,4733 @@ public final class MintProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MinterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.mint.v1beta1.Minter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * epoch_provisions represent rewards for the current epoch.
+     * </pre>
+     *
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * @return The epochProvisions.
+     */
+    java.lang.String getEpochProvisions();
+    /**
+     * <pre>
+     * epoch_provisions represent rewards for the current epoch.
+     * </pre>
+     *
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * @return The bytes for epochProvisions.
+     */
+    com.google.protobuf.ByteString
+        getEpochProvisionsBytes();
+  }
+  /**
+   * <pre>
+   * Minter represents the minting state.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.mint.v1beta1.Minter}
+   */
+  public static final class Minter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.mint.v1beta1.Minter)
+      MinterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Minter.newBuilder() to construct.
+    private Minter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Minter() {
+      epochProvisions_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Minter();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Minter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Minter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.mint.v1beta1.MintProto.Minter.class, com.osmosis.mint.v1beta1.MintProto.Minter.Builder.class);
+    }
+
+    public static final int EPOCH_PROVISIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object epochProvisions_ = "";
+    /**
+     * <pre>
+     * epoch_provisions represent rewards for the current epoch.
+     * </pre>
+     *
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * @return The epochProvisions.
+     */
+    @java.lang.Override
+    public java.lang.String getEpochProvisions() {
+      java.lang.Object ref = epochProvisions_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        epochProvisions_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * epoch_provisions represent rewards for the current epoch.
+     * </pre>
+     *
+     * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+     * @return The bytes for epochProvisions.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEpochProvisionsBytes() {
+      java.lang.Object ref = epochProvisions_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        epochProvisions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochProvisions_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, epochProvisions_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochProvisions_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, epochProvisions_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.mint.v1beta1.MintProto.Minter)) {
+        return super.equals(obj);
+      }
+      com.osmosis.mint.v1beta1.MintProto.Minter other = (com.osmosis.mint.v1beta1.MintProto.Minter) obj;
+
+      if (!getEpochProvisions()
+          .equals(other.getEpochProvisions())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EPOCH_PROVISIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getEpochProvisions().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Minter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.mint.v1beta1.MintProto.Minter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Minter represents the minting state.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.mint.v1beta1.Minter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.mint.v1beta1.Minter)
+        com.osmosis.mint.v1beta1.MintProto.MinterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Minter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Minter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.mint.v1beta1.MintProto.Minter.class, com.osmosis.mint.v1beta1.MintProto.Minter.Builder.class);
+      }
+
+      // Construct using com.osmosis.mint.v1beta1.MintProto.Minter.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        epochProvisions_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Minter_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.Minter getDefaultInstanceForType() {
+        return com.osmosis.mint.v1beta1.MintProto.Minter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.Minter build() {
+        com.osmosis.mint.v1beta1.MintProto.Minter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.Minter buildPartial() {
+        com.osmosis.mint.v1beta1.MintProto.Minter result = new com.osmosis.mint.v1beta1.MintProto.Minter(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.mint.v1beta1.MintProto.Minter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.epochProvisions_ = epochProvisions_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.mint.v1beta1.MintProto.Minter) {
+          return mergeFrom((com.osmosis.mint.v1beta1.MintProto.Minter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.mint.v1beta1.MintProto.Minter other) {
+        if (other == com.osmosis.mint.v1beta1.MintProto.Minter.getDefaultInstance()) return this;
+        if (!other.getEpochProvisions().isEmpty()) {
+          epochProvisions_ = other.epochProvisions_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                epochProvisions_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object epochProvisions_ = "";
+      /**
+       * <pre>
+       * epoch_provisions represent rewards for the current epoch.
+       * </pre>
+       *
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * @return The epochProvisions.
+       */
+      public java.lang.String getEpochProvisions() {
+        java.lang.Object ref = epochProvisions_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          epochProvisions_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_provisions represent rewards for the current epoch.
+       * </pre>
+       *
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * @return The bytes for epochProvisions.
+       */
+      public com.google.protobuf.ByteString
+          getEpochProvisionsBytes() {
+        java.lang.Object ref = epochProvisions_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          epochProvisions_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_provisions represent rewards for the current epoch.
+       * </pre>
+       *
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * @param value The epochProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochProvisions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        epochProvisions_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_provisions represent rewards for the current epoch.
+       * </pre>
+       *
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochProvisions() {
+        epochProvisions_ = getDefaultInstance().getEpochProvisions();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_provisions represent rewards for the current epoch.
+       * </pre>
+       *
+       * <code>string epoch_provisions = 1 [json_name = "epochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_provisions&#92;""];</code>
+       * @param value The bytes for epochProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochProvisionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        epochProvisions_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.mint.v1beta1.Minter)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.mint.v1beta1.Minter)
+    private static final com.osmosis.mint.v1beta1.MintProto.Minter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.mint.v1beta1.MintProto.Minter();
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Minter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Minter>
+        PARSER = new com.google.protobuf.AbstractParser<Minter>() {
+      @java.lang.Override
+      public Minter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Minter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Minter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.Minter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WeightedAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.mint.v1beta1.WeightedAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The weight.
+     */
+    java.lang.String getWeight();
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The bytes for weight.
+     */
+    com.google.protobuf.ByteString
+        getWeightBytes();
+  }
+  /**
+   * <pre>
+   * WeightedAddress represents an address with a weight assigned to it.
+   * The weight is used to determine the proportion of the total minted
+   * tokens to be minted to the address.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.mint.v1beta1.WeightedAddress}
+   */
+  public static final class WeightedAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.mint.v1beta1.WeightedAddress)
+      WeightedAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WeightedAddress.newBuilder() to construct.
+    private WeightedAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WeightedAddress() {
+      address_ = "";
+      weight_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WeightedAddress();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_WeightedAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_WeightedAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.mint.v1beta1.MintProto.WeightedAddress.class, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object weight_ = "";
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public java.lang.String getWeight() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        weight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The bytes for weight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWeightBytes() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        weight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, weight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, weight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.mint.v1beta1.MintProto.WeightedAddress)) {
+        return super.equals(obj);
+      }
+      com.osmosis.mint.v1beta1.MintProto.WeightedAddress other = (com.osmosis.mint.v1beta1.MintProto.WeightedAddress) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getWeight()
+          .equals(other.getWeight())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getWeight().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.mint.v1beta1.MintProto.WeightedAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * WeightedAddress represents an address with a weight assigned to it.
+     * The weight is used to determine the proportion of the total minted
+     * tokens to be minted to the address.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.mint.v1beta1.WeightedAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.mint.v1beta1.WeightedAddress)
+        com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_WeightedAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_WeightedAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.mint.v1beta1.MintProto.WeightedAddress.class, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder.class);
+      }
+
+      // Construct using com.osmosis.mint.v1beta1.MintProto.WeightedAddress.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        weight_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_WeightedAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress getDefaultInstanceForType() {
+        return com.osmosis.mint.v1beta1.MintProto.WeightedAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress build() {
+        com.osmosis.mint.v1beta1.MintProto.WeightedAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress buildPartial() {
+        com.osmosis.mint.v1beta1.MintProto.WeightedAddress result = new com.osmosis.mint.v1beta1.MintProto.WeightedAddress(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.mint.v1beta1.MintProto.WeightedAddress result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weight_ = weight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.mint.v1beta1.MintProto.WeightedAddress) {
+          return mergeFrom((com.osmosis.mint.v1beta1.MintProto.WeightedAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.mint.v1beta1.MintProto.WeightedAddress other) {
+        if (other == com.osmosis.mint.v1beta1.MintProto.WeightedAddress.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getWeight().isEmpty()) {
+          weight_ = other.weight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                weight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object weight_ = "";
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return The weight.
+       */
+      public java.lang.String getWeight() {
+        java.lang.Object ref = weight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          weight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return The bytes for weight.
+       */
+      public com.google.protobuf.ByteString
+          getWeightBytes() {
+        java.lang.Object ref = weight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          weight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        weight_ = getDefaultInstance().getWeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @param value The bytes for weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.mint.v1beta1.WeightedAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.mint.v1beta1.WeightedAddress)
+    private static final com.osmosis.mint.v1beta1.MintProto.WeightedAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.mint.v1beta1.MintProto.WeightedAddress();
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.WeightedAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WeightedAddress>
+        PARSER = new com.google.protobuf.AbstractParser<WeightedAddress>() {
+      @java.lang.Override
+      public WeightedAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<WeightedAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WeightedAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.WeightedAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DistributionProportionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.mint.v1beta1.DistributionProportions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking defines the proportion of the minted mint_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * @return The staking.
+     */
+    java.lang.String getStaking();
+    /**
+     * <pre>
+     * staking defines the proportion of the minted mint_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * @return The bytes for staking.
+     */
+    com.google.protobuf.ByteString
+        getStakingBytes();
+
+    /**
+     * <pre>
+     * pool_incentives defines the proportion of the minted mint_denom that is
+     * to be allocated as pool incentives.
+     * </pre>
+     *
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * @return The poolIncentives.
+     */
+    java.lang.String getPoolIncentives();
+    /**
+     * <pre>
+     * pool_incentives defines the proportion of the minted mint_denom that is
+     * to be allocated as pool incentives.
+     * </pre>
+     *
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * @return The bytes for poolIncentives.
+     */
+    com.google.protobuf.ByteString
+        getPoolIncentivesBytes();
+
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted mint_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The developerRewards.
+     */
+    java.lang.String getDeveloperRewards();
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted mint_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The bytes for developerRewards.
+     */
+    com.google.protobuf.ByteString
+        getDeveloperRewardsBytes();
+
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted mint_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The communityPool.
+     */
+    java.lang.String getCommunityPool();
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted mint_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The bytes for communityPool.
+     */
+    com.google.protobuf.ByteString
+        getCommunityPoolBytes();
+  }
+  /**
+   * <pre>
+   * DistributionProportions defines the distribution proportions of the minted
+   * denom. In other words, defines which stakeholders will receive the minted
+   * denoms and how much.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.mint.v1beta1.DistributionProportions}
+   */
+  public static final class DistributionProportions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.mint.v1beta1.DistributionProportions)
+      DistributionProportionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistributionProportions.newBuilder() to construct.
+    private DistributionProportions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistributionProportions() {
+      staking_ = "";
+      poolIncentives_ = "";
+      developerRewards_ = "";
+      communityPool_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistributionProportions();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_DistributionProportions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_DistributionProportions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.mint.v1beta1.MintProto.DistributionProportions.class, com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder.class);
+    }
+
+    public static final int STAKING_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object staking_ = "";
+    /**
+     * <pre>
+     * staking defines the proportion of the minted mint_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * @return The staking.
+     */
+    @java.lang.Override
+    public java.lang.String getStaking() {
+      java.lang.Object ref = staking_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        staking_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking defines the proportion of the minted mint_denom that is to be
+     * allocated as staking rewards.
+     * </pre>
+     *
+     * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+     * @return The bytes for staking.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingBytes() {
+      java.lang.Object ref = staking_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        staking_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_INCENTIVES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolIncentives_ = "";
+    /**
+     * <pre>
+     * pool_incentives defines the proportion of the minted mint_denom that is
+     * to be allocated as pool incentives.
+     * </pre>
+     *
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * @return The poolIncentives.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolIncentives() {
+      java.lang.Object ref = poolIncentives_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolIncentives_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * pool_incentives defines the proportion of the minted mint_denom that is
+     * to be allocated as pool incentives.
+     * </pre>
+     *
+     * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+     * @return The bytes for poolIncentives.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolIncentivesBytes() {
+      java.lang.Object ref = poolIncentives_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolIncentives_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVELOPER_REWARDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object developerRewards_ = "";
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted mint_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The developerRewards.
+     */
+    @java.lang.Override
+    public java.lang.String getDeveloperRewards() {
+      java.lang.Object ref = developerRewards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        developerRewards_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * developer_rewards defines the proportion of the minted mint_denom that is
+     * to be allocated to developer rewards address.
+     * </pre>
+     *
+     * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The bytes for developerRewards.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeveloperRewardsBytes() {
+      java.lang.Object ref = developerRewards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        developerRewards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITY_POOL_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object communityPool_ = "";
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted mint_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The communityPool.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityPool() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityPool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted mint_denom that is
+     * to be allocated to the community pool.
+     * </pre>
+     *
+     * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+     * @return The bytes for communityPool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityPoolBytes() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityPool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staking_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, staking_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolIncentives_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, poolIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerRewards_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, developerRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, communityPool_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(staking_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, staking_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolIncentives_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, poolIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerRewards_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, developerRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, communityPool_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.mint.v1beta1.MintProto.DistributionProportions)) {
+        return super.equals(obj);
+      }
+      com.osmosis.mint.v1beta1.MintProto.DistributionProportions other = (com.osmosis.mint.v1beta1.MintProto.DistributionProportions) obj;
+
+      if (!getStaking()
+          .equals(other.getStaking())) return false;
+      if (!getPoolIncentives()
+          .equals(other.getPoolIncentives())) return false;
+      if (!getDeveloperRewards()
+          .equals(other.getDeveloperRewards())) return false;
+      if (!getCommunityPool()
+          .equals(other.getCommunityPool())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_FIELD_NUMBER;
+      hash = (53 * hash) + getStaking().hashCode();
+      hash = (37 * hash) + POOL_INCENTIVES_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolIncentives().hashCode();
+      hash = (37 * hash) + DEVELOPER_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeveloperRewards().hashCode();
+      hash = (37 * hash) + COMMUNITY_POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityPool().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.mint.v1beta1.MintProto.DistributionProportions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DistributionProportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.mint.v1beta1.DistributionProportions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.mint.v1beta1.DistributionProportions)
+        com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_DistributionProportions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.mint.v1beta1.MintProto.DistributionProportions.class, com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder.class);
+      }
+
+      // Construct using com.osmosis.mint.v1beta1.MintProto.DistributionProportions.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        staking_ = "";
+        poolIncentives_ = "";
+        developerRewards_ = "";
+        communityPool_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.DistributionProportions getDefaultInstanceForType() {
+        return com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.DistributionProportions build() {
+        com.osmosis.mint.v1beta1.MintProto.DistributionProportions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.DistributionProportions buildPartial() {
+        com.osmosis.mint.v1beta1.MintProto.DistributionProportions result = new com.osmosis.mint.v1beta1.MintProto.DistributionProportions(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.mint.v1beta1.MintProto.DistributionProportions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.staking_ = staking_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolIncentives_ = poolIncentives_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.developerRewards_ = developerRewards_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.communityPool_ = communityPool_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.mint.v1beta1.MintProto.DistributionProportions) {
+          return mergeFrom((com.osmosis.mint.v1beta1.MintProto.DistributionProportions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.mint.v1beta1.MintProto.DistributionProportions other) {
+        if (other == com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance()) return this;
+        if (!other.getStaking().isEmpty()) {
+          staking_ = other.staking_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPoolIncentives().isEmpty()) {
+          poolIncentives_ = other.poolIncentives_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDeveloperRewards().isEmpty()) {
+          developerRewards_ = other.developerRewards_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getCommunityPool().isEmpty()) {
+          communityPool_ = other.communityPool_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                staking_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                poolIncentives_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                developerRewards_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                communityPool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object staking_ = "";
+      /**
+       * <pre>
+       * staking defines the proportion of the minted mint_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * @return The staking.
+       */
+      public java.lang.String getStaking() {
+        java.lang.Object ref = staking_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          staking_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted mint_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * @return The bytes for staking.
+       */
+      public com.google.protobuf.ByteString
+          getStakingBytes() {
+        java.lang.Object ref = staking_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          staking_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted mint_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * @param value The staking to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStaking(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        staking_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted mint_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStaking() {
+        staking_ = getDefaultInstance().getStaking();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking defines the proportion of the minted mint_denom that is to be
+       * allocated as staking rewards.
+       * </pre>
+       *
+       * <code>string staking = 1 [json_name = "staking", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"staking&#92;""];</code>
+       * @param value The bytes for staking to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        staking_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolIncentives_ = "";
+      /**
+       * <pre>
+       * pool_incentives defines the proportion of the minted mint_denom that is
+       * to be allocated as pool incentives.
+       * </pre>
+       *
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * @return The poolIncentives.
+       */
+      public java.lang.String getPoolIncentives() {
+        java.lang.Object ref = poolIncentives_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolIncentives_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pool_incentives defines the proportion of the minted mint_denom that is
+       * to be allocated as pool incentives.
+       * </pre>
+       *
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * @return The bytes for poolIncentives.
+       */
+      public com.google.protobuf.ByteString
+          getPoolIncentivesBytes() {
+        java.lang.Object ref = poolIncentives_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolIncentives_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * pool_incentives defines the proportion of the minted mint_denom that is
+       * to be allocated as pool incentives.
+       * </pre>
+       *
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * @param value The poolIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolIncentives(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolIncentives_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_incentives defines the proportion of the minted mint_denom that is
+       * to be allocated as pool incentives.
+       * </pre>
+       *
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolIncentives() {
+        poolIncentives_ = getDefaultInstance().getPoolIncentives();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool_incentives defines the proportion of the minted mint_denom that is
+       * to be allocated as pool incentives.
+       * </pre>
+       *
+       * <code>string pool_incentives = 2 [json_name = "poolIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"pool_incentives&#92;""];</code>
+       * @param value The bytes for poolIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolIncentivesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolIncentives_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object developerRewards_ = "";
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted mint_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @return The developerRewards.
+       */
+      public java.lang.String getDeveloperRewards() {
+        java.lang.Object ref = developerRewards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          developerRewards_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted mint_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @return The bytes for developerRewards.
+       */
+      public com.google.protobuf.ByteString
+          getDeveloperRewardsBytes() {
+        java.lang.Object ref = developerRewards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          developerRewards_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted mint_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @param value The developerRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperRewards(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        developerRewards_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted mint_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeveloperRewards() {
+        developerRewards_ = getDefaultInstance().getDeveloperRewards();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * developer_rewards defines the proportion of the minted mint_denom that is
+       * to be allocated to developer rewards address.
+       * </pre>
+       *
+       * <code>string developer_rewards = 3 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @param value The bytes for developerRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperRewardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        developerRewards_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityPool_ = "";
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted mint_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return The communityPool.
+       */
+      public java.lang.String getCommunityPool() {
+        java.lang.Object ref = communityPool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityPool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted mint_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return The bytes for communityPool.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityPoolBytes() {
+        java.lang.Object ref = communityPool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityPool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted mint_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @param value The communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        communityPool_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted mint_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityPool() {
+        communityPool_ = getDefaultInstance().getCommunityPool();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted mint_denom that is
+       * to be allocated to the community pool.
+       * </pre>
+       *
+       * <code>string community_pool = 4 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"community_pool&#92;""];</code>
+       * @param value The bytes for communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        communityPool_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.mint.v1beta1.DistributionProportions)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.mint.v1beta1.DistributionProportions)
+    private static final com.osmosis.mint.v1beta1.MintProto.DistributionProportions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.mint.v1beta1.MintProto.DistributionProportions();
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.DistributionProportions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistributionProportions>
+        PARSER = new com.google.protobuf.AbstractParser<DistributionProportions>() {
+      @java.lang.Override
+      public DistributionProportions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistributionProportions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistributionProportions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.DistributionProportions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.mint.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * mint_denom is the denom of the coin to mint.
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    java.lang.String getMintDenom();
+    /**
+     * <pre>
+     * mint_denom is the denom of the coin to mint.
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    com.google.protobuf.ByteString
+        getMintDenomBytes();
+
+    /**
+     * <pre>
+     * genesis_epoch_provisions epoch provisions from the first epoch.
+     * </pre>
+     *
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * @return The genesisEpochProvisions.
+     */
+    java.lang.String getGenesisEpochProvisions();
+    /**
+     * <pre>
+     * genesis_epoch_provisions epoch provisions from the first epoch.
+     * </pre>
+     *
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * @return The bytes for genesisEpochProvisions.
+     */
+    com.google.protobuf.ByteString
+        getGenesisEpochProvisionsBytes();
+
+    /**
+     * <pre>
+     * epoch_identifier mint epoch identifier e.g. (day, week).
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+     * @return The epochIdentifier.
+     */
+    java.lang.String getEpochIdentifier();
+    /**
+     * <pre>
+     * epoch_identifier mint epoch identifier e.g. (day, week).
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+     * @return The bytes for epochIdentifier.
+     */
+    com.google.protobuf.ByteString
+        getEpochIdentifierBytes();
+
+    /**
+     * <pre>
+     * reduction_period_in_epochs the number of epochs it takes
+     * to reduce the rewards.
+     * </pre>
+     *
+     * <code>int64 reduction_period_in_epochs = 4 [json_name = "reductionPeriodInEpochs", (.gogoproto.moretags) = "yaml:&#92;"reduction_period_in_epochs&#92;""];</code>
+     * @return The reductionPeriodInEpochs.
+     */
+    long getReductionPeriodInEpochs();
+
+    /**
+     * <pre>
+     * reduction_factor is the reduction multiplier to execute
+     * at the end of each period set by reduction_period_in_epochs.
+     * </pre>
+     *
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * @return The reductionFactor.
+     */
+    java.lang.String getReductionFactor();
+    /**
+     * <pre>
+     * reduction_factor is the reduction multiplier to execute
+     * at the end of each period set by reduction_period_in_epochs.
+     * </pre>
+     *
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * @return The bytes for reductionFactor.
+     */
+    com.google.protobuf.ByteString
+        getReductionFactorBytes();
+
+    /**
+     * <pre>
+     * distribution_proportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    boolean hasDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    com.osmosis.mint.v1beta1.MintProto.DistributionProportions getDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder();
+
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    java.util.List<com.osmosis.mint.v1beta1.MintProto.WeightedAddress> 
+        getWeightedDeveloperRewardsReceiversList();
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    com.osmosis.mint.v1beta1.MintProto.WeightedAddress getWeightedDeveloperRewardsReceivers(int index);
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    int getWeightedDeveloperRewardsReceiversCount();
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder> 
+        getWeightedDeveloperRewardsReceiversOrBuilderList();
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * minting_rewards_distribution_start_epoch start epoch to distribute minting
+     * rewards
+     * </pre>
+     *
+     * <code>int64 minting_rewards_distribution_start_epoch = 8 [json_name = "mintingRewardsDistributionStartEpoch", (.gogoproto.moretags) = "yaml:&#92;"minting_rewards_distribution_start_epoch&#92;""];</code>
+     * @return The mintingRewardsDistributionStartEpoch.
+     */
+    long getMintingRewardsDistributionStartEpoch();
+  }
+  /**
+   * <pre>
+   * Params holds parameters for the x/mint module.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.mint.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.mint.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      mintDenom_ = "";
+      genesisEpochProvisions_ = "";
+      epochIdentifier_ = "";
+      reductionFactor_ = "";
+      weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.mint.v1beta1.MintProto.Params.class, com.osmosis.mint.v1beta1.MintProto.Params.Builder.class);
+    }
+
+    public static final int MINT_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mintDenom_ = "";
+    /**
+     * <pre>
+     * mint_denom is the denom of the coin to mint.
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The mintDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getMintDenom() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mintDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * mint_denom is the denom of the coin to mint.
+     * </pre>
+     *
+     * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+     * @return The bytes for mintDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMintDenomBytes() {
+      java.lang.Object ref = mintDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mintDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GENESIS_EPOCH_PROVISIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object genesisEpochProvisions_ = "";
+    /**
+     * <pre>
+     * genesis_epoch_provisions epoch provisions from the first epoch.
+     * </pre>
+     *
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * @return The genesisEpochProvisions.
+     */
+    @java.lang.Override
+    public java.lang.String getGenesisEpochProvisions() {
+      java.lang.Object ref = genesisEpochProvisions_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        genesisEpochProvisions_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * genesis_epoch_provisions epoch provisions from the first epoch.
+     * </pre>
+     *
+     * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+     * @return The bytes for genesisEpochProvisions.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGenesisEpochProvisionsBytes() {
+      java.lang.Object ref = genesisEpochProvisions_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        genesisEpochProvisions_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EPOCH_IDENTIFIER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object epochIdentifier_ = "";
+    /**
+     * <pre>
+     * epoch_identifier mint epoch identifier e.g. (day, week).
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+     * @return The epochIdentifier.
+     */
+    @java.lang.Override
+    public java.lang.String getEpochIdentifier() {
+      java.lang.Object ref = epochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        epochIdentifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * epoch_identifier mint epoch identifier e.g. (day, week).
+     * </pre>
+     *
+     * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+     * @return The bytes for epochIdentifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEpochIdentifierBytes() {
+      java.lang.Object ref = epochIdentifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        epochIdentifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REDUCTION_PERIOD_IN_EPOCHS_FIELD_NUMBER = 4;
+    private long reductionPeriodInEpochs_ = 0L;
+    /**
+     * <pre>
+     * reduction_period_in_epochs the number of epochs it takes
+     * to reduce the rewards.
+     * </pre>
+     *
+     * <code>int64 reduction_period_in_epochs = 4 [json_name = "reductionPeriodInEpochs", (.gogoproto.moretags) = "yaml:&#92;"reduction_period_in_epochs&#92;""];</code>
+     * @return The reductionPeriodInEpochs.
+     */
+    @java.lang.Override
+    public long getReductionPeriodInEpochs() {
+      return reductionPeriodInEpochs_;
+    }
+
+    public static final int REDUCTION_FACTOR_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reductionFactor_ = "";
+    /**
+     * <pre>
+     * reduction_factor is the reduction multiplier to execute
+     * at the end of each period set by reduction_period_in_epochs.
+     * </pre>
+     *
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * @return The reductionFactor.
+     */
+    @java.lang.Override
+    public java.lang.String getReductionFactor() {
+      java.lang.Object ref = reductionFactor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reductionFactor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reduction_factor is the reduction multiplier to execute
+     * at the end of each period set by reduction_period_in_epochs.
+     * </pre>
+     *
+     * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+     * @return The bytes for reductionFactor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReductionFactorBytes() {
+      java.lang.Object ref = reductionFactor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reductionFactor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 6;
+    private com.osmosis.mint.v1beta1.MintProto.DistributionProportions distributionProportions_;
+    /**
+     * <pre>
+     * distribution_proportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributionProportions() {
+      return distributionProportions_ != null;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.DistributionProportions getDistributionProportions() {
+      return distributionProportions_ == null ? com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the distribution proportions of the minted
+     * denom. In other words, defines which stakeholders will receive the minted
+     * denoms and how much.
+     * </pre>
+     *
+     * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+      return distributionProportions_ == null ? com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+
+    public static final int WEIGHTED_DEVELOPER_REWARDS_RECEIVERS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.mint.v1beta1.MintProto.WeightedAddress> weightedDeveloperRewardsReceivers_;
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.mint.v1beta1.MintProto.WeightedAddress> getWeightedDeveloperRewardsReceiversList() {
+      return weightedDeveloperRewardsReceivers_;
+    }
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder> 
+        getWeightedDeveloperRewardsReceiversOrBuilderList() {
+      return weightedDeveloperRewardsReceivers_;
+    }
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getWeightedDeveloperRewardsReceiversCount() {
+      return weightedDeveloperRewardsReceivers_.size();
+    }
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.WeightedAddress getWeightedDeveloperRewardsReceivers(int index) {
+      return weightedDeveloperRewardsReceivers_.get(index);
+    }
+    /**
+     * <pre>
+     * weighted_developer_rewards_receivers is the address to receive developer
+     * rewards with weights assignedt to each address. The final amount that each
+     * address receives is: epoch_provisions *
+     * distribution_proportions.developer_rewards * Address's Weight.
+     * </pre>
+     *
+     * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+        int index) {
+      return weightedDeveloperRewardsReceivers_.get(index);
+    }
+
+    public static final int MINTING_REWARDS_DISTRIBUTION_START_EPOCH_FIELD_NUMBER = 8;
+    private long mintingRewardsDistributionStartEpoch_ = 0L;
+    /**
+     * <pre>
+     * minting_rewards_distribution_start_epoch start epoch to distribute minting
+     * rewards
+     * </pre>
+     *
+     * <code>int64 minting_rewards_distribution_start_epoch = 8 [json_name = "mintingRewardsDistributionStartEpoch", (.gogoproto.moretags) = "yaml:&#92;"minting_rewards_distribution_start_epoch&#92;""];</code>
+     * @return The mintingRewardsDistributionStartEpoch.
+     */
+    @java.lang.Override
+    public long getMintingRewardsDistributionStartEpoch() {
+      return mintingRewardsDistributionStartEpoch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisEpochProvisions_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, genesisEpochProvisions_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochIdentifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, epochIdentifier_);
+      }
+      if (reductionPeriodInEpochs_ != 0L) {
+        output.writeInt64(4, reductionPeriodInEpochs_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reductionFactor_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reductionFactor_);
+      }
+      if (distributionProportions_ != null) {
+        output.writeMessage(6, getDistributionProportions());
+      }
+      for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
+        output.writeMessage(7, weightedDeveloperRewardsReceivers_.get(i));
+      }
+      if (mintingRewardsDistributionStartEpoch_ != 0L) {
+        output.writeInt64(8, mintingRewardsDistributionStartEpoch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mintDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mintDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(genesisEpochProvisions_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, genesisEpochProvisions_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochIdentifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, epochIdentifier_);
+      }
+      if (reductionPeriodInEpochs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, reductionPeriodInEpochs_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reductionFactor_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reductionFactor_);
+      }
+      if (distributionProportions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDistributionProportions());
+      }
+      for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, weightedDeveloperRewardsReceivers_.get(i));
+      }
+      if (mintingRewardsDistributionStartEpoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, mintingRewardsDistributionStartEpoch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.mint.v1beta1.MintProto.Params)) {
+        return super.equals(obj);
+      }
+      com.osmosis.mint.v1beta1.MintProto.Params other = (com.osmosis.mint.v1beta1.MintProto.Params) obj;
+
+      if (!getMintDenom()
+          .equals(other.getMintDenom())) return false;
+      if (!getGenesisEpochProvisions()
+          .equals(other.getGenesisEpochProvisions())) return false;
+      if (!getEpochIdentifier()
+          .equals(other.getEpochIdentifier())) return false;
+      if (getReductionPeriodInEpochs()
+          != other.getReductionPeriodInEpochs()) return false;
+      if (!getReductionFactor()
+          .equals(other.getReductionFactor())) return false;
+      if (hasDistributionProportions() != other.hasDistributionProportions()) return false;
+      if (hasDistributionProportions()) {
+        if (!getDistributionProportions()
+            .equals(other.getDistributionProportions())) return false;
+      }
+      if (!getWeightedDeveloperRewardsReceiversList()
+          .equals(other.getWeightedDeveloperRewardsReceiversList())) return false;
+      if (getMintingRewardsDistributionStartEpoch()
+          != other.getMintingRewardsDistributionStartEpoch()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINT_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getMintDenom().hashCode();
+      hash = (37 * hash) + GENESIS_EPOCH_PROVISIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getGenesisEpochProvisions().hashCode();
+      hash = (37 * hash) + EPOCH_IDENTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getEpochIdentifier().hashCode();
+      hash = (37 * hash) + REDUCTION_PERIOD_IN_EPOCHS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getReductionPeriodInEpochs());
+      hash = (37 * hash) + REDUCTION_FACTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getReductionFactor().hashCode();
+      if (hasDistributionProportions()) {
+        hash = (37 * hash) + DISTRIBUTION_PROPORTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributionProportions().hashCode();
+      }
+      if (getWeightedDeveloperRewardsReceiversCount() > 0) {
+        hash = (37 * hash) + WEIGHTED_DEVELOPER_REWARDS_RECEIVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getWeightedDeveloperRewardsReceiversList().hashCode();
+      }
+      hash = (37 * hash) + MINTING_REWARDS_DISTRIBUTION_START_EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMintingRewardsDistributionStartEpoch());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.mint.v1beta1.MintProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.mint.v1beta1.MintProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params holds parameters for the x/mint module.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.mint.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.mint.v1beta1.Params)
+        com.osmosis.mint.v1beta1.MintProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.mint.v1beta1.MintProto.Params.class, com.osmosis.mint.v1beta1.MintProto.Params.Builder.class);
+      }
+
+      // Construct using com.osmosis.mint.v1beta1.MintProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        mintDenom_ = "";
+        genesisEpochProvisions_ = "";
+        epochIdentifier_ = "";
+        reductionPeriodInEpochs_ = 0L;
+        reductionFactor_ = "";
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+        } else {
+          weightedDeveloperRewardsReceivers_ = null;
+          weightedDeveloperRewardsReceiversBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        mintingRewardsDistributionStartEpoch_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.mint.v1beta1.MintProto.internal_static_osmosis_mint_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.Params getDefaultInstanceForType() {
+        return com.osmosis.mint.v1beta1.MintProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.Params build() {
+        com.osmosis.mint.v1beta1.MintProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.mint.v1beta1.MintProto.Params buildPartial() {
+        com.osmosis.mint.v1beta1.MintProto.Params result = new com.osmosis.mint.v1beta1.MintProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.mint.v1beta1.MintProto.Params result) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            weightedDeveloperRewardsReceivers_ = java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.weightedDeveloperRewardsReceivers_ = weightedDeveloperRewardsReceivers_;
+        } else {
+          result.weightedDeveloperRewardsReceivers_ = weightedDeveloperRewardsReceiversBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.mint.v1beta1.MintProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.mintDenom_ = mintDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.genesisEpochProvisions_ = genesisEpochProvisions_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.epochIdentifier_ = epochIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.reductionPeriodInEpochs_ = reductionPeriodInEpochs_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.reductionFactor_ = reductionFactor_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.distributionProportions_ = distributionProportionsBuilder_ == null
+              ? distributionProportions_
+              : distributionProportionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.mintingRewardsDistributionStartEpoch_ = mintingRewardsDistributionStartEpoch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.mint.v1beta1.MintProto.Params) {
+          return mergeFrom((com.osmosis.mint.v1beta1.MintProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.mint.v1beta1.MintProto.Params other) {
+        if (other == com.osmosis.mint.v1beta1.MintProto.Params.getDefaultInstance()) return this;
+        if (!other.getMintDenom().isEmpty()) {
+          mintDenom_ = other.mintDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getGenesisEpochProvisions().isEmpty()) {
+          genesisEpochProvisions_ = other.genesisEpochProvisions_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getEpochIdentifier().isEmpty()) {
+          epochIdentifier_ = other.epochIdentifier_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getReductionPeriodInEpochs() != 0L) {
+          setReductionPeriodInEpochs(other.getReductionPeriodInEpochs());
+        }
+        if (!other.getReductionFactor().isEmpty()) {
+          reductionFactor_ = other.reductionFactor_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasDistributionProportions()) {
+          mergeDistributionProportions(other.getDistributionProportions());
+        }
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (!other.weightedDeveloperRewardsReceivers_.isEmpty()) {
+            if (weightedDeveloperRewardsReceivers_.isEmpty()) {
+              weightedDeveloperRewardsReceivers_ = other.weightedDeveloperRewardsReceivers_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureWeightedDeveloperRewardsReceiversIsMutable();
+              weightedDeveloperRewardsReceivers_.addAll(other.weightedDeveloperRewardsReceivers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.weightedDeveloperRewardsReceivers_.isEmpty()) {
+            if (weightedDeveloperRewardsReceiversBuilder_.isEmpty()) {
+              weightedDeveloperRewardsReceiversBuilder_.dispose();
+              weightedDeveloperRewardsReceiversBuilder_ = null;
+              weightedDeveloperRewardsReceivers_ = other.weightedDeveloperRewardsReceivers_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              weightedDeveloperRewardsReceiversBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWeightedDeveloperRewardsReceiversFieldBuilder() : null;
+            } else {
+              weightedDeveloperRewardsReceiversBuilder_.addAllMessages(other.weightedDeveloperRewardsReceivers_);
+            }
+          }
+        }
+        if (other.getMintingRewardsDistributionStartEpoch() != 0L) {
+          setMintingRewardsDistributionStartEpoch(other.getMintingRewardsDistributionStartEpoch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                mintDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                genesisEpochProvisions_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                epochIdentifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                reductionPeriodInEpochs_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                reductionFactor_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDistributionProportionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                com.osmosis.mint.v1beta1.MintProto.WeightedAddress m =
+                    input.readMessage(
+                        com.osmosis.mint.v1beta1.MintProto.WeightedAddress.parser(),
+                        extensionRegistry);
+                if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+                  ensureWeightedDeveloperRewardsReceiversIsMutable();
+                  weightedDeveloperRewardsReceivers_.add(m);
+                } else {
+                  weightedDeveloperRewardsReceiversBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              case 64: {
+                mintingRewardsDistributionStartEpoch_ = input.readInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mintDenom_ = "";
+      /**
+       * <pre>
+       * mint_denom is the denom of the coin to mint.
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The mintDenom.
+       */
+      public java.lang.String getMintDenom() {
+        java.lang.Object ref = mintDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mintDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_denom is the denom of the coin to mint.
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return The bytes for mintDenom.
+       */
+      public com.google.protobuf.ByteString
+          getMintDenomBytes() {
+        java.lang.Object ref = mintDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mintDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * mint_denom is the denom of the coin to mint.
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_denom is the denom of the coin to mint.
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintDenom() {
+        mintDenom_ = getDefaultInstance().getMintDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * mint_denom is the denom of the coin to mint.
+       * </pre>
+       *
+       * <code>string mint_denom = 1 [json_name = "mintDenom"];</code>
+       * @param value The bytes for mintDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        mintDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object genesisEpochProvisions_ = "";
+      /**
+       * <pre>
+       * genesis_epoch_provisions epoch provisions from the first epoch.
+       * </pre>
+       *
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * @return The genesisEpochProvisions.
+       */
+      public java.lang.String getGenesisEpochProvisions() {
+        java.lang.Object ref = genesisEpochProvisions_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          genesisEpochProvisions_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * genesis_epoch_provisions epoch provisions from the first epoch.
+       * </pre>
+       *
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * @return The bytes for genesisEpochProvisions.
+       */
+      public com.google.protobuf.ByteString
+          getGenesisEpochProvisionsBytes() {
+        java.lang.Object ref = genesisEpochProvisions_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          genesisEpochProvisions_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * genesis_epoch_provisions epoch provisions from the first epoch.
+       * </pre>
+       *
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * @param value The genesisEpochProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisEpochProvisions(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        genesisEpochProvisions_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * genesis_epoch_provisions epoch provisions from the first epoch.
+       * </pre>
+       *
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGenesisEpochProvisions() {
+        genesisEpochProvisions_ = getDefaultInstance().getGenesisEpochProvisions();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * genesis_epoch_provisions epoch provisions from the first epoch.
+       * </pre>
+       *
+       * <code>string genesis_epoch_provisions = 2 [json_name = "genesisEpochProvisions", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"genesis_epoch_provisions&#92;""];</code>
+       * @param value The bytes for genesisEpochProvisions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGenesisEpochProvisionsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        genesisEpochProvisions_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object epochIdentifier_ = "";
+      /**
+       * <pre>
+       * epoch_identifier mint epoch identifier e.g. (day, week).
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+       * @return The epochIdentifier.
+       */
+      public java.lang.String getEpochIdentifier() {
+        java.lang.Object ref = epochIdentifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          epochIdentifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_identifier mint epoch identifier e.g. (day, week).
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+       * @return The bytes for epochIdentifier.
+       */
+      public com.google.protobuf.ByteString
+          getEpochIdentifierBytes() {
+        java.lang.Object ref = epochIdentifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          epochIdentifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_identifier mint epoch identifier e.g. (day, week).
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+       * @param value The epochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochIdentifier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        epochIdentifier_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_identifier mint epoch identifier e.g. (day, week).
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochIdentifier() {
+        epochIdentifier_ = getDefaultInstance().getEpochIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_identifier mint epoch identifier e.g. (day, week).
+       * </pre>
+       *
+       * <code>string epoch_identifier = 3 [json_name = "epochIdentifier", (.gogoproto.moretags) = "yaml:&#92;"epoch_identifier&#92;""];</code>
+       * @param value The bytes for epochIdentifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochIdentifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        epochIdentifier_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private long reductionPeriodInEpochs_ ;
+      /**
+       * <pre>
+       * reduction_period_in_epochs the number of epochs it takes
+       * to reduce the rewards.
+       * </pre>
+       *
+       * <code>int64 reduction_period_in_epochs = 4 [json_name = "reductionPeriodInEpochs", (.gogoproto.moretags) = "yaml:&#92;"reduction_period_in_epochs&#92;""];</code>
+       * @return The reductionPeriodInEpochs.
+       */
+      @java.lang.Override
+      public long getReductionPeriodInEpochs() {
+        return reductionPeriodInEpochs_;
+      }
+      /**
+       * <pre>
+       * reduction_period_in_epochs the number of epochs it takes
+       * to reduce the rewards.
+       * </pre>
+       *
+       * <code>int64 reduction_period_in_epochs = 4 [json_name = "reductionPeriodInEpochs", (.gogoproto.moretags) = "yaml:&#92;"reduction_period_in_epochs&#92;""];</code>
+       * @param value The reductionPeriodInEpochs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionPeriodInEpochs(long value) {
+
+        reductionPeriodInEpochs_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduction_period_in_epochs the number of epochs it takes
+       * to reduce the rewards.
+       * </pre>
+       *
+       * <code>int64 reduction_period_in_epochs = 4 [json_name = "reductionPeriodInEpochs", (.gogoproto.moretags) = "yaml:&#92;"reduction_period_in_epochs&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReductionPeriodInEpochs() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        reductionPeriodInEpochs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reductionFactor_ = "";
+      /**
+       * <pre>
+       * reduction_factor is the reduction multiplier to execute
+       * at the end of each period set by reduction_period_in_epochs.
+       * </pre>
+       *
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * @return The reductionFactor.
+       */
+      public java.lang.String getReductionFactor() {
+        java.lang.Object ref = reductionFactor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reductionFactor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reduction_factor is the reduction multiplier to execute
+       * at the end of each period set by reduction_period_in_epochs.
+       * </pre>
+       *
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * @return The bytes for reductionFactor.
+       */
+      public com.google.protobuf.ByteString
+          getReductionFactorBytes() {
+        java.lang.Object ref = reductionFactor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reductionFactor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reduction_factor is the reduction multiplier to execute
+       * at the end of each period set by reduction_period_in_epochs.
+       * </pre>
+       *
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * @param value The reductionFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionFactor(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        reductionFactor_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduction_factor is the reduction multiplier to execute
+       * at the end of each period set by reduction_period_in_epochs.
+       * </pre>
+       *
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReductionFactor() {
+        reductionFactor_ = getDefaultInstance().getReductionFactor();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reduction_factor is the reduction multiplier to execute
+       * at the end of each period set by reduction_period_in_epochs.
+       * </pre>
+       *
+       * <code>string reduction_factor = 5 [json_name = "reductionFactor", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"reduction_factor&#92;""];</code>
+       * @param value The bytes for reductionFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionFactorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        reductionFactor_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.osmosis.mint.v1beta1.MintProto.DistributionProportions distributionProportions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.mint.v1beta1.MintProto.DistributionProportions, com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder, com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder> distributionProportionsBuilder_;
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributionProportions field is set.
+       */
+      public boolean hasDistributionProportions() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return The distributionProportions.
+       */
+      public com.osmosis.mint.v1beta1.MintProto.DistributionProportions getDistributionProportions() {
+        if (distributionProportionsBuilder_ == null) {
+          return distributionProportions_ == null ? com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        } else {
+          return distributionProportionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(com.osmosis.mint.v1beta1.MintProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributionProportions_ = value;
+        } else {
+          distributionProportionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(
+          com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder builderForValue) {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportions_ = builderForValue.build();
+        } else {
+          distributionProportionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributionProportions(com.osmosis.mint.v1beta1.MintProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            distributionProportions_ != null &&
+            distributionProportions_ != com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance()) {
+            getDistributionProportionsBuilder().mergeFrom(value);
+          } else {
+            distributionProportions_ = value;
+          }
+        } else {
+          distributionProportionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributionProportions() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder getDistributionProportionsBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDistributionProportionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+        if (distributionProportionsBuilder_ != null) {
+          return distributionProportionsBuilder_.getMessageOrBuilder();
+        } else {
+          return distributionProportions_ == null ?
+              com.osmosis.mint.v1beta1.MintProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the distribution proportions of the minted
+       * denom. In other words, defines which stakeholders will receive the minted
+       * denoms and how much.
+       * </pre>
+       *
+       * <code>.osmosis.mint.v1beta1.DistributionProportions distribution_proportions = 6 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.osmosis.mint.v1beta1.MintProto.DistributionProportions, com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder, com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder> 
+          getDistributionProportionsFieldBuilder() {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.osmosis.mint.v1beta1.MintProto.DistributionProportions, com.osmosis.mint.v1beta1.MintProto.DistributionProportions.Builder, com.osmosis.mint.v1beta1.MintProto.DistributionProportionsOrBuilder>(
+                  getDistributionProportions(),
+                  getParentForChildren(),
+                  isClean());
+          distributionProportions_ = null;
+        }
+        return distributionProportionsBuilder_;
+      }
+
+      private java.util.List<com.osmosis.mint.v1beta1.MintProto.WeightedAddress> weightedDeveloperRewardsReceivers_ =
+        java.util.Collections.emptyList();
+      private void ensureWeightedDeveloperRewardsReceiversIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          weightedDeveloperRewardsReceivers_ = new java.util.ArrayList<com.osmosis.mint.v1beta1.MintProto.WeightedAddress>(weightedDeveloperRewardsReceivers_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.mint.v1beta1.MintProto.WeightedAddress, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder, com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder> weightedDeveloperRewardsReceiversBuilder_;
+
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.mint.v1beta1.MintProto.WeightedAddress> getWeightedDeveloperRewardsReceiversList() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public int getWeightedDeveloperRewardsReceiversCount() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.size();
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress getWeightedDeveloperRewardsReceivers(int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.get(index);
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder setWeightedDeveloperRewardsReceivers(
+          int index, com.osmosis.mint.v1beta1.MintProto.WeightedAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.set(index, value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder setWeightedDeveloperRewardsReceivers(
+          int index, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(com.osmosis.mint.v1beta1.MintProto.WeightedAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          int index, com.osmosis.mint.v1beta1.MintProto.WeightedAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(index, value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          int index, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addAllWeightedDeveloperRewardsReceivers(
+          java.lang.Iterable<? extends com.osmosis.mint.v1beta1.MintProto.WeightedAddress> values) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, weightedDeveloperRewardsReceivers_);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder clearWeightedDeveloperRewardsReceivers() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder removeWeightedDeveloperRewardsReceivers(int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.remove(index);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder getWeightedDeveloperRewardsReceiversBuilder(
+          int index) {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+          int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.get(index);  } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder> 
+           getWeightedDeveloperRewardsReceiversOrBuilderList() {
+        if (weightedDeveloperRewardsReceiversBuilder_ != null) {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+        }
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder addWeightedDeveloperRewardsReceiversBuilder() {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().addBuilder(
+            com.osmosis.mint.v1beta1.MintProto.WeightedAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder addWeightedDeveloperRewardsReceiversBuilder(
+          int index) {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().addBuilder(
+            index, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * weighted_developer_rewards_receivers is the address to receive developer
+       * rewards with weights assignedt to each address. The final amount that each
+       * address receives is: epoch_provisions *
+       * distribution_proportions.developer_rewards * Address's Weight.
+       * </pre>
+       *
+       * <code>repeated .osmosis.mint.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 7 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder> 
+           getWeightedDeveloperRewardsReceiversBuilderList() {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.mint.v1beta1.MintProto.WeightedAddress, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder, com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder> 
+          getWeightedDeveloperRewardsReceiversFieldBuilder() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceiversBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.mint.v1beta1.MintProto.WeightedAddress, com.osmosis.mint.v1beta1.MintProto.WeightedAddress.Builder, com.osmosis.mint.v1beta1.MintProto.WeightedAddressOrBuilder>(
+                  weightedDeveloperRewardsReceivers_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          weightedDeveloperRewardsReceivers_ = null;
+        }
+        return weightedDeveloperRewardsReceiversBuilder_;
+      }
+
+      private long mintingRewardsDistributionStartEpoch_ ;
+      /**
+       * <pre>
+       * minting_rewards_distribution_start_epoch start epoch to distribute minting
+       * rewards
+       * </pre>
+       *
+       * <code>int64 minting_rewards_distribution_start_epoch = 8 [json_name = "mintingRewardsDistributionStartEpoch", (.gogoproto.moretags) = "yaml:&#92;"minting_rewards_distribution_start_epoch&#92;""];</code>
+       * @return The mintingRewardsDistributionStartEpoch.
+       */
+      @java.lang.Override
+      public long getMintingRewardsDistributionStartEpoch() {
+        return mintingRewardsDistributionStartEpoch_;
+      }
+      /**
+       * <pre>
+       * minting_rewards_distribution_start_epoch start epoch to distribute minting
+       * rewards
+       * </pre>
+       *
+       * <code>int64 minting_rewards_distribution_start_epoch = 8 [json_name = "mintingRewardsDistributionStartEpoch", (.gogoproto.moretags) = "yaml:&#92;"minting_rewards_distribution_start_epoch&#92;""];</code>
+       * @param value The mintingRewardsDistributionStartEpoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintingRewardsDistributionStartEpoch(long value) {
+
+        mintingRewardsDistributionStartEpoch_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minting_rewards_distribution_start_epoch start epoch to distribute minting
+       * rewards
+       * </pre>
+       *
+       * <code>int64 minting_rewards_distribution_start_epoch = 8 [json_name = "mintingRewardsDistributionStartEpoch", (.gogoproto.moretags) = "yaml:&#92;"minting_rewards_distribution_start_epoch&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintingRewardsDistributionStartEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        mintingRewardsDistributionStartEpoch_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.mint.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.mint.v1beta1.Params)
+    private static final com.osmosis.mint.v1beta1.MintProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.mint.v1beta1.MintProto.Params();
+    }
+
+    public static com.osmosis.mint.v1beta1.MintProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.mint.v1beta1.MintProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_mint_v1beta1_Minter_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_mint_v1beta1_Minter_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_mint_v1beta1_WeightedAddress_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_mint_v1beta1_WeightedAddress_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_mint_v1beta1_DistributionProportions_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_mint_v1beta1_DistributionProportions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_mint_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_mint_v1beta1_Params_fieldAccessorTable;
 
@@ -88,12 +4797,12 @@ public final class MintProto {
       "ng_rewards_distribution_start_epoch\030\010 \001(" +
       "\003B3\362\336\037/yaml:\"minting_rewards_distributio" +
       "n_start_epoch\"R$mintingRewardsDistributi" +
-      "onStartEpoch:\004\230\240\037\000B\311\001\n\030com.osmosis.mint." +
-      "v1beta1B\tMintProtoP\001Z0github.com/osmosis" +
-      "-labs/osmosis/v15/x/mint/types\242\002\003OMX\252\002\024O" +
-      "smosis.Mint.V1beta1\312\002\024Osmosis\\Mint\\V1bet" +
-      "a1\342\002 Osmosis\\Mint\\V1beta1\\GPBMetadata\352\002\026" +
-      "Osmosis::Mint::V1beta1b\006proto3"
+      "onStartEpoch:\004\230\240\037\000B\307\001\n\030com.osmosis.mint." +
+      "v1beta1B\tMintProtoZ0github.com/osmosis-l" +
+      "abs/osmosis/v15/x/mint/types\242\002\003OMX\252\002\024Osm" +
+      "osis.Mint.V1beta1\312\002\024Osmosis\\Mint\\V1beta1" +
+      "\342\002 Osmosis\\Mint\\V1beta1\\GPBMetadata\352\002\026Os" +
+      "mosis::Mint::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,24 +14,3035 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgConvertCoinOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.MsgConvertCoin)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Cosmos coin which denomination is registered in a token pair. The coin
+     * amount defines the amount of coins to convert.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    boolean hasCoin();
+    /**
+     * <pre>
+     * Cosmos coin which denomination is registered in a token pair. The coin
+     * amount defines the amount of coins to convert.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCoin();
+    /**
+     * <pre>
+     * Cosmos coin which denomination is registered in a token pair. The coin
+     * amount defines the amount of coins to convert.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder();
+
+    /**
+     * <pre>
+     * recipient hex address to receive ERC20 token
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    java.lang.String getReceiver();
+    /**
+     * <pre>
+     * recipient hex address to receive ERC20 token
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    com.google.protobuf.ByteString
+        getReceiverBytes();
+
+    /**
+     * <pre>
+     * cosmos bech32 address from the owner of the given Cosmos coins
+     * </pre>
+     *
+     * <code>string sender = 3 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * cosmos bech32 address from the owner of the given Cosmos coins
+     * </pre>
+     *
+     * <code>string sender = 3 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgConvertCoin defines a Msg to convert a native Cosmos coin to a ERC20 token
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.MsgConvertCoin}
+   */
+  public static final class MsgConvertCoin extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.MsgConvertCoin)
+      MsgConvertCoinOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgConvertCoin.newBuilder() to construct.
+    private MsgConvertCoin(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgConvertCoin() {
+      receiver_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgConvertCoin();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoin_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoin_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.TxProto.MsgConvertCoin.class, com.canto.erc20.v1.TxProto.MsgConvertCoin.Builder.class);
+    }
+
+    public static final int COIN_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+    /**
+     * <pre>
+     * Cosmos coin which denomination is registered in a token pair. The coin
+     * amount defines the amount of coins to convert.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return Whether the coin field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoin() {
+      return coin_ != null;
+    }
+    /**
+     * <pre>
+     * Cosmos coin which denomination is registered in a token pair. The coin
+     * amount defines the amount of coins to convert.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+    /**
+     * <pre>
+     * Cosmos coin which denomination is registered in a token pair. The coin
+     * amount defines the amount of coins to convert.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+      return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+    }
+
+    public static final int RECEIVER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiver_ = "";
+    /**
+     * <pre>
+     * recipient hex address to receive ERC20 token
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiver() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * recipient hex address to receive ERC20 token
+     * </pre>
+     *
+     * <code>string receiver = 2 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverBytes() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * cosmos bech32 address from the owner of the given Cosmos coins
+     * </pre>
+     *
+     * <code>string sender = 3 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * cosmos bech32 address from the owner of the given Cosmos coins
+     * </pre>
+     *
+     * <code>string sender = 3 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (coin_ != null) {
+        output.writeMessage(1, getCoin());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (coin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCoin());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.TxProto.MsgConvertCoin)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.TxProto.MsgConvertCoin other = (com.canto.erc20.v1.TxProto.MsgConvertCoin) obj;
+
+      if (hasCoin() != other.hasCoin()) return false;
+      if (hasCoin()) {
+        if (!getCoin()
+            .equals(other.getCoin())) return false;
+      }
+      if (!getReceiver()
+          .equals(other.getReceiver())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCoin()) {
+        hash = (37 * hash) + COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCoin().hashCode();
+      }
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiver().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.TxProto.MsgConvertCoin prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgConvertCoin defines a Msg to convert a native Cosmos coin to a ERC20 token
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.MsgConvertCoin}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.MsgConvertCoin)
+        com.canto.erc20.v1.TxProto.MsgConvertCoinOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoin_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoin_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.TxProto.MsgConvertCoin.class, com.canto.erc20.v1.TxProto.MsgConvertCoin.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.TxProto.MsgConvertCoin.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        receiver_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoin_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertCoin getDefaultInstanceForType() {
+        return com.canto.erc20.v1.TxProto.MsgConvertCoin.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertCoin build() {
+        com.canto.erc20.v1.TxProto.MsgConvertCoin result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertCoin buildPartial() {
+        com.canto.erc20.v1.TxProto.MsgConvertCoin result = new com.canto.erc20.v1.TxProto.MsgConvertCoin(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.TxProto.MsgConvertCoin result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.coin_ = coinBuilder_ == null
+              ? coin_
+              : coinBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.receiver_ = receiver_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.TxProto.MsgConvertCoin) {
+          return mergeFrom((com.canto.erc20.v1.TxProto.MsgConvertCoin)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.TxProto.MsgConvertCoin other) {
+        if (other == com.canto.erc20.v1.TxProto.MsgConvertCoin.getDefaultInstance()) return this;
+        if (other.hasCoin()) {
+          mergeCoin(other.getCoin());
+        }
+        if (!other.getReceiver().isEmpty()) {
+          receiver_ = other.receiver_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                receiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin coin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> coinBuilder_;
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return Whether the coin field is set.
+       */
+      public boolean hasCoin() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       * @return The coin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCoin() {
+        if (coinBuilder_ == null) {
+          return coin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        } else {
+          return coinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coin_ = value;
+        } else {
+          coinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (coinBuilder_ == null) {
+          coin_ = builderForValue.build();
+        } else {
+          coinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (coinBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            coin_ != null &&
+            coin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getCoinBuilder().mergeFrom(value);
+          } else {
+            coin_ = value;
+          }
+        } else {
+          coinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCoin() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        coin_ = null;
+        if (coinBuilder_ != null) {
+          coinBuilder_.dispose();
+          coinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getCoinBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getCoinOrBuilder() {
+        if (coinBuilder_ != null) {
+          return coinBuilder_.getMessageOrBuilder();
+        } else {
+          return coin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : coin_;
+        }
+      }
+      /**
+       * <pre>
+       * Cosmos coin which denomination is registered in a token pair. The coin
+       * amount defines the amount of coins to convert.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin coin = 1 [json_name = "coin", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getCoinFieldBuilder() {
+        if (coinBuilder_ == null) {
+          coinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getCoin(),
+                  getParentForChildren(),
+                  isClean());
+          coin_ = null;
+        }
+        return coinBuilder_;
+      }
+
+      private java.lang.Object receiver_ = "";
+      /**
+       * <pre>
+       * recipient hex address to receive ERC20 token
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return The receiver.
+       */
+      public java.lang.String getReceiver() {
+        java.lang.Object ref = receiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient hex address to receive ERC20 token
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return The bytes for receiver.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverBytes() {
+        java.lang.Object ref = receiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * recipient hex address to receive ERC20 token
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @param value The receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient hex address to receive ERC20 token
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiver() {
+        receiver_ = getDefaultInstance().getReceiver();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * recipient hex address to receive ERC20 token
+       * </pre>
+       *
+       * <code>string receiver = 2 [json_name = "receiver"];</code>
+       * @param value The bytes for receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiver_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * cosmos bech32 address from the owner of the given Cosmos coins
+       * </pre>
+       *
+       * <code>string sender = 3 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cosmos bech32 address from the owner of the given Cosmos coins
+       * </pre>
+       *
+       * <code>string sender = 3 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cosmos bech32 address from the owner of the given Cosmos coins
+       * </pre>
+       *
+       * <code>string sender = 3 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cosmos bech32 address from the owner of the given Cosmos coins
+       * </pre>
+       *
+       * <code>string sender = 3 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cosmos bech32 address from the owner of the given Cosmos coins
+       * </pre>
+       *
+       * <code>string sender = 3 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.MsgConvertCoin)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.MsgConvertCoin)
+    private static final com.canto.erc20.v1.TxProto.MsgConvertCoin DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.TxProto.MsgConvertCoin();
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoin getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgConvertCoin>
+        PARSER = new com.google.protobuf.AbstractParser<MsgConvertCoin>() {
+      @java.lang.Override
+      public MsgConvertCoin parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgConvertCoin> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgConvertCoin> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.TxProto.MsgConvertCoin getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgConvertCoinResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.MsgConvertCoinResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgConvertCoinResponse returns no fields
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.MsgConvertCoinResponse}
+   */
+  public static final class MsgConvertCoinResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.MsgConvertCoinResponse)
+      MsgConvertCoinResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgConvertCoinResponse.newBuilder() to construct.
+    private MsgConvertCoinResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgConvertCoinResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgConvertCoinResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoinResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoinResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.class, com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.TxProto.MsgConvertCoinResponse)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.TxProto.MsgConvertCoinResponse other = (com.canto.erc20.v1.TxProto.MsgConvertCoinResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.TxProto.MsgConvertCoinResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgConvertCoinResponse returns no fields
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.MsgConvertCoinResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.MsgConvertCoinResponse)
+        com.canto.erc20.v1.TxProto.MsgConvertCoinResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoinResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoinResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.class, com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertCoinResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertCoinResponse getDefaultInstanceForType() {
+        return com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertCoinResponse build() {
+        com.canto.erc20.v1.TxProto.MsgConvertCoinResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertCoinResponse buildPartial() {
+        com.canto.erc20.v1.TxProto.MsgConvertCoinResponse result = new com.canto.erc20.v1.TxProto.MsgConvertCoinResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.TxProto.MsgConvertCoinResponse) {
+          return mergeFrom((com.canto.erc20.v1.TxProto.MsgConvertCoinResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.TxProto.MsgConvertCoinResponse other) {
+        if (other == com.canto.erc20.v1.TxProto.MsgConvertCoinResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.MsgConvertCoinResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.MsgConvertCoinResponse)
+    private static final com.canto.erc20.v1.TxProto.MsgConvertCoinResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.TxProto.MsgConvertCoinResponse();
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertCoinResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgConvertCoinResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgConvertCoinResponse>() {
+      @java.lang.Override
+      public MsgConvertCoinResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgConvertCoinResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgConvertCoinResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.TxProto.MsgConvertCoinResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgConvertERC20OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.MsgConvertERC20)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ERC20 token contract address registered in a token pair
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <pre>
+     * ERC20 token contract address registered in a token pair
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+
+    /**
+     * <pre>
+     * amount of ERC20 tokens to convert
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     * amount of ERC20 tokens to convert
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+
+    /**
+     * <pre>
+     * bech32 address to receive native Cosmos coins
+     * </pre>
+     *
+     * <code>string receiver = 3 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    java.lang.String getReceiver();
+    /**
+     * <pre>
+     * bech32 address to receive native Cosmos coins
+     * </pre>
+     *
+     * <code>string receiver = 3 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    com.google.protobuf.ByteString
+        getReceiverBytes();
+
+    /**
+     * <pre>
+     * sender hex address from the owner of the given ERC20 tokens
+     * </pre>
+     *
+     * <code>string sender = 4 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <pre>
+     * sender hex address from the owner of the given ERC20 tokens
+     * </pre>
+     *
+     * <code>string sender = 4 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+  }
+  /**
+   * <pre>
+   * MsgConvertERC20 defines a Msg to convert a ERC20 token to a native Cosmos
+   * coin.
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.MsgConvertERC20}
+   */
+  public static final class MsgConvertERC20 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.MsgConvertERC20)
+      MsgConvertERC20OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgConvertERC20.newBuilder() to construct.
+    private MsgConvertERC20(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgConvertERC20() {
+      contractAddress_ = "";
+      amount_ = "";
+      receiver_ = "";
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgConvertERC20();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.TxProto.MsgConvertERC20.class, com.canto.erc20.v1.TxProto.MsgConvertERC20.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <pre>
+     * ERC20 token contract address registered in a token pair
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ERC20 token contract address registered in a token pair
+     * </pre>
+     *
+     * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object amount_ = "";
+    /**
+     * <pre>
+     * amount of ERC20 tokens to convert
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        amount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * amount of ERC20 tokens to convert
+     * </pre>
+     *
+     * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiver_ = "";
+    /**
+     * <pre>
+     * bech32 address to receive native Cosmos coins
+     * </pre>
+     *
+     * <code>string receiver = 3 [json_name = "receiver"];</code>
+     * @return The receiver.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiver() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bech32 address to receive native Cosmos coins
+     * </pre>
+     *
+     * <code>string receiver = 3 [json_name = "receiver"];</code>
+     * @return The bytes for receiver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverBytes() {
+      java.lang.Object ref = receiver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <pre>
+     * sender hex address from the owner of the given ERC20 tokens
+     * </pre>
+     *
+     * <code>string sender = 4 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * sender hex address from the owner of the given ERC20 tokens
+     * </pre>
+     *
+     * <code>string sender = 4 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, receiver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sender_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, contractAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, receiver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sender_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.TxProto.MsgConvertERC20)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.TxProto.MsgConvertERC20 other = (com.canto.erc20.v1.TxProto.MsgConvertERC20) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getAmount()
+          .equals(other.getAmount())) return false;
+      if (!getReceiver()
+          .equals(other.getReceiver())) return false;
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount().hashCode();
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiver().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.TxProto.MsgConvertERC20 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgConvertERC20 defines a Msg to convert a ERC20 token to a native Cosmos
+     * coin.
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.MsgConvertERC20}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.MsgConvertERC20)
+        com.canto.erc20.v1.TxProto.MsgConvertERC20OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.TxProto.MsgConvertERC20.class, com.canto.erc20.v1.TxProto.MsgConvertERC20.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.TxProto.MsgConvertERC20.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = "";
+        amount_ = "";
+        receiver_ = "";
+        sender_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertERC20 getDefaultInstanceForType() {
+        return com.canto.erc20.v1.TxProto.MsgConvertERC20.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertERC20 build() {
+        com.canto.erc20.v1.TxProto.MsgConvertERC20 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertERC20 buildPartial() {
+        com.canto.erc20.v1.TxProto.MsgConvertERC20 result = new com.canto.erc20.v1.TxProto.MsgConvertERC20(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.erc20.v1.TxProto.MsgConvertERC20 result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.receiver_ = receiver_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sender_ = sender_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.TxProto.MsgConvertERC20) {
+          return mergeFrom((com.canto.erc20.v1.TxProto.MsgConvertERC20)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.TxProto.MsgConvertERC20 other) {
+        if (other == com.canto.erc20.v1.TxProto.MsgConvertERC20.getDefaultInstance()) return this;
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAmount().isEmpty()) {
+          amount_ = other.amount_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getReceiver().isEmpty()) {
+          receiver_ = other.receiver_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                amount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                receiver_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <pre>
+       * ERC20 token contract address registered in a token pair
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ERC20 token contract address registered in a token pair
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ERC20 token contract address registered in a token pair
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ERC20 token contract address registered in a token pair
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ERC20 token contract address registered in a token pair
+       * </pre>
+       *
+       * <code>string contract_address = 1 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       * amount of ERC20 tokens to convert
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          amount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount of ERC20 tokens to convert
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * amount of ERC20 tokens to convert
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of ERC20 tokens to convert
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        amount_ = getDefaultInstance().getAmount();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of ERC20 tokens to convert
+       * </pre>
+       *
+       * <code>string amount = 2 [json_name = "amount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiver_ = "";
+      /**
+       * <pre>
+       * bech32 address to receive native Cosmos coins
+       * </pre>
+       *
+       * <code>string receiver = 3 [json_name = "receiver"];</code>
+       * @return The receiver.
+       */
+      public java.lang.String getReceiver() {
+        java.lang.Object ref = receiver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bech32 address to receive native Cosmos coins
+       * </pre>
+       *
+       * <code>string receiver = 3 [json_name = "receiver"];</code>
+       * @return The bytes for receiver.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverBytes() {
+        java.lang.Object ref = receiver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bech32 address to receive native Cosmos coins
+       * </pre>
+       *
+       * <code>string receiver = 3 [json_name = "receiver"];</code>
+       * @param value The receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiver(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiver_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bech32 address to receive native Cosmos coins
+       * </pre>
+       *
+       * <code>string receiver = 3 [json_name = "receiver"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiver() {
+        receiver_ = getDefaultInstance().getReceiver();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bech32 address to receive native Cosmos coins
+       * </pre>
+       *
+       * <code>string receiver = 3 [json_name = "receiver"];</code>
+       * @param value The bytes for receiver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiver_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <pre>
+       * sender hex address from the owner of the given ERC20 tokens
+       * </pre>
+       *
+       * <code>string sender = 4 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender hex address from the owner of the given ERC20 tokens
+       * </pre>
+       *
+       * <code>string sender = 4 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * sender hex address from the owner of the given ERC20 tokens
+       * </pre>
+       *
+       * <code>string sender = 4 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender hex address from the owner of the given ERC20 tokens
+       * </pre>
+       *
+       * <code>string sender = 4 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sender hex address from the owner of the given ERC20 tokens
+       * </pre>
+       *
+       * <code>string sender = 4 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.MsgConvertERC20)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.MsgConvertERC20)
+    private static final com.canto.erc20.v1.TxProto.MsgConvertERC20 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.TxProto.MsgConvertERC20();
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgConvertERC20>
+        PARSER = new com.google.protobuf.AbstractParser<MsgConvertERC20>() {
+      @java.lang.Override
+      public MsgConvertERC20 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgConvertERC20> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgConvertERC20> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.TxProto.MsgConvertERC20 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgConvertERC20ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.erc20.v1.MsgConvertERC20Response)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgConvertERC20Response returns no fields
+   * </pre>
+   *
+   * Protobuf type {@code canto.erc20.v1.MsgConvertERC20Response}
+   */
+  public static final class MsgConvertERC20Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.erc20.v1.MsgConvertERC20Response)
+      MsgConvertERC20ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgConvertERC20Response.newBuilder() to construct.
+    private MsgConvertERC20Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgConvertERC20Response() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgConvertERC20Response();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.erc20.v1.TxProto.MsgConvertERC20Response.class, com.canto.erc20.v1.TxProto.MsgConvertERC20Response.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.erc20.v1.TxProto.MsgConvertERC20Response)) {
+        return super.equals(obj);
+      }
+      com.canto.erc20.v1.TxProto.MsgConvertERC20Response other = (com.canto.erc20.v1.TxProto.MsgConvertERC20Response) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.erc20.v1.TxProto.MsgConvertERC20Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgConvertERC20Response returns no fields
+     * </pre>
+     *
+     * Protobuf type {@code canto.erc20.v1.MsgConvertERC20Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.erc20.v1.MsgConvertERC20Response)
+        com.canto.erc20.v1.TxProto.MsgConvertERC20ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.erc20.v1.TxProto.MsgConvertERC20Response.class, com.canto.erc20.v1.TxProto.MsgConvertERC20Response.Builder.class);
+      }
+
+      // Construct using com.canto.erc20.v1.TxProto.MsgConvertERC20Response.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.erc20.v1.TxProto.internal_static_canto_erc20_v1_MsgConvertERC20Response_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertERC20Response getDefaultInstanceForType() {
+        return com.canto.erc20.v1.TxProto.MsgConvertERC20Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertERC20Response build() {
+        com.canto.erc20.v1.TxProto.MsgConvertERC20Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.erc20.v1.TxProto.MsgConvertERC20Response buildPartial() {
+        com.canto.erc20.v1.TxProto.MsgConvertERC20Response result = new com.canto.erc20.v1.TxProto.MsgConvertERC20Response(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.erc20.v1.TxProto.MsgConvertERC20Response) {
+          return mergeFrom((com.canto.erc20.v1.TxProto.MsgConvertERC20Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.erc20.v1.TxProto.MsgConvertERC20Response other) {
+        if (other == com.canto.erc20.v1.TxProto.MsgConvertERC20Response.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.erc20.v1.MsgConvertERC20Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.erc20.v1.MsgConvertERC20Response)
+    private static final com.canto.erc20.v1.TxProto.MsgConvertERC20Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.erc20.v1.TxProto.MsgConvertERC20Response();
+    }
+
+    public static com.canto.erc20.v1.TxProto.MsgConvertERC20Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgConvertERC20Response>
+        PARSER = new com.google.protobuf.AbstractParser<MsgConvertERC20Response>() {
+      @java.lang.Override
+      public MsgConvertERC20Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgConvertERC20Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgConvertERC20Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.erc20.v1.TxProto.MsgConvertERC20Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_MsgConvertCoin_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_MsgConvertCoin_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_MsgConvertCoinResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_MsgConvertCoinResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_MsgConvertERC20_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_MsgConvertERC20_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_erc20_v1_MsgConvertERC20Response_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_erc20_v1_MsgConvertERC20Response_fieldAccessorTable;
 
@@ -61,12 +3072,12 @@ public final class TxProto {
       "erc20/v1/tx/convert_coin\022\202\001\n\014ConvertERC2" +
       "0\022\037.canto.erc20.v1.MsgConvertERC20\032\'.can" +
       "to.erc20.v1.MsgConvertERC20Response\"(\202\323\344" +
-      "\223\002\"\022 /canto/erc20/v1/tx/convert_erc20B\250\001" +
-      "\n\022com.canto.erc20.v1B\007TxProtoP\001Z/github." +
-      "com/Canto-Network/Canto/v6/x/erc20/types" +
-      "\242\002\003CEX\252\002\016Canto.Erc20.V1\312\002\016Canto\\Erc20\\V1" +
-      "\342\002\032Canto\\Erc20\\V1\\GPBMetadata\352\002\020Canto::E" +
-      "rc20::V1b\006proto3"
+      "\223\002\"\022 /canto/erc20/v1/tx/convert_erc20B\246\001" +
+      "\n\022com.canto.erc20.v1B\007TxProtoZ/github.co" +
+      "m/Canto-Network/Canto/v6/x/erc20/types\242\002" +
+      "\003CEX\252\002\016Canto.Erc20.V1\312\002\016Canto\\Erc20\\V1\342\002" +
+      "\032Canto\\Erc20\\V1\\GPBMetadata\352\002\020Canto::Erc" +
+      "20::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

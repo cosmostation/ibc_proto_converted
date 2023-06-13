@@ -14,54 +14,7527 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryTopicRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryTopicRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+  }
+  /**
+   * <pre>
+   * QueryTopicRequest is the request type for the Query/Topic RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryTopicRequest}
+   */
+  public static final class QueryTopicRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryTopicRequest)
+      QueryTopicRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTopicRequest.newBuilder() to construct.
+    private QueryTopicRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTopicRequest() {
+      ownerAddress_ = "";
+      topicName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTopicRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryTopicRequest.class, com.panacea.aol.v2.QueryProto.QueryTopicRequest.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryTopicRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryTopicRequest other = (com.panacea.aol.v2.QueryProto.QueryTopicRequest) obj;
+
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryTopicRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTopicRequest is the request type for the Query/Topic RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryTopicRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryTopicRequest)
+        com.panacea.aol.v2.QueryProto.QueryTopicRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryTopicRequest.class, com.panacea.aol.v2.QueryProto.QueryTopicRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryTopicRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddress_ = "";
+        topicName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicRequest getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryTopicRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicRequest build() {
+        com.panacea.aol.v2.QueryProto.QueryTopicRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicRequest buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryTopicRequest result = new com.panacea.aol.v2.QueryProto.QueryTopicRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryTopicRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.topicName_ = topicName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryTopicRequest) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryTopicRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryTopicRequest other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryTopicRequest.getDefaultInstance()) return this;
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryTopicRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryTopicRequest)
+    private static final com.panacea.aol.v2.QueryProto.QueryTopicRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryTopicRequest();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTopicRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTopicRequest>() {
+      @java.lang.Override
+      public QueryTopicRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTopicRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTopicRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryTopicRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTopicResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryTopicResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+     * @return Whether the topic field is set.
+     */
+    boolean hasTopic();
+    /**
+     * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+     * @return The topic.
+     */
+    com.panacea.aol.v2.TopicProto.Topic getTopic();
+    /**
+     * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+     */
+    com.panacea.aol.v2.TopicProto.TopicOrBuilder getTopicOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTopicResponse is the response type for the Query/Topic RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryTopicResponse}
+   */
+  public static final class QueryTopicResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryTopicResponse)
+      QueryTopicResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTopicResponse.newBuilder() to construct.
+    private QueryTopicResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTopicResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTopicResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryTopicResponse.class, com.panacea.aol.v2.QueryProto.QueryTopicResponse.Builder.class);
+    }
+
+    public static final int TOPIC_FIELD_NUMBER = 1;
+    private com.panacea.aol.v2.TopicProto.Topic topic_;
+    /**
+     * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+     * @return Whether the topic field is set.
+     */
+    @java.lang.Override
+    public boolean hasTopic() {
+      return topic_ != null;
+    }
+    /**
+     * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+     * @return The topic.
+     */
+    @java.lang.Override
+    public com.panacea.aol.v2.TopicProto.Topic getTopic() {
+      return topic_ == null ? com.panacea.aol.v2.TopicProto.Topic.getDefaultInstance() : topic_;
+    }
+    /**
+     * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.aol.v2.TopicProto.TopicOrBuilder getTopicOrBuilder() {
+      return topic_ == null ? com.panacea.aol.v2.TopicProto.Topic.getDefaultInstance() : topic_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (topic_ != null) {
+        output.writeMessage(1, getTopic());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (topic_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTopic());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryTopicResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryTopicResponse other = (com.panacea.aol.v2.QueryProto.QueryTopicResponse) obj;
+
+      if (hasTopic() != other.hasTopic()) return false;
+      if (hasTopic()) {
+        if (!getTopic()
+            .equals(other.getTopic())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTopic()) {
+        hash = (37 * hash) + TOPIC_FIELD_NUMBER;
+        hash = (53 * hash) + getTopic().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryTopicResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTopicResponse is the response type for the Query/Topic RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryTopicResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryTopicResponse)
+        com.panacea.aol.v2.QueryProto.QueryTopicResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryTopicResponse.class, com.panacea.aol.v2.QueryProto.QueryTopicResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryTopicResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        topic_ = null;
+        if (topicBuilder_ != null) {
+          topicBuilder_.dispose();
+          topicBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryTopicResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicResponse build() {
+        com.panacea.aol.v2.QueryProto.QueryTopicResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicResponse buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryTopicResponse result = new com.panacea.aol.v2.QueryProto.QueryTopicResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryTopicResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.topic_ = topicBuilder_ == null
+              ? topic_
+              : topicBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryTopicResponse) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryTopicResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryTopicResponse other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryTopicResponse.getDefaultInstance()) return this;
+        if (other.hasTopic()) {
+          mergeTopic(other.getTopic());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTopicFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.aol.v2.TopicProto.Topic topic_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.aol.v2.TopicProto.Topic, com.panacea.aol.v2.TopicProto.Topic.Builder, com.panacea.aol.v2.TopicProto.TopicOrBuilder> topicBuilder_;
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       * @return Whether the topic field is set.
+       */
+      public boolean hasTopic() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       * @return The topic.
+       */
+      public com.panacea.aol.v2.TopicProto.Topic getTopic() {
+        if (topicBuilder_ == null) {
+          return topic_ == null ? com.panacea.aol.v2.TopicProto.Topic.getDefaultInstance() : topic_;
+        } else {
+          return topicBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      public Builder setTopic(com.panacea.aol.v2.TopicProto.Topic value) {
+        if (topicBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          topic_ = value;
+        } else {
+          topicBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      public Builder setTopic(
+          com.panacea.aol.v2.TopicProto.Topic.Builder builderForValue) {
+        if (topicBuilder_ == null) {
+          topic_ = builderForValue.build();
+        } else {
+          topicBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      public Builder mergeTopic(com.panacea.aol.v2.TopicProto.Topic value) {
+        if (topicBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            topic_ != null &&
+            topic_ != com.panacea.aol.v2.TopicProto.Topic.getDefaultInstance()) {
+            getTopicBuilder().mergeFrom(value);
+          } else {
+            topic_ = value;
+          }
+        } else {
+          topicBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      public Builder clearTopic() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        topic_ = null;
+        if (topicBuilder_ != null) {
+          topicBuilder_.dispose();
+          topicBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      public com.panacea.aol.v2.TopicProto.Topic.Builder getTopicBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTopicFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      public com.panacea.aol.v2.TopicProto.TopicOrBuilder getTopicOrBuilder() {
+        if (topicBuilder_ != null) {
+          return topicBuilder_.getMessageOrBuilder();
+        } else {
+          return topic_ == null ?
+              com.panacea.aol.v2.TopicProto.Topic.getDefaultInstance() : topic_;
+        }
+      }
+      /**
+       * <code>.panacea.aol.v2.Topic topic = 1 [json_name = "topic"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.aol.v2.TopicProto.Topic, com.panacea.aol.v2.TopicProto.Topic.Builder, com.panacea.aol.v2.TopicProto.TopicOrBuilder> 
+          getTopicFieldBuilder() {
+        if (topicBuilder_ == null) {
+          topicBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.aol.v2.TopicProto.Topic, com.panacea.aol.v2.TopicProto.Topic.Builder, com.panacea.aol.v2.TopicProto.TopicOrBuilder>(
+                  getTopic(),
+                  getParentForChildren(),
+                  isClean());
+          topic_ = null;
+        }
+        return topicBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryTopicResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryTopicResponse)
+    private static final com.panacea.aol.v2.QueryProto.QueryTopicResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryTopicResponse();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTopicResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTopicResponse>() {
+      @java.lang.Override
+      public QueryTopicResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTopicResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTopicResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryTopicResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTopicsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryTopicsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTopicsRequest is the request type for the Query/Topics RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryTopicsRequest}
+   */
+  public static final class QueryTopicsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryTopicsRequest)
+      QueryTopicsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTopicsRequest.newBuilder() to construct.
+    private QueryTopicsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTopicsRequest() {
+      ownerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTopicsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryTopicsRequest.class, com.panacea.aol.v2.QueryProto.QueryTopicsRequest.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ownerAddress_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ownerAddress_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryTopicsRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryTopicsRequest other = (com.panacea.aol.v2.QueryProto.QueryTopicsRequest) obj;
+
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryTopicsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTopicsRequest is the request type for the Query/Topics RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryTopicsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryTopicsRequest)
+        com.panacea.aol.v2.QueryProto.QueryTopicsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryTopicsRequest.class, com.panacea.aol.v2.QueryProto.QueryTopicsRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryTopicsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddress_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicsRequest getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryTopicsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicsRequest build() {
+        com.panacea.aol.v2.QueryProto.QueryTopicsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicsRequest buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryTopicsRequest result = new com.panacea.aol.v2.QueryProto.QueryTopicsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryTopicsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryTopicsRequest) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryTopicsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryTopicsRequest other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryTopicsRequest.getDefaultInstance()) return this;
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryTopicsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryTopicsRequest)
+    private static final com.panacea.aol.v2.QueryProto.QueryTopicsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryTopicsRequest();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTopicsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTopicsRequest>() {
+      @java.lang.Override
+      public QueryTopicsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTopicsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTopicsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryTopicsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTopicsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryTopicsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @return A list containing the topicNames.
+     */
+    java.util.List<java.lang.String>
+        getTopicNamesList();
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @return The count of topicNames.
+     */
+    int getTopicNamesCount();
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @param index The index of the element to return.
+     * @return The topicNames at the given index.
+     */
+    java.lang.String getTopicNames(int index);
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the topicNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTopicNamesBytes(int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTopicsResponse is the response type for the Query/Topics RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryTopicsResponse}
+   */
+  public static final class QueryTopicsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryTopicsResponse)
+      QueryTopicsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTopicsResponse.newBuilder() to construct.
+    private QueryTopicsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTopicsResponse() {
+      topicNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTopicsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryTopicsResponse.class, com.panacea.aol.v2.QueryProto.QueryTopicsResponse.Builder.class);
+    }
+
+    public static final int TOPIC_NAMES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList topicNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @return A list containing the topicNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTopicNamesList() {
+      return topicNames_;
+    }
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @return The count of topicNames.
+     */
+    public int getTopicNamesCount() {
+      return topicNames_.size();
+    }
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @param index The index of the element to return.
+     * @return The topicNames at the given index.
+     */
+    public java.lang.String getTopicNames(int index) {
+      return topicNames_.get(index);
+    }
+    /**
+     * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the topicNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTopicNamesBytes(int index) {
+      return topicNames_.getByteString(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < topicNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, topicNames_.getRaw(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < topicNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(topicNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTopicNamesList().size();
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryTopicsResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryTopicsResponse other = (com.panacea.aol.v2.QueryProto.QueryTopicsResponse) obj;
+
+      if (!getTopicNamesList()
+          .equals(other.getTopicNamesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTopicNamesCount() > 0) {
+        hash = (37 * hash) + TOPIC_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getTopicNamesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryTopicsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTopicsResponse is the response type for the Query/Topics RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryTopicsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryTopicsResponse)
+        com.panacea.aol.v2.QueryProto.QueryTopicsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryTopicsResponse.class, com.panacea.aol.v2.QueryProto.QueryTopicsResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryTopicsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        topicNames_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryTopicsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicsResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryTopicsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicsResponse build() {
+        com.panacea.aol.v2.QueryProto.QueryTopicsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryTopicsResponse buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryTopicsResponse result = new com.panacea.aol.v2.QueryProto.QueryTopicsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryTopicsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          topicNames_.makeImmutable();
+          result.topicNames_ = topicNames_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryTopicsResponse) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryTopicsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryTopicsResponse other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryTopicsResponse.getDefaultInstance()) return this;
+        if (!other.topicNames_.isEmpty()) {
+          if (topicNames_.isEmpty()) {
+            topicNames_ = other.topicNames_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureTopicNamesIsMutable();
+            topicNames_.addAll(other.topicNames_);
+          }
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTopicNamesIsMutable();
+                topicNames_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList topicNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTopicNamesIsMutable() {
+        if (!topicNames_.isModifiable()) {
+          topicNames_ = new com.google.protobuf.LazyStringArrayList(topicNames_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @return A list containing the topicNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTopicNamesList() {
+        topicNames_.makeImmutable();
+        return topicNames_;
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @return The count of topicNames.
+       */
+      public int getTopicNamesCount() {
+        return topicNames_.size();
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @param index The index of the element to return.
+       * @return The topicNames at the given index.
+       */
+      public java.lang.String getTopicNames(int index) {
+        return topicNames_.get(index);
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the topicNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNamesBytes(int index) {
+        return topicNames_.getByteString(index);
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @param index The index to set the value at.
+       * @param value The topicNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNames(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTopicNamesIsMutable();
+        topicNames_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @param value The topicNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTopicNames(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTopicNamesIsMutable();
+        topicNames_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @param values The topicNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTopicNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTopicNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, topicNames_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicNames() {
+        topicNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string topic_names = 1 [json_name = "topicNames"];</code>
+       * @param value The bytes of the topicNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTopicNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureTopicNamesIsMutable();
+        topicNames_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryTopicsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryTopicsResponse)
+    private static final com.panacea.aol.v2.QueryProto.QueryTopicsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryTopicsResponse();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryTopicsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTopicsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTopicsResponse>() {
+      @java.lang.Override
+      public QueryTopicsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTopicsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTopicsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryTopicsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWriterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryWriterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    java.lang.String getWriterAddress();
+    /**
+     * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    com.google.protobuf.ByteString
+        getWriterAddressBytes();
+  }
+  /**
+   * <pre>
+   * QueryWriterRequest is the request type for the Query/Writer RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryWriterRequest}
+   */
+  public static final class QueryWriterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryWriterRequest)
+      QueryWriterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWriterRequest.newBuilder() to construct.
+    private QueryWriterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWriterRequest() {
+      ownerAddress_ = "";
+      topicName_ = "";
+      writerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWriterRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryWriterRequest.class, com.panacea.aol.v2.QueryProto.QueryWriterRequest.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WRITER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object writerAddress_ = "";
+    /**
+     * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+     * @return The writerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getWriterAddress() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        writerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+     * @return The bytes for writerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWriterAddressBytes() {
+      java.lang.Object ref = writerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        writerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, writerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(writerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, writerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryWriterRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryWriterRequest other = (com.panacea.aol.v2.QueryProto.QueryWriterRequest) obj;
+
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (!getWriterAddress()
+          .equals(other.getWriterAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + WRITER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getWriterAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryWriterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryWriterRequest is the request type for the Query/Writer RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryWriterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryWriterRequest)
+        com.panacea.aol.v2.QueryProto.QueryWriterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryWriterRequest.class, com.panacea.aol.v2.QueryProto.QueryWriterRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryWriterRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddress_ = "";
+        topicName_ = "";
+        writerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWriterRequest getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryWriterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWriterRequest build() {
+        com.panacea.aol.v2.QueryProto.QueryWriterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWriterRequest buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryWriterRequest result = new com.panacea.aol.v2.QueryProto.QueryWriterRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryWriterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.writerAddress_ = writerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryWriterRequest) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryWriterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryWriterRequest other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryWriterRequest.getDefaultInstance()) return this;
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getWriterAddress().isEmpty()) {
+          writerAddress_ = other.writerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                writerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object writerAddress_ = "";
+      /**
+       * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+       * @return The writerAddress.
+       */
+      public java.lang.String getWriterAddress() {
+        java.lang.Object ref = writerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          writerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+       * @return The bytes for writerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getWriterAddressBytes() {
+        java.lang.Object ref = writerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          writerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+       * @param value The writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        writerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWriterAddress() {
+        writerAddress_ = getDefaultInstance().getWriterAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string writer_address = 3 [json_name = "writerAddress"];</code>
+       * @param value The bytes for writerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        writerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryWriterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryWriterRequest)
+    private static final com.panacea.aol.v2.QueryProto.QueryWriterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryWriterRequest();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWriterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWriterRequest>() {
+      @java.lang.Override
+      public QueryWriterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWriterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWriterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryWriterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWriterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryWriterResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+     * @return Whether the writer field is set.
+     */
+    boolean hasWriter();
+    /**
+     * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+     * @return The writer.
+     */
+    com.panacea.aol.v2.WriterProto.Writer getWriter();
+    /**
+     * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+     */
+    com.panacea.aol.v2.WriterProto.WriterOrBuilder getWriterOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryWriterResponse is the response type for the Query/Writer RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryWriterResponse}
+   */
+  public static final class QueryWriterResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryWriterResponse)
+      QueryWriterResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWriterResponse.newBuilder() to construct.
+    private QueryWriterResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWriterResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWriterResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryWriterResponse.class, com.panacea.aol.v2.QueryProto.QueryWriterResponse.Builder.class);
+    }
+
+    public static final int WRITER_FIELD_NUMBER = 1;
+    private com.panacea.aol.v2.WriterProto.Writer writer_;
+    /**
+     * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+     * @return Whether the writer field is set.
+     */
+    @java.lang.Override
+    public boolean hasWriter() {
+      return writer_ != null;
+    }
+    /**
+     * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+     * @return The writer.
+     */
+    @java.lang.Override
+    public com.panacea.aol.v2.WriterProto.Writer getWriter() {
+      return writer_ == null ? com.panacea.aol.v2.WriterProto.Writer.getDefaultInstance() : writer_;
+    }
+    /**
+     * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.aol.v2.WriterProto.WriterOrBuilder getWriterOrBuilder() {
+      return writer_ == null ? com.panacea.aol.v2.WriterProto.Writer.getDefaultInstance() : writer_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (writer_ != null) {
+        output.writeMessage(1, getWriter());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (writer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getWriter());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryWriterResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryWriterResponse other = (com.panacea.aol.v2.QueryProto.QueryWriterResponse) obj;
+
+      if (hasWriter() != other.hasWriter()) return false;
+      if (hasWriter()) {
+        if (!getWriter()
+            .equals(other.getWriter())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWriter()) {
+        hash = (37 * hash) + WRITER_FIELD_NUMBER;
+        hash = (53 * hash) + getWriter().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryWriterResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryWriterResponse is the response type for the Query/Writer RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryWriterResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryWriterResponse)
+        com.panacea.aol.v2.QueryProto.QueryWriterResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryWriterResponse.class, com.panacea.aol.v2.QueryProto.QueryWriterResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryWriterResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        writer_ = null;
+        if (writerBuilder_ != null) {
+          writerBuilder_.dispose();
+          writerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWriterResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWriterResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryWriterResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWriterResponse build() {
+        com.panacea.aol.v2.QueryProto.QueryWriterResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWriterResponse buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryWriterResponse result = new com.panacea.aol.v2.QueryProto.QueryWriterResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryWriterResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.writer_ = writerBuilder_ == null
+              ? writer_
+              : writerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryWriterResponse) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryWriterResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryWriterResponse other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryWriterResponse.getDefaultInstance()) return this;
+        if (other.hasWriter()) {
+          mergeWriter(other.getWriter());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getWriterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.aol.v2.WriterProto.Writer writer_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.aol.v2.WriterProto.Writer, com.panacea.aol.v2.WriterProto.Writer.Builder, com.panacea.aol.v2.WriterProto.WriterOrBuilder> writerBuilder_;
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       * @return Whether the writer field is set.
+       */
+      public boolean hasWriter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       * @return The writer.
+       */
+      public com.panacea.aol.v2.WriterProto.Writer getWriter() {
+        if (writerBuilder_ == null) {
+          return writer_ == null ? com.panacea.aol.v2.WriterProto.Writer.getDefaultInstance() : writer_;
+        } else {
+          return writerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      public Builder setWriter(com.panacea.aol.v2.WriterProto.Writer value) {
+        if (writerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          writer_ = value;
+        } else {
+          writerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      public Builder setWriter(
+          com.panacea.aol.v2.WriterProto.Writer.Builder builderForValue) {
+        if (writerBuilder_ == null) {
+          writer_ = builderForValue.build();
+        } else {
+          writerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      public Builder mergeWriter(com.panacea.aol.v2.WriterProto.Writer value) {
+        if (writerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            writer_ != null &&
+            writer_ != com.panacea.aol.v2.WriterProto.Writer.getDefaultInstance()) {
+            getWriterBuilder().mergeFrom(value);
+          } else {
+            writer_ = value;
+          }
+        } else {
+          writerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      public Builder clearWriter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        writer_ = null;
+        if (writerBuilder_ != null) {
+          writerBuilder_.dispose();
+          writerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      public com.panacea.aol.v2.WriterProto.Writer.Builder getWriterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getWriterFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      public com.panacea.aol.v2.WriterProto.WriterOrBuilder getWriterOrBuilder() {
+        if (writerBuilder_ != null) {
+          return writerBuilder_.getMessageOrBuilder();
+        } else {
+          return writer_ == null ?
+              com.panacea.aol.v2.WriterProto.Writer.getDefaultInstance() : writer_;
+        }
+      }
+      /**
+       * <code>.panacea.aol.v2.Writer writer = 1 [json_name = "writer"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.aol.v2.WriterProto.Writer, com.panacea.aol.v2.WriterProto.Writer.Builder, com.panacea.aol.v2.WriterProto.WriterOrBuilder> 
+          getWriterFieldBuilder() {
+        if (writerBuilder_ == null) {
+          writerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.aol.v2.WriterProto.Writer, com.panacea.aol.v2.WriterProto.Writer.Builder, com.panacea.aol.v2.WriterProto.WriterOrBuilder>(
+                  getWriter(),
+                  getParentForChildren(),
+                  isClean());
+          writer_ = null;
+        }
+        return writerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryWriterResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryWriterResponse)
+    private static final com.panacea.aol.v2.QueryProto.QueryWriterResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryWriterResponse();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWriterResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWriterResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWriterResponse>() {
+      @java.lang.Override
+      public QueryWriterResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWriterResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWriterResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryWriterResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWritersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryWritersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryWritersRequest is the request type for the Query/Writers RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryWritersRequest}
+   */
+  public static final class QueryWritersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryWritersRequest)
+      QueryWritersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWritersRequest.newBuilder() to construct.
+    private QueryWritersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWritersRequest() {
+      ownerAddress_ = "";
+      topicName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWritersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryWritersRequest.class, com.panacea.aol.v2.QueryProto.QueryWritersRequest.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicName_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicName_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryWritersRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryWritersRequest other = (com.panacea.aol.v2.QueryProto.QueryWritersRequest) obj;
+
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryWritersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryWritersRequest is the request type for the Query/Writers RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryWritersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryWritersRequest)
+        com.panacea.aol.v2.QueryProto.QueryWritersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryWritersRequest.class, com.panacea.aol.v2.QueryProto.QueryWritersRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryWritersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddress_ = "";
+        topicName_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWritersRequest getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryWritersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWritersRequest build() {
+        com.panacea.aol.v2.QueryProto.QueryWritersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWritersRequest buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryWritersRequest result = new com.panacea.aol.v2.QueryProto.QueryWritersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryWritersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryWritersRequest) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryWritersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryWritersRequest other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryWritersRequest.getDefaultInstance()) return this;
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryWritersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryWritersRequest)
+    private static final com.panacea.aol.v2.QueryProto.QueryWritersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryWritersRequest();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWritersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWritersRequest>() {
+      @java.lang.Override
+      public QueryWritersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWritersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWritersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryWritersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryWritersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryWritersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @return A list containing the writerAddresses.
+     */
+    java.util.List<java.lang.String>
+        getWriterAddressesList();
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @return The count of writerAddresses.
+     */
+    int getWriterAddressesCount();
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The writerAddresses at the given index.
+     */
+    java.lang.String getWriterAddresses(int index);
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the writerAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getWriterAddressesBytes(int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryWritersResponse is the response type for the Query/Writers RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryWritersResponse}
+   */
+  public static final class QueryWritersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryWritersResponse)
+      QueryWritersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryWritersResponse.newBuilder() to construct.
+    private QueryWritersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryWritersResponse() {
+      writerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryWritersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryWritersResponse.class, com.panacea.aol.v2.QueryProto.QueryWritersResponse.Builder.class);
+    }
+
+    public static final int WRITER_ADDRESSES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList writerAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @return A list containing the writerAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getWriterAddressesList() {
+      return writerAddresses_;
+    }
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @return The count of writerAddresses.
+     */
+    public int getWriterAddressesCount() {
+      return writerAddresses_.size();
+    }
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @param index The index of the element to return.
+     * @return The writerAddresses at the given index.
+     */
+    public java.lang.String getWriterAddresses(int index) {
+      return writerAddresses_.get(index);
+    }
+    /**
+     * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the writerAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getWriterAddressesBytes(int index) {
+      return writerAddresses_.getByteString(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < writerAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, writerAddresses_.getRaw(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < writerAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(writerAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getWriterAddressesList().size();
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryWritersResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryWritersResponse other = (com.panacea.aol.v2.QueryProto.QueryWritersResponse) obj;
+
+      if (!getWriterAddressesList()
+          .equals(other.getWriterAddressesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getWriterAddressesCount() > 0) {
+        hash = (37 * hash) + WRITER_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getWriterAddressesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryWritersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryWritersResponse is the response type for the Query/Writers RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryWritersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryWritersResponse)
+        com.panacea.aol.v2.QueryProto.QueryWritersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryWritersResponse.class, com.panacea.aol.v2.QueryProto.QueryWritersResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryWritersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        writerAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryWritersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWritersResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryWritersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWritersResponse build() {
+        com.panacea.aol.v2.QueryProto.QueryWritersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryWritersResponse buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryWritersResponse result = new com.panacea.aol.v2.QueryProto.QueryWritersResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryWritersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          writerAddresses_.makeImmutable();
+          result.writerAddresses_ = writerAddresses_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryWritersResponse) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryWritersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryWritersResponse other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryWritersResponse.getDefaultInstance()) return this;
+        if (!other.writerAddresses_.isEmpty()) {
+          if (writerAddresses_.isEmpty()) {
+            writerAddresses_ = other.writerAddresses_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureWriterAddressesIsMutable();
+            writerAddresses_.addAll(other.writerAddresses_);
+          }
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureWriterAddressesIsMutable();
+                writerAddresses_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList writerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureWriterAddressesIsMutable() {
+        if (!writerAddresses_.isModifiable()) {
+          writerAddresses_ = new com.google.protobuf.LazyStringArrayList(writerAddresses_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @return A list containing the writerAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getWriterAddressesList() {
+        writerAddresses_.makeImmutable();
+        return writerAddresses_;
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @return The count of writerAddresses.
+       */
+      public int getWriterAddressesCount() {
+        return writerAddresses_.size();
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @param index The index of the element to return.
+       * @return The writerAddresses at the given index.
+       */
+      public java.lang.String getWriterAddresses(int index) {
+        return writerAddresses_.get(index);
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the writerAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getWriterAddressesBytes(int index) {
+        return writerAddresses_.getByteString(index);
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @param index The index to set the value at.
+       * @param value The writerAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWriterAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureWriterAddressesIsMutable();
+        writerAddresses_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @param value The writerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addWriterAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureWriterAddressesIsMutable();
+        writerAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @param values The writerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllWriterAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureWriterAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, writerAddresses_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWriterAddresses() {
+        writerAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string writer_addresses = 1 [json_name = "writerAddresses"];</code>
+       * @param value The bytes of the writerAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addWriterAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureWriterAddressesIsMutable();
+        writerAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryWritersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryWritersResponse)
+    private static final com.panacea.aol.v2.QueryProto.QueryWritersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryWritersResponse();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryWritersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryWritersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryWritersResponse>() {
+      @java.lang.Override
+      public QueryWritersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryWritersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryWritersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryWritersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRecordRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryRecordRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    java.lang.String getOwnerAddress();
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    com.google.protobuf.ByteString
+        getOwnerAddressBytes();
+
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    java.lang.String getTopicName();
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    com.google.protobuf.ByteString
+        getTopicNameBytes();
+
+    /**
+     * <code>uint64 offset = 3 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    long getOffset();
+  }
+  /**
+   * <pre>
+   * QueryRecordRequest is the request type for the Query/Record RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryRecordRequest}
+   */
+  public static final class QueryRecordRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryRecordRequest)
+      QueryRecordRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRecordRequest.newBuilder() to construct.
+    private QueryRecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRecordRequest() {
+      ownerAddress_ = "";
+      topicName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRecordRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryRecordRequest.class, com.panacea.aol.v2.QueryProto.QueryRecordRequest.Builder.class);
+    }
+
+    public static final int OWNER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerAddress_ = "";
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The ownerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOwnerAddress() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ownerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+     * @return The bytes for ownerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOwnerAddressBytes() {
+      java.lang.Object ref = ownerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ownerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOPIC_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object topicName_ = "";
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The topicName.
+     */
+    @java.lang.Override
+    public java.lang.String getTopicName() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        topicName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string topic_name = 2 [json_name = "topicName"];</code>
+     * @return The bytes for topicName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTopicNameBytes() {
+      java.lang.Object ref = topicName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        topicName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 3;
+    private long offset_ = 0L;
+    /**
+     * <code>uint64 offset = 3 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public long getOffset() {
+      return offset_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, topicName_);
+      }
+      if (offset_ != 0L) {
+        output.writeUInt64(3, offset_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ownerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(topicName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, topicName_);
+      }
+      if (offset_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, offset_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryRecordRequest)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryRecordRequest other = (com.panacea.aol.v2.QueryProto.QueryRecordRequest) obj;
+
+      if (!getOwnerAddress()
+          .equals(other.getOwnerAddress())) return false;
+      if (!getTopicName()
+          .equals(other.getTopicName())) return false;
+      if (getOffset()
+          != other.getOffset()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOwnerAddress().hashCode();
+      hash = (37 * hash) + TOPIC_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTopicName().hashCode();
+      hash = (37 * hash) + OFFSET_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOffset());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryRecordRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRecordRequest is the request type for the Query/Record RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryRecordRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryRecordRequest)
+        com.panacea.aol.v2.QueryProto.QueryRecordRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryRecordRequest.class, com.panacea.aol.v2.QueryProto.QueryRecordRequest.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryRecordRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        ownerAddress_ = "";
+        topicName_ = "";
+        offset_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryRecordRequest getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryRecordRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryRecordRequest build() {
+        com.panacea.aol.v2.QueryProto.QueryRecordRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryRecordRequest buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryRecordRequest result = new com.panacea.aol.v2.QueryProto.QueryRecordRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryRecordRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ownerAddress_ = ownerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.topicName_ = topicName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.offset_ = offset_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryRecordRequest) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryRecordRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryRecordRequest other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryRecordRequest.getDefaultInstance()) return this;
+        if (!other.getOwnerAddress().isEmpty()) {
+          ownerAddress_ = other.ownerAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTopicName().isEmpty()) {
+          topicName_ = other.topicName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getOffset() != 0L) {
+          setOffset(other.getOffset());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ownerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                topicName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                offset_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ownerAddress_ = "";
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The ownerAddress.
+       */
+      public java.lang.String getOwnerAddress() {
+        java.lang.Object ref = ownerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ownerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return The bytes for ownerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOwnerAddressBytes() {
+        java.lang.Object ref = ownerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ownerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwnerAddress() {
+        ownerAddress_ = getDefaultInstance().getOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string owner_address = 1 [json_name = "ownerAddress"];</code>
+       * @param value The bytes for ownerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ownerAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object topicName_ = "";
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The topicName.
+       */
+      public java.lang.String getTopicName() {
+        java.lang.Object ref = topicName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          topicName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return The bytes for topicName.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNameBytes() {
+        java.lang.Object ref = topicName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          topicName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicName() {
+        topicName_ = getDefaultInstance().getTopicName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string topic_name = 2 [json_name = "topicName"];</code>
+       * @param value The bytes for topicName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        topicName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long offset_ ;
+      /**
+       * <code>uint64 offset = 3 [json_name = "offset"];</code>
+       * @return The offset.
+       */
+      @java.lang.Override
+      public long getOffset() {
+        return offset_;
+      }
+      /**
+       * <code>uint64 offset = 3 [json_name = "offset"];</code>
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffset(long value) {
+
+        offset_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 offset = 3 [json_name = "offset"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffset() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        offset_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryRecordRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryRecordRequest)
+    private static final com.panacea.aol.v2.QueryProto.QueryRecordRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryRecordRequest();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRecordRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRecordRequest>() {
+      @java.lang.Override
+      public QueryRecordRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRecordRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRecordRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryRecordRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRecordResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.aol.v2.QueryRecordResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+     * @return Whether the record field is set.
+     */
+    boolean hasRecord();
+    /**
+     * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+     * @return The record.
+     */
+    com.panacea.aol.v2.RecordProto.Record getRecord();
+    /**
+     * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+     */
+    com.panacea.aol.v2.RecordProto.RecordOrBuilder getRecordOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRecordResponse is the response type for the Query/Record RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.aol.v2.QueryRecordResponse}
+   */
+  public static final class QueryRecordResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.aol.v2.QueryRecordResponse)
+      QueryRecordResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRecordResponse.newBuilder() to construct.
+    private QueryRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRecordResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRecordResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.aol.v2.QueryProto.QueryRecordResponse.class, com.panacea.aol.v2.QueryProto.QueryRecordResponse.Builder.class);
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 1;
+    private com.panacea.aol.v2.RecordProto.Record record_;
+    /**
+     * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+     * @return Whether the record field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecord() {
+      return record_ != null;
+    }
+    /**
+     * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.panacea.aol.v2.RecordProto.Record getRecord() {
+      return record_ == null ? com.panacea.aol.v2.RecordProto.Record.getDefaultInstance() : record_;
+    }
+    /**
+     * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.aol.v2.RecordProto.RecordOrBuilder getRecordOrBuilder() {
+      return record_ == null ? com.panacea.aol.v2.RecordProto.Record.getDefaultInstance() : record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (record_ != null) {
+        output.writeMessage(1, getRecord());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (record_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRecord());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.aol.v2.QueryProto.QueryRecordResponse)) {
+        return super.equals(obj);
+      }
+      com.panacea.aol.v2.QueryProto.QueryRecordResponse other = (com.panacea.aol.v2.QueryProto.QueryRecordResponse) obj;
+
+      if (hasRecord() != other.hasRecord()) return false;
+      if (hasRecord()) {
+        if (!getRecord()
+            .equals(other.getRecord())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecord()) {
+        hash = (37 * hash) + RECORD_FIELD_NUMBER;
+        hash = (53 * hash) + getRecord().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.aol.v2.QueryProto.QueryRecordResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRecordResponse is the response type for the Query/Record RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.aol.v2.QueryRecordResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.aol.v2.QueryRecordResponse)
+        com.panacea.aol.v2.QueryProto.QueryRecordResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.aol.v2.QueryProto.QueryRecordResponse.class, com.panacea.aol.v2.QueryProto.QueryRecordResponse.Builder.class);
+      }
+
+      // Construct using com.panacea.aol.v2.QueryProto.QueryRecordResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.aol.v2.QueryProto.internal_static_panacea_aol_v2_QueryRecordResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryRecordResponse getDefaultInstanceForType() {
+        return com.panacea.aol.v2.QueryProto.QueryRecordResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryRecordResponse build() {
+        com.panacea.aol.v2.QueryProto.QueryRecordResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.aol.v2.QueryProto.QueryRecordResponse buildPartial() {
+        com.panacea.aol.v2.QueryProto.QueryRecordResponse result = new com.panacea.aol.v2.QueryProto.QueryRecordResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.aol.v2.QueryProto.QueryRecordResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.record_ = recordBuilder_ == null
+              ? record_
+              : recordBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.aol.v2.QueryProto.QueryRecordResponse) {
+          return mergeFrom((com.panacea.aol.v2.QueryProto.QueryRecordResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.aol.v2.QueryProto.QueryRecordResponse other) {
+        if (other == com.panacea.aol.v2.QueryProto.QueryRecordResponse.getDefaultInstance()) return this;
+        if (other.hasRecord()) {
+          mergeRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.aol.v2.RecordProto.Record record_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.aol.v2.RecordProto.Record, com.panacea.aol.v2.RecordProto.Record.Builder, com.panacea.aol.v2.RecordProto.RecordOrBuilder> recordBuilder_;
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       * @return Whether the record field is set.
+       */
+      public boolean hasRecord() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       * @return The record.
+       */
+      public com.panacea.aol.v2.RecordProto.Record getRecord() {
+        if (recordBuilder_ == null) {
+          return record_ == null ? com.panacea.aol.v2.RecordProto.Record.getDefaultInstance() : record_;
+        } else {
+          return recordBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder setRecord(com.panacea.aol.v2.RecordProto.Record value) {
+        if (recordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          record_ = value;
+        } else {
+          recordBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder setRecord(
+          com.panacea.aol.v2.RecordProto.Record.Builder builderForValue) {
+        if (recordBuilder_ == null) {
+          record_ = builderForValue.build();
+        } else {
+          recordBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder mergeRecord(com.panacea.aol.v2.RecordProto.Record value) {
+        if (recordBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            record_ != null &&
+            record_ != com.panacea.aol.v2.RecordProto.Record.getDefaultInstance()) {
+            getRecordBuilder().mergeFrom(value);
+          } else {
+            record_ = value;
+          }
+        } else {
+          recordBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        record_ = null;
+        if (recordBuilder_ != null) {
+          recordBuilder_.dispose();
+          recordBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      public com.panacea.aol.v2.RecordProto.Record.Builder getRecordBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      public com.panacea.aol.v2.RecordProto.RecordOrBuilder getRecordOrBuilder() {
+        if (recordBuilder_ != null) {
+          return recordBuilder_.getMessageOrBuilder();
+        } else {
+          return record_ == null ?
+              com.panacea.aol.v2.RecordProto.Record.getDefaultInstance() : record_;
+        }
+      }
+      /**
+       * <code>.panacea.aol.v2.Record record = 1 [json_name = "record"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.aol.v2.RecordProto.Record, com.panacea.aol.v2.RecordProto.Record.Builder, com.panacea.aol.v2.RecordProto.RecordOrBuilder> 
+          getRecordFieldBuilder() {
+        if (recordBuilder_ == null) {
+          recordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.aol.v2.RecordProto.Record, com.panacea.aol.v2.RecordProto.Record.Builder, com.panacea.aol.v2.RecordProto.RecordOrBuilder>(
+                  getRecord(),
+                  getParentForChildren(),
+                  isClean());
+          record_ = null;
+        }
+        return recordBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.aol.v2.QueryRecordResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.aol.v2.QueryRecordResponse)
+    private static final com.panacea.aol.v2.QueryProto.QueryRecordResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.aol.v2.QueryProto.QueryRecordResponse();
+    }
+
+    public static com.panacea.aol.v2.QueryProto.QueryRecordResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRecordResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRecordResponse>() {
+      @java.lang.Override
+      public QueryRecordResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRecordResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRecordResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.aol.v2.QueryProto.QueryRecordResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryTopicRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryTopicRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryTopicResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryTopicResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryTopicsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryTopicsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryTopicsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryTopicsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryWriterRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryWriterRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryWriterResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryWriterResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryWritersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryWritersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryWritersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryWritersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryRecordRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryRecordRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_aol_v2_QueryRecordResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_aol_v2_QueryRecordResponse_fieldAccessorTable;
 
@@ -127,7 +7600,7 @@ public final class QueryProto {
       "2.QueryRecordResponse\"S\202\323\344\223\002M\022K/panacea/" +
       "aol/v2/owners/{owner_address}/topics/{to" +
       "pic_name}/records/{offset}B\253\001\n\022com.panac" +
-      "ea.aol.v2B\nQueryProtoP\001Z/github.com/medi" +
+      "ea.aol.v2B\nQueryProtoP\000Z/github.com/medi" +
       "bloc/panacea-core/v2/x/aol/types\242\002\003PAX\252\002" +
       "\016Panacea.Aol.V2\312\002\016Panacea\\Aol\\V2\342\002\032Panac" +
       "ea\\Aol\\V2\\GPBMetadata\352\002\020Panacea::Aol::V2" +

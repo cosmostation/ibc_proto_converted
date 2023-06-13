@@ -75,13 +75,13 @@ public final class ServiceProto {
       "a1.PendingIBCTransferCountRequest\0329.axel" +
       "ar.axelarnet.v1beta1.PendingIBCTransferC" +
       "ountResponse\"4\202\323\344\223\002.\022,/axelar/axelarnet/" +
-      "v1beta1/ibc_transfer_countB\352\001\n\034com.axela" +
-      "r.axelarnet.v1beta1B\014ServiceProtoP\001Z6git" +
-      "hub.com/axelarnetwork/axelar-core/x/axel" +
-      "arnet/types\242\002\003AAX\252\002\030Axelar.Axelarnet.V1b" +
-      "eta1\312\002\030Axelar\\Axelarnet\\V1beta1\342\002$Axelar" +
-      "\\Axelarnet\\V1beta1\\GPBMetadata\352\002\032Axelar:" +
-      ":Axelarnet::V1beta1\300\343\036\001b\006proto3"
+      "v1beta1/ibc_transfer_countB\350\001\n\034com.axela" +
+      "r.axelarnet.v1beta1B\014ServiceProtoZ6githu" +
+      "b.com/axelarnetwork/axelar-core/x/axelar" +
+      "net/types\242\002\003AAX\252\002\030Axelar.Axelarnet.V1bet" +
+      "a1\312\002\030Axelar\\Axelarnet\\V1beta1\342\002$Axelar\\A" +
+      "xelarnet\\V1beta1\\GPBMetadata\352\002\032Axelar::A" +
+      "xelarnet::V1beta1\300\343\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

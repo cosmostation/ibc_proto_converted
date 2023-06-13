@@ -14,19 +14,9611 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.Config)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configurer is the configuration owner, the addresses allowed to handle fees
+     * and register domains with no superuser
+     * </pre>
+     *
+     * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The configurer.
+     */
+    java.lang.String getConfigurer();
+    /**
+     * <pre>
+     * Configurer is the configuration owner, the addresses allowed to handle fees
+     * and register domains with no superuser
+     * </pre>
+     *
+     * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The bytes for configurer.
+     */
+    com.google.protobuf.ByteString
+        getConfigurerBytes();
+
+    /**
+     * <pre>
+     * ValidDomainName defines a regexp that determines if a domain name is valid
+     * or not
+     * </pre>
+     *
+     * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+     * @return The validDomainName.
+     */
+    java.lang.String getValidDomainName();
+    /**
+     * <pre>
+     * ValidDomainName defines a regexp that determines if a domain name is valid
+     * or not
+     * </pre>
+     *
+     * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+     * @return The bytes for validDomainName.
+     */
+    com.google.protobuf.ByteString
+        getValidDomainNameBytes();
+
+    /**
+     * <pre>
+     * ValidAccountName defines a regexp that determines if an account name is
+     * valid or not
+     * </pre>
+     *
+     * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+     * @return The validAccountName.
+     */
+    java.lang.String getValidAccountName();
+    /**
+     * <pre>
+     * ValidAccountName defines a regexp that determines if an account name is
+     * valid or not
+     * </pre>
+     *
+     * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+     * @return The bytes for validAccountName.
+     */
+    com.google.protobuf.ByteString
+        getValidAccountNameBytes();
+
+    /**
+     * <pre>
+     * ValidURI defines a regexp that determines if resource uri is valid or not
+     * </pre>
+     *
+     * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+     * @return The validUri.
+     */
+    java.lang.String getValidUri();
+    /**
+     * <pre>
+     * ValidURI defines a regexp that determines if resource uri is valid or not
+     * </pre>
+     *
+     * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+     * @return The bytes for validUri.
+     */
+    com.google.protobuf.ByteString
+        getValidUriBytes();
+
+    /**
+     * <pre>
+     * ValidResource determines a regexp for a resource content
+     * </pre>
+     *
+     * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+     * @return The validResource.
+     */
+    java.lang.String getValidResource();
+    /**
+     * <pre>
+     * ValidResource determines a regexp for a resource content
+     * </pre>
+     *
+     * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+     * @return The bytes for validResource.
+     */
+    com.google.protobuf.ByteString
+        getValidResourceBytes();
+
+    /**
+     * <pre>
+     * DomainRenewalPeriod defines the duration of the domain renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the domainRenewalPeriod field is set.
+     */
+    boolean hasDomainRenewalPeriod();
+    /**
+     * <pre>
+     * DomainRenewalPeriod defines the duration of the domain renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The domainRenewalPeriod.
+     */
+    com.google.protobuf.Duration getDomainRenewalPeriod();
+    /**
+     * <pre>
+     * DomainRenewalPeriod defines the duration of the domain renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDomainRenewalPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * DomainRenewalCountMax defines maximum number of domain renewals a user can
+     * do
+     * </pre>
+     *
+     * <code>uint32 domain_renewal_count_max = 7 [json_name = "domainRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_count_max&#92;""];</code>
+     * @return The domainRenewalCountMax.
+     */
+    int getDomainRenewalCountMax();
+
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the domainGracePeriod field is set.
+     */
+    boolean hasDomainGracePeriod();
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The domainGracePeriod.
+     */
+    com.google.protobuf.Duration getDomainGracePeriod();
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDomainGracePeriodOrBuilder();
+
+    /**
+     * <pre>
+     * AccountRenewalPeriod defines the duration of the account renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the accountRenewalPeriod field is set.
+     */
+    boolean hasAccountRenewalPeriod();
+    /**
+     * <pre>
+     * AccountRenewalPeriod defines the duration of the account renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The accountRenewalPeriod.
+     */
+    com.google.protobuf.Duration getAccountRenewalPeriod();
+    /**
+     * <pre>
+     * AccountRenewalPeriod defines the duration of the account renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAccountRenewalPeriodOrBuilder();
+
+    /**
+     * <pre>
+     * AccountRenewalCountMax defines maximum number of account renewals a user
+     * can do
+     * </pre>
+     *
+     * <code>uint32 account_renewal_count_max = 10 [json_name = "accountRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"account_renewal_count_max&#92;""];</code>
+     * @return The accountRenewalCountMax.
+     */
+    int getAccountRenewalCountMax();
+
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the accountGracePeriod field is set.
+     */
+    boolean hasAccountGracePeriod();
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The accountGracePeriod.
+     */
+    com.google.protobuf.Duration getAccountGracePeriod();
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getAccountGracePeriodOrBuilder();
+
+    /**
+     * <pre>
+     * ResourcesMax defines maximum number of resources could be saved under an
+     * account
+     * </pre>
+     *
+     * <code>uint32 resources_max = 12 [json_name = "resourcesMax", (.gogoproto.moretags) = "yaml:&#92;"resources_max&#92;""];</code>
+     * @return The resourcesMax.
+     */
+    int getResourcesMax();
+
+    /**
+     * <pre>
+     * CertificateSizeMax defines maximum size of a certificate that could be
+     * saved under an account
+     * </pre>
+     *
+     * <code>uint64 certificate_size_max = 13 [json_name = "certificateSizeMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_size_max&#92;""];</code>
+     * @return The certificateSizeMax.
+     */
+    long getCertificateSizeMax();
+
+    /**
+     * <pre>
+     * CertificateCountMax defines maximum number of certificates that could be
+     * saved under an account
+     * </pre>
+     *
+     * <code>uint32 certificate_count_max = 14 [json_name = "certificateCountMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_count_max&#92;""];</code>
+     * @return The certificateCountMax.
+     */
+    int getCertificateCountMax();
+
+    /**
+     * <pre>
+     * MetadataSizeMax defines maximum size of metadata that could be saved under
+     * an account
+     * </pre>
+     *
+     * <code>uint64 metadata_size_max = 15 [json_name = "metadataSizeMax", (.gogoproto.moretags) = "yaml:&#92;"metadata_size_max&#92;""];</code>
+     * @return The metadataSizeMax.
+     */
+    long getMetadataSizeMax();
+
+    /**
+     * <pre>
+     * EscrowBroker defines an address that will receive a commission for
+     * completed escrows
+     * </pre>
+     *
+     * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+     * @return The escrowBroker.
+     */
+    java.lang.String getEscrowBroker();
+    /**
+     * <pre>
+     * EscrowBroker defines an address that will receive a commission for
+     * completed escrows
+     * </pre>
+     *
+     * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+     * @return The bytes for escrowBroker.
+     */
+    com.google.protobuf.ByteString
+        getEscrowBrokerBytes();
+
+    /**
+     * <pre>
+     * EscrowCommission defines the commission taken by the broker for a completed
+     * escrow, between 0 (no commission) and 1 (100% commission)
+     * </pre>
+     *
+     * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+     * @return The escrowCommission.
+     */
+    java.lang.String getEscrowCommission();
+    /**
+     * <pre>
+     * EscrowCommission defines the commission taken by the broker for a completed
+     * escrow, between 0 (no commission) and 1 (100% commission)
+     * </pre>
+     *
+     * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+     * @return The bytes for escrowCommission.
+     */
+    com.google.protobuf.ByteString
+        getEscrowCommissionBytes();
+
+    /**
+     * <pre>
+     * EscrowPeriod defines the maximum duration of an escrow in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the escrowMaxPeriod field is set.
+     */
+    boolean hasEscrowMaxPeriod();
+    /**
+     * <pre>
+     * EscrowPeriod defines the maximum duration of an escrow in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The escrowMaxPeriod.
+     */
+    com.google.protobuf.Duration getEscrowMaxPeriod();
+    /**
+     * <pre>
+     * EscrowPeriod defines the maximum duration of an escrow in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getEscrowMaxPeriodOrBuilder();
+  }
+  /**
+   * <pre>
+   * Config is the configuration of the network
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.Config}
+   */
+  public static final class Config extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.Config)
+      ConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Config.newBuilder() to construct.
+    private Config(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Config() {
+      configurer_ = "";
+      validDomainName_ = "";
+      validAccountName_ = "";
+      validUri_ = "";
+      validResource_ = "";
+      escrowBroker_ = "";
+      escrowCommission_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Config();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Config_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Config_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config.class, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder.class);
+    }
+
+    public static final int CONFIGURER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configurer_ = "";
+    /**
+     * <pre>
+     * Configurer is the configuration owner, the addresses allowed to handle fees
+     * and register domains with no superuser
+     * </pre>
+     *
+     * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The configurer.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigurer() {
+      java.lang.Object ref = configurer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configurer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Configurer is the configuration owner, the addresses allowed to handle fees
+     * and register domains with no superuser
+     * </pre>
+     *
+     * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+     * @return The bytes for configurer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigurerBytes() {
+      java.lang.Object ref = configurer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configurer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALID_DOMAIN_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validDomainName_ = "";
+    /**
+     * <pre>
+     * ValidDomainName defines a regexp that determines if a domain name is valid
+     * or not
+     * </pre>
+     *
+     * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+     * @return The validDomainName.
+     */
+    @java.lang.Override
+    public java.lang.String getValidDomainName() {
+      java.lang.Object ref = validDomainName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validDomainName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ValidDomainName defines a regexp that determines if a domain name is valid
+     * or not
+     * </pre>
+     *
+     * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+     * @return The bytes for validDomainName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidDomainNameBytes() {
+      java.lang.Object ref = validDomainName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validDomainName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALID_ACCOUNT_NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validAccountName_ = "";
+    /**
+     * <pre>
+     * ValidAccountName defines a regexp that determines if an account name is
+     * valid or not
+     * </pre>
+     *
+     * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+     * @return The validAccountName.
+     */
+    @java.lang.Override
+    public java.lang.String getValidAccountName() {
+      java.lang.Object ref = validAccountName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validAccountName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ValidAccountName defines a regexp that determines if an account name is
+     * valid or not
+     * </pre>
+     *
+     * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+     * @return The bytes for validAccountName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidAccountNameBytes() {
+      java.lang.Object ref = validAccountName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validAccountName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALID_URI_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validUri_ = "";
+    /**
+     * <pre>
+     * ValidURI defines a regexp that determines if resource uri is valid or not
+     * </pre>
+     *
+     * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+     * @return The validUri.
+     */
+    @java.lang.Override
+    public java.lang.String getValidUri() {
+      java.lang.Object ref = validUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ValidURI defines a regexp that determines if resource uri is valid or not
+     * </pre>
+     *
+     * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+     * @return The bytes for validUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidUriBytes() {
+      java.lang.Object ref = validUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALID_RESOURCE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validResource_ = "";
+    /**
+     * <pre>
+     * ValidResource determines a regexp for a resource content
+     * </pre>
+     *
+     * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+     * @return The validResource.
+     */
+    @java.lang.Override
+    public java.lang.String getValidResource() {
+      java.lang.Object ref = validResource_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validResource_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ValidResource determines a regexp for a resource content
+     * </pre>
+     *
+     * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+     * @return The bytes for validResource.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidResourceBytes() {
+      java.lang.Object ref = validResource_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validResource_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_RENEWAL_PERIOD_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration domainRenewalPeriod_;
+    /**
+     * <pre>
+     * DomainRenewalPeriod defines the duration of the domain renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the domainRenewalPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasDomainRenewalPeriod() {
+      return domainRenewalPeriod_ != null;
+    }
+    /**
+     * <pre>
+     * DomainRenewalPeriod defines the duration of the domain renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The domainRenewalPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDomainRenewalPeriod() {
+      return domainRenewalPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : domainRenewalPeriod_;
+    }
+    /**
+     * <pre>
+     * DomainRenewalPeriod defines the duration of the domain renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDomainRenewalPeriodOrBuilder() {
+      return domainRenewalPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : domainRenewalPeriod_;
+    }
+
+    public static final int DOMAIN_RENEWAL_COUNT_MAX_FIELD_NUMBER = 7;
+    private int domainRenewalCountMax_ = 0;
+    /**
+     * <pre>
+     * DomainRenewalCountMax defines maximum number of domain renewals a user can
+     * do
+     * </pre>
+     *
+     * <code>uint32 domain_renewal_count_max = 7 [json_name = "domainRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_count_max&#92;""];</code>
+     * @return The domainRenewalCountMax.
+     */
+    @java.lang.Override
+    public int getDomainRenewalCountMax() {
+      return domainRenewalCountMax_;
+    }
+
+    public static final int DOMAIN_GRACE_PERIOD_FIELD_NUMBER = 8;
+    private com.google.protobuf.Duration domainGracePeriod_;
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the domainGracePeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasDomainGracePeriod() {
+      return domainGracePeriod_ != null;
+    }
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The domainGracePeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDomainGracePeriod() {
+      return domainGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : domainGracePeriod_;
+    }
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDomainGracePeriodOrBuilder() {
+      return domainGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : domainGracePeriod_;
+    }
+
+    public static final int ACCOUNT_RENEWAL_PERIOD_FIELD_NUMBER = 9;
+    private com.google.protobuf.Duration accountRenewalPeriod_;
+    /**
+     * <pre>
+     * AccountRenewalPeriod defines the duration of the account renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the accountRenewalPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccountRenewalPeriod() {
+      return accountRenewalPeriod_ != null;
+    }
+    /**
+     * <pre>
+     * AccountRenewalPeriod defines the duration of the account renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The accountRenewalPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAccountRenewalPeriod() {
+      return accountRenewalPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accountRenewalPeriod_;
+    }
+    /**
+     * <pre>
+     * AccountRenewalPeriod defines the duration of the account renewal period in
+     * seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAccountRenewalPeriodOrBuilder() {
+      return accountRenewalPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accountRenewalPeriod_;
+    }
+
+    public static final int ACCOUNT_RENEWAL_COUNT_MAX_FIELD_NUMBER = 10;
+    private int accountRenewalCountMax_ = 0;
+    /**
+     * <pre>
+     * AccountRenewalCountMax defines maximum number of account renewals a user
+     * can do
+     * </pre>
+     *
+     * <code>uint32 account_renewal_count_max = 10 [json_name = "accountRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"account_renewal_count_max&#92;""];</code>
+     * @return The accountRenewalCountMax.
+     */
+    @java.lang.Override
+    public int getAccountRenewalCountMax() {
+      return accountRenewalCountMax_;
+    }
+
+    public static final int ACCOUNT_GRACE_PERIOD_FIELD_NUMBER = 11;
+    private com.google.protobuf.Duration accountGracePeriod_;
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the accountGracePeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccountGracePeriod() {
+      return accountGracePeriod_ != null;
+    }
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The accountGracePeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAccountGracePeriod() {
+      return accountGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accountGracePeriod_;
+    }
+    /**
+     * <pre>
+     * DomainGracePeriod defines the grace period for a domain deletion in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getAccountGracePeriodOrBuilder() {
+      return accountGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accountGracePeriod_;
+    }
+
+    public static final int RESOURCES_MAX_FIELD_NUMBER = 12;
+    private int resourcesMax_ = 0;
+    /**
+     * <pre>
+     * ResourcesMax defines maximum number of resources could be saved under an
+     * account
+     * </pre>
+     *
+     * <code>uint32 resources_max = 12 [json_name = "resourcesMax", (.gogoproto.moretags) = "yaml:&#92;"resources_max&#92;""];</code>
+     * @return The resourcesMax.
+     */
+    @java.lang.Override
+    public int getResourcesMax() {
+      return resourcesMax_;
+    }
+
+    public static final int CERTIFICATE_SIZE_MAX_FIELD_NUMBER = 13;
+    private long certificateSizeMax_ = 0L;
+    /**
+     * <pre>
+     * CertificateSizeMax defines maximum size of a certificate that could be
+     * saved under an account
+     * </pre>
+     *
+     * <code>uint64 certificate_size_max = 13 [json_name = "certificateSizeMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_size_max&#92;""];</code>
+     * @return The certificateSizeMax.
+     */
+    @java.lang.Override
+    public long getCertificateSizeMax() {
+      return certificateSizeMax_;
+    }
+
+    public static final int CERTIFICATE_COUNT_MAX_FIELD_NUMBER = 14;
+    private int certificateCountMax_ = 0;
+    /**
+     * <pre>
+     * CertificateCountMax defines maximum number of certificates that could be
+     * saved under an account
+     * </pre>
+     *
+     * <code>uint32 certificate_count_max = 14 [json_name = "certificateCountMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_count_max&#92;""];</code>
+     * @return The certificateCountMax.
+     */
+    @java.lang.Override
+    public int getCertificateCountMax() {
+      return certificateCountMax_;
+    }
+
+    public static final int METADATA_SIZE_MAX_FIELD_NUMBER = 15;
+    private long metadataSizeMax_ = 0L;
+    /**
+     * <pre>
+     * MetadataSizeMax defines maximum size of metadata that could be saved under
+     * an account
+     * </pre>
+     *
+     * <code>uint64 metadata_size_max = 15 [json_name = "metadataSizeMax", (.gogoproto.moretags) = "yaml:&#92;"metadata_size_max&#92;""];</code>
+     * @return The metadataSizeMax.
+     */
+    @java.lang.Override
+    public long getMetadataSizeMax() {
+      return metadataSizeMax_;
+    }
+
+    public static final int ESCROW_BROKER_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object escrowBroker_ = "";
+    /**
+     * <pre>
+     * EscrowBroker defines an address that will receive a commission for
+     * completed escrows
+     * </pre>
+     *
+     * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+     * @return The escrowBroker.
+     */
+    @java.lang.Override
+    public java.lang.String getEscrowBroker() {
+      java.lang.Object ref = escrowBroker_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        escrowBroker_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * EscrowBroker defines an address that will receive a commission for
+     * completed escrows
+     * </pre>
+     *
+     * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+     * @return The bytes for escrowBroker.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEscrowBrokerBytes() {
+      java.lang.Object ref = escrowBroker_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        escrowBroker_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCROW_COMMISSION_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object escrowCommission_ = "";
+    /**
+     * <pre>
+     * EscrowCommission defines the commission taken by the broker for a completed
+     * escrow, between 0 (no commission) and 1 (100% commission)
+     * </pre>
+     *
+     * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+     * @return The escrowCommission.
+     */
+    @java.lang.Override
+    public java.lang.String getEscrowCommission() {
+      java.lang.Object ref = escrowCommission_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        escrowCommission_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * EscrowCommission defines the commission taken by the broker for a completed
+     * escrow, between 0 (no commission) and 1 (100% commission)
+     * </pre>
+     *
+     * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+     * @return The bytes for escrowCommission.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEscrowCommissionBytes() {
+      java.lang.Object ref = escrowCommission_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        escrowCommission_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ESCROW_MAX_PERIOD_FIELD_NUMBER = 18;
+    private com.google.protobuf.Duration escrowMaxPeriod_;
+    /**
+     * <pre>
+     * EscrowPeriod defines the maximum duration of an escrow in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the escrowMaxPeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasEscrowMaxPeriod() {
+      return escrowMaxPeriod_ != null;
+    }
+    /**
+     * <pre>
+     * EscrowPeriod defines the maximum duration of an escrow in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The escrowMaxPeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getEscrowMaxPeriod() {
+      return escrowMaxPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : escrowMaxPeriod_;
+    }
+    /**
+     * <pre>
+     * EscrowPeriod defines the maximum duration of an escrow in seconds
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getEscrowMaxPeriodOrBuilder() {
+      return escrowMaxPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : escrowMaxPeriod_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configurer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validDomainName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, validDomainName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validAccountName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, validAccountName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, validUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validResource_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, validResource_);
+      }
+      if (domainRenewalPeriod_ != null) {
+        output.writeMessage(6, getDomainRenewalPeriod());
+      }
+      if (domainRenewalCountMax_ != 0) {
+        output.writeUInt32(7, domainRenewalCountMax_);
+      }
+      if (domainGracePeriod_ != null) {
+        output.writeMessage(8, getDomainGracePeriod());
+      }
+      if (accountRenewalPeriod_ != null) {
+        output.writeMessage(9, getAccountRenewalPeriod());
+      }
+      if (accountRenewalCountMax_ != 0) {
+        output.writeUInt32(10, accountRenewalCountMax_);
+      }
+      if (accountGracePeriod_ != null) {
+        output.writeMessage(11, getAccountGracePeriod());
+      }
+      if (resourcesMax_ != 0) {
+        output.writeUInt32(12, resourcesMax_);
+      }
+      if (certificateSizeMax_ != 0L) {
+        output.writeUInt64(13, certificateSizeMax_);
+      }
+      if (certificateCountMax_ != 0) {
+        output.writeUInt32(14, certificateCountMax_);
+      }
+      if (metadataSizeMax_ != 0L) {
+        output.writeUInt64(15, metadataSizeMax_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowBroker_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, escrowBroker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowCommission_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, escrowCommission_);
+      }
+      if (escrowMaxPeriod_ != null) {
+        output.writeMessage(18, getEscrowMaxPeriod());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configurer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configurer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validDomainName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, validDomainName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validAccountName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, validAccountName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, validUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validResource_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, validResource_);
+      }
+      if (domainRenewalPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDomainRenewalPeriod());
+      }
+      if (domainRenewalCountMax_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, domainRenewalCountMax_);
+      }
+      if (domainGracePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDomainGracePeriod());
+      }
+      if (accountRenewalPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getAccountRenewalPeriod());
+      }
+      if (accountRenewalCountMax_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, accountRenewalCountMax_);
+      }
+      if (accountGracePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getAccountGracePeriod());
+      }
+      if (resourcesMax_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, resourcesMax_);
+      }
+      if (certificateSizeMax_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, certificateSizeMax_);
+      }
+      if (certificateCountMax_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, certificateCountMax_);
+      }
+      if (metadataSizeMax_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(15, metadataSizeMax_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowBroker_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, escrowBroker_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(escrowCommission_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, escrowCommission_);
+      }
+      if (escrowMaxPeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getEscrowMaxPeriod());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.TypesProto.Config)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.TypesProto.Config other = (com.starnamed.x.configuration.v1beta1.TypesProto.Config) obj;
+
+      if (!getConfigurer()
+          .equals(other.getConfigurer())) return false;
+      if (!getValidDomainName()
+          .equals(other.getValidDomainName())) return false;
+      if (!getValidAccountName()
+          .equals(other.getValidAccountName())) return false;
+      if (!getValidUri()
+          .equals(other.getValidUri())) return false;
+      if (!getValidResource()
+          .equals(other.getValidResource())) return false;
+      if (hasDomainRenewalPeriod() != other.hasDomainRenewalPeriod()) return false;
+      if (hasDomainRenewalPeriod()) {
+        if (!getDomainRenewalPeriod()
+            .equals(other.getDomainRenewalPeriod())) return false;
+      }
+      if (getDomainRenewalCountMax()
+          != other.getDomainRenewalCountMax()) return false;
+      if (hasDomainGracePeriod() != other.hasDomainGracePeriod()) return false;
+      if (hasDomainGracePeriod()) {
+        if (!getDomainGracePeriod()
+            .equals(other.getDomainGracePeriod())) return false;
+      }
+      if (hasAccountRenewalPeriod() != other.hasAccountRenewalPeriod()) return false;
+      if (hasAccountRenewalPeriod()) {
+        if (!getAccountRenewalPeriod()
+            .equals(other.getAccountRenewalPeriod())) return false;
+      }
+      if (getAccountRenewalCountMax()
+          != other.getAccountRenewalCountMax()) return false;
+      if (hasAccountGracePeriod() != other.hasAccountGracePeriod()) return false;
+      if (hasAccountGracePeriod()) {
+        if (!getAccountGracePeriod()
+            .equals(other.getAccountGracePeriod())) return false;
+      }
+      if (getResourcesMax()
+          != other.getResourcesMax()) return false;
+      if (getCertificateSizeMax()
+          != other.getCertificateSizeMax()) return false;
+      if (getCertificateCountMax()
+          != other.getCertificateCountMax()) return false;
+      if (getMetadataSizeMax()
+          != other.getMetadataSizeMax()) return false;
+      if (!getEscrowBroker()
+          .equals(other.getEscrowBroker())) return false;
+      if (!getEscrowCommission()
+          .equals(other.getEscrowCommission())) return false;
+      if (hasEscrowMaxPeriod() != other.hasEscrowMaxPeriod()) return false;
+      if (hasEscrowMaxPeriod()) {
+        if (!getEscrowMaxPeriod()
+            .equals(other.getEscrowMaxPeriod())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONFIGURER_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigurer().hashCode();
+      hash = (37 * hash) + VALID_DOMAIN_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getValidDomainName().hashCode();
+      hash = (37 * hash) + VALID_ACCOUNT_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getValidAccountName().hashCode();
+      hash = (37 * hash) + VALID_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getValidUri().hashCode();
+      hash = (37 * hash) + VALID_RESOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getValidResource().hashCode();
+      if (hasDomainRenewalPeriod()) {
+        hash = (37 * hash) + DOMAIN_RENEWAL_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getDomainRenewalPeriod().hashCode();
+      }
+      hash = (37 * hash) + DOMAIN_RENEWAL_COUNT_MAX_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainRenewalCountMax();
+      if (hasDomainGracePeriod()) {
+        hash = (37 * hash) + DOMAIN_GRACE_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getDomainGracePeriod().hashCode();
+      }
+      if (hasAccountRenewalPeriod()) {
+        hash = (37 * hash) + ACCOUNT_RENEWAL_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountRenewalPeriod().hashCode();
+      }
+      hash = (37 * hash) + ACCOUNT_RENEWAL_COUNT_MAX_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountRenewalCountMax();
+      if (hasAccountGracePeriod()) {
+        hash = (37 * hash) + ACCOUNT_GRACE_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountGracePeriod().hashCode();
+      }
+      hash = (37 * hash) + RESOURCES_MAX_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcesMax();
+      hash = (37 * hash) + CERTIFICATE_SIZE_MAX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCertificateSizeMax());
+      hash = (37 * hash) + CERTIFICATE_COUNT_MAX_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateCountMax();
+      hash = (37 * hash) + METADATA_SIZE_MAX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMetadataSizeMax());
+      hash = (37 * hash) + ESCROW_BROKER_FIELD_NUMBER;
+      hash = (53 * hash) + getEscrowBroker().hashCode();
+      hash = (37 * hash) + ESCROW_COMMISSION_FIELD_NUMBER;
+      hash = (53 * hash) + getEscrowCommission().hashCode();
+      if (hasEscrowMaxPeriod()) {
+        hash = (37 * hash) + ESCROW_MAX_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowMaxPeriod().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.TypesProto.Config prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Config is the configuration of the network
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.Config}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.Config)
+        com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Config_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Config_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.TypesProto.Config.class, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.TypesProto.Config.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        configurer_ = "";
+        validDomainName_ = "";
+        validAccountName_ = "";
+        validUri_ = "";
+        validResource_ = "";
+        domainRenewalPeriod_ = null;
+        if (domainRenewalPeriodBuilder_ != null) {
+          domainRenewalPeriodBuilder_.dispose();
+          domainRenewalPeriodBuilder_ = null;
+        }
+        domainRenewalCountMax_ = 0;
+        domainGracePeriod_ = null;
+        if (domainGracePeriodBuilder_ != null) {
+          domainGracePeriodBuilder_.dispose();
+          domainGracePeriodBuilder_ = null;
+        }
+        accountRenewalPeriod_ = null;
+        if (accountRenewalPeriodBuilder_ != null) {
+          accountRenewalPeriodBuilder_.dispose();
+          accountRenewalPeriodBuilder_ = null;
+        }
+        accountRenewalCountMax_ = 0;
+        accountGracePeriod_ = null;
+        if (accountGracePeriodBuilder_ != null) {
+          accountGracePeriodBuilder_.dispose();
+          accountGracePeriodBuilder_ = null;
+        }
+        resourcesMax_ = 0;
+        certificateSizeMax_ = 0L;
+        certificateCountMax_ = 0;
+        metadataSizeMax_ = 0L;
+        escrowBroker_ = "";
+        escrowCommission_ = "";
+        escrowMaxPeriod_ = null;
+        if (escrowMaxPeriodBuilder_ != null) {
+          escrowMaxPeriodBuilder_.dispose();
+          escrowMaxPeriodBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Config_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config build() {
+        com.starnamed.x.configuration.v1beta1.TypesProto.Config result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config buildPartial() {
+        com.starnamed.x.configuration.v1beta1.TypesProto.Config result = new com.starnamed.x.configuration.v1beta1.TypesProto.Config(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.TypesProto.Config result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.configurer_ = configurer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.validDomainName_ = validDomainName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.validAccountName_ = validAccountName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.validUri_ = validUri_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.validResource_ = validResource_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.domainRenewalPeriod_ = domainRenewalPeriodBuilder_ == null
+              ? domainRenewalPeriod_
+              : domainRenewalPeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.domainRenewalCountMax_ = domainRenewalCountMax_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.domainGracePeriod_ = domainGracePeriodBuilder_ == null
+              ? domainGracePeriod_
+              : domainGracePeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.accountRenewalPeriod_ = accountRenewalPeriodBuilder_ == null
+              ? accountRenewalPeriod_
+              : accountRenewalPeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.accountRenewalCountMax_ = accountRenewalCountMax_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.accountGracePeriod_ = accountGracePeriodBuilder_ == null
+              ? accountGracePeriod_
+              : accountGracePeriodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.resourcesMax_ = resourcesMax_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.certificateSizeMax_ = certificateSizeMax_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.certificateCountMax_ = certificateCountMax_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.metadataSizeMax_ = metadataSizeMax_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.escrowBroker_ = escrowBroker_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.escrowCommission_ = escrowCommission_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.escrowMaxPeriod_ = escrowMaxPeriodBuilder_ == null
+              ? escrowMaxPeriod_
+              : escrowMaxPeriodBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.TypesProto.Config) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.TypesProto.Config)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.TypesProto.Config other) {
+        if (other == com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance()) return this;
+        if (!other.getConfigurer().isEmpty()) {
+          configurer_ = other.configurer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getValidDomainName().isEmpty()) {
+          validDomainName_ = other.validDomainName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValidAccountName().isEmpty()) {
+          validAccountName_ = other.validAccountName_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getValidUri().isEmpty()) {
+          validUri_ = other.validUri_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getValidResource().isEmpty()) {
+          validResource_ = other.validResource_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasDomainRenewalPeriod()) {
+          mergeDomainRenewalPeriod(other.getDomainRenewalPeriod());
+        }
+        if (other.getDomainRenewalCountMax() != 0) {
+          setDomainRenewalCountMax(other.getDomainRenewalCountMax());
+        }
+        if (other.hasDomainGracePeriod()) {
+          mergeDomainGracePeriod(other.getDomainGracePeriod());
+        }
+        if (other.hasAccountRenewalPeriod()) {
+          mergeAccountRenewalPeriod(other.getAccountRenewalPeriod());
+        }
+        if (other.getAccountRenewalCountMax() != 0) {
+          setAccountRenewalCountMax(other.getAccountRenewalCountMax());
+        }
+        if (other.hasAccountGracePeriod()) {
+          mergeAccountGracePeriod(other.getAccountGracePeriod());
+        }
+        if (other.getResourcesMax() != 0) {
+          setResourcesMax(other.getResourcesMax());
+        }
+        if (other.getCertificateSizeMax() != 0L) {
+          setCertificateSizeMax(other.getCertificateSizeMax());
+        }
+        if (other.getCertificateCountMax() != 0) {
+          setCertificateCountMax(other.getCertificateCountMax());
+        }
+        if (other.getMetadataSizeMax() != 0L) {
+          setMetadataSizeMax(other.getMetadataSizeMax());
+        }
+        if (!other.getEscrowBroker().isEmpty()) {
+          escrowBroker_ = other.escrowBroker_;
+          bitField0_ |= 0x00008000;
+          onChanged();
+        }
+        if (!other.getEscrowCommission().isEmpty()) {
+          escrowCommission_ = other.escrowCommission_;
+          bitField0_ |= 0x00010000;
+          onChanged();
+        }
+        if (other.hasEscrowMaxPeriod()) {
+          mergeEscrowMaxPeriod(other.getEscrowMaxPeriod());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                configurer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                validDomainName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                validAccountName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                validUri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                validResource_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDomainRenewalPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                domainRenewalCountMax_ = input.readUInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                input.readMessage(
+                    getDomainGracePeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getAccountRenewalPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 80: {
+                accountRenewalCountMax_ = input.readUInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 90: {
+                input.readMessage(
+                    getAccountGracePeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 96: {
+                resourcesMax_ = input.readUInt32();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                certificateSizeMax_ = input.readUInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              case 112: {
+                certificateCountMax_ = input.readUInt32();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 112
+              case 120: {
+                metadataSizeMax_ = input.readUInt64();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 120
+              case 130: {
+                escrowBroker_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                escrowCommission_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              case 146: {
+                input.readMessage(
+                    getEscrowMaxPeriodFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 146
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object configurer_ = "";
+      /**
+       * <pre>
+       * Configurer is the configuration owner, the addresses allowed to handle fees
+       * and register domains with no superuser
+       * </pre>
+       *
+       * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @return The configurer.
+       */
+      public java.lang.String getConfigurer() {
+        java.lang.Object ref = configurer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configurer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Configurer is the configuration owner, the addresses allowed to handle fees
+       * and register domains with no superuser
+       * </pre>
+       *
+       * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @return The bytes for configurer.
+       */
+      public com.google.protobuf.ByteString
+          getConfigurerBytes() {
+        java.lang.Object ref = configurer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configurer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Configurer is the configuration owner, the addresses allowed to handle fees
+       * and register domains with no superuser
+       * </pre>
+       *
+       * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @param value The configurer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigurer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configurer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configurer is the configuration owner, the addresses allowed to handle fees
+       * and register domains with no superuser
+       * </pre>
+       *
+       * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigurer() {
+        configurer_ = getDefaultInstance().getConfigurer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configurer is the configuration owner, the addresses allowed to handle fees
+       * and register domains with no superuser
+       * </pre>
+       *
+       * <code>string configurer = 1 [json_name = "configurer", (.gogoproto.moretags) = "yaml:&#92;"configurer&#92;""];</code>
+       * @param value The bytes for configurer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigurerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configurer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validDomainName_ = "";
+      /**
+       * <pre>
+       * ValidDomainName defines a regexp that determines if a domain name is valid
+       * or not
+       * </pre>
+       *
+       * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+       * @return The validDomainName.
+       */
+      public java.lang.String getValidDomainName() {
+        java.lang.Object ref = validDomainName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validDomainName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidDomainName defines a regexp that determines if a domain name is valid
+       * or not
+       * </pre>
+       *
+       * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+       * @return The bytes for validDomainName.
+       */
+      public com.google.protobuf.ByteString
+          getValidDomainNameBytes() {
+        java.lang.Object ref = validDomainName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validDomainName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidDomainName defines a regexp that determines if a domain name is valid
+       * or not
+       * </pre>
+       *
+       * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+       * @param value The validDomainName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidDomainName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validDomainName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidDomainName defines a regexp that determines if a domain name is valid
+       * or not
+       * </pre>
+       *
+       * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidDomainName() {
+        validDomainName_ = getDefaultInstance().getValidDomainName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidDomainName defines a regexp that determines if a domain name is valid
+       * or not
+       * </pre>
+       *
+       * <code>string valid_domain_name = 2 [json_name = "validDomainName", (.gogoproto.moretags) = "yaml:&#92;"valid_domain_name&#92;""];</code>
+       * @param value The bytes for validDomainName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidDomainNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validDomainName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validAccountName_ = "";
+      /**
+       * <pre>
+       * ValidAccountName defines a regexp that determines if an account name is
+       * valid or not
+       * </pre>
+       *
+       * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+       * @return The validAccountName.
+       */
+      public java.lang.String getValidAccountName() {
+        java.lang.Object ref = validAccountName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validAccountName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidAccountName defines a regexp that determines if an account name is
+       * valid or not
+       * </pre>
+       *
+       * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+       * @return The bytes for validAccountName.
+       */
+      public com.google.protobuf.ByteString
+          getValidAccountNameBytes() {
+        java.lang.Object ref = validAccountName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validAccountName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidAccountName defines a regexp that determines if an account name is
+       * valid or not
+       * </pre>
+       *
+       * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+       * @param value The validAccountName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidAccountName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validAccountName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidAccountName defines a regexp that determines if an account name is
+       * valid or not
+       * </pre>
+       *
+       * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidAccountName() {
+        validAccountName_ = getDefaultInstance().getValidAccountName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidAccountName defines a regexp that determines if an account name is
+       * valid or not
+       * </pre>
+       *
+       * <code>string valid_account_name = 3 [json_name = "validAccountName", (.gogoproto.moretags) = "yaml:&#92;"valid_account_name&#92;""];</code>
+       * @param value The bytes for validAccountName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidAccountNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validAccountName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validUri_ = "";
+      /**
+       * <pre>
+       * ValidURI defines a regexp that determines if resource uri is valid or not
+       * </pre>
+       *
+       * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+       * @return The validUri.
+       */
+      public java.lang.String getValidUri() {
+        java.lang.Object ref = validUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidURI defines a regexp that determines if resource uri is valid or not
+       * </pre>
+       *
+       * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+       * @return The bytes for validUri.
+       */
+      public com.google.protobuf.ByteString
+          getValidUriBytes() {
+        java.lang.Object ref = validUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidURI defines a regexp that determines if resource uri is valid or not
+       * </pre>
+       *
+       * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+       * @param value The validUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validUri_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidURI defines a regexp that determines if resource uri is valid or not
+       * </pre>
+       *
+       * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidUri() {
+        validUri_ = getDefaultInstance().getValidUri();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidURI defines a regexp that determines if resource uri is valid or not
+       * </pre>
+       *
+       * <code>string valid_uri = 4 [json_name = "validUri", (.gogoproto.customname) = "ValidURI", (.gogoproto.moretags) = "yaml:&#92;"valid_uri&#92;""];</code>
+       * @param value The bytes for validUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validUri_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object validResource_ = "";
+      /**
+       * <pre>
+       * ValidResource determines a regexp for a resource content
+       * </pre>
+       *
+       * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+       * @return The validResource.
+       */
+      public java.lang.String getValidResource() {
+        java.lang.Object ref = validResource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validResource_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidResource determines a regexp for a resource content
+       * </pre>
+       *
+       * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+       * @return The bytes for validResource.
+       */
+      public com.google.protobuf.ByteString
+          getValidResourceBytes() {
+        java.lang.Object ref = validResource_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validResource_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ValidResource determines a regexp for a resource content
+       * </pre>
+       *
+       * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+       * @param value The validResource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidResource(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        validResource_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidResource determines a regexp for a resource content
+       * </pre>
+       *
+       * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidResource() {
+        validResource_ = getDefaultInstance().getValidResource();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ValidResource determines a regexp for a resource content
+       * </pre>
+       *
+       * <code>string valid_resource = 5 [json_name = "validResource", (.gogoproto.moretags) = "yaml:&#92;"valid_resource&#92;""];</code>
+       * @param value The bytes for validResource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidResourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        validResource_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration domainRenewalPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> domainRenewalPeriodBuilder_;
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the domainRenewalPeriod field is set.
+       */
+      public boolean hasDomainRenewalPeriod() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The domainRenewalPeriod.
+       */
+      public com.google.protobuf.Duration getDomainRenewalPeriod() {
+        if (domainRenewalPeriodBuilder_ == null) {
+          return domainRenewalPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : domainRenewalPeriod_;
+        } else {
+          return domainRenewalPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDomainRenewalPeriod(com.google.protobuf.Duration value) {
+        if (domainRenewalPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          domainRenewalPeriod_ = value;
+        } else {
+          domainRenewalPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDomainRenewalPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (domainRenewalPeriodBuilder_ == null) {
+          domainRenewalPeriod_ = builderForValue.build();
+        } else {
+          domainRenewalPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDomainRenewalPeriod(com.google.protobuf.Duration value) {
+        if (domainRenewalPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            domainRenewalPeriod_ != null &&
+            domainRenewalPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDomainRenewalPeriodBuilder().mergeFrom(value);
+          } else {
+            domainRenewalPeriod_ = value;
+          }
+        } else {
+          domainRenewalPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDomainRenewalPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        domainRenewalPeriod_ = null;
+        if (domainRenewalPeriodBuilder_ != null) {
+          domainRenewalPeriodBuilder_.dispose();
+          domainRenewalPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDomainRenewalPeriodBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDomainRenewalPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDomainRenewalPeriodOrBuilder() {
+        if (domainRenewalPeriodBuilder_ != null) {
+          return domainRenewalPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return domainRenewalPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : domainRenewalPeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * DomainRenewalPeriod defines the duration of the domain renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_renewal_period = 6 [json_name = "domainRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDomainRenewalPeriodFieldBuilder() {
+        if (domainRenewalPeriodBuilder_ == null) {
+          domainRenewalPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDomainRenewalPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          domainRenewalPeriod_ = null;
+        }
+        return domainRenewalPeriodBuilder_;
+      }
+
+      private int domainRenewalCountMax_ ;
+      /**
+       * <pre>
+       * DomainRenewalCountMax defines maximum number of domain renewals a user can
+       * do
+       * </pre>
+       *
+       * <code>uint32 domain_renewal_count_max = 7 [json_name = "domainRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_count_max&#92;""];</code>
+       * @return The domainRenewalCountMax.
+       */
+      @java.lang.Override
+      public int getDomainRenewalCountMax() {
+        return domainRenewalCountMax_;
+      }
+      /**
+       * <pre>
+       * DomainRenewalCountMax defines maximum number of domain renewals a user can
+       * do
+       * </pre>
+       *
+       * <code>uint32 domain_renewal_count_max = 7 [json_name = "domainRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_count_max&#92;""];</code>
+       * @param value The domainRenewalCountMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDomainRenewalCountMax(int value) {
+
+        domainRenewalCountMax_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainRenewalCountMax defines maximum number of domain renewals a user can
+       * do
+       * </pre>
+       *
+       * <code>uint32 domain_renewal_count_max = 7 [json_name = "domainRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"domain_renewal_count_max&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDomainRenewalCountMax() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        domainRenewalCountMax_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration domainGracePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> domainGracePeriodBuilder_;
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the domainGracePeriod field is set.
+       */
+      public boolean hasDomainGracePeriod() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The domainGracePeriod.
+       */
+      public com.google.protobuf.Duration getDomainGracePeriod() {
+        if (domainGracePeriodBuilder_ == null) {
+          return domainGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : domainGracePeriod_;
+        } else {
+          return domainGracePeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDomainGracePeriod(com.google.protobuf.Duration value) {
+        if (domainGracePeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          domainGracePeriod_ = value;
+        } else {
+          domainGracePeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setDomainGracePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (domainGracePeriodBuilder_ == null) {
+          domainGracePeriod_ = builderForValue.build();
+        } else {
+          domainGracePeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeDomainGracePeriod(com.google.protobuf.Duration value) {
+        if (domainGracePeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            domainGracePeriod_ != null &&
+            domainGracePeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getDomainGracePeriodBuilder().mergeFrom(value);
+          } else {
+            domainGracePeriod_ = value;
+          }
+        } else {
+          domainGracePeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearDomainGracePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        domainGracePeriod_ = null;
+        if (domainGracePeriodBuilder_ != null) {
+          domainGracePeriodBuilder_.dispose();
+          domainGracePeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getDomainGracePeriodBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getDomainGracePeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDomainGracePeriodOrBuilder() {
+        if (domainGracePeriodBuilder_ != null) {
+          return domainGracePeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return domainGracePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : domainGracePeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration domain_grace_period = 8 [json_name = "domainGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"domain_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDomainGracePeriodFieldBuilder() {
+        if (domainGracePeriodBuilder_ == null) {
+          domainGracePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDomainGracePeriod(),
+                  getParentForChildren(),
+                  isClean());
+          domainGracePeriod_ = null;
+        }
+        return domainGracePeriodBuilder_;
+      }
+
+      private com.google.protobuf.Duration accountRenewalPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> accountRenewalPeriodBuilder_;
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the accountRenewalPeriod field is set.
+       */
+      public boolean hasAccountRenewalPeriod() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The accountRenewalPeriod.
+       */
+      public com.google.protobuf.Duration getAccountRenewalPeriod() {
+        if (accountRenewalPeriodBuilder_ == null) {
+          return accountRenewalPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accountRenewalPeriod_;
+        } else {
+          return accountRenewalPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setAccountRenewalPeriod(com.google.protobuf.Duration value) {
+        if (accountRenewalPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accountRenewalPeriod_ = value;
+        } else {
+          accountRenewalPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setAccountRenewalPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (accountRenewalPeriodBuilder_ == null) {
+          accountRenewalPeriod_ = builderForValue.build();
+        } else {
+          accountRenewalPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeAccountRenewalPeriod(com.google.protobuf.Duration value) {
+        if (accountRenewalPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            accountRenewalPeriod_ != null &&
+            accountRenewalPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getAccountRenewalPeriodBuilder().mergeFrom(value);
+          } else {
+            accountRenewalPeriod_ = value;
+          }
+        } else {
+          accountRenewalPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearAccountRenewalPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        accountRenewalPeriod_ = null;
+        if (accountRenewalPeriodBuilder_ != null) {
+          accountRenewalPeriodBuilder_.dispose();
+          accountRenewalPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getAccountRenewalPeriodBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getAccountRenewalPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAccountRenewalPeriodOrBuilder() {
+        if (accountRenewalPeriodBuilder_ != null) {
+          return accountRenewalPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return accountRenewalPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : accountRenewalPeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * AccountRenewalPeriod defines the duration of the account renewal period in
+       * seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_renewal_period = 9 [json_name = "accountRenewalPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_renewal_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAccountRenewalPeriodFieldBuilder() {
+        if (accountRenewalPeriodBuilder_ == null) {
+          accountRenewalPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAccountRenewalPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          accountRenewalPeriod_ = null;
+        }
+        return accountRenewalPeriodBuilder_;
+      }
+
+      private int accountRenewalCountMax_ ;
+      /**
+       * <pre>
+       * AccountRenewalCountMax defines maximum number of account renewals a user
+       * can do
+       * </pre>
+       *
+       * <code>uint32 account_renewal_count_max = 10 [json_name = "accountRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"account_renewal_count_max&#92;""];</code>
+       * @return The accountRenewalCountMax.
+       */
+      @java.lang.Override
+      public int getAccountRenewalCountMax() {
+        return accountRenewalCountMax_;
+      }
+      /**
+       * <pre>
+       * AccountRenewalCountMax defines maximum number of account renewals a user
+       * can do
+       * </pre>
+       *
+       * <code>uint32 account_renewal_count_max = 10 [json_name = "accountRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"account_renewal_count_max&#92;""];</code>
+       * @param value The accountRenewalCountMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountRenewalCountMax(int value) {
+
+        accountRenewalCountMax_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccountRenewalCountMax defines maximum number of account renewals a user
+       * can do
+       * </pre>
+       *
+       * <code>uint32 account_renewal_count_max = 10 [json_name = "accountRenewalCountMax", (.gogoproto.moretags) = "yaml:&#92;"account_renewal_count_max&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountRenewalCountMax() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        accountRenewalCountMax_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration accountGracePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> accountGracePeriodBuilder_;
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the accountGracePeriod field is set.
+       */
+      public boolean hasAccountGracePeriod() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The accountGracePeriod.
+       */
+      public com.google.protobuf.Duration getAccountGracePeriod() {
+        if (accountGracePeriodBuilder_ == null) {
+          return accountGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : accountGracePeriod_;
+        } else {
+          return accountGracePeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setAccountGracePeriod(com.google.protobuf.Duration value) {
+        if (accountGracePeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accountGracePeriod_ = value;
+        } else {
+          accountGracePeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setAccountGracePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (accountGracePeriodBuilder_ == null) {
+          accountGracePeriod_ = builderForValue.build();
+        } else {
+          accountGracePeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeAccountGracePeriod(com.google.protobuf.Duration value) {
+        if (accountGracePeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            accountGracePeriod_ != null &&
+            accountGracePeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getAccountGracePeriodBuilder().mergeFrom(value);
+          } else {
+            accountGracePeriod_ = value;
+          }
+        } else {
+          accountGracePeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearAccountGracePeriod() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        accountGracePeriod_ = null;
+        if (accountGracePeriodBuilder_ != null) {
+          accountGracePeriodBuilder_.dispose();
+          accountGracePeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getAccountGracePeriodBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getAccountGracePeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getAccountGracePeriodOrBuilder() {
+        if (accountGracePeriodBuilder_ != null) {
+          return accountGracePeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return accountGracePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : accountGracePeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * DomainGracePeriod defines the grace period for a domain deletion in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration account_grace_period = 11 [json_name = "accountGracePeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"account_grace_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getAccountGracePeriodFieldBuilder() {
+        if (accountGracePeriodBuilder_ == null) {
+          accountGracePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getAccountGracePeriod(),
+                  getParentForChildren(),
+                  isClean());
+          accountGracePeriod_ = null;
+        }
+        return accountGracePeriodBuilder_;
+      }
+
+      private int resourcesMax_ ;
+      /**
+       * <pre>
+       * ResourcesMax defines maximum number of resources could be saved under an
+       * account
+       * </pre>
+       *
+       * <code>uint32 resources_max = 12 [json_name = "resourcesMax", (.gogoproto.moretags) = "yaml:&#92;"resources_max&#92;""];</code>
+       * @return The resourcesMax.
+       */
+      @java.lang.Override
+      public int getResourcesMax() {
+        return resourcesMax_;
+      }
+      /**
+       * <pre>
+       * ResourcesMax defines maximum number of resources could be saved under an
+       * account
+       * </pre>
+       *
+       * <code>uint32 resources_max = 12 [json_name = "resourcesMax", (.gogoproto.moretags) = "yaml:&#92;"resources_max&#92;""];</code>
+       * @param value The resourcesMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcesMax(int value) {
+
+        resourcesMax_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ResourcesMax defines maximum number of resources could be saved under an
+       * account
+       * </pre>
+       *
+       * <code>uint32 resources_max = 12 [json_name = "resourcesMax", (.gogoproto.moretags) = "yaml:&#92;"resources_max&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcesMax() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        resourcesMax_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long certificateSizeMax_ ;
+      /**
+       * <pre>
+       * CertificateSizeMax defines maximum size of a certificate that could be
+       * saved under an account
+       * </pre>
+       *
+       * <code>uint64 certificate_size_max = 13 [json_name = "certificateSizeMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_size_max&#92;""];</code>
+       * @return The certificateSizeMax.
+       */
+      @java.lang.Override
+      public long getCertificateSizeMax() {
+        return certificateSizeMax_;
+      }
+      /**
+       * <pre>
+       * CertificateSizeMax defines maximum size of a certificate that could be
+       * saved under an account
+       * </pre>
+       *
+       * <code>uint64 certificate_size_max = 13 [json_name = "certificateSizeMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_size_max&#92;""];</code>
+       * @param value The certificateSizeMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateSizeMax(long value) {
+
+        certificateSizeMax_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CertificateSizeMax defines maximum size of a certificate that could be
+       * saved under an account
+       * </pre>
+       *
+       * <code>uint64 certificate_size_max = 13 [json_name = "certificateSizeMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_size_max&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateSizeMax() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        certificateSizeMax_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int certificateCountMax_ ;
+      /**
+       * <pre>
+       * CertificateCountMax defines maximum number of certificates that could be
+       * saved under an account
+       * </pre>
+       *
+       * <code>uint32 certificate_count_max = 14 [json_name = "certificateCountMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_count_max&#92;""];</code>
+       * @return The certificateCountMax.
+       */
+      @java.lang.Override
+      public int getCertificateCountMax() {
+        return certificateCountMax_;
+      }
+      /**
+       * <pre>
+       * CertificateCountMax defines maximum number of certificates that could be
+       * saved under an account
+       * </pre>
+       *
+       * <code>uint32 certificate_count_max = 14 [json_name = "certificateCountMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_count_max&#92;""];</code>
+       * @param value The certificateCountMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateCountMax(int value) {
+
+        certificateCountMax_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * CertificateCountMax defines maximum number of certificates that could be
+       * saved under an account
+       * </pre>
+       *
+       * <code>uint32 certificate_count_max = 14 [json_name = "certificateCountMax", (.gogoproto.moretags) = "yaml:&#92;"certificate_count_max&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateCountMax() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        certificateCountMax_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long metadataSizeMax_ ;
+      /**
+       * <pre>
+       * MetadataSizeMax defines maximum size of metadata that could be saved under
+       * an account
+       * </pre>
+       *
+       * <code>uint64 metadata_size_max = 15 [json_name = "metadataSizeMax", (.gogoproto.moretags) = "yaml:&#92;"metadata_size_max&#92;""];</code>
+       * @return The metadataSizeMax.
+       */
+      @java.lang.Override
+      public long getMetadataSizeMax() {
+        return metadataSizeMax_;
+      }
+      /**
+       * <pre>
+       * MetadataSizeMax defines maximum size of metadata that could be saved under
+       * an account
+       * </pre>
+       *
+       * <code>uint64 metadata_size_max = 15 [json_name = "metadataSizeMax", (.gogoproto.moretags) = "yaml:&#92;"metadata_size_max&#92;""];</code>
+       * @param value The metadataSizeMax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetadataSizeMax(long value) {
+
+        metadataSizeMax_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * MetadataSizeMax defines maximum size of metadata that could be saved under
+       * an account
+       * </pre>
+       *
+       * <code>uint64 metadata_size_max = 15 [json_name = "metadataSizeMax", (.gogoproto.moretags) = "yaml:&#92;"metadata_size_max&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetadataSizeMax() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        metadataSizeMax_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object escrowBroker_ = "";
+      /**
+       * <pre>
+       * EscrowBroker defines an address that will receive a commission for
+       * completed escrows
+       * </pre>
+       *
+       * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+       * @return The escrowBroker.
+       */
+      public java.lang.String getEscrowBroker() {
+        java.lang.Object ref = escrowBroker_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          escrowBroker_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowBroker defines an address that will receive a commission for
+       * completed escrows
+       * </pre>
+       *
+       * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+       * @return The bytes for escrowBroker.
+       */
+      public com.google.protobuf.ByteString
+          getEscrowBrokerBytes() {
+        java.lang.Object ref = escrowBroker_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          escrowBroker_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowBroker defines an address that will receive a commission for
+       * completed escrows
+       * </pre>
+       *
+       * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+       * @param value The escrowBroker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscrowBroker(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        escrowBroker_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowBroker defines an address that will receive a commission for
+       * completed escrows
+       * </pre>
+       *
+       * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEscrowBroker() {
+        escrowBroker_ = getDefaultInstance().getEscrowBroker();
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowBroker defines an address that will receive a commission for
+       * completed escrows
+       * </pre>
+       *
+       * <code>string escrow_broker = 16 [json_name = "escrowBroker", (.gogoproto.moretags) = "yaml:&#92;"escrow_broker&#92;""];</code>
+       * @param value The bytes for escrowBroker to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscrowBrokerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        escrowBroker_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object escrowCommission_ = "";
+      /**
+       * <pre>
+       * EscrowCommission defines the commission taken by the broker for a completed
+       * escrow, between 0 (no commission) and 1 (100% commission)
+       * </pre>
+       *
+       * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+       * @return The escrowCommission.
+       */
+      public java.lang.String getEscrowCommission() {
+        java.lang.Object ref = escrowCommission_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          escrowCommission_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowCommission defines the commission taken by the broker for a completed
+       * escrow, between 0 (no commission) and 1 (100% commission)
+       * </pre>
+       *
+       * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+       * @return The bytes for escrowCommission.
+       */
+      public com.google.protobuf.ByteString
+          getEscrowCommissionBytes() {
+        java.lang.Object ref = escrowCommission_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          escrowCommission_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowCommission defines the commission taken by the broker for a completed
+       * escrow, between 0 (no commission) and 1 (100% commission)
+       * </pre>
+       *
+       * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+       * @param value The escrowCommission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscrowCommission(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        escrowCommission_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowCommission defines the commission taken by the broker for a completed
+       * escrow, between 0 (no commission) and 1 (100% commission)
+       * </pre>
+       *
+       * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEscrowCommission() {
+        escrowCommission_ = getDefaultInstance().getEscrowCommission();
+        bitField0_ = (bitField0_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowCommission defines the commission taken by the broker for a completed
+       * escrow, between 0 (no commission) and 1 (100% commission)
+       * </pre>
+       *
+       * <code>string escrow_commission = 17 [json_name = "escrowCommission", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"escrow_commission&#92;""];</code>
+       * @param value The bytes for escrowCommission to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEscrowCommissionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        escrowCommission_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration escrowMaxPeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> escrowMaxPeriodBuilder_;
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the escrowMaxPeriod field is set.
+       */
+      public boolean hasEscrowMaxPeriod() {
+        return ((bitField0_ & 0x00020000) != 0);
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The escrowMaxPeriod.
+       */
+      public com.google.protobuf.Duration getEscrowMaxPeriod() {
+        if (escrowMaxPeriodBuilder_ == null) {
+          return escrowMaxPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : escrowMaxPeriod_;
+        } else {
+          return escrowMaxPeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setEscrowMaxPeriod(com.google.protobuf.Duration value) {
+        if (escrowMaxPeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          escrowMaxPeriod_ = value;
+        } else {
+          escrowMaxPeriodBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setEscrowMaxPeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (escrowMaxPeriodBuilder_ == null) {
+          escrowMaxPeriod_ = builderForValue.build();
+        } else {
+          escrowMaxPeriodBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeEscrowMaxPeriod(com.google.protobuf.Duration value) {
+        if (escrowMaxPeriodBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) != 0) &&
+            escrowMaxPeriod_ != null &&
+            escrowMaxPeriod_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getEscrowMaxPeriodBuilder().mergeFrom(value);
+          } else {
+            escrowMaxPeriod_ = value;
+          }
+        } else {
+          escrowMaxPeriodBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearEscrowMaxPeriod() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        escrowMaxPeriod_ = null;
+        if (escrowMaxPeriodBuilder_ != null) {
+          escrowMaxPeriodBuilder_.dispose();
+          escrowMaxPeriodBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getEscrowMaxPeriodBuilder() {
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return getEscrowMaxPeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getEscrowMaxPeriodOrBuilder() {
+        if (escrowMaxPeriodBuilder_ != null) {
+          return escrowMaxPeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return escrowMaxPeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : escrowMaxPeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * EscrowPeriod defines the maximum duration of an escrow in seconds
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration escrow_max_period = 18 [json_name = "escrowMaxPeriod", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"escrow_max_period&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getEscrowMaxPeriodFieldBuilder() {
+        if (escrowMaxPeriodBuilder_ == null) {
+          escrowMaxPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getEscrowMaxPeriod(),
+                  getParentForChildren(),
+                  isClean());
+          escrowMaxPeriod_ = null;
+        }
+        return escrowMaxPeriodBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.Config)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.Config)
+    private static final com.starnamed.x.configuration.v1beta1.TypesProto.Config DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.TypesProto.Config();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Config getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Config>
+        PARSER = new com.google.protobuf.AbstractParser<Config>() {
+      @java.lang.Override
+      public Config parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Config> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Config> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Config getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.Fees)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * FeeCoinDenom defines the denominator of the coin used to process fees
+     * </pre>
+     *
+     * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+     * @return The feeCoinDenom.
+     */
+    java.lang.String getFeeCoinDenom();
+    /**
+     * <pre>
+     * FeeCoinDenom defines the denominator of the coin used to process fees
+     * </pre>
+     *
+     * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+     * @return The bytes for feeCoinDenom.
+     */
+    com.google.protobuf.ByteString
+        getFeeCoinDenomBytes();
+
+    /**
+     * <pre>
+     * FeeCoinPrice defines the price of the coin
+     * </pre>
+     *
+     * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+     * @return The feeCoinPrice.
+     */
+    java.lang.String getFeeCoinPrice();
+    /**
+     * <pre>
+     * FeeCoinPrice defines the price of the coin
+     * </pre>
+     *
+     * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+     * @return The bytes for feeCoinPrice.
+     */
+    com.google.protobuf.ByteString
+        getFeeCoinPriceBytes();
+
+    /**
+     * <pre>
+     * FeeDefault is the parameter defining the default fee
+     * </pre>
+     *
+     * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+     * @return The feeDefault.
+     */
+    java.lang.String getFeeDefault();
+    /**
+     * <pre>
+     * FeeDefault is the parameter defining the default fee
+     * </pre>
+     *
+     * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+     * @return The bytes for feeDefault.
+     */
+    com.google.protobuf.ByteString
+        getFeeDefaultBytes();
+
+    /**
+     * <pre>
+     * RegisterAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+     * @return The registerAccountClosed.
+     */
+    java.lang.String getRegisterAccountClosed();
+    /**
+     * <pre>
+     * RegisterAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+     * @return The bytes for registerAccountClosed.
+     */
+    com.google.protobuf.ByteString
+        getRegisterAccountClosedBytes();
+
+    /**
+     * <pre>
+     * RegisterAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+     * @return The registerAccountOpen.
+     */
+    java.lang.String getRegisterAccountOpen();
+    /**
+     * <pre>
+     * RegisterAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+     * @return The bytes for registerAccountOpen.
+     */
+    com.google.protobuf.ByteString
+        getRegisterAccountOpenBytes();
+
+    /**
+     * <pre>
+     * TransferAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+     * @return The transferAccountClosed.
+     */
+    java.lang.String getTransferAccountClosed();
+    /**
+     * <pre>
+     * TransferAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+     * @return The bytes for transferAccountClosed.
+     */
+    com.google.protobuf.ByteString
+        getTransferAccountClosedBytes();
+
+    /**
+     * <pre>
+     * TransferAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+     * @return The transferAccountOpen.
+     */
+    java.lang.String getTransferAccountOpen();
+    /**
+     * <pre>
+     * TransferAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+     * @return The bytes for transferAccountOpen.
+     */
+    com.google.protobuf.ByteString
+        getTransferAccountOpenBytes();
+
+    /**
+     * <pre>
+     * ReplaceAccountResources is the fee to be paid to replace account's
+     * resources
+     * </pre>
+     *
+     * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+     * @return The replaceAccountResources.
+     */
+    java.lang.String getReplaceAccountResources();
+    /**
+     * <pre>
+     * ReplaceAccountResources is the fee to be paid to replace account's
+     * resources
+     * </pre>
+     *
+     * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+     * @return The bytes for replaceAccountResources.
+     */
+    com.google.protobuf.ByteString
+        getReplaceAccountResourcesBytes();
+
+    /**
+     * <pre>
+     * AddAccountCertificate is the fee to be paid to add a certificate to an
+     * account
+     * </pre>
+     *
+     * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+     * @return The addAccountCertificate.
+     */
+    java.lang.String getAddAccountCertificate();
+    /**
+     * <pre>
+     * AddAccountCertificate is the fee to be paid to add a certificate to an
+     * account
+     * </pre>
+     *
+     * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+     * @return The bytes for addAccountCertificate.
+     */
+    com.google.protobuf.ByteString
+        getAddAccountCertificateBytes();
+
+    /**
+     * <pre>
+     * DelAccountCertificate is the feed to be paid to delete a certificate in an
+     * account
+     * </pre>
+     *
+     * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+     * @return The delAccountCertificate.
+     */
+    java.lang.String getDelAccountCertificate();
+    /**
+     * <pre>
+     * DelAccountCertificate is the feed to be paid to delete a certificate in an
+     * account
+     * </pre>
+     *
+     * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+     * @return The bytes for delAccountCertificate.
+     */
+    com.google.protobuf.ByteString
+        getDelAccountCertificateBytes();
+
+    /**
+     * <pre>
+     * SetAccountMetadata is the fee to be paid to set account's metadata
+     * </pre>
+     *
+     * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+     * @return The setAccountMetadata.
+     */
+    java.lang.String getSetAccountMetadata();
+    /**
+     * <pre>
+     * SetAccountMetadata is the fee to be paid to set account's metadata
+     * </pre>
+     *
+     * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+     * @return The bytes for setAccountMetadata.
+     */
+    com.google.protobuf.ByteString
+        getSetAccountMetadataBytes();
+
+    /**
+     * <pre>
+     * RegisterDomain1 is the fee to be paid to register a domain with one
+     * character
+     * </pre>
+     *
+     * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+     * @return The registerDomain1.
+     */
+    java.lang.String getRegisterDomain1();
+    /**
+     * <pre>
+     * RegisterDomain1 is the fee to be paid to register a domain with one
+     * character
+     * </pre>
+     *
+     * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+     * @return The bytes for registerDomain1.
+     */
+    com.google.protobuf.ByteString
+        getRegisterDomain1Bytes();
+
+    /**
+     * <pre>
+     * RegisterDomain2 is the fee to be paid to register a domain with two
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+     * @return The registerDomain2.
+     */
+    java.lang.String getRegisterDomain2();
+    /**
+     * <pre>
+     * RegisterDomain2 is the fee to be paid to register a domain with two
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+     * @return The bytes for registerDomain2.
+     */
+    com.google.protobuf.ByteString
+        getRegisterDomain2Bytes();
+
+    /**
+     * <pre>
+     * RegisterDomain3 is the fee to be paid to register a domain with three
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+     * @return The registerDomain3.
+     */
+    java.lang.String getRegisterDomain3();
+    /**
+     * <pre>
+     * RegisterDomain3 is the fee to be paid to register a domain with three
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+     * @return The bytes for registerDomain3.
+     */
+    com.google.protobuf.ByteString
+        getRegisterDomain3Bytes();
+
+    /**
+     * <pre>
+     * RegisterDomain4 is the fee to be paid to register a domain with four
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+     * @return The registerDomain4.
+     */
+    java.lang.String getRegisterDomain4();
+    /**
+     * <pre>
+     * RegisterDomain4 is the fee to be paid to register a domain with four
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+     * @return The bytes for registerDomain4.
+     */
+    com.google.protobuf.ByteString
+        getRegisterDomain4Bytes();
+
+    /**
+     * <pre>
+     * RegisterDomain5 is the fee to be paid to register a domain with five
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+     * @return The registerDomain5.
+     */
+    java.lang.String getRegisterDomain5();
+    /**
+     * <pre>
+     * RegisterDomain5 is the fee to be paid to register a domain with five
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+     * @return The bytes for registerDomain5.
+     */
+    com.google.protobuf.ByteString
+        getRegisterDomain5Bytes();
+
+    /**
+     * <pre>
+     * RegisterDomainDefault is the fee to be paid to register a domain with more
+     * than five characters
+     * </pre>
+     *
+     * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+     * @return The registerDomainDefault.
+     */
+    java.lang.String getRegisterDomainDefault();
+    /**
+     * <pre>
+     * RegisterDomainDefault is the fee to be paid to register a domain with more
+     * than five characters
+     * </pre>
+     *
+     * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+     * @return The bytes for registerDomainDefault.
+     */
+    com.google.protobuf.ByteString
+        getRegisterDomainDefaultBytes();
+
+    /**
+     * <pre>
+     * register_open_domain_multiplier is the multiplication applied to fees in
+     * register domain operations if they're of open type
+     * </pre>
+     *
+     * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+     * @return The registerOpenDomainMultiplier.
+     */
+    java.lang.String getRegisterOpenDomainMultiplier();
+    /**
+     * <pre>
+     * register_open_domain_multiplier is the multiplication applied to fees in
+     * register domain operations if they're of open type
+     * </pre>
+     *
+     * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+     * @return The bytes for registerOpenDomainMultiplier.
+     */
+    com.google.protobuf.ByteString
+        getRegisterOpenDomainMultiplierBytes();
+
+    /**
+     * <pre>
+     * transfer_domain_closed is the fee to be paid to transfer a closed domain
+     * </pre>
+     *
+     * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+     * @return The transferDomainClosed.
+     */
+    java.lang.String getTransferDomainClosed();
+    /**
+     * <pre>
+     * transfer_domain_closed is the fee to be paid to transfer a closed domain
+     * </pre>
+     *
+     * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+     * @return The bytes for transferDomainClosed.
+     */
+    com.google.protobuf.ByteString
+        getTransferDomainClosedBytes();
+
+    /**
+     * <pre>
+     * transfer_domain_open is the fee to be paid to transfer open domains
+     * </pre>
+     *
+     * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+     * @return The transferDomainOpen.
+     */
+    java.lang.String getTransferDomainOpen();
+    /**
+     * <pre>
+     * transfer_domain_open is the fee to be paid to transfer open domains
+     * </pre>
+     *
+     * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+     * @return The bytes for transferDomainOpen.
+     */
+    com.google.protobuf.ByteString
+        getTransferDomainOpenBytes();
+
+    /**
+     * <pre>
+     * renew_domain_open is the fee to be paid to renew an open domain
+     * </pre>
+     *
+     * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+     * @return The renewDomainOpen.
+     */
+    java.lang.String getRenewDomainOpen();
+    /**
+     * <pre>
+     * renew_domain_open is the fee to be paid to renew an open domain
+     * </pre>
+     *
+     * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+     * @return The bytes for renewDomainOpen.
+     */
+    com.google.protobuf.ByteString
+        getRenewDomainOpenBytes();
+
+    /**
+     * <pre>
+     * create_escrow is the fee to be paid to create an escrow
+     * </pre>
+     *
+     * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+     * @return The createEscrow.
+     */
+    java.lang.String getCreateEscrow();
+    /**
+     * <pre>
+     * create_escrow is the fee to be paid to create an escrow
+     * </pre>
+     *
+     * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+     * @return The bytes for createEscrow.
+     */
+    com.google.protobuf.ByteString
+        getCreateEscrowBytes();
+
+    /**
+     * <pre>
+     * update_escrow is the fee to be paid to update an escrow
+     * </pre>
+     *
+     * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+     * @return The updateEscrow.
+     */
+    java.lang.String getUpdateEscrow();
+    /**
+     * <pre>
+     * update_escrow is the fee to be paid to update an escrow
+     * </pre>
+     *
+     * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+     * @return The bytes for updateEscrow.
+     */
+    com.google.protobuf.ByteString
+        getUpdateEscrowBytes();
+
+    /**
+     * <pre>
+     * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+     * </pre>
+     *
+     * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+     * @return The transferToEscrow.
+     */
+    java.lang.String getTransferToEscrow();
+    /**
+     * <pre>
+     * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+     * </pre>
+     *
+     * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+     * @return The bytes for transferToEscrow.
+     */
+    com.google.protobuf.ByteString
+        getTransferToEscrowBytes();
+
+    /**
+     * <pre>
+     * refund_escrow is the fee to be paid to refund the account or domain placed
+     * in an escrow
+     * </pre>
+     *
+     * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+     * @return The refundEscrow.
+     */
+    java.lang.String getRefundEscrow();
+    /**
+     * <pre>
+     * refund_escrow is the fee to be paid to refund the account or domain placed
+     * in an escrow
+     * </pre>
+     *
+     * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+     * @return The bytes for refundEscrow.
+     */
+    com.google.protobuf.ByteString
+        getRefundEscrowBytes();
+  }
+  /**
+   * <pre>
+   * Fees contains different type of fees to calculate coins to detract when
+   * processing different messages
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.Fees}
+   */
+  public static final class Fees extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.Fees)
+      FeesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Fees.newBuilder() to construct.
+    private Fees(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Fees() {
+      feeCoinDenom_ = "";
+      feeCoinPrice_ = "";
+      feeDefault_ = "";
+      registerAccountClosed_ = "";
+      registerAccountOpen_ = "";
+      transferAccountClosed_ = "";
+      transferAccountOpen_ = "";
+      replaceAccountResources_ = "";
+      addAccountCertificate_ = "";
+      delAccountCertificate_ = "";
+      setAccountMetadata_ = "";
+      registerDomain1_ = "";
+      registerDomain2_ = "";
+      registerDomain3_ = "";
+      registerDomain4_ = "";
+      registerDomain5_ = "";
+      registerDomainDefault_ = "";
+      registerOpenDomainMultiplier_ = "";
+      transferDomainClosed_ = "";
+      transferDomainOpen_ = "";
+      renewDomainOpen_ = "";
+      createEscrow_ = "";
+      updateEscrow_ = "";
+      transferToEscrow_ = "";
+      refundEscrow_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Fees();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Fees_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Fees_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees.class, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder.class);
+    }
+
+    public static final int FEE_COIN_DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feeCoinDenom_ = "";
+    /**
+     * <pre>
+     * FeeCoinDenom defines the denominator of the coin used to process fees
+     * </pre>
+     *
+     * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+     * @return The feeCoinDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getFeeCoinDenom() {
+      java.lang.Object ref = feeCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feeCoinDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FeeCoinDenom defines the denominator of the coin used to process fees
+     * </pre>
+     *
+     * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+     * @return The bytes for feeCoinDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeeCoinDenomBytes() {
+      java.lang.Object ref = feeCoinDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feeCoinDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEE_COIN_PRICE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feeCoinPrice_ = "";
+    /**
+     * <pre>
+     * FeeCoinPrice defines the price of the coin
+     * </pre>
+     *
+     * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+     * @return The feeCoinPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getFeeCoinPrice() {
+      java.lang.Object ref = feeCoinPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feeCoinPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FeeCoinPrice defines the price of the coin
+     * </pre>
+     *
+     * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+     * @return The bytes for feeCoinPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeeCoinPriceBytes() {
+      java.lang.Object ref = feeCoinPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feeCoinPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEE_DEFAULT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feeDefault_ = "";
+    /**
+     * <pre>
+     * FeeDefault is the parameter defining the default fee
+     * </pre>
+     *
+     * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+     * @return The feeDefault.
+     */
+    @java.lang.Override
+    public java.lang.String getFeeDefault() {
+      java.lang.Object ref = feeDefault_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feeDefault_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FeeDefault is the parameter defining the default fee
+     * </pre>
+     *
+     * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+     * @return The bytes for feeDefault.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeeDefaultBytes() {
+      java.lang.Object ref = feeDefault_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feeDefault_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_ACCOUNT_CLOSED_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerAccountClosed_ = "";
+    /**
+     * <pre>
+     * RegisterAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+     * @return The registerAccountClosed.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterAccountClosed() {
+      java.lang.Object ref = registerAccountClosed_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerAccountClosed_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+     * @return The bytes for registerAccountClosed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterAccountClosedBytes() {
+      java.lang.Object ref = registerAccountClosed_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerAccountClosed_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_ACCOUNT_OPEN_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerAccountOpen_ = "";
+    /**
+     * <pre>
+     * RegisterAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+     * @return The registerAccountOpen.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterAccountOpen() {
+      java.lang.Object ref = registerAccountOpen_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerAccountOpen_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+     * @return The bytes for registerAccountOpen.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterAccountOpenBytes() {
+      java.lang.Object ref = registerAccountOpen_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerAccountOpen_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_ACCOUNT_CLOSED_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferAccountClosed_ = "";
+    /**
+     * <pre>
+     * TransferAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+     * @return The transferAccountClosed.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferAccountClosed() {
+      java.lang.Object ref = transferAccountClosed_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferAccountClosed_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * TransferAccountClosed is the fee to be paid to register an account in a
+     * closed domain
+     * </pre>
+     *
+     * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+     * @return The bytes for transferAccountClosed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferAccountClosedBytes() {
+      java.lang.Object ref = transferAccountClosed_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferAccountClosed_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_ACCOUNT_OPEN_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferAccountOpen_ = "";
+    /**
+     * <pre>
+     * TransferAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+     * @return The transferAccountOpen.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferAccountOpen() {
+      java.lang.Object ref = transferAccountOpen_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferAccountOpen_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * TransferAccountOpen is the fee to be paid to register an account in an open
+     * domain
+     * </pre>
+     *
+     * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+     * @return The bytes for transferAccountOpen.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferAccountOpenBytes() {
+      java.lang.Object ref = transferAccountOpen_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferAccountOpen_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REPLACE_ACCOUNT_RESOURCES_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object replaceAccountResources_ = "";
+    /**
+     * <pre>
+     * ReplaceAccountResources is the fee to be paid to replace account's
+     * resources
+     * </pre>
+     *
+     * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+     * @return The replaceAccountResources.
+     */
+    @java.lang.Override
+    public java.lang.String getReplaceAccountResources() {
+      java.lang.Object ref = replaceAccountResources_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        replaceAccountResources_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ReplaceAccountResources is the fee to be paid to replace account's
+     * resources
+     * </pre>
+     *
+     * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+     * @return The bytes for replaceAccountResources.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReplaceAccountResourcesBytes() {
+      java.lang.Object ref = replaceAccountResources_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        replaceAccountResources_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADD_ACCOUNT_CERTIFICATE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addAccountCertificate_ = "";
+    /**
+     * <pre>
+     * AddAccountCertificate is the fee to be paid to add a certificate to an
+     * account
+     * </pre>
+     *
+     * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+     * @return The addAccountCertificate.
+     */
+    @java.lang.Override
+    public java.lang.String getAddAccountCertificate() {
+      java.lang.Object ref = addAccountCertificate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addAccountCertificate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * AddAccountCertificate is the fee to be paid to add a certificate to an
+     * account
+     * </pre>
+     *
+     * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+     * @return The bytes for addAccountCertificate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddAccountCertificateBytes() {
+      java.lang.Object ref = addAccountCertificate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addAccountCertificate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEL_ACCOUNT_CERTIFICATE_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object delAccountCertificate_ = "";
+    /**
+     * <pre>
+     * DelAccountCertificate is the feed to be paid to delete a certificate in an
+     * account
+     * </pre>
+     *
+     * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+     * @return The delAccountCertificate.
+     */
+    @java.lang.Override
+    public java.lang.String getDelAccountCertificate() {
+      java.lang.Object ref = delAccountCertificate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delAccountCertificate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DelAccountCertificate is the feed to be paid to delete a certificate in an
+     * account
+     * </pre>
+     *
+     * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+     * @return The bytes for delAccountCertificate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelAccountCertificateBytes() {
+      java.lang.Object ref = delAccountCertificate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delAccountCertificate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SET_ACCOUNT_METADATA_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object setAccountMetadata_ = "";
+    /**
+     * <pre>
+     * SetAccountMetadata is the fee to be paid to set account's metadata
+     * </pre>
+     *
+     * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+     * @return The setAccountMetadata.
+     */
+    @java.lang.Override
+    public java.lang.String getSetAccountMetadata() {
+      java.lang.Object ref = setAccountMetadata_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        setAccountMetadata_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SetAccountMetadata is the fee to be paid to set account's metadata
+     * </pre>
+     *
+     * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+     * @return The bytes for setAccountMetadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSetAccountMetadataBytes() {
+      java.lang.Object ref = setAccountMetadata_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        setAccountMetadata_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_DOMAIN_1_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerDomain1_ = "";
+    /**
+     * <pre>
+     * RegisterDomain1 is the fee to be paid to register a domain with one
+     * character
+     * </pre>
+     *
+     * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+     * @return The registerDomain1.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterDomain1() {
+      java.lang.Object ref = registerDomain1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerDomain1_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterDomain1 is the fee to be paid to register a domain with one
+     * character
+     * </pre>
+     *
+     * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+     * @return The bytes for registerDomain1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterDomain1Bytes() {
+      java.lang.Object ref = registerDomain1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerDomain1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_DOMAIN_2_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerDomain2_ = "";
+    /**
+     * <pre>
+     * RegisterDomain2 is the fee to be paid to register a domain with two
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+     * @return The registerDomain2.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterDomain2() {
+      java.lang.Object ref = registerDomain2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerDomain2_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterDomain2 is the fee to be paid to register a domain with two
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+     * @return The bytes for registerDomain2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterDomain2Bytes() {
+      java.lang.Object ref = registerDomain2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerDomain2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_DOMAIN_3_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerDomain3_ = "";
+    /**
+     * <pre>
+     * RegisterDomain3 is the fee to be paid to register a domain with three
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+     * @return The registerDomain3.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterDomain3() {
+      java.lang.Object ref = registerDomain3_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerDomain3_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterDomain3 is the fee to be paid to register a domain with three
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+     * @return The bytes for registerDomain3.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterDomain3Bytes() {
+      java.lang.Object ref = registerDomain3_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerDomain3_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_DOMAIN_4_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerDomain4_ = "";
+    /**
+     * <pre>
+     * RegisterDomain4 is the fee to be paid to register a domain with four
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+     * @return The registerDomain4.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterDomain4() {
+      java.lang.Object ref = registerDomain4_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerDomain4_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterDomain4 is the fee to be paid to register a domain with four
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+     * @return The bytes for registerDomain4.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterDomain4Bytes() {
+      java.lang.Object ref = registerDomain4_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerDomain4_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_DOMAIN_5_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerDomain5_ = "";
+    /**
+     * <pre>
+     * RegisterDomain5 is the fee to be paid to register a domain with five
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+     * @return The registerDomain5.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterDomain5() {
+      java.lang.Object ref = registerDomain5_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerDomain5_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterDomain5 is the fee to be paid to register a domain with five
+     * characters
+     * </pre>
+     *
+     * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+     * @return The bytes for registerDomain5.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterDomain5Bytes() {
+      java.lang.Object ref = registerDomain5_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerDomain5_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_DOMAIN_DEFAULT_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerDomainDefault_ = "";
+    /**
+     * <pre>
+     * RegisterDomainDefault is the fee to be paid to register a domain with more
+     * than five characters
+     * </pre>
+     *
+     * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+     * @return The registerDomainDefault.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterDomainDefault() {
+      java.lang.Object ref = registerDomainDefault_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerDomainDefault_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * RegisterDomainDefault is the fee to be paid to register a domain with more
+     * than five characters
+     * </pre>
+     *
+     * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+     * @return The bytes for registerDomainDefault.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterDomainDefaultBytes() {
+      java.lang.Object ref = registerDomainDefault_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerDomainDefault_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTER_OPEN_DOMAIN_MULTIPLIER_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerOpenDomainMultiplier_ = "";
+    /**
+     * <pre>
+     * register_open_domain_multiplier is the multiplication applied to fees in
+     * register domain operations if they're of open type
+     * </pre>
+     *
+     * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+     * @return The registerOpenDomainMultiplier.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterOpenDomainMultiplier() {
+      java.lang.Object ref = registerOpenDomainMultiplier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerOpenDomainMultiplier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * register_open_domain_multiplier is the multiplication applied to fees in
+     * register domain operations if they're of open type
+     * </pre>
+     *
+     * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+     * @return The bytes for registerOpenDomainMultiplier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterOpenDomainMultiplierBytes() {
+      java.lang.Object ref = registerOpenDomainMultiplier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerOpenDomainMultiplier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_DOMAIN_CLOSED_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferDomainClosed_ = "";
+    /**
+     * <pre>
+     * transfer_domain_closed is the fee to be paid to transfer a closed domain
+     * </pre>
+     *
+     * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+     * @return The transferDomainClosed.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferDomainClosed() {
+      java.lang.Object ref = transferDomainClosed_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferDomainClosed_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * transfer_domain_closed is the fee to be paid to transfer a closed domain
+     * </pre>
+     *
+     * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+     * @return The bytes for transferDomainClosed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferDomainClosedBytes() {
+      java.lang.Object ref = transferDomainClosed_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferDomainClosed_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_DOMAIN_OPEN_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferDomainOpen_ = "";
+    /**
+     * <pre>
+     * transfer_domain_open is the fee to be paid to transfer open domains
+     * </pre>
+     *
+     * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+     * @return The transferDomainOpen.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferDomainOpen() {
+      java.lang.Object ref = transferDomainOpen_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferDomainOpen_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * transfer_domain_open is the fee to be paid to transfer open domains
+     * </pre>
+     *
+     * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+     * @return The bytes for transferDomainOpen.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferDomainOpenBytes() {
+      java.lang.Object ref = transferDomainOpen_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferDomainOpen_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RENEW_DOMAIN_OPEN_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object renewDomainOpen_ = "";
+    /**
+     * <pre>
+     * renew_domain_open is the fee to be paid to renew an open domain
+     * </pre>
+     *
+     * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+     * @return The renewDomainOpen.
+     */
+    @java.lang.Override
+    public java.lang.String getRenewDomainOpen() {
+      java.lang.Object ref = renewDomainOpen_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        renewDomainOpen_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * renew_domain_open is the fee to be paid to renew an open domain
+     * </pre>
+     *
+     * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+     * @return The bytes for renewDomainOpen.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRenewDomainOpenBytes() {
+      java.lang.Object ref = renewDomainOpen_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        renewDomainOpen_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATE_ESCROW_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object createEscrow_ = "";
+    /**
+     * <pre>
+     * create_escrow is the fee to be paid to create an escrow
+     * </pre>
+     *
+     * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+     * @return The createEscrow.
+     */
+    @java.lang.Override
+    public java.lang.String getCreateEscrow() {
+      java.lang.Object ref = createEscrow_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createEscrow_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * create_escrow is the fee to be paid to create an escrow
+     * </pre>
+     *
+     * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+     * @return The bytes for createEscrow.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreateEscrowBytes() {
+      java.lang.Object ref = createEscrow_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createEscrow_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_ESCROW_FIELD_NUMBER = 23;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object updateEscrow_ = "";
+    /**
+     * <pre>
+     * update_escrow is the fee to be paid to update an escrow
+     * </pre>
+     *
+     * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+     * @return The updateEscrow.
+     */
+    @java.lang.Override
+    public java.lang.String getUpdateEscrow() {
+      java.lang.Object ref = updateEscrow_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        updateEscrow_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * update_escrow is the fee to be paid to update an escrow
+     * </pre>
+     *
+     * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+     * @return The bytes for updateEscrow.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUpdateEscrowBytes() {
+      java.lang.Object ref = updateEscrow_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        updateEscrow_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_TO_ESCROW_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferToEscrow_ = "";
+    /**
+     * <pre>
+     * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+     * </pre>
+     *
+     * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+     * @return The transferToEscrow.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferToEscrow() {
+      java.lang.Object ref = transferToEscrow_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferToEscrow_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+     * </pre>
+     *
+     * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+     * @return The bytes for transferToEscrow.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferToEscrowBytes() {
+      java.lang.Object ref = transferToEscrow_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferToEscrow_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REFUND_ESCROW_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object refundEscrow_ = "";
+    /**
+     * <pre>
+     * refund_escrow is the fee to be paid to refund the account or domain placed
+     * in an escrow
+     * </pre>
+     *
+     * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+     * @return The refundEscrow.
+     */
+    @java.lang.Override
+    public java.lang.String getRefundEscrow() {
+      java.lang.Object ref = refundEscrow_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        refundEscrow_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * refund_escrow is the fee to be paid to refund the account or domain placed
+     * in an escrow
+     * </pre>
+     *
+     * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+     * @return The bytes for refundEscrow.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRefundEscrowBytes() {
+      java.lang.Object ref = refundEscrow_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        refundEscrow_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeCoinDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feeCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeCoinPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feeCoinPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeDefault_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, feeDefault_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerAccountClosed_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, registerAccountClosed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerAccountOpen_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, registerAccountOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferAccountClosed_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, transferAccountClosed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferAccountOpen_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, transferAccountOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(replaceAccountResources_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, replaceAccountResources_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addAccountCertificate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, addAccountCertificate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delAccountCertificate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, delAccountCertificate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setAccountMetadata_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, setAccountMetadata_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain1_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, registerDomain1_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain2_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, registerDomain2_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain3_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, registerDomain3_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain4_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 15, registerDomain4_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain5_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, registerDomain5_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomainDefault_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 17, registerDomainDefault_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerOpenDomainMultiplier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, registerOpenDomainMultiplier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferDomainClosed_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, transferDomainClosed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferDomainOpen_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, transferDomainOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(renewDomainOpen_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, renewDomainOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createEscrow_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, createEscrow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updateEscrow_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, updateEscrow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferToEscrow_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, transferToEscrow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refundEscrow_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, refundEscrow_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeCoinDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feeCoinDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeCoinPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feeCoinPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feeDefault_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, feeDefault_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerAccountClosed_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, registerAccountClosed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerAccountOpen_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, registerAccountOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferAccountClosed_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, transferAccountClosed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferAccountOpen_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, transferAccountOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(replaceAccountResources_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, replaceAccountResources_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addAccountCertificate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, addAccountCertificate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delAccountCertificate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, delAccountCertificate_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(setAccountMetadata_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, setAccountMetadata_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain1_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, registerDomain1_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain2_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, registerDomain2_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain3_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, registerDomain3_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain4_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, registerDomain4_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomain5_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, registerDomain5_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerDomainDefault_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, registerDomainDefault_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerOpenDomainMultiplier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, registerOpenDomainMultiplier_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferDomainClosed_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, transferDomainClosed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferDomainOpen_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, transferDomainOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(renewDomainOpen_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, renewDomainOpen_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createEscrow_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, createEscrow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(updateEscrow_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, updateEscrow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferToEscrow_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, transferToEscrow_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(refundEscrow_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, refundEscrow_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.TypesProto.Fees)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.TypesProto.Fees other = (com.starnamed.x.configuration.v1beta1.TypesProto.Fees) obj;
+
+      if (!getFeeCoinDenom()
+          .equals(other.getFeeCoinDenom())) return false;
+      if (!getFeeCoinPrice()
+          .equals(other.getFeeCoinPrice())) return false;
+      if (!getFeeDefault()
+          .equals(other.getFeeDefault())) return false;
+      if (!getRegisterAccountClosed()
+          .equals(other.getRegisterAccountClosed())) return false;
+      if (!getRegisterAccountOpen()
+          .equals(other.getRegisterAccountOpen())) return false;
+      if (!getTransferAccountClosed()
+          .equals(other.getTransferAccountClosed())) return false;
+      if (!getTransferAccountOpen()
+          .equals(other.getTransferAccountOpen())) return false;
+      if (!getReplaceAccountResources()
+          .equals(other.getReplaceAccountResources())) return false;
+      if (!getAddAccountCertificate()
+          .equals(other.getAddAccountCertificate())) return false;
+      if (!getDelAccountCertificate()
+          .equals(other.getDelAccountCertificate())) return false;
+      if (!getSetAccountMetadata()
+          .equals(other.getSetAccountMetadata())) return false;
+      if (!getRegisterDomain1()
+          .equals(other.getRegisterDomain1())) return false;
+      if (!getRegisterDomain2()
+          .equals(other.getRegisterDomain2())) return false;
+      if (!getRegisterDomain3()
+          .equals(other.getRegisterDomain3())) return false;
+      if (!getRegisterDomain4()
+          .equals(other.getRegisterDomain4())) return false;
+      if (!getRegisterDomain5()
+          .equals(other.getRegisterDomain5())) return false;
+      if (!getRegisterDomainDefault()
+          .equals(other.getRegisterDomainDefault())) return false;
+      if (!getRegisterOpenDomainMultiplier()
+          .equals(other.getRegisterOpenDomainMultiplier())) return false;
+      if (!getTransferDomainClosed()
+          .equals(other.getTransferDomainClosed())) return false;
+      if (!getTransferDomainOpen()
+          .equals(other.getTransferDomainOpen())) return false;
+      if (!getRenewDomainOpen()
+          .equals(other.getRenewDomainOpen())) return false;
+      if (!getCreateEscrow()
+          .equals(other.getCreateEscrow())) return false;
+      if (!getUpdateEscrow()
+          .equals(other.getUpdateEscrow())) return false;
+      if (!getTransferToEscrow()
+          .equals(other.getTransferToEscrow())) return false;
+      if (!getRefundEscrow()
+          .equals(other.getRefundEscrow())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEE_COIN_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getFeeCoinDenom().hashCode();
+      hash = (37 * hash) + FEE_COIN_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getFeeCoinPrice().hashCode();
+      hash = (37 * hash) + FEE_DEFAULT_FIELD_NUMBER;
+      hash = (53 * hash) + getFeeDefault().hashCode();
+      hash = (37 * hash) + REGISTER_ACCOUNT_CLOSED_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterAccountClosed().hashCode();
+      hash = (37 * hash) + REGISTER_ACCOUNT_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterAccountOpen().hashCode();
+      hash = (37 * hash) + TRANSFER_ACCOUNT_CLOSED_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferAccountClosed().hashCode();
+      hash = (37 * hash) + TRANSFER_ACCOUNT_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferAccountOpen().hashCode();
+      hash = (37 * hash) + REPLACE_ACCOUNT_RESOURCES_FIELD_NUMBER;
+      hash = (53 * hash) + getReplaceAccountResources().hashCode();
+      hash = (37 * hash) + ADD_ACCOUNT_CERTIFICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getAddAccountCertificate().hashCode();
+      hash = (37 * hash) + DEL_ACCOUNT_CERTIFICATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDelAccountCertificate().hashCode();
+      hash = (37 * hash) + SET_ACCOUNT_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getSetAccountMetadata().hashCode();
+      hash = (37 * hash) + REGISTER_DOMAIN_1_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterDomain1().hashCode();
+      hash = (37 * hash) + REGISTER_DOMAIN_2_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterDomain2().hashCode();
+      hash = (37 * hash) + REGISTER_DOMAIN_3_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterDomain3().hashCode();
+      hash = (37 * hash) + REGISTER_DOMAIN_4_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterDomain4().hashCode();
+      hash = (37 * hash) + REGISTER_DOMAIN_5_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterDomain5().hashCode();
+      hash = (37 * hash) + REGISTER_DOMAIN_DEFAULT_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterDomainDefault().hashCode();
+      hash = (37 * hash) + REGISTER_OPEN_DOMAIN_MULTIPLIER_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterOpenDomainMultiplier().hashCode();
+      hash = (37 * hash) + TRANSFER_DOMAIN_CLOSED_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferDomainClosed().hashCode();
+      hash = (37 * hash) + TRANSFER_DOMAIN_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferDomainOpen().hashCode();
+      hash = (37 * hash) + RENEW_DOMAIN_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + getRenewDomainOpen().hashCode();
+      hash = (37 * hash) + CREATE_ESCROW_FIELD_NUMBER;
+      hash = (53 * hash) + getCreateEscrow().hashCode();
+      hash = (37 * hash) + UPDATE_ESCROW_FIELD_NUMBER;
+      hash = (53 * hash) + getUpdateEscrow().hashCode();
+      hash = (37 * hash) + TRANSFER_TO_ESCROW_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferToEscrow().hashCode();
+      hash = (37 * hash) + REFUND_ESCROW_FIELD_NUMBER;
+      hash = (53 * hash) + getRefundEscrow().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.TypesProto.Fees prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Fees contains different type of fees to calculate coins to detract when
+     * processing different messages
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.Fees}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.Fees)
+        com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Fees_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Fees_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.TypesProto.Fees.class, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.TypesProto.Fees.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feeCoinDenom_ = "";
+        feeCoinPrice_ = "";
+        feeDefault_ = "";
+        registerAccountClosed_ = "";
+        registerAccountOpen_ = "";
+        transferAccountClosed_ = "";
+        transferAccountOpen_ = "";
+        replaceAccountResources_ = "";
+        addAccountCertificate_ = "";
+        delAccountCertificate_ = "";
+        setAccountMetadata_ = "";
+        registerDomain1_ = "";
+        registerDomain2_ = "";
+        registerDomain3_ = "";
+        registerDomain4_ = "";
+        registerDomain5_ = "";
+        registerDomainDefault_ = "";
+        registerOpenDomainMultiplier_ = "";
+        transferDomainClosed_ = "";
+        transferDomainOpen_ = "";
+        renewDomainOpen_ = "";
+        createEscrow_ = "";
+        updateEscrow_ = "";
+        transferToEscrow_ = "";
+        refundEscrow_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_Fees_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees build() {
+        com.starnamed.x.configuration.v1beta1.TypesProto.Fees result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees buildPartial() {
+        com.starnamed.x.configuration.v1beta1.TypesProto.Fees result = new com.starnamed.x.configuration.v1beta1.TypesProto.Fees(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.TypesProto.Fees result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feeCoinDenom_ = feeCoinDenom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feeCoinPrice_ = feeCoinPrice_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.feeDefault_ = feeDefault_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.registerAccountClosed_ = registerAccountClosed_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.registerAccountOpen_ = registerAccountOpen_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.transferAccountClosed_ = transferAccountClosed_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.transferAccountOpen_ = transferAccountOpen_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.replaceAccountResources_ = replaceAccountResources_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.addAccountCertificate_ = addAccountCertificate_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.delAccountCertificate_ = delAccountCertificate_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.setAccountMetadata_ = setAccountMetadata_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.registerDomain1_ = registerDomain1_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.registerDomain2_ = registerDomain2_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.registerDomain3_ = registerDomain3_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.registerDomain4_ = registerDomain4_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.registerDomain5_ = registerDomain5_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.registerDomainDefault_ = registerDomainDefault_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.registerOpenDomainMultiplier_ = registerOpenDomainMultiplier_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.transferDomainClosed_ = transferDomainClosed_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.transferDomainOpen_ = transferDomainOpen_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.renewDomainOpen_ = renewDomainOpen_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.createEscrow_ = createEscrow_;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.updateEscrow_ = updateEscrow_;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.transferToEscrow_ = transferToEscrow_;
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.refundEscrow_ = refundEscrow_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.TypesProto.Fees) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.TypesProto.Fees)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.TypesProto.Fees other) {
+        if (other == com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance()) return this;
+        if (!other.getFeeCoinDenom().isEmpty()) {
+          feeCoinDenom_ = other.feeCoinDenom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFeeCoinPrice().isEmpty()) {
+          feeCoinPrice_ = other.feeCoinPrice_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getFeeDefault().isEmpty()) {
+          feeDefault_ = other.feeDefault_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getRegisterAccountClosed().isEmpty()) {
+          registerAccountClosed_ = other.registerAccountClosed_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getRegisterAccountOpen().isEmpty()) {
+          registerAccountOpen_ = other.registerAccountOpen_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getTransferAccountClosed().isEmpty()) {
+          transferAccountClosed_ = other.transferAccountClosed_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getTransferAccountOpen().isEmpty()) {
+          transferAccountOpen_ = other.transferAccountOpen_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getReplaceAccountResources().isEmpty()) {
+          replaceAccountResources_ = other.replaceAccountResources_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (!other.getAddAccountCertificate().isEmpty()) {
+          addAccountCertificate_ = other.addAccountCertificate_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getDelAccountCertificate().isEmpty()) {
+          delAccountCertificate_ = other.delAccountCertificate_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getSetAccountMetadata().isEmpty()) {
+          setAccountMetadata_ = other.setAccountMetadata_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getRegisterDomain1().isEmpty()) {
+          registerDomain1_ = other.registerDomain1_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (!other.getRegisterDomain2().isEmpty()) {
+          registerDomain2_ = other.registerDomain2_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        if (!other.getRegisterDomain3().isEmpty()) {
+          registerDomain3_ = other.registerDomain3_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (!other.getRegisterDomain4().isEmpty()) {
+          registerDomain4_ = other.registerDomain4_;
+          bitField0_ |= 0x00004000;
+          onChanged();
+        }
+        if (!other.getRegisterDomain5().isEmpty()) {
+          registerDomain5_ = other.registerDomain5_;
+          bitField0_ |= 0x00008000;
+          onChanged();
+        }
+        if (!other.getRegisterDomainDefault().isEmpty()) {
+          registerDomainDefault_ = other.registerDomainDefault_;
+          bitField0_ |= 0x00010000;
+          onChanged();
+        }
+        if (!other.getRegisterOpenDomainMultiplier().isEmpty()) {
+          registerOpenDomainMultiplier_ = other.registerOpenDomainMultiplier_;
+          bitField0_ |= 0x00020000;
+          onChanged();
+        }
+        if (!other.getTransferDomainClosed().isEmpty()) {
+          transferDomainClosed_ = other.transferDomainClosed_;
+          bitField0_ |= 0x00040000;
+          onChanged();
+        }
+        if (!other.getTransferDomainOpen().isEmpty()) {
+          transferDomainOpen_ = other.transferDomainOpen_;
+          bitField0_ |= 0x00080000;
+          onChanged();
+        }
+        if (!other.getRenewDomainOpen().isEmpty()) {
+          renewDomainOpen_ = other.renewDomainOpen_;
+          bitField0_ |= 0x00100000;
+          onChanged();
+        }
+        if (!other.getCreateEscrow().isEmpty()) {
+          createEscrow_ = other.createEscrow_;
+          bitField0_ |= 0x00200000;
+          onChanged();
+        }
+        if (!other.getUpdateEscrow().isEmpty()) {
+          updateEscrow_ = other.updateEscrow_;
+          bitField0_ |= 0x00400000;
+          onChanged();
+        }
+        if (!other.getTransferToEscrow().isEmpty()) {
+          transferToEscrow_ = other.transferToEscrow_;
+          bitField0_ |= 0x00800000;
+          onChanged();
+        }
+        if (!other.getRefundEscrow().isEmpty()) {
+          refundEscrow_ = other.refundEscrow_;
+          bitField0_ |= 0x01000000;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feeCoinDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feeCoinPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                feeDefault_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                registerAccountClosed_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                registerAccountOpen_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                transferAccountClosed_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                transferAccountOpen_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                replaceAccountResources_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                addAccountCertificate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                delAccountCertificate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                setAccountMetadata_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                registerDomain1_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                registerDomain2_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                registerDomain3_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                registerDomain4_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                registerDomain5_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                registerDomainDefault_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              case 146: {
+                registerOpenDomainMultiplier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00020000;
+                break;
+              } // case 146
+              case 154: {
+                transferDomainClosed_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 154
+              case 162: {
+                transferDomainOpen_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 162
+              case 170: {
+                renewDomainOpen_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 170
+              case 178: {
+                createEscrow_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 178
+              case 186: {
+                updateEscrow_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00400000;
+                break;
+              } // case 186
+              case 194: {
+                transferToEscrow_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00800000;
+                break;
+              } // case 194
+              case 202: {
+                refundEscrow_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x01000000;
+                break;
+              } // case 202
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feeCoinDenom_ = "";
+      /**
+       * <pre>
+       * FeeCoinDenom defines the denominator of the coin used to process fees
+       * </pre>
+       *
+       * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+       * @return The feeCoinDenom.
+       */
+      public java.lang.String getFeeCoinDenom() {
+        java.lang.Object ref = feeCoinDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feeCoinDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeeCoinDenom defines the denominator of the coin used to process fees
+       * </pre>
+       *
+       * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+       * @return The bytes for feeCoinDenom.
+       */
+      public com.google.protobuf.ByteString
+          getFeeCoinDenomBytes() {
+        java.lang.Object ref = feeCoinDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feeCoinDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeeCoinDenom defines the denominator of the coin used to process fees
+       * </pre>
+       *
+       * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+       * @param value The feeCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeCoinDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feeCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeCoinDenom defines the denominator of the coin used to process fees
+       * </pre>
+       *
+       * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeeCoinDenom() {
+        feeCoinDenom_ = getDefaultInstance().getFeeCoinDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeCoinDenom defines the denominator of the coin used to process fees
+       * </pre>
+       *
+       * <code>string fee_coin_denom = 1 [json_name = "feeCoinDenom", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_denom&#92;""];</code>
+       * @param value The bytes for feeCoinDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeCoinDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feeCoinDenom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feeCoinPrice_ = "";
+      /**
+       * <pre>
+       * FeeCoinPrice defines the price of the coin
+       * </pre>
+       *
+       * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+       * @return The feeCoinPrice.
+       */
+      public java.lang.String getFeeCoinPrice() {
+        java.lang.Object ref = feeCoinPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feeCoinPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeeCoinPrice defines the price of the coin
+       * </pre>
+       *
+       * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+       * @return The bytes for feeCoinPrice.
+       */
+      public com.google.protobuf.ByteString
+          getFeeCoinPriceBytes() {
+        java.lang.Object ref = feeCoinPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feeCoinPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeeCoinPrice defines the price of the coin
+       * </pre>
+       *
+       * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+       * @param value The feeCoinPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeCoinPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feeCoinPrice_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeCoinPrice defines the price of the coin
+       * </pre>
+       *
+       * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeeCoinPrice() {
+        feeCoinPrice_ = getDefaultInstance().getFeeCoinPrice();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeCoinPrice defines the price of the coin
+       * </pre>
+       *
+       * <code>string fee_coin_price = 2 [json_name = "feeCoinPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_coin_price&#92;""];</code>
+       * @param value The bytes for feeCoinPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeCoinPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feeCoinPrice_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feeDefault_ = "";
+      /**
+       * <pre>
+       * FeeDefault is the parameter defining the default fee
+       * </pre>
+       *
+       * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+       * @return The feeDefault.
+       */
+      public java.lang.String getFeeDefault() {
+        java.lang.Object ref = feeDefault_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feeDefault_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeeDefault is the parameter defining the default fee
+       * </pre>
+       *
+       * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+       * @return The bytes for feeDefault.
+       */
+      public com.google.protobuf.ByteString
+          getFeeDefaultBytes() {
+        java.lang.Object ref = feeDefault_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feeDefault_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FeeDefault is the parameter defining the default fee
+       * </pre>
+       *
+       * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+       * @param value The feeDefault to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeDefault(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feeDefault_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeDefault is the parameter defining the default fee
+       * </pre>
+       *
+       * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeeDefault() {
+        feeDefault_ = getDefaultInstance().getFeeDefault();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FeeDefault is the parameter defining the default fee
+       * </pre>
+       *
+       * <code>string fee_default = 3 [json_name = "feeDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"fee_default&#92;""];</code>
+       * @param value The bytes for feeDefault to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeeDefaultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feeDefault_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerAccountClosed_ = "";
+      /**
+       * <pre>
+       * RegisterAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+       * @return The registerAccountClosed.
+       */
+      public java.lang.String getRegisterAccountClosed() {
+        java.lang.Object ref = registerAccountClosed_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerAccountClosed_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+       * @return The bytes for registerAccountClosed.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterAccountClosedBytes() {
+        java.lang.Object ref = registerAccountClosed_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerAccountClosed_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+       * @param value The registerAccountClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterAccountClosed(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerAccountClosed_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterAccountClosed() {
+        registerAccountClosed_ = getDefaultInstance().getRegisterAccountClosed();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string register_account_closed = 4 [json_name = "registerAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_closed&#92;""];</code>
+       * @param value The bytes for registerAccountClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterAccountClosedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerAccountClosed_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerAccountOpen_ = "";
+      /**
+       * <pre>
+       * RegisterAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+       * @return The registerAccountOpen.
+       */
+      public java.lang.String getRegisterAccountOpen() {
+        java.lang.Object ref = registerAccountOpen_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerAccountOpen_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+       * @return The bytes for registerAccountOpen.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterAccountOpenBytes() {
+        java.lang.Object ref = registerAccountOpen_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerAccountOpen_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+       * @param value The registerAccountOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterAccountOpen(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerAccountOpen_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterAccountOpen() {
+        registerAccountOpen_ = getDefaultInstance().getRegisterAccountOpen();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string register_account_open = 5 [json_name = "registerAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_account_open&#92;""];</code>
+       * @param value The bytes for registerAccountOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterAccountOpenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerAccountOpen_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transferAccountClosed_ = "";
+      /**
+       * <pre>
+       * TransferAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+       * @return The transferAccountClosed.
+       */
+      public java.lang.String getTransferAccountClosed() {
+        java.lang.Object ref = transferAccountClosed_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferAccountClosed_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * TransferAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+       * @return The bytes for transferAccountClosed.
+       */
+      public com.google.protobuf.ByteString
+          getTransferAccountClosedBytes() {
+        java.lang.Object ref = transferAccountClosed_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferAccountClosed_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * TransferAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+       * @param value The transferAccountClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferAccountClosed(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferAccountClosed_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TransferAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferAccountClosed() {
+        transferAccountClosed_ = getDefaultInstance().getTransferAccountClosed();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TransferAccountClosed is the fee to be paid to register an account in a
+       * closed domain
+       * </pre>
+       *
+       * <code>string transfer_account_closed = 6 [json_name = "transferAccountClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_closed&#92;""];</code>
+       * @param value The bytes for transferAccountClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferAccountClosedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferAccountClosed_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transferAccountOpen_ = "";
+      /**
+       * <pre>
+       * TransferAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+       * @return The transferAccountOpen.
+       */
+      public java.lang.String getTransferAccountOpen() {
+        java.lang.Object ref = transferAccountOpen_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferAccountOpen_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * TransferAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+       * @return The bytes for transferAccountOpen.
+       */
+      public com.google.protobuf.ByteString
+          getTransferAccountOpenBytes() {
+        java.lang.Object ref = transferAccountOpen_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferAccountOpen_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * TransferAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+       * @param value The transferAccountOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferAccountOpen(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferAccountOpen_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TransferAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferAccountOpen() {
+        transferAccountOpen_ = getDefaultInstance().getTransferAccountOpen();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TransferAccountOpen is the fee to be paid to register an account in an open
+       * domain
+       * </pre>
+       *
+       * <code>string transfer_account_open = 7 [json_name = "transferAccountOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_account_open&#92;""];</code>
+       * @param value The bytes for transferAccountOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferAccountOpenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferAccountOpen_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object replaceAccountResources_ = "";
+      /**
+       * <pre>
+       * ReplaceAccountResources is the fee to be paid to replace account's
+       * resources
+       * </pre>
+       *
+       * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+       * @return The replaceAccountResources.
+       */
+      public java.lang.String getReplaceAccountResources() {
+        java.lang.Object ref = replaceAccountResources_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          replaceAccountResources_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ReplaceAccountResources is the fee to be paid to replace account's
+       * resources
+       * </pre>
+       *
+       * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+       * @return The bytes for replaceAccountResources.
+       */
+      public com.google.protobuf.ByteString
+          getReplaceAccountResourcesBytes() {
+        java.lang.Object ref = replaceAccountResources_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          replaceAccountResources_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ReplaceAccountResources is the fee to be paid to replace account's
+       * resources
+       * </pre>
+       *
+       * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+       * @param value The replaceAccountResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplaceAccountResources(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        replaceAccountResources_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ReplaceAccountResources is the fee to be paid to replace account's
+       * resources
+       * </pre>
+       *
+       * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReplaceAccountResources() {
+        replaceAccountResources_ = getDefaultInstance().getReplaceAccountResources();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ReplaceAccountResources is the fee to be paid to replace account's
+       * resources
+       * </pre>
+       *
+       * <code>string replace_account_resources = 8 [json_name = "replaceAccountResources", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"replace_account_resources&#92;""];</code>
+       * @param value The bytes for replaceAccountResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplaceAccountResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        replaceAccountResources_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addAccountCertificate_ = "";
+      /**
+       * <pre>
+       * AddAccountCertificate is the fee to be paid to add a certificate to an
+       * account
+       * </pre>
+       *
+       * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+       * @return The addAccountCertificate.
+       */
+      public java.lang.String getAddAccountCertificate() {
+        java.lang.Object ref = addAccountCertificate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addAccountCertificate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AddAccountCertificate is the fee to be paid to add a certificate to an
+       * account
+       * </pre>
+       *
+       * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+       * @return The bytes for addAccountCertificate.
+       */
+      public com.google.protobuf.ByteString
+          getAddAccountCertificateBytes() {
+        java.lang.Object ref = addAccountCertificate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addAccountCertificate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AddAccountCertificate is the fee to be paid to add a certificate to an
+       * account
+       * </pre>
+       *
+       * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+       * @param value The addAccountCertificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddAccountCertificate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        addAccountCertificate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AddAccountCertificate is the fee to be paid to add a certificate to an
+       * account
+       * </pre>
+       *
+       * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddAccountCertificate() {
+        addAccountCertificate_ = getDefaultInstance().getAddAccountCertificate();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AddAccountCertificate is the fee to be paid to add a certificate to an
+       * account
+       * </pre>
+       *
+       * <code>string add_account_certificate = 9 [json_name = "addAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"add_account_certificate&#92;""];</code>
+       * @param value The bytes for addAccountCertificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddAccountCertificateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        addAccountCertificate_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delAccountCertificate_ = "";
+      /**
+       * <pre>
+       * DelAccountCertificate is the feed to be paid to delete a certificate in an
+       * account
+       * </pre>
+       *
+       * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+       * @return The delAccountCertificate.
+       */
+      public java.lang.String getDelAccountCertificate() {
+        java.lang.Object ref = delAccountCertificate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delAccountCertificate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DelAccountCertificate is the feed to be paid to delete a certificate in an
+       * account
+       * </pre>
+       *
+       * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+       * @return The bytes for delAccountCertificate.
+       */
+      public com.google.protobuf.ByteString
+          getDelAccountCertificateBytes() {
+        java.lang.Object ref = delAccountCertificate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delAccountCertificate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DelAccountCertificate is the feed to be paid to delete a certificate in an
+       * account
+       * </pre>
+       *
+       * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+       * @param value The delAccountCertificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelAccountCertificate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        delAccountCertificate_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DelAccountCertificate is the feed to be paid to delete a certificate in an
+       * account
+       * </pre>
+       *
+       * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelAccountCertificate() {
+        delAccountCertificate_ = getDefaultInstance().getDelAccountCertificate();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DelAccountCertificate is the feed to be paid to delete a certificate in an
+       * account
+       * </pre>
+       *
+       * <code>string del_account_certificate = 10 [json_name = "delAccountCertificate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"del_account_certificate&#92;""];</code>
+       * @param value The bytes for delAccountCertificate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelAccountCertificateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        delAccountCertificate_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object setAccountMetadata_ = "";
+      /**
+       * <pre>
+       * SetAccountMetadata is the fee to be paid to set account's metadata
+       * </pre>
+       *
+       * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+       * @return The setAccountMetadata.
+       */
+      public java.lang.String getSetAccountMetadata() {
+        java.lang.Object ref = setAccountMetadata_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          setAccountMetadata_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SetAccountMetadata is the fee to be paid to set account's metadata
+       * </pre>
+       *
+       * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+       * @return The bytes for setAccountMetadata.
+       */
+      public com.google.protobuf.ByteString
+          getSetAccountMetadataBytes() {
+        java.lang.Object ref = setAccountMetadata_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          setAccountMetadata_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SetAccountMetadata is the fee to be paid to set account's metadata
+       * </pre>
+       *
+       * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+       * @param value The setAccountMetadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSetAccountMetadata(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        setAccountMetadata_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SetAccountMetadata is the fee to be paid to set account's metadata
+       * </pre>
+       *
+       * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSetAccountMetadata() {
+        setAccountMetadata_ = getDefaultInstance().getSetAccountMetadata();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SetAccountMetadata is the fee to be paid to set account's metadata
+       * </pre>
+       *
+       * <code>string set_account_metadata = 11 [json_name = "setAccountMetadata", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"set_account_metadata&#92;""];</code>
+       * @param value The bytes for setAccountMetadata to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSetAccountMetadataBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        setAccountMetadata_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerDomain1_ = "";
+      /**
+       * <pre>
+       * RegisterDomain1 is the fee to be paid to register a domain with one
+       * character
+       * </pre>
+       *
+       * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+       * @return The registerDomain1.
+       */
+      public java.lang.String getRegisterDomain1() {
+        java.lang.Object ref = registerDomain1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerDomain1_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain1 is the fee to be paid to register a domain with one
+       * character
+       * </pre>
+       *
+       * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+       * @return The bytes for registerDomain1.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterDomain1Bytes() {
+        java.lang.Object ref = registerDomain1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerDomain1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain1 is the fee to be paid to register a domain with one
+       * character
+       * </pre>
+       *
+       * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+       * @param value The registerDomain1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain1(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerDomain1_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain1 is the fee to be paid to register a domain with one
+       * character
+       * </pre>
+       *
+       * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterDomain1() {
+        registerDomain1_ = getDefaultInstance().getRegisterDomain1();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain1 is the fee to be paid to register a domain with one
+       * character
+       * </pre>
+       *
+       * <code>string register_domain_1 = 12 [json_name = "registerDomain1", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain1", (.gogoproto.moretags) = "yaml:&#92;"register_domain_1&#92;""];</code>
+       * @param value The bytes for registerDomain1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerDomain1_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerDomain2_ = "";
+      /**
+       * <pre>
+       * RegisterDomain2 is the fee to be paid to register a domain with two
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+       * @return The registerDomain2.
+       */
+      public java.lang.String getRegisterDomain2() {
+        java.lang.Object ref = registerDomain2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerDomain2_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain2 is the fee to be paid to register a domain with two
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+       * @return The bytes for registerDomain2.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterDomain2Bytes() {
+        java.lang.Object ref = registerDomain2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerDomain2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain2 is the fee to be paid to register a domain with two
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+       * @param value The registerDomain2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain2(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerDomain2_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain2 is the fee to be paid to register a domain with two
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterDomain2() {
+        registerDomain2_ = getDefaultInstance().getRegisterDomain2();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain2 is the fee to be paid to register a domain with two
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_2 = 13 [json_name = "registerDomain2", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain2", (.gogoproto.moretags) = "yaml:&#92;"register_domain_2&#92;""];</code>
+       * @param value The bytes for registerDomain2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerDomain2_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerDomain3_ = "";
+      /**
+       * <pre>
+       * RegisterDomain3 is the fee to be paid to register a domain with three
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+       * @return The registerDomain3.
+       */
+      public java.lang.String getRegisterDomain3() {
+        java.lang.Object ref = registerDomain3_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerDomain3_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain3 is the fee to be paid to register a domain with three
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+       * @return The bytes for registerDomain3.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterDomain3Bytes() {
+        java.lang.Object ref = registerDomain3_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerDomain3_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain3 is the fee to be paid to register a domain with three
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+       * @param value The registerDomain3 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain3(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerDomain3_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain3 is the fee to be paid to register a domain with three
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterDomain3() {
+        registerDomain3_ = getDefaultInstance().getRegisterDomain3();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain3 is the fee to be paid to register a domain with three
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_3 = 14 [json_name = "registerDomain3", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain3", (.gogoproto.moretags) = "yaml:&#92;"register_domain_3&#92;""];</code>
+       * @param value The bytes for registerDomain3 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain3Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerDomain3_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerDomain4_ = "";
+      /**
+       * <pre>
+       * RegisterDomain4 is the fee to be paid to register a domain with four
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+       * @return The registerDomain4.
+       */
+      public java.lang.String getRegisterDomain4() {
+        java.lang.Object ref = registerDomain4_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerDomain4_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain4 is the fee to be paid to register a domain with four
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+       * @return The bytes for registerDomain4.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterDomain4Bytes() {
+        java.lang.Object ref = registerDomain4_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerDomain4_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain4 is the fee to be paid to register a domain with four
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+       * @param value The registerDomain4 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain4(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerDomain4_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain4 is the fee to be paid to register a domain with four
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterDomain4() {
+        registerDomain4_ = getDefaultInstance().getRegisterDomain4();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain4 is the fee to be paid to register a domain with four
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_4 = 15 [json_name = "registerDomain4", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain4", (.gogoproto.moretags) = "yaml:&#92;"register_domain_4&#92;""];</code>
+       * @param value The bytes for registerDomain4 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain4Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerDomain4_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerDomain5_ = "";
+      /**
+       * <pre>
+       * RegisterDomain5 is the fee to be paid to register a domain with five
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+       * @return The registerDomain5.
+       */
+      public java.lang.String getRegisterDomain5() {
+        java.lang.Object ref = registerDomain5_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerDomain5_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain5 is the fee to be paid to register a domain with five
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+       * @return The bytes for registerDomain5.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterDomain5Bytes() {
+        java.lang.Object ref = registerDomain5_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerDomain5_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomain5 is the fee to be paid to register a domain with five
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+       * @param value The registerDomain5 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain5(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerDomain5_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain5 is the fee to be paid to register a domain with five
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterDomain5() {
+        registerDomain5_ = getDefaultInstance().getRegisterDomain5();
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomain5 is the fee to be paid to register a domain with five
+       * characters
+       * </pre>
+       *
+       * <code>string register_domain_5 = 16 [json_name = "registerDomain5", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.customname) = "RegisterDomain5", (.gogoproto.moretags) = "yaml:&#92;"register_domain_5&#92;""];</code>
+       * @param value The bytes for registerDomain5 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomain5Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerDomain5_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerDomainDefault_ = "";
+      /**
+       * <pre>
+       * RegisterDomainDefault is the fee to be paid to register a domain with more
+       * than five characters
+       * </pre>
+       *
+       * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+       * @return The registerDomainDefault.
+       */
+      public java.lang.String getRegisterDomainDefault() {
+        java.lang.Object ref = registerDomainDefault_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerDomainDefault_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomainDefault is the fee to be paid to register a domain with more
+       * than five characters
+       * </pre>
+       *
+       * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+       * @return The bytes for registerDomainDefault.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterDomainDefaultBytes() {
+        java.lang.Object ref = registerDomainDefault_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerDomainDefault_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * RegisterDomainDefault is the fee to be paid to register a domain with more
+       * than five characters
+       * </pre>
+       *
+       * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+       * @param value The registerDomainDefault to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomainDefault(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerDomainDefault_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomainDefault is the fee to be paid to register a domain with more
+       * than five characters
+       * </pre>
+       *
+       * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterDomainDefault() {
+        registerDomainDefault_ = getDefaultInstance().getRegisterDomainDefault();
+        bitField0_ = (bitField0_ & ~0x00010000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RegisterDomainDefault is the fee to be paid to register a domain with more
+       * than five characters
+       * </pre>
+       *
+       * <code>string register_domain_default = 17 [json_name = "registerDomainDefault", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_domain_default&#92;""];</code>
+       * @param value The bytes for registerDomainDefault to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterDomainDefaultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerDomainDefault_ = value;
+        bitField0_ |= 0x00010000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerOpenDomainMultiplier_ = "";
+      /**
+       * <pre>
+       * register_open_domain_multiplier is the multiplication applied to fees in
+       * register domain operations if they're of open type
+       * </pre>
+       *
+       * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+       * @return The registerOpenDomainMultiplier.
+       */
+      public java.lang.String getRegisterOpenDomainMultiplier() {
+        java.lang.Object ref = registerOpenDomainMultiplier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerOpenDomainMultiplier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * register_open_domain_multiplier is the multiplication applied to fees in
+       * register domain operations if they're of open type
+       * </pre>
+       *
+       * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+       * @return The bytes for registerOpenDomainMultiplier.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterOpenDomainMultiplierBytes() {
+        java.lang.Object ref = registerOpenDomainMultiplier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerOpenDomainMultiplier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * register_open_domain_multiplier is the multiplication applied to fees in
+       * register domain operations if they're of open type
+       * </pre>
+       *
+       * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+       * @param value The registerOpenDomainMultiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterOpenDomainMultiplier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerOpenDomainMultiplier_ = value;
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * register_open_domain_multiplier is the multiplication applied to fees in
+       * register domain operations if they're of open type
+       * </pre>
+       *
+       * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterOpenDomainMultiplier() {
+        registerOpenDomainMultiplier_ = getDefaultInstance().getRegisterOpenDomainMultiplier();
+        bitField0_ = (bitField0_ & ~0x00020000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * register_open_domain_multiplier is the multiplication applied to fees in
+       * register domain operations if they're of open type
+       * </pre>
+       *
+       * <code>string register_open_domain_multiplier = 18 [json_name = "registerOpenDomainMultiplier", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"register_open_domain_multiplier&#92;""];</code>
+       * @param value The bytes for registerOpenDomainMultiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterOpenDomainMultiplierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerOpenDomainMultiplier_ = value;
+        bitField0_ |= 0x00020000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transferDomainClosed_ = "";
+      /**
+       * <pre>
+       * transfer_domain_closed is the fee to be paid to transfer a closed domain
+       * </pre>
+       *
+       * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+       * @return The transferDomainClosed.
+       */
+      public java.lang.String getTransferDomainClosed() {
+        java.lang.Object ref = transferDomainClosed_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferDomainClosed_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * transfer_domain_closed is the fee to be paid to transfer a closed domain
+       * </pre>
+       *
+       * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+       * @return The bytes for transferDomainClosed.
+       */
+      public com.google.protobuf.ByteString
+          getTransferDomainClosedBytes() {
+        java.lang.Object ref = transferDomainClosed_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferDomainClosed_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * transfer_domain_closed is the fee to be paid to transfer a closed domain
+       * </pre>
+       *
+       * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+       * @param value The transferDomainClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferDomainClosed(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferDomainClosed_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_domain_closed is the fee to be paid to transfer a closed domain
+       * </pre>
+       *
+       * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferDomainClosed() {
+        transferDomainClosed_ = getDefaultInstance().getTransferDomainClosed();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_domain_closed is the fee to be paid to transfer a closed domain
+       * </pre>
+       *
+       * <code>string transfer_domain_closed = 19 [json_name = "transferDomainClosed", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_closed&#92;""];</code>
+       * @param value The bytes for transferDomainClosed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferDomainClosedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferDomainClosed_ = value;
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transferDomainOpen_ = "";
+      /**
+       * <pre>
+       * transfer_domain_open is the fee to be paid to transfer open domains
+       * </pre>
+       *
+       * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+       * @return The transferDomainOpen.
+       */
+      public java.lang.String getTransferDomainOpen() {
+        java.lang.Object ref = transferDomainOpen_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferDomainOpen_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * transfer_domain_open is the fee to be paid to transfer open domains
+       * </pre>
+       *
+       * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+       * @return The bytes for transferDomainOpen.
+       */
+      public com.google.protobuf.ByteString
+          getTransferDomainOpenBytes() {
+        java.lang.Object ref = transferDomainOpen_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferDomainOpen_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * transfer_domain_open is the fee to be paid to transfer open domains
+       * </pre>
+       *
+       * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+       * @param value The transferDomainOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferDomainOpen(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferDomainOpen_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_domain_open is the fee to be paid to transfer open domains
+       * </pre>
+       *
+       * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferDomainOpen() {
+        transferDomainOpen_ = getDefaultInstance().getTransferDomainOpen();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_domain_open is the fee to be paid to transfer open domains
+       * </pre>
+       *
+       * <code>string transfer_domain_open = 20 [json_name = "transferDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_domain_open&#92;""];</code>
+       * @param value The bytes for transferDomainOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferDomainOpenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferDomainOpen_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object renewDomainOpen_ = "";
+      /**
+       * <pre>
+       * renew_domain_open is the fee to be paid to renew an open domain
+       * </pre>
+       *
+       * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+       * @return The renewDomainOpen.
+       */
+      public java.lang.String getRenewDomainOpen() {
+        java.lang.Object ref = renewDomainOpen_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          renewDomainOpen_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * renew_domain_open is the fee to be paid to renew an open domain
+       * </pre>
+       *
+       * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+       * @return The bytes for renewDomainOpen.
+       */
+      public com.google.protobuf.ByteString
+          getRenewDomainOpenBytes() {
+        java.lang.Object ref = renewDomainOpen_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          renewDomainOpen_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * renew_domain_open is the fee to be paid to renew an open domain
+       * </pre>
+       *
+       * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+       * @param value The renewDomainOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRenewDomainOpen(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        renewDomainOpen_ = value;
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * renew_domain_open is the fee to be paid to renew an open domain
+       * </pre>
+       *
+       * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRenewDomainOpen() {
+        renewDomainOpen_ = getDefaultInstance().getRenewDomainOpen();
+        bitField0_ = (bitField0_ & ~0x00100000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * renew_domain_open is the fee to be paid to renew an open domain
+       * </pre>
+       *
+       * <code>string renew_domain_open = 21 [json_name = "renewDomainOpen", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"renew_domain_open&#92;""];</code>
+       * @param value The bytes for renewDomainOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRenewDomainOpenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        renewDomainOpen_ = value;
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object createEscrow_ = "";
+      /**
+       * <pre>
+       * create_escrow is the fee to be paid to create an escrow
+       * </pre>
+       *
+       * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+       * @return The createEscrow.
+       */
+      public java.lang.String getCreateEscrow() {
+        java.lang.Object ref = createEscrow_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createEscrow_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * create_escrow is the fee to be paid to create an escrow
+       * </pre>
+       *
+       * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+       * @return The bytes for createEscrow.
+       */
+      public com.google.protobuf.ByteString
+          getCreateEscrowBytes() {
+        java.lang.Object ref = createEscrow_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createEscrow_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * create_escrow is the fee to be paid to create an escrow
+       * </pre>
+       *
+       * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+       * @param value The createEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreateEscrow(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        createEscrow_ = value;
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * create_escrow is the fee to be paid to create an escrow
+       * </pre>
+       *
+       * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreateEscrow() {
+        createEscrow_ = getDefaultInstance().getCreateEscrow();
+        bitField0_ = (bitField0_ & ~0x00200000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * create_escrow is the fee to be paid to create an escrow
+       * </pre>
+       *
+       * <code>string create_escrow = 22 [json_name = "createEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"create_escrow&#92;""];</code>
+       * @param value The bytes for createEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreateEscrowBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        createEscrow_ = value;
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object updateEscrow_ = "";
+      /**
+       * <pre>
+       * update_escrow is the fee to be paid to update an escrow
+       * </pre>
+       *
+       * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+       * @return The updateEscrow.
+       */
+      public java.lang.String getUpdateEscrow() {
+        java.lang.Object ref = updateEscrow_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          updateEscrow_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * update_escrow is the fee to be paid to update an escrow
+       * </pre>
+       *
+       * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+       * @return The bytes for updateEscrow.
+       */
+      public com.google.protobuf.ByteString
+          getUpdateEscrowBytes() {
+        java.lang.Object ref = updateEscrow_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          updateEscrow_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * update_escrow is the fee to be paid to update an escrow
+       * </pre>
+       *
+       * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+       * @param value The updateEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateEscrow(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        updateEscrow_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * update_escrow is the fee to be paid to update an escrow
+       * </pre>
+       *
+       * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUpdateEscrow() {
+        updateEscrow_ = getDefaultInstance().getUpdateEscrow();
+        bitField0_ = (bitField0_ & ~0x00400000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * update_escrow is the fee to be paid to update an escrow
+       * </pre>
+       *
+       * <code>string update_escrow = 23 [json_name = "updateEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"update_escrow&#92;""];</code>
+       * @param value The bytes for updateEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUpdateEscrowBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        updateEscrow_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transferToEscrow_ = "";
+      /**
+       * <pre>
+       * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+       * </pre>
+       *
+       * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+       * @return The transferToEscrow.
+       */
+      public java.lang.String getTransferToEscrow() {
+        java.lang.Object ref = transferToEscrow_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferToEscrow_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+       * </pre>
+       *
+       * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+       * @return The bytes for transferToEscrow.
+       */
+      public com.google.protobuf.ByteString
+          getTransferToEscrowBytes() {
+        java.lang.Object ref = transferToEscrow_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferToEscrow_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+       * </pre>
+       *
+       * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+       * @param value The transferToEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferToEscrow(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferToEscrow_ = value;
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+       * </pre>
+       *
+       * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferToEscrow() {
+        transferToEscrow_ = getDefaultInstance().getTransferToEscrow();
+        bitField0_ = (bitField0_ & ~0x00800000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * transfer_to_escrow is the fee to be paid to transfer coins to an escrow
+       * </pre>
+       *
+       * <code>string transfer_to_escrow = 24 [json_name = "transferToEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"transfer_to_escrow&#92;""];</code>
+       * @param value The bytes for transferToEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferToEscrowBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferToEscrow_ = value;
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object refundEscrow_ = "";
+      /**
+       * <pre>
+       * refund_escrow is the fee to be paid to refund the account or domain placed
+       * in an escrow
+       * </pre>
+       *
+       * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+       * @return The refundEscrow.
+       */
+      public java.lang.String getRefundEscrow() {
+        java.lang.Object ref = refundEscrow_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          refundEscrow_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * refund_escrow is the fee to be paid to refund the account or domain placed
+       * in an escrow
+       * </pre>
+       *
+       * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+       * @return The bytes for refundEscrow.
+       */
+      public com.google.protobuf.ByteString
+          getRefundEscrowBytes() {
+        java.lang.Object ref = refundEscrow_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          refundEscrow_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * refund_escrow is the fee to be paid to refund the account or domain placed
+       * in an escrow
+       * </pre>
+       *
+       * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+       * @param value The refundEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefundEscrow(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        refundEscrow_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * refund_escrow is the fee to be paid to refund the account or domain placed
+       * in an escrow
+       * </pre>
+       *
+       * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRefundEscrow() {
+        refundEscrow_ = getDefaultInstance().getRefundEscrow();
+        bitField0_ = (bitField0_ & ~0x01000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * refund_escrow is the fee to be paid to refund the account or domain placed
+       * in an escrow
+       * </pre>
+       *
+       * <code>string refund_escrow = 25 [json_name = "refundEscrow", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"refund_escrow&#92;""];</code>
+       * @param value The bytes for refundEscrow to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRefundEscrowBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        refundEscrow_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.Fees)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.Fees)
+    private static final com.starnamed.x.configuration.v1beta1.TypesProto.Fees DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.TypesProto.Fees();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.Fees getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Fees>
+        PARSER = new com.google.protobuf.AbstractParser<Fees>() {
+      @java.lang.Override
+      public Fees parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Fees> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Fees> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return The config.
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.Config getConfig();
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getConfigOrBuilder();
+
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return Whether the fees field is set.
+     */
+    boolean hasFees();
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return The fees.
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees();
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder();
+  }
+  /**
+   * <pre>
+   * GenesisState - genesis state of x/configuration
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.class, com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.Builder.class);
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 1;
+    private com.starnamed.x.configuration.v1beta1.TypesProto.Config config_;
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return Whether the config field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return config_ != null;
+    }
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return The config.
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Config getConfig() {
+      return config_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+    }
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getConfigOrBuilder() {
+      return config_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+    }
+
+    public static final int FEES_FIELD_NUMBER = 2;
+    private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return Whether the fees field is set.
+     */
+    @java.lang.Override
+    public boolean hasFees() {
+      return fees_ != null;
+    }
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return The fees.
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees() {
+      return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+    }
+    /**
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder() {
+      return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (config_ != null) {
+        output.writeMessage(1, getConfig());
+      }
+      if (fees_ != null) {
+        output.writeMessage(2, getFees());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (config_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConfig());
+      }
+      if (fees_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getFees());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState other = (com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState) obj;
+
+      if (hasConfig() != other.hasConfig()) return false;
+      if (hasConfig()) {
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
+      }
+      if (hasFees() != other.hasFees()) return false;
+      if (hasFees()) {
+        if (!getFees()
+            .equals(other.getFees())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConfig()) {
+        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getConfig().hashCode();
+      }
+      if (hasFees()) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFees().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState - genesis state of x/configuration
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.GenesisState)
+        com.starnamed.x.configuration.v1beta1.TypesProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.class, com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        fees_ = null;
+        if (feesBuilder_ != null) {
+          feesBuilder_.dispose();
+          feesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.internal_static_starnamed_x_configuration_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState build() {
+        com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState buildPartial() {
+        com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState result = new com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fees_ = feesBuilder_ == null
+              ? fees_
+              : feesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState other) {
+        if (other == com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasConfig()) {
+          mergeConfig(other.getConfig());
+        }
+        if (other.hasFees()) {
+          mergeFees(other.getFees());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFeesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.starnamed.x.configuration.v1beta1.TypesProto.Config config_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder> configBuilder_;
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       * @return Whether the config field is set.
+       */
+      public boolean hasConfig() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       * @return The config.
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config getConfig() {
+        if (configBuilder_ == null) {
+          return config_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+        } else {
+          return configBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder setConfig(com.starnamed.x.configuration.v1beta1.TypesProto.Config value) {
+        if (configBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          config_ = value;
+        } else {
+          configBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder setConfig(
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder builderForValue) {
+        if (configBuilder_ == null) {
+          config_ = builderForValue.build();
+        } else {
+          configBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder mergeConfig(com.starnamed.x.configuration.v1beta1.TypesProto.Config value) {
+        if (configBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            config_ != null &&
+            config_ != com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
+          } else {
+            config_ = value;
+          }
+        } else {
+          configBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder clearConfig() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder getConfigBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getConfigOrBuilder() {
+        if (configBuilder_ != null) {
+          return configBuilder_.getMessageOrBuilder();
+        } else {
+          return config_ == null ?
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+        }
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder> 
+          getConfigFieldBuilder() {
+        if (configBuilder_ == null) {
+          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder>(
+                  getConfig(),
+                  getParentForChildren(),
+                  isClean());
+          config_ = null;
+        }
+        return configBuilder_;
+      }
+
+      private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder> feesBuilder_;
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       * @return Whether the fees field is set.
+       */
+      public boolean hasFees() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       * @return The fees.
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees() {
+        if (feesBuilder_ == null) {
+          return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+        } else {
+          return feesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder setFees(com.starnamed.x.configuration.v1beta1.TypesProto.Fees value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fees_ = value;
+        } else {
+          feesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder setFees(
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          fees_ = builderForValue.build();
+        } else {
+          feesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder mergeFees(com.starnamed.x.configuration.v1beta1.TypesProto.Fees value) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            fees_ != null &&
+            fees_ != com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance()) {
+            getFeesBuilder().mergeFrom(value);
+          } else {
+            fees_ = value;
+          }
+        } else {
+          feesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder clearFees() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fees_ = null;
+        if (feesBuilder_ != null) {
+          feesBuilder_.dispose();
+          feesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder getFeesBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getFeesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilder();
+        } else {
+          return fees_ == null ?
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+        }
+      }
+      /**
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 2 [json_name = "fees", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder>(
+                  getFees(),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.GenesisState)
+    private static final com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_Config_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_Config_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_Fees_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_Fees_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -166,14 +9758,14 @@ public final class TypesProto {
       "arnamed.x.configuration.v1beta1.ConfigB\025" +
       "\310\336\037\000\362\336\037\ryaml:\"config\"R\006config\022P\n\004fees\030\002 " +
       "\001(\0132\'.starnamed.x.configuration.v1beta1." +
-      "FeesB\023\310\336\037\000\362\336\037\013yaml:\"fees\"R\004feesB\222\002\n%com." +
+      "FeesB\023\310\336\037\000\362\336\037\013yaml:\"fees\"R\004feesB\220\002\n%com." +
       "starnamed.x.configuration.v1beta1B\nTypes" +
-      "ProtoP\001Z2github.com/iov-one/starnamed/x/" +
-      "configuration/types\242\002\003SXC\252\002!Starnamed.X." +
-      "Configuration.V1beta1\312\002!Starnamed\\X\\Conf" +
-      "iguration\\V1beta1\342\002-Starnamed\\X\\Configur" +
-      "ation\\V1beta1\\GPBMetadata\352\002$Starnamed::X" +
-      "::Configuration::V1beta1\250\342\036\001b\006proto3"
+      "ProtoZ2github.com/iov-one/starnamed/x/co" +
+      "nfiguration/types\242\002\003SXC\252\002!Starnamed.X.Co" +
+      "nfiguration.V1beta1\312\002!Starnamed\\X\\Config" +
+      "uration\\V1beta1\342\002-Starnamed\\X\\Configurat" +
+      "ion\\V1beta1\\GPBMetadata\352\002$Starnamed::X::" +
+      "Configuration::V1beta1\250\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

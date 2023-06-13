@@ -25,12 +25,12 @@ public final class CvmProto {
     java.lang.String[] descriptorData = {
       "\n\035shentu/cvm/v1alpha1/cvm.proto\022\023shentu." +
       "cvm.v1alpha1\032\024gogoproto/gogo.proto\032\031cosm" +
-      "os_proto/cosmos.protoB\315\001\n\027com.shentu.cvm" +
-      ".v1alpha1B\010CvmProtoP\001Z.github.com/shentu" +
-      "foundation/shentu/x/cvm/types\242\002\003SCX\252\002\023Sh" +
-      "entu.Cvm.V1alpha1\312\002\023Shentu\\Cvm\\V1alpha1\342" +
-      "\002\037Shentu\\Cvm\\V1alpha1\\GPBMetadata\352\002\025Shen" +
-      "tu::Cvm::V1alpha1\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
+      "os_proto/cosmos.protoB\313\001\n\027com.shentu.cvm" +
+      ".v1alpha1B\010CvmProtoZ.github.com/shentufo" +
+      "undation/shentu/x/cvm/types\242\002\003SCX\252\002\023Shen" +
+      "tu.Cvm.V1alpha1\312\002\023Shentu\\Cvm\\V1alpha1\342\002\037" +
+      "Shentu\\Cvm\\V1alpha1\\GPBMetadata\352\002\025Shentu" +
+      "::Cvm::V1alpha1\310\341\036\000\330\341\036\000\200\342\036\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

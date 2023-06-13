@@ -14,44 +14,4453 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgSetCodeAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+     * @return Whether the codeAuthorization field is set.
+     */
+    boolean hasCodeAuthorization();
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+     * @return The codeAuthorization.
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getCodeAuthorization();
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder getCodeAuthorizationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization}
+   */
+  public static final class MsgSetCodeAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization)
+      MsgSetCodeAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetCodeAuthorization.newBuilder() to construct.
+    private MsgSetCodeAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetCodeAuthorization() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetCodeAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_AUTHORIZATION_FIELD_NUMBER = 2;
+    private com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization codeAuthorization_;
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+     * @return Whether the codeAuthorization field is set.
+     */
+    @java.lang.Override
+    public boolean hasCodeAuthorization() {
+      return codeAuthorization_ != null;
+    }
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+     * @return The codeAuthorization.
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getCodeAuthorization() {
+      return codeAuthorization_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance() : codeAuthorization_;
+    }
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder getCodeAuthorizationOrBuilder() {
+      return codeAuthorization_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance() : codeAuthorization_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (codeAuthorization_ != null) {
+        output.writeMessage(2, getCodeAuthorization());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (codeAuthorization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCodeAuthorization());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasCodeAuthorization() != other.hasCodeAuthorization()) return false;
+      if (hasCodeAuthorization()) {
+        if (!getCodeAuthorization()
+            .equals(other.getCodeAuthorization())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasCodeAuthorization()) {
+        hash = (37 * hash) + CODE_AUTHORIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCodeAuthorization().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        codeAuthorization_ = null;
+        if (codeAuthorizationBuilder_ != null) {
+          codeAuthorizationBuilder_.dispose();
+          codeAuthorizationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.codeAuthorization_ = codeAuthorizationBuilder_ == null
+              ? codeAuthorization_
+              : codeAuthorizationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasCodeAuthorization()) {
+          mergeCodeAuthorization(other.getCodeAuthorization());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCodeAuthorizationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization codeAuthorization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> codeAuthorizationBuilder_;
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       * @return Whether the codeAuthorization field is set.
+       */
+      public boolean hasCodeAuthorization() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       * @return The codeAuthorization.
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization getCodeAuthorization() {
+        if (codeAuthorizationBuilder_ == null) {
+          return codeAuthorization_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance() : codeAuthorization_;
+        } else {
+          return codeAuthorizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      public Builder setCodeAuthorization(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization value) {
+        if (codeAuthorizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          codeAuthorization_ = value;
+        } else {
+          codeAuthorizationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      public Builder setCodeAuthorization(
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder builderForValue) {
+        if (codeAuthorizationBuilder_ == null) {
+          codeAuthorization_ = builderForValue.build();
+        } else {
+          codeAuthorizationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      public Builder mergeCodeAuthorization(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization value) {
+        if (codeAuthorizationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            codeAuthorization_ != null &&
+            codeAuthorization_ != com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance()) {
+            getCodeAuthorizationBuilder().mergeFrom(value);
+          } else {
+            codeAuthorization_ = value;
+          }
+        } else {
+          codeAuthorizationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      public Builder clearCodeAuthorization() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        codeAuthorization_ = null;
+        if (codeAuthorizationBuilder_ != null) {
+          codeAuthorizationBuilder_.dispose();
+          codeAuthorizationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder getCodeAuthorizationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCodeAuthorizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder getCodeAuthorizationOrBuilder() {
+        if (codeAuthorizationBuilder_ != null) {
+          return codeAuthorizationBuilder_.getMessageOrBuilder();
+        } else {
+          return codeAuthorization_ == null ?
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.getDefaultInstance() : codeAuthorization_;
+        }
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.CodeAuthorization code_authorization = 2 [json_name = "codeAuthorization"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder> 
+          getCodeAuthorizationFieldBuilder() {
+        if (codeAuthorizationBuilder_ == null) {
+          codeAuthorizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.CodeAuthorizationOrBuilder>(
+                  getCodeAuthorization(),
+                  getParentForChildren(),
+                  isClean());
+          codeAuthorization_ = null;
+        }
+        return codeAuthorizationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorization)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetCodeAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetCodeAuthorization>() {
+      @java.lang.Override
+      public MsgSetCodeAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetCodeAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetCodeAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetCodeAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse}
+   */
+  public static final class MsgSetCodeAuthorizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse)
+      MsgSetCodeAuthorizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetCodeAuthorizationResponse.newBuilder() to construct.
+    private MsgSetCodeAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetCodeAuthorizationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetCodeAuthorizationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgSetCodeAuthorizationResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetCodeAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetCodeAuthorizationResponse>() {
+      @java.lang.Override
+      public MsgSetCodeAuthorizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetCodeAuthorizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetCodeAuthorizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetCodeAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveCodeAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>uint64 code_id = 2 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization}
+   */
+  public static final class MsgRemoveCodeAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization)
+      MsgRemoveCodeAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveCodeAuthorization.newBuilder() to construct.
+    private MsgRemoveCodeAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveCodeAuthorization() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveCodeAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 2;
+    private long codeId_ = 0L;
+    /**
+     * <code>uint64 code_id = 2 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (codeId_ != 0L) {
+        output.writeUInt64(2, codeId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, codeId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        codeId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.codeId_ = codeId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long codeId_ ;
+      /**
+       * <code>uint64 code_id = 2 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <code>uint64 code_id = 2 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 code_id = 2 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorization)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveCodeAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveCodeAuthorization>() {
+      @java.lang.Override
+      public MsgRemoveCodeAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveCodeAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveCodeAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveCodeAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse}
+   */
+  public static final class MsgRemoveCodeAuthorizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse)
+      MsgRemoveCodeAuthorizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveCodeAuthorizationResponse.newBuilder() to construct.
+    private MsgRemoveCodeAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveCodeAuthorizationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveCodeAuthorizationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveCodeAuthorizationResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveCodeAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveCodeAuthorizationResponse>() {
+      @java.lang.Override
+      public MsgRemoveCodeAuthorizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveCodeAuthorizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveCodeAuthorizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveCodeAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetContractAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+     * @return Whether the contractAuthorization field is set.
+     */
+    boolean hasContractAuthorization();
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+     * @return The contractAuthorization.
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getContractAuthorization();
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+     */
+    com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder getContractAuthorizationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization}
+   */
+  public static final class MsgSetContractAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization)
+      MsgSetContractAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetContractAuthorization.newBuilder() to construct.
+    private MsgSetContractAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetContractAuthorization() {
+      sender_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetContractAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_AUTHORIZATION_FIELD_NUMBER = 2;
+    private com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization contractAuthorization_;
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+     * @return Whether the contractAuthorization field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractAuthorization() {
+      return contractAuthorization_ != null;
+    }
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+     * @return The contractAuthorization.
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getContractAuthorization() {
+      return contractAuthorization_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance() : contractAuthorization_;
+    }
+    /**
+     * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder getContractAuthorizationOrBuilder() {
+      return contractAuthorization_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance() : contractAuthorization_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (contractAuthorization_ != null) {
+        output.writeMessage(2, getContractAuthorization());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (contractAuthorization_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getContractAuthorization());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (hasContractAuthorization() != other.hasContractAuthorization()) return false;
+      if (hasContractAuthorization()) {
+        if (!getContractAuthorization()
+            .equals(other.getContractAuthorization())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      if (hasContractAuthorization()) {
+        hash = (37 * hash) + CONTRACT_AUTHORIZATION_FIELD_NUMBER;
+        hash = (53 * hash) + getContractAuthorization().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        contractAuthorization_ = null;
+        if (contractAuthorizationBuilder_ != null) {
+          contractAuthorizationBuilder_.dispose();
+          contractAuthorizationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractAuthorization_ = contractAuthorizationBuilder_ == null
+              ? contractAuthorization_
+              : contractAuthorizationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasContractAuthorization()) {
+          mergeContractAuthorization(other.getContractAuthorization());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getContractAuthorizationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization contractAuthorization_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> contractAuthorizationBuilder_;
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       * @return Whether the contractAuthorization field is set.
+       */
+      public boolean hasContractAuthorization() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       * @return The contractAuthorization.
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization getContractAuthorization() {
+        if (contractAuthorizationBuilder_ == null) {
+          return contractAuthorization_ == null ? com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance() : contractAuthorization_;
+        } else {
+          return contractAuthorizationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      public Builder setContractAuthorization(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization value) {
+        if (contractAuthorizationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractAuthorization_ = value;
+        } else {
+          contractAuthorizationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      public Builder setContractAuthorization(
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder builderForValue) {
+        if (contractAuthorizationBuilder_ == null) {
+          contractAuthorization_ = builderForValue.build();
+        } else {
+          contractAuthorizationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      public Builder mergeContractAuthorization(com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization value) {
+        if (contractAuthorizationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            contractAuthorization_ != null &&
+            contractAuthorization_ != com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance()) {
+            getContractAuthorizationBuilder().mergeFrom(value);
+          } else {
+            contractAuthorization_ = value;
+          }
+        } else {
+          contractAuthorizationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      public Builder clearContractAuthorization() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contractAuthorization_ = null;
+        if (contractAuthorizationBuilder_ != null) {
+          contractAuthorizationBuilder_.dispose();
+          contractAuthorizationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder getContractAuthorizationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getContractAuthorizationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      public com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder getContractAuthorizationOrBuilder() {
+        if (contractAuthorizationBuilder_ != null) {
+          return contractAuthorizationBuilder_.getMessageOrBuilder();
+        } else {
+          return contractAuthorization_ == null ?
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.getDefaultInstance() : contractAuthorization_;
+        }
+      }
+      /**
+       * <code>.publicawesome.stargaze.globalfee.v1.ContractAuthorization contract_authorization = 2 [json_name = "contractAuthorization"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder> 
+          getContractAuthorizationFieldBuilder() {
+        if (contractAuthorizationBuilder_ == null) {
+          contractAuthorizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorization.Builder, com.publicawesome.stargaze.globalfee.v1.GlobalfeeProto.ContractAuthorizationOrBuilder>(
+                  getContractAuthorization(),
+                  getParentForChildren(),
+                  isClean());
+          contractAuthorization_ = null;
+        }
+        return contractAuthorizationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorization)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetContractAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetContractAuthorization>() {
+      @java.lang.Override
+      public MsgSetContractAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetContractAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetContractAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgSetContractAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse}
+   */
+  public static final class MsgSetContractAuthorizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse)
+      MsgSetContractAuthorizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgSetContractAuthorizationResponse.newBuilder() to construct.
+    private MsgSetContractAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgSetContractAuthorizationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgSetContractAuthorizationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgSetContractAuthorizationResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgSetContractAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgSetContractAuthorizationResponse>() {
+      @java.lang.Override
+      public MsgSetContractAuthorizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgSetContractAuthorizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgSetContractAuthorizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgSetContractAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveContractAuthorizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    java.lang.String getSender();
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    com.google.protobuf.ByteString
+        getSenderBytes();
+
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    java.lang.String getContractAddress();
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressBytes();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization}
+   */
+  public static final class MsgRemoveContractAuthorization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization)
+      MsgRemoveContractAuthorizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveContractAuthorization.newBuilder() to construct.
+    private MsgRemoveContractAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveContractAuthorization() {
+      sender_ = "";
+      contractAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveContractAuthorization();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.Builder.class);
+    }
+
+    public static final int SENDER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sender_ = "";
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The sender.
+     */
+    @java.lang.Override
+    public java.lang.String getSender() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sender_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sender = 1 [json_name = "sender"];</code>
+     * @return The bytes for sender.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSenderBytes() {
+      java.lang.Object ref = sender_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contractAddress_ = "";
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getContractAddress() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contractAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+     * @return The bytes for contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContractAddressBytes() {
+      java.lang.Object ref = contractAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contractAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contractAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sender_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contractAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization) obj;
+
+      if (!getSender()
+          .equals(other.getSender())) return false;
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SENDER_FIELD_NUMBER;
+      hash = (53 * hash) + getSender().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sender_ = "";
+        contractAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sender_ = sender_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization.getDefaultInstance()) return this;
+        if (!other.getSender().isEmpty()) {
+          sender_ = other.sender_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContractAddress().isEmpty()) {
+          contractAddress_ = other.contractAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sender_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contractAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sender_ = "";
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The sender.
+       */
+      public java.lang.String getSender() {
+        java.lang.Object ref = sender_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sender_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return The bytes for sender.
+       */
+      public com.google.protobuf.ByteString
+          getSenderBytes() {
+        java.lang.Object ref = sender_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sender_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSender(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSender() {
+        sender_ = getDefaultInstance().getSender();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sender = 1 [json_name = "sender"];</code>
+       * @param value The bytes for sender to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSenderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sender_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contractAddress_ = "";
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The contractAddress.
+       */
+      public java.lang.String getContractAddress() {
+        java.lang.Object ref = contractAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contractAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return The bytes for contractAddress.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressBytes() {
+        java.lang.Object ref = contractAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contractAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string contract_address = 2 [json_name = "contractAddress"];</code>
+       * @param value The bytes for contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contractAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorization)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveContractAuthorization>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveContractAuthorization>() {
+      @java.lang.Override
+      public MsgRemoveContractAuthorization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveContractAuthorization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveContractAuthorization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemoveContractAuthorizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse}
+   */
+  public static final class MsgRemoveContractAuthorizationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse)
+      MsgRemoveContractAuthorizationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemoveContractAuthorizationResponse.newBuilder() to construct.
+    private MsgRemoveContractAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemoveContractAuthorizationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemoveContractAuthorizationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse other = (com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse)
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.class, com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse build() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse buildPartial() {
+        com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse result = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse) {
+          return mergeFrom((com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse other) {
+        if (other == com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.globalfee.v1.MsgRemoveContractAuthorizationResponse)
+    private static final com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse();
+    }
+
+    public static com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemoveContractAuthorizationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemoveContractAuthorizationResponse>() {
+      @java.lang.Override
+      public MsgRemoveContractAuthorizationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemoveContractAuthorizationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemoveContractAuthorizationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.globalfee.v1.TxProto.MsgRemoveContractAuthorizationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorization_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgSetCodeAuthorizationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorization_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveCodeAuthorizationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorization_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgSetContractAuthorizationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorization_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_globalfee_v1_MsgRemoveContractAuthorizationResponse_fieldAccessorTable;
 
@@ -100,14 +4509,14 @@ public final class TxProto {
       "globalfee.v1.MsgRemoveContractAuthorizat" +
       "ion\032K.publicawesome.stargaze.globalfee.v" +
       "1.MsgRemoveContractAuthorizationResponse" +
-      "B\233\002\n\'com.publicawesome.stargaze.globalfe" +
-      "e.v1B\007TxProtoP\001Z8github.com/public-aweso" +
-      "me/stargaze/v11/x/globalfee/types\242\002\003PSG\252" +
-      "\002#Publicawesome.Stargaze.Globalfee.V1\312\002#" +
-      "Publicawesome\\Stargaze\\Globalfee\\V1\342\002/Pu" +
-      "blicawesome\\Stargaze\\Globalfee\\V1\\GPBMet" +
-      "adata\352\002&Publicawesome::Stargaze::Globalf" +
-      "ee::V1b\006proto3"
+      "B\231\002\n\'com.publicawesome.stargaze.globalfe" +
+      "e.v1B\007TxProtoZ8github.com/public-awesome" +
+      "/stargaze/v11/x/globalfee/types\242\002\003PSG\252\002#" +
+      "Publicawesome.Stargaze.Globalfee.V1\312\002#Pu" +
+      "blicawesome\\Stargaze\\Globalfee\\V1\342\002/Publ" +
+      "icawesome\\Stargaze\\Globalfee\\V1\\GPBMetad" +
+      "ata\352\002&Publicawesome::Stargaze::Globalfee" +
+      "::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

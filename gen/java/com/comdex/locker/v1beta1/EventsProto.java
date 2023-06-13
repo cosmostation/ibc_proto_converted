@@ -24,12 +24,12 @@ public final class EventsProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"comdex/locker/v1beta1/events.proto\022\025co" +
-      "mdex.locker.v1beta1B\320\001\n\031com.comdex.locke" +
-      "r.v1beta1B\013EventsProtoP\001Z0github.com/com" +
-      "dex-official/comdex/x/locker/types\242\002\003CLX" +
-      "\252\002\025Comdex.Locker.V1beta1\312\002\025Comdex\\Locker" +
-      "\\V1beta1\342\002!Comdex\\Locker\\V1beta1\\GPBMeta" +
-      "data\352\002\027Comdex::Locker::V1beta1b\006proto3"
+      "mdex.locker.v1beta1B\316\001\n\031com.comdex.locke" +
+      "r.v1beta1B\013EventsProtoZ0github.com/comde" +
+      "x-official/comdex/x/locker/types\242\002\003CLX\252\002" +
+      "\025Comdex.Locker.V1beta1\312\002\025Comdex\\Locker\\V" +
+      "1beta1\342\002!Comdex\\Locker\\V1beta1\\GPBMetada" +
+      "ta\352\002\027Comdex::Locker::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

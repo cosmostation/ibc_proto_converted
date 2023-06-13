@@ -14,104 +14,16097 @@ public final class ProofProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryProofRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.QueryProofRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * RequestID is ID of an oracle request
+     * </pre>
+     *
+     * <code>uint64 request_id = 1 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    long getRequestId();
+
+    /**
+     * <pre>
+     * height is block height
+     * </pre>
+     *
+     * <code>int64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+  }
+  /**
+   * <pre>
+   * QueryProofRequest is request type for the Service/Proof RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.QueryProofRequest}
+   */
+  public static final class QueryProofRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.QueryProofRequest)
+      QueryProofRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProofRequest.newBuilder() to construct.
+    private QueryProofRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProofRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProofRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.QueryProofRequest.class, com.bandchain.v1.oracle.ProofProto.QueryProofRequest.Builder.class);
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    private long requestId_ = 0L;
+    /**
+     * <pre>
+     * RequestID is ID of an oracle request
+     * </pre>
+     *
+     * <code>uint64 request_id = 1 [json_name = "requestId"];</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public long getRequestId() {
+      return requestId_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private long height_ = 0L;
+    /**
+     * <pre>
+     * height is block height
+     * </pre>
+     *
+     * <code>int64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (requestId_ != 0L) {
+        output.writeUInt64(1, requestId_);
+      }
+      if (height_ != 0L) {
+        output.writeInt64(2, height_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (requestId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, requestId_);
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, height_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.QueryProofRequest)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.QueryProofRequest other = (com.bandchain.v1.oracle.ProofProto.QueryProofRequest) obj;
+
+      if (getRequestId()
+          != other.getRequestId()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRequestId());
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.QueryProofRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryProofRequest is request type for the Service/Proof RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.QueryProofRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.QueryProofRequest)
+        com.bandchain.v1.oracle.ProofProto.QueryProofRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.QueryProofRequest.class, com.bandchain.v1.oracle.ProofProto.QueryProofRequest.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.QueryProofRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestId_ = 0L;
+        height_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryProofRequest getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.QueryProofRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryProofRequest build() {
+        com.bandchain.v1.oracle.ProofProto.QueryProofRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryProofRequest buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.QueryProofRequest result = new com.bandchain.v1.oracle.ProofProto.QueryProofRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.QueryProofRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestId_ = requestId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.height_ = height_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.QueryProofRequest) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.QueryProofRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.QueryProofRequest other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.QueryProofRequest.getDefaultInstance()) return this;
+        if (other.getRequestId() != 0L) {
+          setRequestId(other.getRequestId());
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                requestId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long requestId_ ;
+      /**
+       * <pre>
+       * RequestID is ID of an oracle request
+       * </pre>
+       *
+       * <code>uint64 request_id = 1 [json_name = "requestId"];</code>
+       * @return The requestId.
+       */
+      @java.lang.Override
+      public long getRequestId() {
+        return requestId_;
+      }
+      /**
+       * <pre>
+       * RequestID is ID of an oracle request
+       * </pre>
+       *
+       * <code>uint64 request_id = 1 [json_name = "requestId"];</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(long value) {
+
+        requestId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * RequestID is ID of an oracle request
+       * </pre>
+       *
+       * <code>uint64 request_id = 1 [json_name = "requestId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        requestId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long height_ ;
+      /**
+       * <pre>
+       * height is block height
+       * </pre>
+       *
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <pre>
+       * height is block height
+       * </pre>
+       *
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * height is block height
+       * </pre>
+       *
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.QueryProofRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.QueryProofRequest)
+    private static final com.bandchain.v1.oracle.ProofProto.QueryProofRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.QueryProofRequest();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProofRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProofRequest>() {
+      @java.lang.Override
+      public QueryProofRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProofRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProofRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.QueryProofRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.QueryProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * height is block height
+     * </pre>
+     *
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <pre>
+     * result is the proof
+     * </pre>
+     *
+     * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <pre>
+     * result is the proof
+     * </pre>
+     *
+     * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    com.bandchain.v1.oracle.ProofProto.SingleProofResponse getResult();
+    /**
+     * <pre>
+     * result is the proof
+     * </pre>
+     *
+     * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder getResultOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryChainIDResponse is response type for the Service/Proof RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.QueryProofResponse}
+   */
+  public static final class QueryProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.QueryProofResponse)
+      QueryProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryProofResponse.newBuilder() to construct.
+    private QueryProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryProofResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.QueryProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryProofResponse.Builder.class);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 1;
+    private long height_ = 0L;
+    /**
+     * <pre>
+     * height is block height
+     * </pre>
+     *
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private com.bandchain.v1.oracle.ProofProto.SingleProofResponse result_;
+    /**
+     * <pre>
+     * result is the proof
+     * </pre>
+     *
+     * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <pre>
+     * result is the proof
+     * </pre>
+     *
+     * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.SingleProofResponse getResult() {
+      return result_ == null ? com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance() : result_;
+    }
+    /**
+     * <pre>
+     * result is the proof
+     * </pre>
+     *
+     * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (height_ != 0L) {
+        output.writeInt64(1, height_);
+      }
+      if (result_ != null) {
+        output.writeMessage(2, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, height_);
+      }
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.QueryProofResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.QueryProofResponse other = (com.bandchain.v1.oracle.ProofProto.QueryProofResponse) obj;
+
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.QueryProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryChainIDResponse is response type for the Service/Proof RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.QueryProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.QueryProofResponse)
+        com.bandchain.v1.oracle.ProofProto.QueryProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.QueryProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryProofResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.QueryProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        height_ = 0L;
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryProofResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.QueryProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryProofResponse build() {
+        com.bandchain.v1.oracle.ProofProto.QueryProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryProofResponse buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.QueryProofResponse result = new com.bandchain.v1.oracle.ProofProto.QueryProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.QueryProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.QueryProofResponse) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.QueryProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.QueryProofResponse other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.QueryProofResponse.getDefaultInstance()) return this;
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long height_ ;
+      /**
+       * <pre>
+       * height is block height
+       * </pre>
+       *
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <pre>
+       * height is block height
+       * </pre>
+       *
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * height is block height
+       * </pre>
+       *
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.SingleProofResponse result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.SingleProofResponse, com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder> resultBuilder_;
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return The result.
+       */
+      public com.bandchain.v1.oracle.ProofProto.SingleProofResponse getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(com.bandchain.v1.oracle.ProofProto.SingleProofResponse value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(
+          com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeResult(com.bandchain.v1.oracle.ProofProto.SingleProofResponse value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            result_ != null &&
+            result_ != com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder getResultBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <pre>
+       * result is the proof
+       * </pre>
+       *
+       * <code>.bandchain.v1.oracle.SingleProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.SingleProofResponse, com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.SingleProofResponse, com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.QueryProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.QueryProofResponse)
+    private static final com.bandchain.v1.oracle.ProofProto.QueryProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.QueryProofResponse();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryProofResponse>() {
+      @java.lang.Override
+      public QueryProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.QueryProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMultiProofRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.QueryMultiProofRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * request_ids is the list of request IDs
+     * </pre>
+     *
+     * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+     * @return A list containing the requestIds.
+     */
+    java.util.List<java.lang.Long> getRequestIdsList();
+    /**
+     * <pre>
+     * request_ids is the list of request IDs
+     * </pre>
+     *
+     * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+     * @return The count of requestIds.
+     */
+    int getRequestIdsCount();
+    /**
+     * <pre>
+     * request_ids is the list of request IDs
+     * </pre>
+     *
+     * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+     * @param index The index of the element to return.
+     * @return The requestIds at the given index.
+     */
+    long getRequestIds(int index);
+  }
+  /**
+   * <pre>
+   * QueryMultiProofRequest is request type for the Service/MultiProof RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.QueryMultiProofRequest}
+   */
+  public static final class QueryMultiProofRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.QueryMultiProofRequest)
+      QueryMultiProofRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMultiProofRequest.newBuilder() to construct.
+    private QueryMultiProofRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMultiProofRequest() {
+      requestIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMultiProofRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.class, com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.Builder.class);
+    }
+
+    public static final int REQUEST_IDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList requestIds_;
+    /**
+     * <pre>
+     * request_ids is the list of request IDs
+     * </pre>
+     *
+     * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+     * @return A list containing the requestIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getRequestIdsList() {
+      return requestIds_;
+    }
+    /**
+     * <pre>
+     * request_ids is the list of request IDs
+     * </pre>
+     *
+     * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+     * @return The count of requestIds.
+     */
+    public int getRequestIdsCount() {
+      return requestIds_.size();
+    }
+    /**
+     * <pre>
+     * request_ids is the list of request IDs
+     * </pre>
+     *
+     * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+     * @param index The index of the element to return.
+     * @return The requestIds at the given index.
+     */
+    public long getRequestIds(int index) {
+      return requestIds_.getLong(index);
+    }
+    private int requestIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getRequestIdsList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(requestIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < requestIds_.size(); i++) {
+        output.writeUInt64NoTag(requestIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < requestIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(requestIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getRequestIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        requestIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest other = (com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest) obj;
+
+      if (!getRequestIdsList()
+          .equals(other.getRequestIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRequestIdsCount() > 0) {
+        hash = (37 * hash) + REQUEST_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMultiProofRequest is request type for the Service/MultiProof RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.QueryMultiProofRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.QueryMultiProofRequest)
+        com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.class, com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest build() {
+        com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result = new com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          requestIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.requestIds_ = requestIds_;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest.getDefaultInstance()) return this;
+        if (!other.requestIds_.isEmpty()) {
+          if (requestIds_.isEmpty()) {
+            requestIds_ = other.requestIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureRequestIdsIsMutable();
+            requestIds_.addAll(other.requestIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readUInt64();
+                ensureRequestIdsIsMutable();
+                requestIds_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureRequestIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  requestIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList requestIds_ = emptyLongList();
+      private void ensureRequestIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          requestIds_ = mutableCopy(requestIds_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @return A list containing the requestIds.
+       */
+      public java.util.List<java.lang.Long>
+          getRequestIdsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(requestIds_) : requestIds_;
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @return The count of requestIds.
+       */
+      public int getRequestIdsCount() {
+        return requestIds_.size();
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @param index The index of the element to return.
+       * @return The requestIds at the given index.
+       */
+      public long getRequestIds(int index) {
+        return requestIds_.getLong(index);
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The requestIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIds(
+          int index, long value) {
+
+        ensureRequestIdsIsMutable();
+        requestIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @param value The requestIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRequestIds(long value) {
+
+        ensureRequestIdsIsMutable();
+        requestIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @param values The requestIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRequestIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureRequestIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, requestIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_ids is the list of request IDs
+       * </pre>
+       *
+       * <code>repeated uint64 request_ids = 1 [json_name = "requestIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestIds() {
+        requestIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.QueryMultiProofRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.QueryMultiProofRequest)
+    private static final com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMultiProofRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMultiProofRequest>() {
+      @java.lang.Override
+      public QueryMultiProofRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMultiProofRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMultiProofRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.QueryMultiProofRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryMultiProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.QueryMultiProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    com.bandchain.v1.oracle.ProofProto.MultiProofResponse getResult();
+    /**
+     * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder getResultOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryMultiProofResponse is response type for the Service/MultiProof RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.QueryMultiProofResponse}
+   */
+  public static final class QueryMultiProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.QueryMultiProofResponse)
+      QueryMultiProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryMultiProofResponse.newBuilder() to construct.
+    private QueryMultiProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryMultiProofResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryMultiProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.Builder.class);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 1;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private com.bandchain.v1.oracle.ProofProto.MultiProofResponse result_;
+    /**
+     * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiProofResponse getResult() {
+      return result_ == null ? com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (height_ != 0L) {
+        output.writeInt64(1, height_);
+      }
+      if (result_ != null) {
+        output.writeMessage(2, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, height_);
+      }
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse other = (com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse) obj;
+
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryMultiProofResponse is response type for the Service/MultiProof RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.QueryMultiProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.QueryMultiProofResponse)
+        com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        height_ = 0L;
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryMultiProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse build() {
+        com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse result = new com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse.getDefaultInstance()) return this;
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.MultiProofResponse result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.MultiProofResponse, com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder> resultBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return The result.
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiProofResponse getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(com.bandchain.v1.oracle.ProofProto.MultiProofResponse value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(
+          com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeResult(com.bandchain.v1.oracle.ProofProto.MultiProofResponse value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            result_ != null &&
+            result_ != com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder getResultBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.MultiProofResponse, com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.MultiProofResponse, com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.QueryMultiProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.QueryMultiProofResponse)
+    private static final com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryMultiProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryMultiProofResponse>() {
+      @java.lang.Override
+      public QueryMultiProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryMultiProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryMultiProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.QueryMultiProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestCountProofRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.QueryRequestCountProofRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryRequestCountProofRequest is request type for the Service/RequestCountProof RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.QueryRequestCountProofRequest}
+   */
+  public static final class QueryRequestCountProofRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.QueryRequestCountProofRequest)
+      QueryRequestCountProofRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestCountProofRequest.newBuilder() to construct.
+    private QueryRequestCountProofRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestCountProofRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestCountProofRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.class, com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest other = (com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestCountProofRequest is request type for the Service/RequestCountProof RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.QueryRequestCountProofRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.QueryRequestCountProofRequest)
+        com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.class, com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest build() {
+        com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest result = new com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.QueryRequestCountProofRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.QueryRequestCountProofRequest)
+    private static final com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestCountProofRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestCountProofRequest>() {
+      @java.lang.Override
+      public QueryRequestCountProofRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestCountProofRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestCountProofRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestCountProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.QueryRequestCountProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    com.bandchain.v1.oracle.ProofProto.CountProofResponse getResult();
+    /**
+     * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder getResultOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryRequestCountProofResponse is response type for the Service/RequestCountProof RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.QueryRequestCountProofResponse}
+   */
+  public static final class QueryRequestCountProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.QueryRequestCountProofResponse)
+      QueryRequestCountProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestCountProofResponse.newBuilder() to construct.
+    private QueryRequestCountProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestCountProofResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestCountProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.Builder.class);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 1;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 2;
+    private com.bandchain.v1.oracle.ProofProto.CountProofResponse result_;
+    /**
+     * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CountProofResponse getResult() {
+      return result_ == null ? com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (height_ != 0L) {
+        output.writeInt64(1, height_);
+      }
+      if (result_ != null) {
+        output.writeMessage(2, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, height_);
+      }
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse other = (com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse) obj;
+
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryRequestCountProofResponse is response type for the Service/RequestCountProof RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.QueryRequestCountProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.QueryRequestCountProofResponse)
+        com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.class, com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        height_ = 0L;
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse build() {
+        com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse result = new com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse.getDefaultInstance()) return this;
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.CountProofResponse result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.CountProofResponse, com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder> resultBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return The result.
+       */
+      public com.bandchain.v1.oracle.ProofProto.CountProofResponse getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(com.bandchain.v1.oracle.ProofProto.CountProofResponse value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(
+          com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeResult(com.bandchain.v1.oracle.ProofProto.CountProofResponse value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            result_ != null &&
+            result_ != com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder getResultBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProofResponse result = 2 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.CountProofResponse, com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.CountProofResponse, com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder, com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.QueryRequestCountProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.QueryRequestCountProofResponse)
+    private static final com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestCountProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestCountProofResponse>() {
+      @java.lang.Override
+      public QueryRequestCountProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestCountProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestCountProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.QueryRequestCountProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SingleProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.SingleProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the proof field is set.
+     */
+    boolean hasProof();
+    /**
+     * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return The proof.
+     */
+    com.bandchain.v1.oracle.ProofProto.SingleProof getProof();
+    /**
+     * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder getProofOrBuilder();
+
+    /**
+     * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evmProofBytes.
+     */
+    com.google.protobuf.ByteString getEvmProofBytes();
+  }
+  /**
+   * <pre>
+   * SingleProofResponse is the data structure for response of single proof
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.SingleProofResponse}
+   */
+  public static final class SingleProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.SingleProofResponse)
+      SingleProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SingleProofResponse.newBuilder() to construct.
+    private SingleProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SingleProofResponse() {
+      evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SingleProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.SingleProofResponse.class, com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder.class);
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 1;
+    private com.bandchain.v1.oracle.ProofProto.SingleProof proof_;
+    /**
+     * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the proof field is set.
+     */
+    @java.lang.Override
+    public boolean hasProof() {
+      return proof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.SingleProof getProof() {
+      return proof_ == null ? com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance() : proof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder getProofOrBuilder() {
+      return proof_ == null ? com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance() : proof_;
+    }
+
+    public static final int EVM_PROOF_BYTES_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evmProofBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEvmProofBytes() {
+      return evmProofBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proof_ != null) {
+        output.writeMessage(1, getProof());
+      }
+      if (!evmProofBytes_.isEmpty()) {
+        output.writeBytes(2, evmProofBytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProof());
+      }
+      if (!evmProofBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, evmProofBytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.SingleProofResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.SingleProofResponse other = (com.bandchain.v1.oracle.ProofProto.SingleProofResponse) obj;
+
+      if (hasProof() != other.hasProof()) return false;
+      if (hasProof()) {
+        if (!getProof()
+            .equals(other.getProof())) return false;
+      }
+      if (!getEvmProofBytes()
+          .equals(other.getEvmProofBytes())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProof()) {
+        hash = (37 * hash) + PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getProof().hashCode();
+      }
+      hash = (37 * hash) + EVM_PROOF_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getEvmProofBytes().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.SingleProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SingleProofResponse is the data structure for response of single proof
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.SingleProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.SingleProofResponse)
+        com.bandchain.v1.oracle.ProofProto.SingleProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.SingleProofResponse.class, com.bandchain.v1.oracle.ProofProto.SingleProofResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.SingleProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.SingleProofResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.SingleProofResponse build() {
+        com.bandchain.v1.oracle.ProofProto.SingleProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.SingleProofResponse buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.SingleProofResponse result = new com.bandchain.v1.oracle.ProofProto.SingleProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.SingleProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proof_ = proofBuilder_ == null
+              ? proof_
+              : proofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.evmProofBytes_ = evmProofBytes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.SingleProofResponse) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.SingleProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.SingleProofResponse other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.SingleProofResponse.getDefaultInstance()) return this;
+        if (other.hasProof()) {
+          mergeProof(other.getProof());
+        }
+        if (other.getEvmProofBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setEvmProofBytes(other.getEvmProofBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                evmProofBytes_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bandchain.v1.oracle.ProofProto.SingleProof proof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.SingleProof, com.bandchain.v1.oracle.ProofProto.SingleProof.Builder, com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder> proofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the proof field is set.
+       */
+      public boolean hasProof() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       * @return The proof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.SingleProof getProof() {
+        if (proofBuilder_ == null) {
+          return proof_ == null ? com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance() : proof_;
+        } else {
+          return proofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProof(com.bandchain.v1.oracle.ProofProto.SingleProof value) {
+        if (proofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proof_ = value;
+        } else {
+          proofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProof(
+          com.bandchain.v1.oracle.ProofProto.SingleProof.Builder builderForValue) {
+        if (proofBuilder_ == null) {
+          proof_ = builderForValue.build();
+        } else {
+          proofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeProof(com.bandchain.v1.oracle.ProofProto.SingleProof value) {
+        if (proofBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            proof_ != null &&
+            proof_ != com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance()) {
+            getProofBuilder().mergeFrom(value);
+          } else {
+            proof_ = value;
+          }
+        } else {
+          proofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProof() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.SingleProof.Builder getProofBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder getProofOrBuilder() {
+        if (proofBuilder_ != null) {
+          return proofBuilder_.getMessageOrBuilder();
+        } else {
+          return proof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance() : proof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.SingleProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.SingleProof, com.bandchain.v1.oracle.ProofProto.SingleProof.Builder, com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder> 
+          getProofFieldBuilder() {
+        if (proofBuilder_ == null) {
+          proofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.SingleProof, com.bandchain.v1.oracle.ProofProto.SingleProof.Builder, com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder>(
+                  getProof(),
+                  getParentForChildren(),
+                  isClean());
+          proof_ = null;
+        }
+        return proofBuilder_;
+      }
+
+      private com.google.protobuf.ByteString evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The evmProofBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEvmProofBytes() {
+        return evmProofBytes_;
+      }
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The evmProofBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvmProofBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        evmProofBytes_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvmProofBytes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        evmProofBytes_ = getDefaultInstance().getEvmProofBytes();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.SingleProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.SingleProofResponse)
+    private static final com.bandchain.v1.oracle.ProofProto.SingleProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.SingleProofResponse();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SingleProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SingleProofResponse>() {
+      @java.lang.Override
+      public SingleProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SingleProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SingleProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.SingleProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MultiProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.MultiProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the proof field is set.
+     */
+    boolean hasProof();
+    /**
+     * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return The proof.
+     */
+    com.bandchain.v1.oracle.ProofProto.MultiProof getProof();
+    /**
+     * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder getProofOrBuilder();
+
+    /**
+     * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evmProofBytes.
+     */
+    com.google.protobuf.ByteString getEvmProofBytes();
+  }
+  /**
+   * <pre>
+   * MultiProofResponse is the data structure for response of multi proof
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.MultiProofResponse}
+   */
+  public static final class MultiProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.MultiProofResponse)
+      MultiProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MultiProofResponse.newBuilder() to construct.
+    private MultiProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MultiProofResponse() {
+      evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MultiProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.MultiProofResponse.class, com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder.class);
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 1;
+    private com.bandchain.v1.oracle.ProofProto.MultiProof proof_;
+    /**
+     * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the proof field is set.
+     */
+    @java.lang.Override
+    public boolean hasProof() {
+      return proof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiProof getProof() {
+      return proof_ == null ? com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance() : proof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder getProofOrBuilder() {
+      return proof_ == null ? com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance() : proof_;
+    }
+
+    public static final int EVM_PROOF_BYTES_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evmProofBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEvmProofBytes() {
+      return evmProofBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proof_ != null) {
+        output.writeMessage(1, getProof());
+      }
+      if (!evmProofBytes_.isEmpty()) {
+        output.writeBytes(2, evmProofBytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProof());
+      }
+      if (!evmProofBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, evmProofBytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.MultiProofResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.MultiProofResponse other = (com.bandchain.v1.oracle.ProofProto.MultiProofResponse) obj;
+
+      if (hasProof() != other.hasProof()) return false;
+      if (hasProof()) {
+        if (!getProof()
+            .equals(other.getProof())) return false;
+      }
+      if (!getEvmProofBytes()
+          .equals(other.getEvmProofBytes())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProof()) {
+        hash = (37 * hash) + PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getProof().hashCode();
+      }
+      hash = (37 * hash) + EVM_PROOF_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getEvmProofBytes().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.MultiProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MultiProofResponse is the data structure for response of multi proof
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.MultiProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.MultiProofResponse)
+        com.bandchain.v1.oracle.ProofProto.MultiProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.MultiProofResponse.class, com.bandchain.v1.oracle.ProofProto.MultiProofResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.MultiProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiProofResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiProofResponse build() {
+        com.bandchain.v1.oracle.ProofProto.MultiProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiProofResponse buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.MultiProofResponse result = new com.bandchain.v1.oracle.ProofProto.MultiProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.MultiProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proof_ = proofBuilder_ == null
+              ? proof_
+              : proofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.evmProofBytes_ = evmProofBytes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.MultiProofResponse) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.MultiProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.MultiProofResponse other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.MultiProofResponse.getDefaultInstance()) return this;
+        if (other.hasProof()) {
+          mergeProof(other.getProof());
+        }
+        if (other.getEvmProofBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setEvmProofBytes(other.getEvmProofBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                evmProofBytes_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bandchain.v1.oracle.ProofProto.MultiProof proof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.MultiProof, com.bandchain.v1.oracle.ProofProto.MultiProof.Builder, com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder> proofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the proof field is set.
+       */
+      public boolean hasProof() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       * @return The proof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiProof getProof() {
+        if (proofBuilder_ == null) {
+          return proof_ == null ? com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance() : proof_;
+        } else {
+          return proofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProof(com.bandchain.v1.oracle.ProofProto.MultiProof value) {
+        if (proofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proof_ = value;
+        } else {
+          proofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProof(
+          com.bandchain.v1.oracle.ProofProto.MultiProof.Builder builderForValue) {
+        if (proofBuilder_ == null) {
+          proof_ = builderForValue.build();
+        } else {
+          proofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeProof(com.bandchain.v1.oracle.ProofProto.MultiProof value) {
+        if (proofBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            proof_ != null &&
+            proof_ != com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance()) {
+            getProofBuilder().mergeFrom(value);
+          } else {
+            proof_ = value;
+          }
+        } else {
+          proofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProof() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiProof.Builder getProofBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder getProofOrBuilder() {
+        if (proofBuilder_ != null) {
+          return proofBuilder_.getMessageOrBuilder();
+        } else {
+          return proof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance() : proof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.MultiProof, com.bandchain.v1.oracle.ProofProto.MultiProof.Builder, com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder> 
+          getProofFieldBuilder() {
+        if (proofBuilder_ == null) {
+          proofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.MultiProof, com.bandchain.v1.oracle.ProofProto.MultiProof.Builder, com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder>(
+                  getProof(),
+                  getParentForChildren(),
+                  isClean());
+          proof_ = null;
+        }
+        return proofBuilder_;
+      }
+
+      private com.google.protobuf.ByteString evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The evmProofBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEvmProofBytes() {
+        return evmProofBytes_;
+      }
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The evmProofBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvmProofBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        evmProofBytes_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvmProofBytes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        evmProofBytes_ = getDefaultInstance().getEvmProofBytes();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.MultiProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.MultiProofResponse)
+    private static final com.bandchain.v1.oracle.ProofProto.MultiProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.MultiProofResponse();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MultiProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MultiProofResponse>() {
+      @java.lang.Override
+      public MultiProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MultiProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MultiProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CountProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.CountProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the proof field is set.
+     */
+    boolean hasProof();
+    /**
+     * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return The proof.
+     */
+    com.bandchain.v1.oracle.ProofProto.CountProof getProof();
+    /**
+     * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder getProofOrBuilder();
+
+    /**
+     * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evmProofBytes.
+     */
+    com.google.protobuf.ByteString getEvmProofBytes();
+  }
+  /**
+   * <pre>
+   * CountProofResponse is the data structure for response of count proof
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.CountProofResponse}
+   */
+  public static final class CountProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.CountProofResponse)
+      CountProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CountProofResponse.newBuilder() to construct.
+    private CountProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CountProofResponse() {
+      evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CountProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.CountProofResponse.class, com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder.class);
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 1;
+    private com.bandchain.v1.oracle.ProofProto.CountProof proof_;
+    /**
+     * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the proof field is set.
+     */
+    @java.lang.Override
+    public boolean hasProof() {
+      return proof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CountProof getProof() {
+      return proof_ == null ? com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance() : proof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder getProofOrBuilder() {
+      return proof_ == null ? com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance() : proof_;
+    }
+
+    public static final int EVM_PROOF_BYTES_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evmProofBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEvmProofBytes() {
+      return evmProofBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (proof_ != null) {
+        output.writeMessage(1, getProof());
+      }
+      if (!evmProofBytes_.isEmpty()) {
+        output.writeBytes(2, evmProofBytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (proof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProof());
+      }
+      if (!evmProofBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, evmProofBytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.CountProofResponse)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.CountProofResponse other = (com.bandchain.v1.oracle.ProofProto.CountProofResponse) obj;
+
+      if (hasProof() != other.hasProof()) return false;
+      if (hasProof()) {
+        if (!getProof()
+            .equals(other.getProof())) return false;
+      }
+      if (!getEvmProofBytes()
+          .equals(other.getEvmProofBytes())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProof()) {
+        hash = (37 * hash) + PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getProof().hashCode();
+      }
+      hash = (37 * hash) + EVM_PROOF_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getEvmProofBytes().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.CountProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CountProofResponse is the data structure for response of count proof
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.CountProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.CountProofResponse)
+        com.bandchain.v1.oracle.ProofProto.CountProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.CountProofResponse.class, com.bandchain.v1.oracle.ProofProto.CountProofResponse.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.CountProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CountProofResponse getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CountProofResponse build() {
+        com.bandchain.v1.oracle.ProofProto.CountProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CountProofResponse buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.CountProofResponse result = new com.bandchain.v1.oracle.ProofProto.CountProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.CountProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.proof_ = proofBuilder_ == null
+              ? proof_
+              : proofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.evmProofBytes_ = evmProofBytes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.CountProofResponse) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.CountProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.CountProofResponse other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.CountProofResponse.getDefaultInstance()) return this;
+        if (other.hasProof()) {
+          mergeProof(other.getProof());
+        }
+        if (other.getEvmProofBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setEvmProofBytes(other.getEvmProofBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                evmProofBytes_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bandchain.v1.oracle.ProofProto.CountProof proof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.CountProof, com.bandchain.v1.oracle.ProofProto.CountProof.Builder, com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder> proofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the proof field is set.
+       */
+      public boolean hasProof() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       * @return The proof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.CountProof getProof() {
+        if (proofBuilder_ == null) {
+          return proof_ == null ? com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance() : proof_;
+        } else {
+          return proofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProof(com.bandchain.v1.oracle.ProofProto.CountProof value) {
+        if (proofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proof_ = value;
+        } else {
+          proofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setProof(
+          com.bandchain.v1.oracle.ProofProto.CountProof.Builder builderForValue) {
+        if (proofBuilder_ == null) {
+          proof_ = builderForValue.build();
+        } else {
+          proofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeProof(com.bandchain.v1.oracle.ProofProto.CountProof value) {
+        if (proofBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            proof_ != null &&
+            proof_ != com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance()) {
+            getProofBuilder().mergeFrom(value);
+          } else {
+            proof_ = value;
+          }
+        } else {
+          proofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearProof() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.CountProof.Builder getProofBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder getProofOrBuilder() {
+        if (proofBuilder_ != null) {
+          return proofBuilder_.getMessageOrBuilder();
+        } else {
+          return proof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance() : proof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CountProof proof = 1 [json_name = "proof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.CountProof, com.bandchain.v1.oracle.ProofProto.CountProof.Builder, com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder> 
+          getProofFieldBuilder() {
+        if (proofBuilder_ == null) {
+          proofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.CountProof, com.bandchain.v1.oracle.ProofProto.CountProof.Builder, com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder>(
+                  getProof(),
+                  getParentForChildren(),
+                  isClean());
+          proof_ = null;
+        }
+        return proofBuilder_;
+      }
+
+      private com.google.protobuf.ByteString evmProofBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The evmProofBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEvmProofBytes() {
+        return evmProofBytes_;
+      }
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The evmProofBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvmProofBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        evmProofBytes_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes evm_proof_bytes = 2 [json_name = "evmProofBytes", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvmProofBytes() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        evmProofBytes_ = getDefaultInstance().getEvmProofBytes();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.CountProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.CountProofResponse)
+    private static final com.bandchain.v1.oracle.ProofProto.CountProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.CountProofResponse();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CountProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CountProofResponse>() {
+      @java.lang.Override
+      public CountProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CountProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CountProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CountProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SingleProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.SingleProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the oracleDataProof field is set.
+     */
+    boolean hasOracleDataProof();
+    /**
+     * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+     * @return The oracleDataProof.
+     */
+    com.bandchain.v1.oracle.ProofProto.OracleDataProof getOracleDataProof();
+    /**
+     * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder getOracleDataProofOrBuilder();
+
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockRelayProof field is set.
+     */
+    boolean hasBlockRelayProof();
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return The blockRelayProof.
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof();
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder();
+  }
+  /**
+   * <pre>
+   * SingleProof contains block height, oracle data proof and block relay proof
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.SingleProof}
+   */
+  public static final class SingleProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.SingleProof)
+      SingleProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SingleProof.newBuilder() to construct.
+    private SingleProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SingleProof() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SingleProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.SingleProof.class, com.bandchain.v1.oracle.ProofProto.SingleProof.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int ORACLE_DATA_PROOF_FIELD_NUMBER = 2;
+    private com.bandchain.v1.oracle.ProofProto.OracleDataProof oracleDataProof_;
+    /**
+     * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the oracleDataProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasOracleDataProof() {
+      return oracleDataProof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+     * @return The oracleDataProof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.OracleDataProof getOracleDataProof() {
+      return oracleDataProof_ == null ? com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance() : oracleDataProof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder getOracleDataProofOrBuilder() {
+      return oracleDataProof_ == null ? com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance() : oracleDataProof_;
+    }
+
+    public static final int BLOCK_RELAY_PROOF_FIELD_NUMBER = 3;
+    private com.bandchain.v1.oracle.ProofProto.BlockRelayProof blockRelayProof_;
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockRelayProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlockRelayProof() {
+      return blockRelayProof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return The blockRelayProof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof() {
+      return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder() {
+      return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(1, blockHeight_);
+      }
+      if (oracleDataProof_ != null) {
+        output.writeMessage(2, getOracleDataProof());
+      }
+      if (blockRelayProof_ != null) {
+        output.writeMessage(3, getBlockRelayProof());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, blockHeight_);
+      }
+      if (oracleDataProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOracleDataProof());
+      }
+      if (blockRelayProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBlockRelayProof());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.SingleProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.SingleProof other = (com.bandchain.v1.oracle.ProofProto.SingleProof) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (hasOracleDataProof() != other.hasOracleDataProof()) return false;
+      if (hasOracleDataProof()) {
+        if (!getOracleDataProof()
+            .equals(other.getOracleDataProof())) return false;
+      }
+      if (hasBlockRelayProof() != other.hasBlockRelayProof()) return false;
+      if (hasBlockRelayProof()) {
+        if (!getBlockRelayProof()
+            .equals(other.getBlockRelayProof())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      if (hasOracleDataProof()) {
+        hash = (37 * hash) + ORACLE_DATA_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleDataProof().hashCode();
+      }
+      if (hasBlockRelayProof()) {
+        hash = (37 * hash) + BLOCK_RELAY_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getBlockRelayProof().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.SingleProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SingleProof contains block height, oracle data proof and block relay proof
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.SingleProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.SingleProof)
+        com.bandchain.v1.oracle.ProofProto.SingleProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.SingleProof.class, com.bandchain.v1.oracle.ProofProto.SingleProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.SingleProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        oracleDataProof_ = null;
+        if (oracleDataProofBuilder_ != null) {
+          oracleDataProofBuilder_.dispose();
+          oracleDataProofBuilder_ = null;
+        }
+        blockRelayProof_ = null;
+        if (blockRelayProofBuilder_ != null) {
+          blockRelayProofBuilder_.dispose();
+          blockRelayProofBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_SingleProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.SingleProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.SingleProof build() {
+        com.bandchain.v1.oracle.ProofProto.SingleProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.SingleProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.SingleProof result = new com.bandchain.v1.oracle.ProofProto.SingleProof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.SingleProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.oracleDataProof_ = oracleDataProofBuilder_ == null
+              ? oracleDataProof_
+              : oracleDataProofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.blockRelayProof_ = blockRelayProofBuilder_ == null
+              ? blockRelayProof_
+              : blockRelayProofBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.SingleProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.SingleProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.SingleProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.SingleProof.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.hasOracleDataProof()) {
+          mergeOracleDataProof(other.getOracleDataProof());
+        }
+        if (other.hasBlockRelayProof()) {
+          mergeBlockRelayProof(other.getBlockRelayProof());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getOracleDataProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBlockRelayProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.OracleDataProof oracleDataProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.OracleDataProof, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder, com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> oracleDataProofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the oracleDataProof field is set.
+       */
+      public boolean hasOracleDataProof() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       * @return The oracleDataProof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof getOracleDataProof() {
+        if (oracleDataProofBuilder_ == null) {
+          return oracleDataProof_ == null ? com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance() : oracleDataProof_;
+        } else {
+          return oracleDataProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleDataProof(com.bandchain.v1.oracle.ProofProto.OracleDataProof value) {
+        if (oracleDataProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          oracleDataProof_ = value;
+        } else {
+          oracleDataProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleDataProof(
+          com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder builderForValue) {
+        if (oracleDataProofBuilder_ == null) {
+          oracleDataProof_ = builderForValue.build();
+        } else {
+          oracleDataProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOracleDataProof(com.bandchain.v1.oracle.ProofProto.OracleDataProof value) {
+        if (oracleDataProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            oracleDataProof_ != null &&
+            oracleDataProof_ != com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance()) {
+            getOracleDataProofBuilder().mergeFrom(value);
+          } else {
+            oracleDataProof_ = value;
+          }
+        } else {
+          oracleDataProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOracleDataProof() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        oracleDataProof_ = null;
+        if (oracleDataProofBuilder_ != null) {
+          oracleDataProofBuilder_.dispose();
+          oracleDataProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder getOracleDataProofBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getOracleDataProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder getOracleDataProofOrBuilder() {
+        if (oracleDataProofBuilder_ != null) {
+          return oracleDataProofBuilder_.getMessageOrBuilder();
+        } else {
+          return oracleDataProof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance() : oracleDataProof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.OracleDataProof oracle_data_proof = 2 [json_name = "oracleDataProof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.OracleDataProof, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder, com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> 
+          getOracleDataProofFieldBuilder() {
+        if (oracleDataProofBuilder_ == null) {
+          oracleDataProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.OracleDataProof, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder, com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder>(
+                  getOracleDataProof(),
+                  getParentForChildren(),
+                  isClean());
+          oracleDataProof_ = null;
+        }
+        return oracleDataProofBuilder_;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.BlockRelayProof blockRelayProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder> blockRelayProofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blockRelayProof field is set.
+       */
+      public boolean hasBlockRelayProof() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       * @return The blockRelayProof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof() {
+        if (blockRelayProofBuilder_ == null) {
+          return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+        } else {
+          return blockRelayProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockRelayProof(com.bandchain.v1.oracle.ProofProto.BlockRelayProof value) {
+        if (blockRelayProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blockRelayProof_ = value;
+        } else {
+          blockRelayProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockRelayProof(
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder builderForValue) {
+        if (blockRelayProofBuilder_ == null) {
+          blockRelayProof_ = builderForValue.build();
+        } else {
+          blockRelayProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlockRelayProof(com.bandchain.v1.oracle.ProofProto.BlockRelayProof value) {
+        if (blockRelayProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            blockRelayProof_ != null &&
+            blockRelayProof_ != com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance()) {
+            getBlockRelayProofBuilder().mergeFrom(value);
+          } else {
+            blockRelayProof_ = value;
+          }
+        } else {
+          blockRelayProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlockRelayProof() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        blockRelayProof_ = null;
+        if (blockRelayProofBuilder_ != null) {
+          blockRelayProofBuilder_.dispose();
+          blockRelayProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder getBlockRelayProofBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBlockRelayProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder() {
+        if (blockRelayProofBuilder_ != null) {
+          return blockRelayProofBuilder_.getMessageOrBuilder();
+        } else {
+          return blockRelayProof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder> 
+          getBlockRelayProofFieldBuilder() {
+        if (blockRelayProofBuilder_ == null) {
+          blockRelayProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder>(
+                  getBlockRelayProof(),
+                  getParentForChildren(),
+                  isClean());
+          blockRelayProof_ = null;
+        }
+        return blockRelayProofBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.SingleProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.SingleProof)
+    private static final com.bandchain.v1.oracle.ProofProto.SingleProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.SingleProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.SingleProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SingleProof>
+        PARSER = new com.google.protobuf.AbstractParser<SingleProof>() {
+      @java.lang.Override
+      public SingleProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SingleProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SingleProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.SingleProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MultiProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.MultiProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bandchain.v1.oracle.ProofProto.OracleDataProof> 
+        getOracleDataMultiProofList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.OracleDataProof getOracleDataMultiProof(int index);
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    int getOracleDataMultiProofCount();
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> 
+        getOracleDataMultiProofOrBuilderList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder getOracleDataMultiProofOrBuilder(
+        int index);
+
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockRelayProof field is set.
+     */
+    boolean hasBlockRelayProof();
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return The blockRelayProof.
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof();
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder();
+  }
+  /**
+   * <pre>
+   * MultiProof contains block height, list of oracle data proof and block relay proof
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.MultiProof}
+   */
+  public static final class MultiProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.MultiProof)
+      MultiProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MultiProof.newBuilder() to construct.
+    private MultiProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MultiProof() {
+      oracleDataMultiProof_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MultiProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.MultiProof.class, com.bandchain.v1.oracle.ProofProto.MultiProof.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int ORACLE_DATA_MULTI_PROOF_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bandchain.v1.oracle.ProofProto.OracleDataProof> oracleDataMultiProof_;
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bandchain.v1.oracle.ProofProto.OracleDataProof> getOracleDataMultiProofList() {
+      return oracleDataMultiProof_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> 
+        getOracleDataMultiProofOrBuilderList() {
+      return oracleDataMultiProof_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getOracleDataMultiProofCount() {
+      return oracleDataMultiProof_.size();
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.OracleDataProof getOracleDataMultiProof(int index) {
+      return oracleDataMultiProof_.get(index);
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder getOracleDataMultiProofOrBuilder(
+        int index) {
+      return oracleDataMultiProof_.get(index);
+    }
+
+    public static final int BLOCK_RELAY_PROOF_FIELD_NUMBER = 3;
+    private com.bandchain.v1.oracle.ProofProto.BlockRelayProof blockRelayProof_;
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockRelayProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlockRelayProof() {
+      return blockRelayProof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return The blockRelayProof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof() {
+      return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder() {
+      return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(1, blockHeight_);
+      }
+      for (int i = 0; i < oracleDataMultiProof_.size(); i++) {
+        output.writeMessage(2, oracleDataMultiProof_.get(i));
+      }
+      if (blockRelayProof_ != null) {
+        output.writeMessage(3, getBlockRelayProof());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, blockHeight_);
+      }
+      for (int i = 0; i < oracleDataMultiProof_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, oracleDataMultiProof_.get(i));
+      }
+      if (blockRelayProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBlockRelayProof());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.MultiProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.MultiProof other = (com.bandchain.v1.oracle.ProofProto.MultiProof) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (!getOracleDataMultiProofList()
+          .equals(other.getOracleDataMultiProofList())) return false;
+      if (hasBlockRelayProof() != other.hasBlockRelayProof()) return false;
+      if (hasBlockRelayProof()) {
+        if (!getBlockRelayProof()
+            .equals(other.getBlockRelayProof())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      if (getOracleDataMultiProofCount() > 0) {
+        hash = (37 * hash) + ORACLE_DATA_MULTI_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getOracleDataMultiProofList().hashCode();
+      }
+      if (hasBlockRelayProof()) {
+        hash = (37 * hash) + BLOCK_RELAY_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getBlockRelayProof().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.MultiProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MultiProof contains block height, list of oracle data proof and block relay proof
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.MultiProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.MultiProof)
+        com.bandchain.v1.oracle.ProofProto.MultiProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.MultiProof.class, com.bandchain.v1.oracle.ProofProto.MultiProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.MultiProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        if (oracleDataMultiProofBuilder_ == null) {
+          oracleDataMultiProof_ = java.util.Collections.emptyList();
+        } else {
+          oracleDataMultiProof_ = null;
+          oracleDataMultiProofBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        blockRelayProof_ = null;
+        if (blockRelayProofBuilder_ != null) {
+          blockRelayProofBuilder_.dispose();
+          blockRelayProofBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiProof build() {
+        com.bandchain.v1.oracle.ProofProto.MultiProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.MultiProof result = new com.bandchain.v1.oracle.ProofProto.MultiProof(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bandchain.v1.oracle.ProofProto.MultiProof result) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            oracleDataMultiProof_ = java.util.Collections.unmodifiableList(oracleDataMultiProof_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.oracleDataMultiProof_ = oracleDataMultiProof_;
+        } else {
+          result.oracleDataMultiProof_ = oracleDataMultiProofBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.MultiProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.blockRelayProof_ = blockRelayProofBuilder_ == null
+              ? blockRelayProof_
+              : blockRelayProofBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.MultiProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.MultiProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.MultiProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.MultiProof.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (oracleDataMultiProofBuilder_ == null) {
+          if (!other.oracleDataMultiProof_.isEmpty()) {
+            if (oracleDataMultiProof_.isEmpty()) {
+              oracleDataMultiProof_ = other.oracleDataMultiProof_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureOracleDataMultiProofIsMutable();
+              oracleDataMultiProof_.addAll(other.oracleDataMultiProof_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.oracleDataMultiProof_.isEmpty()) {
+            if (oracleDataMultiProofBuilder_.isEmpty()) {
+              oracleDataMultiProofBuilder_.dispose();
+              oracleDataMultiProofBuilder_ = null;
+              oracleDataMultiProof_ = other.oracleDataMultiProof_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              oracleDataMultiProofBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOracleDataMultiProofFieldBuilder() : null;
+            } else {
+              oracleDataMultiProofBuilder_.addAllMessages(other.oracleDataMultiProof_);
+            }
+          }
+        }
+        if (other.hasBlockRelayProof()) {
+          mergeBlockRelayProof(other.getBlockRelayProof());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.bandchain.v1.oracle.ProofProto.OracleDataProof m =
+                    input.readMessage(
+                        com.bandchain.v1.oracle.ProofProto.OracleDataProof.parser(),
+                        extensionRegistry);
+                if (oracleDataMultiProofBuilder_ == null) {
+                  ensureOracleDataMultiProofIsMutable();
+                  oracleDataMultiProof_.add(m);
+                } else {
+                  oracleDataMultiProofBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBlockRelayProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.bandchain.v1.oracle.ProofProto.OracleDataProof> oracleDataMultiProof_ =
+        java.util.Collections.emptyList();
+      private void ensureOracleDataMultiProofIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          oracleDataMultiProof_ = new java.util.ArrayList<com.bandchain.v1.oracle.ProofProto.OracleDataProof>(oracleDataMultiProof_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.OracleDataProof, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder, com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> oracleDataMultiProofBuilder_;
+
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.OracleDataProof> getOracleDataMultiProofList() {
+        if (oracleDataMultiProofBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(oracleDataMultiProof_);
+        } else {
+          return oracleDataMultiProofBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public int getOracleDataMultiProofCount() {
+        if (oracleDataMultiProofBuilder_ == null) {
+          return oracleDataMultiProof_.size();
+        } else {
+          return oracleDataMultiProofBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof getOracleDataMultiProof(int index) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          return oracleDataMultiProof_.get(index);
+        } else {
+          return oracleDataMultiProofBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleDataMultiProof(
+          int index, com.bandchain.v1.oracle.ProofProto.OracleDataProof value) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.set(index, value);
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOracleDataMultiProof(
+          int index, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder builderForValue) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleDataMultiProof(com.bandchain.v1.oracle.ProofProto.OracleDataProof value) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.add(value);
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleDataMultiProof(
+          int index, com.bandchain.v1.oracle.ProofProto.OracleDataProof value) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.add(index, value);
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleDataMultiProof(
+          com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder builderForValue) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.add(builderForValue.build());
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addOracleDataMultiProof(
+          int index, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder builderForValue) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllOracleDataMultiProof(
+          java.lang.Iterable<? extends com.bandchain.v1.oracle.ProofProto.OracleDataProof> values) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          ensureOracleDataMultiProofIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, oracleDataMultiProof_);
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOracleDataMultiProof() {
+        if (oracleDataMultiProofBuilder_ == null) {
+          oracleDataMultiProof_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeOracleDataMultiProof(int index) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          ensureOracleDataMultiProofIsMutable();
+          oracleDataMultiProof_.remove(index);
+          onChanged();
+        } else {
+          oracleDataMultiProofBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder getOracleDataMultiProofBuilder(
+          int index) {
+        return getOracleDataMultiProofFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder getOracleDataMultiProofOrBuilder(
+          int index) {
+        if (oracleDataMultiProofBuilder_ == null) {
+          return oracleDataMultiProof_.get(index);  } else {
+          return oracleDataMultiProofBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> 
+           getOracleDataMultiProofOrBuilderList() {
+        if (oracleDataMultiProofBuilder_ != null) {
+          return oracleDataMultiProofBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(oracleDataMultiProof_);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder addOracleDataMultiProofBuilder() {
+        return getOracleDataMultiProofFieldBuilder().addBuilder(
+            com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder addOracleDataMultiProofBuilder(
+          int index) {
+        return getOracleDataMultiProofFieldBuilder().addBuilder(
+            index, com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.OracleDataProof oracle_data_multi_proof = 2 [json_name = "oracleDataMultiProof", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder> 
+           getOracleDataMultiProofBuilderList() {
+        return getOracleDataMultiProofFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.OracleDataProof, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder, com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder> 
+          getOracleDataMultiProofFieldBuilder() {
+        if (oracleDataMultiProofBuilder_ == null) {
+          oracleDataMultiProofBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.OracleDataProof, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder, com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder>(
+                  oracleDataMultiProof_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          oracleDataMultiProof_ = null;
+        }
+        return oracleDataMultiProofBuilder_;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.BlockRelayProof blockRelayProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder> blockRelayProofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blockRelayProof field is set.
+       */
+      public boolean hasBlockRelayProof() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       * @return The blockRelayProof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof() {
+        if (blockRelayProofBuilder_ == null) {
+          return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+        } else {
+          return blockRelayProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockRelayProof(com.bandchain.v1.oracle.ProofProto.BlockRelayProof value) {
+        if (blockRelayProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blockRelayProof_ = value;
+        } else {
+          blockRelayProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockRelayProof(
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder builderForValue) {
+        if (blockRelayProofBuilder_ == null) {
+          blockRelayProof_ = builderForValue.build();
+        } else {
+          blockRelayProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlockRelayProof(com.bandchain.v1.oracle.ProofProto.BlockRelayProof value) {
+        if (blockRelayProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            blockRelayProof_ != null &&
+            blockRelayProof_ != com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance()) {
+            getBlockRelayProofBuilder().mergeFrom(value);
+          } else {
+            blockRelayProof_ = value;
+          }
+        } else {
+          blockRelayProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlockRelayProof() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        blockRelayProof_ = null;
+        if (blockRelayProofBuilder_ != null) {
+          blockRelayProofBuilder_.dispose();
+          blockRelayProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder getBlockRelayProofBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBlockRelayProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder() {
+        if (blockRelayProofBuilder_ != null) {
+          return blockRelayProofBuilder_.getMessageOrBuilder();
+        } else {
+          return blockRelayProof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder> 
+          getBlockRelayProofFieldBuilder() {
+        if (blockRelayProofBuilder_ == null) {
+          blockRelayProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder>(
+                  getBlockRelayProof(),
+                  getParentForChildren(),
+                  isClean());
+          blockRelayProof_ = null;
+        }
+        return blockRelayProofBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.MultiProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.MultiProof)
+    private static final com.bandchain.v1.oracle.ProofProto.MultiProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.MultiProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MultiProof>
+        PARSER = new com.google.protobuf.AbstractParser<MultiProof>() {
+      @java.lang.Override
+      public MultiProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MultiProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MultiProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CountProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.CountProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    long getBlockHeight();
+
+    /**
+     * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the countProof field is set.
+     */
+    boolean hasCountProof();
+    /**
+     * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+     * @return The countProof.
+     */
+    com.bandchain.v1.oracle.ProofProto.RequestsCountProof getCountProof();
+    /**
+     * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder getCountProofOrBuilder();
+
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockRelayProof field is set.
+     */
+    boolean hasBlockRelayProof();
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return The blockRelayProof.
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof();
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder();
+  }
+  /**
+   * <pre>
+   * CountProof contains block height, count proof and block relay proof
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.CountProof}
+   */
+  public static final class CountProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.CountProof)
+      CountProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CountProof.newBuilder() to construct.
+    private CountProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CountProof() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CountProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.CountProof.class, com.bandchain.v1.oracle.ProofProto.CountProof.Builder.class);
+    }
+
+    public static final int BLOCK_HEIGHT_FIELD_NUMBER = 1;
+    private long blockHeight_ = 0L;
+    /**
+     * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+     * @return The blockHeight.
+     */
+    @java.lang.Override
+    public long getBlockHeight() {
+      return blockHeight_;
+    }
+
+    public static final int COUNT_PROOF_FIELD_NUMBER = 2;
+    private com.bandchain.v1.oracle.ProofProto.RequestsCountProof countProof_;
+    /**
+     * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the countProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasCountProof() {
+      return countProof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+     * @return The countProof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.RequestsCountProof getCountProof() {
+      return countProof_ == null ? com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance() : countProof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder getCountProofOrBuilder() {
+      return countProof_ == null ? com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance() : countProof_;
+    }
+
+    public static final int BLOCK_RELAY_PROOF_FIELD_NUMBER = 3;
+    private com.bandchain.v1.oracle.ProofProto.BlockRelayProof blockRelayProof_;
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockRelayProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlockRelayProof() {
+      return blockRelayProof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     * @return The blockRelayProof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof() {
+      return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder() {
+      return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (blockHeight_ != 0L) {
+        output.writeUInt64(1, blockHeight_);
+      }
+      if (countProof_ != null) {
+        output.writeMessage(2, getCountProof());
+      }
+      if (blockRelayProof_ != null) {
+        output.writeMessage(3, getBlockRelayProof());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (blockHeight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, blockHeight_);
+      }
+      if (countProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCountProof());
+      }
+      if (blockRelayProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBlockRelayProof());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.CountProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.CountProof other = (com.bandchain.v1.oracle.ProofProto.CountProof) obj;
+
+      if (getBlockHeight()
+          != other.getBlockHeight()) return false;
+      if (hasCountProof() != other.hasCountProof()) return false;
+      if (hasCountProof()) {
+        if (!getCountProof()
+            .equals(other.getCountProof())) return false;
+      }
+      if (hasBlockRelayProof() != other.hasBlockRelayProof()) return false;
+      if (hasBlockRelayProof()) {
+        if (!getBlockRelayProof()
+            .equals(other.getBlockRelayProof())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BLOCK_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getBlockHeight());
+      if (hasCountProof()) {
+        hash = (37 * hash) + COUNT_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getCountProof().hashCode();
+      }
+      if (hasBlockRelayProof()) {
+        hash = (37 * hash) + BLOCK_RELAY_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getBlockRelayProof().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CountProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.CountProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CountProof contains block height, count proof and block relay proof
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.CountProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.CountProof)
+        com.bandchain.v1.oracle.ProofProto.CountProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.CountProof.class, com.bandchain.v1.oracle.ProofProto.CountProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.CountProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        blockHeight_ = 0L;
+        countProof_ = null;
+        if (countProofBuilder_ != null) {
+          countProofBuilder_.dispose();
+          countProofBuilder_ = null;
+        }
+        blockRelayProof_ = null;
+        if (blockRelayProofBuilder_ != null) {
+          blockRelayProofBuilder_.dispose();
+          blockRelayProofBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CountProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CountProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CountProof build() {
+        com.bandchain.v1.oracle.ProofProto.CountProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CountProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.CountProof result = new com.bandchain.v1.oracle.ProofProto.CountProof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.CountProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.blockHeight_ = blockHeight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.countProof_ = countProofBuilder_ == null
+              ? countProof_
+              : countProofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.blockRelayProof_ = blockRelayProofBuilder_ == null
+              ? blockRelayProof_
+              : blockRelayProofBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.CountProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.CountProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.CountProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.CountProof.getDefaultInstance()) return this;
+        if (other.getBlockHeight() != 0L) {
+          setBlockHeight(other.getBlockHeight());
+        }
+        if (other.hasCountProof()) {
+          mergeCountProof(other.getCountProof());
+        }
+        if (other.hasBlockRelayProof()) {
+          mergeBlockRelayProof(other.getBlockRelayProof());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                blockHeight_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getCountProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getBlockRelayProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long blockHeight_ ;
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return The blockHeight.
+       */
+      @java.lang.Override
+      public long getBlockHeight() {
+        return blockHeight_;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @param value The blockHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBlockHeight(long value) {
+
+        blockHeight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 block_height = 1 [json_name = "blockHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBlockHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        blockHeight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.RequestsCountProof countProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.RequestsCountProof, com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder, com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder> countProofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the countProof field is set.
+       */
+      public boolean hasCountProof() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       * @return The countProof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.RequestsCountProof getCountProof() {
+        if (countProofBuilder_ == null) {
+          return countProof_ == null ? com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance() : countProof_;
+        } else {
+          return countProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCountProof(com.bandchain.v1.oracle.ProofProto.RequestsCountProof value) {
+        if (countProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          countProof_ = value;
+        } else {
+          countProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCountProof(
+          com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder builderForValue) {
+        if (countProofBuilder_ == null) {
+          countProof_ = builderForValue.build();
+        } else {
+          countProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCountProof(com.bandchain.v1.oracle.ProofProto.RequestsCountProof value) {
+        if (countProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            countProof_ != null &&
+            countProof_ != com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance()) {
+            getCountProofBuilder().mergeFrom(value);
+          } else {
+            countProof_ = value;
+          }
+        } else {
+          countProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCountProof() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        countProof_ = null;
+        if (countProofBuilder_ != null) {
+          countProofBuilder_.dispose();
+          countProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder getCountProofBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCountProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder getCountProofOrBuilder() {
+        if (countProofBuilder_ != null) {
+          return countProofBuilder_.getMessageOrBuilder();
+        } else {
+          return countProof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance() : countProof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.RequestsCountProof count_proof = 2 [json_name = "countProof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.RequestsCountProof, com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder, com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder> 
+          getCountProofFieldBuilder() {
+        if (countProofBuilder_ == null) {
+          countProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.RequestsCountProof, com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder, com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder>(
+                  getCountProof(),
+                  getParentForChildren(),
+                  isClean());
+          countProof_ = null;
+        }
+        return countProofBuilder_;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.BlockRelayProof blockRelayProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder> blockRelayProofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blockRelayProof field is set.
+       */
+      public boolean hasBlockRelayProof() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       * @return The blockRelayProof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getBlockRelayProof() {
+        if (blockRelayProofBuilder_ == null) {
+          return blockRelayProof_ == null ? com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+        } else {
+          return blockRelayProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockRelayProof(com.bandchain.v1.oracle.ProofProto.BlockRelayProof value) {
+        if (blockRelayProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blockRelayProof_ = value;
+        } else {
+          blockRelayProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockRelayProof(
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder builderForValue) {
+        if (blockRelayProofBuilder_ == null) {
+          blockRelayProof_ = builderForValue.build();
+        } else {
+          blockRelayProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlockRelayProof(com.bandchain.v1.oracle.ProofProto.BlockRelayProof value) {
+        if (blockRelayProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            blockRelayProof_ != null &&
+            blockRelayProof_ != com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance()) {
+            getBlockRelayProofBuilder().mergeFrom(value);
+          } else {
+            blockRelayProof_ = value;
+          }
+        } else {
+          blockRelayProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlockRelayProof() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        blockRelayProof_ = null;
+        if (blockRelayProofBuilder_ != null) {
+          blockRelayProofBuilder_.dispose();
+          blockRelayProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder getBlockRelayProofBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getBlockRelayProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder getBlockRelayProofOrBuilder() {
+        if (blockRelayProofBuilder_ != null) {
+          return blockRelayProofBuilder_.getMessageOrBuilder();
+        } else {
+          return blockRelayProof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance() : blockRelayProof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockRelayProof block_relay_proof = 3 [json_name = "blockRelayProof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder> 
+          getBlockRelayProofFieldBuilder() {
+        if (blockRelayProofBuilder_ == null) {
+          blockRelayProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder, com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder>(
+                  getBlockRelayProof(),
+                  getParentForChildren(),
+                  isClean());
+          blockRelayProof_ = null;
+        }
+        return blockRelayProofBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.CountProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.CountProof)
+    private static final com.bandchain.v1.oracle.ProofProto.CountProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.CountProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CountProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CountProof>
+        PARSER = new com.google.protobuf.AbstractParser<CountProof>() {
+      @java.lang.Override
+      public CountProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CountProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CountProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CountProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OracleDataProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.OracleDataProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    com.oracle.v1.OracleProto.Result getResult();
+    /**
+     * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    com.oracle.v1.OracleProto.ResultOrBuilder getResultOrBuilder();
+
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> 
+        getMerklePathsList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getMerklePaths(int index);
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    int getMerklePathsCount();
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+        getMerklePathsOrBuilderList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder getMerklePathsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * OracleDataProof contains result, version and merkle paths
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.OracleDataProof}
+   */
+  public static final class OracleDataProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.OracleDataProof)
+      OracleDataProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OracleDataProof.newBuilder() to construct.
+    private OracleDataProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OracleDataProof() {
+      merklePaths_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OracleDataProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_OracleDataProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_OracleDataProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.OracleDataProof.class, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private com.oracle.v1.OracleProto.Result result_;
+    /**
+     * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.oracle.v1.OracleProto.Result getResult() {
+      return result_ == null ? com.oracle.v1.OracleProto.Result.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.oracle.v1.OracleProto.ResultOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.oracle.v1.OracleProto.Result.getDefaultInstance() : result_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int MERKLE_PATHS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> merklePaths_;
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> getMerklePathsList() {
+      return merklePaths_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+        getMerklePathsOrBuilderList() {
+      return merklePaths_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMerklePathsCount() {
+      return merklePaths_.size();
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getMerklePaths(int index) {
+      return merklePaths_.get(index);
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder getMerklePathsOrBuilder(
+        int index) {
+      return merklePaths_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (result_ != null) {
+        output.writeMessage(1, getResult());
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(2, version_);
+      }
+      for (int i = 0; i < merklePaths_.size(); i++) {
+        output.writeMessage(3, merklePaths_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResult());
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, version_);
+      }
+      for (int i = 0; i < merklePaths_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, merklePaths_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.OracleDataProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.OracleDataProof other = (com.bandchain.v1.oracle.ProofProto.OracleDataProof) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getMerklePathsList()
+          .equals(other.getMerklePathsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      if (getMerklePathsCount() > 0) {
+        hash = (37 * hash) + MERKLE_PATHS_FIELD_NUMBER;
+        hash = (53 * hash) + getMerklePathsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.OracleDataProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * OracleDataProof contains result, version and merkle paths
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.OracleDataProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.OracleDataProof)
+        com.bandchain.v1.oracle.ProofProto.OracleDataProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_OracleDataProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_OracleDataProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.OracleDataProof.class, com.bandchain.v1.oracle.ProofProto.OracleDataProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.OracleDataProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        version_ = 0L;
+        if (merklePathsBuilder_ == null) {
+          merklePaths_ = java.util.Collections.emptyList();
+        } else {
+          merklePaths_ = null;
+          merklePathsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_OracleDataProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof build() {
+        com.bandchain.v1.oracle.ProofProto.OracleDataProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.OracleDataProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.OracleDataProof result = new com.bandchain.v1.oracle.ProofProto.OracleDataProof(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bandchain.v1.oracle.ProofProto.OracleDataProof result) {
+        if (merklePathsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            merklePaths_ = java.util.Collections.unmodifiableList(merklePaths_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.merklePaths_ = merklePaths_;
+        } else {
+          result.merklePaths_ = merklePathsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.OracleDataProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.OracleDataProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.OracleDataProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.OracleDataProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.OracleDataProof.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (merklePathsBuilder_ == null) {
+          if (!other.merklePaths_.isEmpty()) {
+            if (merklePaths_.isEmpty()) {
+              merklePaths_ = other.merklePaths_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMerklePathsIsMutable();
+              merklePaths_.addAll(other.merklePaths_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.merklePaths_.isEmpty()) {
+            if (merklePathsBuilder_.isEmpty()) {
+              merklePathsBuilder_.dispose();
+              merklePathsBuilder_ = null;
+              merklePaths_ = other.merklePaths_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              merklePathsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMerklePathsFieldBuilder() : null;
+            } else {
+              merklePathsBuilder_.addAllMessages(other.merklePaths_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.bandchain.v1.oracle.ProofProto.IAVLMerklePath m =
+                    input.readMessage(
+                        com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.parser(),
+                        extensionRegistry);
+                if (merklePathsBuilder_ == null) {
+                  ensureMerklePathsIsMutable();
+                  merklePaths_.add(m);
+                } else {
+                  merklePathsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.oracle.v1.OracleProto.Result result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.oracle.v1.OracleProto.Result, com.oracle.v1.OracleProto.Result.Builder, com.oracle.v1.OracleProto.ResultOrBuilder> resultBuilder_;
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       * @return The result.
+       */
+      public com.oracle.v1.OracleProto.Result getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.oracle.v1.OracleProto.Result.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(com.oracle.v1.OracleProto.Result value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setResult(
+          com.oracle.v1.OracleProto.Result.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeResult(com.oracle.v1.OracleProto.Result value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            result_ != null &&
+            result_ != com.oracle.v1.OracleProto.Result.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.Result.Builder getResultBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      public com.oracle.v1.OracleProto.ResultOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.oracle.v1.OracleProto.Result.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.oracle.v1.Result result = 1 [json_name = "result", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.oracle.v1.OracleProto.Result, com.oracle.v1.OracleProto.Result.Builder, com.oracle.v1.OracleProto.ResultOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.oracle.v1.OracleProto.Result, com.oracle.v1.OracleProto.Result.Builder, com.oracle.v1.OracleProto.ResultOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> merklePaths_ =
+        java.util.Collections.emptyList();
+      private void ensureMerklePathsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          merklePaths_ = new java.util.ArrayList<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath>(merklePaths_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.IAVLMerklePath, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder, com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> merklePathsBuilder_;
+
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> getMerklePathsList() {
+        if (merklePathsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(merklePaths_);
+        } else {
+          return merklePathsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMerklePathsCount() {
+        if (merklePathsBuilder_ == null) {
+          return merklePaths_.size();
+        } else {
+          return merklePathsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getMerklePaths(int index) {
+        if (merklePathsBuilder_ == null) {
+          return merklePaths_.get(index);
+        } else {
+          return merklePathsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath value) {
+        if (merklePathsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerklePathsIsMutable();
+          merklePaths_.set(index, value);
+          onChanged();
+        } else {
+          merklePathsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder builderForValue) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          merklePathsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(com.bandchain.v1.oracle.ProofProto.IAVLMerklePath value) {
+        if (merklePathsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(value);
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath value) {
+        if (merklePathsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(index, value);
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(
+          com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder builderForValue) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(builderForValue.build());
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder builderForValue) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMerklePaths(
+          java.lang.Iterable<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> values) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, merklePaths_);
+          onChanged();
+        } else {
+          merklePathsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMerklePaths() {
+        if (merklePathsBuilder_ == null) {
+          merklePaths_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          merklePathsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMerklePaths(int index) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.remove(index);
+          onChanged();
+        } else {
+          merklePathsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder getMerklePathsBuilder(
+          int index) {
+        return getMerklePathsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder getMerklePathsOrBuilder(
+          int index) {
+        if (merklePathsBuilder_ == null) {
+          return merklePaths_.get(index);  } else {
+          return merklePathsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+           getMerklePathsOrBuilderList() {
+        if (merklePathsBuilder_ != null) {
+          return merklePathsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(merklePaths_);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder addMerklePathsBuilder() {
+        return getMerklePathsFieldBuilder().addBuilder(
+            com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder addMerklePathsBuilder(
+          int index) {
+        return getMerklePathsFieldBuilder().addBuilder(
+            index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder> 
+           getMerklePathsBuilderList() {
+        return getMerklePathsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.IAVLMerklePath, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder, com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+          getMerklePathsFieldBuilder() {
+        if (merklePathsBuilder_ == null) {
+          merklePathsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.IAVLMerklePath, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder, com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder>(
+                  merklePaths_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          merklePaths_ = null;
+        }
+        return merklePathsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.OracleDataProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.OracleDataProof)
+    private static final com.bandchain.v1.oracle.ProofProto.OracleDataProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.OracleDataProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.OracleDataProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OracleDataProof>
+        PARSER = new com.google.protobuf.AbstractParser<OracleDataProof>() {
+      @java.lang.Override
+      public OracleDataProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OracleDataProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OracleDataProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.OracleDataProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IAVLMerklePathOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.IAVLMerklePath)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool is_data_on_right = 1 [json_name = "isDataOnRight"];</code>
+     * @return The isDataOnRight.
+     */
+    boolean getIsDataOnRight();
+
+    /**
+     * <code>uint32 subtree_height = 2 [json_name = "subtreeHeight"];</code>
+     * @return The subtreeHeight.
+     */
+    int getSubtreeHeight();
+
+    /**
+     * <code>uint64 subtree_size = 3 [json_name = "subtreeSize"];</code>
+     * @return The subtreeSize.
+     */
+    long getSubtreeSize();
+
+    /**
+     * <code>uint64 subtree_version = 4 [json_name = "subtreeVersion"];</code>
+     * @return The subtreeVersion.
+     */
+    long getSubtreeVersion();
+
+    /**
+     * <code>bytes sibling_hash = 5 [json_name = "siblingHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The siblingHash.
+     */
+    com.google.protobuf.ByteString getSiblingHash();
+  }
+  /**
+   * <pre>
+   * IAVLMerklePath represents a Merkle step to a leaf data node in an iAVL tree.
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.IAVLMerklePath}
+   */
+  public static final class IAVLMerklePath extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.IAVLMerklePath)
+      IAVLMerklePathOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IAVLMerklePath.newBuilder() to construct.
+    private IAVLMerklePath(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IAVLMerklePath() {
+      siblingHash_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IAVLMerklePath();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_IAVLMerklePath_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_IAVLMerklePath_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.class, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder.class);
+    }
+
+    public static final int IS_DATA_ON_RIGHT_FIELD_NUMBER = 1;
+    private boolean isDataOnRight_ = false;
+    /**
+     * <code>bool is_data_on_right = 1 [json_name = "isDataOnRight"];</code>
+     * @return The isDataOnRight.
+     */
+    @java.lang.Override
+    public boolean getIsDataOnRight() {
+      return isDataOnRight_;
+    }
+
+    public static final int SUBTREE_HEIGHT_FIELD_NUMBER = 2;
+    private int subtreeHeight_ = 0;
+    /**
+     * <code>uint32 subtree_height = 2 [json_name = "subtreeHeight"];</code>
+     * @return The subtreeHeight.
+     */
+    @java.lang.Override
+    public int getSubtreeHeight() {
+      return subtreeHeight_;
+    }
+
+    public static final int SUBTREE_SIZE_FIELD_NUMBER = 3;
+    private long subtreeSize_ = 0L;
+    /**
+     * <code>uint64 subtree_size = 3 [json_name = "subtreeSize"];</code>
+     * @return The subtreeSize.
+     */
+    @java.lang.Override
+    public long getSubtreeSize() {
+      return subtreeSize_;
+    }
+
+    public static final int SUBTREE_VERSION_FIELD_NUMBER = 4;
+    private long subtreeVersion_ = 0L;
+    /**
+     * <code>uint64 subtree_version = 4 [json_name = "subtreeVersion"];</code>
+     * @return The subtreeVersion.
+     */
+    @java.lang.Override
+    public long getSubtreeVersion() {
+      return subtreeVersion_;
+    }
+
+    public static final int SIBLING_HASH_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString siblingHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes sibling_hash = 5 [json_name = "siblingHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The siblingHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSiblingHash() {
+      return siblingHash_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isDataOnRight_ != false) {
+        output.writeBool(1, isDataOnRight_);
+      }
+      if (subtreeHeight_ != 0) {
+        output.writeUInt32(2, subtreeHeight_);
+      }
+      if (subtreeSize_ != 0L) {
+        output.writeUInt64(3, subtreeSize_);
+      }
+      if (subtreeVersion_ != 0L) {
+        output.writeUInt64(4, subtreeVersion_);
+      }
+      if (!siblingHash_.isEmpty()) {
+        output.writeBytes(5, siblingHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isDataOnRight_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isDataOnRight_);
+      }
+      if (subtreeHeight_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, subtreeHeight_);
+      }
+      if (subtreeSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, subtreeSize_);
+      }
+      if (subtreeVersion_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, subtreeVersion_);
+      }
+      if (!siblingHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, siblingHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.IAVLMerklePath)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.IAVLMerklePath other = (com.bandchain.v1.oracle.ProofProto.IAVLMerklePath) obj;
+
+      if (getIsDataOnRight()
+          != other.getIsDataOnRight()) return false;
+      if (getSubtreeHeight()
+          != other.getSubtreeHeight()) return false;
+      if (getSubtreeSize()
+          != other.getSubtreeSize()) return false;
+      if (getSubtreeVersion()
+          != other.getSubtreeVersion()) return false;
+      if (!getSiblingHash()
+          .equals(other.getSiblingHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_DATA_ON_RIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsDataOnRight());
+      hash = (37 * hash) + SUBTREE_HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getSubtreeHeight();
+      hash = (37 * hash) + SUBTREE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSubtreeSize());
+      hash = (37 * hash) + SUBTREE_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSubtreeVersion());
+      hash = (37 * hash) + SIBLING_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getSiblingHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.IAVLMerklePath prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * IAVLMerklePath represents a Merkle step to a leaf data node in an iAVL tree.
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.IAVLMerklePath}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.IAVLMerklePath)
+        com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_IAVLMerklePath_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_IAVLMerklePath_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.class, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        isDataOnRight_ = false;
+        subtreeHeight_ = 0;
+        subtreeSize_ = 0L;
+        subtreeVersion_ = 0L;
+        siblingHash_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_IAVLMerklePath_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath build() {
+        com.bandchain.v1.oracle.ProofProto.IAVLMerklePath result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.IAVLMerklePath result = new com.bandchain.v1.oracle.ProofProto.IAVLMerklePath(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.IAVLMerklePath result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.isDataOnRight_ = isDataOnRight_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subtreeHeight_ = subtreeHeight_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.subtreeSize_ = subtreeSize_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.subtreeVersion_ = subtreeVersion_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.siblingHash_ = siblingHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.IAVLMerklePath) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.IAVLMerklePath)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.IAVLMerklePath other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.getDefaultInstance()) return this;
+        if (other.getIsDataOnRight() != false) {
+          setIsDataOnRight(other.getIsDataOnRight());
+        }
+        if (other.getSubtreeHeight() != 0) {
+          setSubtreeHeight(other.getSubtreeHeight());
+        }
+        if (other.getSubtreeSize() != 0L) {
+          setSubtreeSize(other.getSubtreeSize());
+        }
+        if (other.getSubtreeVersion() != 0L) {
+          setSubtreeVersion(other.getSubtreeVersion());
+        }
+        if (other.getSiblingHash() != com.google.protobuf.ByteString.EMPTY) {
+          setSiblingHash(other.getSiblingHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                isDataOnRight_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                subtreeHeight_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                subtreeSize_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                subtreeVersion_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                siblingHash_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isDataOnRight_ ;
+      /**
+       * <code>bool is_data_on_right = 1 [json_name = "isDataOnRight"];</code>
+       * @return The isDataOnRight.
+       */
+      @java.lang.Override
+      public boolean getIsDataOnRight() {
+        return isDataOnRight_;
+      }
+      /**
+       * <code>bool is_data_on_right = 1 [json_name = "isDataOnRight"];</code>
+       * @param value The isDataOnRight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsDataOnRight(boolean value) {
+
+        isDataOnRight_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_data_on_right = 1 [json_name = "isDataOnRight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsDataOnRight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        isDataOnRight_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int subtreeHeight_ ;
+      /**
+       * <code>uint32 subtree_height = 2 [json_name = "subtreeHeight"];</code>
+       * @return The subtreeHeight.
+       */
+      @java.lang.Override
+      public int getSubtreeHeight() {
+        return subtreeHeight_;
+      }
+      /**
+       * <code>uint32 subtree_height = 2 [json_name = "subtreeHeight"];</code>
+       * @param value The subtreeHeight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubtreeHeight(int value) {
+
+        subtreeHeight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 subtree_height = 2 [json_name = "subtreeHeight"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubtreeHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        subtreeHeight_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long subtreeSize_ ;
+      /**
+       * <code>uint64 subtree_size = 3 [json_name = "subtreeSize"];</code>
+       * @return The subtreeSize.
+       */
+      @java.lang.Override
+      public long getSubtreeSize() {
+        return subtreeSize_;
+      }
+      /**
+       * <code>uint64 subtree_size = 3 [json_name = "subtreeSize"];</code>
+       * @param value The subtreeSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubtreeSize(long value) {
+
+        subtreeSize_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 subtree_size = 3 [json_name = "subtreeSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubtreeSize() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        subtreeSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long subtreeVersion_ ;
+      /**
+       * <code>uint64 subtree_version = 4 [json_name = "subtreeVersion"];</code>
+       * @return The subtreeVersion.
+       */
+      @java.lang.Override
+      public long getSubtreeVersion() {
+        return subtreeVersion_;
+      }
+      /**
+       * <code>uint64 subtree_version = 4 [json_name = "subtreeVersion"];</code>
+       * @param value The subtreeVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubtreeVersion(long value) {
+
+        subtreeVersion_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 subtree_version = 4 [json_name = "subtreeVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubtreeVersion() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        subtreeVersion_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString siblingHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes sibling_hash = 5 [json_name = "siblingHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The siblingHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSiblingHash() {
+        return siblingHash_;
+      }
+      /**
+       * <code>bytes sibling_hash = 5 [json_name = "siblingHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The siblingHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSiblingHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        siblingHash_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes sibling_hash = 5 [json_name = "siblingHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSiblingHash() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        siblingHash_ = getDefaultInstance().getSiblingHash();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.IAVLMerklePath)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.IAVLMerklePath)
+    private static final com.bandchain.v1.oracle.ProofProto.IAVLMerklePath DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.IAVLMerklePath();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IAVLMerklePath>
+        PARSER = new com.google.protobuf.AbstractParser<IAVLMerklePath>() {
+      @java.lang.Override
+      public IAVLMerklePath parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IAVLMerklePath> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IAVLMerklePath> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlockRelayProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.BlockRelayProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the multiStoreProof field is set.
+     */
+    boolean hasMultiStoreProof();
+    /**
+     * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+     * @return The multiStoreProof.
+     */
+    com.bandchain.v1.oracle.ProofProto.MultiStoreProof getMultiStoreProof();
+    /**
+     * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder getMultiStoreProofOrBuilder();
+
+    /**
+     * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockHeaderMerkleParts field is set.
+     */
+    boolean hasBlockHeaderMerkleParts();
+    /**
+     * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+     * @return The blockHeaderMerkleParts.
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts getBlockHeaderMerkleParts();
+    /**
+     * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder getBlockHeaderMerklePartsOrBuilder();
+
+    /**
+     * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+     * @return Whether the commonEncodedVotePart field is set.
+     */
+    boolean hasCommonEncodedVotePart();
+    /**
+     * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+     * @return The commonEncodedVotePart.
+     */
+    com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart getCommonEncodedVotePart();
+    /**
+     * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder getCommonEncodedVotePartOrBuilder();
+
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bandchain.v1.oracle.ProofProto.TMSignature> 
+        getSignaturesList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.TMSignature getSignatures(int index);
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    int getSignaturesCount();
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder> 
+        getSignaturesOrBuilderList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder getSignaturesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * BlockRelayProof contains multi store proof, block header merkle parts, common encoded part and signatures
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.BlockRelayProof}
+   */
+  public static final class BlockRelayProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.BlockRelayProof)
+      BlockRelayProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BlockRelayProof.newBuilder() to construct.
+    private BlockRelayProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlockRelayProof() {
+      signatures_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BlockRelayProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockRelayProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockRelayProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.BlockRelayProof.class, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder.class);
+    }
+
+    public static final int MULTI_STORE_PROOF_FIELD_NUMBER = 1;
+    private com.bandchain.v1.oracle.ProofProto.MultiStoreProof multiStoreProof_;
+    /**
+     * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+     * @return Whether the multiStoreProof field is set.
+     */
+    @java.lang.Override
+    public boolean hasMultiStoreProof() {
+      return multiStoreProof_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+     * @return The multiStoreProof.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiStoreProof getMultiStoreProof() {
+      return multiStoreProof_ == null ? com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance() : multiStoreProof_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder getMultiStoreProofOrBuilder() {
+      return multiStoreProof_ == null ? com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance() : multiStoreProof_;
+    }
+
+    public static final int BLOCK_HEADER_MERKLE_PARTS_FIELD_NUMBER = 2;
+    private com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts blockHeaderMerkleParts_;
+    /**
+     * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+     * @return Whether the blockHeaderMerkleParts field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlockHeaderMerkleParts() {
+      return blockHeaderMerkleParts_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+     * @return The blockHeaderMerkleParts.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts getBlockHeaderMerkleParts() {
+      return blockHeaderMerkleParts_ == null ? com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance() : blockHeaderMerkleParts_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder getBlockHeaderMerklePartsOrBuilder() {
+      return blockHeaderMerkleParts_ == null ? com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance() : blockHeaderMerkleParts_;
+    }
+
+    public static final int COMMON_ENCODED_VOTE_PART_FIELD_NUMBER = 3;
+    private com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart commonEncodedVotePart_;
+    /**
+     * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+     * @return Whether the commonEncodedVotePart field is set.
+     */
+    @java.lang.Override
+    public boolean hasCommonEncodedVotePart() {
+      return commonEncodedVotePart_ != null;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+     * @return The commonEncodedVotePart.
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart getCommonEncodedVotePart() {
+      return commonEncodedVotePart_ == null ? com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance() : commonEncodedVotePart_;
+    }
+    /**
+     * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder getCommonEncodedVotePartOrBuilder() {
+      return commonEncodedVotePart_ == null ? com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance() : commonEncodedVotePart_;
+    }
+
+    public static final int SIGNATURES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bandchain.v1.oracle.ProofProto.TMSignature> signatures_;
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bandchain.v1.oracle.ProofProto.TMSignature> getSignaturesList() {
+      return signatures_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder> 
+        getSignaturesOrBuilderList() {
+      return signatures_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getSignaturesCount() {
+      return signatures_.size();
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.TMSignature getSignatures(int index) {
+      return signatures_.get(index);
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder getSignaturesOrBuilder(
+        int index) {
+      return signatures_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (multiStoreProof_ != null) {
+        output.writeMessage(1, getMultiStoreProof());
+      }
+      if (blockHeaderMerkleParts_ != null) {
+        output.writeMessage(2, getBlockHeaderMerkleParts());
+      }
+      if (commonEncodedVotePart_ != null) {
+        output.writeMessage(3, getCommonEncodedVotePart());
+      }
+      for (int i = 0; i < signatures_.size(); i++) {
+        output.writeMessage(4, signatures_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (multiStoreProof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMultiStoreProof());
+      }
+      if (blockHeaderMerkleParts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBlockHeaderMerkleParts());
+      }
+      if (commonEncodedVotePart_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCommonEncodedVotePart());
+      }
+      for (int i = 0; i < signatures_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, signatures_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.BlockRelayProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.BlockRelayProof other = (com.bandchain.v1.oracle.ProofProto.BlockRelayProof) obj;
+
+      if (hasMultiStoreProof() != other.hasMultiStoreProof()) return false;
+      if (hasMultiStoreProof()) {
+        if (!getMultiStoreProof()
+            .equals(other.getMultiStoreProof())) return false;
+      }
+      if (hasBlockHeaderMerkleParts() != other.hasBlockHeaderMerkleParts()) return false;
+      if (hasBlockHeaderMerkleParts()) {
+        if (!getBlockHeaderMerkleParts()
+            .equals(other.getBlockHeaderMerkleParts())) return false;
+      }
+      if (hasCommonEncodedVotePart() != other.hasCommonEncodedVotePart()) return false;
+      if (hasCommonEncodedVotePart()) {
+        if (!getCommonEncodedVotePart()
+            .equals(other.getCommonEncodedVotePart())) return false;
+      }
+      if (!getSignaturesList()
+          .equals(other.getSignaturesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMultiStoreProof()) {
+        hash = (37 * hash) + MULTI_STORE_PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getMultiStoreProof().hashCode();
+      }
+      if (hasBlockHeaderMerkleParts()) {
+        hash = (37 * hash) + BLOCK_HEADER_MERKLE_PARTS_FIELD_NUMBER;
+        hash = (53 * hash) + getBlockHeaderMerkleParts().hashCode();
+      }
+      if (hasCommonEncodedVotePart()) {
+        hash = (37 * hash) + COMMON_ENCODED_VOTE_PART_FIELD_NUMBER;
+        hash = (53 * hash) + getCommonEncodedVotePart().hashCode();
+      }
+      if (getSignaturesCount() > 0) {
+        hash = (37 * hash) + SIGNATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getSignaturesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.BlockRelayProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BlockRelayProof contains multi store proof, block header merkle parts, common encoded part and signatures
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.BlockRelayProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.BlockRelayProof)
+        com.bandchain.v1.oracle.ProofProto.BlockRelayProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockRelayProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockRelayProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.BlockRelayProof.class, com.bandchain.v1.oracle.ProofProto.BlockRelayProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.BlockRelayProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        multiStoreProof_ = null;
+        if (multiStoreProofBuilder_ != null) {
+          multiStoreProofBuilder_.dispose();
+          multiStoreProofBuilder_ = null;
+        }
+        blockHeaderMerkleParts_ = null;
+        if (blockHeaderMerklePartsBuilder_ != null) {
+          blockHeaderMerklePartsBuilder_.dispose();
+          blockHeaderMerklePartsBuilder_ = null;
+        }
+        commonEncodedVotePart_ = null;
+        if (commonEncodedVotePartBuilder_ != null) {
+          commonEncodedVotePartBuilder_.dispose();
+          commonEncodedVotePartBuilder_ = null;
+        }
+        if (signaturesBuilder_ == null) {
+          signatures_ = java.util.Collections.emptyList();
+        } else {
+          signatures_ = null;
+          signaturesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockRelayProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof build() {
+        com.bandchain.v1.oracle.ProofProto.BlockRelayProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.BlockRelayProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.BlockRelayProof result = new com.bandchain.v1.oracle.ProofProto.BlockRelayProof(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bandchain.v1.oracle.ProofProto.BlockRelayProof result) {
+        if (signaturesBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            signatures_ = java.util.Collections.unmodifiableList(signatures_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.signatures_ = signatures_;
+        } else {
+          result.signatures_ = signaturesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.BlockRelayProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.multiStoreProof_ = multiStoreProofBuilder_ == null
+              ? multiStoreProof_
+              : multiStoreProofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.blockHeaderMerkleParts_ = blockHeaderMerklePartsBuilder_ == null
+              ? blockHeaderMerkleParts_
+              : blockHeaderMerklePartsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.commonEncodedVotePart_ = commonEncodedVotePartBuilder_ == null
+              ? commonEncodedVotePart_
+              : commonEncodedVotePartBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.BlockRelayProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.BlockRelayProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.BlockRelayProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.BlockRelayProof.getDefaultInstance()) return this;
+        if (other.hasMultiStoreProof()) {
+          mergeMultiStoreProof(other.getMultiStoreProof());
+        }
+        if (other.hasBlockHeaderMerkleParts()) {
+          mergeBlockHeaderMerkleParts(other.getBlockHeaderMerkleParts());
+        }
+        if (other.hasCommonEncodedVotePart()) {
+          mergeCommonEncodedVotePart(other.getCommonEncodedVotePart());
+        }
+        if (signaturesBuilder_ == null) {
+          if (!other.signatures_.isEmpty()) {
+            if (signatures_.isEmpty()) {
+              signatures_ = other.signatures_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSignaturesIsMutable();
+              signatures_.addAll(other.signatures_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.signatures_.isEmpty()) {
+            if (signaturesBuilder_.isEmpty()) {
+              signaturesBuilder_.dispose();
+              signaturesBuilder_ = null;
+              signatures_ = other.signatures_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              signaturesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSignaturesFieldBuilder() : null;
+            } else {
+              signaturesBuilder_.addAllMessages(other.signatures_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMultiStoreProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getBlockHeaderMerklePartsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getCommonEncodedVotePartFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.bandchain.v1.oracle.ProofProto.TMSignature m =
+                    input.readMessage(
+                        com.bandchain.v1.oracle.ProofProto.TMSignature.parser(),
+                        extensionRegistry);
+                if (signaturesBuilder_ == null) {
+                  ensureSignaturesIsMutable();
+                  signatures_.add(m);
+                } else {
+                  signaturesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.bandchain.v1.oracle.ProofProto.MultiStoreProof multiStoreProof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.MultiStoreProof, com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder, com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder> multiStoreProofBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       * @return Whether the multiStoreProof field is set.
+       */
+      public boolean hasMultiStoreProof() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       * @return The multiStoreProof.
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiStoreProof getMultiStoreProof() {
+        if (multiStoreProofBuilder_ == null) {
+          return multiStoreProof_ == null ? com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance() : multiStoreProof_;
+        } else {
+          return multiStoreProofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMultiStoreProof(com.bandchain.v1.oracle.ProofProto.MultiStoreProof value) {
+        if (multiStoreProofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          multiStoreProof_ = value;
+        } else {
+          multiStoreProofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMultiStoreProof(
+          com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder builderForValue) {
+        if (multiStoreProofBuilder_ == null) {
+          multiStoreProof_ = builderForValue.build();
+        } else {
+          multiStoreProofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMultiStoreProof(com.bandchain.v1.oracle.ProofProto.MultiStoreProof value) {
+        if (multiStoreProofBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            multiStoreProof_ != null &&
+            multiStoreProof_ != com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance()) {
+            getMultiStoreProofBuilder().mergeFrom(value);
+          } else {
+            multiStoreProof_ = value;
+          }
+        } else {
+          multiStoreProofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMultiStoreProof() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        multiStoreProof_ = null;
+        if (multiStoreProofBuilder_ != null) {
+          multiStoreProofBuilder_.dispose();
+          multiStoreProofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder getMultiStoreProofBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMultiStoreProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder getMultiStoreProofOrBuilder() {
+        if (multiStoreProofBuilder_ != null) {
+          return multiStoreProofBuilder_.getMessageOrBuilder();
+        } else {
+          return multiStoreProof_ == null ?
+              com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance() : multiStoreProof_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.MultiStoreProof multi_store_proof = 1 [json_name = "multiStoreProof", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.MultiStoreProof, com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder, com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder> 
+          getMultiStoreProofFieldBuilder() {
+        if (multiStoreProofBuilder_ == null) {
+          multiStoreProofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.MultiStoreProof, com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder, com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder>(
+                  getMultiStoreProof(),
+                  getParentForChildren(),
+                  isClean());
+          multiStoreProof_ = null;
+        }
+        return multiStoreProofBuilder_;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts blockHeaderMerkleParts_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder> blockHeaderMerklePartsBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       * @return Whether the blockHeaderMerkleParts field is set.
+       */
+      public boolean hasBlockHeaderMerkleParts() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       * @return The blockHeaderMerkleParts.
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts getBlockHeaderMerkleParts() {
+        if (blockHeaderMerklePartsBuilder_ == null) {
+          return blockHeaderMerkleParts_ == null ? com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance() : blockHeaderMerkleParts_;
+        } else {
+          return blockHeaderMerklePartsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockHeaderMerkleParts(com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts value) {
+        if (blockHeaderMerklePartsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blockHeaderMerkleParts_ = value;
+        } else {
+          blockHeaderMerklePartsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBlockHeaderMerkleParts(
+          com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder builderForValue) {
+        if (blockHeaderMerklePartsBuilder_ == null) {
+          blockHeaderMerkleParts_ = builderForValue.build();
+        } else {
+          blockHeaderMerklePartsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBlockHeaderMerkleParts(com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts value) {
+        if (blockHeaderMerklePartsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            blockHeaderMerkleParts_ != null &&
+            blockHeaderMerkleParts_ != com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance()) {
+            getBlockHeaderMerklePartsBuilder().mergeFrom(value);
+          } else {
+            blockHeaderMerkleParts_ = value;
+          }
+        } else {
+          blockHeaderMerklePartsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBlockHeaderMerkleParts() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        blockHeaderMerkleParts_ = null;
+        if (blockHeaderMerklePartsBuilder_ != null) {
+          blockHeaderMerklePartsBuilder_.dispose();
+          blockHeaderMerklePartsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder getBlockHeaderMerklePartsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getBlockHeaderMerklePartsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder getBlockHeaderMerklePartsOrBuilder() {
+        if (blockHeaderMerklePartsBuilder_ != null) {
+          return blockHeaderMerklePartsBuilder_.getMessageOrBuilder();
+        } else {
+          return blockHeaderMerkleParts_ == null ?
+              com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance() : blockHeaderMerkleParts_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.BlockHeaderMerkleParts block_header_merkle_parts = 2 [json_name = "blockHeaderMerkleParts", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder> 
+          getBlockHeaderMerklePartsFieldBuilder() {
+        if (blockHeaderMerklePartsBuilder_ == null) {
+          blockHeaderMerklePartsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder>(
+                  getBlockHeaderMerkleParts(),
+                  getParentForChildren(),
+                  isClean());
+          blockHeaderMerkleParts_ = null;
+        }
+        return blockHeaderMerklePartsBuilder_;
+      }
+
+      private com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart commonEncodedVotePart_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder> commonEncodedVotePartBuilder_;
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       * @return Whether the commonEncodedVotePart field is set.
+       */
+      public boolean hasCommonEncodedVotePart() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       * @return The commonEncodedVotePart.
+       */
+      public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart getCommonEncodedVotePart() {
+        if (commonEncodedVotePartBuilder_ == null) {
+          return commonEncodedVotePart_ == null ? com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance() : commonEncodedVotePart_;
+        } else {
+          return commonEncodedVotePartBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCommonEncodedVotePart(com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart value) {
+        if (commonEncodedVotePartBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commonEncodedVotePart_ = value;
+        } else {
+          commonEncodedVotePartBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCommonEncodedVotePart(
+          com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder builderForValue) {
+        if (commonEncodedVotePartBuilder_ == null) {
+          commonEncodedVotePart_ = builderForValue.build();
+        } else {
+          commonEncodedVotePartBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCommonEncodedVotePart(com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart value) {
+        if (commonEncodedVotePartBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            commonEncodedVotePart_ != null &&
+            commonEncodedVotePart_ != com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance()) {
+            getCommonEncodedVotePartBuilder().mergeFrom(value);
+          } else {
+            commonEncodedVotePart_ = value;
+          }
+        } else {
+          commonEncodedVotePartBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCommonEncodedVotePart() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        commonEncodedVotePart_ = null;
+        if (commonEncodedVotePartBuilder_ != null) {
+          commonEncodedVotePartBuilder_.dispose();
+          commonEncodedVotePartBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder getCommonEncodedVotePartBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getCommonEncodedVotePartFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder getCommonEncodedVotePartOrBuilder() {
+        if (commonEncodedVotePartBuilder_ != null) {
+          return commonEncodedVotePartBuilder_.getMessageOrBuilder();
+        } else {
+          return commonEncodedVotePart_ == null ?
+              com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance() : commonEncodedVotePart_;
+        }
+      }
+      /**
+       * <code>.bandchain.v1.oracle.CommonEncodedVotePart common_encoded_vote_part = 3 [json_name = "commonEncodedVotePart", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder> 
+          getCommonEncodedVotePartFieldBuilder() {
+        if (commonEncodedVotePartBuilder_ == null) {
+          commonEncodedVotePartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder>(
+                  getCommonEncodedVotePart(),
+                  getParentForChildren(),
+                  isClean());
+          commonEncodedVotePart_ = null;
+        }
+        return commonEncodedVotePartBuilder_;
+      }
+
+      private java.util.List<com.bandchain.v1.oracle.ProofProto.TMSignature> signatures_ =
+        java.util.Collections.emptyList();
+      private void ensureSignaturesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          signatures_ = new java.util.ArrayList<com.bandchain.v1.oracle.ProofProto.TMSignature>(signatures_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.TMSignature, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder, com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder> signaturesBuilder_;
+
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.TMSignature> getSignaturesList() {
+        if (signaturesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(signatures_);
+        } else {
+          return signaturesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public int getSignaturesCount() {
+        if (signaturesBuilder_ == null) {
+          return signatures_.size();
+        } else {
+          return signaturesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.TMSignature getSignatures(int index) {
+        if (signaturesBuilder_ == null) {
+          return signatures_.get(index);
+        } else {
+          return signaturesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSignatures(
+          int index, com.bandchain.v1.oracle.ProofProto.TMSignature value) {
+        if (signaturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignaturesIsMutable();
+          signatures_.set(index, value);
+          onChanged();
+        } else {
+          signaturesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setSignatures(
+          int index, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder builderForValue) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          signaturesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSignatures(com.bandchain.v1.oracle.ProofProto.TMSignature value) {
+        if (signaturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignaturesIsMutable();
+          signatures_.add(value);
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSignatures(
+          int index, com.bandchain.v1.oracle.ProofProto.TMSignature value) {
+        if (signaturesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignaturesIsMutable();
+          signatures_.add(index, value);
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSignatures(
+          com.bandchain.v1.oracle.ProofProto.TMSignature.Builder builderForValue) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.add(builderForValue.build());
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addSignatures(
+          int index, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder builderForValue) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          signaturesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllSignatures(
+          java.lang.Iterable<? extends com.bandchain.v1.oracle.ProofProto.TMSignature> values) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, signatures_);
+          onChanged();
+        } else {
+          signaturesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearSignatures() {
+        if (signaturesBuilder_ == null) {
+          signatures_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          signaturesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeSignatures(int index) {
+        if (signaturesBuilder_ == null) {
+          ensureSignaturesIsMutable();
+          signatures_.remove(index);
+          onChanged();
+        } else {
+          signaturesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.TMSignature.Builder getSignaturesBuilder(
+          int index) {
+        return getSignaturesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder getSignaturesOrBuilder(
+          int index) {
+        if (signaturesBuilder_ == null) {
+          return signatures_.get(index);  } else {
+          return signaturesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder> 
+           getSignaturesOrBuilderList() {
+        if (signaturesBuilder_ != null) {
+          return signaturesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(signatures_);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.TMSignature.Builder addSignaturesBuilder() {
+        return getSignaturesFieldBuilder().addBuilder(
+            com.bandchain.v1.oracle.ProofProto.TMSignature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.TMSignature.Builder addSignaturesBuilder(
+          int index) {
+        return getSignaturesFieldBuilder().addBuilder(
+            index, com.bandchain.v1.oracle.ProofProto.TMSignature.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.TMSignature signatures = 4 [json_name = "signatures", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.TMSignature.Builder> 
+           getSignaturesBuilderList() {
+        return getSignaturesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.TMSignature, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder, com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder> 
+          getSignaturesFieldBuilder() {
+        if (signaturesBuilder_ == null) {
+          signaturesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.TMSignature, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder, com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder>(
+                  signatures_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          signatures_ = null;
+        }
+        return signaturesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.BlockRelayProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.BlockRelayProof)
+    private static final com.bandchain.v1.oracle.ProofProto.BlockRelayProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.BlockRelayProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockRelayProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BlockRelayProof>
+        PARSER = new com.google.protobuf.AbstractParser<BlockRelayProof>() {
+      @java.lang.Override
+      public BlockRelayProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlockRelayProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlockRelayProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockRelayProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MultiStoreProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.MultiStoreProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes oracle_iavl_state_hash = 1 [json_name = "oracleIavlStateHash", (.gogoproto.customname) = "OracleIAVLStateHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The oracleIavlStateHash.
+     */
+    com.google.protobuf.ByteString getOracleIavlStateHash();
+
+    /**
+     * <code>bytes mint_store_merkle_hash = 2 [json_name = "mintStoreMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The mintStoreMerkleHash.
+     */
+    com.google.protobuf.ByteString getMintStoreMerkleHash();
+
+    /**
+     * <code>bytes params_to_slashing_stores_merkle_hash = 3 [json_name = "paramsToSlashingStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The paramsToSlashingStoresMerkleHash.
+     */
+    com.google.protobuf.ByteString getParamsToSlashingStoresMerkleHash();
+
+    /**
+     * <code>bytes gov_to_icahost_stores_merkle_hash = 4 [json_name = "govToIcahostStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The govToIcahostStoresMerkleHash.
+     */
+    com.google.protobuf.ByteString getGovToIcahostStoresMerkleHash();
+
+    /**
+     * <code>bytes auth_to_feegrant_stores_merkle_hash = 5 [json_name = "authToFeegrantStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The authToFeegrantStoresMerkleHash.
+     */
+    com.google.protobuf.ByteString getAuthToFeegrantStoresMerkleHash();
+
+    /**
+     * <code>bytes staking_to_upgrade_stores_merkle_hash = 6 [json_name = "stakingToUpgradeStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The stakingToUpgradeStoresMerkleHash.
+     */
+    com.google.protobuf.ByteString getStakingToUpgradeStoresMerkleHash();
+  }
+  /**
+   * <pre>
+   * MultiStoreProof stores a compact of other Cosmos-SDK modules' storage hash in multistore to
+   * compute (in combination with oracle store hash) Tendermint's application state hash at a given block.
+   *
+   *	                                           ________________[AppHash]_________________________
+   *	                                          /                                                  &#92;
+   *	                      _________________[N15]_________________                             __[N16]___
+   *	                     /                                        &#92;                          /          &#92;
+   *	          _______[N12]______                          _______[N13]________             [N14]        [I]
+   *	         /                  &#92;                        /                    &#92;           /     &#92;
+   *	    __[N8]__             __[N9]__                __[N10]__              __[N11]__    [G]   [H]
+   *	   /         &#92;          /         &#92;            /          &#92;            /         &#92;
+   *	  [N0]       [N1]      [N2]       [N3]       [N4]        [N5]         [N6]       [N7]
+   *	/     &#92;     /    &#92;    /    &#92;     /     &#92;     /     &#92;     /     &#92;     /     &#92;     /    &#92;
+   *
+   * [0]   [1]  [2]   [3] [4]   [5]  [6]    [7]  [8]    [9]  [A]    [B]  [C]    [D]  [E]   [F]
+   *
+   * [0] - acc (auth) [1] - authz    [2] - bank     [3] - capability [4] - crisis   [5] - dist
+   * [6] - evidence   [7] - feegrant [8] - gov      [9] - group      [A] - ibccore    [B] - icahost
+   * [C] - mint       [D] - oracle   [E] - params   [F] - slashing   [G] - staking    [H] - transfer [I] - upgrade
+   * Notice that NOT all leaves of the Merkle tree are needed in order to compute the Merkle
+   * root hash, since we only want to validate the correctness of [D] In fact, only
+   * [C], [N7], [N10], [N12], and [N16] are needed in order to compute [AppHash].
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.MultiStoreProof}
+   */
+  public static final class MultiStoreProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.MultiStoreProof)
+      MultiStoreProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MultiStoreProof.newBuilder() to construct.
+    private MultiStoreProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MultiStoreProof() {
+      oracleIavlStateHash_ = com.google.protobuf.ByteString.EMPTY;
+      mintStoreMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      paramsToSlashingStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      govToIcahostStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      authToFeegrantStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      stakingToUpgradeStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MultiStoreProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiStoreProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiStoreProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.MultiStoreProof.class, com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder.class);
+    }
+
+    public static final int ORACLE_IAVL_STATE_HASH_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString oracleIavlStateHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes oracle_iavl_state_hash = 1 [json_name = "oracleIavlStateHash", (.gogoproto.customname) = "OracleIAVLStateHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The oracleIavlStateHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getOracleIavlStateHash() {
+      return oracleIavlStateHash_;
+    }
+
+    public static final int MINT_STORE_MERKLE_HASH_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString mintStoreMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes mint_store_merkle_hash = 2 [json_name = "mintStoreMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The mintStoreMerkleHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMintStoreMerkleHash() {
+      return mintStoreMerkleHash_;
+    }
+
+    public static final int PARAMS_TO_SLASHING_STORES_MERKLE_HASH_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString paramsToSlashingStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes params_to_slashing_stores_merkle_hash = 3 [json_name = "paramsToSlashingStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The paramsToSlashingStoresMerkleHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getParamsToSlashingStoresMerkleHash() {
+      return paramsToSlashingStoresMerkleHash_;
+    }
+
+    public static final int GOV_TO_ICAHOST_STORES_MERKLE_HASH_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString govToIcahostStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes gov_to_icahost_stores_merkle_hash = 4 [json_name = "govToIcahostStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The govToIcahostStoresMerkleHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getGovToIcahostStoresMerkleHash() {
+      return govToIcahostStoresMerkleHash_;
+    }
+
+    public static final int AUTH_TO_FEEGRANT_STORES_MERKLE_HASH_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString authToFeegrantStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes auth_to_feegrant_stores_merkle_hash = 5 [json_name = "authToFeegrantStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The authToFeegrantStoresMerkleHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAuthToFeegrantStoresMerkleHash() {
+      return authToFeegrantStoresMerkleHash_;
+    }
+
+    public static final int STAKING_TO_UPGRADE_STORES_MERKLE_HASH_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString stakingToUpgradeStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes staking_to_upgrade_stores_merkle_hash = 6 [json_name = "stakingToUpgradeStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The stakingToUpgradeStoresMerkleHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getStakingToUpgradeStoresMerkleHash() {
+      return stakingToUpgradeStoresMerkleHash_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!oracleIavlStateHash_.isEmpty()) {
+        output.writeBytes(1, oracleIavlStateHash_);
+      }
+      if (!mintStoreMerkleHash_.isEmpty()) {
+        output.writeBytes(2, mintStoreMerkleHash_);
+      }
+      if (!paramsToSlashingStoresMerkleHash_.isEmpty()) {
+        output.writeBytes(3, paramsToSlashingStoresMerkleHash_);
+      }
+      if (!govToIcahostStoresMerkleHash_.isEmpty()) {
+        output.writeBytes(4, govToIcahostStoresMerkleHash_);
+      }
+      if (!authToFeegrantStoresMerkleHash_.isEmpty()) {
+        output.writeBytes(5, authToFeegrantStoresMerkleHash_);
+      }
+      if (!stakingToUpgradeStoresMerkleHash_.isEmpty()) {
+        output.writeBytes(6, stakingToUpgradeStoresMerkleHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!oracleIavlStateHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, oracleIavlStateHash_);
+      }
+      if (!mintStoreMerkleHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, mintStoreMerkleHash_);
+      }
+      if (!paramsToSlashingStoresMerkleHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, paramsToSlashingStoresMerkleHash_);
+      }
+      if (!govToIcahostStoresMerkleHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, govToIcahostStoresMerkleHash_);
+      }
+      if (!authToFeegrantStoresMerkleHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, authToFeegrantStoresMerkleHash_);
+      }
+      if (!stakingToUpgradeStoresMerkleHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, stakingToUpgradeStoresMerkleHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.MultiStoreProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.MultiStoreProof other = (com.bandchain.v1.oracle.ProofProto.MultiStoreProof) obj;
+
+      if (!getOracleIavlStateHash()
+          .equals(other.getOracleIavlStateHash())) return false;
+      if (!getMintStoreMerkleHash()
+          .equals(other.getMintStoreMerkleHash())) return false;
+      if (!getParamsToSlashingStoresMerkleHash()
+          .equals(other.getParamsToSlashingStoresMerkleHash())) return false;
+      if (!getGovToIcahostStoresMerkleHash()
+          .equals(other.getGovToIcahostStoresMerkleHash())) return false;
+      if (!getAuthToFeegrantStoresMerkleHash()
+          .equals(other.getAuthToFeegrantStoresMerkleHash())) return false;
+      if (!getStakingToUpgradeStoresMerkleHash()
+          .equals(other.getStakingToUpgradeStoresMerkleHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORACLE_IAVL_STATE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getOracleIavlStateHash().hashCode();
+      hash = (37 * hash) + MINT_STORE_MERKLE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getMintStoreMerkleHash().hashCode();
+      hash = (37 * hash) + PARAMS_TO_SLASHING_STORES_MERKLE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getParamsToSlashingStoresMerkleHash().hashCode();
+      hash = (37 * hash) + GOV_TO_ICAHOST_STORES_MERKLE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getGovToIcahostStoresMerkleHash().hashCode();
+      hash = (37 * hash) + AUTH_TO_FEEGRANT_STORES_MERKLE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthToFeegrantStoresMerkleHash().hashCode();
+      hash = (37 * hash) + STAKING_TO_UPGRADE_STORES_MERKLE_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingToUpgradeStoresMerkleHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.MultiStoreProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MultiStoreProof stores a compact of other Cosmos-SDK modules' storage hash in multistore to
+     * compute (in combination with oracle store hash) Tendermint's application state hash at a given block.
+     *
+     *	                                           ________________[AppHash]_________________________
+     *	                                          /                                                  &#92;
+     *	                      _________________[N15]_________________                             __[N16]___
+     *	                     /                                        &#92;                          /          &#92;
+     *	          _______[N12]______                          _______[N13]________             [N14]        [I]
+     *	         /                  &#92;                        /                    &#92;           /     &#92;
+     *	    __[N8]__             __[N9]__                __[N10]__              __[N11]__    [G]   [H]
+     *	   /         &#92;          /         &#92;            /          &#92;            /         &#92;
+     *	  [N0]       [N1]      [N2]       [N3]       [N4]        [N5]         [N6]       [N7]
+     *	/     &#92;     /    &#92;    /    &#92;     /     &#92;     /     &#92;     /     &#92;     /     &#92;     /    &#92;
+     *
+     * [0]   [1]  [2]   [3] [4]   [5]  [6]    [7]  [8]    [9]  [A]    [B]  [C]    [D]  [E]   [F]
+     *
+     * [0] - acc (auth) [1] - authz    [2] - bank     [3] - capability [4] - crisis   [5] - dist
+     * [6] - evidence   [7] - feegrant [8] - gov      [9] - group      [A] - ibccore    [B] - icahost
+     * [C] - mint       [D] - oracle   [E] - params   [F] - slashing   [G] - staking    [H] - transfer [I] - upgrade
+     * Notice that NOT all leaves of the Merkle tree are needed in order to compute the Merkle
+     * root hash, since we only want to validate the correctness of [D] In fact, only
+     * [C], [N7], [N10], [N12], and [N16] are needed in order to compute [AppHash].
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.MultiStoreProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.MultiStoreProof)
+        com.bandchain.v1.oracle.ProofProto.MultiStoreProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiStoreProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiStoreProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.MultiStoreProof.class, com.bandchain.v1.oracle.ProofProto.MultiStoreProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.MultiStoreProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        oracleIavlStateHash_ = com.google.protobuf.ByteString.EMPTY;
+        mintStoreMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+        paramsToSlashingStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+        govToIcahostStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+        authToFeegrantStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+        stakingToUpgradeStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_MultiStoreProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiStoreProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiStoreProof build() {
+        com.bandchain.v1.oracle.ProofProto.MultiStoreProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.MultiStoreProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.MultiStoreProof result = new com.bandchain.v1.oracle.ProofProto.MultiStoreProof(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.MultiStoreProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.oracleIavlStateHash_ = oracleIavlStateHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.mintStoreMerkleHash_ = mintStoreMerkleHash_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.paramsToSlashingStoresMerkleHash_ = paramsToSlashingStoresMerkleHash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.govToIcahostStoresMerkleHash_ = govToIcahostStoresMerkleHash_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.authToFeegrantStoresMerkleHash_ = authToFeegrantStoresMerkleHash_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.stakingToUpgradeStoresMerkleHash_ = stakingToUpgradeStoresMerkleHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.MultiStoreProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.MultiStoreProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.MultiStoreProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.MultiStoreProof.getDefaultInstance()) return this;
+        if (other.getOracleIavlStateHash() != com.google.protobuf.ByteString.EMPTY) {
+          setOracleIavlStateHash(other.getOracleIavlStateHash());
+        }
+        if (other.getMintStoreMerkleHash() != com.google.protobuf.ByteString.EMPTY) {
+          setMintStoreMerkleHash(other.getMintStoreMerkleHash());
+        }
+        if (other.getParamsToSlashingStoresMerkleHash() != com.google.protobuf.ByteString.EMPTY) {
+          setParamsToSlashingStoresMerkleHash(other.getParamsToSlashingStoresMerkleHash());
+        }
+        if (other.getGovToIcahostStoresMerkleHash() != com.google.protobuf.ByteString.EMPTY) {
+          setGovToIcahostStoresMerkleHash(other.getGovToIcahostStoresMerkleHash());
+        }
+        if (other.getAuthToFeegrantStoresMerkleHash() != com.google.protobuf.ByteString.EMPTY) {
+          setAuthToFeegrantStoresMerkleHash(other.getAuthToFeegrantStoresMerkleHash());
+        }
+        if (other.getStakingToUpgradeStoresMerkleHash() != com.google.protobuf.ByteString.EMPTY) {
+          setStakingToUpgradeStoresMerkleHash(other.getStakingToUpgradeStoresMerkleHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                oracleIavlStateHash_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                mintStoreMerkleHash_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                paramsToSlashingStoresMerkleHash_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                govToIcahostStoresMerkleHash_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                authToFeegrantStoresMerkleHash_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                stakingToUpgradeStoresMerkleHash_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString oracleIavlStateHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes oracle_iavl_state_hash = 1 [json_name = "oracleIavlStateHash", (.gogoproto.customname) = "OracleIAVLStateHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The oracleIavlStateHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getOracleIavlStateHash() {
+        return oracleIavlStateHash_;
+      }
+      /**
+       * <code>bytes oracle_iavl_state_hash = 1 [json_name = "oracleIavlStateHash", (.gogoproto.customname) = "OracleIAVLStateHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The oracleIavlStateHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleIavlStateHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        oracleIavlStateHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes oracle_iavl_state_hash = 1 [json_name = "oracleIavlStateHash", (.gogoproto.customname) = "OracleIAVLStateHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracleIavlStateHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oracleIavlStateHash_ = getDefaultInstance().getOracleIavlStateHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString mintStoreMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes mint_store_merkle_hash = 2 [json_name = "mintStoreMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The mintStoreMerkleHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMintStoreMerkleHash() {
+        return mintStoreMerkleHash_;
+      }
+      /**
+       * <code>bytes mint_store_merkle_hash = 2 [json_name = "mintStoreMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The mintStoreMerkleHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMintStoreMerkleHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        mintStoreMerkleHash_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes mint_store_merkle_hash = 2 [json_name = "mintStoreMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMintStoreMerkleHash() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        mintStoreMerkleHash_ = getDefaultInstance().getMintStoreMerkleHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString paramsToSlashingStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes params_to_slashing_stores_merkle_hash = 3 [json_name = "paramsToSlashingStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The paramsToSlashingStoresMerkleHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getParamsToSlashingStoresMerkleHash() {
+        return paramsToSlashingStoresMerkleHash_;
+      }
+      /**
+       * <code>bytes params_to_slashing_stores_merkle_hash = 3 [json_name = "paramsToSlashingStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The paramsToSlashingStoresMerkleHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParamsToSlashingStoresMerkleHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        paramsToSlashingStoresMerkleHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes params_to_slashing_stores_merkle_hash = 3 [json_name = "paramsToSlashingStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParamsToSlashingStoresMerkleHash() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        paramsToSlashingStoresMerkleHash_ = getDefaultInstance().getParamsToSlashingStoresMerkleHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString govToIcahostStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes gov_to_icahost_stores_merkle_hash = 4 [json_name = "govToIcahostStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The govToIcahostStoresMerkleHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getGovToIcahostStoresMerkleHash() {
+        return govToIcahostStoresMerkleHash_;
+      }
+      /**
+       * <code>bytes gov_to_icahost_stores_merkle_hash = 4 [json_name = "govToIcahostStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The govToIcahostStoresMerkleHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGovToIcahostStoresMerkleHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        govToIcahostStoresMerkleHash_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes gov_to_icahost_stores_merkle_hash = 4 [json_name = "govToIcahostStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGovToIcahostStoresMerkleHash() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        govToIcahostStoresMerkleHash_ = getDefaultInstance().getGovToIcahostStoresMerkleHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString authToFeegrantStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes auth_to_feegrant_stores_merkle_hash = 5 [json_name = "authToFeegrantStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The authToFeegrantStoresMerkleHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAuthToFeegrantStoresMerkleHash() {
+        return authToFeegrantStoresMerkleHash_;
+      }
+      /**
+       * <code>bytes auth_to_feegrant_stores_merkle_hash = 5 [json_name = "authToFeegrantStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The authToFeegrantStoresMerkleHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthToFeegrantStoresMerkleHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        authToFeegrantStoresMerkleHash_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes auth_to_feegrant_stores_merkle_hash = 5 [json_name = "authToFeegrantStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthToFeegrantStoresMerkleHash() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        authToFeegrantStoresMerkleHash_ = getDefaultInstance().getAuthToFeegrantStoresMerkleHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString stakingToUpgradeStoresMerkleHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes staking_to_upgrade_stores_merkle_hash = 6 [json_name = "stakingToUpgradeStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The stakingToUpgradeStoresMerkleHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getStakingToUpgradeStoresMerkleHash() {
+        return stakingToUpgradeStoresMerkleHash_;
+      }
+      /**
+       * <code>bytes staking_to_upgrade_stores_merkle_hash = 6 [json_name = "stakingToUpgradeStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The stakingToUpgradeStoresMerkleHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingToUpgradeStoresMerkleHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingToUpgradeStoresMerkleHash_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes staking_to_upgrade_stores_merkle_hash = 6 [json_name = "stakingToUpgradeStoresMerkleHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingToUpgradeStoresMerkleHash() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        stakingToUpgradeStoresMerkleHash_ = getDefaultInstance().getStakingToUpgradeStoresMerkleHash();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.MultiStoreProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.MultiStoreProof)
+    private static final com.bandchain.v1.oracle.ProofProto.MultiStoreProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.MultiStoreProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.MultiStoreProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MultiStoreProof>
+        PARSER = new com.google.protobuf.AbstractParser<MultiStoreProof>() {
+      @java.lang.Override
+      public MultiStoreProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MultiStoreProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MultiStoreProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.MultiStoreProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BlockHeaderMerklePartsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.BlockHeaderMerkleParts)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes version_and_chain_id_hash = 1 [json_name = "versionAndChainIdHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The versionAndChainIdHash.
+     */
+    com.google.protobuf.ByteString getVersionAndChainIdHash();
+
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>uint64 time_second = 3 [json_name = "timeSecond"];</code>
+     * @return The timeSecond.
+     */
+    long getTimeSecond();
+
+    /**
+     * <code>uint32 time_nano_second = 4 [json_name = "timeNanoSecond"];</code>
+     * @return The timeNanoSecond.
+     */
+    int getTimeNanoSecond();
+
+    /**
+     * <code>bytes last_block_id_and_other = 5 [json_name = "lastBlockIdAndOther", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The lastBlockIdAndOther.
+     */
+    com.google.protobuf.ByteString getLastBlockIdAndOther();
+
+    /**
+     * <code>bytes next_validator_hash_and_consensus_hash = 6 [json_name = "nextValidatorHashAndConsensusHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The nextValidatorHashAndConsensusHash.
+     */
+    com.google.protobuf.ByteString getNextValidatorHashAndConsensusHash();
+
+    /**
+     * <code>bytes last_results_hash = 7 [json_name = "lastResultsHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The lastResultsHash.
+     */
+    com.google.protobuf.ByteString getLastResultsHash();
+
+    /**
+     * <code>bytes evidence_and_proposer_hash = 8 [json_name = "evidenceAndProposerHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evidenceAndProposerHash.
+     */
+    com.google.protobuf.ByteString getEvidenceAndProposerHash();
+  }
+  /**
+   * <pre>
+   * BlockHeaderMerkleParts stores a group of hashes using for computing Tendermint's block
+   * header hash from app hash, and height.
+   *
+   * In Tendermint, a block header hash is the Merkle hash of a binary tree with 14 leaf nodes.
+   * Each node encodes a data piece of the blockchain. The notable data leaves are: [A] app_hash,
+   * [2] height. All data pieces are combined into one 32-byte hash to be signed
+   * by block validators. The structure of the Merkle tree is shown below.
+   *
+   *	                                 [BlockHeader]
+   *	                              /                &#92;
+   *	                 [3A]                                    [3B]
+   *	               /      &#92;                                /      &#92;
+   *	       [2A]                [2B]                [2C]                [2D]
+   *	      /    &#92;              /    &#92;              /    &#92;              /    &#92;
+   *	  [1A]      [1B]      [1C]      [1D]      [1E]      [1F]        [C]    [D]
+   *	  /  &#92;      /  &#92;      /  &#92;      /  &#92;      /  &#92;      /  &#92;
+   *	[0]  [1]  [2]  [3]  [4]  [5]  [6]  [7]  [8]  [9]  [A]  [B]
+   *
+   *	[0] - version               [1] - chain_id            [2] - height        [3] - time
+   *	[4] - last_block_id         [5] - last_commit_hash    [6] - data_hash     [7] - validators_hash
+   *	[8] - next_validators_hash  [9] - consensus_hash      [A] - app_hash      [B] - last_results_hash
+   *	[C] - evidence_hash         [D] - proposer_address
+   *
+   * Notice that NOT all leaves of the Merkle tree are needed in order to compute the Merkle
+   * root hash, since we only want to validate the correctness of [2], [3], and [A]. In fact, only
+   * [1A], [2B], [1E], [B], and [2D] are needed in order to compute [BlockHeader].
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.BlockHeaderMerkleParts}
+   */
+  public static final class BlockHeaderMerkleParts extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.BlockHeaderMerkleParts)
+      BlockHeaderMerklePartsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BlockHeaderMerkleParts.newBuilder() to construct.
+    private BlockHeaderMerkleParts(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BlockHeaderMerkleParts() {
+      versionAndChainIdHash_ = com.google.protobuf.ByteString.EMPTY;
+      lastBlockIdAndOther_ = com.google.protobuf.ByteString.EMPTY;
+      nextValidatorHashAndConsensusHash_ = com.google.protobuf.ByteString.EMPTY;
+      lastResultsHash_ = com.google.protobuf.ByteString.EMPTY;
+      evidenceAndProposerHash_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BlockHeaderMerkleParts();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.class, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder.class);
+    }
+
+    public static final int VERSION_AND_CHAIN_ID_HASH_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString versionAndChainIdHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes version_and_chain_id_hash = 1 [json_name = "versionAndChainIdHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The versionAndChainIdHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getVersionAndChainIdHash() {
+      return versionAndChainIdHash_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private long height_ = 0L;
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int TIME_SECOND_FIELD_NUMBER = 3;
+    private long timeSecond_ = 0L;
+    /**
+     * <code>uint64 time_second = 3 [json_name = "timeSecond"];</code>
+     * @return The timeSecond.
+     */
+    @java.lang.Override
+    public long getTimeSecond() {
+      return timeSecond_;
+    }
+
+    public static final int TIME_NANO_SECOND_FIELD_NUMBER = 4;
+    private int timeNanoSecond_ = 0;
+    /**
+     * <code>uint32 time_nano_second = 4 [json_name = "timeNanoSecond"];</code>
+     * @return The timeNanoSecond.
+     */
+    @java.lang.Override
+    public int getTimeNanoSecond() {
+      return timeNanoSecond_;
+    }
+
+    public static final int LAST_BLOCK_ID_AND_OTHER_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString lastBlockIdAndOther_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes last_block_id_and_other = 5 [json_name = "lastBlockIdAndOther", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The lastBlockIdAndOther.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getLastBlockIdAndOther() {
+      return lastBlockIdAndOther_;
+    }
+
+    public static final int NEXT_VALIDATOR_HASH_AND_CONSENSUS_HASH_FIELD_NUMBER = 6;
+    private com.google.protobuf.ByteString nextValidatorHashAndConsensusHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes next_validator_hash_and_consensus_hash = 6 [json_name = "nextValidatorHashAndConsensusHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The nextValidatorHashAndConsensusHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getNextValidatorHashAndConsensusHash() {
+      return nextValidatorHashAndConsensusHash_;
+    }
+
+    public static final int LAST_RESULTS_HASH_FIELD_NUMBER = 7;
+    private com.google.protobuf.ByteString lastResultsHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes last_results_hash = 7 [json_name = "lastResultsHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The lastResultsHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getLastResultsHash() {
+      return lastResultsHash_;
+    }
+
+    public static final int EVIDENCE_AND_PROPOSER_HASH_FIELD_NUMBER = 8;
+    private com.google.protobuf.ByteString evidenceAndProposerHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes evidence_and_proposer_hash = 8 [json_name = "evidenceAndProposerHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The evidenceAndProposerHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEvidenceAndProposerHash() {
+      return evidenceAndProposerHash_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!versionAndChainIdHash_.isEmpty()) {
+        output.writeBytes(1, versionAndChainIdHash_);
+      }
+      if (height_ != 0L) {
+        output.writeUInt64(2, height_);
+      }
+      if (timeSecond_ != 0L) {
+        output.writeUInt64(3, timeSecond_);
+      }
+      if (timeNanoSecond_ != 0) {
+        output.writeUInt32(4, timeNanoSecond_);
+      }
+      if (!lastBlockIdAndOther_.isEmpty()) {
+        output.writeBytes(5, lastBlockIdAndOther_);
+      }
+      if (!nextValidatorHashAndConsensusHash_.isEmpty()) {
+        output.writeBytes(6, nextValidatorHashAndConsensusHash_);
+      }
+      if (!lastResultsHash_.isEmpty()) {
+        output.writeBytes(7, lastResultsHash_);
+      }
+      if (!evidenceAndProposerHash_.isEmpty()) {
+        output.writeBytes(8, evidenceAndProposerHash_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!versionAndChainIdHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, versionAndChainIdHash_);
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, height_);
+      }
+      if (timeSecond_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, timeSecond_);
+      }
+      if (timeNanoSecond_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, timeNanoSecond_);
+      }
+      if (!lastBlockIdAndOther_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, lastBlockIdAndOther_);
+      }
+      if (!nextValidatorHashAndConsensusHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, nextValidatorHashAndConsensusHash_);
+      }
+      if (!lastResultsHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(7, lastResultsHash_);
+      }
+      if (!evidenceAndProposerHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(8, evidenceAndProposerHash_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts other = (com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts) obj;
+
+      if (!getVersionAndChainIdHash()
+          .equals(other.getVersionAndChainIdHash())) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (getTimeSecond()
+          != other.getTimeSecond()) return false;
+      if (getTimeNanoSecond()
+          != other.getTimeNanoSecond()) return false;
+      if (!getLastBlockIdAndOther()
+          .equals(other.getLastBlockIdAndOther())) return false;
+      if (!getNextValidatorHashAndConsensusHash()
+          .equals(other.getNextValidatorHashAndConsensusHash())) return false;
+      if (!getLastResultsHash()
+          .equals(other.getLastResultsHash())) return false;
+      if (!getEvidenceAndProposerHash()
+          .equals(other.getEvidenceAndProposerHash())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSION_AND_CHAIN_ID_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getVersionAndChainIdHash().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + TIME_SECOND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimeSecond());
+      hash = (37 * hash) + TIME_NANO_SECOND_FIELD_NUMBER;
+      hash = (53 * hash) + getTimeNanoSecond();
+      hash = (37 * hash) + LAST_BLOCK_ID_AND_OTHER_FIELD_NUMBER;
+      hash = (53 * hash) + getLastBlockIdAndOther().hashCode();
+      hash = (37 * hash) + NEXT_VALIDATOR_HASH_AND_CONSENSUS_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getNextValidatorHashAndConsensusHash().hashCode();
+      hash = (37 * hash) + LAST_RESULTS_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getLastResultsHash().hashCode();
+      hash = (37 * hash) + EVIDENCE_AND_PROPOSER_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getEvidenceAndProposerHash().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * BlockHeaderMerkleParts stores a group of hashes using for computing Tendermint's block
+     * header hash from app hash, and height.
+     *
+     * In Tendermint, a block header hash is the Merkle hash of a binary tree with 14 leaf nodes.
+     * Each node encodes a data piece of the blockchain. The notable data leaves are: [A] app_hash,
+     * [2] height. All data pieces are combined into one 32-byte hash to be signed
+     * by block validators. The structure of the Merkle tree is shown below.
+     *
+     *	                                 [BlockHeader]
+     *	                              /                &#92;
+     *	                 [3A]                                    [3B]
+     *	               /      &#92;                                /      &#92;
+     *	       [2A]                [2B]                [2C]                [2D]
+     *	      /    &#92;              /    &#92;              /    &#92;              /    &#92;
+     *	  [1A]      [1B]      [1C]      [1D]      [1E]      [1F]        [C]    [D]
+     *	  /  &#92;      /  &#92;      /  &#92;      /  &#92;      /  &#92;      /  &#92;
+     *	[0]  [1]  [2]  [3]  [4]  [5]  [6]  [7]  [8]  [9]  [A]  [B]
+     *
+     *	[0] - version               [1] - chain_id            [2] - height        [3] - time
+     *	[4] - last_block_id         [5] - last_commit_hash    [6] - data_hash     [7] - validators_hash
+     *	[8] - next_validators_hash  [9] - consensus_hash      [A] - app_hash      [B] - last_results_hash
+     *	[C] - evidence_hash         [D] - proposer_address
+     *
+     * Notice that NOT all leaves of the Merkle tree are needed in order to compute the Merkle
+     * root hash, since we only want to validate the correctness of [2], [3], and [A]. In fact, only
+     * [1A], [2B], [1E], [B], and [2D] are needed in order to compute [BlockHeader].
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.BlockHeaderMerkleParts}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.BlockHeaderMerkleParts)
+        com.bandchain.v1.oracle.ProofProto.BlockHeaderMerklePartsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.class, com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        versionAndChainIdHash_ = com.google.protobuf.ByteString.EMPTY;
+        height_ = 0L;
+        timeSecond_ = 0L;
+        timeNanoSecond_ = 0;
+        lastBlockIdAndOther_ = com.google.protobuf.ByteString.EMPTY;
+        nextValidatorHashAndConsensusHash_ = com.google.protobuf.ByteString.EMPTY;
+        lastResultsHash_ = com.google.protobuf.ByteString.EMPTY;
+        evidenceAndProposerHash_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts build() {
+        com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts result = new com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.versionAndChainIdHash_ = versionAndChainIdHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.timeSecond_ = timeSecond_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.timeNanoSecond_ = timeNanoSecond_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.lastBlockIdAndOther_ = lastBlockIdAndOther_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.nextValidatorHashAndConsensusHash_ = nextValidatorHashAndConsensusHash_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.lastResultsHash_ = lastResultsHash_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.evidenceAndProposerHash_ = evidenceAndProposerHash_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts.getDefaultInstance()) return this;
+        if (other.getVersionAndChainIdHash() != com.google.protobuf.ByteString.EMPTY) {
+          setVersionAndChainIdHash(other.getVersionAndChainIdHash());
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (other.getTimeSecond() != 0L) {
+          setTimeSecond(other.getTimeSecond());
+        }
+        if (other.getTimeNanoSecond() != 0) {
+          setTimeNanoSecond(other.getTimeNanoSecond());
+        }
+        if (other.getLastBlockIdAndOther() != com.google.protobuf.ByteString.EMPTY) {
+          setLastBlockIdAndOther(other.getLastBlockIdAndOther());
+        }
+        if (other.getNextValidatorHashAndConsensusHash() != com.google.protobuf.ByteString.EMPTY) {
+          setNextValidatorHashAndConsensusHash(other.getNextValidatorHashAndConsensusHash());
+        }
+        if (other.getLastResultsHash() != com.google.protobuf.ByteString.EMPTY) {
+          setLastResultsHash(other.getLastResultsHash());
+        }
+        if (other.getEvidenceAndProposerHash() != com.google.protobuf.ByteString.EMPTY) {
+          setEvidenceAndProposerHash(other.getEvidenceAndProposerHash());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                versionAndChainIdHash_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                height_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                timeSecond_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                timeNanoSecond_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                lastBlockIdAndOther_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                nextValidatorHashAndConsensusHash_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                lastResultsHash_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                evidenceAndProposerHash_ = input.readBytes();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString versionAndChainIdHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes version_and_chain_id_hash = 1 [json_name = "versionAndChainIdHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The versionAndChainIdHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getVersionAndChainIdHash() {
+        return versionAndChainIdHash_;
+      }
+      /**
+       * <code>bytes version_and_chain_id_hash = 1 [json_name = "versionAndChainIdHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The versionAndChainIdHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionAndChainIdHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        versionAndChainIdHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes version_and_chain_id_hash = 1 [json_name = "versionAndChainIdHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersionAndChainIdHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        versionAndChainIdHash_ = getDefaultInstance().getVersionAndChainIdHash();
+        onChanged();
+        return this;
+      }
+
+      private long height_ ;
+      /**
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long timeSecond_ ;
+      /**
+       * <code>uint64 time_second = 3 [json_name = "timeSecond"];</code>
+       * @return The timeSecond.
+       */
+      @java.lang.Override
+      public long getTimeSecond() {
+        return timeSecond_;
+      }
+      /**
+       * <code>uint64 time_second = 3 [json_name = "timeSecond"];</code>
+       * @param value The timeSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeSecond(long value) {
+
+        timeSecond_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 time_second = 3 [json_name = "timeSecond"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeSecond() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        timeSecond_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int timeNanoSecond_ ;
+      /**
+       * <code>uint32 time_nano_second = 4 [json_name = "timeNanoSecond"];</code>
+       * @return The timeNanoSecond.
+       */
+      @java.lang.Override
+      public int getTimeNanoSecond() {
+        return timeNanoSecond_;
+      }
+      /**
+       * <code>uint32 time_nano_second = 4 [json_name = "timeNanoSecond"];</code>
+       * @param value The timeNanoSecond to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeNanoSecond(int value) {
+
+        timeNanoSecond_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 time_nano_second = 4 [json_name = "timeNanoSecond"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeNanoSecond() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        timeNanoSecond_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString lastBlockIdAndOther_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes last_block_id_and_other = 5 [json_name = "lastBlockIdAndOther", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The lastBlockIdAndOther.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getLastBlockIdAndOther() {
+        return lastBlockIdAndOther_;
+      }
+      /**
+       * <code>bytes last_block_id_and_other = 5 [json_name = "lastBlockIdAndOther", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The lastBlockIdAndOther to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastBlockIdAndOther(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastBlockIdAndOther_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes last_block_id_and_other = 5 [json_name = "lastBlockIdAndOther", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastBlockIdAndOther() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lastBlockIdAndOther_ = getDefaultInstance().getLastBlockIdAndOther();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString nextValidatorHashAndConsensusHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes next_validator_hash_and_consensus_hash = 6 [json_name = "nextValidatorHashAndConsensusHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The nextValidatorHashAndConsensusHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getNextValidatorHashAndConsensusHash() {
+        return nextValidatorHashAndConsensusHash_;
+      }
+      /**
+       * <code>bytes next_validator_hash_and_consensus_hash = 6 [json_name = "nextValidatorHashAndConsensusHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The nextValidatorHashAndConsensusHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextValidatorHashAndConsensusHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        nextValidatorHashAndConsensusHash_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes next_validator_hash_and_consensus_hash = 6 [json_name = "nextValidatorHashAndConsensusHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextValidatorHashAndConsensusHash() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        nextValidatorHashAndConsensusHash_ = getDefaultInstance().getNextValidatorHashAndConsensusHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString lastResultsHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes last_results_hash = 7 [json_name = "lastResultsHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The lastResultsHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getLastResultsHash() {
+        return lastResultsHash_;
+      }
+      /**
+       * <code>bytes last_results_hash = 7 [json_name = "lastResultsHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The lastResultsHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastResultsHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastResultsHash_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes last_results_hash = 7 [json_name = "lastResultsHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastResultsHash() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        lastResultsHash_ = getDefaultInstance().getLastResultsHash();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString evidenceAndProposerHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes evidence_and_proposer_hash = 8 [json_name = "evidenceAndProposerHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The evidenceAndProposerHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEvidenceAndProposerHash() {
+        return evidenceAndProposerHash_;
+      }
+      /**
+       * <code>bytes evidence_and_proposer_hash = 8 [json_name = "evidenceAndProposerHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The evidenceAndProposerHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEvidenceAndProposerHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        evidenceAndProposerHash_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes evidence_and_proposer_hash = 8 [json_name = "evidenceAndProposerHash", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEvidenceAndProposerHash() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        evidenceAndProposerHash_ = getDefaultInstance().getEvidenceAndProposerHash();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.BlockHeaderMerkleParts)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.BlockHeaderMerkleParts)
+    private static final com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BlockHeaderMerkleParts>
+        PARSER = new com.google.protobuf.AbstractParser<BlockHeaderMerkleParts>() {
+      @java.lang.Override
+      public BlockHeaderMerkleParts parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<BlockHeaderMerkleParts> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BlockHeaderMerkleParts> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.BlockHeaderMerkleParts getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CommonEncodedVotePartOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.CommonEncodedVotePart)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes signed_data_prefix = 1 [json_name = "signedDataPrefix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The signedDataPrefix.
+     */
+    com.google.protobuf.ByteString getSignedDataPrefix();
+
+    /**
+     * <code>bytes signed_data_suffix = 2 [json_name = "signedDataSuffix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The signedDataSuffix.
+     */
+    com.google.protobuf.ByteString getSignedDataSuffix();
+  }
+  /**
+   * <pre>
+   * CommonEncodedVotePart represents the common part of encoded vote
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.CommonEncodedVotePart}
+   */
+  public static final class CommonEncodedVotePart extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.CommonEncodedVotePart)
+      CommonEncodedVotePartOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CommonEncodedVotePart.newBuilder() to construct.
+    private CommonEncodedVotePart(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CommonEncodedVotePart() {
+      signedDataPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      signedDataSuffix_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CommonEncodedVotePart();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CommonEncodedVotePart_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CommonEncodedVotePart_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.class, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder.class);
+    }
+
+    public static final int SIGNED_DATA_PREFIX_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString signedDataPrefix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes signed_data_prefix = 1 [json_name = "signedDataPrefix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The signedDataPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignedDataPrefix() {
+      return signedDataPrefix_;
+    }
+
+    public static final int SIGNED_DATA_SUFFIX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString signedDataSuffix_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes signed_data_suffix = 2 [json_name = "signedDataSuffix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The signedDataSuffix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignedDataSuffix() {
+      return signedDataSuffix_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!signedDataPrefix_.isEmpty()) {
+        output.writeBytes(1, signedDataPrefix_);
+      }
+      if (!signedDataSuffix_.isEmpty()) {
+        output.writeBytes(2, signedDataSuffix_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!signedDataPrefix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, signedDataPrefix_);
+      }
+      if (!signedDataSuffix_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, signedDataSuffix_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart other = (com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart) obj;
+
+      if (!getSignedDataPrefix()
+          .equals(other.getSignedDataPrefix())) return false;
+      if (!getSignedDataSuffix()
+          .equals(other.getSignedDataSuffix())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIGNED_DATA_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getSignedDataPrefix().hashCode();
+      hash = (37 * hash) + SIGNED_DATA_SUFFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getSignedDataSuffix().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CommonEncodedVotePart represents the common part of encoded vote
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.CommonEncodedVotePart}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.CommonEncodedVotePart)
+        com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePartOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CommonEncodedVotePart_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CommonEncodedVotePart_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.class, com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        signedDataPrefix_ = com.google.protobuf.ByteString.EMPTY;
+        signedDataSuffix_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_CommonEncodedVotePart_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart build() {
+        com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart result = new com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.signedDataPrefix_ = signedDataPrefix_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signedDataSuffix_ = signedDataSuffix_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart.getDefaultInstance()) return this;
+        if (other.getSignedDataPrefix() != com.google.protobuf.ByteString.EMPTY) {
+          setSignedDataPrefix(other.getSignedDataPrefix());
+        }
+        if (other.getSignedDataSuffix() != com.google.protobuf.ByteString.EMPTY) {
+          setSignedDataSuffix(other.getSignedDataSuffix());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                signedDataPrefix_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                signedDataSuffix_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString signedDataPrefix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes signed_data_prefix = 1 [json_name = "signedDataPrefix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The signedDataPrefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignedDataPrefix() {
+        return signedDataPrefix_;
+      }
+      /**
+       * <code>bytes signed_data_prefix = 1 [json_name = "signedDataPrefix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The signedDataPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedDataPrefix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signedDataPrefix_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes signed_data_prefix = 1 [json_name = "signedDataPrefix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedDataPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        signedDataPrefix_ = getDefaultInstance().getSignedDataPrefix();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signedDataSuffix_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes signed_data_suffix = 2 [json_name = "signedDataSuffix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The signedDataSuffix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignedDataSuffix() {
+        return signedDataSuffix_;
+      }
+      /**
+       * <code>bytes signed_data_suffix = 2 [json_name = "signedDataSuffix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The signedDataSuffix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedDataSuffix(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signedDataSuffix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes signed_data_suffix = 2 [json_name = "signedDataSuffix", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedDataSuffix() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signedDataSuffix_ = getDefaultInstance().getSignedDataSuffix();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.CommonEncodedVotePart)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.CommonEncodedVotePart)
+    private static final com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CommonEncodedVotePart>
+        PARSER = new com.google.protobuf.AbstractParser<CommonEncodedVotePart>() {
+      @java.lang.Override
+      public CommonEncodedVotePart parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CommonEncodedVotePart> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CommonEncodedVotePart> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.CommonEncodedVotePart getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TMSignatureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.TMSignature)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes r = 1 [json_name = "r", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The r.
+     */
+    com.google.protobuf.ByteString getR();
+
+    /**
+     * <code>bytes s = 2 [json_name = "s", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The s.
+     */
+    com.google.protobuf.ByteString getS();
+
+    /**
+     * <code>uint32 v = 3 [json_name = "v"];</code>
+     * @return The v.
+     */
+    int getV();
+
+    /**
+     * <code>bytes encoded_timestamp = 4 [json_name = "encodedTimestamp", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The encodedTimestamp.
+     */
+    com.google.protobuf.ByteString getEncodedTimestamp();
+  }
+  /**
+   * <pre>
+   * TMSignature contains all details of validator signature for performing signer recovery for ECDSA
+   * secp256k1 signature. Note that this struct is written specifically for signature signed on
+   * Tendermint's precommit data, which includes the block hash and some additional information prepended
+   * and appended to the block hash. The prepended part (prefix) and the appended part (suffix) are
+   * different for each signer (including signature size, machine clock, validator index, etc).
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.TMSignature}
+   */
+  public static final class TMSignature extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.TMSignature)
+      TMSignatureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TMSignature.newBuilder() to construct.
+    private TMSignature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TMSignature() {
+      r_ = com.google.protobuf.ByteString.EMPTY;
+      s_ = com.google.protobuf.ByteString.EMPTY;
+      encodedTimestamp_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TMSignature();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_TMSignature_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_TMSignature_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.TMSignature.class, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder.class);
+    }
+
+    public static final int R_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString r_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes r = 1 [json_name = "r", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The r.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getR() {
+      return r_;
+    }
+
+    public static final int S_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString s_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes s = 2 [json_name = "s", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The s.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getS() {
+      return s_;
+    }
+
+    public static final int V_FIELD_NUMBER = 3;
+    private int v_ = 0;
+    /**
+     * <code>uint32 v = 3 [json_name = "v"];</code>
+     * @return The v.
+     */
+    @java.lang.Override
+    public int getV() {
+      return v_;
+    }
+
+    public static final int ENCODED_TIMESTAMP_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString encodedTimestamp_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes encoded_timestamp = 4 [json_name = "encodedTimestamp", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+     * @return The encodedTimestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getEncodedTimestamp() {
+      return encodedTimestamp_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!r_.isEmpty()) {
+        output.writeBytes(1, r_);
+      }
+      if (!s_.isEmpty()) {
+        output.writeBytes(2, s_);
+      }
+      if (v_ != 0) {
+        output.writeUInt32(3, v_);
+      }
+      if (!encodedTimestamp_.isEmpty()) {
+        output.writeBytes(4, encodedTimestamp_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!r_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, r_);
+      }
+      if (!s_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, s_);
+      }
+      if (v_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, v_);
+      }
+      if (!encodedTimestamp_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, encodedTimestamp_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.TMSignature)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.TMSignature other = (com.bandchain.v1.oracle.ProofProto.TMSignature) obj;
+
+      if (!getR()
+          .equals(other.getR())) return false;
+      if (!getS()
+          .equals(other.getS())) return false;
+      if (getV()
+          != other.getV()) return false;
+      if (!getEncodedTimestamp()
+          .equals(other.getEncodedTimestamp())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + R_FIELD_NUMBER;
+      hash = (53 * hash) + getR().hashCode();
+      hash = (37 * hash) + S_FIELD_NUMBER;
+      hash = (53 * hash) + getS().hashCode();
+      hash = (37 * hash) + V_FIELD_NUMBER;
+      hash = (53 * hash) + getV();
+      hash = (37 * hash) + ENCODED_TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + getEncodedTimestamp().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.TMSignature prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TMSignature contains all details of validator signature for performing signer recovery for ECDSA
+     * secp256k1 signature. Note that this struct is written specifically for signature signed on
+     * Tendermint's precommit data, which includes the block hash and some additional information prepended
+     * and appended to the block hash. The prepended part (prefix) and the appended part (suffix) are
+     * different for each signer (including signature size, machine clock, validator index, etc).
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.TMSignature}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.TMSignature)
+        com.bandchain.v1.oracle.ProofProto.TMSignatureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_TMSignature_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_TMSignature_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.TMSignature.class, com.bandchain.v1.oracle.ProofProto.TMSignature.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.TMSignature.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        r_ = com.google.protobuf.ByteString.EMPTY;
+        s_ = com.google.protobuf.ByteString.EMPTY;
+        v_ = 0;
+        encodedTimestamp_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_TMSignature_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.TMSignature getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.TMSignature.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.TMSignature build() {
+        com.bandchain.v1.oracle.ProofProto.TMSignature result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.TMSignature buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.TMSignature result = new com.bandchain.v1.oracle.ProofProto.TMSignature(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.TMSignature result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.r_ = r_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.s_ = s_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.v_ = v_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.encodedTimestamp_ = encodedTimestamp_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.TMSignature) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.TMSignature)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.TMSignature other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.TMSignature.getDefaultInstance()) return this;
+        if (other.getR() != com.google.protobuf.ByteString.EMPTY) {
+          setR(other.getR());
+        }
+        if (other.getS() != com.google.protobuf.ByteString.EMPTY) {
+          setS(other.getS());
+        }
+        if (other.getV() != 0) {
+          setV(other.getV());
+        }
+        if (other.getEncodedTimestamp() != com.google.protobuf.ByteString.EMPTY) {
+          setEncodedTimestamp(other.getEncodedTimestamp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                r_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                s_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                v_ = input.readUInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                encodedTimestamp_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString r_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes r = 1 [json_name = "r", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The r.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getR() {
+        return r_;
+      }
+      /**
+       * <code>bytes r = 1 [json_name = "r", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The r to set.
+       * @return This builder for chaining.
+       */
+      public Builder setR(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        r_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes r = 1 [json_name = "r", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearR() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        r_ = getDefaultInstance().getR();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString s_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes s = 2 [json_name = "s", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The s.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getS() {
+        return s_;
+      }
+      /**
+       * <code>bytes s = 2 [json_name = "s", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The s to set.
+       * @return This builder for chaining.
+       */
+      public Builder setS(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        s_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes s = 2 [json_name = "s", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearS() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        s_ = getDefaultInstance().getS();
+        onChanged();
+        return this;
+      }
+
+      private int v_ ;
+      /**
+       * <code>uint32 v = 3 [json_name = "v"];</code>
+       * @return The v.
+       */
+      @java.lang.Override
+      public int getV() {
+        return v_;
+      }
+      /**
+       * <code>uint32 v = 3 [json_name = "v"];</code>
+       * @param value The v to set.
+       * @return This builder for chaining.
+       */
+      public Builder setV(int value) {
+
+        v_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 v = 3 [json_name = "v"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearV() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        v_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString encodedTimestamp_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes encoded_timestamp = 4 [json_name = "encodedTimestamp", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return The encodedTimestamp.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getEncodedTimestamp() {
+        return encodedTimestamp_;
+      }
+      /**
+       * <code>bytes encoded_timestamp = 4 [json_name = "encodedTimestamp", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @param value The encodedTimestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEncodedTimestamp(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        encodedTimestamp_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes encoded_timestamp = 4 [json_name = "encodedTimestamp", (.gogoproto.casttype) = "github.com/tendermint/tendermint/libs/bytes.HexBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEncodedTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        encodedTimestamp_ = getDefaultInstance().getEncodedTimestamp();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.TMSignature)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.TMSignature)
+    private static final com.bandchain.v1.oracle.ProofProto.TMSignature DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.TMSignature();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.TMSignature getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TMSignature>
+        PARSER = new com.google.protobuf.AbstractParser<TMSignature>() {
+      @java.lang.Override
+      public TMSignature parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TMSignature> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TMSignature> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.TMSignature getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RequestsCountProofOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bandchain.v1.oracle.RequestsCountProof)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 count = 1 [json_name = "count"];</code>
+     * @return The count.
+     */
+    long getCount();
+
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> 
+        getMerklePathsList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getMerklePaths(int index);
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    int getMerklePathsCount();
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+        getMerklePathsOrBuilderList();
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder getMerklePathsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * RequestsCountProof contains count, version and merkle paths
+   * </pre>
+   *
+   * Protobuf type {@code bandchain.v1.oracle.RequestsCountProof}
+   */
+  public static final class RequestsCountProof extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bandchain.v1.oracle.RequestsCountProof)
+      RequestsCountProofOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RequestsCountProof.newBuilder() to construct.
+    private RequestsCountProof(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RequestsCountProof() {
+      merklePaths_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RequestsCountProof();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_RequestsCountProof_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_RequestsCountProof_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.bandchain.v1.oracle.ProofProto.RequestsCountProof.class, com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder.class);
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 1;
+    private long count_ = 0L;
+    /**
+     * <code>uint64 count = 1 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int MERKLE_PATHS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> merklePaths_;
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> getMerklePathsList() {
+      return merklePaths_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+        getMerklePathsOrBuilderList() {
+      return merklePaths_;
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getMerklePathsCount() {
+      return merklePaths_.size();
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getMerklePaths(int index) {
+      return merklePaths_.get(index);
+    }
+    /**
+     * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder getMerklePathsOrBuilder(
+        int index) {
+      return merklePaths_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (count_ != 0L) {
+        output.writeUInt64(1, count_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(2, version_);
+      }
+      for (int i = 0; i < merklePaths_.size(); i++) {
+        output.writeMessage(3, merklePaths_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (count_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, count_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, version_);
+      }
+      for (int i = 0; i < merklePaths_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, merklePaths_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.bandchain.v1.oracle.ProofProto.RequestsCountProof)) {
+        return super.equals(obj);
+      }
+      com.bandchain.v1.oracle.ProofProto.RequestsCountProof other = (com.bandchain.v1.oracle.ProofProto.RequestsCountProof) obj;
+
+      if (getCount()
+          != other.getCount()) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getMerklePathsList()
+          .equals(other.getMerklePathsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCount());
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      if (getMerklePathsCount() > 0) {
+        hash = (37 * hash) + MERKLE_PATHS_FIELD_NUMBER;
+        hash = (53 * hash) + getMerklePathsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.bandchain.v1.oracle.ProofProto.RequestsCountProof prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RequestsCountProof contains count, version and merkle paths
+     * </pre>
+     *
+     * Protobuf type {@code bandchain.v1.oracle.RequestsCountProof}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bandchain.v1.oracle.RequestsCountProof)
+        com.bandchain.v1.oracle.ProofProto.RequestsCountProofOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_RequestsCountProof_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_RequestsCountProof_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.bandchain.v1.oracle.ProofProto.RequestsCountProof.class, com.bandchain.v1.oracle.ProofProto.RequestsCountProof.Builder.class);
+      }
+
+      // Construct using com.bandchain.v1.oracle.ProofProto.RequestsCountProof.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        count_ = 0L;
+        version_ = 0L;
+        if (merklePathsBuilder_ == null) {
+          merklePaths_ = java.util.Collections.emptyList();
+        } else {
+          merklePaths_ = null;
+          merklePathsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.bandchain.v1.oracle.ProofProto.internal_static_bandchain_v1_oracle_RequestsCountProof_descriptor;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.RequestsCountProof getDefaultInstanceForType() {
+        return com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.RequestsCountProof build() {
+        com.bandchain.v1.oracle.ProofProto.RequestsCountProof result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.bandchain.v1.oracle.ProofProto.RequestsCountProof buildPartial() {
+        com.bandchain.v1.oracle.ProofProto.RequestsCountProof result = new com.bandchain.v1.oracle.ProofProto.RequestsCountProof(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.bandchain.v1.oracle.ProofProto.RequestsCountProof result) {
+        if (merklePathsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            merklePaths_ = java.util.Collections.unmodifiableList(merklePaths_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.merklePaths_ = merklePaths_;
+        } else {
+          result.merklePaths_ = merklePathsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.bandchain.v1.oracle.ProofProto.RequestsCountProof result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.count_ = count_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.bandchain.v1.oracle.ProofProto.RequestsCountProof) {
+          return mergeFrom((com.bandchain.v1.oracle.ProofProto.RequestsCountProof)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.bandchain.v1.oracle.ProofProto.RequestsCountProof other) {
+        if (other == com.bandchain.v1.oracle.ProofProto.RequestsCountProof.getDefaultInstance()) return this;
+        if (other.getCount() != 0L) {
+          setCount(other.getCount());
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (merklePathsBuilder_ == null) {
+          if (!other.merklePaths_.isEmpty()) {
+            if (merklePaths_.isEmpty()) {
+              merklePaths_ = other.merklePaths_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureMerklePathsIsMutable();
+              merklePaths_.addAll(other.merklePaths_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.merklePaths_.isEmpty()) {
+            if (merklePathsBuilder_.isEmpty()) {
+              merklePathsBuilder_.dispose();
+              merklePathsBuilder_ = null;
+              merklePaths_ = other.merklePaths_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              merklePathsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMerklePathsFieldBuilder() : null;
+            } else {
+              merklePathsBuilder_.addAllMessages(other.merklePaths_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                count_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.bandchain.v1.oracle.ProofProto.IAVLMerklePath m =
+                    input.readMessage(
+                        com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.parser(),
+                        extensionRegistry);
+                if (merklePathsBuilder_ == null) {
+                  ensureMerklePathsIsMutable();
+                  merklePaths_.add(m);
+                } else {
+                  merklePathsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long count_ ;
+      /**
+       * <code>uint64 count = 1 [json_name = "count"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return count_;
+      }
+      /**
+       * <code>uint64 count = 1 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(long value) {
+
+        count_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 count = 1 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        count_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> merklePaths_ =
+        java.util.Collections.emptyList();
+      private void ensureMerklePathsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          merklePaths_ = new java.util.ArrayList<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath>(merklePaths_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.IAVLMerklePath, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder, com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> merklePathsBuilder_;
+
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> getMerklePathsList() {
+        if (merklePathsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(merklePaths_);
+        } else {
+          return merklePathsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public int getMerklePathsCount() {
+        if (merklePathsBuilder_ == null) {
+          return merklePaths_.size();
+        } else {
+          return merklePathsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath getMerklePaths(int index) {
+        if (merklePathsBuilder_ == null) {
+          return merklePaths_.get(index);
+        } else {
+          return merklePathsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath value) {
+        if (merklePathsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerklePathsIsMutable();
+          merklePaths_.set(index, value);
+          onChanged();
+        } else {
+          merklePathsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder builderForValue) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          merklePathsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(com.bandchain.v1.oracle.ProofProto.IAVLMerklePath value) {
+        if (merklePathsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(value);
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath value) {
+        if (merklePathsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(index, value);
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(
+          com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder builderForValue) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(builderForValue.build());
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addMerklePaths(
+          int index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder builderForValue) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          merklePathsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllMerklePaths(
+          java.lang.Iterable<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePath> values) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, merklePaths_);
+          onChanged();
+        } else {
+          merklePathsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMerklePaths() {
+        if (merklePathsBuilder_ == null) {
+          merklePaths_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          merklePathsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeMerklePaths(int index) {
+        if (merklePathsBuilder_ == null) {
+          ensureMerklePathsIsMutable();
+          merklePaths_.remove(index);
+          onChanged();
+        } else {
+          merklePathsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder getMerklePathsBuilder(
+          int index) {
+        return getMerklePathsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder getMerklePathsOrBuilder(
+          int index) {
+        if (merklePathsBuilder_ == null) {
+          return merklePaths_.get(index);  } else {
+          return merklePathsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+           getMerklePathsOrBuilderList() {
+        if (merklePathsBuilder_ != null) {
+          return merklePathsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(merklePaths_);
+        }
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder addMerklePathsBuilder() {
+        return getMerklePathsFieldBuilder().addBuilder(
+            com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder addMerklePathsBuilder(
+          int index) {
+        return getMerklePathsFieldBuilder().addBuilder(
+            index, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .bandchain.v1.oracle.IAVLMerklePath merkle_paths = 3 [json_name = "merklePaths", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder> 
+           getMerklePathsBuilderList() {
+        return getMerklePathsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.bandchain.v1.oracle.ProofProto.IAVLMerklePath, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder, com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder> 
+          getMerklePathsFieldBuilder() {
+        if (merklePathsBuilder_ == null) {
+          merklePathsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.bandchain.v1.oracle.ProofProto.IAVLMerklePath, com.bandchain.v1.oracle.ProofProto.IAVLMerklePath.Builder, com.bandchain.v1.oracle.ProofProto.IAVLMerklePathOrBuilder>(
+                  merklePaths_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          merklePaths_ = null;
+        }
+        return merklePathsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bandchain.v1.oracle.RequestsCountProof)
+    }
+
+    // @@protoc_insertion_point(class_scope:bandchain.v1.oracle.RequestsCountProof)
+    private static final com.bandchain.v1.oracle.ProofProto.RequestsCountProof DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.bandchain.v1.oracle.ProofProto.RequestsCountProof();
+    }
+
+    public static com.bandchain.v1.oracle.ProofProto.RequestsCountProof getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RequestsCountProof>
+        PARSER = new com.google.protobuf.AbstractParser<RequestsCountProof>() {
+      @java.lang.Override
+      public RequestsCountProof parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RequestsCountProof> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RequestsCountProof> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.bandchain.v1.oracle.ProofProto.RequestsCountProof getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_QueryProofRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_QueryProofRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_QueryProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_QueryProofResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_QueryMultiProofRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_QueryMultiProofRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_QueryMultiProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_QueryMultiProofResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_QueryRequestCountProofRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_QueryRequestCountProofResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_SingleProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_SingleProofResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_MultiProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_MultiProofResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_CountProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_CountProofResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_SingleProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_SingleProof_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_MultiProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_MultiProof_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_CountProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_CountProof_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_OracleDataProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_OracleDataProof_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_IAVLMerklePath_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_IAVLMerklePath_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_BlockRelayProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_BlockRelayProof_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_MultiStoreProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_MultiStoreProof_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_BlockHeaderMerkleParts_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_CommonEncodedVotePart_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_CommonEncodedVotePart_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_TMSignature_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_TMSignature_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bandchain_v1_oracle_RequestsCountProof_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bandchain_v1_oracle_RequestsCountProof_fieldAccessorTable;
 
@@ -258,12 +16251,12 @@ public final class ProofProto {
       ".QueryRequestCountProofRequest\0323.bandcha" +
       "in.v1.oracle.QueryRequestCountProofRespo" +
       "nse\"1\202\323\344\223\002+\022)/bandchain/v1/oracle/reques" +
-      "ts_count_proofB\316\001\n\027com.bandchain.v1.orac" +
-      "leB\nProofProtoP\001Z9github.com/bandprotoco" +
-      "l/chain/v2/client/grpc/oracle/proof\242\002\003BV" +
-      "O\252\002\023Bandchain.V1.Oracle\312\002\023Bandchain\\V1\\O" +
-      "racle\342\002\037Bandchain\\V1\\Oracle\\GPBMetadata\352" +
-      "\002\025Bandchain::V1::Oracleb\006proto3"
+      "ts_count_proofB\314\001\n\027com.bandchain.v1.orac" +
+      "leB\nProofProtoZ9github.com/bandprotocol/" +
+      "chain/v2/client/grpc/oracle/proof\242\002\003BVO\252" +
+      "\002\023Bandchain.V1.Oracle\312\002\023Bandchain\\V1\\Ora" +
+      "cle\342\002\037Bandchain\\V1\\Oracle\\GPBMetadata\352\002\025" +
+      "Bandchain::V1::Oracleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

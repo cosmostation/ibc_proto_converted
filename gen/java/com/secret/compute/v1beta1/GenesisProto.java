@@ -14,24 +14,4241 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    java.util.List<com.secret.compute.v1beta1.GenesisProto.Code> 
+        getCodesList();
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    com.secret.compute.v1beta1.GenesisProto.Code getCodes(int index);
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    int getCodesCount();
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder> 
+        getCodesOrBuilderList();
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder getCodesOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    java.util.List<com.secret.compute.v1beta1.GenesisProto.Contract> 
+        getContractsList();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    com.secret.compute.v1beta1.GenesisProto.Contract getContracts(int index);
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    int getContractsCount();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder> 
+        getContractsOrBuilderList();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder getContractsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    java.util.List<com.secret.compute.v1beta1.GenesisProto.Sequence> 
+        getSequencesList();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    com.secret.compute.v1beta1.GenesisProto.Sequence getSequences(int index);
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    int getSequencesCount();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder> 
+        getSequencesOrBuilderList();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder getSequencesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState - genesis state of x/wasm
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      codes_ = java.util.Collections.emptyList();
+      contracts_ = java.util.Collections.emptyList();
+      sequences_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.GenesisProto.GenesisState.class, com.secret.compute.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int CODES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.secret.compute.v1beta1.GenesisProto.Code> codes_;
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.secret.compute.v1beta1.GenesisProto.Code> getCodesList() {
+      return codes_;
+    }
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder> 
+        getCodesOrBuilderList() {
+      return codes_;
+    }
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getCodesCount() {
+      return codes_.size();
+    }
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.Code getCodes(int index) {
+      return codes_.get(index);
+    }
+    /**
+     * <pre>
+     *    Params params = 1 [(gogoproto.nullable) = false];
+     * </pre>
+     *
+     * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder getCodesOrBuilder(
+        int index) {
+      return codes_.get(index);
+    }
+
+    public static final int CONTRACTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.secret.compute.v1beta1.GenesisProto.Contract> contracts_;
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.secret.compute.v1beta1.GenesisProto.Contract> getContractsList() {
+      return contracts_;
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder> 
+        getContractsOrBuilderList() {
+      return contracts_;
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getContractsCount() {
+      return contracts_.size();
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.Contract getContracts(int index) {
+      return contracts_.get(index);
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder getContractsOrBuilder(
+        int index) {
+      return contracts_.get(index);
+    }
+
+    public static final int SEQUENCES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.secret.compute.v1beta1.GenesisProto.Sequence> sequences_;
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.secret.compute.v1beta1.GenesisProto.Sequence> getSequencesList() {
+      return sequences_;
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder> 
+        getSequencesOrBuilderList() {
+      return sequences_;
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public int getSequencesCount() {
+      return sequences_.size();
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.Sequence getSequences(int index) {
+      return sequences_.get(index);
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder getSequencesOrBuilder(
+        int index) {
+      return sequences_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < codes_.size(); i++) {
+        output.writeMessage(2, codes_.get(i));
+      }
+      for (int i = 0; i < contracts_.size(); i++) {
+        output.writeMessage(3, contracts_.get(i));
+      }
+      for (int i = 0; i < sequences_.size(); i++) {
+        output.writeMessage(4, sequences_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < codes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, codes_.get(i));
+      }
+      for (int i = 0; i < contracts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, contracts_.get(i));
+      }
+      for (int i = 0; i < sequences_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, sequences_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.GenesisProto.GenesisState other = (com.secret.compute.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getCodesList()
+          .equals(other.getCodesList())) return false;
+      if (!getContractsList()
+          .equals(other.getContractsList())) return false;
+      if (!getSequencesList()
+          .equals(other.getSequencesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCodesCount() > 0) {
+        hash = (37 * hash) + CODES_FIELD_NUMBER;
+        hash = (53 * hash) + getCodesList().hashCode();
+      }
+      if (getContractsCount() > 0) {
+        hash = (37 * hash) + CONTRACTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContractsList().hashCode();
+      }
+      if (getSequencesCount() > 0) {
+        hash = (37 * hash) + SEQUENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getSequencesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState - genesis state of x/wasm
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.GenesisState)
+        com.secret.compute.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.GenesisProto.GenesisState.class, com.secret.compute.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (codesBuilder_ == null) {
+          codes_ = java.util.Collections.emptyList();
+        } else {
+          codes_ = null;
+          codesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (contractsBuilder_ == null) {
+          contracts_ = java.util.Collections.emptyList();
+        } else {
+          contracts_ = null;
+          contractsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (sequencesBuilder_ == null) {
+          sequences_ = java.util.Collections.emptyList();
+        } else {
+          sequences_ = null;
+          sequencesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.GenesisState build() {
+        com.secret.compute.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.secret.compute.v1beta1.GenesisProto.GenesisState result = new com.secret.compute.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.secret.compute.v1beta1.GenesisProto.GenesisState result) {
+        if (codesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            codes_ = java.util.Collections.unmodifiableList(codes_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.codes_ = codes_;
+        } else {
+          result.codes_ = codesBuilder_.build();
+        }
+        if (contractsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            contracts_ = java.util.Collections.unmodifiableList(contracts_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.contracts_ = contracts_;
+        } else {
+          result.contracts_ = contractsBuilder_.build();
+        }
+        if (sequencesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            sequences_ = java.util.Collections.unmodifiableList(sequences_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.sequences_ = sequences_;
+        } else {
+          result.sequences_ = sequencesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.secret.compute.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.secret.compute.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (codesBuilder_ == null) {
+          if (!other.codes_.isEmpty()) {
+            if (codes_.isEmpty()) {
+              codes_ = other.codes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCodesIsMutable();
+              codes_.addAll(other.codes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.codes_.isEmpty()) {
+            if (codesBuilder_.isEmpty()) {
+              codesBuilder_.dispose();
+              codesBuilder_ = null;
+              codes_ = other.codes_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              codesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCodesFieldBuilder() : null;
+            } else {
+              codesBuilder_.addAllMessages(other.codes_);
+            }
+          }
+        }
+        if (contractsBuilder_ == null) {
+          if (!other.contracts_.isEmpty()) {
+            if (contracts_.isEmpty()) {
+              contracts_ = other.contracts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureContractsIsMutable();
+              contracts_.addAll(other.contracts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contracts_.isEmpty()) {
+            if (contractsBuilder_.isEmpty()) {
+              contractsBuilder_.dispose();
+              contractsBuilder_ = null;
+              contracts_ = other.contracts_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              contractsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractsFieldBuilder() : null;
+            } else {
+              contractsBuilder_.addAllMessages(other.contracts_);
+            }
+          }
+        }
+        if (sequencesBuilder_ == null) {
+          if (!other.sequences_.isEmpty()) {
+            if (sequences_.isEmpty()) {
+              sequences_ = other.sequences_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureSequencesIsMutable();
+              sequences_.addAll(other.sequences_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sequences_.isEmpty()) {
+            if (sequencesBuilder_.isEmpty()) {
+              sequencesBuilder_.dispose();
+              sequencesBuilder_ = null;
+              sequences_ = other.sequences_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              sequencesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSequencesFieldBuilder() : null;
+            } else {
+              sequencesBuilder_.addAllMessages(other.sequences_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                com.secret.compute.v1beta1.GenesisProto.Code m =
+                    input.readMessage(
+                        com.secret.compute.v1beta1.GenesisProto.Code.parser(),
+                        extensionRegistry);
+                if (codesBuilder_ == null) {
+                  ensureCodesIsMutable();
+                  codes_.add(m);
+                } else {
+                  codesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.secret.compute.v1beta1.GenesisProto.Contract m =
+                    input.readMessage(
+                        com.secret.compute.v1beta1.GenesisProto.Contract.parser(),
+                        extensionRegistry);
+                if (contractsBuilder_ == null) {
+                  ensureContractsIsMutable();
+                  contracts_.add(m);
+                } else {
+                  contractsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.secret.compute.v1beta1.GenesisProto.Sequence m =
+                    input.readMessage(
+                        com.secret.compute.v1beta1.GenesisProto.Sequence.parser(),
+                        extensionRegistry);
+                if (sequencesBuilder_ == null) {
+                  ensureSequencesIsMutable();
+                  sequences_.add(m);
+                } else {
+                  sequencesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.secret.compute.v1beta1.GenesisProto.Code> codes_ =
+        java.util.Collections.emptyList();
+      private void ensureCodesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          codes_ = new java.util.ArrayList<com.secret.compute.v1beta1.GenesisProto.Code>(codes_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.GenesisProto.Code, com.secret.compute.v1beta1.GenesisProto.Code.Builder, com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder> codesBuilder_;
+
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.GenesisProto.Code> getCodesList() {
+        if (codesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(codes_);
+        } else {
+          return codesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public int getCodesCount() {
+        if (codesBuilder_ == null) {
+          return codes_.size();
+        } else {
+          return codesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Code getCodes(int index) {
+        if (codesBuilder_ == null) {
+          return codes_.get(index);
+        } else {
+          return codesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder setCodes(
+          int index, com.secret.compute.v1beta1.GenesisProto.Code value) {
+        if (codesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodesIsMutable();
+          codes_.set(index, value);
+          onChanged();
+        } else {
+          codesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder setCodes(
+          int index, com.secret.compute.v1beta1.GenesisProto.Code.Builder builderForValue) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          codesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(com.secret.compute.v1beta1.GenesisProto.Code value) {
+        if (codesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodesIsMutable();
+          codes_.add(value);
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(
+          int index, com.secret.compute.v1beta1.GenesisProto.Code value) {
+        if (codesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCodesIsMutable();
+          codes_.add(index, value);
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(
+          com.secret.compute.v1beta1.GenesisProto.Code.Builder builderForValue) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addCodes(
+          int index, com.secret.compute.v1beta1.GenesisProto.Code.Builder builderForValue) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          codesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder addAllCodes(
+          java.lang.Iterable<? extends com.secret.compute.v1beta1.GenesisProto.Code> values) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, codes_);
+          onChanged();
+        } else {
+          codesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder clearCodes() {
+        if (codesBuilder_ == null) {
+          codes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          codesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public Builder removeCodes(int index) {
+        if (codesBuilder_ == null) {
+          ensureCodesIsMutable();
+          codes_.remove(index);
+          onChanged();
+        } else {
+          codesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Code.Builder getCodesBuilder(
+          int index) {
+        return getCodesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder getCodesOrBuilder(
+          int index) {
+        if (codesBuilder_ == null) {
+          return codes_.get(index);  } else {
+          return codesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder> 
+           getCodesOrBuilderList() {
+        if (codesBuilder_ != null) {
+          return codesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(codes_);
+        }
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Code.Builder addCodesBuilder() {
+        return getCodesFieldBuilder().addBuilder(
+            com.secret.compute.v1beta1.GenesisProto.Code.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Code.Builder addCodesBuilder(
+          int index) {
+        return getCodesFieldBuilder().addBuilder(
+            index, com.secret.compute.v1beta1.GenesisProto.Code.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       *    Params params = 1 [(gogoproto.nullable) = false];
+       * </pre>
+       *
+       * <code>repeated .secret.compute.v1beta1.Code codes = 2 [json_name = "codes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "codes,omitempty"];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.GenesisProto.Code.Builder> 
+           getCodesBuilderList() {
+        return getCodesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.GenesisProto.Code, com.secret.compute.v1beta1.GenesisProto.Code.Builder, com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder> 
+          getCodesFieldBuilder() {
+        if (codesBuilder_ == null) {
+          codesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.secret.compute.v1beta1.GenesisProto.Code, com.secret.compute.v1beta1.GenesisProto.Code.Builder, com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder>(
+                  codes_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          codes_ = null;
+        }
+        return codesBuilder_;
+      }
+
+      private java.util.List<com.secret.compute.v1beta1.GenesisProto.Contract> contracts_ =
+        java.util.Collections.emptyList();
+      private void ensureContractsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          contracts_ = new java.util.ArrayList<com.secret.compute.v1beta1.GenesisProto.Contract>(contracts_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.GenesisProto.Contract, com.secret.compute.v1beta1.GenesisProto.Contract.Builder, com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder> contractsBuilder_;
+
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.GenesisProto.Contract> getContractsList() {
+        if (contractsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contracts_);
+        } else {
+          return contractsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public int getContractsCount() {
+        if (contractsBuilder_ == null) {
+          return contracts_.size();
+        } else {
+          return contractsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Contract getContracts(int index) {
+        if (contractsBuilder_ == null) {
+          return contracts_.get(index);
+        } else {
+          return contractsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder setContracts(
+          int index, com.secret.compute.v1beta1.GenesisProto.Contract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.set(index, value);
+          onChanged();
+        } else {
+          contractsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder setContracts(
+          int index, com.secret.compute.v1beta1.GenesisProto.Contract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(com.secret.compute.v1beta1.GenesisProto.Contract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.add(value);
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          int index, com.secret.compute.v1beta1.GenesisProto.Contract value) {
+        if (contractsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractsIsMutable();
+          contracts_.add(index, value);
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          com.secret.compute.v1beta1.GenesisProto.Contract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addContracts(
+          int index, com.secret.compute.v1beta1.GenesisProto.Contract.Builder builderForValue) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder addAllContracts(
+          java.lang.Iterable<? extends com.secret.compute.v1beta1.GenesisProto.Contract> values) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contracts_);
+          onChanged();
+        } else {
+          contractsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder clearContracts() {
+        if (contractsBuilder_ == null) {
+          contracts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          contractsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public Builder removeContracts(int index) {
+        if (contractsBuilder_ == null) {
+          ensureContractsIsMutable();
+          contracts_.remove(index);
+          onChanged();
+        } else {
+          contractsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Contract.Builder getContractsBuilder(
+          int index) {
+        return getContractsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder getContractsOrBuilder(
+          int index) {
+        if (contractsBuilder_ == null) {
+          return contracts_.get(index);  } else {
+          return contractsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder> 
+           getContractsOrBuilderList() {
+        if (contractsBuilder_ != null) {
+          return contractsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contracts_);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Contract.Builder addContractsBuilder() {
+        return getContractsFieldBuilder().addBuilder(
+            com.secret.compute.v1beta1.GenesisProto.Contract.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Contract.Builder addContractsBuilder(
+          int index) {
+        return getContractsFieldBuilder().addBuilder(
+            index, com.secret.compute.v1beta1.GenesisProto.Contract.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Contract contracts = 3 [json_name = "contracts", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "contracts,omitempty"];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.GenesisProto.Contract.Builder> 
+           getContractsBuilderList() {
+        return getContractsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.GenesisProto.Contract, com.secret.compute.v1beta1.GenesisProto.Contract.Builder, com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder> 
+          getContractsFieldBuilder() {
+        if (contractsBuilder_ == null) {
+          contractsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.secret.compute.v1beta1.GenesisProto.Contract, com.secret.compute.v1beta1.GenesisProto.Contract.Builder, com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder>(
+                  contracts_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contracts_ = null;
+        }
+        return contractsBuilder_;
+      }
+
+      private java.util.List<com.secret.compute.v1beta1.GenesisProto.Sequence> sequences_ =
+        java.util.Collections.emptyList();
+      private void ensureSequencesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          sequences_ = new java.util.ArrayList<com.secret.compute.v1beta1.GenesisProto.Sequence>(sequences_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.GenesisProto.Sequence, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder, com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder> sequencesBuilder_;
+
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.GenesisProto.Sequence> getSequencesList() {
+        if (sequencesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sequences_);
+        } else {
+          return sequencesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public int getSequencesCount() {
+        if (sequencesBuilder_ == null) {
+          return sequences_.size();
+        } else {
+          return sequencesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Sequence getSequences(int index) {
+        if (sequencesBuilder_ == null) {
+          return sequences_.get(index);
+        } else {
+          return sequencesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder setSequences(
+          int index, com.secret.compute.v1beta1.GenesisProto.Sequence value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.set(index, value);
+          onChanged();
+        } else {
+          sequencesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder setSequences(
+          int index, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(com.secret.compute.v1beta1.GenesisProto.Sequence value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.add(value);
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(
+          int index, com.secret.compute.v1beta1.GenesisProto.Sequence value) {
+        if (sequencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSequencesIsMutable();
+          sequences_.add(index, value);
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(
+          com.secret.compute.v1beta1.GenesisProto.Sequence.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addSequences(
+          int index, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder builderForValue) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sequencesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder addAllSequences(
+          java.lang.Iterable<? extends com.secret.compute.v1beta1.GenesisProto.Sequence> values) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sequences_);
+          onChanged();
+        } else {
+          sequencesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder clearSequences() {
+        if (sequencesBuilder_ == null) {
+          sequences_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          sequencesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public Builder removeSequences(int index) {
+        if (sequencesBuilder_ == null) {
+          ensureSequencesIsMutable();
+          sequences_.remove(index);
+          onChanged();
+        } else {
+          sequencesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Sequence.Builder getSequencesBuilder(
+          int index) {
+        return getSequencesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder getSequencesOrBuilder(
+          int index) {
+        if (sequencesBuilder_ == null) {
+          return sequences_.get(index);  } else {
+          return sequencesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public java.util.List<? extends com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder> 
+           getSequencesOrBuilderList() {
+        if (sequencesBuilder_ != null) {
+          return sequencesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sequences_);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Sequence.Builder addSequencesBuilder() {
+        return getSequencesFieldBuilder().addBuilder(
+            com.secret.compute.v1beta1.GenesisProto.Sequence.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public com.secret.compute.v1beta1.GenesisProto.Sequence.Builder addSequencesBuilder(
+          int index) {
+        return getSequencesFieldBuilder().addBuilder(
+            index, com.secret.compute.v1beta1.GenesisProto.Sequence.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Sequence sequences = 4 [json_name = "sequences", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "sequences,omitempty"];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.GenesisProto.Sequence.Builder> 
+           getSequencesBuilderList() {
+        return getSequencesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.GenesisProto.Sequence, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder, com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder> 
+          getSequencesFieldBuilder() {
+        if (sequencesBuilder_ == null) {
+          sequencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.secret.compute.v1beta1.GenesisProto.Sequence, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder, com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder>(
+                  sequences_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sequences_ = null;
+        }
+        return sequencesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.GenesisState)
+    private static final com.secret.compute.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CodeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.Code)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    long getCodeId();
+
+    /**
+     * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the codeInfo field is set.
+     */
+    boolean hasCodeInfo();
+    /**
+     * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+     * @return The codeInfo.
+     */
+    com.secret.compute.v1beta1.TypesProto.CodeInfo getCodeInfo();
+    /**
+     * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder getCodeInfoOrBuilder();
+
+    /**
+     * <code>bytes code_bytes = 3 [json_name = "codeBytes"];</code>
+     * @return The codeBytes.
+     */
+    com.google.protobuf.ByteString getCodeBytes();
+  }
+  /**
+   * <pre>
+   * Code struct encompasses CodeInfo and CodeBytes
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.Code}
+   */
+  public static final class Code extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.Code)
+      CodeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Code.newBuilder() to construct.
+    private Code(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Code() {
+      codeBytes_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Code();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Code_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Code_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.GenesisProto.Code.class, com.secret.compute.v1beta1.GenesisProto.Code.Builder.class);
+    }
+
+    public static final int CODE_ID_FIELD_NUMBER = 1;
+    private long codeId_ = 0L;
+    /**
+     * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+     * @return The codeId.
+     */
+    @java.lang.Override
+    public long getCodeId() {
+      return codeId_;
+    }
+
+    public static final int CODE_INFO_FIELD_NUMBER = 2;
+    private com.secret.compute.v1beta1.TypesProto.CodeInfo codeInfo_;
+    /**
+     * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the codeInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasCodeInfo() {
+      return codeInfo_ != null;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+     * @return The codeInfo.
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.CodeInfo getCodeInfo() {
+      return codeInfo_ == null ? com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance() : codeInfo_;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder getCodeInfoOrBuilder() {
+      return codeInfo_ == null ? com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance() : codeInfo_;
+    }
+
+    public static final int CODE_BYTES_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString codeBytes_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes code_bytes = 3 [json_name = "codeBytes"];</code>
+     * @return The codeBytes.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getCodeBytes() {
+      return codeBytes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (codeId_ != 0L) {
+        output.writeUInt64(1, codeId_);
+      }
+      if (codeInfo_ != null) {
+        output.writeMessage(2, getCodeInfo());
+      }
+      if (!codeBytes_.isEmpty()) {
+        output.writeBytes(3, codeBytes_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (codeId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, codeId_);
+      }
+      if (codeInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCodeInfo());
+      }
+      if (!codeBytes_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, codeBytes_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.GenesisProto.Code)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.GenesisProto.Code other = (com.secret.compute.v1beta1.GenesisProto.Code) obj;
+
+      if (getCodeId()
+          != other.getCodeId()) return false;
+      if (hasCodeInfo() != other.hasCodeInfo()) return false;
+      if (hasCodeInfo()) {
+        if (!getCodeInfo()
+            .equals(other.getCodeInfo())) return false;
+      }
+      if (!getCodeBytes()
+          .equals(other.getCodeBytes())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCodeId());
+      if (hasCodeInfo()) {
+        hash = (37 * hash) + CODE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getCodeInfo().hashCode();
+      }
+      hash = (37 * hash) + CODE_BYTES_FIELD_NUMBER;
+      hash = (53 * hash) + getCodeBytes().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Code parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.GenesisProto.Code prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Code struct encompasses CodeInfo and CodeBytes
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.Code}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.Code)
+        com.secret.compute.v1beta1.GenesisProto.CodeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Code_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Code_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.GenesisProto.Code.class, com.secret.compute.v1beta1.GenesisProto.Code.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.GenesisProto.Code.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        codeId_ = 0L;
+        codeInfo_ = null;
+        if (codeInfoBuilder_ != null) {
+          codeInfoBuilder_.dispose();
+          codeInfoBuilder_ = null;
+        }
+        codeBytes_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Code_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Code getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.GenesisProto.Code.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Code build() {
+        com.secret.compute.v1beta1.GenesisProto.Code result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Code buildPartial() {
+        com.secret.compute.v1beta1.GenesisProto.Code result = new com.secret.compute.v1beta1.GenesisProto.Code(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.GenesisProto.Code result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.codeId_ = codeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.codeInfo_ = codeInfoBuilder_ == null
+              ? codeInfo_
+              : codeInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.codeBytes_ = codeBytes_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.GenesisProto.Code) {
+          return mergeFrom((com.secret.compute.v1beta1.GenesisProto.Code)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.GenesisProto.Code other) {
+        if (other == com.secret.compute.v1beta1.GenesisProto.Code.getDefaultInstance()) return this;
+        if (other.getCodeId() != 0L) {
+          setCodeId(other.getCodeId());
+        }
+        if (other.hasCodeInfo()) {
+          mergeCodeInfo(other.getCodeInfo());
+        }
+        if (other.getCodeBytes() != com.google.protobuf.ByteString.EMPTY) {
+          setCodeBytes(other.getCodeBytes());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                codeId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getCodeInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                codeBytes_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long codeId_ ;
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public long getCodeId() {
+        return codeId_;
+      }
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @param value The codeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeId(long value) {
+
+        codeId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 code_id = 1 [json_name = "codeId", (.gogoproto.customname) = "CodeID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        codeId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.secret.compute.v1beta1.TypesProto.CodeInfo codeInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.CodeInfo, com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder, com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder> codeInfoBuilder_;
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the codeInfo field is set.
+       */
+      public boolean hasCodeInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       * @return The codeInfo.
+       */
+      public com.secret.compute.v1beta1.TypesProto.CodeInfo getCodeInfo() {
+        if (codeInfoBuilder_ == null) {
+          return codeInfo_ == null ? com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance() : codeInfo_;
+        } else {
+          return codeInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCodeInfo(com.secret.compute.v1beta1.TypesProto.CodeInfo value) {
+        if (codeInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          codeInfo_ = value;
+        } else {
+          codeInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setCodeInfo(
+          com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder builderForValue) {
+        if (codeInfoBuilder_ == null) {
+          codeInfo_ = builderForValue.build();
+        } else {
+          codeInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeCodeInfo(com.secret.compute.v1beta1.TypesProto.CodeInfo value) {
+        if (codeInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            codeInfo_ != null &&
+            codeInfo_ != com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance()) {
+            getCodeInfoBuilder().mergeFrom(value);
+          } else {
+            codeInfo_ = value;
+          }
+        } else {
+          codeInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearCodeInfo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        codeInfo_ = null;
+        if (codeInfoBuilder_ != null) {
+          codeInfoBuilder_.dispose();
+          codeInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder getCodeInfoBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCodeInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder getCodeInfoOrBuilder() {
+        if (codeInfoBuilder_ != null) {
+          return codeInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return codeInfo_ == null ?
+              com.secret.compute.v1beta1.TypesProto.CodeInfo.getDefaultInstance() : codeInfo_;
+        }
+      }
+      /**
+       * <code>.secret.compute.v1beta1.CodeInfo code_info = 2 [json_name = "codeInfo", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.CodeInfo, com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder, com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder> 
+          getCodeInfoFieldBuilder() {
+        if (codeInfoBuilder_ == null) {
+          codeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.secret.compute.v1beta1.TypesProto.CodeInfo, com.secret.compute.v1beta1.TypesProto.CodeInfo.Builder, com.secret.compute.v1beta1.TypesProto.CodeInfoOrBuilder>(
+                  getCodeInfo(),
+                  getParentForChildren(),
+                  isClean());
+          codeInfo_ = null;
+        }
+        return codeInfoBuilder_;
+      }
+
+      private com.google.protobuf.ByteString codeBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes code_bytes = 3 [json_name = "codeBytes"];</code>
+       * @return The codeBytes.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getCodeBytes() {
+        return codeBytes_;
+      }
+      /**
+       * <code>bytes code_bytes = 3 [json_name = "codeBytes"];</code>
+       * @param value The codeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodeBytes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        codeBytes_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes code_bytes = 3 [json_name = "codeBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodeBytes() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        codeBytes_ = getDefaultInstance().getCodeBytes();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.Code)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.Code)
+    private static final com.secret.compute.v1beta1.GenesisProto.Code DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.GenesisProto.Code();
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Code getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Code>
+        PARSER = new com.google.protobuf.AbstractParser<Code>() {
+      @java.lang.Override
+      public Code parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Code> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Code> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.Code getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ContractOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.Contract)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes contract_address = 1 [json_name = "contractAddress", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The contractAddress.
+     */
+    com.google.protobuf.ByteString getContractAddress();
+
+    /**
+     * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractInfo field is set.
+     */
+    boolean hasContractInfo();
+    /**
+     * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return The contractInfo.
+     */
+    com.secret.compute.v1beta1.TypesProto.ContractInfo getContractInfo();
+    /**
+     * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder getContractInfoOrBuilder();
+
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.secret.compute.v1beta1.TypesProto.Model> 
+        getContractStateList();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    com.secret.compute.v1beta1.TypesProto.Model getContractState(int index);
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    int getContractStateCount();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.secret.compute.v1beta1.TypesProto.ModelOrBuilder> 
+        getContractStateOrBuilderList();
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    com.secret.compute.v1beta1.TypesProto.ModelOrBuilder getContractStateOrBuilder(
+        int index);
+
+    /**
+     * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+     * @return Whether the contractCustomInfo field is set.
+     */
+    boolean hasContractCustomInfo();
+    /**
+     * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+     * @return The contractCustomInfo.
+     */
+    com.secret.compute.v1beta1.TypesProto.ContractCustomInfo getContractCustomInfo();
+    /**
+     * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+     */
+    com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder getContractCustomInfoOrBuilder();
+  }
+  /**
+   * <pre>
+   * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.Contract}
+   */
+  public static final class Contract extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.Contract)
+      ContractOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Contract.newBuilder() to construct.
+    private Contract(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Contract() {
+      contractAddress_ = com.google.protobuf.ByteString.EMPTY;
+      contractState_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Contract();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Contract_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Contract_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.GenesisProto.Contract.class, com.secret.compute.v1beta1.GenesisProto.Contract.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESS_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString contractAddress_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes contract_address = 1 [json_name = "contractAddress", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The contractAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContractAddress() {
+      return contractAddress_;
+    }
+
+    public static final int CONTRACT_INFO_FIELD_NUMBER = 2;
+    private com.secret.compute.v1beta1.TypesProto.ContractInfo contractInfo_;
+    /**
+     * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the contractInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractInfo() {
+      return contractInfo_ != null;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     * @return The contractInfo.
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ContractInfo getContractInfo() {
+      return contractInfo_ == null ? com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder getContractInfoOrBuilder() {
+      return contractInfo_ == null ? com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+    }
+
+    public static final int CONTRACT_STATE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.secret.compute.v1beta1.TypesProto.Model> contractState_;
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.secret.compute.v1beta1.TypesProto.Model> getContractStateList() {
+      return contractState_;
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.secret.compute.v1beta1.TypesProto.ModelOrBuilder> 
+        getContractStateOrBuilderList() {
+      return contractState_;
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getContractStateCount() {
+      return contractState_.size();
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.Model getContractState(int index) {
+      return contractState_.get(index);
+    }
+    /**
+     * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ModelOrBuilder getContractStateOrBuilder(
+        int index) {
+      return contractState_.get(index);
+    }
+
+    public static final int CONTRACT_CUSTOM_INFO_FIELD_NUMBER = 4;
+    private com.secret.compute.v1beta1.TypesProto.ContractCustomInfo contractCustomInfo_;
+    /**
+     * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+     * @return Whether the contractCustomInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasContractCustomInfo() {
+      return contractCustomInfo_ != null;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+     * @return The contractCustomInfo.
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo getContractCustomInfo() {
+      return contractCustomInfo_ == null ? com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance() : contractCustomInfo_;
+    }
+    /**
+     * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+     */
+    @java.lang.Override
+    public com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder getContractCustomInfoOrBuilder() {
+      return contractCustomInfo_ == null ? com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance() : contractCustomInfo_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!contractAddress_.isEmpty()) {
+        output.writeBytes(1, contractAddress_);
+      }
+      if (contractInfo_ != null) {
+        output.writeMessage(2, getContractInfo());
+      }
+      for (int i = 0; i < contractState_.size(); i++) {
+        output.writeMessage(3, contractState_.get(i));
+      }
+      if (contractCustomInfo_ != null) {
+        output.writeMessage(4, getContractCustomInfo());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!contractAddress_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, contractAddress_);
+      }
+      if (contractInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getContractInfo());
+      }
+      for (int i = 0; i < contractState_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, contractState_.get(i));
+      }
+      if (contractCustomInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getContractCustomInfo());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.GenesisProto.Contract)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.GenesisProto.Contract other = (com.secret.compute.v1beta1.GenesisProto.Contract) obj;
+
+      if (!getContractAddress()
+          .equals(other.getContractAddress())) return false;
+      if (hasContractInfo() != other.hasContractInfo()) return false;
+      if (hasContractInfo()) {
+        if (!getContractInfo()
+            .equals(other.getContractInfo())) return false;
+      }
+      if (!getContractStateList()
+          .equals(other.getContractStateList())) return false;
+      if (hasContractCustomInfo() != other.hasContractCustomInfo()) return false;
+      if (hasContractCustomInfo()) {
+        if (!getContractCustomInfo()
+            .equals(other.getContractCustomInfo())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONTRACT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getContractAddress().hashCode();
+      if (hasContractInfo()) {
+        hash = (37 * hash) + CONTRACT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getContractInfo().hashCode();
+      }
+      if (getContractStateCount() > 0) {
+        hash = (37 * hash) + CONTRACT_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getContractStateList().hashCode();
+      }
+      if (hasContractCustomInfo()) {
+        hash = (37 * hash) + CONTRACT_CUSTOM_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getContractCustomInfo().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Contract parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.GenesisProto.Contract prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Contract struct encompasses ContractAddress, ContractInfo, and ContractState
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.Contract}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.Contract)
+        com.secret.compute.v1beta1.GenesisProto.ContractOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Contract_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Contract_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.GenesisProto.Contract.class, com.secret.compute.v1beta1.GenesisProto.Contract.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.GenesisProto.Contract.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddress_ = com.google.protobuf.ByteString.EMPTY;
+        contractInfo_ = null;
+        if (contractInfoBuilder_ != null) {
+          contractInfoBuilder_.dispose();
+          contractInfoBuilder_ = null;
+        }
+        if (contractStateBuilder_ == null) {
+          contractState_ = java.util.Collections.emptyList();
+        } else {
+          contractState_ = null;
+          contractStateBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        contractCustomInfo_ = null;
+        if (contractCustomInfoBuilder_ != null) {
+          contractCustomInfoBuilder_.dispose();
+          contractCustomInfoBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Contract_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Contract getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.GenesisProto.Contract.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Contract build() {
+        com.secret.compute.v1beta1.GenesisProto.Contract result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Contract buildPartial() {
+        com.secret.compute.v1beta1.GenesisProto.Contract result = new com.secret.compute.v1beta1.GenesisProto.Contract(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.secret.compute.v1beta1.GenesisProto.Contract result) {
+        if (contractStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            contractState_ = java.util.Collections.unmodifiableList(contractState_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.contractState_ = contractState_;
+        } else {
+          result.contractState_ = contractStateBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.GenesisProto.Contract result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contractAddress_ = contractAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contractInfo_ = contractInfoBuilder_ == null
+              ? contractInfo_
+              : contractInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.contractCustomInfo_ = contractCustomInfoBuilder_ == null
+              ? contractCustomInfo_
+              : contractCustomInfoBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.GenesisProto.Contract) {
+          return mergeFrom((com.secret.compute.v1beta1.GenesisProto.Contract)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.GenesisProto.Contract other) {
+        if (other == com.secret.compute.v1beta1.GenesisProto.Contract.getDefaultInstance()) return this;
+        if (other.getContractAddress() != com.google.protobuf.ByteString.EMPTY) {
+          setContractAddress(other.getContractAddress());
+        }
+        if (other.hasContractInfo()) {
+          mergeContractInfo(other.getContractInfo());
+        }
+        if (contractStateBuilder_ == null) {
+          if (!other.contractState_.isEmpty()) {
+            if (contractState_.isEmpty()) {
+              contractState_ = other.contractState_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureContractStateIsMutable();
+              contractState_.addAll(other.contractState_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contractState_.isEmpty()) {
+            if (contractStateBuilder_.isEmpty()) {
+              contractStateBuilder_.dispose();
+              contractStateBuilder_ = null;
+              contractState_ = other.contractState_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              contractStateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContractStateFieldBuilder() : null;
+            } else {
+              contractStateBuilder_.addAllMessages(other.contractState_);
+            }
+          }
+        }
+        if (other.hasContractCustomInfo()) {
+          mergeContractCustomInfo(other.getContractCustomInfo());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                contractAddress_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getContractInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.secret.compute.v1beta1.TypesProto.Model m =
+                    input.readMessage(
+                        com.secret.compute.v1beta1.TypesProto.Model.parser(),
+                        extensionRegistry);
+                if (contractStateBuilder_ == null) {
+                  ensureContractStateIsMutable();
+                  contractState_.add(m);
+                } else {
+                  contractStateBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getContractCustomInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString contractAddress_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes contract_address = 1 [json_name = "contractAddress", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The contractAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getContractAddress() {
+        return contractAddress_;
+      }
+      /**
+       * <code>bytes contract_address = 1 [json_name = "contractAddress", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The contractAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddress(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        contractAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes contract_address = 1 [json_name = "contractAddress", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddress() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        contractAddress_ = getDefaultInstance().getContractAddress();
+        onChanged();
+        return this;
+      }
+
+      private com.secret.compute.v1beta1.TypesProto.ContractInfo contractInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.ContractInfo, com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder, com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder> contractInfoBuilder_;
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the contractInfo field is set.
+       */
+      public boolean hasContractInfo() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       * @return The contractInfo.
+       */
+      public com.secret.compute.v1beta1.TypesProto.ContractInfo getContractInfo() {
+        if (contractInfoBuilder_ == null) {
+          return contractInfo_ == null ? com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+        } else {
+          return contractInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractInfo(com.secret.compute.v1beta1.TypesProto.ContractInfo value) {
+        if (contractInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractInfo_ = value;
+        } else {
+          contractInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractInfo(
+          com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder builderForValue) {
+        if (contractInfoBuilder_ == null) {
+          contractInfo_ = builderForValue.build();
+        } else {
+          contractInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeContractInfo(com.secret.compute.v1beta1.TypesProto.ContractInfo value) {
+        if (contractInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            contractInfo_ != null &&
+            contractInfo_ != com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance()) {
+            getContractInfoBuilder().mergeFrom(value);
+          } else {
+            contractInfo_ = value;
+          }
+        } else {
+          contractInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractInfo() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        contractInfo_ = null;
+        if (contractInfoBuilder_ != null) {
+          contractInfoBuilder_.dispose();
+          contractInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder getContractInfoBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getContractInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder getContractInfoOrBuilder() {
+        if (contractInfoBuilder_ != null) {
+          return contractInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return contractInfo_ == null ?
+              com.secret.compute.v1beta1.TypesProto.ContractInfo.getDefaultInstance() : contractInfo_;
+        }
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractInfo contract_info = 2 [json_name = "contractInfo", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.ContractInfo, com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder, com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder> 
+          getContractInfoFieldBuilder() {
+        if (contractInfoBuilder_ == null) {
+          contractInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.secret.compute.v1beta1.TypesProto.ContractInfo, com.secret.compute.v1beta1.TypesProto.ContractInfo.Builder, com.secret.compute.v1beta1.TypesProto.ContractInfoOrBuilder>(
+                  getContractInfo(),
+                  getParentForChildren(),
+                  isClean());
+          contractInfo_ = null;
+        }
+        return contractInfoBuilder_;
+      }
+
+      private java.util.List<com.secret.compute.v1beta1.TypesProto.Model> contractState_ =
+        java.util.Collections.emptyList();
+      private void ensureContractStateIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          contractState_ = new java.util.ArrayList<com.secret.compute.v1beta1.TypesProto.Model>(contractState_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.Model, com.secret.compute.v1beta1.TypesProto.Model.Builder, com.secret.compute.v1beta1.TypesProto.ModelOrBuilder> contractStateBuilder_;
+
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.TypesProto.Model> getContractStateList() {
+        if (contractStateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contractState_);
+        } else {
+          return contractStateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public int getContractStateCount() {
+        if (contractStateBuilder_ == null) {
+          return contractState_.size();
+        } else {
+          return contractStateBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.Model getContractState(int index) {
+        if (contractStateBuilder_ == null) {
+          return contractState_.get(index);
+        } else {
+          return contractStateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractState(
+          int index, com.secret.compute.v1beta1.TypesProto.Model value) {
+        if (contractStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractStateIsMutable();
+          contractState_.set(index, value);
+          onChanged();
+        } else {
+          contractStateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setContractState(
+          int index, com.secret.compute.v1beta1.TypesProto.Model.Builder builderForValue) {
+        if (contractStateBuilder_ == null) {
+          ensureContractStateIsMutable();
+          contractState_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractStateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractState(com.secret.compute.v1beta1.TypesProto.Model value) {
+        if (contractStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractStateIsMutable();
+          contractState_.add(value);
+          onChanged();
+        } else {
+          contractStateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractState(
+          int index, com.secret.compute.v1beta1.TypesProto.Model value) {
+        if (contractStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContractStateIsMutable();
+          contractState_.add(index, value);
+          onChanged();
+        } else {
+          contractStateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractState(
+          com.secret.compute.v1beta1.TypesProto.Model.Builder builderForValue) {
+        if (contractStateBuilder_ == null) {
+          ensureContractStateIsMutable();
+          contractState_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contractStateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addContractState(
+          int index, com.secret.compute.v1beta1.TypesProto.Model.Builder builderForValue) {
+        if (contractStateBuilder_ == null) {
+          ensureContractStateIsMutable();
+          contractState_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contractStateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllContractState(
+          java.lang.Iterable<? extends com.secret.compute.v1beta1.TypesProto.Model> values) {
+        if (contractStateBuilder_ == null) {
+          ensureContractStateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contractState_);
+          onChanged();
+        } else {
+          contractStateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearContractState() {
+        if (contractStateBuilder_ == null) {
+          contractState_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          contractStateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeContractState(int index) {
+        if (contractStateBuilder_ == null) {
+          ensureContractStateIsMutable();
+          contractState_.remove(index);
+          onChanged();
+        } else {
+          contractStateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.Model.Builder getContractStateBuilder(
+          int index) {
+        return getContractStateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.ModelOrBuilder getContractStateOrBuilder(
+          int index) {
+        if (contractStateBuilder_ == null) {
+          return contractState_.get(index);  } else {
+          return contractStateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.secret.compute.v1beta1.TypesProto.ModelOrBuilder> 
+           getContractStateOrBuilderList() {
+        if (contractStateBuilder_ != null) {
+          return contractStateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contractState_);
+        }
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.Model.Builder addContractStateBuilder() {
+        return getContractStateFieldBuilder().addBuilder(
+            com.secret.compute.v1beta1.TypesProto.Model.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.Model.Builder addContractStateBuilder(
+          int index) {
+        return getContractStateFieldBuilder().addBuilder(
+            index, com.secret.compute.v1beta1.TypesProto.Model.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .secret.compute.v1beta1.Model contract_state = 3 [json_name = "contractState", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.secret.compute.v1beta1.TypesProto.Model.Builder> 
+           getContractStateBuilderList() {
+        return getContractStateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.Model, com.secret.compute.v1beta1.TypesProto.Model.Builder, com.secret.compute.v1beta1.TypesProto.ModelOrBuilder> 
+          getContractStateFieldBuilder() {
+        if (contractStateBuilder_ == null) {
+          contractStateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.secret.compute.v1beta1.TypesProto.Model, com.secret.compute.v1beta1.TypesProto.Model.Builder, com.secret.compute.v1beta1.TypesProto.ModelOrBuilder>(
+                  contractState_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contractState_ = null;
+        }
+        return contractStateBuilder_;
+      }
+
+      private com.secret.compute.v1beta1.TypesProto.ContractCustomInfo contractCustomInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.ContractCustomInfo, com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder, com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder> contractCustomInfoBuilder_;
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       * @return Whether the contractCustomInfo field is set.
+       */
+      public boolean hasContractCustomInfo() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       * @return The contractCustomInfo.
+       */
+      public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo getContractCustomInfo() {
+        if (contractCustomInfoBuilder_ == null) {
+          return contractCustomInfo_ == null ? com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance() : contractCustomInfo_;
+        } else {
+          return contractCustomInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      public Builder setContractCustomInfo(com.secret.compute.v1beta1.TypesProto.ContractCustomInfo value) {
+        if (contractCustomInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contractCustomInfo_ = value;
+        } else {
+          contractCustomInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      public Builder setContractCustomInfo(
+          com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder builderForValue) {
+        if (contractCustomInfoBuilder_ == null) {
+          contractCustomInfo_ = builderForValue.build();
+        } else {
+          contractCustomInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      public Builder mergeContractCustomInfo(com.secret.compute.v1beta1.TypesProto.ContractCustomInfo value) {
+        if (contractCustomInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            contractCustomInfo_ != null &&
+            contractCustomInfo_ != com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance()) {
+            getContractCustomInfoBuilder().mergeFrom(value);
+          } else {
+            contractCustomInfo_ = value;
+          }
+        } else {
+          contractCustomInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      public Builder clearContractCustomInfo() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        contractCustomInfo_ = null;
+        if (contractCustomInfoBuilder_ != null) {
+          contractCustomInfoBuilder_.dispose();
+          contractCustomInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder getContractCustomInfoBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getContractCustomInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      public com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder getContractCustomInfoOrBuilder() {
+        if (contractCustomInfoBuilder_ != null) {
+          return contractCustomInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return contractCustomInfo_ == null ?
+              com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.getDefaultInstance() : contractCustomInfo_;
+        }
+      }
+      /**
+       * <code>.secret.compute.v1beta1.ContractCustomInfo contract_custom_info = 4 [json_name = "contractCustomInfo"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.secret.compute.v1beta1.TypesProto.ContractCustomInfo, com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder, com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder> 
+          getContractCustomInfoFieldBuilder() {
+        if (contractCustomInfoBuilder_ == null) {
+          contractCustomInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.secret.compute.v1beta1.TypesProto.ContractCustomInfo, com.secret.compute.v1beta1.TypesProto.ContractCustomInfo.Builder, com.secret.compute.v1beta1.TypesProto.ContractCustomInfoOrBuilder>(
+                  getContractCustomInfo(),
+                  getParentForChildren(),
+                  isClean());
+          contractCustomInfo_ = null;
+        }
+        return contractCustomInfoBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.Contract)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.Contract)
+    private static final com.secret.compute.v1beta1.GenesisProto.Contract DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.GenesisProto.Contract();
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Contract getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Contract>
+        PARSER = new com.google.protobuf.AbstractParser<Contract>() {
+      @java.lang.Override
+      public Contract parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Contract> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Contract> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.Contract getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SequenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:secret.compute.v1beta1.Sequence)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes id_key = 1 [json_name = "idKey", (.gogoproto.customname) = "IDKey"];</code>
+     * @return The idKey.
+     */
+    com.google.protobuf.ByteString getIdKey();
+
+    /**
+     * <code>uint64 value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    long getValue();
+  }
+  /**
+   * <pre>
+   * Sequence id and value of a counter
+   * </pre>
+   *
+   * Protobuf type {@code secret.compute.v1beta1.Sequence}
+   */
+  public static final class Sequence extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:secret.compute.v1beta1.Sequence)
+      SequenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Sequence.newBuilder() to construct.
+    private Sequence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Sequence() {
+      idKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Sequence();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Sequence_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Sequence_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.secret.compute.v1beta1.GenesisProto.Sequence.class, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder.class);
+    }
+
+    public static final int ID_KEY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString idKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes id_key = 1 [json_name = "idKey", (.gogoproto.customname) = "IDKey"];</code>
+     * @return The idKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getIdKey() {
+      return idKey_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private long value_ = 0L;
+    /**
+     * <code>uint64 value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public long getValue() {
+      return value_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!idKey_.isEmpty()) {
+        output.writeBytes(1, idKey_);
+      }
+      if (value_ != 0L) {
+        output.writeUInt64(2, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!idKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, idKey_);
+      }
+      if (value_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.secret.compute.v1beta1.GenesisProto.Sequence)) {
+        return super.equals(obj);
+      }
+      com.secret.compute.v1beta1.GenesisProto.Sequence other = (com.secret.compute.v1beta1.GenesisProto.Sequence) obj;
+
+      if (!getIdKey()
+          .equals(other.getIdKey())) return false;
+      if (getValue()
+          != other.getValue()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getIdKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getValue());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.secret.compute.v1beta1.GenesisProto.Sequence prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Sequence id and value of a counter
+     * </pre>
+     *
+     * Protobuf type {@code secret.compute.v1beta1.Sequence}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:secret.compute.v1beta1.Sequence)
+        com.secret.compute.v1beta1.GenesisProto.SequenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Sequence_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Sequence_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.secret.compute.v1beta1.GenesisProto.Sequence.class, com.secret.compute.v1beta1.GenesisProto.Sequence.Builder.class);
+      }
+
+      // Construct using com.secret.compute.v1beta1.GenesisProto.Sequence.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        idKey_ = com.google.protobuf.ByteString.EMPTY;
+        value_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.secret.compute.v1beta1.GenesisProto.internal_static_secret_compute_v1beta1_Sequence_descriptor;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Sequence getDefaultInstanceForType() {
+        return com.secret.compute.v1beta1.GenesisProto.Sequence.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Sequence build() {
+        com.secret.compute.v1beta1.GenesisProto.Sequence result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.secret.compute.v1beta1.GenesisProto.Sequence buildPartial() {
+        com.secret.compute.v1beta1.GenesisProto.Sequence result = new com.secret.compute.v1beta1.GenesisProto.Sequence(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.secret.compute.v1beta1.GenesisProto.Sequence result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.idKey_ = idKey_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.secret.compute.v1beta1.GenesisProto.Sequence) {
+          return mergeFrom((com.secret.compute.v1beta1.GenesisProto.Sequence)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.secret.compute.v1beta1.GenesisProto.Sequence other) {
+        if (other == com.secret.compute.v1beta1.GenesisProto.Sequence.getDefaultInstance()) return this;
+        if (other.getIdKey() != com.google.protobuf.ByteString.EMPTY) {
+          setIdKey(other.getIdKey());
+        }
+        if (other.getValue() != 0L) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                idKey_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                value_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString idKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes id_key = 1 [json_name = "idKey", (.gogoproto.customname) = "IDKey"];</code>
+       * @return The idKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getIdKey() {
+        return idKey_;
+      }
+      /**
+       * <code>bytes id_key = 1 [json_name = "idKey", (.gogoproto.customname) = "IDKey"];</code>
+       * @param value The idKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        idKey_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes id_key = 1 [json_name = "idKey", (.gogoproto.customname) = "IDKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdKey() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        idKey_ = getDefaultInstance().getIdKey();
+        onChanged();
+        return this;
+      }
+
+      private long value_ ;
+      /**
+       * <code>uint64 value = 2 [json_name = "value"];</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public long getValue() {
+        return value_;
+      }
+      /**
+       * <code>uint64 value = 2 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(long value) {
+
+        value_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 value = 2 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:secret.compute.v1beta1.Sequence)
+    }
+
+    // @@protoc_insertion_point(class_scope:secret.compute.v1beta1.Sequence)
+    private static final com.secret.compute.v1beta1.GenesisProto.Sequence DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.secret.compute.v1beta1.GenesisProto.Sequence();
+    }
+
+    public static com.secret.compute.v1beta1.GenesisProto.Sequence getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Sequence>
+        PARSER = new com.google.protobuf.AbstractParser<Sequence>() {
+      @java.lang.Override
+      public Sequence parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Sequence> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Sequence> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.secret.compute.v1beta1.GenesisProto.Sequence getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_Code_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_Code_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_Contract_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_Contract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_secret_compute_v1beta1_Sequence_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_secret_compute_v1beta1_Sequence_fieldAccessorTable;
 
@@ -67,13 +4284,13 @@ public final class GenesisProto {
       "2*.secret.compute.v1beta1.ContractCustom" +
       "InfoR\022contractCustomInfo\"B\n\010Sequence\022 \n\006" +
       "id_key\030\001 \001(\014B\t\342\336\037\005IDKeyR\005idKey\022\024\n\005value\030" +
-      "\002 \001(\004R\005valueB\340\001\n\032com.secret.compute.v1be" +
-      "ta1B\014GenesisProtoP\001Z:github.com/scrtlabs" +
-      "/SecretNetwork/x/compute/internal/types\242" +
-      "\002\003SCX\252\002\026Secret.Compute.V1beta1\312\002\026Secret\\" +
-      "Compute\\V1beta1\342\002\"Secret\\Compute\\V1beta1" +
-      "\\GPBMetadata\352\002\030Secret::Compute::V1beta1b" +
-      "\006proto3"
+      "\002 \001(\004R\005valueB\336\001\n\032com.secret.compute.v1be" +
+      "ta1B\014GenesisProtoZ:github.com/scrtlabs/S" +
+      "ecretNetwork/x/compute/internal/types\242\002\003" +
+      "SCX\252\002\026Secret.Compute.V1beta1\312\002\026Secret\\Co" +
+      "mpute\\V1beta1\342\002\"Secret\\Compute\\V1beta1\\G" +
+      "PBMetadata\352\002\030Secret::Compute::V1beta1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

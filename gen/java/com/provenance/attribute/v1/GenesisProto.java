@@ -14,9 +14,1167 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.attribute.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.provenance.attribute.v1.AttributeProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.attribute.v1.AttributeProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.attribute.v1.AttributeProto.Attribute> 
+        getAttributesList();
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.attribute.v1.AttributeProto.Attribute getAttributes(int index);
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    int getAttributesCount();
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList();
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the attribute module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.attribute.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.attribute.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      attributes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.attribute.v1.GenesisProto.internal_static_provenance_attribute_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.attribute.v1.GenesisProto.internal_static_provenance_attribute_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.attribute.v1.GenesisProto.GenesisState.class, com.provenance.attribute.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.provenance.attribute.v1.AttributeProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.provenance.attribute.v1.AttributeProto.Params getParams() {
+      return params_ == null ? com.provenance.attribute.v1.AttributeProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the parameters of the module.
+     * </pre>
+     *
+     * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.attribute.v1.AttributeProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.provenance.attribute.v1.AttributeProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.attribute.v1.AttributeProto.Attribute> attributes_;
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.attribute.v1.AttributeProto.Attribute> getAttributesList() {
+      return attributes_;
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList() {
+      return attributes_;
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAttributesCount() {
+      return attributes_.size();
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.attribute.v1.AttributeProto.Attribute getAttributes(int index) {
+      return attributes_.get(index);
+    }
+    /**
+     * <pre>
+     * deposits defines all the deposits present at genesis.
+     * </pre>
+     *
+     * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index) {
+      return attributes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        output.writeMessage(2, attributes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, attributes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.attribute.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.provenance.attribute.v1.GenesisProto.GenesisState other = (com.provenance.attribute.v1.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getAttributesList()
+          .equals(other.getAttributesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getAttributesCount() > 0) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAttributesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.attribute.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the attribute module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.attribute.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.attribute.v1.GenesisState)
+        com.provenance.attribute.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.attribute.v1.GenesisProto.internal_static_provenance_attribute_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.attribute.v1.GenesisProto.internal_static_provenance_attribute_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.attribute.v1.GenesisProto.GenesisState.class, com.provenance.attribute.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.provenance.attribute.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+        } else {
+          attributes_ = null;
+          attributesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.attribute.v1.GenesisProto.internal_static_provenance_attribute_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.attribute.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.provenance.attribute.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.attribute.v1.GenesisProto.GenesisState build() {
+        com.provenance.attribute.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.attribute.v1.GenesisProto.GenesisState buildPartial() {
+        com.provenance.attribute.v1.GenesisProto.GenesisState result = new com.provenance.attribute.v1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.attribute.v1.GenesisProto.GenesisState result) {
+        if (attributesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            attributes_ = java.util.Collections.unmodifiableList(attributes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.attributes_ = attributes_;
+        } else {
+          result.attributes_ = attributesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.attribute.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.attribute.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.provenance.attribute.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.attribute.v1.GenesisProto.GenesisState other) {
+        if (other == com.provenance.attribute.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (attributesBuilder_ == null) {
+          if (!other.attributes_.isEmpty()) {
+            if (attributes_.isEmpty()) {
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAttributesIsMutable();
+              attributes_.addAll(other.attributes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attributes_.isEmpty()) {
+            if (attributesBuilder_.isEmpty()) {
+              attributesBuilder_.dispose();
+              attributesBuilder_ = null;
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              attributesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttributesFieldBuilder() : null;
+            } else {
+              attributesBuilder_.addAllMessages(other.attributes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.attribute.v1.AttributeProto.Attribute m =
+                    input.readMessage(
+                        com.provenance.attribute.v1.AttributeProto.Attribute.parser(),
+                        extensionRegistry);
+                if (attributesBuilder_ == null) {
+                  ensureAttributesIsMutable();
+                  attributes_.add(m);
+                } else {
+                  attributesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.attribute.v1.AttributeProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.attribute.v1.AttributeProto.Params, com.provenance.attribute.v1.AttributeProto.Params.Builder, com.provenance.attribute.v1.AttributeProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.provenance.attribute.v1.AttributeProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.provenance.attribute.v1.AttributeProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.provenance.attribute.v1.AttributeProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.provenance.attribute.v1.AttributeProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.provenance.attribute.v1.AttributeProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.provenance.attribute.v1.AttributeProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.provenance.attribute.v1.AttributeProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the parameters of the module.
+       * </pre>
+       *
+       * <code>.provenance.attribute.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.attribute.v1.AttributeProto.Params, com.provenance.attribute.v1.AttributeProto.Params.Builder, com.provenance.attribute.v1.AttributeProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.attribute.v1.AttributeProto.Params, com.provenance.attribute.v1.AttributeProto.Params.Builder, com.provenance.attribute.v1.AttributeProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.provenance.attribute.v1.AttributeProto.Attribute> attributes_ =
+        java.util.Collections.emptyList();
+      private void ensureAttributesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          attributes_ = new java.util.ArrayList<com.provenance.attribute.v1.AttributeProto.Attribute>(attributes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.attribute.v1.AttributeProto.Attribute, com.provenance.attribute.v1.AttributeProto.Attribute.Builder, com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder> attributesBuilder_;
+
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.attribute.v1.AttributeProto.Attribute> getAttributesList() {
+        if (attributesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attributes_);
+        } else {
+          return attributesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAttributesCount() {
+        if (attributesBuilder_ == null) {
+          return attributes_.size();
+        } else {
+          return attributesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.Attribute getAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);
+        } else {
+          return attributesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAttributes(
+          int index, com.provenance.attribute.v1.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.set(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAttributes(
+          int index, com.provenance.attribute.v1.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttributes(com.provenance.attribute.v1.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttributes(
+          int index, com.provenance.attribute.v1.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttributes(
+          com.provenance.attribute.v1.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAttributes(
+          int index, com.provenance.attribute.v1.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAttributes(
+          java.lang.Iterable<? extends com.provenance.attribute.v1.AttributeProto.Attribute> values) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attributes_);
+          onChanged();
+        } else {
+          attributesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAttributes() {
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          attributesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.remove(index);
+          onChanged();
+        } else {
+          attributesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.Attribute.Builder getAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+          int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);  } else {
+          return attributesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder> 
+           getAttributesOrBuilderList() {
+        if (attributesBuilder_ != null) {
+          return attributesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attributes_);
+        }
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.Attribute.Builder addAttributesBuilder() {
+        return getAttributesFieldBuilder().addBuilder(
+            com.provenance.attribute.v1.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.attribute.v1.AttributeProto.Attribute.Builder addAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().addBuilder(
+            index, com.provenance.attribute.v1.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * deposits defines all the deposits present at genesis.
+       * </pre>
+       *
+       * <code>repeated .provenance.attribute.v1.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.attribute.v1.AttributeProto.Attribute.Builder> 
+           getAttributesBuilderList() {
+        return getAttributesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.attribute.v1.AttributeProto.Attribute, com.provenance.attribute.v1.AttributeProto.Attribute.Builder, com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder> 
+          getAttributesFieldBuilder() {
+        if (attributesBuilder_ == null) {
+          attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.attribute.v1.AttributeProto.Attribute, com.provenance.attribute.v1.AttributeProto.Attribute.Builder, com.provenance.attribute.v1.AttributeProto.AttributeOrBuilder>(
+                  attributes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attributes_ = null;
+        }
+        return attributesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.attribute.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.attribute.v1.GenesisState)
+    private static final com.provenance.attribute.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.attribute.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.provenance.attribute.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.attribute.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_attribute_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_attribute_v1_GenesisState_fieldAccessorTable;
 
@@ -36,7 +1194,7 @@ public final class GenesisProto {
       "\006params\022H\n\nattributes\030\002 \003(\0132\".provenance" +
       ".attribute.v1.AttributeB\004\310\336\037\000R\nattribute" +
       "s:\010\210\240\037\000\350\240\037\000B\340\001\n\033com.provenance.attribute" +
-      ".v1B\014GenesisProtoP\001Z5github.com/provenan" +
+      ".v1B\014GenesisProtoP\000Z5github.com/provenan" +
       "ce-io/provenance/x/attribute/types\242\002\003PAX" +
       "\252\002\027Provenance.Attribute.V1\312\002\027Provenance\\" +
       "Attribute\\V1\342\002#Provenance\\Attribute\\V1\\G" +

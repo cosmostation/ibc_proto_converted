@@ -14,24 +14,2910 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryIidDocumentsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.QueryIidDocumentsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentsRequest}
+   */
+  public static final class QueryIidDocumentsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.QueryIidDocumentsRequest)
+      QueryIidDocumentsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIidDocumentsRequest.newBuilder() to construct.
+    private QueryIidDocumentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIidDocumentsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIidDocumentsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines an optional pagination for the request.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest other = (com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.QueryIidDocumentsRequest)
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest build() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest buildPartial() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest result = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest) {
+          return mergeFrom((com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest other) {
+        if (other == com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines an optional pagination for the request.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.QueryIidDocumentsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.QueryIidDocumentsRequest)
+    private static final com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest();
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIidDocumentsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIidDocumentsRequest>() {
+      @java.lang.Override
+      public QueryIidDocumentsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIidDocumentsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIidDocumentsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIidDocumentsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.QueryIidDocumentsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.ixo.iid.v1beta1.IidProto.IidDocument> 
+        getIidDocumentsList();
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.iid.v1beta1.IidProto.IidDocument getIidDocuments(int index);
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    int getIidDocumentsCount();
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> 
+        getIidDocumentsOrBuilderList();
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder getIidDocumentsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentsResponse}
+   */
+  public static final class QueryIidDocumentsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.QueryIidDocumentsResponse)
+      QueryIidDocumentsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIidDocumentsResponse.newBuilder() to construct.
+    private QueryIidDocumentsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIidDocumentsResponse() {
+      iidDocuments_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIidDocumentsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.Builder.class);
+    }
+
+    public static final int IIDDOCUMENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.ixo.iid.v1beta1.IidProto.IidDocument> iidDocuments_;
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.ixo.iid.v1beta1.IidProto.IidDocument> getIidDocumentsList() {
+      return iidDocuments_;
+    }
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> 
+        getIidDocumentsOrBuilderList() {
+      return iidDocuments_;
+    }
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getIidDocumentsCount() {
+      return iidDocuments_.size();
+    }
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.IidProto.IidDocument getIidDocuments(int index) {
+      return iidDocuments_.get(index);
+    }
+    /**
+     * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder getIidDocumentsOrBuilder(
+        int index) {
+      return iidDocuments_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < iidDocuments_.size(); i++) {
+        output.writeMessage(1, iidDocuments_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < iidDocuments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, iidDocuments_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse other = (com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse) obj;
+
+      if (!getIidDocumentsList()
+          .equals(other.getIidDocumentsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIidDocumentsCount() > 0) {
+        hash = (37 * hash) + IIDDOCUMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getIidDocumentsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.QueryIidDocumentsResponse)
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (iidDocumentsBuilder_ == null) {
+          iidDocuments_ = java.util.Collections.emptyList();
+        } else {
+          iidDocuments_ = null;
+          iidDocumentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse build() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse buildPartial() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse result = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse result) {
+        if (iidDocumentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            iidDocuments_ = java.util.Collections.unmodifiableList(iidDocuments_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.iidDocuments_ = iidDocuments_;
+        } else {
+          result.iidDocuments_ = iidDocumentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse) {
+          return mergeFrom((com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse other) {
+        if (other == com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse.getDefaultInstance()) return this;
+        if (iidDocumentsBuilder_ == null) {
+          if (!other.iidDocuments_.isEmpty()) {
+            if (iidDocuments_.isEmpty()) {
+              iidDocuments_ = other.iidDocuments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureIidDocumentsIsMutable();
+              iidDocuments_.addAll(other.iidDocuments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.iidDocuments_.isEmpty()) {
+            if (iidDocumentsBuilder_.isEmpty()) {
+              iidDocumentsBuilder_.dispose();
+              iidDocumentsBuilder_ = null;
+              iidDocuments_ = other.iidDocuments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              iidDocumentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIidDocumentsFieldBuilder() : null;
+            } else {
+              iidDocumentsBuilder_.addAllMessages(other.iidDocuments_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.ixo.iid.v1beta1.IidProto.IidDocument m =
+                    input.readMessage(
+                        com.ixo.iid.v1beta1.IidProto.IidDocument.parser(),
+                        extensionRegistry);
+                if (iidDocumentsBuilder_ == null) {
+                  ensureIidDocumentsIsMutable();
+                  iidDocuments_.add(m);
+                } else {
+                  iidDocumentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.ixo.iid.v1beta1.IidProto.IidDocument> iidDocuments_ =
+        java.util.Collections.emptyList();
+      private void ensureIidDocumentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          iidDocuments_ = new java.util.ArrayList<com.ixo.iid.v1beta1.IidProto.IidDocument>(iidDocuments_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.IidProto.IidDocument, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder, com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> iidDocumentsBuilder_;
+
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.IidProto.IidDocument> getIidDocumentsList() {
+        if (iidDocumentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(iidDocuments_);
+        } else {
+          return iidDocumentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public int getIidDocumentsCount() {
+        if (iidDocumentsBuilder_ == null) {
+          return iidDocuments_.size();
+        } else {
+          return iidDocumentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocument getIidDocuments(int index) {
+        if (iidDocumentsBuilder_ == null) {
+          return iidDocuments_.get(index);
+        } else {
+          return iidDocumentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIidDocuments(
+          int index, com.ixo.iid.v1beta1.IidProto.IidDocument value) {
+        if (iidDocumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.set(index, value);
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIidDocuments(
+          int index, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder builderForValue) {
+        if (iidDocumentsBuilder_ == null) {
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIidDocuments(com.ixo.iid.v1beta1.IidProto.IidDocument value) {
+        if (iidDocumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.add(value);
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIidDocuments(
+          int index, com.ixo.iid.v1beta1.IidProto.IidDocument value) {
+        if (iidDocumentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.add(index, value);
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIidDocuments(
+          com.ixo.iid.v1beta1.IidProto.IidDocument.Builder builderForValue) {
+        if (iidDocumentsBuilder_ == null) {
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addIidDocuments(
+          int index, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder builderForValue) {
+        if (iidDocumentsBuilder_ == null) {
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllIidDocuments(
+          java.lang.Iterable<? extends com.ixo.iid.v1beta1.IidProto.IidDocument> values) {
+        if (iidDocumentsBuilder_ == null) {
+          ensureIidDocumentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, iidDocuments_);
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIidDocuments() {
+        if (iidDocumentsBuilder_ == null) {
+          iidDocuments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeIidDocuments(int index) {
+        if (iidDocumentsBuilder_ == null) {
+          ensureIidDocumentsIsMutable();
+          iidDocuments_.remove(index);
+          onChanged();
+        } else {
+          iidDocumentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocument.Builder getIidDocumentsBuilder(
+          int index) {
+        return getIidDocumentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder getIidDocumentsOrBuilder(
+          int index) {
+        if (iidDocumentsBuilder_ == null) {
+          return iidDocuments_.get(index);  } else {
+          return iidDocumentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> 
+           getIidDocumentsOrBuilderList() {
+        if (iidDocumentsBuilder_ != null) {
+          return iidDocumentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(iidDocuments_);
+        }
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocument.Builder addIidDocumentsBuilder() {
+        return getIidDocumentsFieldBuilder().addBuilder(
+            com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocument.Builder addIidDocumentsBuilder(
+          int index) {
+        return getIidDocumentsFieldBuilder().addBuilder(
+            index, com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ixo.iid.v1beta1.IidDocument iidDocuments = 1 [json_name = "iidDocuments", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.ixo.iid.v1beta1.IidProto.IidDocument.Builder> 
+           getIidDocumentsBuilderList() {
+        return getIidDocumentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.ixo.iid.v1beta1.IidProto.IidDocument, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder, com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> 
+          getIidDocumentsFieldBuilder() {
+        if (iidDocumentsBuilder_ == null) {
+          iidDocumentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.ixo.iid.v1beta1.IidProto.IidDocument, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder, com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder>(
+                  iidDocuments_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          iidDocuments_ = null;
+        }
+        return iidDocumentsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.QueryIidDocumentsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.QueryIidDocumentsResponse)
+    private static final com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse();
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIidDocumentsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIidDocumentsResponse>() {
+      @java.lang.Override
+      public QueryIidDocumentsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIidDocumentsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIidDocumentsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIidDocumentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.QueryIidDocumentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * did id of iid document querying
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * did id of iid document querying
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentRequest}
+   */
+  public static final class QueryIidDocumentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.QueryIidDocumentRequest)
+      QueryIidDocumentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIidDocumentRequest.newBuilder() to construct.
+    private QueryIidDocumentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIidDocumentRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIidDocumentRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * did id of iid document querying
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * did id of iid document querying
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest other = (com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.QueryIidDocumentRequest)
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest build() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest buildPartial() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest result = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest) {
+          return mergeFrom((com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest other) {
+        if (other == com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * did id of iid document querying
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * did id of iid document querying
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * did id of iid document querying
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * did id of iid document querying
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * did id of iid document querying
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.QueryIidDocumentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.QueryIidDocumentRequest)
+    private static final com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest();
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIidDocumentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIidDocumentRequest>() {
+      @java.lang.Override
+      public QueryIidDocumentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIidDocumentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIidDocumentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryIidDocumentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ixo.iid.v1beta1.QueryIidDocumentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+     * @return Whether the iidDocument field is set.
+     */
+    boolean hasIidDocument();
+    /**
+     * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+     * @return The iidDocument.
+     */
+    com.ixo.iid.v1beta1.IidProto.IidDocument getIidDocument();
+    /**
+     * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+     */
+    com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder getIidDocumentOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentResponse}
+   */
+  public static final class QueryIidDocumentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ixo.iid.v1beta1.QueryIidDocumentResponse)
+      QueryIidDocumentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryIidDocumentResponse.newBuilder() to construct.
+    private QueryIidDocumentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryIidDocumentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryIidDocumentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.Builder.class);
+    }
+
+    public static final int IIDDOCUMENT_FIELD_NUMBER = 1;
+    private com.ixo.iid.v1beta1.IidProto.IidDocument iidDocument_;
+    /**
+     * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+     * @return Whether the iidDocument field is set.
+     */
+    @java.lang.Override
+    public boolean hasIidDocument() {
+      return iidDocument_ != null;
+    }
+    /**
+     * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+     * @return The iidDocument.
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.IidProto.IidDocument getIidDocument() {
+      return iidDocument_ == null ? com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance() : iidDocument_;
+    }
+    /**
+     * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder getIidDocumentOrBuilder() {
+      return iidDocument_ == null ? com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance() : iidDocument_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (iidDocument_ != null) {
+        output.writeMessage(1, getIidDocument());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (iidDocument_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIidDocument());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse)) {
+        return super.equals(obj);
+      }
+      com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse other = (com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse) obj;
+
+      if (hasIidDocument() != other.hasIidDocument()) return false;
+      if (hasIidDocument()) {
+        if (!getIidDocument()
+            .equals(other.getIidDocument())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIidDocument()) {
+        hash = (37 * hash) + IIDDOCUMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getIidDocument().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ixo.iid.v1beta1.QueryIidDocumentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ixo.iid.v1beta1.QueryIidDocumentResponse)
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.class, com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.Builder.class);
+      }
+
+      // Construct using com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        iidDocument_ = null;
+        if (iidDocumentBuilder_ != null) {
+          iidDocumentBuilder_.dispose();
+          iidDocumentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.ixo.iid.v1beta1.QueryProto.internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse getDefaultInstanceForType() {
+        return com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse build() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse buildPartial() {
+        com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse result = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iidDocument_ = iidDocumentBuilder_ == null
+              ? iidDocument_
+              : iidDocumentBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse) {
+          return mergeFrom((com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse other) {
+        if (other == com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse.getDefaultInstance()) return this;
+        if (other.hasIidDocument()) {
+          mergeIidDocument(other.getIidDocument());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIidDocumentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.ixo.iid.v1beta1.IidProto.IidDocument iidDocument_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.iid.v1beta1.IidProto.IidDocument, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder, com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> iidDocumentBuilder_;
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       * @return Whether the iidDocument field is set.
+       */
+      public boolean hasIidDocument() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       * @return The iidDocument.
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocument getIidDocument() {
+        if (iidDocumentBuilder_ == null) {
+          return iidDocument_ == null ? com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance() : iidDocument_;
+        } else {
+          return iidDocumentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIidDocument(com.ixo.iid.v1beta1.IidProto.IidDocument value) {
+        if (iidDocumentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          iidDocument_ = value;
+        } else {
+          iidDocumentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setIidDocument(
+          com.ixo.iid.v1beta1.IidProto.IidDocument.Builder builderForValue) {
+        if (iidDocumentBuilder_ == null) {
+          iidDocument_ = builderForValue.build();
+        } else {
+          iidDocumentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeIidDocument(com.ixo.iid.v1beta1.IidProto.IidDocument value) {
+        if (iidDocumentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            iidDocument_ != null &&
+            iidDocument_ != com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance()) {
+            getIidDocumentBuilder().mergeFrom(value);
+          } else {
+            iidDocument_ = value;
+          }
+        } else {
+          iidDocumentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearIidDocument() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        iidDocument_ = null;
+        if (iidDocumentBuilder_ != null) {
+          iidDocumentBuilder_.dispose();
+          iidDocumentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocument.Builder getIidDocumentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIidDocumentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      public com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder getIidDocumentOrBuilder() {
+        if (iidDocumentBuilder_ != null) {
+          return iidDocumentBuilder_.getMessageOrBuilder();
+        } else {
+          return iidDocument_ == null ?
+              com.ixo.iid.v1beta1.IidProto.IidDocument.getDefaultInstance() : iidDocument_;
+        }
+      }
+      /**
+       * <code>.ixo.iid.v1beta1.IidDocument iidDocument = 1 [json_name = "iidDocument", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ixo.iid.v1beta1.IidProto.IidDocument, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder, com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder> 
+          getIidDocumentFieldBuilder() {
+        if (iidDocumentBuilder_ == null) {
+          iidDocumentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ixo.iid.v1beta1.IidProto.IidDocument, com.ixo.iid.v1beta1.IidProto.IidDocument.Builder, com.ixo.iid.v1beta1.IidProto.IidDocumentOrBuilder>(
+                  getIidDocument(),
+                  getParentForChildren(),
+                  isClean());
+          iidDocument_ = null;
+        }
+        return iidDocumentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ixo.iid.v1beta1.QueryIidDocumentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ixo.iid.v1beta1.QueryIidDocumentResponse)
+    private static final com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse();
+    }
+
+    public static com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryIidDocumentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryIidDocumentResponse>() {
+      @java.lang.Override
+      public QueryIidDocumentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryIidDocumentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryIidDocumentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.ixo.iid.v1beta1.QueryProto.QueryIidDocumentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_QueryIidDocumentsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_QueryIidDocumentsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_QueryIidDocumentRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ixo_iid_v1beta1_QueryIidDocumentResponse_fieldAccessorTable;
 
@@ -64,11 +2950,11 @@ public final class QueryProto {
       "s\022~\n\013IidDocument\022(.ixo.iid.v1beta1.Query" +
       "IidDocumentRequest\032).ixo.iid.v1beta1.Que" +
       "ryIidDocumentResponse\"\032\202\323\344\223\002\024\022\022/ixo/did/" +
-      "dids/{id}B\264\001\n\023com.ixo.iid.v1beta1B\nQuery" +
-      "ProtoP\001Z3github.com/ixofoundation/ixo-bl" +
-      "ockchain/x/iid/types\242\002\003IIX\252\002\017Ixo.Iid.V1b" +
-      "eta1\312\002\017Ixo\\Iid\\V1beta1\342\002\033Ixo\\Iid\\V1beta1" +
-      "\\GPBMetadata\352\002\021Ixo::Iid::V1beta1b\006proto3"
+      "dids/{id}B\262\001\n\023com.ixo.iid.v1beta1B\nQuery" +
+      "ProtoZ3github.com/ixofoundation/ixo-bloc" +
+      "kchain/x/iid/types\242\002\003IIX\252\002\017Ixo.Iid.V1bet" +
+      "a1\312\002\017Ixo\\Iid\\V1beta1\342\002\033Ixo\\Iid\\V1beta1\\G" +
+      "PBMetadata\352\002\021Ixo::Iid::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

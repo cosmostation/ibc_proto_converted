@@ -14,14 +14,1436 @@ public final class ContractExtensionProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TgradeContractDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.TgradeContractDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege> 
+        getRegisteredPrivilegesList();
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege getRegisteredPrivileges(int index);
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    int getRegisteredPrivilegesCount();
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder> 
+        getRegisteredPrivilegesOrBuilderList();
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder getRegisteredPrivilegesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * TgradeContractDetails is a custom extension to the wasmd ContractInfo
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.TgradeContractDetails}
+   */
+  public static final class TgradeContractDetails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.TgradeContractDetails)
+      TgradeContractDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TgradeContractDetails.newBuilder() to construct.
+    private TgradeContractDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TgradeContractDetails() {
+      registeredPrivileges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TgradeContractDetails();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_TgradeContractDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_TgradeContractDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.class, com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.Builder.class);
+    }
+
+    public static final int REGISTERED_PRIVILEGES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege> registeredPrivileges_;
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege> getRegisteredPrivilegesList() {
+      return registeredPrivileges_;
+    }
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder> 
+        getRegisteredPrivilegesOrBuilderList() {
+      return registeredPrivileges_;
+    }
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRegisteredPrivilegesCount() {
+      return registeredPrivileges_.size();
+    }
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege getRegisteredPrivileges(int index) {
+      return registeredPrivileges_.get(index);
+    }
+    /**
+     * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder getRegisteredPrivilegesOrBuilder(
+        int index) {
+      return registeredPrivileges_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < registeredPrivileges_.size(); i++) {
+        output.writeMessage(1, registeredPrivileges_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < registeredPrivileges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, registeredPrivileges_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails other = (com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails) obj;
+
+      if (!getRegisteredPrivilegesList()
+          .equals(other.getRegisteredPrivilegesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRegisteredPrivilegesCount() > 0) {
+        hash = (37 * hash) + REGISTERED_PRIVILEGES_FIELD_NUMBER;
+        hash = (53 * hash) + getRegisteredPrivilegesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * TgradeContractDetails is a custom extension to the wasmd ContractInfo
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.TgradeContractDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.TgradeContractDetails)
+        com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_TgradeContractDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_TgradeContractDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.class, com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (registeredPrivilegesBuilder_ == null) {
+          registeredPrivileges_ = java.util.Collections.emptyList();
+        } else {
+          registeredPrivileges_ = null;
+          registeredPrivilegesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_TgradeContractDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails build() {
+        com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails buildPartial() {
+        com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails result = new com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails result) {
+        if (registeredPrivilegesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            registeredPrivileges_ = java.util.Collections.unmodifiableList(registeredPrivileges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.registeredPrivileges_ = registeredPrivileges_;
+        } else {
+          result.registeredPrivileges_ = registeredPrivilegesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails) {
+          return mergeFrom((com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails other) {
+        if (other == com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails.getDefaultInstance()) return this;
+        if (registeredPrivilegesBuilder_ == null) {
+          if (!other.registeredPrivileges_.isEmpty()) {
+            if (registeredPrivileges_.isEmpty()) {
+              registeredPrivileges_ = other.registeredPrivileges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRegisteredPrivilegesIsMutable();
+              registeredPrivileges_.addAll(other.registeredPrivileges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.registeredPrivileges_.isEmpty()) {
+            if (registeredPrivilegesBuilder_.isEmpty()) {
+              registeredPrivilegesBuilder_.dispose();
+              registeredPrivilegesBuilder_ = null;
+              registeredPrivileges_ = other.registeredPrivileges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              registeredPrivilegesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRegisteredPrivilegesFieldBuilder() : null;
+            } else {
+              registeredPrivilegesBuilder_.addAllMessages(other.registeredPrivileges_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege m =
+                    input.readMessage(
+                        com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.parser(),
+                        extensionRegistry);
+                if (registeredPrivilegesBuilder_ == null) {
+                  ensureRegisteredPrivilegesIsMutable();
+                  registeredPrivileges_.add(m);
+                } else {
+                  registeredPrivilegesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege> registeredPrivileges_ =
+        java.util.Collections.emptyList();
+      private void ensureRegisteredPrivilegesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          registeredPrivileges_ = new java.util.ArrayList<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege>(registeredPrivileges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder> registeredPrivilegesBuilder_;
+
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege> getRegisteredPrivilegesList() {
+        if (registeredPrivilegesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(registeredPrivileges_);
+        } else {
+          return registeredPrivilegesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRegisteredPrivilegesCount() {
+        if (registeredPrivilegesBuilder_ == null) {
+          return registeredPrivileges_.size();
+        } else {
+          return registeredPrivilegesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege getRegisteredPrivileges(int index) {
+        if (registeredPrivilegesBuilder_ == null) {
+          return registeredPrivileges_.get(index);
+        } else {
+          return registeredPrivilegesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRegisteredPrivileges(
+          int index, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege value) {
+        if (registeredPrivilegesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.set(index, value);
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRegisteredPrivileges(
+          int index, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder builderForValue) {
+        if (registeredPrivilegesBuilder_ == null) {
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredPrivileges(com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege value) {
+        if (registeredPrivilegesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.add(value);
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredPrivileges(
+          int index, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege value) {
+        if (registeredPrivilegesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.add(index, value);
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredPrivileges(
+          com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder builderForValue) {
+        if (registeredPrivilegesBuilder_ == null) {
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredPrivileges(
+          int index, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder builderForValue) {
+        if (registeredPrivilegesBuilder_ == null) {
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRegisteredPrivileges(
+          java.lang.Iterable<? extends com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege> values) {
+        if (registeredPrivilegesBuilder_ == null) {
+          ensureRegisteredPrivilegesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, registeredPrivileges_);
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRegisteredPrivileges() {
+        if (registeredPrivilegesBuilder_ == null) {
+          registeredPrivileges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRegisteredPrivileges(int index) {
+        if (registeredPrivilegesBuilder_ == null) {
+          ensureRegisteredPrivilegesIsMutable();
+          registeredPrivileges_.remove(index);
+          onChanged();
+        } else {
+          registeredPrivilegesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder getRegisteredPrivilegesBuilder(
+          int index) {
+        return getRegisteredPrivilegesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder getRegisteredPrivilegesOrBuilder(
+          int index) {
+        if (registeredPrivilegesBuilder_ == null) {
+          return registeredPrivileges_.get(index);  } else {
+          return registeredPrivilegesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder> 
+           getRegisteredPrivilegesOrBuilderList() {
+        if (registeredPrivilegesBuilder_ != null) {
+          return registeredPrivilegesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(registeredPrivileges_);
+        }
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder addRegisteredPrivilegesBuilder() {
+        return getRegisteredPrivilegesFieldBuilder().addBuilder(
+            com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder addRegisteredPrivilegesBuilder(
+          int index) {
+        return getRegisteredPrivilegesFieldBuilder().addBuilder(
+            index, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .confio.twasm.v1beta1.RegisteredPrivilege registered_privileges = 1 [json_name = "registeredPrivileges", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder> 
+           getRegisteredPrivilegesBuilderList() {
+        return getRegisteredPrivilegesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder> 
+          getRegisteredPrivilegesFieldBuilder() {
+        if (registeredPrivilegesBuilder_ == null) {
+          registeredPrivilegesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder>(
+                  registeredPrivileges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          registeredPrivileges_ = null;
+        }
+        return registeredPrivilegesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.TgradeContractDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.TgradeContractDetails)
+    private static final com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails();
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TgradeContractDetails>
+        PARSER = new com.google.protobuf.AbstractParser<TgradeContractDetails>() {
+      @java.lang.Override
+      public TgradeContractDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TgradeContractDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TgradeContractDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.ContractExtensionProto.TgradeContractDetails getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisteredPrivilegeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:confio.twasm.v1beta1.RegisteredPrivilege)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint32 position = 1 [json_name = "position"];</code>
+     * @return The position.
+     */
+    int getPosition();
+
+    /**
+     * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+     * @return The privilegeType.
+     */
+    java.lang.String getPrivilegeType();
+    /**
+     * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+     * @return The bytes for privilegeType.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegeTypeBytes();
+  }
+  /**
+   * <pre>
+   * RegisteredPrivilege stores position and privilege name
+   * </pre>
+   *
+   * Protobuf type {@code confio.twasm.v1beta1.RegisteredPrivilege}
+   */
+  public static final class RegisteredPrivilege extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:confio.twasm.v1beta1.RegisteredPrivilege)
+      RegisteredPrivilegeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisteredPrivilege.newBuilder() to construct.
+    private RegisteredPrivilege(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisteredPrivilege() {
+      privilegeType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisteredPrivilege();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_RegisteredPrivilege_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_RegisteredPrivilege_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.class, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder.class);
+    }
+
+    public static final int POSITION_FIELD_NUMBER = 1;
+    private int position_ = 0;
+    /**
+     * <code>uint32 position = 1 [json_name = "position"];</code>
+     * @return The position.
+     */
+    @java.lang.Override
+    public int getPosition() {
+      return position_;
+    }
+
+    public static final int PRIVILEGE_TYPE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privilegeType_ = "";
+    /**
+     * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+     * @return The privilegeType.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivilegeType() {
+      java.lang.Object ref = privilegeType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privilegeType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+     * @return The bytes for privilegeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivilegeTypeBytes() {
+      java.lang.Object ref = privilegeType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privilegeType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (position_ != 0) {
+        output.writeUInt32(1, position_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegeType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, privilegeType_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (position_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, position_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegeType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, privilegeType_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege)) {
+        return super.equals(obj);
+      }
+      com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege other = (com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege) obj;
+
+      if (getPosition()
+          != other.getPosition()) return false;
+      if (!getPrivilegeType()
+          .equals(other.getPrivilegeType())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POSITION_FIELD_NUMBER;
+      hash = (53 * hash) + getPosition();
+      hash = (37 * hash) + PRIVILEGE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivilegeType().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RegisteredPrivilege stores position and privilege name
+     * </pre>
+     *
+     * Protobuf type {@code confio.twasm.v1beta1.RegisteredPrivilege}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:confio.twasm.v1beta1.RegisteredPrivilege)
+        com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilegeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_RegisteredPrivilege_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_RegisteredPrivilege_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.class, com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.Builder.class);
+      }
+
+      // Construct using com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        position_ = 0;
+        privilegeType_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.internal_static_confio_twasm_v1beta1_RegisteredPrivilege_descriptor;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege getDefaultInstanceForType() {
+        return com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege build() {
+        com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege buildPartial() {
+        com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege result = new com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.position_ = position_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.privilegeType_ = privilegeType_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege) {
+          return mergeFrom((com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege other) {
+        if (other == com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege.getDefaultInstance()) return this;
+        if (other.getPosition() != 0) {
+          setPosition(other.getPosition());
+        }
+        if (!other.getPrivilegeType().isEmpty()) {
+          privilegeType_ = other.privilegeType_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                position_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                privilegeType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int position_ ;
+      /**
+       * <code>uint32 position = 1 [json_name = "position"];</code>
+       * @return The position.
+       */
+      @java.lang.Override
+      public int getPosition() {
+        return position_;
+      }
+      /**
+       * <code>uint32 position = 1 [json_name = "position"];</code>
+       * @param value The position to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPosition(int value) {
+
+        position_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 position = 1 [json_name = "position"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPosition() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        position_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object privilegeType_ = "";
+      /**
+       * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+       * @return The privilegeType.
+       */
+      public java.lang.String getPrivilegeType() {
+        java.lang.Object ref = privilegeType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privilegeType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+       * @return The bytes for privilegeType.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegeTypeBytes() {
+        java.lang.Object ref = privilegeType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privilegeType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+       * @param value The privilegeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        privilegeType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegeType() {
+        privilegeType_ = getDefaultInstance().getPrivilegeType();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string privilege_type = 2 [json_name = "privilegeType"];</code>
+       * @param value The bytes for privilegeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        privilegeType_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:confio.twasm.v1beta1.RegisteredPrivilege)
+    }
+
+    // @@protoc_insertion_point(class_scope:confio.twasm.v1beta1.RegisteredPrivilege)
+    private static final com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege();
+    }
+
+    public static com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisteredPrivilege>
+        PARSER = new com.google.protobuf.AbstractParser<RegisteredPrivilege>() {
+      @java.lang.Override
+      public RegisteredPrivilege parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisteredPrivilege> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisteredPrivilege> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.confio.twasm.v1beta1.ContractExtensionProto.RegisteredPrivilege getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_TgradeContractDetails_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_TgradeContractDetails_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_confio_twasm_v1beta1_RegisteredPrivilege_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_confio_twasm_v1beta1_RegisteredPrivilege_fieldAccessorTable;
 
@@ -42,12 +1464,12 @@ public final class ContractExtensionProto {
       "ileges:\031\312\264-\025ContractInfoExtension\"X\n\023Reg" +
       "isteredPrivilege\022\032\n\010position\030\001 \001(\rR\010posi" +
       "tion\022%\n\016privilege_type\030\002 \001(\tR\rprivilegeT" +
-      "ypeB\330\001\n\030com.confio.twasm.v1beta1B\026Contra" +
-      "ctExtensionProtoP\001Z&github.com/confio/tg" +
-      "rade/x/twasm/types\242\002\003CTX\252\002\024Confio.Twasm." +
-      "V1beta1\312\002\024Confio\\Twasm\\V1beta1\342\002 Confio\\" +
-      "Twasm\\V1beta1\\GPBMetadata\352\002\026Confio::Twas" +
-      "m::V1beta1\310\341\036\000\330\341\036\001\250\342\036\001b\006proto3"
+      "ypeB\326\001\n\030com.confio.twasm.v1beta1B\026Contra" +
+      "ctExtensionProtoZ&github.com/confio/tgra" +
+      "de/x/twasm/types\242\002\003CTX\252\002\024Confio.Twasm.V1" +
+      "beta1\312\002\024Confio\\Twasm\\V1beta1\342\002 Confio\\Tw" +
+      "asm\\V1beta1\\GPBMetadata\352\002\026Confio::Twasm:" +
+      ":V1beta1\310\341\036\000\330\341\036\001\250\342\036\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

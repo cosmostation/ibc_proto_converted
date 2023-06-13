@@ -14,9 +14,936 @@ public final class AnyOwnableIdProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface AnyOwnableIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:assetmantle.schema.ids.base.AnyOwnableID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+     * @return Whether the assetID field is set.
+     */
+    boolean hasAssetID();
+    /**
+     * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+     * @return The assetID.
+     */
+    com.assetmantle.schema.ids.base.AssetIdProto.AssetID getAssetID();
+    /**
+     * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+     */
+    com.assetmantle.schema.ids.base.AssetIdProto.AssetIDOrBuilder getAssetIDOrBuilder();
+
+    /**
+     * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+     * @return Whether the coinID field is set.
+     */
+    boolean hasCoinID();
+    /**
+     * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+     * @return The coinID.
+     */
+    com.assetmantle.schema.ids.base.CoinIdProto.CoinID getCoinID();
+    /**
+     * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+     */
+    com.assetmantle.schema.ids.base.CoinIdProto.CoinIDOrBuilder getCoinIDOrBuilder();
+
+    com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.ImplCase getImplCase();
+  }
+  /**
+   * Protobuf type {@code assetmantle.schema.ids.base.AnyOwnableID}
+   */
+  public static final class AnyOwnableID extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:assetmantle.schema.ids.base.AnyOwnableID)
+      AnyOwnableIDOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AnyOwnableID.newBuilder() to construct.
+    private AnyOwnableID(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AnyOwnableID() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnyOwnableID();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.assetmantle.schema.ids.base.AnyOwnableIdProto.internal_static_assetmantle_schema_ids_base_AnyOwnableID_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.assetmantle.schema.ids.base.AnyOwnableIdProto.internal_static_assetmantle_schema_ids_base_AnyOwnableID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.class, com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.Builder.class);
+    }
+
+    private int implCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object impl_;
+    public enum ImplCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ASSET_I_D(1),
+      COIN_I_D(2),
+      IMPL_NOT_SET(0);
+      private final int value;
+      private ImplCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ImplCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ImplCase forNumber(int value) {
+        switch (value) {
+          case 1: return ASSET_I_D;
+          case 2: return COIN_I_D;
+          case 0: return IMPL_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ImplCase
+    getImplCase() {
+      return ImplCase.forNumber(
+          implCase_);
+    }
+
+    public static final int ASSET_I_D_FIELD_NUMBER = 1;
+    /**
+     * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+     * @return Whether the assetID field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssetID() {
+      return implCase_ == 1;
+    }
+    /**
+     * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+     * @return The assetID.
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.AssetIdProto.AssetID getAssetID() {
+      if (implCase_ == 1) {
+         return (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_;
+      }
+      return com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance();
+    }
+    /**
+     * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.AssetIdProto.AssetIDOrBuilder getAssetIDOrBuilder() {
+      if (implCase_ == 1) {
+         return (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_;
+      }
+      return com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance();
+    }
+
+    public static final int COIN_I_D_FIELD_NUMBER = 2;
+    /**
+     * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+     * @return Whether the coinID field is set.
+     */
+    @java.lang.Override
+    public boolean hasCoinID() {
+      return implCase_ == 2;
+    }
+    /**
+     * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+     * @return The coinID.
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.CoinIdProto.CoinID getCoinID() {
+      if (implCase_ == 2) {
+         return (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_;
+      }
+      return com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance();
+    }
+    /**
+     * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.CoinIdProto.CoinIDOrBuilder getCoinIDOrBuilder() {
+      if (implCase_ == 2) {
+         return (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_;
+      }
+      return com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (implCase_ == 1) {
+        output.writeMessage(1, (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_);
+      }
+      if (implCase_ == 2) {
+        output.writeMessage(2, (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (implCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_);
+      }
+      if (implCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID)) {
+        return super.equals(obj);
+      }
+      com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID other = (com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID) obj;
+
+      if (!getImplCase().equals(other.getImplCase())) return false;
+      switch (implCase_) {
+        case 1:
+          if (!getAssetID()
+              .equals(other.getAssetID())) return false;
+          break;
+        case 2:
+          if (!getCoinID()
+              .equals(other.getCoinID())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (implCase_) {
+        case 1:
+          hash = (37 * hash) + ASSET_I_D_FIELD_NUMBER;
+          hash = (53 * hash) + getAssetID().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + COIN_I_D_FIELD_NUMBER;
+          hash = (53 * hash) + getCoinID().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code assetmantle.schema.ids.base.AnyOwnableID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:assetmantle.schema.ids.base.AnyOwnableID)
+        com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.assetmantle.schema.ids.base.AnyOwnableIdProto.internal_static_assetmantle_schema_ids_base_AnyOwnableID_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.assetmantle.schema.ids.base.AnyOwnableIdProto.internal_static_assetmantle_schema_ids_base_AnyOwnableID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.class, com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.Builder.class);
+      }
+
+      // Construct using com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (assetIDBuilder_ != null) {
+          assetIDBuilder_.clear();
+        }
+        if (coinIDBuilder_ != null) {
+          coinIDBuilder_.clear();
+        }
+        implCase_ = 0;
+        impl_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.assetmantle.schema.ids.base.AnyOwnableIdProto.internal_static_assetmantle_schema_ids_base_AnyOwnableID_descriptor;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID getDefaultInstanceForType() {
+        return com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID build() {
+        com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID buildPartial() {
+        com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID result = new com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID result) {
+        result.implCase_ = implCase_;
+        result.impl_ = this.impl_;
+        if (implCase_ == 1 &&
+            assetIDBuilder_ != null) {
+          result.impl_ = assetIDBuilder_.build();
+        }
+        if (implCase_ == 2 &&
+            coinIDBuilder_ != null) {
+          result.impl_ = coinIDBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID) {
+          return mergeFrom((com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID other) {
+        if (other == com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID.getDefaultInstance()) return this;
+        switch (other.getImplCase()) {
+          case ASSET_I_D: {
+            mergeAssetID(other.getAssetID());
+            break;
+          }
+          case COIN_I_D: {
+            mergeCoinID(other.getCoinID());
+            break;
+          }
+          case IMPL_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAssetIDFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                implCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCoinIDFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                implCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int implCase_ = 0;
+      private java.lang.Object impl_;
+      public ImplCase
+          getImplCase() {
+        return ImplCase.forNumber(
+            implCase_);
+      }
+
+      public Builder clearImpl() {
+        implCase_ = 0;
+        impl_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.ids.base.AssetIdProto.AssetID, com.assetmantle.schema.ids.base.AssetIdProto.AssetID.Builder, com.assetmantle.schema.ids.base.AssetIdProto.AssetIDOrBuilder> assetIDBuilder_;
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       * @return Whether the assetID field is set.
+       */
+      @java.lang.Override
+      public boolean hasAssetID() {
+        return implCase_ == 1;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       * @return The assetID.
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.AssetIdProto.AssetID getAssetID() {
+        if (assetIDBuilder_ == null) {
+          if (implCase_ == 1) {
+            return (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_;
+          }
+          return com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance();
+        } else {
+          if (implCase_ == 1) {
+            return assetIDBuilder_.getMessage();
+          }
+          return com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      public Builder setAssetID(com.assetmantle.schema.ids.base.AssetIdProto.AssetID value) {
+        if (assetIDBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          impl_ = value;
+          onChanged();
+        } else {
+          assetIDBuilder_.setMessage(value);
+        }
+        implCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      public Builder setAssetID(
+          com.assetmantle.schema.ids.base.AssetIdProto.AssetID.Builder builderForValue) {
+        if (assetIDBuilder_ == null) {
+          impl_ = builderForValue.build();
+          onChanged();
+        } else {
+          assetIDBuilder_.setMessage(builderForValue.build());
+        }
+        implCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      public Builder mergeAssetID(com.assetmantle.schema.ids.base.AssetIdProto.AssetID value) {
+        if (assetIDBuilder_ == null) {
+          if (implCase_ == 1 &&
+              impl_ != com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance()) {
+            impl_ = com.assetmantle.schema.ids.base.AssetIdProto.AssetID.newBuilder((com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            impl_ = value;
+          }
+          onChanged();
+        } else {
+          if (implCase_ == 1) {
+            assetIDBuilder_.mergeFrom(value);
+          } else {
+            assetIDBuilder_.setMessage(value);
+          }
+        }
+        implCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      public Builder clearAssetID() {
+        if (assetIDBuilder_ == null) {
+          if (implCase_ == 1) {
+            implCase_ = 0;
+            impl_ = null;
+            onChanged();
+          }
+        } else {
+          if (implCase_ == 1) {
+            implCase_ = 0;
+            impl_ = null;
+          }
+          assetIDBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      public com.assetmantle.schema.ids.base.AssetIdProto.AssetID.Builder getAssetIDBuilder() {
+        return getAssetIDFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.AssetIdProto.AssetIDOrBuilder getAssetIDOrBuilder() {
+        if ((implCase_ == 1) && (assetIDBuilder_ != null)) {
+          return assetIDBuilder_.getMessageOrBuilder();
+        } else {
+          if (implCase_ == 1) {
+            return (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_;
+          }
+          return com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.AssetID asset_i_d = 1 [json_name = "assetID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.ids.base.AssetIdProto.AssetID, com.assetmantle.schema.ids.base.AssetIdProto.AssetID.Builder, com.assetmantle.schema.ids.base.AssetIdProto.AssetIDOrBuilder> 
+          getAssetIDFieldBuilder() {
+        if (assetIDBuilder_ == null) {
+          if (!(implCase_ == 1)) {
+            impl_ = com.assetmantle.schema.ids.base.AssetIdProto.AssetID.getDefaultInstance();
+          }
+          assetIDBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.assetmantle.schema.ids.base.AssetIdProto.AssetID, com.assetmantle.schema.ids.base.AssetIdProto.AssetID.Builder, com.assetmantle.schema.ids.base.AssetIdProto.AssetIDOrBuilder>(
+                  (com.assetmantle.schema.ids.base.AssetIdProto.AssetID) impl_,
+                  getParentForChildren(),
+                  isClean());
+          impl_ = null;
+        }
+        implCase_ = 1;
+        onChanged();
+        return assetIDBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.ids.base.CoinIdProto.CoinID, com.assetmantle.schema.ids.base.CoinIdProto.CoinID.Builder, com.assetmantle.schema.ids.base.CoinIdProto.CoinIDOrBuilder> coinIDBuilder_;
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       * @return Whether the coinID field is set.
+       */
+      @java.lang.Override
+      public boolean hasCoinID() {
+        return implCase_ == 2;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       * @return The coinID.
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.CoinIdProto.CoinID getCoinID() {
+        if (coinIDBuilder_ == null) {
+          if (implCase_ == 2) {
+            return (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_;
+          }
+          return com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance();
+        } else {
+          if (implCase_ == 2) {
+            return coinIDBuilder_.getMessage();
+          }
+          return com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      public Builder setCoinID(com.assetmantle.schema.ids.base.CoinIdProto.CoinID value) {
+        if (coinIDBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          impl_ = value;
+          onChanged();
+        } else {
+          coinIDBuilder_.setMessage(value);
+        }
+        implCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      public Builder setCoinID(
+          com.assetmantle.schema.ids.base.CoinIdProto.CoinID.Builder builderForValue) {
+        if (coinIDBuilder_ == null) {
+          impl_ = builderForValue.build();
+          onChanged();
+        } else {
+          coinIDBuilder_.setMessage(builderForValue.build());
+        }
+        implCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      public Builder mergeCoinID(com.assetmantle.schema.ids.base.CoinIdProto.CoinID value) {
+        if (coinIDBuilder_ == null) {
+          if (implCase_ == 2 &&
+              impl_ != com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance()) {
+            impl_ = com.assetmantle.schema.ids.base.CoinIdProto.CoinID.newBuilder((com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            impl_ = value;
+          }
+          onChanged();
+        } else {
+          if (implCase_ == 2) {
+            coinIDBuilder_.mergeFrom(value);
+          } else {
+            coinIDBuilder_.setMessage(value);
+          }
+        }
+        implCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      public Builder clearCoinID() {
+        if (coinIDBuilder_ == null) {
+          if (implCase_ == 2) {
+            implCase_ = 0;
+            impl_ = null;
+            onChanged();
+          }
+        } else {
+          if (implCase_ == 2) {
+            implCase_ = 0;
+            impl_ = null;
+          }
+          coinIDBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      public com.assetmantle.schema.ids.base.CoinIdProto.CoinID.Builder getCoinIDBuilder() {
+        return getCoinIDFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      @java.lang.Override
+      public com.assetmantle.schema.ids.base.CoinIdProto.CoinIDOrBuilder getCoinIDOrBuilder() {
+        if ((implCase_ == 2) && (coinIDBuilder_ != null)) {
+          return coinIDBuilder_.getMessageOrBuilder();
+        } else {
+          if (implCase_ == 2) {
+            return (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_;
+          }
+          return com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.ids.base.CoinID coin_i_d = 2 [json_name = "coinID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.ids.base.CoinIdProto.CoinID, com.assetmantle.schema.ids.base.CoinIdProto.CoinID.Builder, com.assetmantle.schema.ids.base.CoinIdProto.CoinIDOrBuilder> 
+          getCoinIDFieldBuilder() {
+        if (coinIDBuilder_ == null) {
+          if (!(implCase_ == 2)) {
+            impl_ = com.assetmantle.schema.ids.base.CoinIdProto.CoinID.getDefaultInstance();
+          }
+          coinIDBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.assetmantle.schema.ids.base.CoinIdProto.CoinID, com.assetmantle.schema.ids.base.CoinIdProto.CoinID.Builder, com.assetmantle.schema.ids.base.CoinIdProto.CoinIDOrBuilder>(
+                  (com.assetmantle.schema.ids.base.CoinIdProto.CoinID) impl_,
+                  getParentForChildren(),
+                  isClean());
+          impl_ = null;
+        }
+        implCase_ = 2;
+        onChanged();
+        return coinIDBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:assetmantle.schema.ids.base.AnyOwnableID)
+    }
+
+    // @@protoc_insertion_point(class_scope:assetmantle.schema.ids.base.AnyOwnableID)
+    private static final com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID();
+    }
+
+    public static com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AnyOwnableID>
+        PARSER = new com.google.protobuf.AbstractParser<AnyOwnableID>() {
+      @java.lang.Override
+      public AnyOwnableID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AnyOwnableID> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AnyOwnableID> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.assetmantle.schema.ids.base.AnyOwnableIdProto.AnyOwnableID getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_assetmantle_schema_ids_base_AnyOwnableID_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_assetmantle_schema_ids_base_AnyOwnableID_fieldAccessorTable;
 
@@ -36,12 +963,12 @@ public final class AnyOwnableIdProto {
       "\001(\0132$.assetmantle.schema.ids.base.AssetI" +
       "DH\000R\007assetID\022?\n\010coin_i_d\030\002 \001(\0132#.assetma" +
       "ntle.schema.ids.base.CoinIDH\000R\006coinID:\004\210" +
-      "\240\037\000B\006\n\004implB\304\001\n\037com.assetmantle.schema.i" +
-      "ds.baseB\021AnyOwnableIdProtoP\001\242\002\004ASIB\252\002\033As" +
-      "setmantle.Schema.Ids.Base\312\002\033Assetmantle\\" +
-      "Schema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids" +
-      "\\Base\\GPBMetadata\352\002\036Assetmantle::Schema:" +
-      ":Ids::Baseb\006proto3"
+      "\240\037\000B\006\n\004implB\302\001\n\037com.assetmantle.schema.i" +
+      "ds.baseB\021AnyOwnableIdProto\242\002\004ASIB\252\002\033Asse" +
+      "tmantle.Schema.Ids.Base\312\002\033Assetmantle\\Sc" +
+      "hema\\Ids\\Base\342\002\'Assetmantle\\Schema\\Ids\\B" +
+      "ase\\GPBMetadata\352\002\036Assetmantle::Schema::I" +
+      "ds::Baseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

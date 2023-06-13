@@ -14,24 +14,2174 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryConfigRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.QueryConfigRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryConfigRequest is the request type for the Query/Configuration RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryConfigRequest}
+   */
+  public static final class QueryConfigRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.QueryConfigRequest)
+      QueryConfigRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryConfigRequest.newBuilder() to construct.
+    private QueryConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryConfigRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryConfigRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest other = (com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryConfigRequest is the request type for the Query/Configuration RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryConfigRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.QueryConfigRequest)
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest build() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest buildPartial() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest result = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest other) {
+        if (other == com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.QueryConfigRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.QueryConfigRequest)
+    private static final com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryConfigRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryConfigRequest>() {
+      @java.lang.Override
+      public QueryConfigRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryConfigRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryConfigRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryConfigResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.QueryConfigResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configuration is the starname configuration.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return Whether the config field is set.
+     */
+    boolean hasConfig();
+    /**
+     * <pre>
+     * Configuration is the starname configuration.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return The config.
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.Config getConfig();
+    /**
+     * <pre>
+     * Configuration is the starname configuration.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getConfigOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryConfigResponse is the response type for the Query/Configuration RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryConfigResponse}
+   */
+  public static final class QueryConfigResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.QueryConfigResponse)
+      QueryConfigResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryConfigResponse.newBuilder() to construct.
+    private QueryConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryConfigResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryConfigResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.Builder.class);
+    }
+
+    public static final int CONFIG_FIELD_NUMBER = 1;
+    private com.starnamed.x.configuration.v1beta1.TypesProto.Config config_;
+    /**
+     * <pre>
+     * Configuration is the starname configuration.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return Whether the config field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfig() {
+      return config_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration is the starname configuration.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     * @return The config.
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Config getConfig() {
+      return config_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+    }
+    /**
+     * <pre>
+     * Configuration is the starname configuration.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getConfigOrBuilder() {
+      return config_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (config_ != null) {
+        output.writeMessage(1, getConfig());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (config_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConfig());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse other = (com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse) obj;
+
+      if (hasConfig() != other.hasConfig()) return false;
+      if (hasConfig()) {
+        if (!getConfig()
+            .equals(other.getConfig())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConfig()) {
+        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getConfig().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryConfigResponse is the response type for the Query/Configuration RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryConfigResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.QueryConfigResponse)
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse build() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse buildPartial() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse result = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse other) {
+        if (other == com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse.getDefaultInstance()) return this;
+        if (other.hasConfig()) {
+          mergeConfig(other.getConfig());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.starnamed.x.configuration.v1beta1.TypesProto.Config config_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder> configBuilder_;
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       * @return Whether the config field is set.
+       */
+      public boolean hasConfig() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       * @return The config.
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config getConfig() {
+        if (configBuilder_ == null) {
+          return config_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+        } else {
+          return configBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder setConfig(com.starnamed.x.configuration.v1beta1.TypesProto.Config value) {
+        if (configBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          config_ = value;
+        } else {
+          configBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder setConfig(
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder builderForValue) {
+        if (configBuilder_ == null) {
+          config_ = builderForValue.build();
+        } else {
+          configBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder mergeConfig(com.starnamed.x.configuration.v1beta1.TypesProto.Config value) {
+        if (configBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            config_ != null &&
+            config_ != com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
+          } else {
+            config_ = value;
+          }
+        } else {
+          configBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public Builder clearConfig() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
+          configBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder getConfigBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder getConfigOrBuilder() {
+        if (configBuilder_ != null) {
+          return configBuilder_.getMessageOrBuilder();
+        } else {
+          return config_ == null ?
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config.getDefaultInstance() : config_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration is the starname configuration.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Config config = 1 [json_name = "config", (.gogoproto.moretags) = "yaml:&#92;"config&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder> 
+          getConfigFieldBuilder() {
+        if (configBuilder_ == null) {
+          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.configuration.v1beta1.TypesProto.Config, com.starnamed.x.configuration.v1beta1.TypesProto.Config.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.ConfigOrBuilder>(
+                  getConfig(),
+                  getParentForChildren(),
+                  isClean());
+          config_ = null;
+        }
+        return configBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.QueryConfigResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.QueryConfigResponse)
+    private static final com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryConfigResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryConfigResponse>() {
+      @java.lang.Override
+      public QueryConfigResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryConfigResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryConfigResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.QueryProto.QueryConfigResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.QueryFeesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryFeesRequest is the request type for the Query/Configuration RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryFeesRequest}
+   */
+  public static final class QueryFeesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.QueryFeesRequest)
+      QueryFeesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeesRequest.newBuilder() to construct.
+    private QueryFeesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest other = (com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeesRequest is the request type for the Query/Configuration RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryFeesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.QueryFeesRequest)
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest build() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest buildPartial() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest result = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest other) {
+        if (other == com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.QueryFeesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.QueryFeesRequest)
+    private static final com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeesRequest>() {
+      @java.lang.Override
+      public QueryFeesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:starnamed.x.configuration.v1beta1.QueryFeesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Fees is the starname product fee object.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return Whether the fees field is set.
+     */
+    boolean hasFees();
+    /**
+     * <pre>
+     * Fees is the starname product fee object.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return The fees.
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees();
+    /**
+     * <pre>
+     * Fees is the starname product fee object.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     */
+    com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryFeesResponse is the response type for the Query/Fees RPC method
+   * </pre>
+   *
+   * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryFeesResponse}
+   */
+  public static final class QueryFeesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:starnamed.x.configuration.v1beta1.QueryFeesResponse)
+      QueryFeesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeesResponse.newBuilder() to construct.
+    private QueryFeesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.Builder.class);
+    }
+
+    public static final int FEES_FIELD_NUMBER = 1;
+    private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
+    /**
+     * <pre>
+     * Fees is the starname product fee object.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return Whether the fees field is set.
+     */
+    @java.lang.Override
+    public boolean hasFees() {
+      return fees_ != null;
+    }
+    /**
+     * <pre>
+     * Fees is the starname product fee object.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     * @return The fees.
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees() {
+      return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+    }
+    /**
+     * <pre>
+     * Fees is the starname product fee object.
+     * </pre>
+     *
+     * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder() {
+      return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (fees_ != null) {
+        output.writeMessage(1, getFees());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (fees_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFees());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse)) {
+        return super.equals(obj);
+      }
+      com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse other = (com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse) obj;
+
+      if (hasFees() != other.hasFees()) return false;
+      if (hasFees()) {
+        if (!getFees()
+            .equals(other.getFees())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFees()) {
+        hash = (37 * hash) + FEES_FIELD_NUMBER;
+        hash = (53 * hash) + getFees().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryFeesResponse is the response type for the Query/Fees RPC method
+     * </pre>
+     *
+     * Protobuf type {@code starnamed.x.configuration.v1beta1.QueryFeesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:starnamed.x.configuration.v1beta1.QueryFeesResponse)
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.class, com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.Builder.class);
+      }
+
+      // Construct using com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fees_ = null;
+        if (feesBuilder_ != null) {
+          feesBuilder_.dispose();
+          feesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse getDefaultInstanceForType() {
+        return com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse build() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse buildPartial() {
+        com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse result = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fees_ = feesBuilder_ == null
+              ? fees_
+              : feesBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse) {
+          return mergeFrom((com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse other) {
+        if (other == com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse.getDefaultInstance()) return this;
+        if (other.hasFees()) {
+          mergeFees(other.getFees());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFeesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.starnamed.x.configuration.v1beta1.TypesProto.Fees fees_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder> feesBuilder_;
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       * @return Whether the fees field is set.
+       */
+      public boolean hasFees() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       * @return The fees.
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees getFees() {
+        if (feesBuilder_ == null) {
+          return fees_ == null ? com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+        } else {
+          return feesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder setFees(com.starnamed.x.configuration.v1beta1.TypesProto.Fees value) {
+        if (feesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fees_ = value;
+        } else {
+          feesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder setFees(
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder builderForValue) {
+        if (feesBuilder_ == null) {
+          fees_ = builderForValue.build();
+        } else {
+          feesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder mergeFees(com.starnamed.x.configuration.v1beta1.TypesProto.Fees value) {
+        if (feesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            fees_ != null &&
+            fees_ != com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance()) {
+            getFeesBuilder().mergeFrom(value);
+          } else {
+            fees_ = value;
+          }
+        } else {
+          feesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public Builder clearFees() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        fees_ = null;
+        if (feesBuilder_ != null) {
+          feesBuilder_.dispose();
+          feesBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder getFeesBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFeesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      public com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder getFeesOrBuilder() {
+        if (feesBuilder_ != null) {
+          return feesBuilder_.getMessageOrBuilder();
+        } else {
+          return fees_ == null ?
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees.getDefaultInstance() : fees_;
+        }
+      }
+      /**
+       * <pre>
+       * Fees is the starname product fee object.
+       * </pre>
+       *
+       * <code>.starnamed.x.configuration.v1beta1.Fees fees = 1 [json_name = "fees", (.gogoproto.moretags) = "yaml:&#92;"fees&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder> 
+          getFeesFieldBuilder() {
+        if (feesBuilder_ == null) {
+          feesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.starnamed.x.configuration.v1beta1.TypesProto.Fees, com.starnamed.x.configuration.v1beta1.TypesProto.Fees.Builder, com.starnamed.x.configuration.v1beta1.TypesProto.FeesOrBuilder>(
+                  getFees(),
+                  getParentForChildren(),
+                  isClean());
+          fees_ = null;
+        }
+        return feesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:starnamed.x.configuration.v1beta1.QueryFeesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:starnamed.x.configuration.v1beta1.QueryFeesResponse)
+    private static final com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse();
+    }
+
+    public static com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeesResponse>() {
+      @java.lang.Override
+      public QueryFeesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.starnamed.x.configuration.v1beta1.QueryProto.QueryFeesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_QueryConfigRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_QueryConfigResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_QueryFeesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_starnamed_x_configuration_v1beta1_QueryFeesResponse_fieldAccessorTable;
 
@@ -61,15 +2211,15 @@ public final class QueryProto {
       "Fees\0223.starnamed.x.configuration.v1beta1" +
       ".QueryFeesRequest\0324.starnamed.x.configur" +
       "ation.v1beta1.QueryFeesResponse\",\202\323\344\223\002&\022" +
-      "$/starname/v1beta1/configuration/feesB\226\002" +
+      "$/starname/v1beta1/configuration/feesB\224\002" +
       "\n%com.starnamed.x.configuration.v1beta1B" +
-      "\nQueryProtoP\001Z2github.com/iov-one/starna" +
-      "med/x/configuration/types\242\002\003SXC\252\002!Starna" +
-      "med.X.Configuration.V1beta1\312\002!Starnamed\\" +
-      "X\\Configuration\\V1beta1\342\002-Starnamed\\X\\Co" +
-      "nfiguration\\V1beta1\\GPBMetadata\352\002$Starna" +
-      "med::X::Configuration::V1beta1\310\341\036\000\250\342\036\001b\006" +
-      "proto3"
+      "\nQueryProtoZ2github.com/iov-one/starname" +
+      "d/x/configuration/types\242\002\003SXC\252\002!Starname" +
+      "d.X.Configuration.V1beta1\312\002!Starnamed\\X\\" +
+      "Configuration\\V1beta1\342\002-Starnamed\\X\\Conf" +
+      "iguration\\V1beta1\\GPBMetadata\352\002$Starname" +
+      "d::X::Configuration::V1beta1\310\341\036\000\250\342\036\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

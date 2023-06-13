@@ -25,13 +25,13 @@ public final class TxProto {
     java.lang.String[] descriptorData = {
       "\n\027quasar/qoracle/tx.proto\022\035quasarlabs.qu" +
       "asarnode.qoracle\032\024gogoproto/gogo.proto2\005" +
-      "\n\003MsgB\364\001\n!com.quasarlabs.quasarnode.qora" +
-      "cleB\007TxProtoP\001Z0github.com/quasarlabs/qu" +
-      "asarnode/x/qoracle/types\242\002\003QQQ\252\002\035Quasarl" +
-      "abs.Quasarnode.Qoracle\312\002\035Quasarlabs\\Quas" +
-      "arnode\\Qoracle\342\002)Quasarlabs\\Quasarnode\\Q" +
-      "oracle\\GPBMetadata\352\002\037Quasarlabs::Quasarn" +
-      "ode::Qoracleb\006proto3"
+      "\n\003MsgB\362\001\n!com.quasarlabs.quasarnode.qora" +
+      "cleB\007TxProtoZ0github.com/quasarlabs/quas" +
+      "arnode/x/qoracle/types\242\002\003QQQ\252\002\035Quasarlab" +
+      "s.Quasarnode.Qoracle\312\002\035Quasarlabs\\Quasar" +
+      "node\\Qoracle\342\002)Quasarlabs\\Quasarnode\\Qor" +
+      "acle\\GPBMetadata\352\002\037Quasarlabs::Quasarnod" +
+      "e::Qoracleb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

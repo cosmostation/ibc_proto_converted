@@ -14,14 +14,2330 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    java.util.List<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry> 
+        getEntriesList();
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry getEntries(int index);
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    int getEntriesCount();
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    java.util.List<? extends com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState is the genesis state
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.GenesisProto.GenesisState.class, com.regen.data.v1alpha2.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry> entries_;
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <pre>
+     * entries are the content entries
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(1, entries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, entries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.GenesisProto.GenesisState other = (com.regen.data.v1alpha2.GenesisProto.GenesisState) obj;
+
+      if (!getEntriesList()
+          .equals(other.getEntriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState is the genesis state
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.GenesisState)
+        com.regen.data.v1alpha2.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.GenesisProto.GenesisState.class, com.regen.data.v1alpha2.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+        } else {
+          entries_ = null;
+          entriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.GenesisProto.GenesisState build() {
+        com.regen.data.v1alpha2.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.GenesisProto.GenesisState buildPartial() {
+        com.regen.data.v1alpha2.GenesisProto.GenesisState result = new com.regen.data.v1alpha2.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.regen.data.v1alpha2.GenesisProto.GenesisState result) {
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.GenesisProto.GenesisState) {
+          return mergeFrom((com.regen.data.v1alpha2.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.GenesisProto.GenesisState other) {
+        if (other == com.regen.data.v1alpha2.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry m =
+                    input.readMessage(
+                        com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.parser(),
+                        extensionRegistry);
+                if (entriesBuilder_ == null) {
+                  ensureEntriesIsMutable();
+                  entries_.add(m);
+                } else {
+                  entriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          entries_ = new java.util.ArrayList<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry>(entries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public java.util.List<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder setEntries(
+          int index, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder setEntries(
+          int index, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(
+          int index, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(
+          com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addEntries(
+          int index, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public java.util.List<? extends com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * entries are the content entries
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.GenesisContentEntry entries = 1 [json_name = "entries"];</code>
+       */
+      public java.util.List<com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.GenesisState)
+    private static final com.regen.data.v1alpha2.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.GenesisProto.GenesisState();
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GenesisContentEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:regen.data.v1alpha2.GenesisContentEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * hash is the ContentHash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    boolean hasHash();
+    /**
+     * <pre>
+     * hash is the ContentHash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHash getHash();
+    /**
+     * <pre>
+     * hash is the ContentHash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder();
+
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    java.util.List<com.regen.data.v1alpha2.TypesProto.SignerEntry> 
+        getSignersList();
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.SignerEntry getSigners(int index);
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    int getSignersCount();
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    java.util.List<? extends com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder> 
+        getSignersOrBuilderList();
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder getSignersOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisContentEntry is a genesis content entry
+   * </pre>
+   *
+   * Protobuf type {@code regen.data.v1alpha2.GenesisContentEntry}
+   */
+  public static final class GenesisContentEntry extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:regen.data.v1alpha2.GenesisContentEntry)
+      GenesisContentEntryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisContentEntry.newBuilder() to construct.
+    private GenesisContentEntry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisContentEntry() {
+      signers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisContentEntry();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisContentEntry_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisContentEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.class, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder.class);
+    }
+
+    public static final int HASH_FIELD_NUMBER = 1;
+    private com.regen.data.v1alpha2.TypesProto.ContentHash hash_;
+    /**
+     * <pre>
+     * hash is the ContentHash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return Whether the hash field is set.
+     */
+    @java.lang.Override
+    public boolean hasHash() {
+      return hash_ != null;
+    }
+    /**
+     * <pre>
+     * hash is the ContentHash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     * @return The hash.
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHash getHash() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+    }
+    /**
+     * <pre>
+     * hash is the ContentHash
+     * </pre>
+     *
+     * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder() {
+      return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * timestamp is the anchor Timestamp
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+
+    public static final int SIGNERS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.regen.data.v1alpha2.TypesProto.SignerEntry> signers_;
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.regen.data.v1alpha2.TypesProto.SignerEntry> getSignersList() {
+      return signers_;
+    }
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder> 
+        getSignersOrBuilderList() {
+      return signers_;
+    }
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    @java.lang.Override
+    public int getSignersCount() {
+      return signers_.size();
+    }
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.SignerEntry getSigners(int index) {
+      return signers_.get(index);
+    }
+    /**
+     * <pre>
+     * signers are the signers, if any
+     * </pre>
+     *
+     * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+     */
+    @java.lang.Override
+    public com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder getSignersOrBuilder(
+        int index) {
+      return signers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hash_ != null) {
+        output.writeMessage(1, getHash());
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(2, getTimestamp());
+      }
+      for (int i = 0; i < signers_.size(); i++) {
+        output.writeMessage(3, signers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hash_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHash());
+      }
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTimestamp());
+      }
+      for (int i = 0; i < signers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, signers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry)) {
+        return super.equals(obj);
+      }
+      com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry other = (com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry) obj;
+
+      if (hasHash() != other.hasHash()) return false;
+      if (hasHash()) {
+        if (!getHash()
+            .equals(other.getHash())) return false;
+      }
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (!getSignersList()
+          .equals(other.getSignersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHash()) {
+        hash = (37 * hash) + HASH_FIELD_NUMBER;
+        hash = (53 * hash) + getHash().hashCode();
+      }
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      if (getSignersCount() > 0) {
+        hash = (37 * hash) + SIGNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSignersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisContentEntry is a genesis content entry
+     * </pre>
+     *
+     * Protobuf type {@code regen.data.v1alpha2.GenesisContentEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:regen.data.v1alpha2.GenesisContentEntry)
+        com.regen.data.v1alpha2.GenesisProto.GenesisContentEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisContentEntry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisContentEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.class, com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.Builder.class);
+      }
+
+      // Construct using com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        if (signersBuilder_ == null) {
+          signers_ = java.util.Collections.emptyList();
+        } else {
+          signers_ = null;
+          signersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.regen.data.v1alpha2.GenesisProto.internal_static_regen_data_v1alpha2_GenesisContentEntry_descriptor;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry getDefaultInstanceForType() {
+        return com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry build() {
+        com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry buildPartial() {
+        com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry result = new com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry result) {
+        if (signersBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            signers_ = java.util.Collections.unmodifiableList(signers_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.signers_ = signers_;
+        } else {
+          result.signers_ = signersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hash_ = hashBuilder_ == null
+              ? hash_
+              : hashBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timestamp_ = timestampBuilder_ == null
+              ? timestamp_
+              : timestampBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry) {
+          return mergeFrom((com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry other) {
+        if (other == com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry.getDefaultInstance()) return this;
+        if (other.hasHash()) {
+          mergeHash(other.getHash());
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        if (signersBuilder_ == null) {
+          if (!other.signers_.isEmpty()) {
+            if (signers_.isEmpty()) {
+              signers_ = other.signers_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureSignersIsMutable();
+              signers_.addAll(other.signers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.signers_.isEmpty()) {
+            if (signersBuilder_.isEmpty()) {
+              signersBuilder_.dispose();
+              signersBuilder_ = null;
+              signers_ = other.signers_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              signersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSignersFieldBuilder() : null;
+            } else {
+              signersBuilder_.addAllMessages(other.signers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHashFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.regen.data.v1alpha2.TypesProto.SignerEntry m =
+                    input.readMessage(
+                        com.regen.data.v1alpha2.TypesProto.SignerEntry.parser(),
+                        extensionRegistry);
+                if (signersBuilder_ == null) {
+                  ensureSignersIsMutable();
+                  signers_.add(m);
+                } else {
+                  signersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.regen.data.v1alpha2.TypesProto.ContentHash hash_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder> hashBuilder_;
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       * @return Whether the hash field is set.
+       */
+      public boolean hasHash() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       * @return The hash.
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash getHash() {
+        if (hashBuilder_ == null) {
+          return hash_ == null ? com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+        } else {
+          return hashBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder setHash(com.regen.data.v1alpha2.TypesProto.ContentHash value) {
+        if (hashBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hash_ = value;
+        } else {
+          hashBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder setHash(
+          com.regen.data.v1alpha2.TypesProto.ContentHash.Builder builderForValue) {
+        if (hashBuilder_ == null) {
+          hash_ = builderForValue.build();
+        } else {
+          hashBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder mergeHash(com.regen.data.v1alpha2.TypesProto.ContentHash value) {
+        if (hashBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            hash_ != null &&
+            hash_ != com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance()) {
+            getHashBuilder().mergeFrom(value);
+          } else {
+            hash_ = value;
+          }
+        } else {
+          hashBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public Builder clearHash() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        hash_ = null;
+        if (hashBuilder_ != null) {
+          hashBuilder_.dispose();
+          hashBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHash.Builder getHashBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHashFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder getHashOrBuilder() {
+        if (hashBuilder_ != null) {
+          return hashBuilder_.getMessageOrBuilder();
+        } else {
+          return hash_ == null ?
+              com.regen.data.v1alpha2.TypesProto.ContentHash.getDefaultInstance() : hash_;
+        }
+      }
+      /**
+       * <pre>
+       * hash is the ContentHash
+       * </pre>
+       *
+       * <code>.regen.data.v1alpha2.ContentHash hash = 1 [json_name = "hash"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder> 
+          getHashFieldBuilder() {
+        if (hashBuilder_ == null) {
+          hashBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.ContentHash, com.regen.data.v1alpha2.TypesProto.ContentHash.Builder, com.regen.data.v1alpha2.TypesProto.ContentHashOrBuilder>(
+                  getHash(),
+                  getParentForChildren(),
+                  isClean());
+          hash_ = null;
+        }
+        return hashBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            timestamp_ != null &&
+            timestamp_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTimestampBuilder().mergeFrom(value);
+          } else {
+            timestamp_ = value;
+          }
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
+          timestampBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * timestamp is the anchor Timestamp
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 2 [json_name = "timestamp"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+
+      private java.util.List<com.regen.data.v1alpha2.TypesProto.SignerEntry> signers_ =
+        java.util.Collections.emptyList();
+      private void ensureSignersIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          signers_ = new java.util.ArrayList<com.regen.data.v1alpha2.TypesProto.SignerEntry>(signers_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.SignerEntry, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder, com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder> signersBuilder_;
+
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public java.util.List<com.regen.data.v1alpha2.TypesProto.SignerEntry> getSignersList() {
+        if (signersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(signers_);
+        } else {
+          return signersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public int getSignersCount() {
+        if (signersBuilder_ == null) {
+          return signers_.size();
+        } else {
+          return signersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry getSigners(int index) {
+        if (signersBuilder_ == null) {
+          return signers_.get(index);
+        } else {
+          return signersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder setSigners(
+          int index, com.regen.data.v1alpha2.TypesProto.SignerEntry value) {
+        if (signersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignersIsMutable();
+          signers_.set(index, value);
+          onChanged();
+        } else {
+          signersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder setSigners(
+          int index, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder builderForValue) {
+        if (signersBuilder_ == null) {
+          ensureSignersIsMutable();
+          signers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          signersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder addSigners(com.regen.data.v1alpha2.TypesProto.SignerEntry value) {
+        if (signersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignersIsMutable();
+          signers_.add(value);
+          onChanged();
+        } else {
+          signersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder addSigners(
+          int index, com.regen.data.v1alpha2.TypesProto.SignerEntry value) {
+        if (signersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSignersIsMutable();
+          signers_.add(index, value);
+          onChanged();
+        } else {
+          signersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder addSigners(
+          com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder builderForValue) {
+        if (signersBuilder_ == null) {
+          ensureSignersIsMutable();
+          signers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          signersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder addSigners(
+          int index, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder builderForValue) {
+        if (signersBuilder_ == null) {
+          ensureSignersIsMutable();
+          signers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          signersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder addAllSigners(
+          java.lang.Iterable<? extends com.regen.data.v1alpha2.TypesProto.SignerEntry> values) {
+        if (signersBuilder_ == null) {
+          ensureSignersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, signers_);
+          onChanged();
+        } else {
+          signersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder clearSigners() {
+        if (signersBuilder_ == null) {
+          signers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          signersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public Builder removeSigners(int index) {
+        if (signersBuilder_ == null) {
+          ensureSignersIsMutable();
+          signers_.remove(index);
+          onChanged();
+        } else {
+          signersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder getSignersBuilder(
+          int index) {
+        return getSignersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder getSignersOrBuilder(
+          int index) {
+        if (signersBuilder_ == null) {
+          return signers_.get(index);  } else {
+          return signersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public java.util.List<? extends com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder> 
+           getSignersOrBuilderList() {
+        if (signersBuilder_ != null) {
+          return signersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(signers_);
+        }
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder addSignersBuilder() {
+        return getSignersFieldBuilder().addBuilder(
+            com.regen.data.v1alpha2.TypesProto.SignerEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder addSignersBuilder(
+          int index) {
+        return getSignersFieldBuilder().addBuilder(
+            index, com.regen.data.v1alpha2.TypesProto.SignerEntry.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * signers are the signers, if any
+       * </pre>
+       *
+       * <code>repeated .regen.data.v1alpha2.SignerEntry signers = 3 [json_name = "signers"];</code>
+       */
+      public java.util.List<com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder> 
+           getSignersBuilderList() {
+        return getSignersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.regen.data.v1alpha2.TypesProto.SignerEntry, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder, com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder> 
+          getSignersFieldBuilder() {
+        if (signersBuilder_ == null) {
+          signersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.regen.data.v1alpha2.TypesProto.SignerEntry, com.regen.data.v1alpha2.TypesProto.SignerEntry.Builder, com.regen.data.v1alpha2.TypesProto.SignerEntryOrBuilder>(
+                  signers_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          signers_ = null;
+        }
+        return signersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:regen.data.v1alpha2.GenesisContentEntry)
+    }
+
+    // @@protoc_insertion_point(class_scope:regen.data.v1alpha2.GenesisContentEntry)
+    private static final com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry();
+    }
+
+    public static com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisContentEntry>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisContentEntry>() {
+      @java.lang.Override
+      public GenesisContentEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisContentEntry> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisContentEntry> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.regen.data.v1alpha2.GenesisProto.GenesisContentEntry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_regen_data_v1alpha2_GenesisContentEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_regen_data_v1alpha2_GenesisContentEntry_fieldAccessorTable;
 
@@ -43,12 +2359,12 @@ public final class GenesisProto {
       "hash\0228\n\ttimestamp\030\002 \001(\0132\032.google.protobu" +
       "f.TimestampR\ttimestamp\022:\n\007signers\030\003 \003(\0132" +
       " .regen.data.v1alpha2.SignerEntryR\007signe" +
-      "rsB\303\001\n\027com.regen.data.v1alpha2B\014GenesisP" +
-      "rotoP\001Z,github.com/regen-network/regen-l" +
-      "edger/x/data\242\002\003RDX\252\002\023Regen.Data.V1alpha2" +
-      "\312\002\023Regen\\Data\\V1alpha2\342\002\037Regen\\Data\\V1al" +
-      "pha2\\GPBMetadata\352\002\025Regen::Data::V1alpha2" +
-      "b\006proto3"
+      "rsB\301\001\n\027com.regen.data.v1alpha2B\014GenesisP" +
+      "rotoZ,github.com/regen-network/regen-led" +
+      "ger/x/data\242\002\003RDX\252\002\023Regen.Data.V1alpha2\312\002" +
+      "\023Regen\\Data\\V1alpha2\342\002\037Regen\\Data\\V1alph" +
+      "a2\\GPBMetadata\352\002\025Regen::Data::V1alpha2b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

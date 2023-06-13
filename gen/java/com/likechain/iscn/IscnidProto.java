@@ -14,14 +14,1387 @@ public final class IscnidProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface IscnIdPrefixOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.IscnIdPrefix)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string registry_name = 1 [json_name = "registryName"];</code>
+     * @return The registryName.
+     */
+    java.lang.String getRegistryName();
+    /**
+     * <code>string registry_name = 1 [json_name = "registryName"];</code>
+     * @return The bytes for registryName.
+     */
+    com.google.protobuf.ByteString
+        getRegistryNameBytes();
+
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    java.lang.String getContentId();
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    com.google.protobuf.ByteString
+        getContentIdBytes();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.IscnIdPrefix}
+   */
+  public static final class IscnIdPrefix extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.IscnIdPrefix)
+      IscnIdPrefixOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IscnIdPrefix.newBuilder() to construct.
+    private IscnIdPrefix(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IscnIdPrefix() {
+      registryName_ = "";
+      contentId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IscnIdPrefix();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnIdPrefix_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnIdPrefix_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.IscnidProto.IscnIdPrefix.class, com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder.class);
+    }
+
+    public static final int REGISTRY_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registryName_ = "";
+    /**
+     * <code>string registry_name = 1 [json_name = "registryName"];</code>
+     * @return The registryName.
+     */
+    @java.lang.Override
+    public java.lang.String getRegistryName() {
+      java.lang.Object ref = registryName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string registry_name = 1 [json_name = "registryName"];</code>
+     * @return The bytes for registryName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegistryNameBytes() {
+      java.lang.Object ref = registryName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTENT_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object contentId_ = "";
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The contentId.
+     */
+    @java.lang.Override
+    public java.lang.String getContentId() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        contentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string content_id = 2 [json_name = "contentId"];</code>
+     * @return The bytes for contentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentIdBytes() {
+      java.lang.Object ref = contentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        contentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, contentId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registryName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, contentId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.IscnidProto.IscnIdPrefix)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.IscnidProto.IscnIdPrefix other = (com.likechain.iscn.IscnidProto.IscnIdPrefix) obj;
+
+      if (!getRegistryName()
+          .equals(other.getRegistryName())) return false;
+      if (!getContentId()
+          .equals(other.getContentId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryName().hashCode();
+      hash = (37 * hash) + CONTENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getContentId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.IscnidProto.IscnIdPrefix prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.IscnIdPrefix}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.IscnIdPrefix)
+        com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnIdPrefix_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnIdPrefix_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.IscnidProto.IscnIdPrefix.class, com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.IscnidProto.IscnIdPrefix.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        registryName_ = "";
+        contentId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnIdPrefix_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.IscnidProto.IscnIdPrefix getDefaultInstanceForType() {
+        return com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.IscnidProto.IscnIdPrefix build() {
+        com.likechain.iscn.IscnidProto.IscnIdPrefix result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.IscnidProto.IscnIdPrefix buildPartial() {
+        com.likechain.iscn.IscnidProto.IscnIdPrefix result = new com.likechain.iscn.IscnidProto.IscnIdPrefix(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.IscnidProto.IscnIdPrefix result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.registryName_ = registryName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.contentId_ = contentId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.IscnidProto.IscnIdPrefix) {
+          return mergeFrom((com.likechain.iscn.IscnidProto.IscnIdPrefix)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.IscnidProto.IscnIdPrefix other) {
+        if (other == com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance()) return this;
+        if (!other.getRegistryName().isEmpty()) {
+          registryName_ = other.registryName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getContentId().isEmpty()) {
+          contentId_ = other.contentId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                registryName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                contentId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object registryName_ = "";
+      /**
+       * <code>string registry_name = 1 [json_name = "registryName"];</code>
+       * @return The registryName.
+       */
+      public java.lang.String getRegistryName() {
+        java.lang.Object ref = registryName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string registry_name = 1 [json_name = "registryName"];</code>
+       * @return The bytes for registryName.
+       */
+      public com.google.protobuf.ByteString
+          getRegistryNameBytes() {
+        java.lang.Object ref = registryName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string registry_name = 1 [json_name = "registryName"];</code>
+       * @param value The registryName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registryName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string registry_name = 1 [json_name = "registryName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegistryName() {
+        registryName_ = getDefaultInstance().getRegistryName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string registry_name = 1 [json_name = "registryName"];</code>
+       * @param value The bytes for registryName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegistryNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registryName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object contentId_ = "";
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The contentId.
+       */
+      public java.lang.String getContentId() {
+        java.lang.Object ref = contentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          contentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return The bytes for contentId.
+       */
+      public com.google.protobuf.ByteString
+          getContentIdBytes() {
+        java.lang.Object ref = contentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          contentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentId() {
+        contentId_ = getDefaultInstance().getContentId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string content_id = 2 [json_name = "contentId"];</code>
+       * @param value The bytes for contentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        contentId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.IscnIdPrefix)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.IscnIdPrefix)
+    private static final com.likechain.iscn.IscnidProto.IscnIdPrefix DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.IscnidProto.IscnIdPrefix();
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnIdPrefix getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IscnIdPrefix>
+        PARSER = new com.google.protobuf.AbstractParser<IscnIdPrefix>() {
+      @java.lang.Override
+      public IscnIdPrefix parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IscnIdPrefix> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IscnIdPrefix> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.IscnidProto.IscnIdPrefix getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IscnIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:likechain.iscn.IscnId)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+     * @return Whether the prefix field is set.
+     */
+    boolean hasPrefix();
+    /**
+     * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+     * @return The prefix.
+     */
+    com.likechain.iscn.IscnidProto.IscnIdPrefix getPrefix();
+    /**
+     * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+     */
+    com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder getPrefixOrBuilder();
+
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+  }
+  /**
+   * Protobuf type {@code likechain.iscn.IscnId}
+   */
+  public static final class IscnId extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:likechain.iscn.IscnId)
+      IscnIdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IscnId.newBuilder() to construct.
+    private IscnId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IscnId() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IscnId();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnId_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.likechain.iscn.IscnidProto.IscnId.class, com.likechain.iscn.IscnidProto.IscnId.Builder.class);
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 1;
+    private com.likechain.iscn.IscnidProto.IscnIdPrefix prefix_;
+    /**
+     * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+     * @return Whether the prefix field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrefix() {
+      return prefix_ != null;
+    }
+    /**
+     * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public com.likechain.iscn.IscnidProto.IscnIdPrefix getPrefix() {
+      return prefix_ == null ? com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance() : prefix_;
+    }
+    /**
+     * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder getPrefixOrBuilder() {
+      return prefix_ == null ? com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance() : prefix_;
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (prefix_ != null) {
+        output.writeMessage(1, getPrefix());
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(2, version_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (prefix_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPrefix());
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, version_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.likechain.iscn.IscnidProto.IscnId)) {
+        return super.equals(obj);
+      }
+      com.likechain.iscn.IscnidProto.IscnId other = (com.likechain.iscn.IscnidProto.IscnId) obj;
+
+      if (hasPrefix() != other.hasPrefix()) return false;
+      if (hasPrefix()) {
+        if (!getPrefix()
+            .equals(other.getPrefix())) return false;
+      }
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPrefix()) {
+        hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+        hash = (53 * hash) + getPrefix().hashCode();
+      }
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.likechain.iscn.IscnidProto.IscnId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.likechain.iscn.IscnidProto.IscnId prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code likechain.iscn.IscnId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:likechain.iscn.IscnId)
+        com.likechain.iscn.IscnidProto.IscnIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnId_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.likechain.iscn.IscnidProto.IscnId.class, com.likechain.iscn.IscnidProto.IscnId.Builder.class);
+      }
+
+      // Construct using com.likechain.iscn.IscnidProto.IscnId.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        prefix_ = null;
+        if (prefixBuilder_ != null) {
+          prefixBuilder_.dispose();
+          prefixBuilder_ = null;
+        }
+        version_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.likechain.iscn.IscnidProto.internal_static_likechain_iscn_IscnId_descriptor;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.IscnidProto.IscnId getDefaultInstanceForType() {
+        return com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.IscnidProto.IscnId build() {
+        com.likechain.iscn.IscnidProto.IscnId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.likechain.iscn.IscnidProto.IscnId buildPartial() {
+        com.likechain.iscn.IscnidProto.IscnId result = new com.likechain.iscn.IscnidProto.IscnId(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.likechain.iscn.IscnidProto.IscnId result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.prefix_ = prefixBuilder_ == null
+              ? prefix_
+              : prefixBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.likechain.iscn.IscnidProto.IscnId) {
+          return mergeFrom((com.likechain.iscn.IscnidProto.IscnId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.likechain.iscn.IscnidProto.IscnId other) {
+        if (other == com.likechain.iscn.IscnidProto.IscnId.getDefaultInstance()) return this;
+        if (other.hasPrefix()) {
+          mergePrefix(other.getPrefix());
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPrefixFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.likechain.iscn.IscnidProto.IscnIdPrefix prefix_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.IscnidProto.IscnIdPrefix, com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder, com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder> prefixBuilder_;
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       * @return Whether the prefix field is set.
+       */
+      public boolean hasPrefix() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       * @return The prefix.
+       */
+      public com.likechain.iscn.IscnidProto.IscnIdPrefix getPrefix() {
+        if (prefixBuilder_ == null) {
+          return prefix_ == null ? com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance() : prefix_;
+        } else {
+          return prefixBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrefix(com.likechain.iscn.IscnidProto.IscnIdPrefix value) {
+        if (prefixBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prefix_ = value;
+        } else {
+          prefixBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrefix(
+          com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder builderForValue) {
+        if (prefixBuilder_ == null) {
+          prefix_ = builderForValue.build();
+        } else {
+          prefixBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePrefix(com.likechain.iscn.IscnidProto.IscnIdPrefix value) {
+        if (prefixBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            prefix_ != null &&
+            prefix_ != com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance()) {
+            getPrefixBuilder().mergeFrom(value);
+          } else {
+            prefix_ = value;
+          }
+        } else {
+          prefixBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPrefix() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        prefix_ = null;
+        if (prefixBuilder_ != null) {
+          prefixBuilder_.dispose();
+          prefixBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder getPrefixBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPrefixFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      public com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder getPrefixOrBuilder() {
+        if (prefixBuilder_ != null) {
+          return prefixBuilder_.getMessageOrBuilder();
+        } else {
+          return prefix_ == null ?
+              com.likechain.iscn.IscnidProto.IscnIdPrefix.getDefaultInstance() : prefix_;
+        }
+      }
+      /**
+       * <code>.likechain.iscn.IscnIdPrefix prefix = 1 [json_name = "prefix", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.likechain.iscn.IscnidProto.IscnIdPrefix, com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder, com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder> 
+          getPrefixFieldBuilder() {
+        if (prefixBuilder_ == null) {
+          prefixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.likechain.iscn.IscnidProto.IscnIdPrefix, com.likechain.iscn.IscnidProto.IscnIdPrefix.Builder, com.likechain.iscn.IscnidProto.IscnIdPrefixOrBuilder>(
+                  getPrefix(),
+                  getParentForChildren(),
+                  isClean());
+          prefix_ = null;
+        }
+        return prefixBuilder_;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:likechain.iscn.IscnId)
+    }
+
+    // @@protoc_insertion_point(class_scope:likechain.iscn.IscnId)
+    private static final com.likechain.iscn.IscnidProto.IscnId DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.likechain.iscn.IscnidProto.IscnId();
+    }
+
+    public static com.likechain.iscn.IscnidProto.IscnId getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IscnId>
+        PARSER = new com.google.protobuf.AbstractParser<IscnId>() {
+      @java.lang.Override
+      public IscnId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IscnId> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IscnId> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.likechain.iscn.IscnidProto.IscnId getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_IscnIdPrefix_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_IscnIdPrefix_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_likechain_iscn_IscnId_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_likechain_iscn_IscnId_fieldAccessorTable;
 
@@ -39,12 +1412,12 @@ public final class IscnidProto {
       "\022\035\n\ncontent_id\030\002 \001(\tR\tcontentId:\014\230\240\037\000\350\240\037" +
       "\001\200\334 \000\"l\n\006IscnId\022:\n\006prefix\030\001 \001(\0132\034.likech" +
       "ain.iscn.IscnIdPrefixB\004\310\336\037\000R\006prefix\022\030\n\007v" +
-      "ersion\030\002 \001(\004R\007version:\014\230\240\037\000\350\240\037\001\200\334 \000B\256\001\n\022" +
-      "com.likechain.iscnB\013IscnidProtoP\001Z2githu" +
-      "b.com/likecoin/likecoin-chain/v4/x/iscn/" +
-      "types\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain" +
-      "\\Iscn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Lik" +
-      "echain::Iscnb\006proto3"
+      "ersion\030\002 \001(\004R\007version:\014\230\240\037\000\350\240\037\001\200\334 \000B\254\001\n\022" +
+      "com.likechain.iscnB\013IscnidProtoZ2github." +
+      "com/likecoin/likecoin-chain/v4/x/iscn/ty" +
+      "pes\242\002\003LIX\252\002\016Likechain.Iscn\312\002\016Likechain\\I" +
+      "scn\342\002\032Likechain\\Iscn\\GPBMetadata\352\002\017Likec" +
+      "hain::Iscnb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

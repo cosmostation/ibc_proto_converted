@@ -33,14 +33,14 @@ public final class ServiceProto {
       "mantle.modules.metas.transactions.reveal" +
       ".Message\032B.assetmantle.modules.metas.tra" +
       "nsactions.reveal.TransactionResponse\"\034\202\323" +
-      "\344\223\002\026\"\024/mantle/metas/revealB\233\002\n1com.asset" +
+      "\344\223\002\026\"\024/mantle/metas/revealB\231\002\n1com.asset" +
       "mantle.modules.metas.transactions.reveal" +
-      "B\014ServiceProtoP\001\242\002\005AMMTR\252\002-Assetmantle.M" +
-      "odules.Metas.Transactions.Reveal\312\002-Asset" +
-      "mantle\\Modules\\Metas\\Transactions\\Reveal" +
-      "\342\0029Assetmantle\\Modules\\Metas\\Transaction" +
-      "s\\Reveal\\GPBMetadata\352\0021Assetmantle::Modu" +
-      "les::Metas::Transactions::Revealb\006proto3"
+      "B\014ServiceProto\242\002\005AMMTR\252\002-Assetmantle.Mod" +
+      "ules.Metas.Transactions.Reveal\312\002-Assetma" +
+      "ntle\\Modules\\Metas\\Transactions\\Reveal\342\002" +
+      "9Assetmantle\\Modules\\Metas\\Transactions\\" +
+      "Reveal\\GPBMetadata\352\0021Assetmantle::Module" +
+      "s::Metas::Transactions::Revealb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

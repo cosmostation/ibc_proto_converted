@@ -14,44 +14,4588 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryHTLCRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryHTLCRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryHTLCRequest is the request type for the Query/HTLC RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryHTLCRequest}
+   */
+  public static final class QueryHTLCRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryHTLCRequest)
+      QueryHTLCRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHTLCRequest.newBuilder() to construct.
+    private QueryHTLCRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHTLCRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHTLCRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryHTLCRequest.class, com.irismod.htlc.QueryProto.QueryHTLCRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryHTLCRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryHTLCRequest other = (com.irismod.htlc.QueryProto.QueryHTLCRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryHTLCRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryHTLCRequest is the request type for the Query/HTLC RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryHTLCRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryHTLCRequest)
+        com.irismod.htlc.QueryProto.QueryHTLCRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryHTLCRequest.class, com.irismod.htlc.QueryProto.QueryHTLCRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryHTLCRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryHTLCRequest getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryHTLCRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryHTLCRequest build() {
+        com.irismod.htlc.QueryProto.QueryHTLCRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryHTLCRequest buildPartial() {
+        com.irismod.htlc.QueryProto.QueryHTLCRequest result = new com.irismod.htlc.QueryProto.QueryHTLCRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.QueryProto.QueryHTLCRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryHTLCRequest) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryHTLCRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryHTLCRequest other) {
+        if (other == com.irismod.htlc.QueryProto.QueryHTLCRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryHTLCRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryHTLCRequest)
+    private static final com.irismod.htlc.QueryProto.QueryHTLCRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryHTLCRequest();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHTLCRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHTLCRequest>() {
+      @java.lang.Override
+      public QueryHTLCRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHTLCRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHTLCRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryHTLCRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryHTLCResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryHTLCResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+     * @return Whether the htlc field is set.
+     */
+    boolean hasHtlc();
+    /**
+     * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+     * @return The htlc.
+     */
+    com.irismod.htlc.HtlcProto.HTLC getHtlc();
+    /**
+     * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+     */
+    com.irismod.htlc.HtlcProto.HTLCOrBuilder getHtlcOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBalanceResponse is the response type for the Query/HTLC RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryHTLCResponse}
+   */
+  public static final class QueryHTLCResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryHTLCResponse)
+      QueryHTLCResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryHTLCResponse.newBuilder() to construct.
+    private QueryHTLCResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryHTLCResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryHTLCResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryHTLCResponse.class, com.irismod.htlc.QueryProto.QueryHTLCResponse.Builder.class);
+    }
+
+    public static final int HTLC_FIELD_NUMBER = 1;
+    private com.irismod.htlc.HtlcProto.HTLC htlc_;
+    /**
+     * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+     * @return Whether the htlc field is set.
+     */
+    @java.lang.Override
+    public boolean hasHtlc() {
+      return htlc_ != null;
+    }
+    /**
+     * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+     * @return The htlc.
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.HTLC getHtlc() {
+      return htlc_ == null ? com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance() : htlc_;
+    }
+    /**
+     * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.HTLCOrBuilder getHtlcOrBuilder() {
+      return htlc_ == null ? com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance() : htlc_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (htlc_ != null) {
+        output.writeMessage(1, getHtlc());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (htlc_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHtlc());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryHTLCResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryHTLCResponse other = (com.irismod.htlc.QueryProto.QueryHTLCResponse) obj;
+
+      if (hasHtlc() != other.hasHtlc()) return false;
+      if (hasHtlc()) {
+        if (!getHtlc()
+            .equals(other.getHtlc())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHtlc()) {
+        hash = (37 * hash) + HTLC_FIELD_NUMBER;
+        hash = (53 * hash) + getHtlc().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryHTLCResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBalanceResponse is the response type for the Query/HTLC RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryHTLCResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryHTLCResponse)
+        com.irismod.htlc.QueryProto.QueryHTLCResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryHTLCResponse.class, com.irismod.htlc.QueryProto.QueryHTLCResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryHTLCResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        htlc_ = null;
+        if (htlcBuilder_ != null) {
+          htlcBuilder_.dispose();
+          htlcBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryHTLCResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryHTLCResponse getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryHTLCResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryHTLCResponse build() {
+        com.irismod.htlc.QueryProto.QueryHTLCResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryHTLCResponse buildPartial() {
+        com.irismod.htlc.QueryProto.QueryHTLCResponse result = new com.irismod.htlc.QueryProto.QueryHTLCResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.QueryProto.QueryHTLCResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.htlc_ = htlcBuilder_ == null
+              ? htlc_
+              : htlcBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryHTLCResponse) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryHTLCResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryHTLCResponse other) {
+        if (other == com.irismod.htlc.QueryProto.QueryHTLCResponse.getDefaultInstance()) return this;
+        if (other.hasHtlc()) {
+          mergeHtlc(other.getHtlc());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getHtlcFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.htlc.HtlcProto.HTLC htlc_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.HTLC, com.irismod.htlc.HtlcProto.HTLC.Builder, com.irismod.htlc.HtlcProto.HTLCOrBuilder> htlcBuilder_;
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       * @return Whether the htlc field is set.
+       */
+      public boolean hasHtlc() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       * @return The htlc.
+       */
+      public com.irismod.htlc.HtlcProto.HTLC getHtlc() {
+        if (htlcBuilder_ == null) {
+          return htlc_ == null ? com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance() : htlc_;
+        } else {
+          return htlcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      public Builder setHtlc(com.irismod.htlc.HtlcProto.HTLC value) {
+        if (htlcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          htlc_ = value;
+        } else {
+          htlcBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      public Builder setHtlc(
+          com.irismod.htlc.HtlcProto.HTLC.Builder builderForValue) {
+        if (htlcBuilder_ == null) {
+          htlc_ = builderForValue.build();
+        } else {
+          htlcBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      public Builder mergeHtlc(com.irismod.htlc.HtlcProto.HTLC value) {
+        if (htlcBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            htlc_ != null &&
+            htlc_ != com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance()) {
+            getHtlcBuilder().mergeFrom(value);
+          } else {
+            htlc_ = value;
+          }
+        } else {
+          htlcBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      public Builder clearHtlc() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        htlc_ = null;
+        if (htlcBuilder_ != null) {
+          htlcBuilder_.dispose();
+          htlcBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      public com.irismod.htlc.HtlcProto.HTLC.Builder getHtlcBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHtlcFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      public com.irismod.htlc.HtlcProto.HTLCOrBuilder getHtlcOrBuilder() {
+        if (htlcBuilder_ != null) {
+          return htlcBuilder_.getMessageOrBuilder();
+        } else {
+          return htlc_ == null ?
+              com.irismod.htlc.HtlcProto.HTLC.getDefaultInstance() : htlc_;
+        }
+      }
+      /**
+       * <code>.irismod.htlc.HTLC htlc = 1 [json_name = "htlc"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.HTLC, com.irismod.htlc.HtlcProto.HTLC.Builder, com.irismod.htlc.HtlcProto.HTLCOrBuilder> 
+          getHtlcFieldBuilder() {
+        if (htlcBuilder_ == null) {
+          htlcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.htlc.HtlcProto.HTLC, com.irismod.htlc.HtlcProto.HTLC.Builder, com.irismod.htlc.HtlcProto.HTLCOrBuilder>(
+                  getHtlc(),
+                  getParentForChildren(),
+                  isClean());
+          htlc_ = null;
+        }
+        return htlcBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryHTLCResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryHTLCResponse)
+    private static final com.irismod.htlc.QueryProto.QueryHTLCResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryHTLCResponse();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryHTLCResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryHTLCResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryHTLCResponse>() {
+      @java.lang.Override
+      public QueryHTLCResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryHTLCResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryHTLCResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryHTLCResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAssetSupplyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryAssetSupplyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * <pre>
+   * QueryAssetSupplyRequest is request type for the Query/AssetSupply RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryAssetSupplyRequest}
+   */
+  public static final class QueryAssetSupplyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryAssetSupplyRequest)
+      QueryAssetSupplyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAssetSupplyRequest.newBuilder() to construct.
+    private QueryAssetSupplyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAssetSupplyRequest() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAssetSupplyRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.class, com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryAssetSupplyRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryAssetSupplyRequest other = (com.irismod.htlc.QueryProto.QueryAssetSupplyRequest) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryAssetSupplyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAssetSupplyRequest is request type for the Query/AssetSupply RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryAssetSupplyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryAssetSupplyRequest)
+        com.irismod.htlc.QueryProto.QueryAssetSupplyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.class, com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSupplyRequest getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSupplyRequest build() {
+        com.irismod.htlc.QueryProto.QueryAssetSupplyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSupplyRequest buildPartial() {
+        com.irismod.htlc.QueryProto.QueryAssetSupplyRequest result = new com.irismod.htlc.QueryProto.QueryAssetSupplyRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.QueryProto.QueryAssetSupplyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryAssetSupplyRequest) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryAssetSupplyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryAssetSupplyRequest other) {
+        if (other == com.irismod.htlc.QueryProto.QueryAssetSupplyRequest.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryAssetSupplyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryAssetSupplyRequest)
+    private static final com.irismod.htlc.QueryProto.QueryAssetSupplyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryAssetSupplyRequest();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAssetSupplyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAssetSupplyRequest>() {
+      @java.lang.Override
+      public QueryAssetSupplyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAssetSupplyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAssetSupplyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryAssetSupplyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAssetSupplyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryAssetSupplyResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+     * @return Whether the assetSupply field is set.
+     */
+    boolean hasAssetSupply();
+    /**
+     * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+     * @return The assetSupply.
+     */
+    com.irismod.htlc.HtlcProto.AssetSupply getAssetSupply();
+    /**
+     * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+     */
+    com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder getAssetSupplyOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryAssetSupplyResponse is response type for the Query/AssetSupply RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryAssetSupplyResponse}
+   */
+  public static final class QueryAssetSupplyResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryAssetSupplyResponse)
+      QueryAssetSupplyResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAssetSupplyResponse.newBuilder() to construct.
+    private QueryAssetSupplyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAssetSupplyResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAssetSupplyResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.class, com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.Builder.class);
+    }
+
+    public static final int ASSET_SUPPLY_FIELD_NUMBER = 1;
+    private com.irismod.htlc.HtlcProto.AssetSupply assetSupply_;
+    /**
+     * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+     * @return Whether the assetSupply field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssetSupply() {
+      return assetSupply_ != null;
+    }
+    /**
+     * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+     * @return The assetSupply.
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetSupply getAssetSupply() {
+      return assetSupply_ == null ? com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance() : assetSupply_;
+    }
+    /**
+     * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder getAssetSupplyOrBuilder() {
+      return assetSupply_ == null ? com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance() : assetSupply_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assetSupply_ != null) {
+        output.writeMessage(1, getAssetSupply());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assetSupply_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAssetSupply());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryAssetSupplyResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryAssetSupplyResponse other = (com.irismod.htlc.QueryProto.QueryAssetSupplyResponse) obj;
+
+      if (hasAssetSupply() != other.hasAssetSupply()) return false;
+      if (hasAssetSupply()) {
+        if (!getAssetSupply()
+            .equals(other.getAssetSupply())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAssetSupply()) {
+        hash = (37 * hash) + ASSET_SUPPLY_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetSupply().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryAssetSupplyResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAssetSupplyResponse is response type for the Query/AssetSupply RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryAssetSupplyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryAssetSupplyResponse)
+        com.irismod.htlc.QueryProto.QueryAssetSupplyResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.class, com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assetSupply_ = null;
+        if (assetSupplyBuilder_ != null) {
+          assetSupplyBuilder_.dispose();
+          assetSupplyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSupplyResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSupplyResponse getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSupplyResponse build() {
+        com.irismod.htlc.QueryProto.QueryAssetSupplyResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSupplyResponse buildPartial() {
+        com.irismod.htlc.QueryProto.QueryAssetSupplyResponse result = new com.irismod.htlc.QueryProto.QueryAssetSupplyResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.QueryProto.QueryAssetSupplyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assetSupply_ = assetSupplyBuilder_ == null
+              ? assetSupply_
+              : assetSupplyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryAssetSupplyResponse) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryAssetSupplyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryAssetSupplyResponse other) {
+        if (other == com.irismod.htlc.QueryProto.QueryAssetSupplyResponse.getDefaultInstance()) return this;
+        if (other.hasAssetSupply()) {
+          mergeAssetSupply(other.getAssetSupply());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAssetSupplyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.htlc.HtlcProto.AssetSupply assetSupply_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.AssetSupply, com.irismod.htlc.HtlcProto.AssetSupply.Builder, com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> assetSupplyBuilder_;
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       * @return Whether the assetSupply field is set.
+       */
+      public boolean hasAssetSupply() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       * @return The assetSupply.
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupply getAssetSupply() {
+        if (assetSupplyBuilder_ == null) {
+          return assetSupply_ == null ? com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance() : assetSupply_;
+        } else {
+          return assetSupplyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      public Builder setAssetSupply(com.irismod.htlc.HtlcProto.AssetSupply value) {
+        if (assetSupplyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          assetSupply_ = value;
+        } else {
+          assetSupplyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      public Builder setAssetSupply(
+          com.irismod.htlc.HtlcProto.AssetSupply.Builder builderForValue) {
+        if (assetSupplyBuilder_ == null) {
+          assetSupply_ = builderForValue.build();
+        } else {
+          assetSupplyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      public Builder mergeAssetSupply(com.irismod.htlc.HtlcProto.AssetSupply value) {
+        if (assetSupplyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            assetSupply_ != null &&
+            assetSupply_ != com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance()) {
+            getAssetSupplyBuilder().mergeFrom(value);
+          } else {
+            assetSupply_ = value;
+          }
+        } else {
+          assetSupplyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      public Builder clearAssetSupply() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assetSupply_ = null;
+        if (assetSupplyBuilder_ != null) {
+          assetSupplyBuilder_.dispose();
+          assetSupplyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupply.Builder getAssetSupplyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAssetSupplyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder getAssetSupplyOrBuilder() {
+        if (assetSupplyBuilder_ != null) {
+          return assetSupplyBuilder_.getMessageOrBuilder();
+        } else {
+          return assetSupply_ == null ?
+              com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance() : assetSupply_;
+        }
+      }
+      /**
+       * <code>.irismod.htlc.AssetSupply asset_supply = 1 [json_name = "assetSupply", (.gogoproto.moretags) = "yaml:&#92;"asset_supply&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.AssetSupply, com.irismod.htlc.HtlcProto.AssetSupply.Builder, com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> 
+          getAssetSupplyFieldBuilder() {
+        if (assetSupplyBuilder_ == null) {
+          assetSupplyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.htlc.HtlcProto.AssetSupply, com.irismod.htlc.HtlcProto.AssetSupply.Builder, com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder>(
+                  getAssetSupply(),
+                  getParentForChildren(),
+                  isClean());
+          assetSupply_ = null;
+        }
+        return assetSupplyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryAssetSupplyResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryAssetSupplyResponse)
+    private static final com.irismod.htlc.QueryProto.QueryAssetSupplyResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryAssetSupplyResponse();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSupplyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAssetSupplyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAssetSupplyResponse>() {
+      @java.lang.Override
+      public QueryAssetSupplyResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAssetSupplyResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAssetSupplyResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryAssetSupplyResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAssetSuppliesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryAssetSuppliesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryAssetSuppliesRequest is request type for the Query/AssetSupplies RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryAssetSuppliesRequest}
+   */
+  public static final class QueryAssetSuppliesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryAssetSuppliesRequest)
+      QueryAssetSuppliesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAssetSuppliesRequest.newBuilder() to construct.
+    private QueryAssetSuppliesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAssetSuppliesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAssetSuppliesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.class, com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest other = (com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAssetSuppliesRequest is request type for the Query/AssetSupplies RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryAssetSuppliesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryAssetSuppliesRequest)
+        com.irismod.htlc.QueryProto.QueryAssetSuppliesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.class, com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest build() {
+        com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest buildPartial() {
+        com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest result = new com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest other) {
+        if (other == com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryAssetSuppliesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryAssetSuppliesRequest)
+    private static final com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAssetSuppliesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAssetSuppliesRequest>() {
+      @java.lang.Override
+      public QueryAssetSuppliesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAssetSuppliesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAssetSuppliesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryAssetSuppliesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAssetSuppliesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryAssetSuppliesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    java.util.List<com.irismod.htlc.HtlcProto.AssetSupply> 
+        getAssetSuppliesList();
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    com.irismod.htlc.HtlcProto.AssetSupply getAssetSupplies(int index);
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    int getAssetSuppliesCount();
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    java.util.List<? extends com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> 
+        getAssetSuppliesOrBuilderList();
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder getAssetSuppliesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryAssetSuppliesResponse is response type for the Query/AssetSupplies RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryAssetSuppliesResponse}
+   */
+  public static final class QueryAssetSuppliesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryAssetSuppliesResponse)
+      QueryAssetSuppliesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAssetSuppliesResponse.newBuilder() to construct.
+    private QueryAssetSuppliesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAssetSuppliesResponse() {
+      assetSupplies_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAssetSuppliesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.class, com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.Builder.class);
+    }
+
+    public static final int ASSET_SUPPLIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.irismod.htlc.HtlcProto.AssetSupply> assetSupplies_;
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.irismod.htlc.HtlcProto.AssetSupply> getAssetSuppliesList() {
+      return assetSupplies_;
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> 
+        getAssetSuppliesOrBuilderList() {
+      return assetSupplies_;
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getAssetSuppliesCount() {
+      return assetSupplies_.size();
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetSupply getAssetSupplies(int index) {
+      return assetSupplies_.get(index);
+    }
+    /**
+     * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder getAssetSuppliesOrBuilder(
+        int index) {
+      return assetSupplies_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < assetSupplies_.size(); i++) {
+        output.writeMessage(1, assetSupplies_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < assetSupplies_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, assetSupplies_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse other = (com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse) obj;
+
+      if (!getAssetSuppliesList()
+          .equals(other.getAssetSuppliesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAssetSuppliesCount() > 0) {
+        hash = (37 * hash) + ASSET_SUPPLIES_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetSuppliesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAssetSuppliesResponse is response type for the Query/AssetSupplies RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryAssetSuppliesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryAssetSuppliesResponse)
+        com.irismod.htlc.QueryProto.QueryAssetSuppliesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.class, com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (assetSuppliesBuilder_ == null) {
+          assetSupplies_ = java.util.Collections.emptyList();
+        } else {
+          assetSupplies_ = null;
+          assetSuppliesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryAssetSuppliesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse build() {
+        com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse buildPartial() {
+        com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse result = new com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse result) {
+        if (assetSuppliesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            assetSupplies_ = java.util.Collections.unmodifiableList(assetSupplies_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.assetSupplies_ = assetSupplies_;
+        } else {
+          result.assetSupplies_ = assetSuppliesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse other) {
+        if (other == com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse.getDefaultInstance()) return this;
+        if (assetSuppliesBuilder_ == null) {
+          if (!other.assetSupplies_.isEmpty()) {
+            if (assetSupplies_.isEmpty()) {
+              assetSupplies_ = other.assetSupplies_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAssetSuppliesIsMutable();
+              assetSupplies_.addAll(other.assetSupplies_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assetSupplies_.isEmpty()) {
+            if (assetSuppliesBuilder_.isEmpty()) {
+              assetSuppliesBuilder_.dispose();
+              assetSuppliesBuilder_ = null;
+              assetSupplies_ = other.assetSupplies_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              assetSuppliesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetSuppliesFieldBuilder() : null;
+            } else {
+              assetSuppliesBuilder_.addAllMessages(other.assetSupplies_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.irismod.htlc.HtlcProto.AssetSupply m =
+                    input.readMessage(
+                        com.irismod.htlc.HtlcProto.AssetSupply.parser(),
+                        extensionRegistry);
+                if (assetSuppliesBuilder_ == null) {
+                  ensureAssetSuppliesIsMutable();
+                  assetSupplies_.add(m);
+                } else {
+                  assetSuppliesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.irismod.htlc.HtlcProto.AssetSupply> assetSupplies_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetSuppliesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          assetSupplies_ = new java.util.ArrayList<com.irismod.htlc.HtlcProto.AssetSupply>(assetSupplies_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.AssetSupply, com.irismod.htlc.HtlcProto.AssetSupply.Builder, com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> assetSuppliesBuilder_;
+
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public java.util.List<com.irismod.htlc.HtlcProto.AssetSupply> getAssetSuppliesList() {
+        if (assetSuppliesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assetSupplies_);
+        } else {
+          return assetSuppliesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public int getAssetSuppliesCount() {
+        if (assetSuppliesBuilder_ == null) {
+          return assetSupplies_.size();
+        } else {
+          return assetSuppliesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupply getAssetSupplies(int index) {
+        if (assetSuppliesBuilder_ == null) {
+          return assetSupplies_.get(index);
+        } else {
+          return assetSuppliesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder setAssetSupplies(
+          int index, com.irismod.htlc.HtlcProto.AssetSupply value) {
+        if (assetSuppliesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.set(index, value);
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder setAssetSupplies(
+          int index, com.irismod.htlc.HtlcProto.AssetSupply.Builder builderForValue) {
+        if (assetSuppliesBuilder_ == null) {
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder addAssetSupplies(com.irismod.htlc.HtlcProto.AssetSupply value) {
+        if (assetSuppliesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.add(value);
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder addAssetSupplies(
+          int index, com.irismod.htlc.HtlcProto.AssetSupply value) {
+        if (assetSuppliesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.add(index, value);
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder addAssetSupplies(
+          com.irismod.htlc.HtlcProto.AssetSupply.Builder builderForValue) {
+        if (assetSuppliesBuilder_ == null) {
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder addAssetSupplies(
+          int index, com.irismod.htlc.HtlcProto.AssetSupply.Builder builderForValue) {
+        if (assetSuppliesBuilder_ == null) {
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder addAllAssetSupplies(
+          java.lang.Iterable<? extends com.irismod.htlc.HtlcProto.AssetSupply> values) {
+        if (assetSuppliesBuilder_ == null) {
+          ensureAssetSuppliesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assetSupplies_);
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder clearAssetSupplies() {
+        if (assetSuppliesBuilder_ == null) {
+          assetSupplies_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public Builder removeAssetSupplies(int index) {
+        if (assetSuppliesBuilder_ == null) {
+          ensureAssetSuppliesIsMutable();
+          assetSupplies_.remove(index);
+          onChanged();
+        } else {
+          assetSuppliesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupply.Builder getAssetSuppliesBuilder(
+          int index) {
+        return getAssetSuppliesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder getAssetSuppliesOrBuilder(
+          int index) {
+        if (assetSuppliesBuilder_ == null) {
+          return assetSupplies_.get(index);  } else {
+          return assetSuppliesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public java.util.List<? extends com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> 
+           getAssetSuppliesOrBuilderList() {
+        if (assetSuppliesBuilder_ != null) {
+          return assetSuppliesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assetSupplies_);
+        }
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupply.Builder addAssetSuppliesBuilder() {
+        return getAssetSuppliesFieldBuilder().addBuilder(
+            com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public com.irismod.htlc.HtlcProto.AssetSupply.Builder addAssetSuppliesBuilder(
+          int index) {
+        return getAssetSuppliesFieldBuilder().addBuilder(
+            index, com.irismod.htlc.HtlcProto.AssetSupply.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .irismod.htlc.AssetSupply asset_supplies = 1 [json_name = "assetSupplies", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"asset_supplies&#92;""];</code>
+       */
+      public java.util.List<com.irismod.htlc.HtlcProto.AssetSupply.Builder> 
+           getAssetSuppliesBuilderList() {
+        return getAssetSuppliesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.AssetSupply, com.irismod.htlc.HtlcProto.AssetSupply.Builder, com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder> 
+          getAssetSuppliesFieldBuilder() {
+        if (assetSuppliesBuilder_ == null) {
+          assetSuppliesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.irismod.htlc.HtlcProto.AssetSupply, com.irismod.htlc.HtlcProto.AssetSupply.Builder, com.irismod.htlc.HtlcProto.AssetSupplyOrBuilder>(
+                  assetSupplies_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assetSupplies_ = null;
+        }
+        return assetSuppliesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryAssetSuppliesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryAssetSuppliesResponse)
+    private static final com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAssetSuppliesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAssetSuppliesResponse>() {
+      @java.lang.Override
+      public QueryAssetSuppliesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAssetSuppliesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAssetSuppliesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryAssetSuppliesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Parameters RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryParamsRequest.class, com.irismod.htlc.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryParamsRequest other = (com.irismod.htlc.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Parameters RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryParamsRequest)
+        com.irismod.htlc.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryParamsRequest.class, com.irismod.htlc.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryParamsRequest build() {
+        com.irismod.htlc.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryParamsRequest buildPartial() {
+        com.irismod.htlc.QueryProto.QueryParamsRequest result = new com.irismod.htlc.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryParamsRequest other) {
+        if (other == com.irismod.htlc.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryParamsRequest)
+    private static final com.irismod.htlc.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.htlc.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.irismod.htlc.HtlcProto.Params getParams();
+    /**
+     * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.irismod.htlc.HtlcProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Parameters RPC method
+   * </pre>
+   *
+   * Protobuf type {@code irismod.htlc.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.htlc.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.htlc.QueryProto.QueryParamsResponse.class, com.irismod.htlc.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.irismod.htlc.HtlcProto.Params params_;
+    /**
+     * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.Params getParams() {
+      return params_ == null ? com.irismod.htlc.HtlcProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.irismod.htlc.HtlcProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.irismod.htlc.HtlcProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.htlc.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.htlc.QueryProto.QueryParamsResponse other = (com.irismod.htlc.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.htlc.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Parameters RPC method
+     * </pre>
+     *
+     * Protobuf type {@code irismod.htlc.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.htlc.QueryParamsResponse)
+        com.irismod.htlc.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.htlc.QueryProto.QueryParamsResponse.class, com.irismod.htlc.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.htlc.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.htlc.QueryProto.internal_static_irismod_htlc_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.irismod.htlc.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryParamsResponse build() {
+        com.irismod.htlc.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.htlc.QueryProto.QueryParamsResponse buildPartial() {
+        com.irismod.htlc.QueryProto.QueryParamsResponse result = new com.irismod.htlc.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.htlc.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.htlc.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.irismod.htlc.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.htlc.QueryProto.QueryParamsResponse other) {
+        if (other == com.irismod.htlc.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.irismod.htlc.HtlcProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.Params, com.irismod.htlc.HtlcProto.Params.Builder, com.irismod.htlc.HtlcProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.irismod.htlc.HtlcProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.irismod.htlc.HtlcProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.irismod.htlc.HtlcProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.irismod.htlc.HtlcProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.irismod.htlc.HtlcProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.irismod.htlc.HtlcProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.htlc.HtlcProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.irismod.htlc.HtlcProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.irismod.htlc.HtlcProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.irismod.htlc.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.irismod.htlc.HtlcProto.Params, com.irismod.htlc.HtlcProto.Params.Builder, com.irismod.htlc.HtlcProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.irismod.htlc.HtlcProto.Params, com.irismod.htlc.HtlcProto.Params.Builder, com.irismod.htlc.HtlcProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.htlc.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.htlc.QueryParamsResponse)
+    private static final com.irismod.htlc.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.htlc.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.irismod.htlc.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.htlc.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryHTLCRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryHTLCRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryHTLCResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryHTLCResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryAssetSupplyRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryAssetSupplyRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryAssetSupplyResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryAssetSupplyResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryAssetSuppliesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryAssetSuppliesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryAssetSuppliesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryAssetSuppliesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_htlc_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_htlc_QueryParamsResponse_fieldAccessorTable;
 
@@ -91,11 +4635,11 @@ public final class QueryProto {
       "od/htlc/supplies\022k\n\006Params\022 .irismod.htl" +
       "c.QueryParamsRequest\032!.irismod.htlc.Quer" +
       "yParamsResponse\"\034\202\323\344\223\002\026\022\024/irismod/htlc/p" +
-      "aramsB\236\001\n\020com.irismod.htlcB\nQueryProtoP\001" +
-      "Z-github.com/irisnet/irismod/modules/htl" +
-      "c/types\242\002\003IHX\252\002\014Irismod.Htlc\312\002\014Irismod\\H" +
-      "tlc\342\002\030Irismod\\Htlc\\GPBMetadata\352\002\rIrismod" +
-      "::Htlcb\006proto3"
+      "aramsB\234\001\n\020com.irismod.htlcB\nQueryProtoZ-" +
+      "github.com/irisnet/irismod/modules/htlc/" +
+      "types\242\002\003IHX\252\002\014Irismod.Htlc\312\002\014Irismod\\Htl" +
+      "c\342\002\030Irismod\\Htlc\\GPBMetadata\352\002\rIrismod::" +
+      "Htlcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

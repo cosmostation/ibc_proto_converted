@@ -25,14 +25,14 @@ public final class TxProto {
     java.lang.String[] descriptorData = {
       "\n\037quasar/qoracle/osmosis/tx.proto\022%quasa" +
       "rlabs.quasarnode.qoracle.osmosis2\005\n\003MsgB" +
-      "\246\002\n)com.quasarlabs.quasarnode.qoracle.os" +
-      "mosisB\007TxProtoP\001Z8github.com/quasarlabs/" +
-      "quasarnode/x/qoracle/osmosis/types\242\002\004QQQ" +
-      "O\252\002%Quasarlabs.Quasarnode.Qoracle.Osmosi" +
-      "s\312\002%Quasarlabs\\Quasarnode\\Qoracle\\Osmosi" +
-      "s\342\0021Quasarlabs\\Quasarnode\\Qoracle\\Osmosi" +
-      "s\\GPBMetadata\352\002(Quasarlabs::Quasarnode::" +
-      "Qoracle::Osmosisb\006proto3"
+      "\244\002\n)com.quasarlabs.quasarnode.qoracle.os" +
+      "mosisB\007TxProtoZ8github.com/quasarlabs/qu" +
+      "asarnode/x/qoracle/osmosis/types\242\002\004QQQO\252" +
+      "\002%Quasarlabs.Quasarnode.Qoracle.Osmosis\312" +
+      "\002%Quasarlabs\\Quasarnode\\Qoracle\\Osmosis\342" +
+      "\0021Quasarlabs\\Quasarnode\\Qoracle\\Osmosis\\" +
+      "GPBMetadata\352\002(Quasarlabs::Quasarnode::Qo" +
+      "racle::Osmosisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

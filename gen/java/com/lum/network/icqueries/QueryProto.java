@@ -14,24 +14,2382 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryPendingQueriesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.QueryPendingQueriesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code lum.network.icqueries.QueryPendingQueriesRequest}
+   */
+  public static final class QueryPendingQueriesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.QueryPendingQueriesRequest)
+      QueryPendingQueriesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPendingQueriesRequest.newBuilder() to construct.
+    private QueryPendingQueriesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPendingQueriesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPendingQueriesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.class, com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest other = (com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.icqueries.QueryPendingQueriesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.QueryPendingQueriesRequest)
+        com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.class, com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest getDefaultInstanceForType() {
+        return com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest build() {
+        com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest buildPartial() {
+        com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest result = new com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest) {
+          return mergeFrom((com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest other) {
+        if (other == com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.QueryPendingQueriesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.QueryPendingQueriesRequest)
+    private static final com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest();
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPendingQueriesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPendingQueriesRequest>() {
+      @java.lang.Override
+      public QueryPendingQueriesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPendingQueriesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPendingQueriesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.QueryProto.QueryPendingQueriesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPendingQueriesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.QueryPendingQueriesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.lum.network.icqueries.GenesisProto.Query> 
+        getPendingQueriesList();
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.icqueries.GenesisProto.Query getPendingQueries(int index);
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    int getPendingQueriesCount();
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+        getPendingQueriesOrBuilderList();
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.icqueries.GenesisProto.QueryOrBuilder getPendingQueriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.icqueries.QueryPendingQueriesResponse}
+   */
+  public static final class QueryPendingQueriesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.QueryPendingQueriesResponse)
+      QueryPendingQueriesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPendingQueriesResponse.newBuilder() to construct.
+    private QueryPendingQueriesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPendingQueriesResponse() {
+      pendingQueries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPendingQueriesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.class, com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.Builder.class);
+    }
+
+    public static final int PENDING_QUERIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.icqueries.GenesisProto.Query> pendingQueries_;
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.icqueries.GenesisProto.Query> getPendingQueriesList() {
+      return pendingQueries_;
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+        getPendingQueriesOrBuilderList() {
+      return pendingQueries_;
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getPendingQueriesCount() {
+      return pendingQueries_.size();
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.Query getPendingQueries(int index) {
+      return pendingQueries_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.QueryOrBuilder getPendingQueriesOrBuilder(
+        int index) {
+      return pendingQueries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < pendingQueries_.size(); i++) {
+        output.writeMessage(1, pendingQueries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < pendingQueries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pendingQueries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse other = (com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse) obj;
+
+      if (!getPendingQueriesList()
+          .equals(other.getPendingQueriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPendingQueriesCount() > 0) {
+        hash = (37 * hash) + PENDING_QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + getPendingQueriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.icqueries.QueryPendingQueriesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.QueryPendingQueriesResponse)
+        com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.class, com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (pendingQueriesBuilder_ == null) {
+          pendingQueries_ = java.util.Collections.emptyList();
+        } else {
+          pendingQueries_ = null;
+          pendingQueriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryPendingQueriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse getDefaultInstanceForType() {
+        return com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse build() {
+        com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse buildPartial() {
+        com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse result = new com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse result) {
+        if (pendingQueriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            pendingQueries_ = java.util.Collections.unmodifiableList(pendingQueries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.pendingQueries_ = pendingQueries_;
+        } else {
+          result.pendingQueries_ = pendingQueriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse) {
+          return mergeFrom((com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse other) {
+        if (other == com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse.getDefaultInstance()) return this;
+        if (pendingQueriesBuilder_ == null) {
+          if (!other.pendingQueries_.isEmpty()) {
+            if (pendingQueries_.isEmpty()) {
+              pendingQueries_ = other.pendingQueries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePendingQueriesIsMutable();
+              pendingQueries_.addAll(other.pendingQueries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pendingQueries_.isEmpty()) {
+            if (pendingQueriesBuilder_.isEmpty()) {
+              pendingQueriesBuilder_.dispose();
+              pendingQueriesBuilder_ = null;
+              pendingQueries_ = other.pendingQueries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              pendingQueriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPendingQueriesFieldBuilder() : null;
+            } else {
+              pendingQueriesBuilder_.addAllMessages(other.pendingQueries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.icqueries.GenesisProto.Query m =
+                    input.readMessage(
+                        com.lum.network.icqueries.GenesisProto.Query.parser(),
+                        extensionRegistry);
+                if (pendingQueriesBuilder_ == null) {
+                  ensurePendingQueriesIsMutable();
+                  pendingQueries_.add(m);
+                } else {
+                  pendingQueriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.icqueries.GenesisProto.Query> pendingQueries_ =
+        java.util.Collections.emptyList();
+      private void ensurePendingQueriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pendingQueries_ = new java.util.ArrayList<com.lum.network.icqueries.GenesisProto.Query>(pendingQueries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder> pendingQueriesBuilder_;
+
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.icqueries.GenesisProto.Query> getPendingQueriesList() {
+        if (pendingQueriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pendingQueries_);
+        } else {
+          return pendingQueriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getPendingQueriesCount() {
+        if (pendingQueriesBuilder_ == null) {
+          return pendingQueries_.size();
+        } else {
+          return pendingQueriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query getPendingQueries(int index) {
+        if (pendingQueriesBuilder_ == null) {
+          return pendingQueries_.get(index);
+        } else {
+          return pendingQueriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPendingQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query value) {
+        if (pendingQueriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.set(index, value);
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPendingQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (pendingQueriesBuilder_ == null) {
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingQueries(com.lum.network.icqueries.GenesisProto.Query value) {
+        if (pendingQueriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.add(value);
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query value) {
+        if (pendingQueriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.add(index, value);
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingQueries(
+          com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (pendingQueriesBuilder_ == null) {
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addPendingQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (pendingQueriesBuilder_ == null) {
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllPendingQueries(
+          java.lang.Iterable<? extends com.lum.network.icqueries.GenesisProto.Query> values) {
+        if (pendingQueriesBuilder_ == null) {
+          ensurePendingQueriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, pendingQueries_);
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPendingQueries() {
+        if (pendingQueriesBuilder_ == null) {
+          pendingQueries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removePendingQueries(int index) {
+        if (pendingQueriesBuilder_ == null) {
+          ensurePendingQueriesIsMutable();
+          pendingQueries_.remove(index);
+          onChanged();
+        } else {
+          pendingQueriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder getPendingQueriesBuilder(
+          int index) {
+        return getPendingQueriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.QueryOrBuilder getPendingQueriesOrBuilder(
+          int index) {
+        if (pendingQueriesBuilder_ == null) {
+          return pendingQueries_.get(index);  } else {
+          return pendingQueriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+           getPendingQueriesOrBuilderList() {
+        if (pendingQueriesBuilder_ != null) {
+          return pendingQueriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pendingQueries_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder addPendingQueriesBuilder() {
+        return getPendingQueriesFieldBuilder().addBuilder(
+            com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder addPendingQueriesBuilder(
+          int index) {
+        return getPendingQueriesFieldBuilder().addBuilder(
+            index, com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query pending_queries = 1 [json_name = "pendingQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.icqueries.GenesisProto.Query.Builder> 
+           getPendingQueriesBuilderList() {
+        return getPendingQueriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+          getPendingQueriesFieldBuilder() {
+        if (pendingQueriesBuilder_ == null) {
+          pendingQueriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder>(
+                  pendingQueries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          pendingQueries_ = null;
+        }
+        return pendingQueriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.QueryPendingQueriesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.QueryPendingQueriesResponse)
+    private static final com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse();
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPendingQueriesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPendingQueriesResponse>() {
+      @java.lang.Override
+      public QueryPendingQueriesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPendingQueriesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPendingQueriesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.QueryProto.QueryPendingQueriesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryQueriesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.QueryQueriesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code lum.network.icqueries.QueryQueriesRequest}
+   */
+  public static final class QueryQueriesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.QueryQueriesRequest)
+      QueryQueriesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryQueriesRequest.newBuilder() to construct.
+    private QueryQueriesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryQueriesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryQueriesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.QueryProto.QueryQueriesRequest.class, com.lum.network.icqueries.QueryProto.QueryQueriesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.QueryProto.QueryQueriesRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.QueryProto.QueryQueriesRequest other = (com.lum.network.icqueries.QueryProto.QueryQueriesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.QueryProto.QueryQueriesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.icqueries.QueryQueriesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.QueryQueriesRequest)
+        com.lum.network.icqueries.QueryProto.QueryQueriesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.QueryProto.QueryQueriesRequest.class, com.lum.network.icqueries.QueryProto.QueryQueriesRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.QueryProto.QueryQueriesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryQueriesRequest getDefaultInstanceForType() {
+        return com.lum.network.icqueries.QueryProto.QueryQueriesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryQueriesRequest build() {
+        com.lum.network.icqueries.QueryProto.QueryQueriesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryQueriesRequest buildPartial() {
+        com.lum.network.icqueries.QueryProto.QueryQueriesRequest result = new com.lum.network.icqueries.QueryProto.QueryQueriesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.QueryProto.QueryQueriesRequest) {
+          return mergeFrom((com.lum.network.icqueries.QueryProto.QueryQueriesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.QueryProto.QueryQueriesRequest other) {
+        if (other == com.lum.network.icqueries.QueryProto.QueryQueriesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.QueryQueriesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.QueryQueriesRequest)
+    private static final com.lum.network.icqueries.QueryProto.QueryQueriesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.QueryProto.QueryQueriesRequest();
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryQueriesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryQueriesRequest>() {
+      @java.lang.Override
+      public QueryQueriesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryQueriesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryQueriesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.QueryProto.QueryQueriesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryQueriesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.icqueries.QueryQueriesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.lum.network.icqueries.GenesisProto.Query> 
+        getQueriesList();
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.icqueries.GenesisProto.Query getQueries(int index);
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    int getQueriesCount();
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+        getQueriesOrBuilderList();
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.icqueries.GenesisProto.QueryOrBuilder getQueriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.icqueries.QueryQueriesResponse}
+   */
+  public static final class QueryQueriesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.icqueries.QueryQueriesResponse)
+      QueryQueriesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryQueriesResponse.newBuilder() to construct.
+    private QueryQueriesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryQueriesResponse() {
+      queries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryQueriesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.icqueries.QueryProto.QueryQueriesResponse.class, com.lum.network.icqueries.QueryProto.QueryQueriesResponse.Builder.class);
+    }
+
+    public static final int QUERIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.icqueries.GenesisProto.Query> queries_;
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.icqueries.GenesisProto.Query> getQueriesList() {
+      return queries_;
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+        getQueriesOrBuilderList() {
+      return queries_;
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getQueriesCount() {
+      return queries_.size();
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.Query getQueries(int index) {
+      return queries_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.icqueries.GenesisProto.QueryOrBuilder getQueriesOrBuilder(
+        int index) {
+      return queries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < queries_.size(); i++) {
+        output.writeMessage(1, queries_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < queries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, queries_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.icqueries.QueryProto.QueryQueriesResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.icqueries.QueryProto.QueryQueriesResponse other = (com.lum.network.icqueries.QueryProto.QueryQueriesResponse) obj;
+
+      if (!getQueriesList()
+          .equals(other.getQueriesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getQueriesCount() > 0) {
+        hash = (37 * hash) + QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + getQueriesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.icqueries.QueryProto.QueryQueriesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.icqueries.QueryQueriesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.icqueries.QueryQueriesResponse)
+        com.lum.network.icqueries.QueryProto.QueryQueriesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.icqueries.QueryProto.QueryQueriesResponse.class, com.lum.network.icqueries.QueryProto.QueryQueriesResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.icqueries.QueryProto.QueryQueriesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (queriesBuilder_ == null) {
+          queries_ = java.util.Collections.emptyList();
+        } else {
+          queries_ = null;
+          queriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.icqueries.QueryProto.internal_static_lum_network_icqueries_QueryQueriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryQueriesResponse getDefaultInstanceForType() {
+        return com.lum.network.icqueries.QueryProto.QueryQueriesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryQueriesResponse build() {
+        com.lum.network.icqueries.QueryProto.QueryQueriesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.icqueries.QueryProto.QueryQueriesResponse buildPartial() {
+        com.lum.network.icqueries.QueryProto.QueryQueriesResponse result = new com.lum.network.icqueries.QueryProto.QueryQueriesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.icqueries.QueryProto.QueryQueriesResponse result) {
+        if (queriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            queries_ = java.util.Collections.unmodifiableList(queries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.queries_ = queries_;
+        } else {
+          result.queries_ = queriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.icqueries.QueryProto.QueryQueriesResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.icqueries.QueryProto.QueryQueriesResponse) {
+          return mergeFrom((com.lum.network.icqueries.QueryProto.QueryQueriesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.icqueries.QueryProto.QueryQueriesResponse other) {
+        if (other == com.lum.network.icqueries.QueryProto.QueryQueriesResponse.getDefaultInstance()) return this;
+        if (queriesBuilder_ == null) {
+          if (!other.queries_.isEmpty()) {
+            if (queries_.isEmpty()) {
+              queries_ = other.queries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureQueriesIsMutable();
+              queries_.addAll(other.queries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queries_.isEmpty()) {
+            if (queriesBuilder_.isEmpty()) {
+              queriesBuilder_.dispose();
+              queriesBuilder_ = null;
+              queries_ = other.queries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              queriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueriesFieldBuilder() : null;
+            } else {
+              queriesBuilder_.addAllMessages(other.queries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.icqueries.GenesisProto.Query m =
+                    input.readMessage(
+                        com.lum.network.icqueries.GenesisProto.Query.parser(),
+                        extensionRegistry);
+                if (queriesBuilder_ == null) {
+                  ensureQueriesIsMutable();
+                  queries_.add(m);
+                } else {
+                  queriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.icqueries.GenesisProto.Query> queries_ =
+        java.util.Collections.emptyList();
+      private void ensureQueriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          queries_ = new java.util.ArrayList<com.lum.network.icqueries.GenesisProto.Query>(queries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder> queriesBuilder_;
+
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.icqueries.GenesisProto.Query> getQueriesList() {
+        if (queriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queries_);
+        } else {
+          return queriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getQueriesCount() {
+        if (queriesBuilder_ == null) {
+          return queries_.size();
+        } else {
+          return queriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query getQueries(int index) {
+        if (queriesBuilder_ == null) {
+          return queries_.get(index);
+        } else {
+          return queriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.set(index, value);
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(com.lum.network.icqueries.GenesisProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.add(value);
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.add(index, value);
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          int index, com.lum.network.icqueries.GenesisProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllQueries(
+          java.lang.Iterable<? extends com.lum.network.icqueries.GenesisProto.Query> values) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queries_);
+          onChanged();
+        } else {
+          queriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQueries() {
+        if (queriesBuilder_ == null) {
+          queries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          queriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeQueries(int index) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.remove(index);
+          onChanged();
+        } else {
+          queriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder getQueriesBuilder(
+          int index) {
+        return getQueriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.QueryOrBuilder getQueriesOrBuilder(
+          int index) {
+        if (queriesBuilder_ == null) {
+          return queries_.get(index);  } else {
+          return queriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+           getQueriesOrBuilderList() {
+        if (queriesBuilder_ != null) {
+          return queriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queries_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder addQueriesBuilder() {
+        return getQueriesFieldBuilder().addBuilder(
+            com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.icqueries.GenesisProto.Query.Builder addQueriesBuilder(
+          int index) {
+        return getQueriesFieldBuilder().addBuilder(
+            index, com.lum.network.icqueries.GenesisProto.Query.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.icqueries.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.icqueries.GenesisProto.Query.Builder> 
+           getQueriesBuilderList() {
+        return getQueriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder> 
+          getQueriesFieldBuilder() {
+        if (queriesBuilder_ == null) {
+          queriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.icqueries.GenesisProto.Query, com.lum.network.icqueries.GenesisProto.Query.Builder, com.lum.network.icqueries.GenesisProto.QueryOrBuilder>(
+                  queries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queries_ = null;
+        }
+        return queriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.icqueries.QueryQueriesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.icqueries.QueryQueriesResponse)
+    private static final com.lum.network.icqueries.QueryProto.QueryQueriesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.icqueries.QueryProto.QueryQueriesResponse();
+    }
+
+    public static com.lum.network.icqueries.QueryProto.QueryQueriesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryQueriesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryQueriesResponse>() {
+      @java.lang.Override
+      public QueryQueriesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryQueriesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryQueriesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.icqueries.QueryProto.QueryQueriesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_QueryPendingQueriesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_QueryPendingQueriesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_QueryPendingQueriesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_QueryPendingQueriesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_QueryQueriesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_QueryQueriesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_icqueries_QueryQueriesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_icqueries_QueryQueriesResponse_fieldAccessorTable;
 
@@ -61,12 +2419,12 @@ public final class QueryProto {
       "yPendingQueriesRequest\0322.lum.network.icq" +
       "ueries.QueryPendingQueriesResponse\".\202\323\344\223" +
       "\002(\022&/lum-network/icqueries/pending_queri" +
-      "esB\315\001\n\031com.lum.network.icqueriesB\nQueryP" +
-      "rotoP\001Z.github.com/lum-network/chain/x/i" +
-      "cqueries/types\242\002\003LNI\252\002\025Lum.Network.Icque" +
-      "ries\312\002\025Lum\\Network\\Icqueries\342\002!Lum\\Netwo" +
-      "rk\\Icqueries\\GPBMetadata\352\002\027Lum::Network:" +
-      ":Icqueriesb\006proto3"
+      "esB\313\001\n\031com.lum.network.icqueriesB\nQueryP" +
+      "rotoZ.github.com/lum-network/chain/x/icq" +
+      "ueries/types\242\002\003LNI\252\002\025Lum.Network.Icqueri" +
+      "es\312\002\025Lum\\Network\\Icqueries\342\002!Lum\\Network" +
+      "\\Icqueries\\GPBMetadata\352\002\027Lum::Network::I" +
+      "cqueriesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

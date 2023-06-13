@@ -14,14 +14,2175 @@ public final class RandomProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RandomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.Random)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+     * @return The requestTxHash.
+     */
+    java.lang.String getRequestTxHash();
+    /**
+     * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+     * @return The bytes for requestTxHash.
+     */
+    com.google.protobuf.ByteString
+        getRequestTxHashBytes();
+
+    /**
+     * <code>int64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * Random defines the feed standard
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.Random}
+   */
+  public static final class Random extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.Random)
+      RandomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Random.newBuilder() to construct.
+    private Random(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Random() {
+      requestTxHash_ = "";
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Random();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.RandomProto.internal_static_irismod_random_Random_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.RandomProto.internal_static_irismod_random_Random_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.RandomProto.Random.class, com.irismod.random.RandomProto.Random.Builder.class);
+    }
+
+    public static final int REQUEST_TX_HASH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestTxHash_ = "";
+    /**
+     * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+     * @return The requestTxHash.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestTxHash() {
+      java.lang.Object ref = requestTxHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestTxHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+     * @return The bytes for requestTxHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestTxHashBytes() {
+      java.lang.Object ref = requestTxHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestTxHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 3 [json_name = "value"];</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestTxHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestTxHash_);
+      }
+      if (height_ != 0L) {
+        output.writeInt64(2, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestTxHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestTxHash_);
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.RandomProto.Random)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.RandomProto.Random other = (com.irismod.random.RandomProto.Random) obj;
+
+      if (!getRequestTxHash()
+          .equals(other.getRequestTxHash())) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getValue()
+          .equals(other.getValue())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestTxHash().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.RandomProto.Random parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.RandomProto.Random parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.RandomProto.Random parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.RandomProto.Random prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Random defines the feed standard
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.Random}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.Random)
+        com.irismod.random.RandomProto.RandomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.RandomProto.internal_static_irismod_random_Random_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.RandomProto.internal_static_irismod_random_Random_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.RandomProto.Random.class, com.irismod.random.RandomProto.Random.Builder.class);
+      }
+
+      // Construct using com.irismod.random.RandomProto.Random.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestTxHash_ = "";
+        height_ = 0L;
+        value_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.RandomProto.internal_static_irismod_random_Random_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.RandomProto.Random getDefaultInstanceForType() {
+        return com.irismod.random.RandomProto.Random.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.RandomProto.Random build() {
+        com.irismod.random.RandomProto.Random result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.RandomProto.Random buildPartial() {
+        com.irismod.random.RandomProto.Random result = new com.irismod.random.RandomProto.Random(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.random.RandomProto.Random result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestTxHash_ = requestTxHash_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.RandomProto.Random) {
+          return mergeFrom((com.irismod.random.RandomProto.Random)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.RandomProto.Random other) {
+        if (other == com.irismod.random.RandomProto.Random.getDefaultInstance()) return this;
+        if (!other.getRequestTxHash().isEmpty()) {
+          requestTxHash_ = other.requestTxHash_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestTxHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                value_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestTxHash_ = "";
+      /**
+       * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+       * @return The requestTxHash.
+       */
+      public java.lang.String getRequestTxHash() {
+        java.lang.Object ref = requestTxHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestTxHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+       * @return The bytes for requestTxHash.
+       */
+      public com.google.protobuf.ByteString
+          getRequestTxHashBytes() {
+        java.lang.Object ref = requestTxHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestTxHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+       * @param value The requestTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestTxHash() {
+        requestTxHash_ = getDefaultInstance().getRequestTxHash();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string request_tx_hash = 1 [json_name = "requestTxHash", (.gogoproto.moretags) = "yaml:&#92;"request_tx_hash&#92;""];</code>
+       * @param value The bytes for requestTxHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestTxHash_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 3 [json_name = "value"];</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        value_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.Random)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.Random)
+    private static final com.irismod.random.RandomProto.Random DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.RandomProto.Random();
+    }
+
+    public static com.irismod.random.RandomProto.Random getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Random>
+        PARSER = new com.google.protobuf.AbstractParser<Random>() {
+      @java.lang.Override
+      public Random parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Random> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Random> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.RandomProto.Random getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.random.Request)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>string consumer = 2 [json_name = "consumer"];</code>
+     * @return The consumer.
+     */
+    java.lang.String getConsumer();
+    /**
+     * <code>string consumer = 2 [json_name = "consumer"];</code>
+     * @return The bytes for consumer.
+     */
+    com.google.protobuf.ByteString
+        getConsumerBytes();
+
+    /**
+     * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+     * @return The txHash.
+     */
+    java.lang.String getTxHash();
+    /**
+     * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+     * @return The bytes for txHash.
+     */
+    com.google.protobuf.ByteString
+        getTxHashBytes();
+
+    /**
+     * <code>bool oracle = 4 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    boolean getOracle();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getServiceFeeCapList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getServiceFeeCapCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getServiceFeeCapOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+        int index);
+
+    /**
+     * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+     * @return The serviceContextId.
+     */
+    java.lang.String getServiceContextId();
+    /**
+     * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+     * @return The bytes for serviceContextId.
+     */
+    com.google.protobuf.ByteString
+        getServiceContextIdBytes();
+  }
+  /**
+   * <pre>
+   * Request defines the random request standard
+   * </pre>
+   *
+   * Protobuf type {@code irismod.random.Request}
+   */
+  public static final class Request extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.random.Request)
+      RequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Request.newBuilder() to construct.
+    private Request(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Request() {
+      consumer_ = "";
+      txHash_ = "";
+      serviceFeeCap_ = java.util.Collections.emptyList();
+      serviceContextId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Request();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.random.RandomProto.internal_static_irismod_random_Request_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.random.RandomProto.internal_static_irismod_random_Request_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.random.RandomProto.Request.class, com.irismod.random.RandomProto.Request.Builder.class);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 1;
+    private long height_ = 0L;
+    /**
+     * <code>int64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int CONSUMER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object consumer_ = "";
+    /**
+     * <code>string consumer = 2 [json_name = "consumer"];</code>
+     * @return The consumer.
+     */
+    @java.lang.Override
+    public java.lang.String getConsumer() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string consumer = 2 [json_name = "consumer"];</code>
+     * @return The bytes for consumer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConsumerBytes() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TX_HASH_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object txHash_ = "";
+    /**
+     * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+     * @return The txHash.
+     */
+    @java.lang.Override
+    public java.lang.String getTxHash() {
+      java.lang.Object ref = txHash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        txHash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+     * @return The bytes for txHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTxHashBytes() {
+      java.lang.Object ref = txHash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        txHash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORACLE_FIELD_NUMBER = 4;
+    private boolean oracle_ = false;
+    /**
+     * <code>bool oracle = 4 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    @java.lang.Override
+    public boolean getOracle() {
+      return oracle_;
+    }
+
+    public static final int SERVICE_FEE_CAP_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> serviceFeeCap_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getServiceFeeCapList() {
+      return serviceFeeCap_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getServiceFeeCapOrBuilderList() {
+      return serviceFeeCap_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getServiceFeeCapCount() {
+      return serviceFeeCap_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index) {
+      return serviceFeeCap_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+        int index) {
+      return serviceFeeCap_.get(index);
+    }
+
+    public static final int SERVICE_CONTEXT_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceContextId_ = "";
+    /**
+     * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+     * @return The serviceContextId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceContextId() {
+      java.lang.Object ref = serviceContextId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceContextId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+     * @return The bytes for serviceContextId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceContextIdBytes() {
+      java.lang.Object ref = serviceContextId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceContextId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (height_ != 0L) {
+        output.writeInt64(1, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, consumer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txHash_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, txHash_);
+      }
+      if (oracle_ != false) {
+        output.writeBool(4, oracle_);
+      }
+      for (int i = 0; i < serviceFeeCap_.size(); i++) {
+        output.writeMessage(5, serviceFeeCap_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceContextId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, serviceContextId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consumer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, consumer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(txHash_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, txHash_);
+      }
+      if (oracle_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, oracle_);
+      }
+      for (int i = 0; i < serviceFeeCap_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, serviceFeeCap_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceContextId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, serviceContextId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.random.RandomProto.Request)) {
+        return super.equals(obj);
+      }
+      com.irismod.random.RandomProto.Request other = (com.irismod.random.RandomProto.Request) obj;
+
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getConsumer()
+          .equals(other.getConsumer())) return false;
+      if (!getTxHash()
+          .equals(other.getTxHash())) return false;
+      if (getOracle()
+          != other.getOracle()) return false;
+      if (!getServiceFeeCapList()
+          .equals(other.getServiceFeeCapList())) return false;
+      if (!getServiceContextId()
+          .equals(other.getServiceContextId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumer().hashCode();
+      hash = (37 * hash) + TX_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getTxHash().hashCode();
+      hash = (37 * hash) + ORACLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOracle());
+      if (getServiceFeeCapCount() > 0) {
+        hash = (37 * hash) + SERVICE_FEE_CAP_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceFeeCapList().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_CONTEXT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceContextId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.random.RandomProto.Request parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.random.RandomProto.Request parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.random.RandomProto.Request parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.random.RandomProto.Request prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request defines the random request standard
+     * </pre>
+     *
+     * Protobuf type {@code irismod.random.Request}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.random.Request)
+        com.irismod.random.RandomProto.RequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.random.RandomProto.internal_static_irismod_random_Request_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.random.RandomProto.internal_static_irismod_random_Request_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.random.RandomProto.Request.class, com.irismod.random.RandomProto.Request.Builder.class);
+      }
+
+      // Construct using com.irismod.random.RandomProto.Request.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        height_ = 0L;
+        consumer_ = "";
+        txHash_ = "";
+        oracle_ = false;
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCap_ = java.util.Collections.emptyList();
+        } else {
+          serviceFeeCap_ = null;
+          serviceFeeCapBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        serviceContextId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.random.RandomProto.internal_static_irismod_random_Request_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.RandomProto.Request getDefaultInstanceForType() {
+        return com.irismod.random.RandomProto.Request.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.random.RandomProto.Request build() {
+        com.irismod.random.RandomProto.Request result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.random.RandomProto.Request buildPartial() {
+        com.irismod.random.RandomProto.Request result = new com.irismod.random.RandomProto.Request(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.random.RandomProto.Request result) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            serviceFeeCap_ = java.util.Collections.unmodifiableList(serviceFeeCap_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.serviceFeeCap_ = serviceFeeCap_;
+        } else {
+          result.serviceFeeCap_ = serviceFeeCapBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.random.RandomProto.Request result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.consumer_ = consumer_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.txHash_ = txHash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.oracle_ = oracle_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.serviceContextId_ = serviceContextId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.random.RandomProto.Request) {
+          return mergeFrom((com.irismod.random.RandomProto.Request)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.random.RandomProto.Request other) {
+        if (other == com.irismod.random.RandomProto.Request.getDefaultInstance()) return this;
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (!other.getConsumer().isEmpty()) {
+          consumer_ = other.consumer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTxHash().isEmpty()) {
+          txHash_ = other.txHash_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.getOracle() != false) {
+          setOracle(other.getOracle());
+        }
+        if (serviceFeeCapBuilder_ == null) {
+          if (!other.serviceFeeCap_.isEmpty()) {
+            if (serviceFeeCap_.isEmpty()) {
+              serviceFeeCap_ = other.serviceFeeCap_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureServiceFeeCapIsMutable();
+              serviceFeeCap_.addAll(other.serviceFeeCap_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.serviceFeeCap_.isEmpty()) {
+            if (serviceFeeCapBuilder_.isEmpty()) {
+              serviceFeeCapBuilder_.dispose();
+              serviceFeeCapBuilder_ = null;
+              serviceFeeCap_ = other.serviceFeeCap_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              serviceFeeCapBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServiceFeeCapFieldBuilder() : null;
+            } else {
+              serviceFeeCapBuilder_.addAllMessages(other.serviceFeeCap_);
+            }
+          }
+        }
+        if (!other.getServiceContextId().isEmpty()) {
+          serviceContextId_ = other.serviceContextId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                height_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                consumer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                txHash_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                oracle_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (serviceFeeCapBuilder_ == null) {
+                  ensureServiceFeeCapIsMutable();
+                  serviceFeeCap_.add(m);
+                } else {
+                  serviceFeeCapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                serviceContextId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long height_ ;
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 height = 1 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object consumer_ = "";
+      /**
+       * <code>string consumer = 2 [json_name = "consumer"];</code>
+       * @return The consumer.
+       */
+      public java.lang.String getConsumer() {
+        java.lang.Object ref = consumer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          consumer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string consumer = 2 [json_name = "consumer"];</code>
+       * @return The bytes for consumer.
+       */
+      public com.google.protobuf.ByteString
+          getConsumerBytes() {
+        java.lang.Object ref = consumer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          consumer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string consumer = 2 [json_name = "consumer"];</code>
+       * @param value The consumer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsumer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        consumer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consumer = 2 [json_name = "consumer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsumer() {
+        consumer_ = getDefaultInstance().getConsumer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consumer = 2 [json_name = "consumer"];</code>
+       * @param value The bytes for consumer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsumerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        consumer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object txHash_ = "";
+      /**
+       * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+       * @return The txHash.
+       */
+      public java.lang.String getTxHash() {
+        java.lang.Object ref = txHash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          txHash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+       * @return The bytes for txHash.
+       */
+      public com.google.protobuf.ByteString
+          getTxHashBytes() {
+        java.lang.Object ref = txHash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          txHash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+       * @param value The txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHash(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        txHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTxHash() {
+        txHash_ = getDefaultInstance().getTxHash();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tx_hash = 3 [json_name = "txHash", (.gogoproto.moretags) = "yaml:&#92;"tx_hash&#92;""];</code>
+       * @param value The bytes for txHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTxHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        txHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private boolean oracle_ ;
+      /**
+       * <code>bool oracle = 4 [json_name = "oracle"];</code>
+       * @return The oracle.
+       */
+      @java.lang.Override
+      public boolean getOracle() {
+        return oracle_;
+      }
+      /**
+       * <code>bool oracle = 4 [json_name = "oracle"];</code>
+       * @param value The oracle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracle(boolean value) {
+
+        oracle_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool oracle = 4 [json_name = "oracle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracle() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        oracle_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> serviceFeeCap_ =
+        java.util.Collections.emptyList();
+      private void ensureServiceFeeCapIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          serviceFeeCap_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(serviceFeeCap_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> serviceFeeCapBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getServiceFeeCapList() {
+        if (serviceFeeCapBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(serviceFeeCap_);
+        } else {
+          return serviceFeeCapBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getServiceFeeCapCount() {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.size();
+        } else {
+          return serviceFeeCapBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.get(index);
+        } else {
+          return serviceFeeCapBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.set(index, value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(index, value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllServiceFeeCap(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, serviceFeeCap_);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearServiceFeeCap() {
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCap_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeServiceFeeCap(int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.remove(index);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getServiceFeeCapBuilder(
+          int index) {
+        return getServiceFeeCapFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+          int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.get(index);  } else {
+          return serviceFeeCapBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getServiceFeeCapOrBuilderList() {
+        if (serviceFeeCapBuilder_ != null) {
+          return serviceFeeCapBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(serviceFeeCap_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addServiceFeeCapBuilder() {
+        return getServiceFeeCapFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addServiceFeeCapBuilder(
+          int index) {
+        return getServiceFeeCapFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 5 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getServiceFeeCapBuilderList() {
+        return getServiceFeeCapFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getServiceFeeCapFieldBuilder() {
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCapBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  serviceFeeCap_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          serviceFeeCap_ = null;
+        }
+        return serviceFeeCapBuilder_;
+      }
+
+      private java.lang.Object serviceContextId_ = "";
+      /**
+       * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+       * @return The serviceContextId.
+       */
+      public java.lang.String getServiceContextId() {
+        java.lang.Object ref = serviceContextId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceContextId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+       * @return The bytes for serviceContextId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceContextIdBytes() {
+        java.lang.Object ref = serviceContextId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceContextId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+       * @param value The serviceContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceContextId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceContextId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceContextId() {
+        serviceContextId_ = getDefaultInstance().getServiceContextId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_context_id = 6 [json_name = "serviceContextId", (.gogoproto.customname) = "ServiceContextID", (.gogoproto.moretags) = "yaml:&#92;"service_context_id&#92;""];</code>
+       * @param value The bytes for serviceContextId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceContextIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceContextId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.random.Request)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.random.Request)
+    private static final com.irismod.random.RandomProto.Request DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.random.RandomProto.Request();
+    }
+
+    public static com.irismod.random.RandomProto.Request getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Request>
+        PARSER = new com.google.protobuf.AbstractParser<Request>() {
+      @java.lang.Override
+      public Request parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Request> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Request> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.random.RandomProto.Request getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_Random_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_Random_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_random_Request_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_random_Request_fieldAccessorTable;
 
@@ -47,12 +2208,12 @@ public final class RandomProto {
       "\"\252\337\037(github.com/cosmos/cosmos-sdk/types." +
       "CoinsR\rserviceFeeCap\022_\n\022service_context_" +
       "id\030\006 \001(\tB1\342\336\037\020ServiceContextID\362\336\037\031yaml:\"" +
-      "service_context_id\"R\020serviceContextIdB\253\001" +
-      "\n\022com.irismod.randomB\013RandomProtoP\001Z/git" +
-      "hub.com/irisnet/irismod/modules/random/t" +
-      "ypes\242\002\003IRX\252\002\016Irismod.Random\312\002\016Irismod\\Ra" +
-      "ndom\342\002\032Irismod\\Random\\GPBMetadata\352\002\017Iris" +
-      "mod::Randomb\006proto3"
+      "service_context_id\"R\020serviceContextIdB\251\001" +
+      "\n\022com.irismod.randomB\013RandomProtoZ/githu" +
+      "b.com/irisnet/irismod/modules/random/typ" +
+      "es\242\002\003IRX\252\002\016Irismod.Random\312\002\016Irismod\\Rand" +
+      "om\342\002\032Irismod\\Random\\GPBMetadata\352\002\017Irismo" +
+      "d::Randomb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
